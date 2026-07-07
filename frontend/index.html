@@ -1,77 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NursePrep</title>
-    <link rel="stylesheet" href="./css/landing.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NursePrep — Study Smarter for the PNLE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/landing.css">
 </head>
 <body>
 
-    <!-- NAVBAR -->
-    <header class="navbar">
-        <div class="logo">💉 NursePrep</div>
-        <div class="nav-links">
-            <a href="#">Features</a>
-            <a href="#">About</a>
-            <a href="#">Login</a>
-        </div>
-    </header>
+<nav class="nav">
+  <div class="brand">
+    <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+      <circle cx="13" cy="13" r="12" stroke="#EC6FA0" stroke-width="1.4"/>
+      <path d="M4 13H8L10.5 6L14 20L16 13H22" stroke="#EC6FA0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </svg>
+    NursePrep
+  </div>
+  <div class="nav-links">
+    <a href="#features">Features</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="nav-actions">
+    <a href="#" class="btn btn-secondary">Login</a>
+    <a href="#" class="btn btn-primary">Get Started</a>
+  </div>
+</nav>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-text">
-            <h1>Study Smarter.<br>Pass the PNLE with Confidence.</h1>
-            <p>
-                A personalized review platform for nursing students in the Philippines.
-                Practice quizzes, flashcards, and track your progress — all in one place.
-            </p>
+<section class="hero">
+  <div class="hero-text">
+    <h1>Study smarter.<br>Pass the PNLE<br>with <em>confidence.</em></h1>
+    <p>A personalized review companion for nursing students in the Philippines — practice quizzes, flashcards, and progress tracking, all in one calm, focused place.</p>
+    <div class="hero-actions">
+      <a href="#" class="btn btn-primary">Get Started</a>
+      <a href="#" class="btn btn-secondary">Login</a>
+    </div>
+  </div>
 
-            <div class="buttons">
-                <button class="primary-btn">Get Started</button>
-                <button class="secondary-btn">Login</button>
-            </div>
-        </div>
+  <div class="vitals-card">
+    <div class="vitals-card-head">
+      <div>
+        <span class="eyebrow">Today's Goal</span>
+        <h3>Daily Review</h3>
+      </div>
+      <div class="pulse-badge">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <path d="M2 12H7L9.5 4L14.5 20L17 12H22" stroke="#EC6FA0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
 
-        <div class="hero-card">
-            <h3>Today’s Goal</h3>
-            <p>40 Questions</p>
+    <div class="vitals-readout">
+      <span class="num">40</span>
+      <span class="unit">QUESTIONS</span>
+    </div>
 
-            <div class="progress-bar">
-                <div class="progress"></div>
-            </div>
+    <svg class="pulse-line" viewBox="0 0 260 40" fill="none">
+      <path d="M0 20H60L72 6L86 34L100 12L112 20H260" stroke="#EC6FA0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
 
-            <small>Stay consistent. You’ve got this ❤️</small>
-        </div>
-    </section>
+    <div class="progress-track"><div class="progress-fill" style="width:60%"></div></div>
+    <p class="caption">Stay consistent. You've got this ♡</p>
+  </div>
+</section>
 
-    <!-- FEATURES -->
-    <section class="features">
-        <h2>Why NursePrep?</h2>
+<svg class="pulse-divider" viewBox="0 0 1200 40" preserveAspectRatio="none">
+  <path d="M0 20H520L540 4L562 36L584 12L600 20H1200" stroke="#232C45" stroke-width="1.5" fill="none"/>
+</svg>
 
-        <div class="feature-grid">
-            <div class="card">
-                <h3>📚 Smart Quizzes</h3>
-                <p>Practice PNLE-style questions with instant rationales.</p>
-            </div>
+<section class="features" id="features">
+  <span class="eyebrow">Why NursePrep</span>
+  <h2>Everything you need for review day.</h2>
 
-            <div class="card">
-                <h3>📊 Track Progress</h3>
-                <p>See your weak and strong subjects in real-time.</p>
-            </div>
+  <div class="feature-grid">
+    <div class="feature-card">
+      <div class="feature-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 5C4 5 8 3 12 5C16 3 20 5 20 5V18C20 18 16 16 12 18C8 16 4 18 4 18V5Z" stroke="#EC6FA0" stroke-width="1.6" stroke-linejoin="round"/><path d="M12 5V18" stroke="#EC6FA0" stroke-width="1.6"/></svg>
+      </div>
+      <h3>Smart Quizzes</h3>
+      <p>Practice PNLE-style questions with instant rationales, so every wrong answer becomes something learned.</p>
+    </div>
 
-            <div class="card">
-                <h3>💡 Flashcards</h3>
-                <p>Quick review for formulas, drugs, and concepts.</p>
-            </div>
-        </div>
-    </section>
+    <div class="feature-card">
+      <div class="feature-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 20V13M12 20V7M20 20V10" stroke="#EC6FA0" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </div>
+      <h3>Track Progress</h3>
+      <p>See your weak and strong subjects in real time, and know exactly where to focus next.</p>
+    </div>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>Made with ❤️ for future Filipino Nurses</p>
-    </footer>
+    <div class="feature-card">
+      <div class="feature-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="4" y="5" width="12" height="16" rx="2" stroke="#EC6FA0" stroke-width="1.6"/><rect x="8" y="3" width="12" height="16" rx="2" fill="#0A0E1A" stroke="#EC6FA0" stroke-width="1.6"/></svg>
+      </div>
+      <h3>Flashcards</h3>
+      <p>Quick review for formulas, drugs, and concepts — built for study breaks between shifts and classes.</p>
+    </div>
+  </div>
+</section>
+
+<footer id="about">
+  Made with ♡ for every future RN. NursePrep — PNLE review, simplified.
+</footer>
 
 </body>
 </html>

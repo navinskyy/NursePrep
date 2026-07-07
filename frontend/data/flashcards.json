@@ -1,0 +1,58 @@
+{
+  "fundamentals": [
+    { "front": "What are Maslow's 5 levels of needs, from lowest to highest?", "back": "Physiological, Safety, Love/Belonging, Esteem, Self-Actualization." },
+    { "front": "What is the normal adult respiratory rate?", "back": "12–20 breaths per minute." },
+    { "front": "What does ROM stand for in nursing assessment?", "back": "Range of Motion." },
+    { "front": "What is the first step of the nursing process?", "back": "Assessment." },
+    { "front": "What is the normal adult body temperature (oral)?", "back": "36.5–37.5°C (97.7–99.5°F)." }
+  ],
+  "medSurg": [
+    { "front": "What is the hallmark sign of compartment syndrome?", "back": "Pain out of proportion to the injury, unrelieved by analgesics." },
+    { "front": "What lab value confirms a myocardial infarction?", "back": "Elevated Troponin I or Troponin T." },
+    { "front": "What position is best for a patient with dyspnea?", "back": "High Fowler's position." },
+    { "front": "What is Cushing's triad?", "back": "Hypertension, bradycardia, and irregular respirations — a sign of increased ICP." },
+    { "front": "Normal fasting blood glucose range?", "back": "70–100 mg/dL." }
+  ],
+  "maternal": [
+    { "front": "What is Naegele's Rule used for?", "back": "Estimating the expected date of delivery (EDD)." },
+    { "front": "What is the normal fetal heart rate range?", "back": "110–160 bpm." },
+    { "front": "What are the classic signs of preeclampsia?", "back": "Hypertension, proteinuria, and edema after 20 weeks gestation." },
+    { "front": "What is Homan's sign used to assess?", "back": "Deep vein thrombosis (DVT) — pain on dorsiflexion of the foot." },
+    { "front": "What is the term for the first menstruation?", "back": "Menarche." }
+  ],
+  "pediatric": [
+    { "front": "At what age does a child typically start walking?", "back": "Around 12 months." },
+    { "front": "What is the normal heart rate range for a newborn?", "back": "120–160 bpm." },
+    { "front": "What vaccine is given at birth?", "back": "BCG and Hepatitis B (first dose)." },
+    { "front": "What is the anterior fontanelle's normal closure age?", "back": "12–18 months." },
+    { "front": "What reflex causes an infant to turn its head toward a touch on the cheek?", "back": "Rooting reflex." }
+  ],
+  "psychiatric": [
+    { "front": "What is the therapeutic serum level for Lithium?", "back": "0.6–1.2 mEq/L." },
+    { "front": "What is the priority action for a suicidal patient?", "back": "Ensure safety — remove harmful objects and maintain close observation." },
+    { "front": "What defense mechanism involves attributing one's own feelings to another?", "back": "Projection." },
+    { "front": "What is the term for a false sensory perception?", "back": "Hallucination." },
+    { "front": "What is the therapeutic communication technique of restating?", "back": "Repeating the main idea of what the patient said, in the nurse's own words." }
+  ],
+  "community": [
+    { "front": "What is primary prevention?", "back": "Health promotion and disease prevention before illness occurs (e.g., immunization)." },
+    { "front": "What is the leading indicator of a community's health status?", "back": "Infant mortality rate." },
+    { "front": "What does EPI stand for in public health?", "back": "Expanded Program on Immunization." },
+    { "front": "What is epidemiology?", "back": "The study of disease distribution and determinants in populations." },
+    { "front": "What is the safest way to purify drinking water at home?", "back": "Boiling water for at least 1 minute." }
+  ],
+  "pharma": [
+    { "front": "What is the antidote for Warfarin overdose?", "back": "Vitamin K." },
+    { "front": "What is the antidote for Heparin overdose?", "back": "Protamine sulfate." },
+    { "front": "What is the antidote for Acetaminophen overdose?", "back": "Acetylcysteine (Mucomyst)." },
+    { "front": "What class of drug is Furosemide?", "back": "Loop diuretic." },
+    { "front": "What electrolyte should be monitored closely with Digoxin?", "back": "Potassium — hypokalemia increases risk of digoxin toxicity." }
+  ],
+  "leadership": [
+    { "front": "What leadership style involves the leader making decisions with little staff input?", "back": "Autocratic leadership." },
+    { "front": "What is the nursing process of assigning tasks to qualified staff called?", "back": "Delegation." },
+    { "front": "What are the 5 Rights of Delegation?", "back": "Right task, right circumstance, right person, right direction/communication, right supervision." },
+    { "front": "What management theory focuses on efficiency and task specialization?", "back": "Scientific Management (Taylorism)." },
+    { "front": "What is a key principle of triage?", "back": "Prioritizing care based on severity and urgency of patient needs." }
+  ]
+}

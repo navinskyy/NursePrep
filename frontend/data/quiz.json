@@ -1,0 +1,58 @@
+{
+  "fundamentals": [
+    { "question": "A nurse is caring for a patient in respiratory distress. Which action should be done first?", "choices": ["Check vital signs", "Assess airway", "Give medication", "Document findings"], "answer": 1 },
+    { "question": "What is the normal adult heart rate?", "choices": ["40–60 bpm", "60–100 bpm", "100–120 bpm", "120–140 bpm"], "answer": 1 },
+    { "question": "Which is the priority nursing action when planning care?", "choices": ["Give medication", "Assess the patient", "Document findings", "Discharge planning"], "answer": 1 },
+    { "question": "What is the first step of the nursing process?", "choices": ["Diagnosis", "Assessment", "Planning", "Evaluation"], "answer": 1 },
+    { "question": "What is the normal adult respiratory rate?", "choices": ["8–10/min", "12–20/min", "22–28/min", "30–35/min"], "answer": 1 }
+  ],
+  "medSurg": [
+    { "question": "What is the hallmark sign of compartment syndrome?", "choices": ["Fever", "Pain out of proportion to injury", "Rash", "Nausea"], "answer": 1 },
+    { "question": "What lab value confirms a myocardial infarction?", "choices": ["WBC count", "Troponin", "Hematocrit", "Platelet count"], "answer": 1 },
+    { "question": "Best position for a patient with dyspnea?", "choices": ["Supine", "High Fowler's", "Trendelenburg", "Prone"], "answer": 1 },
+    { "question": "What does Cushing's triad indicate?", "choices": ["Hypoglycemia", "Increased intracranial pressure", "Sepsis", "Dehydration"], "answer": 1 },
+    { "question": "What is the normal fasting blood glucose range?", "choices": ["50–70 mg/dL", "70–100 mg/dL", "110–140 mg/dL", "150–180 mg/dL"], "answer": 1 }
+  ],
+  "maternal": [
+    { "question": "What is Naegele's Rule used for?", "choices": ["Estimating fetal weight", "Estimating the EDD", "Measuring fundal height", "Assessing fetal position"], "answer": 1 },
+    { "question": "What is the normal fetal heart rate range?", "choices": ["90–110 bpm", "110–160 bpm", "160–200 bpm", "60–90 bpm"], "answer": 1 },
+    { "question": "What are classic signs of preeclampsia?", "choices": ["Hypotension, polyuria", "Hypertension, proteinuria, edema", "Fever, rash", "Bradycardia, weight loss"], "answer": 1 },
+    { "question": "Homan's sign is used to assess for what?", "choices": ["Preeclampsia", "Deep vein thrombosis", "Placenta previa", "Postpartum hemorrhage"], "answer": 1 },
+    { "question": "What is the term for the first menstruation?", "choices": ["Menopause", "Menarche", "Amenorrhea", "Dysmenorrhea"], "answer": 1 }
+  ],
+  "pediatric": [
+    { "question": "At what age does a child typically start walking?", "choices": ["6 months", "12 months", "24 months", "3 years"], "answer": 1 },
+    { "question": "Normal heart rate range for a newborn?", "choices": ["60–100 bpm", "120–160 bpm", "160–200 bpm", "40–60 bpm"], "answer": 1 },
+    { "question": "What vaccines are typically given at birth?", "choices": ["MMR", "BCG and Hepatitis B", "Varicella", "Influenza"], "answer": 1 },
+    { "question": "When does the anterior fontanelle normally close?", "choices": ["2–3 months", "6 months", "12–18 months", "3 years"], "answer": 2 },
+    { "question": "What reflex causes an infant to turn toward a touch on the cheek?", "choices": ["Moro reflex", "Rooting reflex", "Babinski reflex", "Startle reflex"], "answer": 1 }
+  ],
+  "psychiatric": [
+    { "question": "What is the therapeutic serum level for Lithium?", "choices": ["0.1–0.3 mEq/L", "0.6–1.2 mEq/L", "2.0–3.0 mEq/L", "5.0–6.0 mEq/L"], "answer": 1 },
+    { "question": "Priority action for a suicidal patient?", "choices": ["Encourage socialization", "Ensure safety", "Give sedatives immediately", "Ask about family history"], "answer": 1 },
+    { "question": "Defense mechanism where one attributes own feelings to another?", "choices": ["Denial", "Projection", "Regression", "Sublimation"], "answer": 1 },
+    { "question": "What is a false sensory perception called?", "choices": ["Delusion", "Hallucination", "Illusion", "Confabulation"], "answer": 1 },
+    { "question": "What therapeutic technique restates the patient's main idea?", "choices": ["Reflecting", "Restating", "Silence", "Confrontation"], "answer": 1 }
+  ],
+  "community": [
+    { "question": "What is primary prevention?", "choices": ["Treating existing illness", "Preventing illness before it occurs", "Rehabilitation", "Palliative care"], "answer": 1 },
+    { "question": "What is a leading indicator of community health status?", "choices": ["Literacy rate", "Infant mortality rate", "Employment rate", "Average income"], "answer": 1 },
+    { "question": "What does EPI stand for?", "choices": ["Emergency Patient Intake", "Expanded Program on Immunization", "Epidemic Prevention Initiative", "Essential Public Infrastructure"], "answer": 1 },
+    { "question": "What is epidemiology?", "choices": ["Study of skin diseases", "Study of disease distribution in populations", "Study of medications", "Study of anatomy"], "answer": 1 },
+    { "question": "Safest way to purify drinking water at home?", "choices": ["Adding salt", "Boiling for at least 1 minute", "Freezing", "Filtering with cloth only"], "answer": 1 }
+  ],
+  "pharma": [
+    { "question": "Antidote for Warfarin overdose?", "choices": ["Protamine sulfate", "Vitamin K", "Naloxone", "Flumazenil"], "answer": 1 },
+    { "question": "Antidote for Heparin overdose?", "choices": ["Vitamin K", "Protamine sulfate", "Atropine", "Naloxone"], "answer": 1 },
+    { "question": "Antidote for Acetaminophen overdose?", "choices": ["Naloxone", "Acetylcysteine", "Flumazenil", "Activated charcoal only"], "answer": 1 },
+    { "question": "What drug class is Furosemide?", "choices": ["Beta blocker", "Loop diuretic", "ACE inhibitor", "Calcium channel blocker"], "answer": 1 },
+    { "question": "What electrolyte should be monitored closely with Digoxin?", "choices": ["Sodium", "Potassium", "Calcium", "Magnesium"], "answer": 1 }
+  ],
+  "leadership": [
+    { "question": "Leadership style with little staff input in decisions?", "choices": ["Democratic", "Autocratic", "Laissez-faire", "Transformational"], "answer": 1 },
+    { "question": "Assigning tasks to qualified staff is called?", "choices": ["Supervision", "Delegation", "Collaboration", "Coordination"], "answer": 1 },
+    { "question": "Which is NOT one of the 5 Rights of Delegation?", "choices": ["Right task", "Right person", "Right documentation format", "Right supervision"], "answer": 2 },
+    { "question": "Management theory focused on efficiency and task specialization?", "choices": ["Human Relations Theory", "Scientific Management", "Systems Theory", "Contingency Theory"], "answer": 1 },
+    { "question": "A key principle of triage is to prioritize care based on?", "choices": ["Arrival time", "Severity and urgency", "Insurance coverage", "Patient age only"], "answer": 1 }
+  ]
+}

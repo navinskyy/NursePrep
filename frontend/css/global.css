@@ -1,0 +1,272 @@
+/* ============================================
+   NursePrep — Global (tokens, reset, buttons, sidebar)
+   Imported by every page-specific stylesheet
+   ============================================ */
+:root {
+  /* Surfaces */
+  --bg:            #0A0E1A;
+  --bg-soft:       #0D1220;
+  --surface:       #131A2C;
+  --surface-hover: #182036;
+  --border:        #232C45;
+  --border-soft:   #1B2338;
+
+  /* Pink family (primary) */
+  --pink-100: #FBE4EE;
+  --pink-300: #F3A9C9;
+  --pink-400: #EC6FA0;
+  --pink-500: #E24E8B;
+  --pink-600: #C63A73;
+  --pink-glow: rgba(226, 78, 139, 0.25);
+
+  /* Supporting accents (secondary "vitals" traces) */
+  --mint:   #5EEAD4;
+  --amber:  #F5B95B;
+
+  /* Text */
+  --text-hi:    #F6F5F8;
+  --text-mid:   #B7BED2;
+  --text-low:   #7C859E;
+
+  /* Type */
+  --font-display: 'Fraunces', serif;
+  --font-body:    'Inter', sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text-hi);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Faint dot-grid, like graph paper on a chart — very low opacity */
+body {
+  background-image: radial-gradient(circle, rgba(236,111,160,0.07) 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+
+a { color: inherit; }
+
+:focus-visible {
+  outline: 2px solid var(--pink-400);
+  outline-offset: 3px;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--pink-400);
+  font-weight: 600;
+}
+
+/* ============================================
+   Buttons
+   ============================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 14.5px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  text-decoration: none;
+}
+
+.btn:active { transform: translateY(1px); }
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--pink-400), var(--pink-600));
+  color: #fff;
+  box-shadow: 0 8px 20px -8px var(--pink-glow);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 10px 26px -6px var(--pink-glow);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-hi);
+}
+
+.btn-secondary:hover {
+  border-color: var(--pink-400);
+  color: var(--pink-300);
+}
+
+/* ============================================
+   App shell — sidebar (shared by dashboard + quiz)
+   ============================================ */
+.dash-body {
+  display: flex;
+  min-height: 100vh;
+}
+
+.dash-sidebar {
+  width: 230px;
+  background: var(--bg-soft);
+  border-right: 1px solid var(--border-soft);
+  height: 100vh;
+  padding: 26px 18px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+}
+
+.dash-sidebar .brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 19px;
+  color: var(--text-hi);
+  padding: 0 10px;
+  margin-bottom: 34px;
+}
+
+.dash-sidebar .brand svg { flex-shrink: 0; }
+
+.dash-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dash-nav a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  color: var(--text-mid);
+  text-decoration: none;
+  font-size: 14.5px;
+  font-weight: 500;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.dash-nav a svg { opacity: 0.85; }
+
+.dash-nav a:hover {
+  background: var(--surface-hover);
+  color: var(--text-hi);
+}
+
+.dash-nav a.active {
+  background: rgba(236, 111, 160, 0.12);
+  color: var(--pink-300);
+}
+
+.dash-sidebar-foot {
+  margin-top: auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+}
+
+.dash-sidebar-foot .eyebrow { display: block; margin-bottom: 6px; }
+
+.dash-sidebar-foot p {
+  margin: 0;
+  font-size: 13.5px;
+  color: var(--text-mid);
+}
+
+.dash-sidebar-foot strong {
+  color: var(--pink-300);
+  font-family: var(--font-mono);
+}
+
+/* ============================================
+   App shell — main content area (shared)
+   ============================================ */
+.dash-main {
+  margin-left: 230px;
+  padding: 42px 48px 60px;
+  width: 100%;
+  max-width: 1180px;
+  position: relative;
+}
+
+.dash-main::before {
+  content: "";
+  position: fixed;
+  top: -10%;
+  left: 40%;
+  width: 520px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(226, 78, 139, 0.14), transparent 70%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.dash-main-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 84px);
+}
+
+/* ============================================
+   Subject picker (shared by quiz + flashcards)
+   ============================================ */
+.subject-picker {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.subject-picker .eyebrow { white-space: nowrap; }
+
+.subject-picker select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: var(--surface);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%237C859E' stroke-width='2'%3E%3Cpath d='M6 9L12 15L18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-hi);
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  font-weight: 500;
+  padding: 8px 32px 8px 12px;
+  cursor: pointer;
+  transition: border-color 0.15s ease;
+}
+
+.subject-picker select:hover,
+.subject-picker select:focus {
+  outline: none;
+  border-color: var(--pink-400);
+}
+
+/* Style the dropdown options too, where the browser allows it */
+.subject-picker select option {
+  background: var(--surface);
+  color: var(--text-hi);
+}
