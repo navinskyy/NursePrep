@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Login | NursePrep</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="./css/login.css">
+
+</head>
+<body>
+
+<div class="auth-shell">
+
+    <!-- LEFT -->
+
+    <aside class="auth-aside">
+
+        <div class="brand">
+
+            <svg width="24" height="24" viewBox="0 0 26 26" fill="none">
+                <circle cx="13" cy="13" r="12" stroke="#EC6FA0" stroke-width="1.4"/>
+                <path d="M4 13H8L10.5 6L14 20L16 13H22"
+                stroke="#EC6FA0"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"/>
+            </svg>
+
+            NursePrep
+
+        </div>
+
+        <div class="auth-quote">
+
+            <span class="eyebrow">PNLE REVIEW PLATFORM</span>
+
+            <h1>
+                Study smarter.
+                Pass the PNLE with confidence.
+            </h1>
+
+            <p>
+
+                Thousands of practice questions,
+                flashcards, progress tracking,
+                and AI-powered explanations
+                built for future Filipino nurses.
+
+            </p>
+
+        </div>
+
+        <div>
+
+            <svg class="auth-pulse"
+                 viewBox="0 0 300 80"
+                 fill="none">
+
+                <path
+                d="M0 40H55L75 15L110 65L145 40H300"
+                stroke="#EC6FA0"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"/>
+
+            </svg>
+
+            <div class="auth-foot-caption">
+
+                Every heartbeat brings you closer to becoming an RN.
+
+            </div>
+
+        </div>
+
+    </aside>
+
+    <!-- RIGHT -->
+
+    <main class="auth-main">
+
+        <div class="auth-card">
+
+            <h2>Welcome back 👋</h2>
+
+            <p>
+                Login to continue your PNLE journey.
+            </p>
+
+            <form id="loginForm">
+
+                <div class="field">
+
+                    <label>Email</label>
+
+                    <div class="field-input">
+
+                       <input
+                            type="email"
+                            id="email"
+                            autocomplete="email"
+                            placeholder="Enter your email"
+                            required>
+
+                    </div>
+
+                </div>
+
+                <div class="field">
+
+                    <label>Password</label>
+
+                    <div class="field-input">
+
+                               <input
+                                    type="password"
+                                    id="password"
+                                    autocomplete="current-password"
+                                    placeholder="Enter your password"
+                                    required>
+
+                               
+                        <button
+                             type="button"
+                             id="togglePassword"
+                             class="toggle-password">
+
+                            👁
+
+                        </button>
+
+                </div>
+            </div>
+                <div class="auth-row">
+
+                    <label class="remember">
+
+                        <input
+                            type="checkbox"
+                            id="rememberMe">
+
+                        Remember me
+
+                    </label>
+
+                    <a href="#" id="forgotPassword">
+                            Forgot Password?
+                    </a>
+
+                </div>
+
+               <button
+                    type="submit"
+                    class="btn btn-primary auth-submit">
+
+                    Login
+
+                    </button>
+
+                    <div class="auth-divider">
+                    <span>or</span>
+                    </div>
+
+                  <button
+                        type="button"
+                        id="googleLogin"
+                        class="btn btn-secondary auth-submit">
+
+                        <img src="https://www.svgrepo.com/show/475656/google-color.svg" width="18">
+
+                        Continue with Google
+
+                    </button>
+
+            </form>
+
+            <p class="small-text">
+
+                Don't have an account?
+
+                <a href="register.html">
+
+                    Create one
+
+                </a>
+
+            </p>
+
+        </div>
+
+    </main>
+
+</div> <!-- auth-shell -->
+
+<!-- Loading -->
+<div id="loadingOverlay" class="loading-overlay">
+    <div class="spinner"></div>
+</div>
+
+<!-- Toast -->
+<div id="toast" class="toast"></div>
+
+<script type="module" src="./js/login.js"></script>
+
+</body>
+</html>

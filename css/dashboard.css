@@ -5,7 +5,7 @@
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 30px;
-  margin: 0;
+  margin: 10px 0 0;
 }
 
 .dash-header p {
@@ -91,35 +91,34 @@
 /* Subjects */
 .dash-subjects {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
 }
 
 .subject-card {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  padding: 20px;
+  border-radius: var(--radius-lg);
+  padding: 26px;
   cursor: pointer;
-  transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+  transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
 .subject-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-5px);
   border-color: var(--pink-500);
-  background: var(--surface-hover);
 }
 
 .subject-card-top {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
 .subject-icon {
-  width: 34px;
-  height: 34px;
-  border-radius: 9px;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
   background: rgba(236, 111, 160, 0.12);
   display: flex;
   align-items: center;
@@ -129,21 +128,23 @@
 .subject-pct {
   font-family: var(--font-mono);
   font-size: 12.5px;
-  color: var(--text-low);
+  color: var(--pink-300);
+  padding-top: 4px;
 }
 
 .subject-card h4 {
-  margin: 16px 0 10px;
-  font-size: 15px;
+  margin: 20px 0 8px;
+  font-size: 18px;
   font-weight: 600;
 }
 
 .subject-progress {
   width: 100%;
-  height: 5px;
+  height: 6px;
   background: var(--bg-soft);
   border-radius: 999px;
   overflow: hidden;
+  margin-top: 20px;
 }
 
 .subject-progress span {

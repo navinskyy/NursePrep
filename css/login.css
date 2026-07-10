@@ -1,0 +1,363 @@
+@import url('./global.css');
+@import url('./responsive.css');
+
+/* ==========================================
+   Layout
+========================================== */
+
+.auth-shell{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    min-height:100vh;
+}
+
+/* ==========================================
+   Left Side
+========================================== */
+
+.auth-aside{
+    background:var(--bg-soft);
+    border-right:1px solid var(--border);
+    padding:60px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    position:relative;
+    overflow:hidden;
+}
+
+.auth-aside::before{
+    content:"";
+    position:absolute;
+    top:-100px;
+    left:-80px;
+    width:420px;
+    height:420px;
+    border-radius:50%;
+    background:radial-gradient(circle,
+        rgba(226,78,139,.18),
+        transparent 70%);
+    filter:blur(10px);
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-family:var(--font-display);
+    font-size:22px;
+    font-weight:600;
+}
+
+.auth-quote{
+    max-width:430px;
+}
+
+.auth-quote h1{
+    font-family:var(--font-display);
+    font-size:46px;
+    line-height:1.2;
+    margin:16px 0;
+}
+
+.auth-quote p{
+    color:var(--text-mid);
+    line-height:1.8;
+    font-size:15px;
+}
+
+.auth-pulse{
+    width:100%;
+    opacity:.8;
+}
+
+.auth-foot-caption{
+    margin-top:16px;
+    color:var(--text-low);
+    font-size:14px;
+}
+
+/* ==========================================
+   Right Side
+========================================== */
+
+.auth-main{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    padding:40px;
+}
+
+.auth-main::before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    background:radial-gradient(circle,
+    rgba(226,78,139,.12),
+    transparent 70%);
+    filter:blur(20px);
+}
+
+/* ==========================================
+   Card
+========================================== */
+
+.auth-card{
+
+    width:100%;
+    max-width:430px;
+
+    background:rgba(19,26,44,.82);
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid var(--border);
+
+    border-radius:24px;
+
+    padding:42px;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.35),
+        0 0 30px rgba(226,78,139,.08);
+
+    animation:fadeUp .6s ease;
+}
+
+.auth-card h2{
+
+    font-family:var(--font-display);
+    font-size:34px;
+    margin:0;
+}
+
+.auth-card p{
+
+    color:var(--text-mid);
+    margin-top:10px;
+    margin-bottom:32px;
+}
+
+/* ==========================================
+   Fields
+========================================== */
+
+.field{
+
+    margin-bottom:20px;
+}
+
+.field label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    color:var(--text-mid);
+
+    font-size:14px;
+}
+
+.field-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.field-input input{
+
+    width:100%;
+    height:50px;
+
+    background:var(--bg-soft);
+
+    color:white;
+
+    border:1px solid var(--border);
+
+    border-radius:14px;
+
+    padding:0 16px;
+
+    font-size:15px;
+
+    transition:.25s;
+}
+
+/* Leave room so the eye icon doesn't sit on top of typed text */
+.field-input input#password {
+    padding-right: 48px;
+}
+
+.field-input input::placeholder{
+
+    color:var(--text-low);
+}
+
+.field-input input:focus{
+
+    outline:none;
+
+    border-color:var(--pink-400);
+
+    box-shadow:0 0 0 4px rgba(236,111,160,.12);
+}
+
+/* Eye icon, positioned inside the input box itself */
+.toggle-password {
+    position: absolute;
+    right: 14px;
+    background: none;
+    border: none;
+    padding: 4px;
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+    color: var(--text-low);
+    transition: color 0.15s ease;
+}
+
+.toggle-password:hover {
+    color: var(--pink-300);
+}
+
+/* ==========================================
+   Remember
+========================================== */
+
+.auth-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:26px;
+
+    font-size:14px;
+}
+
+.auth-row a{
+
+    color:var(--pink-300);
+
+    text-decoration:none;
+}
+
+.auth-row a:hover{
+
+    text-decoration:underline;
+}
+
+.remember{
+
+    display:flex;
+
+    gap:8px;
+
+    align-items:center;
+
+    color:var(--text-mid);
+}
+
+/* ==========================================
+   Button
+========================================== */
+
+.auth-submit{
+
+    width:100%;
+
+    justify-content:center;
+
+    margin-top:8px;
+}
+
+/* ==========================================
+   Divider ("— or —" line style, matches register page)
+========================================== */
+
+.auth-divider {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 22px 0;
+    color: var(--text-low);
+    font-size: 13px;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+}
+
+/* ==========================================
+   Footer
+========================================== */
+
+.small-text{
+
+    text-align:center;
+
+    margin-top:26px;
+
+    color:var(--text-mid);
+}
+
+.small-text a{
+
+    color:var(--pink-300);
+
+    text-decoration:none;
+
+    font-weight:600;
+}
+
+.small-text a:hover{
+
+    text-decoration:underline;
+}
+
+.loading-overlay {
+    display: none;
+}
+
+.toast {
+    opacity: 0;
+}
+
+.toast.show {
+    opacity: 1;
+}
+
+/* ==========================================
+   Animation
+========================================== */
+
+@keyframes fadeUp{
+
+from{
+
+    opacity:0;
+
+    transform:translateY(25px);
+
+}
+
+to{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+}

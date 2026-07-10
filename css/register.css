@@ -1,0 +1,546 @@
+@import url('./global.css');
+@import url('./responsive.css');
+
+/* ===========================
+   Layout
+=========================== */
+
+.auth-shell{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    min-height:100vh;
+}
+
+/* ===========================
+   Left Side
+=========================== */
+
+.auth-aside{
+
+    position:relative;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    padding:70px;
+
+    background:linear-gradient(
+        160deg,
+        #0D1220,
+        #10172A,
+        #151E35
+    );
+
+    overflow:hidden;
+
+    border-right:1px solid var(--border);
+
+}
+
+.glow{
+
+    position:absolute;
+
+    width:450px;
+    height:450px;
+
+    right:-160px;
+    top:-120px;
+
+    border-radius:50%;
+
+    background:radial-gradient(
+        circle,
+        rgba(236,111,160,.25),
+        transparent 70%
+    );
+
+    filter:blur(30px);
+
+}
+
+.brand{
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    font-size:24px;
+    font-family:var(--font-display);
+    font-weight:600;
+
+    margin-bottom:70px;
+
+}
+
+.auth-content h1{
+
+    font-size:48px;
+
+    line-height:1.15;
+
+    margin:18px 0;
+
+    font-family:var(--font-display);
+
+}
+
+.auth-content h1 span{
+
+    color:var(--pink-400);
+
+}
+
+.auth-content p{
+
+    color:var(--text-mid);
+
+    line-height:1.7;
+
+    max-width:500px;
+
+    margin-bottom:35px;
+
+}
+
+.feature-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.feature{
+
+    background:rgba(255,255,255,.03);
+
+    border:1px solid var(--border);
+
+    padding:16px 18px;
+
+    border-radius:14px;
+
+    font-size:15px;
+
+    color:var(--text-mid);
+
+}
+
+/* ===========================
+   Right Side
+=========================== */
+
+.auth-main{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:60px;
+
+}
+
+.auth-card{
+
+    width:100%;
+
+    max-width:430px;
+
+}
+
+.auth-card h2{
+
+    font-family:var(--font-display);
+
+    font-size:38px;
+
+    margin-bottom:10px;
+
+}
+
+.auth-card>p{
+
+    color:var(--text-mid);
+
+    margin-bottom:35px;
+
+}
+
+/* ===========================
+   Inputs
+=========================== */
+
+.field{
+
+    margin-bottom:22px;
+
+}
+
+.field label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    color:var(--text-mid);
+
+    font-size:14px;
+
+}
+
+.field input{
+
+    width:100%;
+
+    height:54px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:14px;
+
+    padding:0 18px;
+
+    background:var(--surface);
+
+    color:white;
+
+    border:1px solid var(--border);
+
+    transition:.25s;
+
+}
+
+.field input:focus{
+
+    border-color:var(--pink-400);
+
+    box-shadow:0 0 20px rgba(236,111,160,.15);
+
+}
+
+/* ===========================
+   Password
+=========================== */
+
+.password-wrapper{
+
+    position:relative;
+
+}
+
+.password-wrapper button{
+
+    position:absolute;
+
+    right:15px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    background:none;
+
+    border:none;
+
+    color:var(--text-low);
+
+    cursor:pointer;
+
+    font-size:18px;
+
+}
+
+/* ===========================
+   Strength
+=========================== */
+
+.strength{
+
+    width:100%;
+
+    height:6px;
+
+    background:var(--surface);
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+    margin-bottom:6px;
+
+}
+
+#strengthBar{
+
+    height:100%;
+
+    width:0%;
+
+    background:var(--pink-500);
+
+    transition:.3s;
+
+}
+
+#strengthText{
+
+    display:block;
+
+    margin-bottom:24px;
+
+    color:var(--text-low);
+
+}
+
+/* ===========================
+   Button
+=========================== */
+
+.auth-submit{
+
+    width:100%;
+
+    margin-top:10px;
+
+    height:56px;
+
+    font-size:15px;
+
+    justify-content:center;
+
+}
+
+/* ===========================
+   Divider
+=========================== */
+
+.divider{
+
+    position:relative;
+
+    margin:35px 0;
+
+    text-align:center;
+
+}
+
+.divider::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:50%;
+
+    width:100%;
+
+    height:1px;
+
+    background:var(--border);
+
+}
+
+.divider span{
+
+    position:relative;
+
+    background:var(--bg);
+
+    padding:0 14px;
+
+    color:var(--text-low);
+
+}
+
+/* ===========================
+   Google Button
+=========================== */
+
+.google-btn{
+
+    width:100%;
+
+    height:56px;
+
+    border:none;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    background:var(--surface);
+
+    color:white;
+
+    border:1px solid var(--border);
+
+    transition:.25s;
+
+}
+
+.google-btn:hover{
+
+    border-color:var(--pink-400);
+
+}
+
+/* ===========================
+   Bottom Text
+=========================== */
+
+.bottom-text{
+
+    text-align:center;
+
+    margin-top:30px;
+
+    color:var(--text-mid);
+
+}
+
+.bottom-text a{
+
+    color:var(--pink-400);
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+/* ===========================
+   Toast
+=========================== */
+
+#toast{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:30px;
+
+    background:var(--surface);
+
+    color:white;
+
+    padding:16px 24px;
+
+    border-radius:14px;
+
+    border:1px solid var(--border);
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:.3s;
+
+}
+
+#toast.show{
+
+    opacity:1;
+
+}
+
+/* ===========================
+   Loading
+=========================== */
+
+#loadingOverlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(10,14,26,.85);
+
+    display:none;
+
+    align-items:center;
+
+    justify-content:center;
+
+    backdrop-filter:blur(4px);
+
+}
+
+.loader{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    border:5px solid rgba(255,255,255,.1);
+
+    border-top-color:var(--pink-400);
+
+    animation:spin 1s linear infinite;
+
+}
+
+@keyframes spin{
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:900px){
+
+.auth-shell{
+
+grid-template-columns:1fr;
+
+}
+
+.auth-aside{
+
+display:none;
+
+}
+
+.auth-main{
+
+padding:40px 24px;
+
+}
+
+.auth-card{
+
+max-width:100%;
+
+}
+
+.auth-card h2{
+font-size:32px;
+}
+
+}

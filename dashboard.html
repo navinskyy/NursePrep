@@ -42,24 +42,30 @@
     </a>
   </nav>
 
-  <div class="dash-sidebar-foot">
-    <span class="eyebrow">Streak</span>
-    <p><strong>5 days</strong> — keep it going 🔥</p>
+  <div class="dash-sidebar-bottom">
+    <div class="dash-sidebar-foot">
+      <span class="eyebrow">Streak</span>
+      <p id="sidebarStreak">0 days</p>
+    </div>
+
+    <button id="logoutBtn" class="btn btn-secondary dash-logout-btn">Logout</button>
   </div>
 </aside>
 
 <main class="dash-main">
 
   <div class="dash-header">
-    <h1>Good evening, future RN</h1>
-    <p>Let's continue your PNLE journey today.</p>
+    <h1 id="greeting">Loading...</h1>
+    <p id="welcomeMessage">Loading...</p>
   </div>
 
   <div class="dash-stats">
     <div class="stat-card pink">
       <span class="eyebrow">Questions Answered</span>
-      <div class="stat-value"><span class="num">120</span></div>
-      <p class="trend">+18 this week</p>
+      <div class="stat-value">
+        <span class="num" id="questionsAnswered">0</span>
+      </div>
+      <p class="trend" id="questionsTrend">Keep practicing!</p>
       <svg class="sparkline" viewBox="0 0 220 34" fill="none" preserveAspectRatio="none">
         <path d="M0 26L28 22L56 27L84 15L112 19L140 9L168 13L196 4L220 8" stroke="#EC6FA0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
@@ -67,8 +73,11 @@
 
     <div class="stat-card mint">
       <span class="eyebrow">Accuracy</span>
-      <div class="stat-value"><span class="num">78</span><span class="suffix">%</span></div>
-      <p class="trend">Up 4pts from last week</p>
+      <div class="stat-value">
+        <span class="num" id="accuracy">0</span>
+        <span class="suffix">%</span>
+      </div>
+      <p class="trend" id="accuracyTrend">Keep improving!</p>
     </div>
 
     <div class="stat-card amber">
@@ -87,10 +96,10 @@
         <div class="subject-icon">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EC6FA0" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="2"/></svg>
         </div>
-        <span class="subject-pct">72%</span>
+        <span id="fundamentalsPct" class="subject-pct">0%</span>
       </div>
       <h4>Fundamentals</h4>
-      <div class="subject-progress"><span style="width:72%"></span></div>
+      <div class="subject-progress"><span id="fundamentalsBar" style="width:0%"></span></div>
     </div>
 
     <div class="subject-card">
@@ -98,10 +107,10 @@
         <div class="subject-icon">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EC6FA0" stroke-width="1.8"><path d="M2 12H7L9.5 4L14.5 20L17 12H22" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <span class="subject-pct">65%</span>
+        <span id="medSurgPct" class="subject-pct">0%</span>
       </div>
       <h4>Medical Surgical</h4>
-      <div class="subject-progress"><span style="width:65%"></span></div>
+      <div class="subject-progress"><span id="medSurgBar" style="width:0%"></span></div>
     </div>
 
     <div class="subject-card">
@@ -109,10 +118,10 @@
         <div class="subject-icon">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EC6FA0" stroke-width="1.8"><circle cx="12" cy="8" r="3"/><path d="M6 20C6 16.5 8.5 15 12 15C15.5 15 18 16.5 18 20"/></svg>
         </div>
-        <span class="subject-pct">81%</span>
+        <span id="pediatricPct" class="subject-pct">0%</span>
       </div>
       <h4>Pediatrics</h4>
-      <div class="subject-progress"><span style="width:81%"></span></div>
+      <div class="subject-progress"><span id="pediatricBar" style="width:0%"></span></div>
     </div>
 
     <div class="subject-card">
@@ -120,10 +129,10 @@
         <div class="subject-icon">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EC6FA0" stroke-width="1.8"><path d="M12 21C12 21 4 14.5 4 9C4 5.5 6.5 3.5 9.5 3.5C11 3.5 12 4.5 12 4.5C12 4.5 13 3.5 14.5 3.5C17.5 3.5 20 5.5 20 9C20 14.5 12 21 12 21Z"/></svg>
         </div>
-        <span class="subject-pct">58%</span>
+        <span id="maternalPct" class="subject-pct">0%</span>
       </div>
       <h4>OB</h4>
-      <div class="subject-progress"><span style="width:58%"></span></div>
+      <div class="subject-progress"><span id="maternalBar" style="width:0%"></span></div>
     </div>
 
     <div class="subject-card">
@@ -131,10 +140,10 @@
         <div class="subject-icon">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EC6FA0" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><path d="M12 8V12L15 14" stroke-linecap="round"/></svg>
         </div>
-        <span class="subject-pct">70%</span>
+        <span id="psychiatricPct" class="subject-pct">0%</span>
       </div>
       <h4>Psychiatric</h4>
-      <div class="subject-progress"><span style="width:70%"></span></div>
+      <div class="subject-progress"><span id="psychiatricBar" style="width:0%"></span></div>
     </div>
 
     <div class="subject-card">
@@ -142,15 +151,37 @@
         <div class="subject-icon">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EC6FA0" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12H21M12 3C14.5 6 14.5 18 12 21C9.5 18 9.5 6 12 3Z"/></svg>
         </div>
-        <span class="subject-pct">63%</span>
+        <span id="communityPct" class="subject-pct">0%</span>
       </div>
       <h4>Community Health</h4>
-      <div class="subject-progress"><span style="width:63%"></span></div>
+      <div class="subject-progress"><span id="communityBar" style="width:0%"></span></div>
+    </div>
+
+    <div class="subject-card">
+      <div class="subject-card-top">
+        <div class="subject-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EC6FA0" stroke-width="1.8"><path d="M9 3h6v4h3l-6 14-6-14h3z"/></svg>
+        </div>
+        <span id="pharmaPct" class="subject-pct">0%</span>
+      </div>
+      <h4>Pharmacology</h4>
+      <div class="subject-progress"><span id="pharmaBar" style="width:0%"></span></div>
+    </div>
+
+    <div class="subject-card">
+      <div class="subject-card-top">
+        <div class="subject-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EC6FA0" stroke-width="1.8"><path d="M12 2v20M2 12h20"/></svg>
+        </div>
+        <span id="leadershipPct" class="subject-pct">0%</span>
+      </div>
+      <h4>Leadership</h4>
+      <div class="subject-progress"><span id="leadershipBar" style="width:0%"></span></div>
     </div>
 
   </div>
 
 </main>
-
+<script type="module" src="./js/dashboard.js"></script>
 </body>
 </html>

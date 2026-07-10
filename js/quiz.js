@@ -1,4 +1,17 @@
 // Requires utils.js loaded first (SUBJECT_NAMES, pad, getSubjectFromURL)
+import { auth, db } from "../firebase/firebase.js";
+
+import {
+    pad,
+    getSubjectFromURL
+} from "../utils/utils.js";
+
+import {
+    doc,
+    getDoc,
+    updateDoc,
+    increment
+} from "firebase/firestore";
 
 const LETTERS = ["A", "B", "C", "D", "E", "F"];
 
@@ -50,10 +63,15 @@ function loadQuestion(index) {
   warningEl.classList.remove("show");
 
   prevBtn.disabled = index === 0;
+  submitBtn.disabled = answers[index] !== null;
   nextBtn.disabled = answers[index] === null;
 
-  submitBtn.textContent = answers[index] !== null ? "Answer Submitted" : "Submit Answer";
+  submitBtn.textContent =
+      answers[index] !== null
+          ? "Answer Submitted"
+          : "Submit Answer";
 }
+
 
 function showEmptyState() {
   shellEl.innerHTML = `<p class="quiz-warning show">No questions found for this subject yet. Check back soon!</p>`;
@@ -99,14 +117,8 @@ function checkAnswer() {
   }
 
   nextBtn.disabled = false;
-  submitBtn.textContent = "Answer Submitted";
+  submitBtn.disabled = true;
 
-  if (currentQuestion < questions.length - 1) {
-    currentQuestion++;
-    loadQuestion(currentQuestion);
-  } else {
-    showResult();
-  }
 }
 
 function goPrev() {
@@ -116,36 +128,175 @@ function goPrev() {
 }
 
 function goNext() {
-  if (answers[currentQuestion] === null) return;
-  if (currentQuestion < questions.length - 1) {
-    currentQuestion++;
-    loadQuestion(currentQuestion);
-  } else {
-    showResult();
-  }
+
+    if (currentQuestion < questions.length - 1) {
+
+        currentQuestion++;
+        loadQuestion(currentQuestion);
+
+    } else {
+
+        showResult();
+
+    }
+
 }
 
-function showResult() {
-  const total = questions.length;
-  const pct = Math.round((score / total) * 100);
-  const message = pct >= 80
-    ? "Excellent work — that's PNLE-ready thinking."
-    : pct >= 50
-      ? "Good progress. Review the ones you missed and try again."
-      : "Keep going — every attempt builds your recall.";
+async function showResult() {
 
-  shellEl.innerHTML = `
-    <div class="question-card quiz-result">
-      <span class="eyebrow">Quiz Complete</span>
-      <h1>Nice work, future RN 🎉</h1>
-      <div class="score">${score} / ${total}</div>
-      <p class="sub">${message}</p>
-      <div class="quiz-footer">
-        <button class="btn btn-secondary" onclick="location.reload()">Try Again</button>
-        <a href="dashboard.html" class="btn btn-primary">Back to Dashboard</a>
-      </div>
-    </div>
-  `;
+    console.log("questions.length =", questions.length);
+    console.log("answers =", answers);
+    console.log("answered =", answers.filter(a => a !== null).length);
+    console.log("score =", score);
+
+    const total = questions.length;
+
+    const pct = Math.round((score / total) * 100);
+
+    const message =
+        pct >= 80
+            ? "Excellent work — that's PNLE-ready thinking."
+            : pct >= 50
+            ? "Good progress. Review the ones you missed and try again."
+            : "Keep going — every attempt builds your recall.";
+
+    // SAVE TO FIREBASE
+
+    const user = auth.currentUser;
+
+    if (user) {
+
+        try {
+
+            const userRef = doc(db, "users", user.uid);
+
+            const snap = await getDoc(userRef);
+
+            if (snap.exists()) {
+
+                const data = snap.data();
+
+const quizzesTaken =
+    (data.quizzesTaken || 0) + 1;
+
+// Actual number of questions answered
+const answeredThisQuiz =
+    answers.filter(answer => answer !== null).length;
+
+const questionsAnswered =
+    (data.questionsAnswered || 0) + answeredThisQuiz;
+
+const correctAnswers =
+    (data.correctAnswers || 0) + score;
+
+const accuracy =
+    questionsAnswered === 0
+        ? 0
+        : Math.round(
+            (correctAnswers / questionsAnswered) * 100
+        );
+
+// =========================
+// SUBJECT PROGRESS
+// =========================
+
+const subjectProgress = data.subjectProgress || {};
+
+const currentStats =
+    subjectProgress[currentSubject] || {
+        answered: 0,
+        correct: 0,
+        total: 0,
+        accuracy: 0
+    };
+
+currentStats.answered += answeredThisQuiz;
+currentStats.correct += score;
+currentStats.total += total;
+
+currentStats.accuracy = Math.min(
+    100,
+    Math.round((currentStats.correct / currentStats.total) * 100)
+);
+
+subjectProgress[currentSubject] = currentStats;
+
+// =========================
+// SAVE
+// =========================
+
+console.log("Saving...");
+console.log({
+  total,
+  answeredThisQuiz,
+  questionsAnswered
+});
+
+await updateDoc(userRef, {
+
+    quizzesTaken,
+    questionsAnswered,
+    correctAnswers,
+    accuracy,
+
+   [`subjectProgress.${currentSubject}`]: currentStats
+
+});
+
+         }
+
+        }
+
+        catch (err) {
+
+            console.error("Firestore Error:", err);
+
+        }
+
+    }
+
+    shellEl.innerHTML = `
+        <div class="question-card quiz-result">
+
+            <span class="eyebrow">
+                Quiz Complete
+            </span>
+
+            <h1>
+                Nice work, Future RN 🎉
+            </h1>
+
+            <div class="score">
+                ${score} / ${total}
+            </div>
+
+            <p class="sub">
+                ${message}
+            </p>
+
+            <div class="quiz-footer">
+
+                <button
+                    class="btn btn-secondary"
+                    onclick="location.reload()">
+
+                    Try Again
+
+                </button>
+
+                <a
+                    href="dashboard.html"
+                    class="btn btn-primary">
+
+                    Back to Dashboard
+
+                </a>
+
+            </div>
+
+        </div>
+    `;
+
 }
 
 // ======================================

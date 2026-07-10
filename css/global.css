@@ -199,6 +199,19 @@ a { color: inherit; }
   font-family: var(--font-mono);
 }
 
+/* Wrapper for pages that also need a logout button under the streak card */
+.dash-sidebar-bottom {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dash-logout-btn {
+  width: 100%;
+  justify-content: center;
+}
+
 /* ============================================
    App shell — main content area (shared)
    ============================================ */
