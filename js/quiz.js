@@ -1,6 +1,8 @@
 // Requires utils.js loaded first (SUBJECT_NAMES, pad, getSubjectFromURL)
 import { auth, db } from "../firebase/firebase.js";
 
+import { recordActivity } from "../js/activity.js";
+
 import {
     pad,
     getSubjectFromURL
@@ -243,6 +245,28 @@ await updateDoc(userRef, {
 
 });
 
+await recordActivity(user.uid, {
+
+    type: "quiz",
+
+    subject: currentSubject,
+
+    subjectKey: currentSubject,
+
+    label: `${currentSubject} Quiz`,
+
+    detail: `${score}/${total} correct`,
+
+    score: pct,
+
+    path: `quiz.html?subject=${currentSubject}`,
+
+    questionsCount: answeredThisQuiz
+
+});
+
+
+
          }
 
         }
@@ -308,7 +332,7 @@ async function loadQuiz() {
     bank = await res.json();
 
     subjectSelect.value = currentSubject;
-    loadSubject(currentSubject);
+    loadSubject(currentSubject);    
   } catch (err) {
     console.error("Failed to load quiz data:", err);
     showEmptyState();

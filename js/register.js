@@ -1,6 +1,5 @@
 import {
     auth,
-    db,
     googleProvider
 } from "../firebase/firebase.js";
 
@@ -10,12 +9,7 @@ import {
     updateProfile
 } from "firebase/auth";
 
-import {
-    doc,
-    setDoc,
-    serverTimestamp
-} from "firebase/firestore";
-
+import { ensureUserProfile } from "./userProfile.js";
 
 // =======================
 // Elements
@@ -138,7 +132,7 @@ password.addEventListener("input", () => {
 });
 
 // =======================
-// Register
+// Register (Email)
 // =======================
 
 form.addEventListener("submit", async(e)=>{
@@ -171,36 +165,11 @@ form.addEventListener("submit", async(e)=>{
             displayName: fullname.value
         });
 
-        // Save user data to Firestore
-        await setDoc(
-
-            doc(db, "users", user.uid),
-
-            {
-
-                uid: user.uid,
-
-                fullname: fullname.value,
-
-                email: user.email,
-
-                questionsAnswered: 0,
-
-                quizzesTaken: 0,
-
-                accuracy: 0,
-
-                streak: 0,
-
-                masteredCards: 0,
-
-                studyTime: 0,
-
-                createdAt: serverTimestamp()
-
-            }
-
-        );
+        // Save user data to Firestore — same shared shape as every other signup path
+        await ensureUserProfile(user.uid, {
+            fullname: fullname.value,
+            email: user.email,
+        });
 
         hideLoading();
 
@@ -215,6 +184,8 @@ form.addEventListener("submit", async(e)=>{
     }
 
     catch(error){
+
+        console.error("Email registration failed:", error);
 
         hideLoading();
 
@@ -242,33 +213,11 @@ googleBtn.addEventListener("click", async()=>{
 
         const user = result.user;
 
-      await setDoc(doc(db, "users", user.uid), {
-
-                uid: user.uid,
-
-                fullname: user.displayName,
-
-                email: user.email,
-
-                questionsAnswered: 0,
-
-                quizzesTaken: 0,
-
-                correctAnswers: 0,
-
-                accuracy: 0,
-
-                streak: 0,
-
-                longestStreak: 0,
-
-                masteredCards: 0,
-
-                studyTime: 0,
-
-                createdAt: serverTimestamp()
-
-            }, { merge: true });
+        // Same shared shape/function as the email path and login.js's Google button
+        await ensureUserProfile(user.uid, {
+            fullname: user.displayName,
+            email: user.email,
+        });
 
         hideLoading();
 
@@ -283,6 +232,8 @@ googleBtn.addEventListener("click", async()=>{
     }
 
     catch(error){
+
+        console.error("Google registration failed:", error);
 
         hideLoading();
 

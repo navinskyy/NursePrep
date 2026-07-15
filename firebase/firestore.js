@@ -8,7 +8,12 @@ import {
   updateDoc,
   collection,
   addDoc,
-  getDocs
+  getDocs,
+  query,
+  orderBy,
+  limit,
+  serverTimestamp,
+  increment
 } from "firebase/firestore";
 
 export const db = getFirestore(app);
@@ -20,5 +25,10 @@ export {
   updateDoc,
   collection,
   addDoc,
-  getDocs
+  getDocs,
+  query,
+  orderBy,
+  limit,
+  serverTimestamp,
+  increment
 };

@@ -13,6 +13,8 @@ import {
     onAuthStateChanged
 } from "firebase/auth";
 
+import { ensureUserProfile } from "./userProfile.js";
+
 console.log("✅ login.js loaded");
 
 // ====================
@@ -89,9 +91,6 @@ loginForm.addEventListener("submit", async (e) => {
 
     console.log("🟢 Login button clicked");
 
-    console.log("Email:", email.value);
-    console.log("Password:", password.value);
-
     try {
 
         showLoading();
@@ -117,7 +116,6 @@ loginForm.addEventListener("submit", async (e) => {
         );
 
         console.log("✅ Login Success");
-        console.log(credential.user);
 
         hideLoading();
 
@@ -179,37 +177,36 @@ loginForm.addEventListener("submit", async (e) => {
 
 googleLogin.addEventListener("click", async () => {
 
-    console.log("🟢 Google Login Clicked");
-
     try {
 
         showLoading();
 
-        const result = await signInWithPopup(
+        const result = await signInWithPopup(auth, googleProvider);
+        const user = result.user;
 
-            auth,
+        console.log("Google User:", user);
+        console.log("UID:", user.uid);
 
-            googleProvider
-
-        );
-
-        console.log(result.user);
+        // Single shared function — same shape as every other signup path,
+        // and never overwrites an existing profile.
+        await ensureUserProfile(user.uid, {
+            fullname: user.displayName,
+            email: user.email,
+        });
 
         hideLoading();
 
         showToast("Google Login Successful!");
 
         setTimeout(() => {
-
             window.location.href = "dashboard.html";
-
         }, 1000);
 
     }
 
     catch (error) {
 
-        console.error(error);
+        console.error("Google login failed:", error);
 
         hideLoading();
 
@@ -265,18 +262,9 @@ forgotPassword.addEventListener("click", async (e) => {
 
 onAuthStateChanged(auth, (user) => {
 
-    console.log("🔥 Auth State Changed");
-    console.log(user);
-
     if (user) {
 
-        console.log("➡️ Redirecting to dashboard...");
-
         window.location.href = "dashboard.html";
-
-    } else {
-
-        console.log("❌ No user logged in.");
 
     }
 

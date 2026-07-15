@@ -1,18 +1,283 @@
 {
   "fundamentals": [
-    { "question": "A nurse is caring for a patient in respiratory distress. Which action should be done first?", "choices": ["Check vital signs", "Assess airway", "Give medication", "Document findings"], "answer": 1 },
-    { "question": "What is the normal adult heart rate?", "choices": ["40–60 bpm", "60–100 bpm", "100–120 bpm", "120–140 bpm"], "answer": 1 },
-    { "question": "Which is the priority nursing action when planning care?", "choices": ["Give medication", "Assess the patient", "Document findings", "Discharge planning"], "answer": 1 },
-    { "question": "What is the first step of the nursing process?", "choices": ["Diagnosis", "Assessment", "Planning", "Evaluation"], "answer": 1 },
-    { "question": "What is the normal adult respiratory rate?", "choices": ["8–10/min", "12–20/min", "22–28/min", "30–35/min"], "answer": 1 }
-  ],
-  "medSurg": [
-    { "question": "What is the hallmark sign of compartment syndrome?", "choices": ["Fever", "Pain out of proportion to injury", "Rash", "Nausea"], "answer": 1 },
-    { "question": "What lab value confirms a myocardial infarction?", "choices": ["WBC count", "Troponin", "Hematocrit", "Platelet count"], "answer": 1 },
-    { "question": "Best position for a patient with dyspnea?", "choices": ["Supine", "High Fowler's", "Trendelenburg", "Prone"], "answer": 1 },
-    { "question": "What does Cushing's triad indicate?", "choices": ["Hypoglycemia", "Increased intracranial pressure", "Sepsis", "Dehydration"], "answer": 1 },
-    { "question": "What is the normal fasting blood glucose range?", "choices": ["50–70 mg/dL", "70–100 mg/dL", "110–140 mg/dL", "150–180 mg/dL"], "answer": 1 }
-  ],
+  {
+    "question": "Jake is complaining of shortness of breath. The nurse assesses his respiratory rate to be 30 breaths per minute and documents that Jake is tachypneic. The nurse understands that tachypnea means:",
+    "choices": ["Respiratory rate greater than 20 breaths per minute", "Pulse rate greater than 100 beats per minute", "Frequent bowel sounds", "Blood pressure of 140/90 mmHg"],
+    "answer": 0
+  },
+  {
+    "question": "The nurse listens to Mrs. Sullen's lungs and notes a hissing or musical sound. The nurse documents this as:",
+    "choices": ["Rhonchi", "Vesicular breath sounds", "Wheezes", "Gurgles"],
+    "answer": 2
+  },
+  {
+    "question": "The nurse measures a patient's temperature at 101°F. What is the equivalent temperature in Celsius?",
+    "choices": ["38.01°C", "36.3°C", "40.03°C", "37.95°C"],
+    "answer": 3
+  },
+  {
+    "question": "Which approach to problem solving tests any number of solutions until one is found that works for a particular problem?",
+    "choices": ["Scientific method", "Routine", "Trial and error", "Intuition"],
+    "answer": 2
+  },
+  {
+    "question": "What is the correct order of the nursing process?",
+    "choices": ["Assessment, Diagnosis, Planning, Implementation, Evaluation", "Planning, Evaluation, Diagnosis, Assessment, Implementation", "Diagnosis, Assessment, Planning, Implementation, Evaluation", "Assessment, Diagnosis, Implementation, Evaluation, Planning"],
+    "answer": 0
+  },
+  {
+    "question": "During the planning phase of the nursing process, what is the primary outcome?",
+    "choices": ["Nursing diagnosis", "Nursing care plan", "Nursing history", "Nursing notes"],
+    "answer": 1
+  },
+  {
+    "question": "Which of the following is an example of subjective data?",
+    "choices": ["Heart rate of 68 beats per minute", "Noisy breathing", "Yellowish sputum", "The client states, 'I feel pain when urinating.'"],
+    "answer": 3
+  },
+  {
+    "question": "Which expected outcome is written correctly?",
+    "choices": ["The patient will identify all high-salt foods from a prepared list before discharge.", "The patient will eat the right amount of food daily.", "The patient will have enough sleep.", "The patient will feel less nauseated in 24 hours."],
+    "answer": 0
+  },
+  {
+    "question": "Which behavior demonstrates proper documentation by the nurse?",
+    "choices": ["Signs the medication sheet after administering the medication.", "Writes in the chart using a pencil.", "Signs charting using initials only.", "Documents 'Appetite is good this afternoon.'"],
+    "answer": 0
+  },
+  {
+    "question": "What is the primary disadvantage of computerized nursing documentation?",
+    "choices": ["Rapid communication", "Concern for privacy", "Accuracy", "Legibility"],
+    "answer": 1
+  },
+  {
+    "question": "Which nursing theorist developed the Adaptation Model?",
+    "choices": ["Virginia Henderson", "Imogene King", "Dorothea Orem", "Sister Callista Roy"],
+    "answer": 3
+  },
+  {
+    "question": "Formulating a nursing diagnosis is primarily a collaborative function between:",
+    "choices": ["Nurse and physician", "Patient and relatives", "Nurse and patient", "Doctor and family"],
+    "answer": 2
+  },
+  {
+    "question": "A patient with hypertension consistently follows a low-sodium, low-fat diet. This behavior reflects:",
+    "choices": ["Health belief", "Cultural belief", "Personal belief", "Superstitious belief"],
+    "answer": 0
+  },
+  {
+    "question": "A patient is NPO before laboratory testing. Which response is expected from activation of the adrenocortical response?",
+    "choices": ["Low blood pressure", "Decreased urine output", "Warm, dry skin", "Decreased serum sodium"],
+    "answer": 1
+  },
+  {
+    "question": "What is the appropriate nursing action when obtaining a sterile urine specimen from an indwelling catheter?",
+    "choices": ["Open the drainage bag and pour urine into a specimen cup.", "Disconnect the catheter from the tubing.", "Aspirate urine from the sampling port using a sterile syringe.", "Use sterile gloves while collecting urine."],
+    "answer": 2
+  },
+  {
+    "question": "A client is receiving IV fluids at 115 mL/hr. The IV site becomes red and swollen. What should the nurse do first?",
+    "choices": ["Notify the physician.", "Stop the infusion.", "Slow the infusion rate.", "Apply a cold compress."],
+    "answer": 1
+  },
+  {
+    "question": "The nurse enters to administer medication, but the patient is in the bathroom. What is the best action?",
+    "choices": ["Leave the medication at the bedside.", "Return in a few minutes and remain until the patient takes the medication.", "Tell the patient to take the medication later.", "Leave the medication on the bedside table."],
+    "answer": 1
+  },
+  {
+    "question": "Which action is inappropriate when administering a nasogastric tube feeding?",
+    "choices": ["Flush the tube with 60 mL of water after feeding.", "Position the patient in Fowler's position.", "Hold the feeding container about 20 inches above the insertion site.", "Introduce the feeding slowly."],
+    "answer": 2
+  },
+  {
+    "question": "After teaching a patient about medications before discharge, the nurse asks the patient to repeat the instructions. Which nursing role is demonstrated?",
+    "choices": ["Patient advocate", "Educator", "Manager", "Caregiver"],
+    "answer": 1
+  },
+  {
+    "question": "Which assessment finding requires the nurse's immediate attention in a 68-year-old patient with pneumonia?",
+    "choices": ["Hemoglobin level of 13 g/dL", "Capillary refill greater than 3 seconds with buccal cyanosis", "Clear breath sounds", "Oriented to time, place, and person"],
+    "answer": 1
+  },
+  {
+    "question": "During change-of-shift report, which information is most important to communicate?",
+    "choices": ["The patient reports the headache is gone.", "The patient's family visited this morning.", "The patient's nasogastric tube was removed two hours ago.", "A barium enema performed three days ago was negative."],
+    "answer": 2
+  },
+  {
+    "question": "Which goal is most appropriate for a nursing diagnosis of diarrhea?",
+    "choices": ["The patient will provide a stool specimen.", "The patient will experience decreased frequency of bowel movements.", "The patient will save urine for inspection.", "The patient will take antidiarrheal medication."],
+    "answer": 1
+  },
+  {
+    "question": "What is the primary purpose of individualized nursing care planning?",
+    "choices": ["Provide individualized patient care.", "Develop a standardized nursing care plan.", "Expand the nursing diagnosis taxonomy.", "Combine medical and nursing diagnoses."],
+    "answer": 0
+  },
+  {
+    "question": "According to Maslow's hierarchy, which nursing diagnosis has the highest priority?",
+    "choices": ["Risk for injury related to autoimmune dysfunction", "Impaired verbal communication related to tracheostomy", "Ineffective breathing pattern related to pain", "Anxiety related to impending surgery"],
+    "answer": 2
+  },
+  {
+    "question": "When performing an abdominal examination, the patient should be positioned with the head of the bed at:",
+    "choices": ["45°", "30°", "0°", "90°"],
+    "answer": 2
+  }
+],
+"medSurg": [
+  {
+    "question": "What is the hallmark sign of compartment syndrome?",
+    "choices": [
+      "Pain out of proportion to the injury",
+      "Fever",
+      "Nausea",
+      "Generalized rash"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Which laboratory finding is the most specific indicator of an acute myocardial infarction (MI)?",
+    "choices": [
+      "Platelet count",
+      "Troponin level",
+      "White blood cell count",
+      "Hematocrit"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Which position best promotes breathing in a patient experiencing dyspnea?",
+    "choices": [
+      "Trendelenburg position",
+      "Prone position",
+      "High Fowler's position",
+      "Supine position"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Cushing's triad is most commonly associated with which condition?",
+    "choices": [
+      "Sepsis",
+      "Hypoglycemia",
+      "Increased intracranial pressure",
+      "Dehydration"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Which range represents the normal fasting blood glucose level for a healthy adult?",
+    "choices": [
+      "110–140 mg/dL",
+      "70–100 mg/dL",
+      "150–180 mg/dL",
+      "50–70 mg/dL"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "A patient with heart failure suddenly develops crackles and severe shortness of breath. Which complication should the nurse suspect first?",
+    "choices": [
+      "Pulmonary edema",
+      "Pleural effusion",
+      "Asthma attack",
+      "Pneumonia"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Which electrolyte imbalance is most commonly associated with chronic kidney disease?",
+    "choices": [
+      "Hypocalcemia",
+      "Hypokalemia",
+      "Hyperkalemia",
+      "Hypernatremia"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Which assessment finding is expected in a patient with deep vein thrombosis (DVT)?",
+    "choices": [
+      "Bilateral leg paralysis",
+      "Cold, pale extremity",
+      "Calf pain with unilateral swelling",
+      "Absent pedal pulses"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "A nurse is caring for a client with chest pain. Which assessment finding requires immediate intervention?",
+    "choices": [
+      "Pain relieved by rest",
+      "Chest pain radiating to the left arm with diaphoresis",
+      "Pain after eating spicy food",
+      "Localized chest tenderness"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Which nursing intervention is the highest priority for a patient having an active tonic-clonic seizure?",
+    "choices": [
+      "Insert an oral airway",
+      "Restrain the patient's arms",
+      "Turn the patient to the side and protect the airway",
+      "Offer water after the seizure begins"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Which finding is an early sign of hypoxia?",
+    "choices": [
+      "Cyanosis",
+      "Bradycardia",
+      "Restlessness",
+      "Hypotension"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Which intervention is the priority immediately after a thyroidectomy?",
+    "choices": [
+      "Monitor for signs of airway obstruction",
+      "Encourage coughing every hour",
+      "Maintain the patient flat in bed",
+      "Provide a regular diet"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "A patient with COPD should receive oxygen therapy with caution because of the risk of:",
+    "choices": [
+      "Suppressing the hypoxic respiratory drive",
+      "Increasing blood glucose",
+      "Causing pulmonary embolism",
+      "Producing respiratory alkalosis"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Which assessment finding is most characteristic of left-sided heart failure?",
+    "choices": [
+      "Jugular vein distention",
+      "Pulmonary crackles",
+      "Peripheral edema",
+      "Ascites"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "A patient with suspected meningitis should be placed on which isolation precaution initially?",
+    "choices": [
+      "Airborne precautions",
+      "Standard precautions only",
+      "Contact precautions",
+      "Droplet precautions"
+    ],
+    "answer": 3
+  }
+],
   "maternal": [
     { "question": "What is Naegele's Rule used for?", "choices": ["Estimating fetal weight", "Estimating the EDD", "Measuring fundal height", "Assessing fetal position"], "answer": 1 },
     { "question": "What is the normal fetal heart rate range?", "choices": ["90–110 bpm", "110–160 bpm", "160–200 bpm", "60–90 bpm"], "answer": 1 },
