@@ -25,7 +25,7 @@ import {
 
 import {
     bumpDailyStreak
-} from "../js/Userprofile.js";
+} from "./userProfile.js";
 
 const SUBJECT_NAMES = {
     fundamentals: "Fundamentals of Nursing",
