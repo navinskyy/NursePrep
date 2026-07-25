@@ -96,9 +96,12 @@
     height:500px;
     border-radius:50%;
     background:radial-gradient(circle,
-    rgba(226,78,139,.12),
-    transparent 70%);
+        rgba(226,78,139,.12),
+        transparent 70%);
     filter:blur(20px);
+
+    z-index:0;
+    pointer-events:none;
 }
 
 /* ==========================================
@@ -126,6 +129,8 @@
         0 0 30px rgba(226,78,139,.08);
 
     animation:fadeUp .6s ease;
+    position:relative;
+    z-index:1;
 }
 
 .auth-card h2{
