@@ -6,6 +6,12 @@ import { doc, getDoc, setDoc, serverTimestamp } from "firebase/firestore";
 // dashboard.js's self-heal fallback all go through this one function —
 // so the document shape can never drift between paths again.
 const DEFAULT_PROFILE = {
+  fullname: "Future RN",
+  email: "",
+  photoURL: "",
+  school: "",
+  course: "",
+  yearLevel: "",
   quizzesTaken: 0,
   questionsAnswered: 0,
   correctAnswers: 0,
@@ -32,9 +38,9 @@ export async function ensureUserProfile(uid, { fullname, email }) {
   }
 
   const profile = {
+    ...DEFAULT_PROFILE,
     fullname: fullname || "Future RN",
     email: email || "",
-    ...DEFAULT_PROFILE,
     createdAt: serverTimestamp(),
   };
 
@@ -77,6 +83,53 @@ export async function bumpDailyStreak(uid) {
     lastActiveDate: today,
   };
 
+  await setDoc(ref, updates, { merge: true });
+
+  return { ...data, ...updates };
+}
+
+/**
+ * Updates editable profile fields (name, school, course, year level,
+ * photoURL). Only touches the fields passed in — never overwrites
+ * stats/progress fields.
+ */
+export async function updateUserProfile(uid, fields) {
+  const ref = doc(db, "users", uid);
+  await setDoc(ref, fields, { merge: true });
+  return fields;
+}
+
+/**
+ * Records a completed quiz attempt: bumps aggregate stats, updates
+ * per-subject accuracy (subjectProgress[subject].accuracy — the exact
+ * field dashboard.js reads to render each subject's progress bar),
+ * and bumps the daily streak. Called once when a quiz finishes.
+ */
+export async function recordQuizResult(uid, { subject, total, correct }) {
+  const ref = doc(db, "users", uid);
+  const snap = await getDoc(ref);
+  if (!snap.exists()) return null;
+
+  const data = snap.data();
+
+  const quizzesTaken = (data.quizzesTaken || 0) + 1;
+  const questionsAnswered = (data.questionsAnswered || 0) + total;
+  const correctAnswers = (data.correctAnswers || 0) + correct;
+  const accuracy = questionsAnswered
+    ? Math.round((correctAnswers / questionsAnswered) * 100)
+    : 0;
+
+  const subjectProgress = { ...(data.subjectProgress || {}) };
+  const prev = subjectProgress[subject] || { correct: 0, total: 0 };
+  const subjCorrect = prev.correct + correct;
+  const subjTotal = prev.total + total;
+  subjectProgress[subject] = {
+    correct: subjCorrect,
+    total: subjTotal,
+    accuracy: subjTotal ? Math.round((subjCorrect / subjTotal) * 100) : 0,
+  };
+
+  const updates = { quizzesTaken, questionsAnswered, correctAnswers, accuracy, subjectProgress };
   await setDoc(ref, updates, { merge: true });
 
   return { ...data, ...updates };

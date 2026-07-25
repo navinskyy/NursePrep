@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Analytics | NursePrep</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/analytics.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+</head>
+<body class="dash-body">
+
+<aside class="dash-sidebar">
+  <div class="brand">
+    <svg width="24" height="24" viewBox="0 0 26 26" fill="none">
+      <circle cx="13" cy="13" r="12" stroke="#EC6FA0" stroke-width="1.4"/>
+      <path d="M4 13H8L10.5 6L14 20L16 13H22" stroke="#EC6FA0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </svg>
+    NursePrep
+  </div>
+
+  <nav class="dash-nav">
+    <a href="dashboard.html">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11L12 4L21 11" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 10V20H19V10" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Dashboard
+    </a>
+    <a href="subjects.html">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5C4 5 8 3 12 5C16 3 20 5 20 5V18C20 18 16 16 12 18C8 16 4 18 4 18V5Z" stroke-linejoin="round"/></svg>
+      Subjects
+    </a>
+    <a href="flashcards.html">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 3v18" stroke-linecap="round"/></svg>
+      Flashcards
+    </a>
+    <a href="analytics.html" class="active">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="12" width="4" height="9" rx="1"/><rect x="10" y="7" width="4" height="14" rx="1"/><rect x="17" y="3" width="4" height="18" rx="1"/></svg>
+      Analytics
+    </a>
+    <a href="profile.html">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.4"/><path d="M5 20C5 16 8 14 12 14C16 14 19 16 19 20" stroke-linecap="round"/></svg>
+      Profile
+    </a>
+  </nav>
+
+  <div class="dash-sidebar-bottom">
+    <div class="dash-sidebar-foot">
+      <span class="eyebrow">Streak</span>
+      <p></p><strong id="sidebarStreak">0 days</strong> — keep it going 🔥</p>
+    </div>
+  </div>
+</aside>
+
+<main class="dash-main">
+
+  <div class="dash-header">
+    <h1>Analytics</h1>
+    <p>Track your progress, identify weak areas, and stay consistent.</p>
+  </div>
+
+  <!-- ==================== TOP CARDS ==================== -->
+  <div class="analytics-top-cards">
+    <div class="analytics-card pink">
+      <span class="eyebrow">Questions Answered</span>
+      <div class="analytics-card-value">
+        <span class="num" id="statQuestions">0</span>
+      </div>
+      <p class="analytics-card-desc" id="statQuestionsDesc">Keep practicing!</p>
+    </div>
+
+    <div class="analytics-card mint">
+      <span class="eyebrow">Accuracy</span>
+      <div class="analytics-card-value">
+        <span class="num" id="statAccuracy">0</span><span class="suffix">%</span>
+      </div>
+      <p class="analytics-card-desc" id="statAccuracyDesc">Keep improving!</p>
+    </div>
+
+    <div class="analytics-card amber">
+      <span class="eyebrow">Current Streak</span>
+      <div class="analytics-card-value">
+        <span class="num" id="statStreak">0</span><span class="suffix">days</span>
+      </div>
+      <p class="analytics-card-desc" id="statStreakDesc">Best: 0 days</p>
+    </div>
+
+    <div class="analytics-card">
+      <span class="eyebrow">Quizzes Taken</span>
+      <div class="analytics-card-value">
+        <span class="num" id="statQuizzes">0</span>
+      </div>
+      <p class="analytics-card-desc" id="statQuizzesDesc">Total sessions</p>
+    </div>
+  </div>
+
+  <!-- ==================== SUBJECT PERFORMANCE ==================== -->
+  <h2 class="section-title">Subject Performance</h2>
+  <div class="analytics-grid">
+    <div class="analytics-chart-card">
+      <div class="chart-container">
+        <canvas id="subjectBarChart"></canvas>
+      </div>
+    </div>
+
+    <div class="analytics-side-cards">
+      <div class="analytics-insight-card strongest">
+        <span class="eyebrow">Strongest Subject</span>
+        <div class="analytics-insight-icon">🏆</div>
+        <h4 id="strongestSubjectName">Loading…</h4>
+        <span class="analytics-insight-pct" id="strongestSubjectPct"></span>
+        <p class="analytics-insight-desc" id="strongestSubjectDesc"></p>
+      </div>
+
+      <div class="analytics-insight-card weakest">
+        <span class="eyebrow">Needs Improvement</span>
+        <div class="analytics-insight-icon">📚</div>
+        <h4 id="weakestSubjectName">Loading…</h4>
+        <span class="analytics-insight-pct" id="weakestSubjectPct"></span>
+        <p class="analytics-insight-desc" id="weakestSubjectDesc"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== OVERALL PROGRESS RING ==================== -->
+  <h2 class="section-title">Overall Progress</h2>
+  <div class="analytics-center-row">
+    <div class="analytics-ring-card">
+      <div class="ring-container">
+        <canvas id="progressRingChart"></canvas>
+      </div>
+      <div class="ring-label">
+        <span class="ring-value" id="overallMastery">0%</span>
+        <span class="ring-text">Overall Mastery</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== WEEKLY ACTIVITY & ACCURACY TREND ==================== -->
+  <h2 class="section-title">Weekly Activity</h2>
+  <div class="analytics-grid analytics-double-chart">
+    <div class="analytics-chart-card">
+      <div class="chart-container">
+        <canvas id="weeklyBarChart"></canvas>
+      </div>
+    </div>
+    <div class="analytics-chart-card">
+      <div class="chart-container">
+        <canvas id="accuracyTrendChart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== QUIZ HISTORY ==================== -->
+  <h2 class="section-title">Quiz History</h2>
+  <div class="analytics-quiz-history" id="quizHistory">
+    <p class="analytics-empty">Loading quiz history…</p>
+  </div>
+
+  <!-- ==================== ACHIEVEMENTS ==================== -->
+  <h2 class="section-title">Achievements</h2>
+  <div class="analytics-achievements" id="achievements">
+    <div class="achievement-badge" data-badge="firstQuiz">
+      <div class="achievement-icon">🏅</div>
+      <span class="achievement-name">First Quiz</span>
+      <span class="achievement-desc">Complete your first quiz</span>
+    </div>
+    <div class="achievement-badge" data-badge="streak7">
+      <div class="achievement-icon">🔥</div>
+      <span class="achievement-name">7 Day Streak</span>
+      <span class="achievement-desc">Keep a 7-day streak</span>
+    </div>
+    <div class="achievement-badge" data-badge="questions100">
+      <div class="achievement-icon">📚</div>
+      <span class="achievement-name">100 Questions</span>
+      <span class="achievement-desc">Answer 100 questions</span>
+    </div>
+    <div class="achievement-badge" data-badge="accuracy90">
+      <div class="achievement-icon">🎯</div>
+      <span class="achievement-name">90% Accuracy</span>
+      <span class="achievement-desc">Hit 90% accuracy</span>
+    </div>
+    <div class="achievement-badge" data-badge="futureRN">
+      <div class="achievement-icon">👑</div>
+      <span class="achievement-name">Future RN</span>
+      <span class="achievement-desc">Keep pushing forward</span>
+    </div>
+  </div>
+
+</main>
+
+<script type="module" src="./js/analytics.js"></script>
+</body>
+</html>

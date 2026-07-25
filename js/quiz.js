@@ -15,6 +15,19 @@ import {
     increment
 } from "firebase/firestore";
 
+const SUBJECT_NAMES = {
+
+    fundamentals: "Fundamentals of Nursing",
+    medSurg: "Medical-Surgical Nursing",
+    maternal: "Maternal Nursing",
+    pediatric: "Pediatric Nursing",
+    psychiatric: "Psychiatric Nursing",
+    community: "Community Health Nursing",
+    pharma: "Pharmacology",
+    leadership: "Leadership & Management"
+
+};
+
 const LETTERS = ["A", "B", "C", "D", "E", "F"];
 
 let bank = {};            // full JSON bank, fetched once
@@ -34,7 +47,7 @@ const submitBtn     = document.getElementById("quizSubmit");
 const prevBtn       = document.getElementById("quizPrev");
 const nextBtn       = document.getElementById("quizNext");
 const shellEl       = document.getElementById("quizShell");
-const subjectSelect = document.getElementById("subjectSelect");
+const subjectTitle  = document.getElementById("subjectTitle");
 
 // ======================================
 // RENDER
@@ -81,6 +94,8 @@ function showEmptyState() {
 
 function loadSubject(subjectKey) {
   currentSubject = subjectKey;
+  subjectTitle.textContent =
+    SUBJECT_NAMES[subjectKey];
   currentQuestion = 0;
   score = 0;
   questions = bank[subjectKey] || [];
@@ -331,7 +346,6 @@ async function loadQuiz() {
     const res = await fetch("./data/quiz.json");
     bank = await res.json();
 
-    subjectSelect.value = currentSubject;
     loadSubject(currentSubject);    
   } catch (err) {
     console.error("Failed to load quiz data:", err);
@@ -345,7 +359,6 @@ async function loadQuiz() {
 submitBtn.addEventListener("click", checkAnswer);
 prevBtn.addEventListener("click", goPrev);
 nextBtn.addEventListener("click", goNext);
-subjectSelect.addEventListener("change", (e) => loadSubject(e.target.value));
 
 // ======================================
 // START

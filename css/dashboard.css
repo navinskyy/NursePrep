@@ -340,3 +340,63 @@
   background: linear-gradient(90deg, var(--pink-400), var(--pink-600));
   border-radius: 999px;
 }
+
+/* ============================================
+   Skeleton loading placeholders
+   ============================================ */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--surface) 25%,
+    var(--surface-hover) 50%,
+    var(--surface) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease infinite;
+  border-radius: var(--radius-sm);
+}
+
+.skeleton-text {
+  height: 14px;
+  width: 60%;
+  margin-bottom: 8px;
+}
+
+.skeleton-text.short { width: 35%; }
+
+.skeleton-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.skeleton-bar {
+  height: 8px;
+  width: 100%;
+  border-radius: 999px;
+}
+
+.skeleton-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ============================================
+   Stat card number count-up animation
+   ============================================ */
+.stat-card .num {
+  transition: color 0.3s ease;
+}
+
+.stat-card:hover {
+  border-color: rgba(236, 111, 160, 0.25);
+  transform: translateY(-2px);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
