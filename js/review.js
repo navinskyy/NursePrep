@@ -13,6 +13,7 @@ import {
 import {
     saveWrongAnswers,
     getWrongAnswers,
+    getAllWrongAnswers,
     removeMistake,
     markMistakePracticed,
     getWrongAnswerCounts,
