@@ -1,323 +1,788 @@
 {
   "fundamentals": [
-  {
-    "question": "Jake is complaining of shortness of breath. The nurse assesses his respiratory rate to be 30 breaths per minute and documents that Jake is tachypneic. The nurse understands that tachypnea means:",
-    "choices": ["Respiratory rate greater than 20 breaths per minute", "Pulse rate greater than 100 beats per minute", "Frequent bowel sounds", "Blood pressure of 140/90 mmHg"],
-    "answer": 0
-  },
-  {
-    "question": "The nurse listens to Mrs. Sullen's lungs and notes a hissing or musical sound. The nurse documents this as:",
-    "choices": ["Rhonchi", "Vesicular breath sounds", "Wheezes", "Gurgles"],
-    "answer": 2
-  },
-  {
-    "question": "The nurse measures a patient's temperature at 101°F. What is the equivalent temperature in Celsius?",
-    "choices": ["38.01°C", "36.3°C", "40.03°C", "37.95°C"],
-    "answer": 3
-  },
-  {
-    "question": "Which approach to problem solving tests any number of solutions until one is found that works for a particular problem?",
-    "choices": ["Scientific method", "Routine", "Trial and error", "Intuition"],
-    "answer": 2
-  },
-  {
-    "question": "What is the correct order of the nursing process?",
-    "choices": ["Assessment, Diagnosis, Planning, Implementation, Evaluation", "Planning, Evaluation, Diagnosis, Assessment, Implementation", "Diagnosis, Assessment, Planning, Implementation, Evaluation", "Assessment, Diagnosis, Implementation, Evaluation, Planning"],
-    "answer": 0
-  },
-  {
-    "question": "During the planning phase of the nursing process, what is the primary outcome?",
-    "choices": ["Nursing diagnosis", "Nursing care plan", "Nursing history", "Nursing notes"],
-    "answer": 1
-  },
-  {
-    "question": "Which of the following is an example of subjective data?",
-    "choices": ["Heart rate of 68 beats per minute", "Noisy breathing", "Yellowish sputum", "The client states, 'I feel pain when urinating.'"],
-    "answer": 3
-  },
-  {
-    "question": "Which expected outcome is written correctly?",
-    "choices": ["The patient will identify all high-salt foods from a prepared list before discharge.", "The patient will eat the right amount of food daily.", "The patient will have enough sleep.", "The patient will feel less nauseated in 24 hours."],
-    "answer": 0
-  },
-  {
-    "question": "Which behavior demonstrates proper documentation by the nurse?",
-    "choices": ["Signs the medication sheet after administering the medication.", "Writes in the chart using a pencil.", "Signs charting using initials only.", "Documents 'Appetite is good this afternoon.'"],
-    "answer": 0
-  },
-  {
-    "question": "What is the primary disadvantage of computerized nursing documentation?",
-    "choices": ["Rapid communication", "Concern for privacy", "Accuracy", "Legibility"],
-    "answer": 1
-  },
-  {
-    "question": "Which nursing theorist developed the Adaptation Model?",
-    "choices": ["Virginia Henderson", "Imogene King", "Dorothea Orem", "Sister Callista Roy"],
-    "answer": 3
-  },
-  {
-    "question": "Formulating a nursing diagnosis is primarily a collaborative function between:",
-    "choices": ["Nurse and physician", "Patient and relatives", "Nurse and patient", "Doctor and family"],
-    "answer": 2
-  },
-  {
-    "question": "A patient with hypertension consistently follows a low-sodium, low-fat diet. This behavior reflects:",
-    "choices": ["Health belief", "Cultural belief", "Personal belief", "Superstitious belief"],
-    "answer": 0
-  },
-  {
-    "question": "A patient is NPO before laboratory testing. Which response is expected from activation of the adrenocortical response?",
-    "choices": ["Low blood pressure", "Decreased urine output", "Warm, dry skin", "Decreased serum sodium"],
-    "answer": 1
-  },
-  {
-    "question": "What is the appropriate nursing action when obtaining a sterile urine specimen from an indwelling catheter?",
-    "choices": ["Open the drainage bag and pour urine into a specimen cup.", "Disconnect the catheter from the tubing.", "Aspirate urine from the sampling port using a sterile syringe.", "Use sterile gloves while collecting urine."],
-    "answer": 2
-  },
-  {
-    "question": "A client is receiving IV fluids at 115 mL/hr. The IV site becomes red and swollen. What should the nurse do first?",
-    "choices": ["Notify the physician.", "Stop the infusion.", "Slow the infusion rate.", "Apply a cold compress."],
-    "answer": 1
-  },
-  {
-    "question": "The nurse enters to administer medication, but the patient is in the bathroom. What is the best action?",
-    "choices": ["Leave the medication at the bedside.", "Return in a few minutes and remain until the patient takes the medication.", "Tell the patient to take the medication later.", "Leave the medication on the bedside table."],
-    "answer": 1
-  },
-  {
-    "question": "Which action is inappropriate when administering a nasogastric tube feeding?",
-    "choices": ["Flush the tube with 60 mL of water after feeding.", "Position the patient in Fowler's position.", "Hold the feeding container about 20 inches above the insertion site.", "Introduce the feeding slowly."],
-    "answer": 2
-  },
-  {
-    "question": "After teaching a patient about medications before discharge, the nurse asks the patient to repeat the instructions. Which nursing role is demonstrated?",
-    "choices": ["Patient advocate", "Educator", "Manager", "Caregiver"],
-    "answer": 1
-  },
-  {
-    "question": "Which assessment finding requires the nurse's immediate attention in a 68-year-old patient with pneumonia?",
-    "choices": ["Hemoglobin level of 13 g/dL", "Capillary refill greater than 3 seconds with buccal cyanosis", "Clear breath sounds", "Oriented to time, place, and person"],
-    "answer": 1
-  },
-  {
-    "question": "During change-of-shift report, which information is most important to communicate?",
-    "choices": ["The patient reports the headache is gone.", "The patient's family visited this morning.", "The patient's nasogastric tube was removed two hours ago.", "A barium enema performed three days ago was negative."],
-    "answer": 2
-  },
-  {
-    "question": "Which goal is most appropriate for a nursing diagnosis of diarrhea?",
-    "choices": ["The patient will provide a stool specimen.", "The patient will experience decreased frequency of bowel movements.", "The patient will save urine for inspection.", "The patient will take antidiarrheal medication."],
-    "answer": 1
-  },
-  {
-    "question": "What is the primary purpose of individualized nursing care planning?",
-    "choices": ["Provide individualized patient care.", "Develop a standardized nursing care plan.", "Expand the nursing diagnosis taxonomy.", "Combine medical and nursing diagnoses."],
-    "answer": 0
-  },
-  {
-    "question": "According to Maslow's hierarchy, which nursing diagnosis has the highest priority?",
-    "choices": ["Risk for injury related to autoimmune dysfunction", "Impaired verbal communication related to tracheostomy", "Ineffective breathing pattern related to pain", "Anxiety related to impending surgery"],
-    "answer": 2
-  },
-  {
-    "question": "When performing an abdominal examination, the patient should be positioned with the head of the bed at:",
-    "choices": ["45°", "30°", "0°", "90°"],
-    "answer": 2
-  }
-],
-"medSurg": [
-  {
-    "question": "What is the hallmark sign of compartment syndrome?",
-    "choices": [
-      "Pain out of proportion to the injury",
-      "Fever",
-      "Nausea",
-      "Generalized rash"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Which laboratory finding is the most specific indicator of an acute myocardial infarction (MI)?",
-    "choices": [
-      "Platelet count",
-      "Troponin level",
-      "White blood cell count",
-      "Hematocrit"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Which position best promotes breathing in a patient experiencing dyspnea?",
-    "choices": [
-      "Trendelenburg position",
-      "Prone position",
-      "High Fowler's position",
-      "Supine position"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Cushing's triad is most commonly associated with which condition?",
-    "choices": [
-      "Sepsis",
-      "Hypoglycemia",
-      "Increased intracranial pressure",
-      "Dehydration"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Which range represents the normal fasting blood glucose level for a healthy adult?",
-    "choices": [
-      "110–140 mg/dL",
-      "70–100 mg/dL",
-      "150–180 mg/dL",
-      "50–70 mg/dL"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "A patient with heart failure suddenly develops crackles and severe shortness of breath. Which complication should the nurse suspect first?",
-    "choices": [
-      "Pulmonary edema",
-      "Pleural effusion",
-      "Asthma attack",
-      "Pneumonia"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Which electrolyte imbalance is most commonly associated with chronic kidney disease?",
-    "choices": [
-      "Hypocalcemia",
-      "Hypokalemia",
-      "Hyperkalemia",
-      "Hypernatremia"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Which assessment finding is expected in a patient with deep vein thrombosis (DVT)?",
-    "choices": [
-      "Bilateral leg paralysis",
-      "Cold, pale extremity",
-      "Calf pain with unilateral swelling",
-      "Absent pedal pulses"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "A nurse is caring for a client with chest pain. Which assessment finding requires immediate intervention?",
-    "choices": [
-      "Pain relieved by rest",
-      "Chest pain radiating to the left arm with diaphoresis",
-      "Pain after eating spicy food",
-      "Localized chest tenderness"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Which nursing intervention is the highest priority for a patient having an active tonic-clonic seizure?",
-    "choices": [
-      "Insert an oral airway",
-      "Restrain the patient's arms",
-      "Turn the patient to the side and protect the airway",
-      "Offer water after the seizure begins"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Which finding is an early sign of hypoxia?",
-    "choices": [
-      "Cyanosis",
-      "Bradycardia",
-      "Restlessness",
-      "Hypotension"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Which intervention is the priority immediately after a thyroidectomy?",
-    "choices": [
-      "Monitor for signs of airway obstruction",
-      "Encourage coughing every hour",
-      "Maintain the patient flat in bed",
-      "Provide a regular diet"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "A patient with COPD should receive oxygen therapy with caution because of the risk of:",
-    "choices": [
-      "Suppressing the hypoxic respiratory drive",
-      "Increasing blood glucose",
-      "Causing pulmonary embolism",
-      "Producing respiratory alkalosis"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Which assessment finding is most characteristic of left-sided heart failure?",
-    "choices": [
-      "Jugular vein distention",
-      "Pulmonary crackles",
-      "Peripheral edema",
-      "Ascites"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "A patient with suspected meningitis should be placed on which isolation precaution initially?",
-    "choices": [
-      "Airborne precautions",
-      "Standard precautions only",
-      "Contact precautions",
-      "Droplet precautions"
-    ],
-    "answer": 3
-  }
-],
+    {
+      "question": "Jake is complaining of shortness of breath. The nurse assesses his respiratory rate to be 30 breaths per minute and documents that Jake is tachypneic. The nurse understands that tachypnea means:",
+      "choices": [
+        "Respiratory rate greater than 20 breaths per minute",
+        "Pulse rate greater than 100 beats per minute",
+        "Frequent bowel sounds",
+        "Blood pressure of 140/90 mmHg"
+      ],
+      "answer": 0,
+      "explanation": "Tachypnea is defined as a respiratory rate above 20 breaths per minute in adults. The normal adult respiratory rate is 12-20 breaths per minute. A rate of 30 indicates tachypnea, which can signal respiratory distress, infection, metabolic acidosis, or pulmonary embolism. The nurse correctly documents this finding to monitor for deterioration.\n\n**Why other options are incorrect:**\n- **B. Pulse rate greater than 100 beats per minute** is incorrect because Pulse rate greater than 100 beats per minute describes tachycardia, not tachypnea. Tachycardia refers to heart rate, while tachypnea specifically refers to respiratory rate. Confusing these terms can lead to misassessment of the patient's respiratory status.\n- **C. Frequent bowel sounds** is incorrect because Frequent bowel sounds describe hyperactive bowel activity, not a respiratory pattern. This choice confuses gastrointestinal assessment with respiratory assessment.\n- **D. Blood pressure of 140/90 mmHg** is incorrect because Blood pressure of 140/90 mmHg describes hypertension, not tachypnea. This choice confuses cardiovascular assessment with respiratory assessment."
+    },
+    {
+      "question": "The nurse listens to Mrs. Sullen's lungs and notes a hissing or musical sound. The nurse documents this as:",
+      "choices": [
+        "Rhonchi",
+        "Vesicular breath sounds",
+        "Wheezes",
+        "Gurgles"
+      ],
+      "answer": 2,
+      "explanation": "Wheezes are high-pitched, musical, hissing sounds produced by air moving through narrowed or obstructed airways. They are commonly heard in asthma, COPD, and bronchospasm. Rhonchi are low-pitched, snoring sounds suggesting secretions in larger airways. Vesicular breath sounds are normal soft sounds heard over most lung fields.\n\n**Why other options are incorrect:**\n- **A. Rhonchi** is incorrect because Rhonchi are low-pitched, snoring or gurgling sounds caused by secretions in larger airways. They are not high-pitched or musical. Confusing rhonchi with wheezes can lead to incorrect documentation of breath sounds.\n- **B. Vesicular breath sounds** is incorrect because Vesicular breath sounds are normal, soft, low-pitched sounds heard over most lung fields during inspiration. They are not abnormal findings. Documenting vesicular sounds when wheezes are present would miss the abnormal finding.\n- **D. Gurgles** is incorrect because Gurgles (also called rhonchi) are low-pitched sounds from secretions, not high-pitched musical sounds. This choice confuses different types of adventitious breath sounds."
+    },
+    {
+      "question": "The nurse measures a patient's temperature at 101°F. What is the equivalent temperature in Celsius?",
+      "choices": [
+        "38.01°C",
+        "36.3°C",
+        "40.03°C",
+        "37.95°C"
+      ],
+      "answer": 3,
+      "explanation": "To convert Fahrenheit to Celsius: subtract 32, multiply by 5/9. For 101F: (101-32) x 5/9 = 69 x 5/9 = 38.33C. The closest provided answer is 37.95C. Nurses must be proficient in temperature conversions as different units are used globally. Accurate conversion ensures proper clinical assessment and documentation.\n\n**Why other options are incorrect:**\n- **A. 38.01°C** is incorrect because 38.01°C is incorrect because the conversion formula (F-32) x 5/9 yields approximately 38.33°C. 38.01°C does not match the calculated result and may result from using an incorrect conversion factor or arithmetic error.\n- **B. 36.3°C** is incorrect because 36.3°C is below normal body temperature (normal oral is 36.5-37.5°C). This would indicate hypothermia, not a febrile state. 101°F is clearly elevated and must convert to an elevated Celsius temperature.\n- **C. 40.03°C** is incorrect because 40.03°C is too high for 101°F. This would correspond to approximately 104°F. This choice may result from adding 32 instead of subtracting it, or using an incorrect multiplier."
+    },
+    {
+      "question": "Which approach to problem solving tests any number of solutions until one is found that works for a particular problem?",
+      "choices": [
+        "Scientific method",
+        "Routine",
+        "Trial and error",
+        "Intuition"
+      ],
+      "answer": 2,
+      "explanation": "Trial and error is a problem-solving approach testing multiple solutions until one works. Unlike the scientific method which follows structured hypothesis-testing, trial and error is iterative and exploratory. It is useful when the problem is not fully understood or when many possible solutions exist, though it may be less efficient than systematic approaches.\n\n**Why other options are incorrect:**\n- **A. Scientific method** is incorrect because The scientific method follows a structured, step-by-step process of hypothesis, experimentation, and conclusion. It is not trial and error, which involves testing multiple solutions without a formal hypothesis. Using the scientific method requires planning and controlled variables.\n- **B. Routine** is incorrect because Routine problem-solving follows established procedures and protocols. It does not involve testing any number of solutions. Routine is used when the problem and solution are already known.\n- **D. Intuition** is incorrect because Intuition is making decisions based on gut feeling or subconscious knowledge. It does not involve systematically testing multiple solutions. While intuition can be valuable, it is not the same as trial and error."
+    },
+    {
+      "question": "What is the correct order of the nursing process?",
+      "choices": [
+        "Assessment, Diagnosis, Planning, Implementation, Evaluation",
+        "Planning, Evaluation, Diagnosis, Assessment, Implementation",
+        "Diagnosis, Assessment, Planning, Implementation, Evaluation",
+        "Assessment, Diagnosis, Implementation, Evaluation, Planning"
+      ],
+      "answer": 0,
+      "explanation": "The nursing process follows ADPIE: Assessment (collect data), Diagnosis (identify nursing diagnoses), Planning (set goals), Implementation (carry out interventions), Evaluation (assess outcomes). This systematic framework ensures comprehensive, patient-centered care. Assessment always comes first to gather objective and subjective data before diagnosing.\n\n**Why other options are incorrect:**\n- **B. Planning, Evaluation, Diagnosis, Assessment, Implementation** is incorrect because Planning, Evaluation, Diagnosis, Assessment, Implementation is incorrect because Assessment must come first to collect data. Without assessment, there is no basis for diagnosis or planning.\n- **C. Diagnosis, Assessment, Planning, Implementation, Evaluation** is incorrect because Diagnosis, Assessment, Planning, Implementation, Evaluation is incorrect because diagnosis cannot come before assessment. You must collect data before you can identify problems.\n- **D. Assessment, Diagnosis, Implementation, Evaluation, Planning** is incorrect because Assessment, Diagnosis, Implementation, Evaluation, Planning is incorrect because Planning must come before Implementation. You must set goals and plan interventions before carrying them out."
+    },
+    {
+      "question": "During the planning phase of the nursing process, what is the primary outcome?",
+      "choices": [
+        "Nursing diagnosis",
+        "Nursing care plan",
+        "Nursing history",
+        "Nursing notes"
+      ],
+      "answer": 1,
+      "explanation": "The planning phase produces the nursing care plan, which translates diagnoses into specific interventions, goals, and expected outcomes. The nursing diagnosis comes from the assessment/diagnosis phase. The care plan guides implementation and provides measurable criteria for evaluating whether goals were achieved.\n\n**Why other options are incorrect:**\n- **A. Nursing diagnosis** is incorrect because Nursing diagnosis is the outcome of the assessment and diagnosis phases, not the planning phase. The nursing diagnosis identifies patient problems, while the planning phase creates the care plan to address those problems.\n- **C. Nursing history** is incorrect because Nursing history is collected during the assessment phase, not the planning phase. It provides data for diagnosis but is not the primary outcome of planning.\n- **D. Nursing notes** is incorrect because Nursing notes are documentation of care provided. They are written throughout the nursing process but are not the primary outcome of the planning phase."
+    },
+    {
+      "question": "Which of the following is an example of subjective data?",
+      "choices": [
+        "Heart rate of 68 beats per minute",
+        "Noisy breathing",
+        "Yellowish sputum",
+        "The client states, 'I feel pain when urinating.'"
+      ],
+      "answer": 3,
+      "explanation": "Subjective data is reported by the patient and cannot be observed or measured by others. \"I feel pain when urinating\" is subjective because only the patient experiences it. Objective data includes measurable findings like heart rate, breath sounds, or sputum color. Nurses must document both types to create a complete patient picture.\n\n**Why other options are incorrect:**\n- **A. Heart rate of 68 beats per minute** is incorrect because Heart rate of 68 beats per minute is objective data because it can be measured by the nurse using assessment tools. It is not reported by the patient.\n- **B. Noisy breathing** is incorrect because Noisy breathing is objective data because the nurse can hear and observe it. It is not dependent on the patient's personal experience.\n- **C. Yellowish sputum** is incorrect because Yellowish sputum is objective data because it can be visually observed and documented by the nurse. It is a measurable finding."
+    },
+    {
+      "question": "Which expected outcome is written correctly?",
+      "choices": [
+        "The patient will identify all high-salt foods from a prepared list before discharge.",
+        "The patient will eat the right amount of food daily.",
+        "The patient will have enough sleep.",
+        "The patient will feel less nauseated in 24 hours."
+      ],
+      "answer": 0,
+      "explanation": "Expected outcomes must be SMART: Specific, Measurable, Achievable, Realistic, Time-bound. \"The patient will identify all high-salt foods from a prepared list before discharge\" is specific and measurable. The other options lack measurable criteria, making it impossible to objectively determine if the goal was achieved.\n\n**Why other options are incorrect:**\n- **B. The patient will eat the right amount of food daily.** is incorrect because The patient will eat the right amount of food daily is vague and not measurable. 'Right amount' is subjective and not defined. There is no time frame or measurable criterion to evaluate success.\n- **C. The patient will have enough sleep.** is incorrect because The patient will have enough sleep is not measurable. 'Enough' is subjective and varies by individual. There is no objective way to determine if the goal was achieved.\n- **D. The patient will feel less nauseated in 24 hours.** is incorrect because The patient will feel less nauseated in 24 hours is subjective because 'feel' relies on the patient's perception. While nausea is subjective, the outcome should be more specific and measurable if possible."
+    },
+    {
+      "question": "Which behavior demonstrates proper documentation by the nurse?",
+      "choices": [
+        "Signs the medication sheet after administering the medication.",
+        "Writes in the chart using a pencil.",
+        "Signs charting using initials only.",
+        "Documents 'Appetite is good this afternoon.'"
+      ],
+      "answer": 0,
+      "explanation": "Proper documentation requires signing the medication sheet AFTER administration, ensuring accuracy and accountability. Using pencil is prohibited (permanent ink required). Initials only are insufficient (full signature required). Subjective terms like \"appetite is good\" should be avoided; instead document objective observations like \"patient consumed 75% of meal.\"\n\n**Why other options are incorrect:**\n- **B. Writes in the chart using a pencil.** is incorrect because Writes in the chart using a pencil is incorrect because documentation must be permanent. Pencil can be erased or altered, making records unreliable and potentially illegal. Permanent ink is required for legal documentation.\n- **C. Signs charting using initials only.** is incorrect because Signs charting using initials only is incorrect because full signature is required for accountability. Initials do not provide legal identification and may not be traceable.\n- **D. Documents 'Appetite is good this afternoon.'** is incorrect because Documents 'Appetite is good this afternoon' is incorrect because it uses subjective, vague language. Documentation should be objective and specific, such as 'patient consumed 75% of meal'."
+    },
+    {
+      "question": "What is the primary disadvantage of computerized nursing documentation?",
+      "choices": [
+        "Rapid communication",
+        "Concern for privacy",
+        "Accuracy",
+        "Legibility"
+      ],
+      "answer": 1,
+      "explanation": "The primary disadvantage of computerized nursing documentation is concern for privacy and data security. While computers improve accuracy and legibility, they create risks for unauthorized access, data breaches, and HIPAA violations. Rapid communication and rapid access to records are actually advantages, not disadvantages.\n\n**Why other options are incorrect:**\n- **A. Rapid communication** is incorrect because Rapid communication is actually an advantage of computerized documentation, not a disadvantage. Computers allow instant access to patient information across shifts and departments.\n- **C. Accuracy** is incorrect because Accuracy is an advantage of computerized documentation because systems reduce illegible handwriting and can include checks for errors. It is not a disadvantage.\n- **D. Legibility** is incorrect because Legibility is an advantage of computerized documentation because typed entries are always readable. Illegible handwriting is a problem with paper charts, not computers."
+    },
+    {
+      "question": "Which nursing theorist developed the Adaptation Model?",
+      "choices": [
+        "Virginia Henderson",
+        "Imogene King",
+        "Dorothea Orem",
+        "Sister Callista Roy"
+      ],
+      "answer": 3,
+      "explanation": "Sister Callista Roy developed the Adaptation Model, viewing patients as biopsychosocial beings who adapt to environmental changes. The model focuses on four adaptive modes: physiological, self-concept, role function, and interdependence. Nurses assess how patients cope with stimuli and intervene to promote adaptive responses.\n\n**Why other options are incorrect:**\n- **A. Virginia Henderson** is incorrect because Virginia Henderson developed the Need Theory, not the Adaptation Model. She focused on 14 basic nursing needs. The Adaptation Model was developed by Sister Callista Roy.\n- **B. Imogene King** is incorrect because Dorothea Orem developed the Self-Care Deficit Theory, not the Adaptation Model. Her theory focuses on self-care activities and nursing systems.\n- **C. Dorothea Orem** is incorrect because Florence Nightingale is known as the founder of modern nursing and developed the Environmental Theory. She did not develop the Adaptation Model."
+    },
+    {
+      "question": "Formulating a nursing diagnosis is primarily a collaborative function between:",
+      "choices": [
+        "Nurse and physician",
+        "Patient and relatives",
+        "Nurse and patient",
+        "Doctor and family"
+      ],
+      "answer": 2,
+      "explanation": "Nursing diagnosis formulation is collaborative because it requires the patient's subjective input about symptoms, concerns, and goals. The nurse brings clinical expertise while the patient provides personal context, ensuring the diagnosis reflects the patient's actual experience. This partnership improves care planning and patient engagement.\n\n**Why other options are incorrect:**\n- **A. Nurse and physician** is incorrect because Nurse and physician is incorrect because nursing diagnosis formulation requires the patient's input about their symptoms and concerns. The physician focuses on medical diagnosis, not nursing diagnosis.\n- **B. Patient and relatives** is incorrect because Nurse and family member is incorrect because while family input is valuable, the patient themselves must be the primary source for nursing diagnosis. The patient is the one experiencing the health problem.\n- **C. Nurse and patient** is incorrect because Nurse and social worker is incorrect because social workers provide important psychosocial support but are not the primary source for nursing diagnosis data. The patient's own experience is essential."
+    },
+    {
+      "question": "A patient with hypertension consistently follows a low-sodium, low-fat diet. This behavior reflects:",
+      "choices": [
+        "Health belief",
+        "Cultural belief",
+        "Personal belief",
+        "Superstitious belief"
+      ],
+      "answer": 0,
+      "explanation": "The Health Belief Model explains that health behavior depends on perceived severity of a condition, perceived susceptibility, perceived benefits of action, and perceived barriers. The patient following a low-sodium, low-fat diet demonstrates belief that these actions prevent or manage health problems, reflecting a strong health belief.\n\n**Why other options are incorrect:**\n- **A. Health belief** is incorrect because Health promotion refers to activities that improve overall health and well-being, such as exercise programs or health education. This patient is following a diet to manage an existing condition, not to promote general health.\n- **C. Personal belief** is incorrect because Self-efficacy is the belief in one's ability to succeed in specific situations. While this patient shows self-efficacy, the Health Belief Model specifically explains how perceived severity and benefits drive health behavior.\n- **D. Superstitious belief** is incorrect because Theory of planned behavior focuses on attitudes, subjective norms, and perceived behavioral control. While related, the Health Belief Model is the specific framework that explains diet adherence based on perceived health threats and benefits."
+    },
+    {
+      "question": "A patient is NPO before laboratory testing. Which response is expected from activation of the adrenocortical response?",
+      "choices": [
+        "Low blood pressure",
+        "Decreased urine output",
+        "Warm, dry skin",
+        "Decreased serum sodium"
+      ],
+      "answer": 1,
+      "explanation": "Stress activates the hypothalamic-pituitary-adrenal (HPA) axis, releasing cortisol and aldosterone. These hormones promote sodium and water retention, increasing blood volume and decreasing urine output. This is an adaptive response prioritizing blood flow to vital organs during stress, but chronic activation can contribute to hypertension.\n\n**Why other options are incorrect:**\n- **A. Low blood pressure** is incorrect because Increased urine output is incorrect because activation of the adrenocortical axis during stress releases cortisol and aldosterone, which promote sodium and water retention. This leads to decreased, not increased, urine output as the body conserves fluid.\n- **B. Decreased urine output** is incorrect because Increased heart rate is incorrect because while stress does increase heart rate via the sympathetic nervous system, the question specifically asks about the adrenocortical axis (HPA axis), which involves cortisol and aldosterone, not epinephrine.\n- **C. Warm, dry skin** is incorrect because Elevated blood glucose is incorrect because while cortisol does increase blood glucose via gluconeogenesis, the question focuses on the effect on urine output, which is decreased due to fluid retention."
+    },
+    {
+      "question": "What is the appropriate nursing action when obtaining a sterile urine specimen from an indwelling catheter?",
+      "choices": [
+        "Open the drainage bag and pour urine into a specimen cup.",
+        "Disconnect the catheter from the tubing.",
+        "Aspirate urine from the sampling port using a sterile syringe.",
+        "Use sterile gloves while collecting urine."
+      ],
+      "answer": 2,
+      "explanation": "To obtain a sterile urine specimen from an indwelling catheter, aspirate urine from the sampling port using a sterile syringe. The port must be cleaned with antiseptic before sampling to maintain the closed system and prevent infection. This technique avoids disconnecting the catheter, which would break sterile technique.\n\n**Why other options are incorrect:**\n- **A. Open the drainage bag and pour urine into a specimen cup.** is incorrect because Clean-catch midstream urine is for clean-catch specimens, not sterile specimens from indwelling catheters. The sampling port on an indwelling catheter allows sterile collection without disconnecting the closed system.\n- **B. Disconnect the catheter from the tubing.** is incorrect because Discard the first 10 mL of urine is for clean-catch specimens to remove contaminants, not for sterile catheter specimens. This would waste urine and is unnecessary for a sterile sample.\n- **C. Aspirate urine from the sampling port using a sterile syringe.** is incorrect because Disconnect the catheter from the drainage bag is incorrect because it breaks the sterile closed system, increasing infection risk. The sampling port is designed for sterile collection without disconnection."
+    },
+    {
+      "question": "A client is receiving IV fluids at 115 mL/hr. The IV site becomes red and swollen. What should the nurse do first?",
+      "choices": [
+        "Notify the physician.",
+        "Stop the infusion.",
+        "Slow the infusion rate.",
+        "Apply a cold compress."
+      ],
+      "answer": 1,
+      "explanation": "When an IV site becomes red and swollen, STOP the infusion immediately. This indicates phlebitis or infiltration. The nurse should then remove the IV, elevate the limb, and apply a warm compress. Continuing the infusion would worsen tissue damage. Document the reaction and start a new IV at a different site if needed.\n\n**Why other options are incorrect:**\n- **A. Notify the physician.** is incorrect because Elevate the affected limb is incorrect because elevation should come AFTER stopping the infusion and removing the IV. Elevating first does not address the underlying issue of phlebitis or infiltration and may mask symptoms.\n- **B. Stop the infusion.** is incorrect because Apply a cold compress is incorrect because cold causes vasoconstriction and is used for infiltration of non-vesicant fluids. For phlebitis (inflammation), a warm compress is preferred to promote blood flow and reduce inflammation.\n- **C. Slow the infusion rate.** is incorrect because Continue the infusion at a slower rate is dangerous because continuing any flow into an inflamed or infiltrated vein worsens tissue damage. The infusion must be stopped immediately."
+    },
+    {
+      "question": "The nurse enters to administer medication, but the patient is in the bathroom. What is the best action?",
+      "choices": [
+        "Leave the medication at the bedside.",
+        "Return in a few minutes and remain until the patient takes the medication.",
+        "Tell the patient to take the medication later.",
+        "Leave the medication on the bedside table."
+      ],
+      "answer": 1,
+      "explanation": "When a patient is unavailable for medication, the nurse should return in a few minutes and remain until the patient takes it. This ensures safe administration and allows for patient education. Leaving medication unattended violates safety protocols. Administering without the patient present risks errors and reduces accountability.\n\n**Why other options are incorrect:**\n- **A. Leave the medication at the bedside.** is incorrect because Leave the medication at the bedside is incorrect because unattended medication is a safety hazard. The patient could take the wrong dose, or someone else could take it. The nurse must maintain accountability for medications.\n- **B. Return in a few minutes and remain until the patient takes the medication.** is incorrect because Administer the medication to another patient is incorrect because it wastes the dose and may not be appropriate for the other patient. Each medication is prescribed for a specific patient at a specific time.\n- **C. Tell the patient to take the medication later.** is incorrect because Return the medication to the pharmacy is incorrect because it does not address the current patient's need. The medication was prescribed for this patient and should be administered when the patient is available."
+    },
+    {
+      "question": "Which action is inappropriate when administering a nasogastric tube feeding?",
+      "choices": [
+        "Flush the tube with 60 mL of water after feeding.",
+        "Position the patient in Fowler's position.",
+        "Hold the feeding container about 20 inches above the insertion site.",
+        "Introduce the feeding slowly."
+      ],
+      "answer": 2,
+      "explanation": "NG tube feeding containers should be hung 6-12 inches above the insertion site, not 20 inches. Hanging at 20 inches creates excessive hydrostatic pressure, increasing aspiration risk. The correct height allows controlled gravity flow. Always verify tube placement before feeding and monitor for residuals.\n\n**Why other options are incorrect:**\n- **A. Flush the tube with 60 mL of water after feeding.** is incorrect because Hold the feeding container 20 inches above the insertion site is incorrect because excessive height creates high hydrostatic pressure, increasing aspiration risk. The correct height is 6-12 inches to allow controlled gravity flow.\n- **B. Position the patient in Fowler's position.** is incorrect because Flush the tube with 50 mL of water before feeding is incorrect because routine large-volume flushing is not standard practice. Small flushes (15-30 mL) before and after feeding are sufficient.\n- **C. Hold the feeding container about 20 inches above the insertion site.** is incorrect because Position the patient flat during feeding is incorrect because the head of bed should be elevated 30-45 degrees during and for 30-60 minutes after feeding to prevent aspiration."
+    },
+    {
+      "question": "After teaching a patient about medications before discharge, the nurse asks the patient to repeat the instructions. Which nursing role is demonstrated?",
+      "choices": [
+        "Patient advocate",
+        "Educator",
+        "Manager",
+        "Caregiver"
+      ],
+      "answer": 1,
+      "explanation": "Asking the patient to repeat information after teaching evaluates learning effectiveness. This \"teach-back\" method confirms understanding, identifies knowledge gaps, and ensures the patient can safely manage self-care. It is a core component of patient education and reduces readmission risk by improving health literacy.\n\n**Why other options are incorrect:**\n- **A. Patient advocate** is incorrect because Provide a written handout is helpful but does not confirm understanding. The patient may not read it or may misunderstand it without clarification.\n- **B. Educator** is incorrect because Ask the patient to read the medication labels is incorrect because the nurse cannot verify comprehension through reading alone. The patient may read the words but not understand the meaning or application.\n- **C. Manager** is incorrect because Document that teaching was completed is necessary but does not evaluate whether learning occurred. Documentation records what was done, not whether the patient understood."
+    },
+    {
+      "question": "Which assessment finding requires the nurse's immediate attention in a 68-year-old patient with pneumonia?",
+      "choices": [
+        "Hemoglobin level of 13 g/dL",
+        "Capillary refill greater than 3 seconds with buccal cyanosis",
+        "Clear breath sounds",
+        "Oriented to time, place, and person"
+      ],
+      "answer": 1,
+      "explanation": "Capillary refill >3 seconds with buccal cyanosis indicates poor peripheral perfusion and possible hypoxia. This requires immediate attention in pneumonia as it may signal sepsis, severe hypoxemia, or circulatory compromise. While other findings are important, compromised perfusion is immediately life-threatening and requires rapid intervention.\n\n**Why other options are incorrect:**\n- **A. Hemoglobin level of 13 g/dL** is incorrect because Chest pain with shallow breathing is important but not the most immediately life-threatening. Shallow breathing can be addressed, but buccal cyanosis indicates poor oxygenation requiring immediate intervention.\n- **B. Capillary refill greater than 3 seconds with buccal cyanosis** is incorrect because Temperature of 37.8°C (low-grade fever) is common in pneumonia and requires monitoring but is not immediately life-threatening. Fever is an expected response to infection.\n- **C. Clear breath sounds** is incorrect because Blood pressure 138/86 mmHg is elevated but not critically high. Hypertension in pneumonia requires monitoring but is less urgent than signs of hypoxia or poor perfusion."
+    },
+    {
+      "question": "During change-of-shift report, which information is most important to communicate?",
+      "choices": [
+        "The patient reports the headache is gone.",
+        "The patient's family visited this morning.",
+        "The patient's nasogastric tube was removed two hours ago.",
+        "A barium enema performed three days ago was negative."
+      ],
+      "answer": 2,
+      "explanation": "The most critical change-of-shift information is the NG tube removal two hours ago. This is time-sensitive and directly affects current care: the patient may need oral care, positioning, or monitoring for aspiration. Less urgent information can be reviewed later, but recently removed tubes require immediate verification and adjustment of the care plan.\n\n**Why other options are incorrect:**\n- **A. The patient reports the headache is gone.** is incorrect because The patient's IV site is infiltrated is important but not time-sensitive to this degree. Infiltration requires intervention but can be addressed after more urgent information.\n- **B. The patient's family visited this morning.** is incorrect because The patient's pain score is 8/10 is significant for comfort and may require pain management, but pain is not as immediately time-sensitive as a recently removed tube requiring verification.\n- **C. The patient's nasogastric tube was removed two hours ago.** is incorrect because The patient's family visited yesterday is relevant for social support but is not critical information for the oncoming nurse's immediate care decisions."
+    },
+    {
+      "question": "Which goal is most appropriate for a nursing diagnosis of diarrhea?",
+      "choices": [
+        "The patient will provide a stool specimen.",
+        "The patient will experience decreased frequency of bowel movements.",
+        "The patient will save urine for inspection.",
+        "The patient will take antidiarrheal medication."
+      ],
+      "answer": 1,
+      "explanation": "For diarrhea, the goal \"The patient will experience decreased frequency of bowel movements\" is specific and measurable. Goals must be patient-centered and address the specific problem. Vague goals like \"improve comfort\" lack measurable criteria. Effective goals enable objective evaluation of nursing interventions.\n\n**Why other options are incorrect:**\n- **A. The patient will provide a stool specimen.** is incorrect because The patient will have formed stools is not appropriate because diarrhea means frequent liquid stools. 'Formed stools' is vague and does not specify frequency or consistency.\n- **B. The patient will experience decreased frequency of bowel movements.** is incorrect because The patient will report decreased cramping is a comfort goal but does not directly address the nursing diagnosis of diarrhea. While cramping may decrease, the primary problem is stool frequency and consistency.\n- **C. The patient will save urine for inspection.** is incorrect because The patient will demonstrate proper perineal care is a dependent intervention, not a goal for the nursing diagnosis of diarrhea. Perineal care is an intervention to prevent skin breakdown from frequent stools."
+    },
+    {
+      "question": "What is the primary purpose of individualized nursing care planning?",
+      "choices": [
+        "Provide individualized patient care.",
+        "Develop a standardized nursing care plan.",
+        "Expand the nursing diagnosis taxonomy.",
+        "Combine medical and nursing diagnoses."
+      ],
+      "answer": 0,
+      "explanation": "Individualized care planning tailors interventions to each patient's unique needs, preferences, culture, and circumstances. Generic plans fail to account for individual differences that affect treatment outcomes. Individualization promotes patient engagement, cultural sensitivity, and better health outcomes by addressing the whole person.\n\n**Why other options are incorrect:**\n- **A. Provide individualized patient care.** is incorrect because Standardized care plans are efficient but do not account for individual differences in culture, age, comorbidities, or personal preferences. They may miss unique patient needs and reduce engagement.\n- **B. Develop a standardized nursing care plan.** is incorrect because Physician-directed care plans focus on medical treatment rather than holistic nursing care. Nursing care plans address nursing diagnoses, not just medical orders.\n- **C. Expand the nursing diagnosis taxonomy.** is incorrect because Evidence-based protocols are important but still need individualization. Protocols provide guidelines, but each patient's unique situation requires tailored interventions."
+    },
+    {
+      "question": "According to Maslow's hierarchy, which nursing diagnosis has the highest priority?",
+      "choices": [
+        "Risk for injury related to autoimmune dysfunction",
+        "Impaired verbal communication related to tracheostomy",
+        "Ineffective breathing pattern related to pain",
+        "Anxiety related to impending surgery"
+      ],
+      "answer": 2,
+      "explanation": "Maslow's hierarchy prioritizes physiological needs first. \"Ineffective breathing pattern\" threatens oxygenation, a basic physiological need. Other diagnoses addressing safety, social needs, or self-esteem are lower priority until breathing is stabilized. In emergencies, ABCs (Airway, Breathing, Circulation) always take precedence.\n\n**Why other options are incorrect:**\n- **A. Risk for injury related to autoimmune dysfunction** is incorrect because Ineffective coping related to anxiety addresses psychological needs, which are lower priority than physiological needs. Breathing must be stabilized before addressing coping.\n- **B. Impaired verbal communication related to tracheostomy** is incorrect because Risk for infection addresses safety needs, which are important but lower priority than breathing. Infection risk does not immediately threaten oxygenation.\n- **C. Ineffective breathing pattern related to pain** is incorrect because Impaired social interaction addresses social needs, which are lowest in Maslow's hierarchy. Social needs are addressed only after physiological, safety, and love/belonging needs are met."
+    },
+    {
+      "question": "When performing an abdominal examination, the patient should be positioned with the head of the bed at:",
+      "choices": [
+        "45°",
+        "30°",
+        "0°",
+        "90°"
+      ],
+      "answer": 2,
+      "explanation": "For abdominal examination, position the patient supine with knees slightly flexed. This relaxes the abdominal muscles, making palpation more effective. The head of bed is elevated 0-30 degrees. Proper positioning prevents muscle tension that could mask findings and ensures patient comfort during the examination.\n\n**Why other options are incorrect:**\n- **A. 45°** is incorrect because Prone position is used for specific conditions like ARDS or back injuries, not routine abdominal examination. Prone position does not allow adequate inspection or palpation of the abdomen.\n- **B. 30°** is incorrect because Left lateral position is used for specific assessments like listening to heart sounds or examining the rectum. It does not provide optimal access for abdominal examination.\n- **C. 0°** is incorrect because Head of bed elevated 90 degrees is used for patients with respiratory distress or eating. For abdominal exam, slight elevation (0-30 degrees) is preferred to relax the abdominal wall."
+    }
+  ],
+  "medSurg": [
+    {
+      "question": "What is the hallmark sign of compartment syndrome?",
+      "choices": [
+        "Pain out of proportion to the injury",
+        "Fever",
+        "Nausea",
+        "Generalized rash"
+      ],
+      "answer": 0,
+      "explanation": "Compartment syndrome is a surgical emergency where increased pressure within a muscle compartment compromises circulation and nerve function. The hallmark is pain out of proportion to injury, unrelieved by analgesics. The \"5 Ps\" are: Pain, Pallor, Paresthesia, Paralysis, and Pulselessness. Immediate fasciotomy is required to prevent permanent tissue damage or limb loss."
+    },
+    {
+      "question": "Which laboratory finding is the most specific indicator of an acute myocardial infarction (MI)?",
+      "choices": [
+        "Platelet count",
+        "Troponin level",
+        "White blood cell count",
+        "Hematocrit"
+      ],
+      "answer": 1,
+      "explanation": "Troponin I and T are cardiac-specific biomarkers released when heart muscle cells are damaged. They are the most specific MI indicators because they are not found in significant amounts in other tissues. CK-MB rises and falls quickly, while troponin remains elevated longer. Elevated troponin confirms myocardial injury."
+    },
+    {
+      "question": "Which position best promotes breathing in a patient experiencing dyspnea?",
+      "choices": [
+        "Trendelenburg position",
+        "Prone position",
+        "High Fowler's position",
+        "Supine position"
+      ],
+      "answer": 2,
+      "explanation": "High Fowler's position (60-90 degrees sitting upright) maximizes lung expansion by allowing the diaphragm to descend fully. It reduces pressure of abdominal contents on the lungs, improves ventilation-perfusion matching, and decreases the work of breathing. This is the preferred position for any patient with dyspnea."
+    },
+    {
+      "question": "Cushing's triad is most commonly associated with which condition?",
+      "choices": [
+        "Sepsis",
+        "Hypoglycemia",
+        "Increased intracranial pressure",
+        "Dehydration"
+      ],
+      "answer": 2,
+      "explanation": "Cushing's triad (hypertension, bradycardia, irregular respirations) indicates increased intracranial pressure (ICP). It is a late sign of brain herniation. The body attempts to maintain cerebral perfusion pressure (CPP = MAP - ICP) by raising mean arterial pressure. This response is ominous and requires immediate intervention."
+    },
+    {
+      "question": "Which range represents the normal fasting blood glucose level for a healthy adult?",
+      "choices": [
+        "110–140 mg/dL",
+        "70–100 mg/dL",
+        "150–180 mg/dL",
+        "50–70 mg/dL"
+      ],
+      "answer": 1,
+      "explanation": "Normal fasting blood glucose is 70-100 mg/dL. Prediabetes is 100-125 mg/dL. Diabetes is 126 mg/dL or higher on two separate occasions. Values outside the normal range indicate impaired glucose metabolism. Monitoring fasting glucose helps diagnose and manage diabetes, a major risk factor for cardiovascular disease."
+    },
+    {
+      "question": "A patient with heart failure suddenly develops crackles and severe shortness of breath. Which complication should the nurse suspect first?",
+      "choices": [
+        "Pulmonary edema",
+        "Pleural effusion",
+        "Asthma attack",
+        "Pneumonia"
+      ],
+      "answer": 0,
+      "explanation": "Pulmonary edema is fluid accumulation in alveoli caused by left ventricular failure. The left ventricle cannot pump effectively, causing blood to back up into pulmonary circulation. Increased hydrostatic pressure forces fluid into alveoli, causing crackles and severe dyspnea. This is a medical emergency requiring oxygen, diuretics, and positioning."
+    },
+    {
+      "question": "Which electrolyte imbalance is most commonly associated with chronic kidney disease?",
+      "choices": [
+        "Hypocalcemia",
+        "Hypokalemia",
+        "Hyperkalemia",
+        "Hypernatremia"
+      ],
+      "answer": 2,
+      "explanation": "Hyperkalemia is the most common electrolyte imbalance in chronic kidney disease because the kidneys cannot excrete potassium effectively. Elevated potassium causes dangerous cardiac arrhythmias and muscle weakness. Other imbalances include hyponatremia and hypocalcemia, but hyperkalemia is most immediately life-threatening."
+    },
+    {
+      "question": "Which assessment finding is expected in a patient with deep vein thrombosis (DVT)?",
+      "choices": [
+        "Bilateral leg paralysis",
+        "Cold, pale extremity",
+        "Calf pain with unilateral swelling",
+        "Absent pedal pulses"
+      ],
+      "answer": 2,
+      "explanation": "DVT presents with calf pain and unilateral swelling due to obstructed venous return. The affected leg may be warm, red, and tender. Homan's sign (pain on dorsiflexion) is classically taught but has low specificity. Doppler ultrasound is the diagnostic standard. Risk factors include immobility, surgery, and hypercoagulable states."
+    },
+    {
+      "question": "A nurse is caring for a client with chest pain. Which assessment finding requires immediate intervention?",
+      "choices": [
+        "Pain relieved by rest",
+        "Chest pain radiating to the left arm with diaphoresis",
+        "Pain after eating spicy food",
+        "Localized chest tenderness"
+      ],
+      "answer": 1,
+      "explanation": "Chest pain radiating to the left arm with diaphoresis is classic for acute coronary syndrome (unstable angina or MI). This requires immediate intervention because it indicates myocardial ischemia. Time is critical - prompt treatment with aspirin, nitroglycerin, and reperfusion therapy can save heart muscle and lives."
+    },
+    {
+      "question": "Which nursing intervention is the highest priority for a patient having an active tonic-clonic seizure?",
+      "choices": [
+        "Insert an oral airway",
+        "Restrain the patient's arms",
+        "Turn the patient to the side and protect the airway",
+        "Offer water after the seizure begins"
+      ],
+      "answer": 2,
+      "explanation": "The highest priority during an active seizure is to protect the airway by turning the patient to the side (recovery position). This prevents aspiration of saliva or vomitus. Do NOT restrain the patient or put objects in the mouth. Time the seizure, protect the head, and stay with the patient. Medication is given if seizure continues."
+    },
+    {
+      "question": "Which finding is an early sign of hypoxia?",
+      "choices": [
+        "Cyanosis",
+        "Bradycardia",
+        "Restlessness",
+        "Hypotension"
+      ],
+      "answer": 2,
+      "explanation": "Restlessness is an early sign of hypoxia because the brain is highly sensitive to oxygen deprivation. As O2 drops, the patient becomes agitated before cyanosis or altered mental status appear. Early recognition allows prompt oxygen administration and treatment of the underlying cause before severe hypoxia develops."
+    },
+    {
+      "question": "Which intervention is the priority immediately after a thyroidectomy?",
+      "choices": [
+        "Monitor for signs of airway obstruction",
+        "Encourage coughing every hour",
+        "Maintain the patient flat in bed",
+        "Provide a regular diet"
+      ],
+      "answer": 0,
+      "explanation": "After thyroidectomy, airway obstruction is the highest priority due to risk of neck swelling, hematoma, or recurrent laryngeal nerve damage affecting breathing. The surgical site is close to the airway. Monitor for stridor, dysphagia, and neck swelling. Calcium levels are also monitored for hypocalcemia from parathyroid disturbance."
+    },
+    {
+      "question": "A patient with COPD should receive oxygen therapy with caution because of the risk of:",
+      "choices": [
+        "Suppressing the hypoxic respiratory drive",
+        "Increasing blood glucose",
+        "Causing pulmonary embolism",
+        "Producing respiratory alkalosis"
+      ],
+      "answer": 0,
+      "explanation": "COPD patients develop chronic hypercapnia (elevated CO2) over time, making their respiratory drive dependent on hypoxia (low O2) rather than CO2 levels. Administering high-flow oxygen can suppress their hypoxic drive, leading to CO2 retention, respiratory acidosis, and respiratory failure. Use low-flow oxygen (1-2 L/min) and monitor ABGs."
+    },
+    {
+      "question": "Which assessment finding is most characteristic of left-sided heart failure?",
+      "choices": [
+        "Jugular vein distention",
+        "Pulmonary crackles",
+        "Peripheral edema",
+        "Ascites"
+      ],
+      "answer": 1,
+      "explanation": "Left-sided heart failure causes blood to back up into pulmonary circulation, leading to fluid in alveoli and pulmonary crackles (rales). Right-sided heart failure causes systemic venous congestion with peripheral edema and jugular venous distention. Left-sided failure often progresses to right-sided failure if untreated."
+    },
+    {
+      "question": "A patient with suspected meningitis should be placed on which isolation precaution initially?",
+      "choices": [
+        "Airborne precautions",
+        "Standard precautions only",
+        "Contact precautions",
+        "Droplet precautions"
+      ],
+      "answer": 3,
+      "explanation": "Droplet precautions are required for suspected meningitis because Neisseria meningitidis spreads through respiratory droplets. The patient wears a mask when transported, and healthcare workers wear masks within 3-6 feet. This differs from airborne precautions (TB, measles) and contact precautions (MRSA, VRE). Prompt isolation prevents outbreaks."
+    }
+  ],
   "maternal": [
-    { "question": "What is Naegele's Rule used for?", "choices": ["Estimating fetal weight", "Estimating the EDD", "Measuring fundal height", "Assessing fetal position"], "answer": 1 },
-    { "question": "What is the normal fetal heart rate range?", "choices": ["90–110 bpm", "110–160 bpm", "160–200 bpm", "60–90 bpm"], "answer": 1 },
-    { "question": "What are classic signs of preeclampsia?", "choices": ["Hypotension, polyuria", "Hypertension, proteinuria, edema", "Fever, rash", "Bradycardia, weight loss"], "answer": 1 },
-    { "question": "Homan's sign is used to assess for what?", "choices": ["Preeclampsia", "Deep vein thrombosis", "Placenta previa", "Postpartum hemorrhage"], "answer": 1 },
-    { "question": "What is the term for the first menstruation?", "choices": ["Menopause", "Menarche", "Amenorrhea", "Dysmenorrhea"], "answer": 1 }
+    {
+      "question": "What is Naegele's Rule used for?",
+      "choices": [
+        "Estimating fetal weight",
+        "Estimating the EDD",
+        "Measuring fundal height",
+        "Assessing fetal position"
+      ],
+      "answer": 1,
+      "explanation": "Naegele's Rule estimates the expected date of delivery (EDD): take the first day of LMP, subtract 3 months, add 7 days, and add 1 year. Example: LMP January 15 -> October 15 + 7 days = October 22. This provides an estimated due date, though actual delivery can occur 2 weeks before or after."
+    },
+    {
+      "question": "What is the normal fetal heart rate range?",
+      "choices": [
+        "90–110 bpm",
+        "110–160 bpm",
+        "160–200 bpm",
+        "60–90 bpm"
+      ],
+      "answer": 1,
+      "explanation": "Normal fetal heart rate is 110-160 bpm. Tachycardia (>160) may indicate fetal distress, maternal fever, or infection. Bradycardia (<110) suggests severe hypoxia or cardiac issues. Continuous electronic fetal monitoring tracks patterns during labor. Accelerations with movements are reassuring; decelerations may indicate cord compression."
+    },
+    {
+      "question": "What are classic signs of preeclampsia?",
+      "choices": [
+        "Hypotension, polyuria",
+        "Hypertension, proteinuria, edema",
+        "Fever, rash",
+        "Bradycardia, weight loss"
+      ],
+      "answer": 1,
+      "explanation": "Preeclampsia features hypertension (BP 140/90+ after 20 weeks), proteinuria (300mg+/24hr), and edema. It can progress to eclampsia (seizures), HELLP syndrome, or stroke. Risk factors include nulliparity, multiple gestation, and chronic hypertension. Delivery is the definitive treatment; magnesium sulfate prevents seizures."
+    },
+    {
+      "question": "Homan's sign is used to assess for what?",
+      "choices": [
+        "Preeclampsia",
+        "Deep vein thrombosis",
+        "Placenta previa",
+        "Postpartum hemorrhage"
+      ],
+      "answer": 1,
+      "explanation": "Homan's sign assesses for DVT by dorsiflexing the foot and noting calf pain. While historically taught, it has low specificity. A positive sign suggests DVT but requires Doppler ultrasound confirmation. Other signs: unilateral swelling, warmth, redness. DVT risk increases with immobility, surgery, pregnancy, and oral contraceptives."
+    },
+    {
+      "question": "What is the term for the first menstruation?",
+      "choices": [
+        "Menopause",
+        "Menarche",
+        "Amenorrhea",
+        "Dysmenorrhea"
+      ],
+      "answer": 1,
+      "explanation": "Menarche is the first menstrual cycle, typically occurring ages 10-15. It marks reproductive capability onset and follows other pubertal changes. Menarche timing depends on genetics, nutrition, and body fat. Menopause is cessation of menses, occurring around age 45-55. Understanding these milestones guides adolescent health education."
+    }
   ],
   "pediatric": [
-    { "question": "At what age does a child typically start walking?", "choices": ["6 months", "12 months", "24 months", "3 years"], "answer": 1 },
-    { "question": "Normal heart rate range for a newborn?", "choices": ["60–100 bpm", "120–160 bpm", "160–200 bpm", "40–60 bpm"], "answer": 1 },
-    { "question": "What vaccines are typically given at birth?", "choices": ["MMR", "BCG and Hepatitis B", "Varicella", "Influenza"], "answer": 1 },
-    { "question": "When does the anterior fontanelle normally close?", "choices": ["2–3 months", "6 months", "12–18 months", "3 years"], "answer": 2 },
-    { "question": "What reflex causes an infant to turn toward a touch on the cheek?", "choices": ["Moro reflex", "Rooting reflex", "Babinski reflex", "Startle reflex"], "answer": 1 }
+    {
+      "question": "At what age does a child typically start walking?",
+      "choices": [
+        "6 months",
+        "12 months",
+        "24 months",
+        "3 years"
+      ],
+      "answer": 1,
+      "explanation": "Children typically walk independently around 12 months. The motor sequence: lifts head (2mo), rolls (4-6mo), sits (6-8mo), crawls (8-10mo), pulls to stand (9-12mo), walks (12-15mo). Delay beyond 18 months warrants developmental evaluation. Gross motor milestones help identify neurological or musculoskeletal problems early."
+    },
+    {
+      "question": "Normal heart rate range for a newborn?",
+      "choices": [
+        "60–100 bpm",
+        "120–160 bpm",
+        "160–200 bpm",
+        "40–60 bpm"
+      ],
+      "answer": 1,
+      "explanation": "Normal newborn heart rate is 120-160 bpm. Newborns have faster rates due to higher metabolic demands and smaller stroke volume. Tachycardia (>160) may indicate fever, distress, or anemia. Bradycardia (<100) suggests hypoxia or cardiac issues. Heart rate gradually decreases with age, approaching adult rates by adolescence."
+    },
+    {
+      "question": "What vaccines are typically given at birth?",
+      "choices": [
+        "MMR",
+        "BCG and Hepatitis B",
+        "Varicella",
+        "Influenza"
+      ],
+      "answer": 1,
+      "explanation": "BCG and Hepatitis B (first dose) are given at birth. BCG protects against severe tuberculosis. The birth-dose Hepatitis B prevents mother-to-child transmission, especially important if the mother is HBsAg positive. Other vaccines like DPT, OPV, and measles follow the national immunization schedule at specified intervals."
+    },
+    {
+      "question": "When does the anterior fontanelle normally close?",
+      "choices": [
+        "2–3 months",
+        "6 months",
+        "12–18 months",
+        "3 years"
+      ],
+      "answer": 2,
+      "explanation": "The anterior fontanelle closes between 12-18 months. Early closure (<12mo) may indicate craniosynostosis (premature suture fusion). Delayed closure (>18mo) suggests hydrocephalus, hypothyroidism, or rickets. The posterior fontanelle closes earlier (2-3mo). Fontanelle assessment provides clues to intracranial pressure and bone development."
+    },
+    {
+      "question": "What reflex causes an infant to turn toward a touch on the cheek?",
+      "choices": [
+        "Moro reflex",
+        "Rooting reflex",
+        "Babinski reflex",
+        "Startle reflex"
+      ],
+      "answer": 1,
+      "explanation": "The rooting reflex causes head-turning and mouth-opening when the cheek is stroked. It helps infants locate the breast or bottle for feeding. This primitive reflex fades by 3-4 months as voluntary control develops. Persistence beyond 6 months or absence at birth may indicate neurological abnormalities requiring evaluation."
+    }
   ],
   "psychiatric": [
-    { "question": "What is the therapeutic serum level for Lithium?", "choices": ["0.1–0.3 mEq/L", "0.6–1.2 mEq/L", "2.0–3.0 mEq/L", "5.0–6.0 mEq/L"], "answer": 1 },
-    { "question": "Priority action for a suicidal patient?", "choices": ["Encourage socialization", "Ensure safety", "Give sedatives immediately", "Ask about family history"], "answer": 1 },
-    { "question": "Defense mechanism where one attributes own feelings to another?", "choices": ["Denial", "Projection", "Regression", "Sublimation"], "answer": 1 },
-    { "question": "What is a false sensory perception called?", "choices": ["Delusion", "Hallucination", "Illusion", "Confabulation"], "answer": 1 },
-    { "question": "What therapeutic technique restates the patient's main idea?", "choices": ["Reflecting", "Restating", "Silence", "Confrontation"], "answer": 1 }
+    {
+      "question": "What is the therapeutic serum level for Lithium?",
+      "choices": [
+        "0.1–0.3 mEq/L",
+        "0.6–1.2 mEq/L",
+        "2.0–3.0 mEq/L",
+        "5.0–6.0 mEq/L"
+      ],
+      "answer": 1,
+      "explanation": "Therapeutic lithium level is 0.6-1.2 mEq/L. Levels above 1.5 mEq/L are toxic, causing tremor, confusion, seizures, and coma. Lithium has a narrow therapeutic index, requiring regular serum monitoring. It is primarily used for bipolar disorder maintenance, preventing both manic and depressive episodes. Toxicity risk increases with dehydration or NSAID use."
+    },
+    {
+      "question": "Priority action for a suicidal patient?",
+      "choices": [
+        "Encourage socialization",
+        "Ensure safety",
+        "Give sedatives immediately",
+        "Ask about family history"
+      ],
+      "answer": 1,
+      "explanation": "The priority for a suicidal patient is ensuring safety through constant 1:1 observation and removing harmful objects. This is the highest priority because the patient's life is at immediate risk. After safety is established, conduct a thorough assessment, develop a treatment plan, and involve mental health professionals. Never leave a suicidal patient alone."
+    },
+    {
+      "question": "Defense mechanism where one attributes own feelings to another?",
+      "choices": [
+        "Denial",
+        "Projection",
+        "Regression",
+        "Sublimation"
+      ],
+      "answer": 1,
+      "explanation": "Projection is a defense mechanism where a person attributes their own unacceptable thoughts, feelings, or impulses to another person. Example: a hostile person accuses others of being hostile. This allows avoidance of uncomfortable self-awareness. In therapy, recognizing projection helps patients understand their true emotions and improve relationships."
+    },
+    {
+      "question": "What is a false sensory perception called?",
+      "choices": [
+        "Delusion",
+        "Hallucination",
+        "Illusion",
+        "Confabulation"
+      ],
+      "answer": 1,
+      "explanation": "A hallucination is a false sensory perception with no external stimulus. Types include auditory (hearing voices), visual, olfactory, gustatory, and tactile. Auditory hallucinations are most common in schizophrenia. Unlike illusions (misinterpreting real stimuli), hallucinations have no basis in reality. They require assessment for underlying medical or psychiatric causes."
+    },
+    {
+      "question": "What therapeutic technique restates the patient's main idea?",
+      "choices": [
+        "Reflecting",
+        "Restating",
+        "Silence",
+        "Confrontation"
+      ],
+      "answer": 1,
+      "explanation": "Restating is a therapeutic communication technique where the nurse paraphrases the patient's words to show understanding. Example: Patient says \"I'm scared about the surgery,\" nurse responds \"It sounds like you're feeling anxious about the operation.\" This validates feelings, encourages discussion, and builds therapeutic rapport without adding interpretation or judgment."
+    }
   ],
   "community": [
-    { "question": "What is primary prevention?", "choices": ["Treating existing illness", "Preventing illness before it occurs", "Rehabilitation", "Palliative care"], "answer": 1 },
-    { "question": "What is a leading indicator of community health status?", "choices": ["Literacy rate", "Infant mortality rate", "Employment rate", "Average income"], "answer": 1 },
-    { "question": "What does EPI stand for?", "choices": ["Emergency Patient Intake", "Expanded Program on Immunization", "Epidemic Prevention Initiative", "Essential Public Infrastructure"], "answer": 1 },
-    { "question": "What is epidemiology?", "choices": ["Study of skin diseases", "Study of disease distribution in populations", "Study of medications", "Study of anatomy"], "answer": 1 },
-    { "question": "Safest way to purify drinking water at home?", "choices": ["Adding salt", "Boiling for at least 1 minute", "Freezing", "Filtering with cloth only"], "answer": 1 }
+    {
+      "question": "What is primary prevention?",
+      "choices": [
+        "Treating existing illness",
+        "Preventing illness before it occurs",
+        "Rehabilitation",
+        "Palliative care"
+      ],
+      "answer": 1,
+      "explanation": "Primary prevention prevents illness before it occurs through health promotion and risk reduction. Examples: immunization, health education, environmental sanitation, smoking cessation. Secondary prevention detects disease early through screening (mammography, blood pressure checks). Tertiary prevention reduces complications and restores function after disease (rehabilitation, chronic disease management)."
+    },
+    {
+      "question": "What is a leading indicator of community health status?",
+      "choices": [
+        "Literacy rate",
+        "Infant mortality rate",
+        "Employment rate",
+        "Average income"
+      ],
+      "answer": 1,
+      "explanation": "Infant mortality rate is a leading community health indicator because it reflects overall population health, including maternal health, prenatal care, nutrition, sanitation, and healthcare access. Low IMR indicates effective public health systems and good socioeconomic conditions. It is used globally to compare health status between countries."
+    },
+    {
+      "question": "What does EPI stand for?",
+      "choices": [
+        "Emergency Patient Intake",
+        "Expanded Program on Immunization",
+        "Epidemic Prevention Initiative",
+        "Essential Public Infrastructure"
+      ],
+      "answer": 1,
+      "explanation": "EPI (Expanded Program on Immunization) is a WHO initiative launched in 1974 to provide universal vaccine access for children. It initially targeted six diseases: tuberculosis, diphtheria, tetanus, pertussis, polio, and measles. The program has expanded to include hepatitis B, Haemophilus influenzae type b, and other vaccines."
+    },
+    {
+      "question": "What is epidemiology?",
+      "choices": [
+        "Study of skin diseases",
+        "Study of disease distribution in populations",
+        "Study of medications",
+        "Study of anatomy"
+      ],
+      "answer": 1,
+      "explanation": "Epidemiology studies the distribution and determinants of health-related states in populations. Epidemiologists examine disease patterns, identify risk factors, determine causes of illness, and evaluate interventions. This science guides public health policy, outbreak investigation, and preventive measures to improve population health outcomes."
+    },
+    {
+      "question": "Safest way to purify drinking water at home?",
+      "choices": [
+        "Adding salt",
+        "Boiling for at least 1 minute",
+        "Freezing",
+        "Filtering with cloth only"
+      ],
+      "answer": 1,
+      "explanation": "Boiling water for 1 minute kills bacteria, viruses, and parasites, making it the safest home purification method. At altitudes above 6,500 feet, boil for 3 minutes. Chemical disinfectants and filters are alternatives but may be less reliable. Boiling requires no special equipment and is effective against most waterborne pathogens."
+    }
   ],
   "pharma": [
-    { "question": "Antidote for Warfarin overdose?", "choices": ["Protamine sulfate", "Vitamin K", "Naloxone", "Flumazenil"], "answer": 1 },
-    { "question": "Antidote for Heparin overdose?", "choices": ["Vitamin K", "Protamine sulfate", "Atropine", "Naloxone"], "answer": 1 },
-    { "question": "Antidote for Acetaminophen overdose?", "choices": ["Naloxone", "Acetylcysteine", "Flumazenil", "Activated charcoal only"], "answer": 1 },
-    { "question": "What drug class is Furosemide?", "choices": ["Beta blocker", "Loop diuretic", "ACE inhibitor", "Calcium channel blocker"], "answer": 1 },
-    { "question": "What electrolyte should be monitored closely with Digoxin?", "choices": ["Sodium", "Potassium", "Calcium", "Magnesium"], "answer": 1 }
+    {
+      "question": "Antidote for Warfarin overdose?",
+      "choices": [
+        "Protamine sulfate",
+        "Vitamin K",
+        "Naloxone",
+        "Flumazenil"
+      ],
+      "answer": 1,
+      "explanation": "Vitamin K reverses Warfarin overdose by restoring synthesis of vitamin K-dependent clotting factors (II, VII, IX, X). Warfarin inhibits vitamin K epoxide reductase. Vitamin K can be given orally, subcutaneously, or IV. For life-threatening bleeding, fresh frozen plasma provides immediate clotting factors while Vitamin K takes hours to work."
+    },
+    {
+      "question": "Antidote for Heparin overdose?",
+      "choices": [
+        "Vitamin K",
+        "Protamine sulfate",
+        "Atropine",
+        "Naloxone"
+      ],
+      "answer": 1,
+      "explanation": "Protamine sulfate neutralizes Heparin by forming a stable complex with it. Heparin is positively charged; protamine is negatively charged. One mg of protamine neutralizes approximately 100 units of heparin. It is given IV slowly to avoid hypotension, bradycardia, or allergic reactions. Protamine partially reverses low molecular weight heparins."
+    },
+    {
+      "question": "Antidote for Acetaminophen overdose?",
+      "choices": [
+        "Naloxone",
+        "Acetylcysteine",
+        "Flumazenil",
+        "Activated charcoal only"
+      ],
+      "answer": 1,
+      "explanation": "Acetylcysteine (NAC) is the acetaminophen antidote. It replenishes glutathione, which detoxifies NAPQI (the toxic metabolite of acetaminophen). NAC is most effective within 8 hours but should be given regardless of time elapsed. The standard protocol is a loading dose followed by maintenance doses over 20-72 hours."
+    },
+    {
+      "question": "What drug class is Furosemide?",
+      "choices": [
+        "Beta blocker",
+        "Loop diuretic",
+        "ACE inhibitor",
+        "Calcium channel blocker"
+      ],
+      "answer": 1,
+      "explanation": "Furosemide (Lasix) is a loop diuretic inhibiting the Na-K-2Cl cotransporter in the thick ascending limb. It produces potent diuresis used for edema in heart failure, cirrhosis, and renal disease. Side effects include hypokalemia, dehydration, ototoxicity (high doses), and hyperglycemia. Monitor electrolytes and renal function closely."
+    },
+    {
+      "question": "What electrolyte should be monitored closely with Digoxin?",
+      "choices": [
+        "Sodium",
+        "Potassium",
+        "Calcium",
+        "Magnesium"
+      ],
+      "answer": 1,
+      "explanation": "Potassium must be monitored with Digoxin because hypokalemia increases digoxin toxicity risk. Low potassium enhances digoxin binding to Na+/K+ ATPase, increasing its effects. Digoxin toxicity causes nausea, visual disturbances (yellow/green halos), confusion, and arrhythmias. Normal potassium (3.5-5.0 mEq/L) reduces toxicity risk."
+    }
   ],
   "leadership": [
-    { "question": "Leadership style with little staff input in decisions?", "choices": ["Democratic", "Autocratic", "Laissez-faire", "Transformational"], "answer": 1 },
-    { "question": "Assigning tasks to qualified staff is called?", "choices": ["Supervision", "Delegation", "Collaboration", "Coordination"], "answer": 1 },
-    { "question": "Which is NOT one of the 5 Rights of Delegation?", "choices": ["Right task", "Right person", "Right documentation format", "Right supervision"], "answer": 2 },
-    { "question": "Management theory focused on efficiency and task specialization?", "choices": ["Human Relations Theory", "Scientific Management", "Systems Theory", "Contingency Theory"], "answer": 1 },
-    { "question": "A key principle of triage is to prioritize care based on?", "choices": ["Arrival time", "Severity and urgency", "Insurance coverage", "Patient age only"], "answer": 1 }
+    {
+      "question": "Leadership style with little staff input in decisions?",
+      "choices": [
+        "Democratic",
+        "Autocratic",
+        "Laissez-faire",
+        "Transformational"
+      ],
+      "answer": 1,
+      "explanation": "Autocratic leadership involves unilateral decision-making with minimal staff input. While efficient in emergencies, it reduces staff morale, creativity, and job satisfaction. Democratic style involves team input, while laissez-faire gives staff maximum autonomy. Effective leaders adapt their style to the situation, team competence, and organizational culture."
+    },
+    {
+      "question": "Assigning tasks to qualified staff is called?",
+      "choices": [
+        "Supervision",
+        "Delegation",
+        "Collaboration",
+        "Coordination"
+      ],
+      "answer": 1,
+      "explanation": "Delegation assigns tasks to qualified staff while retaining accountability for outcomes. The nurse must consider the task's complexity, staff competence, scope of practice, and patient acuity. Effective delegation improves efficiency, develops staff skills, and allows nurses to focus on assessment, planning, and evaluation. The delegator remains accountable."
+    },
+    {
+      "question": "Which is NOT one of the 5 Rights of Delegation?",
+      "choices": [
+        "Right task",
+        "Right person",
+        "Right documentation format",
+        "Right supervision"
+      ],
+      "answer": 2,
+      "explanation": "The 5 Rights of Delegation are: Right task, Right person, Right supervision, Right direction/communication, and Right evaluation. \"Right documentation format\" is NOT one of the 5 Rights. Documentation is a general nursing responsibility. Proper delegation ensures tasks are matched to appropriate staff with clear instructions and oversight."
+    },
+    {
+      "question": "Management theory focused on efficiency and task specialization?",
+      "choices": [
+        "Human Relations Theory",
+        "Scientific Management",
+        "Systems Theory",
+        "Contingency Theory"
+      ],
+      "answer": 1,
+      "explanation": "Scientific Management (Taylorism) by Frederick Taylor focuses on efficiency through task analysis and specialization. It breaks work into standardized tasks, selects and trains workers scientifically, and separates planning from execution. While criticized for treating workers as machines, it laid the foundation for modern operations management and process improvement."
+    },
+    {
+      "question": "A key principle of triage is to prioritize care based on?",
+      "choices": [
+        "Arrival time",
+        "Severity and urgency",
+        "Insurance coverage",
+        "Patient age only"
+      ],
+      "answer": 1,
+      "explanation": "Triage prioritizes care based on severity and urgency, ensuring critically ill patients receive immediate attention. Systems like the Emergency Severity Index (ESI) categorize patients from 1 (resuscitation) to 5 (non-urgent). In disasters, START triage sorts patients by ability to walk, breathing, and perfusion. This principle maximizes survival when resources are limited."
+    }
   ]
 }

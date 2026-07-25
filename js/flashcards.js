@@ -4,7 +4,7 @@ import {
 } from "../firebase/firebase.js";
 
 import {
-    onAuthStateChanged
+    onAuthStateChanged,
 } from "firebase/auth";
 
 import {
@@ -13,6 +13,10 @@ import {
     setDoc,
     updateDoc
 } from "firebase/firestore";
+
+import {
+    updateMasteredCards
+} from "./userProfile.js";
 
 // Inlined here (not relying on utils.js's classic-script globals inside this module)
 const SUBJECT_NAMES = {
@@ -51,11 +55,66 @@ let mastered = new Set();
 let favSubjects = new Set();
 let shuffleOn = false;
 let streakData = { count: 0, lastDate: null };
+let cardSchedule = {};
 
 let uid = null;
 let progressRef = null;
 
 let stats = { reviewed: 0, again: 0, hard: 0, good: 0, easy: 0, timings: [] };
+
+// ======================================
+// SPACED REPETITION SCHEDULE
+// ======================================
+// Per-card schedule stored in Firestore. Each card tracks:
+//  - interval: minutes until next review
+//  - easeFactor: multiplier for future intervals (SM-2 inspired)
+//  - reps: number of successful reviews
+//  - dueAt: timestamp (ms) when card is due for review
+// ======================================
+const DEFAULT_INTERVALS = { again: 1, hard: 6, good: 10, easy: 16 };
+
+function getCardSchedule(cardId) {
+    if (!cardSchedule[cardId]) {
+        cardSchedule[cardId] = {
+            interval: 0,
+            easeFactor: 2.5,
+            reps: 0,
+            dueAt: Date.now(),
+            lastRating: null
+        };
+    }
+    return cardSchedule[cardId];
+}
+
+function calculateNextReview(schedule, rating) {
+    let interval, easeFactor;
+
+    if (rating === "again") {
+        interval = 1;
+        easeFactor = Math.max(1.3, schedule.easeFactor - 0.4);
+    } else if (rating === "hard") {
+        interval = Math.max(1, Math.round(schedule.interval * 1.2));
+        easeFactor = Math.max(1.3, schedule.easeFactor - 0.15);
+    } else if (rating === "good") {
+        interval = schedule.reps === 0
+            ? DEFAULT_INTERVALS.good
+            : Math.round(schedule.interval * schedule.easeFactor);
+        easeFactor = schedule.easeFactor;
+    } else if (rating === "easy") {
+        interval = schedule.reps === 0
+            ? DEFAULT_INTERVALS.easy
+            : Math.round(schedule.interval * schedule.easeFactor * 1.3);
+        easeFactor = Math.min(3.0, schedule.easeFactor + 0.15);
+    }
+
+    return {
+        interval,
+        easeFactor,
+        reps: rating === "again" ? 0 : schedule.reps + 1,
+        dueAt: Date.now() + interval * 60 * 1000,
+        lastRating: rating
+    };
+}
 
 // ======================================
 // ELEMENTS
@@ -101,14 +160,17 @@ async function loadProgressFromFirestore() {
     favSubjects = new Set(data.favSubjects || []);
     shuffleOn = !!data.shuffle;
     streakData = data.streak || { count: 0, lastDate: null };
+    cardSchedule = data.cardSchedule || {};
   } else {
     // first time this user reaches flashcards — create the doc
+    cardSchedule = {};
     await setDoc(progressRef, {
       bookmarks: [],
       mastered: [],
       favSubjects: [],
       shuffle: false,
       streak: { count: 0, lastDate: null },
+      cardSchedule: {},
     });
   }
 
@@ -141,8 +203,26 @@ function shuffleArray(arr) {
 
 function buildQueue() {
   const indices = cards.map((_, i) => i);
-  const ordered = shuffleOn ? shuffleArray(indices) : indices;
-  queue = ordered.map((idx) => ({ idx, requeued: false }));
+  const now = Date.now();
+
+  const due = [];
+  const notDue = [];
+  indices.forEach(i => {
+    const card = cards[i];
+    const sched = getCardSchedule(card.id);
+    if (sched.dueAt <= now) {
+      due.push({ idx: i, overdue: now - sched.dueAt });
+    } else {
+      notDue.push({ idx: i });
+    }
+  });
+
+  due.sort((a, b) => b.overdue - a.overdue);
+
+  const ordered = [...due.map(d => d.idx), ...notDue.map(n => n.idx)];
+  const shuffled = shuffleOn ? shuffleArray(ordered) : ordered;
+
+  queue = shuffled.map((idx) => ({ idx, requeued: false }));
   queuePos = 0;
   stats = { reviewed: 0, again: 0, hard: 0, good: 0, easy: 0, timings: [] };
 }
@@ -352,31 +432,26 @@ async function handleConfidence(rating) {
     stats.timings.push(elapsed);
 
     const card = currentCard();
+    const schedule = getCardSchedule(card.id);
+
+    const nextSchedule = calculateNextReview(schedule, rating);
+    cardSchedule[card.id] = nextSchedule;
 
     if (rating === "good" || rating === "easy") {
-
         mastered.add(card.id);
-
-        await persistProgress({
-            mastered: [...mastered]
-        });
-
     }
 
     if (rating === "again") {
-
         const item = queue[queuePos];
-
         if (!item.requeued) {
-
-            queue.push({
-                idx: item.idx,
-                requeued: true
-            });
-
+            queue.push({ idx: item.idx, requeued: true });
         }
-
     }
+
+    await persistProgress({
+        mastered: [...mastered],
+        cardSchedule: { ...cardSchedule }
+    });
 
     await goNext();
 
@@ -457,22 +532,30 @@ async function showCompletion() {
 // Save Flashcard Subject Progress
 // ===============================
 
-const masteredCount = cards.filter(card => mastered.has(card.id)).length;
+  const masteredCount = cards.filter(card => mastered.has(card.id)).length;
 
-const progressPercent =
-    cards.length === 0
-        ? 0
-        : Math.round((masteredCount / cards.length) * 100);
+  const progressPercent =
+      cards.length === 0
+          ? 0
+          : Math.round((masteredCount / cards.length) * 100);
 
-await persistProgress({
-    subjectProgress: {
-        [currentSubject]: {
-            progress: progressPercent,
-            mastered: masteredCount,
-            total: cards.length
-        }
-    }
-});
+  await persistProgress({
+      subjectProgress: {
+          [currentSubject]: {
+              progress: progressPercent,
+              mastered: masteredCount,
+              total: cards.length
+          }
+      }
+  });
+
+  if (uid) {
+      try {
+          await updateMasteredCards(uid, masteredCount);
+      } catch (err) {
+          console.error("Failed to update mastered cards:", err);
+      }
+  }
 
   launchConfetti();
 }

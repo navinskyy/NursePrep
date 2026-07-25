@@ -258,8 +258,266 @@
 }
 
 /* ============================================
-   Footer
-   ============================================ */
+    Landing — About
+    ============================================ */
+.about {
+  padding: 60px 56px 80px;
+  max-width: 720px;
+  margin:  auto;
+  text-align: center;
+}
+
+.about .eyebrow { display: block; margin-bottom: 10px; }
+
+.about h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 32px;
+  margin: 0 0 36px;
+}
+
+.about-lead {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-hi);
+  margin: 0 0 20px;
+}
+
+.about-content p {
+  color: var(--text-mid);
+  font-size: 15.5px;
+  line-height: 1.7;
+  margin: 0 0 16px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-content em {
+  color: var(--pink-300);
+  font-style: normal;
+}
+
+/* ============================================
+     Landing — Contact
+     ============================================ */
+.contact {
+  text-align: center;
+}
+
+.contact h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 1.15;
+  margin: 8px 0 18px;
+  letter-spacing: -0.01em;
+}
+
+.contact-intro {
+  color: var(--text-mid);
+  font-size: 15.5px;
+  line-height: 1.7;
+  max-width: 520px;
+  margin: 0 auto 48px;
+}
+
+.contact-connect {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 8px 0;
+}
+
+.contact-connect h3 {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0 0 24px;
+  color: var(--text-hi);
+}
+
+.connect-row {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.connect-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-mid);
+  text-decoration: none;
+  font-size: 14.5px;
+  font-weight: 500;
+  transition: color 0.15s ease;
+  background: transparent;
+  border: none;
+  padding: 8px 4px;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+.connect-item:hover {
+  color: var(--pink-300);
+}
+
+.connect-item svg {
+  flex-shrink: 0;
+  color: var(--pink-400);
+}
+
+.connect-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 14, 26, 0.75);
+  backdrop-filter: blur(6px);
+  padding: 24px;
+}
+
+.connect-overlay[hidden] {
+  display: none !important;
+}
+
+.connect-card {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px 32px;
+  text-align: center;
+  max-width: 360px;
+  width: 100%;
+  box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.45);
+  animation: connectCardIn 0.2s ease;
+}
+
+@keyframes connectCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.connect-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-hi);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  transition: color 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+}
+
+.connect-close:hover {
+  color: var(--pink-300);
+  background: var(--bg-soft);
+  border-color: var(--pink-500);
+}
+
+.connect-card-message {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-hi);
+  margin: 0 0 24px;
+  line-height: 1.4;
+}
+
+.connect-card-field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 6px 6px 6px 14px;
+  margin-bottom: 16px;
+}
+
+.connect-card-field input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--text-hi);
+  font-size: 14.5px;
+  font-family: var(--font-body);
+  outline: none;
+  min-width: 0;
+}
+
+.copy-btn {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-mid);
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.copy-btn:hover {
+  color: var(--pink-300);
+  border-color: var(--pink-500);
+}
+
+.open-email-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--pink-400), var(--pink-600));
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 24px;
+  font-family: var(--font-body);
+  font-size: 14.5px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 8px 20px -8px var(--pink-glow);
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.open-email-btn:hover {
+  box-shadow: 0 10px 26px -6px var(--pink-glow);
+  transform: translateY(-1px);
+  color: #fff;
+  text-decoration: none;
+}
+
+.open-email-btn:active {
+  transform: translateY(0);
+}
+
+/* ============================================
+    Footer
+    ============================================ */
 footer {
   border-top: 1px solid var(--border-soft);
   text-align: center;

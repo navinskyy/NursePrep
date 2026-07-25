@@ -15,6 +15,10 @@ import {
     increment
 } from "firebase/firestore";
 
+import {
+    saveWrongAnswers
+} from "../services/wrongAnswerService.js";
+
 const SUBJECT_NAMES = {
 
     fundamentals: "Fundamentals of Nursing",
@@ -161,11 +165,6 @@ function goNext() {
 
 async function showResult() {
 
-    console.log("questions.length =", questions.length);
-    console.log("answers =", answers);
-    console.log("answered =", answers.filter(a => a !== null).length);
-    console.log("score =", score);
-
     const total = questions.length;
 
     const pct = Math.round((score / total) * 100);
@@ -177,7 +176,21 @@ async function showResult() {
             ? "Good progress. Review the ones you missed and try again."
             : "Keep going — every attempt builds your recall.";
 
-    // SAVE TO FIREBASE
+    const mistakes = [];
+    answers.forEach((selected, idx) => {
+        if (selected !== null && selected !== questions[idx].answer) {
+            mistakes.push({
+                idx: idx,
+                question: questions[idx].question,
+                choices: questions[idx].choices,
+                answer: questions[idx].answer,
+                userAnswer: selected,
+                explanation: questions[idx].explanation || ""
+            });
+        }
+    });
+
+    console.log("[quiz] mistakes found:", mistakes.length, "subject:", currentSubject);
 
     const user = auth.currentUser;
 
@@ -237,6 +250,20 @@ currentStats.accuracy = Math.min(
 );
 
 subjectProgress[currentSubject] = currentStats;
+
+// =========================
+// SAVE WRONG ANSWERS
+// =========================
+
+    if (mistakes.length > 0) {
+        try {
+            console.log("[quiz] saving", mistakes.length, "mistakes for", currentSubject);
+            await saveWrongAnswers(currentSubject, mistakes);
+            console.log("[quiz] saveWrongAnswers succeeded");
+        } catch (err) {
+            console.error("[quiz] Failed to save wrong answers:", err);
+        }
+    }
 
 // =========================
 // SAVE
@@ -302,7 +329,7 @@ await recordActivity(user.uid, {
             </span>
 
             <h1>
-                Nice work, Future RN 🎉
+                Nice work, Future RN
             </h1>
 
             <div class="score">
@@ -323,13 +350,21 @@ await recordActivity(user.uid, {
 
                 </button>
 
+                ${mistakes.length > 0 ? `
+                <a
+                    href="review.html?subject=${encodeURIComponent(currentSubject)}"
+                    class="btn btn-primary review-mistakes-btn">
+
+                    Review ${mistakes.length} Mistake${mistakes.length > 1 ? "s" : ""}
+
+                </a>` : `
                 <a
                     href="dashboard.html"
                     class="btn btn-primary">
 
                     Back to Dashboard
 
-                </a>
+                </a>`}
 
             </div>
 

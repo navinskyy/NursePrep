@@ -245,6 +245,12 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 12px;
   }
+
+  /* Contact */
+  .connect-row {
+    flex-direction: column;
+    gap: 16px;
+  }
 }
 
 /* Mobile — 480px and below */

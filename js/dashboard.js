@@ -16,7 +16,7 @@ import {
     limit
 } from "firebase/firestore";
 
-import { ensureUserProfile, bumpDailyStreak } from "./userProfile.js";
+import { ensureUserProfile, bumpDailyStreak, getAchievementStatus } from "./userProfile.js";
 
 // ===========================
 // ELEMENTS
@@ -283,6 +283,44 @@ function timeAgo(date) {
 
 }
 
+function renderAchievements(data) {
+    const achievements = getAchievementStatus(data);
+
+    const elMap = {
+        "first_quiz": document.getElementById("achFirstQuiz"),
+        "streak_7": document.getElementById("achStreak7"),
+        "questions_100": document.getElementById("ach100Q"),
+        "accuracy_90": document.getElementById("ach90Acc"),
+        "perfect_score": document.getElementById("achPerfect"),
+        "flashcard_master": document.getElementById("achFlashMaster"),
+        "all_subjects": document.getElementById("achAllSubj"),
+        "streak_30": document.getElementById("achStreak30"),
+    };
+
+    const cardMap = {
+        "first_quiz": document.querySelector('[data-ach="first_quiz"]'),
+        "streak_7": document.querySelector('[data-ach="streak_7"]'),
+        "questions_100": document.querySelector('[data-ach="questions_100"]'),
+        "accuracy_90": document.querySelector('[data-ach="accuracy_90"]'),
+        "perfect_score": document.querySelector('[data-ach="perfect_score"]'),
+        "flashcard_master": document.querySelector('[data-ach="flashcard_master"]'),
+        "all_subjects": document.querySelector('[data-ach="all_subjects"]'),
+        "streak_30": document.querySelector('[data-ach="streak_30"]'),
+    };
+
+    achievements.forEach(ach => {
+        const el = elMap[ach.id];
+        const card = cardMap[ach.id];
+        if (el) {
+            el.textContent = ach.unlocked ? "Unlocked" : "Locked";
+            el.className = `achievement-mini-status ${ach.unlocked ? "unlocked" : "locked"}`;
+        }
+        if (card) {
+            card.className = `achievement-mini-card ${ach.unlocked ? "unlocked" : "locked"}`;
+        }
+    });
+}
+
 // ===========================
 // AUTH
 // ===========================
@@ -519,6 +557,12 @@ onAuthStateChanged(auth, async (user) => {
         // =====================
 
         await renderRecentActivity(user.uid);
+
+        // =====================
+        // Achievements
+        // =====================
+
+        renderAchievements(data);
 
     }
 

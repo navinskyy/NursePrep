@@ -84,17 +84,40 @@
 }
 
 .progress-track {
-  margin-top: 20px;
-  height: 6px;
-  background: var(--bg-soft);
-  border-radius: 999px;
-  overflow: hidden;
+    margin-top: 20px;
+    height: 6px;
+    background: var(--bg-soft);
+    border-radius: 999px;
+    overflow: hidden;
 }
 
 .progress-fill {
-  height: 100%;
-  border-radius: 999px;
-  background: linear-gradient(90deg, var(--pink-400), var(--pink-600));
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--pink-400), var(--pink-600));
+    animation: fillBar 1.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation-delay: var(--delay, 0s);
+}
+
+@keyframes fillBar {
+    from { width: 0; }
+    to { width: var(--progress, 0%); }
+}
+
+.subject-card {
+    animation: cardSlideIn 0.5s ease both;
+    animation-delay: var(--delay, 0s);
+}
+
+@keyframes cardSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .subject-actions {

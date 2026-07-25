@@ -6,7 +6,7 @@ import {
   reauthenticateWithCredential,
   updatePassword,
 } from "firebase/auth";
-import { ensureUserProfile, updateUserProfile } from "./userProfile.js";
+import { ensureUserProfile, updateUserProfile, getAchievementStatus } from "./userProfile.js";
 
 // ======================================
 // ELEMENTS
@@ -29,6 +29,9 @@ const statAccuracy = document.getElementById("statAccuracy");
 const statStreak = document.getElementById("statStreak");
 const statBest = document.getElementById("statBest");
 const statQuizzes = document.getElementById("statQuizzes");
+
+const achievementsGrid = document.getElementById("achievementsGrid");
+const achievementsCount = document.getElementById("achievementsCount");
 
 const sidebarStreak = document.getElementById("sidebarStreak");
 
@@ -85,6 +88,30 @@ function fallbackAvatar(name) {
   return `https://placehold.co/200x200/131A2C/EC6FA0?text=${initial}`;
 }
 
+function renderAchievements(data) {
+  if (!achievementsGrid) return;
+
+  const achievements = getAchievementStatus(data);
+  const unlockedCount = achievements.filter(a => a.unlocked).length;
+
+  if (achievementsCount) {
+    achievementsCount.textContent = `${unlockedCount} / ${achievements.length} unlocked`;
+  }
+
+  achievementsGrid.innerHTML = achievements.map(ach => `
+    <div class="achievement-card ${ach.unlocked ? "unlocked" : "locked"}">
+      <div class="achievement-icon">${ach.icon}</div>
+      <div class="achievement-info">
+        <h4>${ach.name}</h4>
+        <p>${ach.description}</p>
+      </div>
+      <div class="achievement-badge">
+        ${ach.unlocked ? "&#10003;" : "&#128274;"}
+      </div>
+    </div>
+  `).join("");
+}
+
 // ======================================
 // RENDER
 // ======================================
@@ -114,6 +141,8 @@ function renderProfile(data) {
   if (sidebarStreak) {
     sidebarStreak.textContent = `${data.streak || 0} days`;
   }
+
+  renderAchievements(data);
 }
 
 // ======================================

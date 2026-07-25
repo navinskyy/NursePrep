@@ -256,16 +256,3 @@ forgotPassword.addEventListener("click", async (e) => {
 
 });
 
-// ====================
-// Auto Login
-// ====================
-
-onAuthStateChanged(auth, (user) => {
-
-    if (user) {
-
-        window.location.href = "dashboard.html";
-
-    }
-
-});

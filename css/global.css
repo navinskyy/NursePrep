@@ -203,6 +203,27 @@ input, select, textarea { font-family: inherit; }
   color: var(--pink-300);
 }
 
+.review-badge {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  margin-left: auto;
+  background: var(--pink-500);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 999px;
+  line-height: 1;
+}
+
+.review-badge.show {
+  display: inline-flex;
+}
+
 .dash-sidebar-foot {
   margin-top: auto;
   background: var(--surface);

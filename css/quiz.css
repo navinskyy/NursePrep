@@ -190,3 +190,17 @@
   justify-content: center;
   gap: 12px;
 }
+
+.review-mistakes-btn {
+  background: linear-gradient(135deg, var(--amber), #E08A30);
+  border: none;
+}
+
+.review-mistakes-btn:hover {
+  filter: brightness(1.1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}

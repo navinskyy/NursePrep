@@ -32,6 +32,11 @@
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 3v18" stroke-linecap="round"/></svg>
       Flashcards
     </a>
+    <a href="review.html">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7m-9-7l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Review Mistakes
+      <span class="review-badge" id="reviewBadge">0</span>
+    </a>
     <a href="analytics.html">
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="12" width="4" height="9" rx="1"/><rect x="10" y="7" width="4" height="14" rx="1"/><rect x="17" y="3" width="4" height="18" rx="1"/></svg>
       Analytics
@@ -132,6 +137,17 @@
     </div>
   </section>
 
+  <!-- ================= RECORD: ACHIEVEMENTS ================= -->
+  <section class="record-section">
+    <div class="section-head">
+      <h2>Achievements</h2>
+      <span class="section-note" id="achievementsCount">0 / 8 unlocked</span>
+    </div>
+
+    <div class="achievements-grid" id="achievementsGrid">
+    </div>
+  </section>
+
   <!-- ================= RECORD: ACCOUNT ================= -->
   <section class="record-section account-section">
     <div class="section-head">
@@ -223,5 +239,6 @@
 <div id="toast" class="toast"></div>
 
 <script type="module" src="./js/profile.js"></script>
+<script type="module" src="js/sidebar.js"></script>
 </body>
 </html>

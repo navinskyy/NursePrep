@@ -160,7 +160,7 @@ async function loadSubjects() {
 
     container.innerHTML = "";
 
-    Object.keys(quizData).forEach((key) => {
+    Object.keys(quizData).forEach((key, index) => {
 
         const stats = subjectProgress[key] || {
             answered: 0,
@@ -183,6 +183,7 @@ async function loadSubjects() {
         const card = document.createElement("div");
 
         card.className = "subject-card";
+        card.style.setProperty("--delay", `${index * 0.07}s`);
 
         card.innerHTML = `
             <div class="subject-top">
@@ -200,7 +201,7 @@ async function loadSubjects() {
             <p>${questionCount} questions available</p>
 
             <div class="progress-track">
-                <div class="progress-fill" style="width:${progress}%"></div>
+                <div class="progress-fill" style="--progress:${progress}%"></div>
             </div>
 
             <div class="subject-actions">

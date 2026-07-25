@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Quiz | NursePrep</title>
+<title>Practice Mistakes | NursePrep</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./css/quiz.css">
+<link rel="stylesheet" href="./css/review.css">
 </head>
 <body class="dash-body">
 
@@ -18,7 +18,6 @@
     </svg>
     NursePrep
   </div>
-
   <nav class="dash-nav">
     <a href="dashboard.html">
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11L12 4L21 11" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 10V20H19V10" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -32,7 +31,7 @@
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 3v18" stroke-linecap="round"/></svg>
       Flashcards
     </a>
-    <a href="review.html">
+    <a href="review.html" class="active">
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7m-9-7l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
       Review Mistakes
       <span class="review-badge" id="reviewBadge">0</span>
@@ -46,52 +45,52 @@
       Profile
     </a>
   </nav>
-
-    <div class="dash-sidebar-bottom">
+  <div class="dash-sidebar-bottom">
     <div class="dash-sidebar-foot">
-      <span class="eyebrow">Streak</span> 
-      <p></p><strong id="sidebarStreak">0 days</strong> — keep it going 🔥</p>
+      <span class="eyebrow">Streak</span>
+      <p><strong id="sidebarStreak">0 days</strong> — keep it going</p>
     </div>
+  </div>
 </aside>
 
 <main class="dash-main dash-main-center">
-  <div class="quiz-shell" id="quizShell">
+  <div class="review-shell" id="reviewShell">
 
-    <div class="quiz-progress-row">
-    <div class="subject-picker">
-
-    <span class="eyebrow">
-        Subject
-    </span>
-
-    <h2 id="subjectTitle">
-        Fundamentals of Nursing
-    </h2>
-
-</div>
-      <span class="quiz-count" id="quizCount">01 / 05</span>
-    </div>
-    <div class="quiz-progress-track"><span id="quizProgressFill" style="width:0%"></span></div>
-
-    <div class="question-card">
-      <h3 id="quizQuestion">Loading question…</h3>
-
-      <div class="choices" id="quizChoices"></div>
-
-      <p class="quiz-warning" id="quizWarning">Please select an answer first.</p>
-
-      <button class="btn btn-primary submit-btn" id="quizSubmit">Submit Answer</button>
+    <div class="review-header">
+      <div class="subject-picker">
+        <span class="eyebrow">Subject</span>
+        <select id="subjectSelect">
+          <option value="all">All Subjects</option>
+          <option value="fundamentals">Fundamentals of Nursing</option>
+          <option value="medSurg">Medical-Surgical Nursing</option>
+          <option value="maternal">Maternal Nursing</option>
+          <option value="pediatric">Pediatric Nursing</option>
+          <option value="psychiatric">Psychiatric Nursing</option>
+          <option value="community">Community Health Nursing</option>
+          <option value="pharma">Pharmacology</option>
+          <option value="leadership">Leadership & Management</option>
+        </select>
+      </div>
+      <span class="review-count" id="reviewCount">0 mistakes</span>
     </div>
 
-    <div class="quiz-footer">
-      <button class="btn btn-secondary" id="quizPrev" disabled>Previous</button>
-      <button class="btn btn-secondary" id="quizNext" disabled>Next</button>
+    <div class="review-progress-track">
+      <span id="reviewProgressFill" style="width:0%"></span>
+    </div>
+
+    <div id="reviewContent">
+      <div class="review-empty">
+        <div class="review-empty-icon">&#10003;</div>
+        <h2>No mistakes yet</h2>
+        <p>Complete a quiz and any wrong answers will appear here for review.</p>
+        <a href="subjects.html" class="btn btn-primary">Take a Quiz</a>
+      </div>
     </div>
 
   </div>
 </main>
 
-<script type="module" src="./js/quiz.js"></script>
+<script type="module" src="./js/review.js"></script>
 <script type="module" src="js/sidebar.js"></script>
 </body>
 </html>
