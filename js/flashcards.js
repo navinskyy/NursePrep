@@ -15,7 +15,8 @@ import {
 } from "firebase/firestore";
 
 import {
-    updateMasteredCards
+    updateMasteredCards,
+    recordFlashcardSession
 } from "./userProfile.js";
 
 // Inlined here (not relying on utils.js's classic-script globals inside this module)
@@ -554,6 +555,14 @@ async function showCompletion() {
           await updateMasteredCards(uid, masteredCount);
       } catch (err) {
           console.error("Failed to update mastered cards:", err);
+      }
+  }
+
+  if (uid) {
+      try {
+          await recordFlashcardSession(uid, stats.reviewed, masteredCount);
+      } catch (err) {
+          console.error("Failed to record flashcard session:", err);
       }
   }
 

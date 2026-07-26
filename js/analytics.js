@@ -13,9 +13,7 @@ import {
     getDocs
 } from "firebase/firestore";
 
-// ===========================
-// SUBJECT CONFIG
-// ===========================
+import { getAchievementStatus } from "./userProfile.js";
 
 const SUBJECT_KEYS = [
     "fundamentals",
@@ -463,32 +461,17 @@ function renderQuizHistory(activities) {
 // ACHIEVEMENTS
 // ===========================
 
-function renderAchievements(data, activities) {
+function renderAchievements(data) {
+    const achievements = getAchievementStatus(data);
     const badges = document.querySelectorAll(".achievement-badge");
+
+    const unlockedSet = new Set(achievements.filter(a => a.unlocked).map(a => a.id));
 
     badges.forEach((badge) => {
         const key = badge.dataset.badge;
-        let unlocked = false;
-
-        switch (key) {
-            case "firstQuiz":
-                unlocked = (data.quizzesTaken || 0) >= 1;
-                break;
-            case "streak7":
-                unlocked = (data.streak || 0) >= 7;
-                break;
-            case "questions100":
-                unlocked = (data.questionsAnswered || 0) >= 100;
-                break;
-            case "accuracy90":
-                unlocked = (data.accuracy || 0) >= 90;
-                break;
-            case "futureRN":
-                unlocked = (data.questionsAnswered || 0) > 0;
-                break;
-        }
-
-        if (!unlocked) {
+        if (unlockedSet.has(key)) {
+            badge.classList.remove("locked");
+        } else {
             badge.classList.add("locked");
         }
     });
@@ -597,7 +580,7 @@ async function renderAnalytics(uid) {
         renderWeeklyBarChart(activities);
         renderAccuracyTrend(activities);
         renderQuizHistory(activities);
-        renderAchievements(data, activities);
+        renderAchievements(data);
 
     } catch (err) {
         console.error("Analytics failed to load:", err);

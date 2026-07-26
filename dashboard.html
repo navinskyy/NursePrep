@@ -42,6 +42,10 @@
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="12" width="4" height="9" rx="1"/><rect x="10" y="7" width="4" height="14" rx="1"/><rect x="17" y="3" width="4" height="18" rx="1"/></svg>
       Analytics
     </a>
+    <a href="leaderboard.html">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 21h8M12 17v4M7 4h10v5a4 4 0 0 1-4 4 4 4 0 0 1-4-4V4z"/></svg>
+      Leaderboard
+    </a>
     <a href="profile.html">
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.4"/><path d="M5 20C5 16 8 14 12 14C16 14 19 16 19 20" stroke-linecap="round"/></svg>
       Profile
@@ -103,6 +107,17 @@
       <p class="goal-text mono" id="goalText">Loading…</p>
       <input class="goal-input mono" id="goalInput" type="number" min="1" step="1" inputmode="numeric" aria-label="Daily question goal">
       <div class="goal-bar"><span id="goalFill"></span></div>
+      <div class="goal-milestone" id="goalMilestone" style="display:none">
+        <div class="goal-milestone-row">
+          <span class="goal-milestone-icon">🎉</span>
+          <span class="goal-milestone-text">Goal complete! Amazing work.</span>
+        </div>
+        <div class="goal-upsell" id="goalUpsell">
+          <button class="btn btn-primary goal-upsell-btn" id="goalUpsellMore">Keep going (+5)</button>
+          <button class="btn btn-secondary goal-upsell-btn" id="goalUpsellFlashcards">Review flashcards</button>
+          <button class="btn btn-secondary goal-upsell-btn" id="goalUpsellDone">Done for now</button>
+        </div>
+      </div>
     </div>
 
     <div class="mini-card continue-card">
@@ -130,74 +145,6 @@
   <ul class="activity-list" id="activityList">
     <li class="activity-empty">Loading…</li>
   </ul>
-
-  <h2 class="section-title">Achievements</h2>
-  <div class="dash-achievements" id="dashAchievements">
-    <div class="achievement-mini-card" data-ach="first_quiz">
-      <span class="achievement-mini-icon">📝</span>
-      <div class="achievement-mini-info">
-        <h4>First Quiz</h4>
-        <p>Complete your first quiz</p>
-      </div>
-      <span class="achievement-mini-status" id="achFirstQuiz">Locked</span>
-    </div>
-    <div class="achievement-mini-card" data-ach="streak_7">
-      <span class="achievement-mini-icon">🔥</span>
-      <div class="achievement-mini-info">
-        <h4>7 Day Streak</h4>
-        <p>Study 7 days in a row</p>
-      </div>
-      <span class="achievement-mini-status" id="achStreak7">Locked</span>
-    </div>
-    <div class="achievement-mini-card" data-ach="questions_100">
-      <span class="achievement-mini-icon">💯</span>
-      <div class="achievement-mini-info">
-        <h4>100 Questions</h4>
-        <p>Answer 100 questions total</p>
-      </div>
-      <span class="achievement-mini-status" id="ach100Q">Locked</span>
-    </div>
-    <div class="achievement-mini-card" data-ach="accuracy_90">
-      <span class="achievement-mini-icon">🎯</span>
-      <div class="achievement-mini-info">
-        <h4>90% Accuracy</h4>
-        <p>Reach 90% overall accuracy</p>
-      </div>
-      <span class="achievement-mini-status" id="ach90Acc">Locked</span>
-    </div>
-    <div class="achievement-mini-card" data-ach="perfect_score">
-      <span class="achievement-mini-icon">🏆</span>
-      <div class="achievement-mini-info">
-        <h4>Perfect Score</h4>
-        <p>Get 100% on any quiz</p>
-      </div>
-      <span class="achievement-mini-status" id="achPerfect">Locked</span>
-    </div>
-    <div class="achievement-mini-card" data-ach="flashcard_master">
-      <span class="achievement-mini-icon">🧠</span>
-      <div class="achievement-mini-info">
-        <h4>Flashcard Master</h4>
-        <p>Master 50 flashcards</p>
-      </div>
-      <span class="achievement-mini-status" id="achFlashMaster">Locked</span>
-    </div>
-    <div class="achievement-mini-card" data-ach="all_subjects">
-      <span class="achievement-mini-icon">⭐</span>
-      <div class="achievement-mini-info">
-        <h4>PNLE Ready</h4>
-        <p>Complete all 8 subjects</p>
-      </div>
-      <span class="achievement-mini-status" id="achAllSubj">Locked</span>
-    </div>
-    <div class="achievement-mini-card" data-ach="streak_30">
-      <span class="achievement-mini-icon">👑</span>
-      <div class="achievement-mini-info">
-        <h4>30 Day Champion</h4>
-        <p>Maintain a 30-day streak</p>
-      </div>
-      <span class="achievement-mini-status" id="achStreak30">Locked</span>
-    </div>
-  </div>
 
   <h2 class="section-title">Subjects</h2>
 

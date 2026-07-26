@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" href="/favicon.png">
-<title>Subjects | NursePrep</title>
+<title>Leaderboard | NursePrep</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./css/subjects.css">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/leaderboard.css">
 </head>
 <body class="dash-body">
 
@@ -25,7 +25,7 @@
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11L12 4L21 11" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 10V20H19V10" stroke-linecap="round" stroke-linejoin="round"/></svg>
       Dashboard
     </a>
-    <a href="subjects.html" class="active">
+    <a href="subjects.html">
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5C4 5 8 3 12 5C16 3 20 5 20 5V18C20 18 16 16 12 18C8 16 4 18 4 18V5Z" stroke-linejoin="round"/></svg>
       Subjects
     </a>
@@ -42,7 +42,7 @@
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="12" width="4" height="9" rx="1"/><rect x="10" y="7" width="4" height="14" rx="1"/><rect x="17" y="3" width="4" height="18" rx="1"/></svg>
       Analytics
     </a>
-    <a href="leaderboard.html">
+    <a href="leaderboard.html" class="active">
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 21h8M12 17v4M7 4h10v5a4 4 0 0 1-4 4 4 4 0 0 1-4-4V4z"/></svg>
       Leaderboard
     </a>
@@ -52,27 +52,49 @@
     </a>
   </nav>
 
-  <div class="dash-sidebar-bottom">
+   <div class="dash-sidebar-bottom">
     <div class="dash-sidebar-foot">
       <span class="eyebrow">Streak</span> 
       <p></p><strong id="sidebarStreak">0 days</strong> — keep it going 🔥</p>
     </div>
-
+  </div>
 </aside>
 
-<main class="dash-main">
+<main class="dash-main leaderboard-shell">
 
-  <div class="dash-header">
-    <span class="eyebrow">PNLE Review</span>
-    <h1>Choose a Subject</h1>
-    <p>Select a nursing subject and begin reviewing with quizzes and flashcards.</p>
+  <div class="shell-eyebrow">Community · Rankings</div>
+
+  <div class="leaderboard-header">
+    <h1>Leaderboard</h1>
+    <div class="leaderboard-tabs">
+      <button class="tab active" data-tab="alltime">All-Time</button>
+      <button class="tab" data-tab="weekly">This Week</button>
+    </div>
   </div>
 
-  <section class="subjects-grid" id="subjectsGrid"></section>
+  <div class="leaderboard-table-wrap">
+    <div class="leaderboard-header-row">
+      <span class="col-rank">Rank</span>
+      <span class="col-user">User</span>
+      <span class="col-level">Level</span>
+      <span class="col-xp">XP</span>
+      <span class="col-streak">Streak</span>
+      <span class="col-score">Rank Score</span>
+      <span class="col-badges">Badges</span>
+    </div>
+    <div id="leaderboardList" class="leaderboard-list">
+      <div class="leaderboard-empty">Loading rankings…</div>
+    </div>
+  </div>
+
+  <div class="leaderboard-legend">
+    <p><strong>Ranking Score</strong> = XP + (Streak × 20) + (Average Score × 5)</p>
+    <p class="text-low">Rewards consistent learning, not just high scores.</p>
+  </div>
 
 </main>
 
-<script type="module" src="js/subjects.js"></script>
+<script type="module" src="./js/leaderboard.js"></script>
 <script type="module" src="js/sidebar.js"></script>
 </body>
 </html>

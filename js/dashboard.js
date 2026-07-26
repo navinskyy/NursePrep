@@ -16,7 +16,7 @@ import {
     limit
 } from "firebase/firestore";
 
-import { ensureUserProfile, bumpDailyStreak, getAchievementStatus } from "./userProfile.js";
+import { ensureUserProfile, bumpDailyStreak, getAchievementStatus, awardXP, getMonday } from "./userProfile.js";
 
 // ===========================
 // ELEMENTS
@@ -39,6 +39,10 @@ const goalFill = document.getElementById("goalFill");
 const goalText = document.getElementById("goalText");
 const goalEditBtn = document.getElementById("goalEditBtn");
 const goalInput = document.getElementById("goalInput");
+const goalMilestone = document.getElementById("goalMilestone");
+const goalUpsellMore = document.getElementById("goalUpsellMore");
+const goalUpsellFlashcards = document.getElementById("goalUpsellFlashcards");
+const goalUpsellDone = document.getElementById("goalUpsellDone");
 
 const continueLabel = document.getElementById("continueLabel");
 const continueDetail = document.getElementById("continueDetail");
@@ -133,6 +137,66 @@ function wireGoalEditing(userRef, initialGoal, answeredToday) {
 
     goalInput.addEventListener("blur", saveGoal);
 
+}
+
+// ===========================
+// GOAL MILESTONE
+// ===========================
+
+let goalMilestoneShown = false;
+let goalMilestoneDate = "";
+
+async function fireConfetti() {
+    try {
+        const confetti = (await import("https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js")).default;
+        if (typeof confetti === "function") {
+            confetti({
+                particleCount: 120,
+                spread: 70,
+                origin: { y: 0.6 },
+                colors: ["#EC6FA0", "#7C8CFF", "#FF9F7F", "#00C9A7", "#FACC15"]
+            });
+        }
+    } catch (err) {
+        console.warn("Confetti failed to load:", err);
+    }
+}
+
+function showGoalMilestone(userRef) {
+    if (!goalMilestone) return;
+    goalMilestone.style.display = "block";
+    goalMilestoneShown = true;
+    goalMilestoneDate = new Date().toISOString().slice(0, 10);
+    fireConfetti();
+    awardXP(userRef.id || "", "dailyGoalMet").catch(() => {});
+}
+
+function hideGoalMilestone() {
+    if (!goalMilestone) return;
+    goalMilestone.style.display = "none";
+}
+
+function wireGoalMilestone(userRef, dailyGoal) {
+    if (!goalUpsellMore || !goalUpsellFlashcards || !goalUpsellDone) return;
+
+    goalUpsellMore.addEventListener("click", async () => {
+        const newGoal = dailyGoal + 5;
+        try {
+            await updateDoc(userRef, { dailyGoal: newGoal });
+        } catch (err) {
+            console.error("Couldn't update daily goal:", err);
+        }
+        goalMilestoneShown = false;
+        hideGoalMilestone();
+    });
+
+    goalUpsellFlashcards.addEventListener("click", () => {
+        window.location.href = "flashcards.html";
+    });
+
+    goalUpsellDone.addEventListener("click", () => {
+        hideGoalMilestone();
+    });
 }
 
 // ===========================
@@ -358,6 +422,31 @@ onAuthStateChanged(auth, async (user) => {
 
         const data = await bumpDailyStreak(user.uid) || snap.data();
 
+        const todayStr = new Date().toISOString().slice(0, 10);
+        const weekStart = getMonday(todayStr);
+
+        const needsMigration = !("xp" in data) || !("level" in data) || !("weeklyXP" in data) || !data.weeklyXPWeekStart || data.weeklyXPWeekStart !== weekStart;
+
+        if (needsMigration) {
+            const updates = {
+                xp: data.xp || 0,
+                level: data.level || 1,
+                weeklyXP: data.weeklyXP || 0,
+                weeklyXPWeekStart: weekStart,
+                totalCorrect: data.totalCorrect || data.correctAnswers || 0,
+                totalQuestions: data.totalQuestions || data.questionsAnswered || 0,
+                dailyGoal: data.dailyGoal || 20,
+                questionsToday: data.questionsToday || 0,
+                questionsTodayDate: data.questionsTodayDate || todayStr,
+                flashcardsToday: data.flashcardsToday || 0,
+                flashcardsTodayDate: data.flashcardsTodayDate || todayStr,
+                goalCompletedDates: data.goalCompletedDates || [],
+                badges: data.badges || [],
+                lastActionTimestamps: data.lastActionTimestamps || {}
+            };
+            await updateDoc(userRef, updates);
+        }
+
         // ======================================
         // LOAD SUBJECT PROGRESS
         // ======================================
@@ -527,8 +616,6 @@ onAuthStateChanged(auth, async (user) => {
                 .catch((err) => console.error("Couldn't seed default daily goal:", err));
         }
 
-        const todayStr = new Date().toISOString().slice(0, 10);
-
         let questionsToday = data.questionsToday || 0;
 
         // Roll it over to 0 for a new day, and persist the rollover.
@@ -545,6 +632,16 @@ onAuthStateChanged(auth, async (user) => {
 
         renderGoal(questionsToday, dailyGoal);
         wireGoalEditing(userRef, dailyGoal, questionsToday);
+        wireGoalMilestone(userRef, dailyGoal);
+
+        if (goalMilestoneDate !== todayStr) {
+            goalMilestoneShown = false;
+            goalMilestoneDate = todayStr;
+        }
+
+        if (questionsToday >= dailyGoal && !goalMilestoneShown) {
+            showGoalMilestone(userRef);
+        }
 
         // =====================
         // Continue where you left off

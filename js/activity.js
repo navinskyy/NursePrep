@@ -14,20 +14,9 @@ import {
  * quiz.js / flashcards.js. It's what makes "Continue where you left off"
  * and "Recent activity" on the dashboard real instead of hardcoded.
  *
- * Example, at the end of a quiz submit handler:
- *
- *   import { recordActivity } from "./activity.js";
- *
- *   await recordActivity(user.uid, {
- *     type: "quiz",                              // "quiz" | "flashcards"
- *     subject: "Fundamentals",                    // matches the h4 text on the dashboard subject cards
- *     subjectKey: "fundamentals",                 // matches the keys used in subjectProgress
- *     label: "Fundamentals quiz",                 // shown as the bold line in the activity feed
- *     detail: "Scored 82% on 20 questions",        // shown next to it
- *     score: 82,
- *     path: "quiz.html?subject=fundamentals",      // where "Continue →" should send them
- *     questionsCount: 20                           // how many questions this session added to today's goal
- *   });
+ * Note: XP and streak are awarded by recordQuizResult / recordFlashcardSession
+ * in userProfile.js, not here. This function only tracks the activity feed
+ * and daily question/card counters.
  */
 export async function recordActivity(uid, activity) {
 
@@ -46,18 +35,15 @@ export async function recordActivity(uid, activity) {
         timestamp: serverTimestamp()
     };
 
-    // 1. Add it to the activity feed (users/{uid}/activity)
     await addDoc(collection(db, "users", uid, "activity"), payload);
 
-    // 2. Mirror it onto the user doc so "continue where you left off" can
-    //    read it in a single get instead of a second query, and bump
-    //    today's question count for the daily-goal bar.
     const userRef = doc(db, "users", uid);
 
     await updateDoc(userRef, {
         lastActivity: payload,
         questionsToday: increment(activity.questionsCount || 0),
-        questionsTodayDate: todayStr
+        questionsTodayDate: todayStr,
+        flashcardsToday: increment(activity.flashcardsCount || 0),
+        flashcardsTodayDate: todayStr
     });
-
 }

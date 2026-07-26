@@ -6,7 +6,7 @@ import {
   reauthenticateWithCredential,
   updatePassword,
 } from "firebase/auth";
-import { ensureUserProfile, updateUserProfile, getAchievementStatus } from "./userProfile.js";
+import { ensureUserProfile, updateUserProfile, getAchievementStatus, calculateLevel, getLevelProgress, calculateRankingScore, LEVEL_THRESHOLDS } from "./userProfile.js";
 
 // ======================================
 // ELEMENTS
@@ -18,6 +18,11 @@ const avatarInput = document.getElementById("avatarInput");
 const profileName = document.getElementById("profileName");
 const profileCourse = document.getElementById("profileCourse");
 const profileStatus = document.getElementById("profileStatus");
+
+const levelBadge = document.getElementById("levelBadge");
+const xpText = document.getElementById("xpText");
+const xpFill = document.getElementById("xpFill");
+const rankingChip = document.getElementById("rankingChip");
 
 const profileEmail = document.getElementById("profileEmail");
 const profileSchool = document.getElementById("profileSchool");
@@ -126,6 +131,18 @@ function renderProfile(data) {
   if (profileStatus) {
     profileStatus.textContent = (data.streak || 0) > 0 ? "Active reviewer" : "New reviewer";
   }
+
+  const level = data.level || calculateLevel(data.xp || 0);
+  const xp = data.xp || 0;
+  const levelProgress = getLevelProgress(xp, level);
+  const nextLevelXP = LEVEL_THRESHOLDS[level] || LEVEL_THRESHOLDS[LEVEL_THRESHOLDS.length - 1];
+  const currentLevelXP = LEVEL_THRESHOLDS[level - 1] || 0;
+  const rankingScore = calculateRankingScore(data);
+
+  if (levelBadge) levelBadge.textContent = `Lv.${level}`;
+  if (xpText) xpText.textContent = `${xp - currentLevelXP} / ${nextLevelXP - currentLevelXP} XP`;
+  if (xpFill) xpFill.style.width = `${levelProgress}%`;
+  if (rankingChip) rankingChip.textContent = `Rank Score: ${rankingScore.toLocaleString()}`;
 
   profileEmail.textContent = data.email || "—";
   profileSchool.textContent = data.school || "Not set";

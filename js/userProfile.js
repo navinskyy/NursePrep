@@ -1,10 +1,9 @@
 import { db } from "../firebase/firebase.js";
-import { doc, getDoc, setDoc, serverTimestamp } from "firebase/firestore";
+import { doc, getDoc, setDoc, serverTimestamp, updateDoc } from "firebase/firestore";
 
-// Canonical shape for every users/{uid} document.
-// Every signup path (email, Google via login, Google via register) and
-// dashboard.js's self-heal fallback all go through this one function —
-// so the document shape can never drift between paths again.
+// ============================================
+// ACHIEVEMENTS
+// ============================================
 
 const ACHIEVEMENTS = [
   {
@@ -68,6 +67,54 @@ const ACHIEVEMENTS = [
   }
 ];
 
+// ============================================
+// XP RULES
+// ============================================
+
+const XP_RULES = {
+  dailyLogin: 10,
+  quizComplete: 20,
+  scoreBonus80: 30,
+  perfectScore: 50,
+  flashcardSession: 15,
+  flashcardMaster: 5,
+  dailyGoalMet: 25,
+  streak7Bonus: 50,
+  streak30Bonus: 100,
+  allSubjectsBonus: 40
+};
+
+// ============================================
+// LEVEL THRESHOLDS
+// ============================================
+
+const LEVEL_THRESHOLDS = [
+  0,      // Level 1
+  100,    // Level 2
+  250,    // Level 3
+  500,    // Level 4
+  1000,   // Level 5
+  2000,   // Level 6
+  3500,   // Level 7
+  5500,   // Level 8
+  8000,   // Level 9
+  11000,  // Level 10
+  15000,  // Level 11
+  20000,  // Level 12
+  26000,  // Level 13
+  33000,  // Level 14
+  41000,  // Level 15
+  50000,  // Level 16
+  60000,  // Level 17
+  72000,  // Level 18
+  86000,  // Level 19
+  100000  // Level 20
+];
+
+// ============================================
+// DEFAULT PROFILE
+// ============================================
+
 const DEFAULT_PROFILE = {
   fullname: "Future RN",
   email: "",
@@ -86,13 +133,65 @@ const DEFAULT_PROFILE = {
   subjectProgress: {},
   lastActiveDate: null,
   achievements: [],
+  xp: 0,
+  level: 1,
+  weeklyXP: 0,
+  weeklyXPWeekStart: null,
+  totalCorrect: 0,
+  totalQuestions: 0,
+  perfectScores: 0,
+  dailyGoal: 20,
+  questionsToday: 0,
+  questionsTodayDate: null,
+  flashcardsToday: 0,
+  flashcardsTodayDate: null,
+  goalCompletedDates: [],
+  badges: [],
+  lastActionTimestamps: {}
 };
 
-/**
- * Ensures a users/{uid} document exists with the canonical shape.
- * If it already exists, returns the existing data untouched (never
- * overwrites real progress). If missing, creates it with defaults.
- */
+// ============================================
+// HELPERS
+// ============================================
+
+export function getMonday(dateStr) {
+  const d = new Date(dateStr + "T00:00:00");
+  const day = d.getDay();
+  const diff = d.getDate() - day + (day === 0 ? -6 : 1);
+  d.setDate(diff);
+  const year = d.getFullYear();
+  const month = String(d.getMonth() + 1).padStart(2, "0");
+  const date = String(d.getDate()).padStart(2, "0");
+  return `${year}-${month}-${date}`;
+}
+
+function calculateLevel(xp) {
+  for (let i = LEVEL_THRESHOLDS.length - 1; i >= 0; i--) {
+    if (xp >= LEVEL_THRESHOLDS[i]) {
+      return i + 1;
+    }
+  }
+  return 1;
+}
+
+function getLevelProgress(xp, level) {
+  const currentThreshold = LEVEL_THRESHOLDS[level - 1] || 0;
+  const nextThreshold = LEVEL_THRESHOLDS[level] || LEVEL_THRESHOLDS[LEVEL_THRESHOLDS.length - 1];
+  const progress = ((xp - currentThreshold) / (nextThreshold - currentThreshold)) * 100;
+  return Math.min(100, Math.max(0, progress));
+}
+
+function calculateRankingScore(data) {
+  const xp = data.xp || 0;
+  const streak = data.streak || 0;
+  const avgScore = data.averageScore || 0;
+  return Math.round(xp + (streak * 20) + (avgScore * 5));
+}
+
+// ============================================
+// CORE PROFILE
+// ============================================
+
 export async function ensureUserProfile(uid, { fullname, email }) {
   const ref = doc(db, "users", uid);
   const snap = await getDoc(ref);
@@ -112,17 +211,16 @@ export async function ensureUserProfile(uid, { fullname, email }) {
   return profile;
 }
 
-/**
- * Bumps the daily streak counter — call this once whenever the user
- * does something study-related (visiting the dashboard, finishing a
- * quiz, reviewing flashcards). Safe to call multiple times per day:
- * it only increments once per calendar day thanks to `lastActiveDate`.
- *
- * Streak logic:
- *  - Same day as last recorded activity -> no change (already counted)
- *  - Exactly one day after last activity -> streak + 1
- *  - Any bigger gap (or first-ever activity) -> streak resets to 1
- */
+export async function updateUserProfile(uid, fields) {
+  const ref = doc(db, "users", uid);
+  await setDoc(ref, fields, { merge: true });
+  return fields;
+}
+
+// ============================================
+// STREAK
+// ============================================
+
 export async function bumpDailyStreak(uid) {
   const ref = doc(db, "users", uid);
   const snap = await getDoc(ref);
@@ -133,7 +231,6 @@ export async function bumpDailyStreak(uid) {
   const today = new Date().toISOString().slice(0, 10);
 
   if (data.lastActiveDate === today) {
-    // Already counted today — nothing to do.
     return data;
   }
 
@@ -149,26 +246,116 @@ export async function bumpDailyStreak(uid) {
 
   await setDoc(ref, updates, { merge: true });
 
-  return { ...data, ...updates };
+  const updated = { ...data, ...updates };
+  await checkStreakBonuses(uid, updated);
+
+  return updated;
 }
 
-/**
- * Updates editable profile fields (name, school, course, year level,
- * photoURL). Only touches the fields passed in — never overwrites
- * stats/progress fields.
- */
-export async function updateUserProfile(uid, fields) {
+export async function checkStreakBonuses(uid, data) {
   const ref = doc(db, "users", uid);
-  await setDoc(ref, fields, { merge: true });
-  return fields;
+  const streak = data.streak || 0;
+  const bonuses = [];
+
+  if (streak === 7) {
+    bonuses.push({ type: "streak7", xp: 50 });
+    await awardXP(uid, "streak7Bonus");
+  } else if (streak === 30) {
+    bonuses.push({ type: "streak30", xp: 100 });
+    await awardXP(uid, "streak30Bonus");
+  }
+
+  return bonuses;
 }
 
-/**
- * Records a completed quiz attempt: bumps aggregate stats, updates
- * per-subject accuracy (subjectProgress[subject].accuracy — the exact
- * field dashboard.js reads to render each subject's progress bar),
- * and bumps the daily streak. Called once when a quiz finishes.
- */
+// ============================================
+// XP SYSTEM
+// ============================================
+
+export async function awardXP(uid, action, metadata = {}) {
+  const ref = doc(db, "users", uid);
+  const snap = await getDoc(ref);
+
+  if (!snap.exists()) return null;
+
+  const data = snap.data();
+  const xpToAdd = XP_RULES[action] || 0;
+
+  if (xpToAdd === 0) return null;
+
+  const today = new Date().toISOString().slice(0, 10);
+  const weekStart = getMonday(today);
+  const dailyXP = (data.dailyXP?.[today] || 0) + xpToAdd;
+
+  const newXP = (data.xp || 0) + xpToAdd;
+  let newWeeklyXP = (data.weeklyXP || 0) + xpToAdd;
+  if (data.weeklyXPWeekStart !== weekStart) {
+    newWeeklyXP = xpToAdd;
+  }
+  const newLevel = calculateLevel(newXP);
+
+  const updates = {
+    xp: newXP,
+    weeklyXP: newWeeklyXP,
+    level: newLevel,
+    weeklyXPWeekStart: weekStart,
+    [`dailyXP.${today}`]: dailyXP,
+    [`lastActionTimestamps.${action}`]: Date.now()
+  };
+
+  await setDoc(ref, updates, { merge: true });
+
+  const updated = { ...data, ...updates };
+  await checkAchievements(uid, updated);
+
+  return { xpAdded: xpToAdd, newXP, newLevel };
+}
+
+export async function enforceDailyXPCap(uid, requestedXP) {
+  const ref = doc(db, "users", uid);
+  const snap = await getDoc(ref);
+
+  if (!snap.exists()) return true;
+
+  const data = snap.data();
+  const today = new Date().toISOString().slice(0, 10);
+  const dailyXP = data.dailyXP?.[today] || 0;
+
+  if (dailyXP + requestedXP > 500) {
+    return false;
+  }
+
+  return true;
+}
+
+// ============================================
+// PERFORMANCE METRICS
+// ============================================
+
+export async function updateAverageScore(uid, newScore, totalQuestions) {
+  const ref = doc(db, "users", uid);
+  const snap = await getDoc(ref);
+
+  if (!snap.exists()) return;
+
+  const data = snap.data();
+  const oldAvg = data.averageScore || 0;
+  const oldCount = data.totalQuestions || 0;
+
+  const newCount = oldCount + (totalQuestions || 1);
+  const newAvg = Math.round(((oldAvg * oldCount) + newScore) / newCount);
+
+  await updateDoc(ref, {
+    averageScore: newAvg,
+    totalQuestions: newCount,
+    totalCorrect: (data.totalCorrect || 0) + Math.round((newScore / 100) * (totalQuestions || 1))
+  });
+}
+
+// ============================================
+// QUIZ RESULTS
+// ============================================
+
 export async function recordQuizResult(uid, { subject, total, correct }) {
   const ref = doc(db, "users", uid);
   const snap = await getDoc(ref);
@@ -186,35 +373,71 @@ export async function recordQuizResult(uid, { subject, total, correct }) {
   const perfectScores = (data.perfectScores || 0) + (total > 0 && correct === total ? 1 : 0);
 
   const subjectProgress = { ...(data.subjectProgress || {}) };
-  const prev = subjectProgress[subject] || { correct: 0, total: 0 };
+  const prev = subjectProgress[subject] || { correct: 0, total: 0, answered: 0 };
   const subjCorrect = prev.correct + correct;
   const subjTotal = prev.total + total;
   subjectProgress[subject] = {
     correct: subjCorrect,
     total: subjTotal,
+    answered: (prev.answered || 0) + total,
     accuracy: subjTotal ? Math.round((subjCorrect / subjTotal) * 100) : 0,
   };
+
+  const scorePct = total > 0 ? Math.round((correct / total) * 100) : 0;
 
   const updates = {
     quizzesTaken,
     questionsAnswered,
     correctAnswers,
     accuracy,
-    perfectScores: perfectScores > (data.perfectScores || 0) ? perfectScores : data.perfectScores,
-    subjectProgress
+    perfectScores: Math.max(perfectScores, data.perfectScores || 0),
+    subjectProgress,
+    [`dailyXP.${new Date().toISOString().slice(0, 10)}`]: (data.dailyXP?.[new Date().toISOString().slice(0, 10)] || 0) + XP_RULES.quizComplete
   };
+
   await setDoc(ref, updates, { merge: true });
 
   const updated = { ...data, ...updates };
+  await updateAverageScore(uid, scorePct, total);
+  await awardXP(uid, "quizComplete");
+  if (scorePct >= 80) await awardXP(uid, "scoreBonus80");
+  if (scorePct === 100) await awardXP(uid, "perfectScore");
+  await bumpDailyStreak(uid);
   await checkAchievements(uid, updated);
 
   return updated;
 }
 
-/**
- * Checks all achievement conditions and unlocks any new ones.
- * Called automatically after quiz results and streak updates.
- */
+// ============================================
+// FLASHCARDS
+// ============================================
+
+export async function recordFlashcardSession(uid, reviewedCount, masteredCount) {
+  const ref = doc(db, "users", uid);
+  const snap = await getDoc(ref);
+
+  if (!snap.exists()) return null;
+
+  const data = snap.data();
+
+  const updates = {
+    masteredCards: Math.max(masteredCount, data.masteredCards || 0),
+    [`dailyXP.${new Date().toISOString().slice(0, 10)}`]: (data.dailyXP?.[new Date().toISOString().slice(0, 10)] || 0) + XP_RULES.flashcardSession
+  };
+
+  await setDoc(ref, updates, { merge: true });
+
+  await awardXP(uid, "flashcardSession");
+  await bumpDailyStreak(uid);
+  await checkAchievements(uid, { ...data, ...updates });
+
+  return { ...data, ...updates };
+}
+
+// ============================================
+// ACHIEVEMENTS
+// ============================================
+
 export async function checkAchievements(uid, data) {
   const ref = doc(db, "users", uid);
   const currentAchievements = new Set(data.achievements || []);
@@ -236,10 +459,6 @@ export async function checkAchievements(uid, data) {
   return newUnlocks;
 }
 
-/**
- * Returns all achievement definitions with their unlock status
- * for a given user's data.
- */
 export function getAchievementStatus(data) {
   const unlocked = new Set(data.achievements || []);
   return ACHIEVEMENTS.map(ach => ({
@@ -248,9 +467,8 @@ export function getAchievementStatus(data) {
   }));
 }
 
-/**
- * Tracks a perfect score event (100% on a quiz).
- */
+export { calculateLevel, getLevelProgress, calculateRankingScore, LEVEL_THRESHOLDS, XP_RULES };
+
 export async function recordPerfectScore(uid) {
   const ref = doc(db, "users", uid);
   const snap = await getDoc(ref);
@@ -263,9 +481,6 @@ export async function recordPerfectScore(uid) {
   await checkAchievements(uid, { ...data, perfectScores });
 }
 
-/**
- * Updates the masteredCards count. Call after flashcard sessions.
- */
 export async function updateMasteredCards(uid, count) {
   const ref = doc(db, "users", uid);
   await setDoc(ref, { masteredCards: count }, { merge: true });

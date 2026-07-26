@@ -2,6 +2,7 @@
 import { auth, db } from "../firebase/firebase.js";
 
 import { recordActivity } from "../js/activity.js";
+import { recordQuizResult } from "../js/userProfile.js";
 
 import {
     pad,
@@ -198,124 +199,64 @@ async function showResult() {
 
         try {
 
-            const userRef = doc(db, "users", user.uid);
+            const saveStatus = document.createElement("div");
+            saveStatus.className = "quiz-save-status";
+            saveStatus.textContent = "Saving progress…";
+            shellEl.appendChild(saveStatus);
 
-            const snap = await getDoc(userRef);
+            if (mistakes.length > 0) {
+                try {
+                    console.log("[quiz] saving", mistakes.length, "mistakes for", currentSubject);
+                    await saveWrongAnswers(currentSubject, mistakes);
+                    console.log("[quiz] saveWrongAnswers succeeded");
+                } catch (err) {
+                    console.error("[quiz] Failed to save wrong answers:", err);
+                }
+            }
 
-            if (snap.exists()) {
+            const answeredThisQuiz = answers.filter(answer => answer !== null).length;
 
-                const data = snap.data();
+            await recordQuizResult(user.uid, {
+                subject: currentSubject,
+                total: total,
+                correct: score
+            });
 
-const quizzesTaken =
-    (data.quizzesTaken || 0) + 1;
+            await recordActivity(user.uid, {
 
-// Actual number of questions answered
-const answeredThisQuiz =
-    answers.filter(answer => answer !== null).length;
+                type: "quiz",
 
-const questionsAnswered =
-    (data.questionsAnswered || 0) + answeredThisQuiz;
+                subject: currentSubject,
 
-const correctAnswers =
-    (data.correctAnswers || 0) + score;
+                subjectKey: currentSubject,
 
-const accuracy =
-    questionsAnswered === 0
-        ? 0
-        : Math.round(
-            (correctAnswers / questionsAnswered) * 100
-        );
+                label: `${currentSubject} Quiz`,
 
-// =========================
-// SUBJECT PROGRESS
-// =========================
+                detail: `${score}/${total} correct`,
 
-const subjectProgress = data.subjectProgress || {};
+                score: pct,
 
-const currentStats =
-    subjectProgress[currentSubject] || {
-        answered: 0,
-        correct: 0,
-        total: 0,
-        accuracy: 0
-    };
+                path: `quiz.html?subject=${currentSubject}`,
 
-currentStats.answered += answeredThisQuiz;
-currentStats.correct += score;
-currentStats.total += total;
+                questionsCount: answeredThisQuiz
 
-currentStats.accuracy = Math.min(
-    100,
-    Math.round((currentStats.correct / currentStats.total) * 100)
-);
+            });
 
-subjectProgress[currentSubject] = currentStats;
-
-// =========================
-// SAVE WRONG ANSWERS
-// =========================
-
-    if (mistakes.length > 0) {
-        try {
-            console.log("[quiz] saving", mistakes.length, "mistakes for", currentSubject);
-            await saveWrongAnswers(currentSubject, mistakes);
-            console.log("[quiz] saveWrongAnswers succeeded");
-        } catch (err) {
-            console.error("[quiz] Failed to save wrong answers:", err);
-        }
-    }
-
-// =========================
-// SAVE
-// =========================
-
-console.log("Saving...");
-console.log({
-  total,
-  answeredThisQuiz,
-  questionsAnswered
-});
-
-await updateDoc(userRef, {
-
-    quizzesTaken,
-    questionsAnswered,
-    correctAnswers,
-    accuracy,
-
-   [`subjectProgress.${currentSubject}`]: currentStats
-
-});
-
-await recordActivity(user.uid, {
-
-    type: "quiz",
-
-    subject: currentSubject,
-
-    subjectKey: currentSubject,
-
-    label: `${currentSubject} Quiz`,
-
-    detail: `${score}/${total} correct`,
-
-    score: pct,
-
-    path: `quiz.html?subject=${currentSubject}`,
-
-    questionsCount: answeredThisQuiz
-
-});
-
-
-
-         }
+            if (saveStatus) {
+                saveStatus.textContent = "Progress saved ✓";
+                saveStatus.style.color = "var(--mint)";
+            }
 
         }
 
         catch (err) {
 
             console.error("Firestore Error:", err);
+
+            if (saveStatus) {
+                saveStatus.textContent = "Could not save progress. Please check your connection.";
+                saveStatus.style.color = "var(--pink-300)";
+            }
 
         }
 
@@ -332,8 +273,23 @@ await recordActivity(user.uid, {
                 Nice work, Future RN
             </h1>
 
-            <div class="score">
-                ${score} / ${total}
+            <div class="score-display">
+              <div class="score-ring">
+                <svg viewBox="0 0 120 120" class="score-svg">
+                  <circle cx="60" cy="60" r="54" fill="none" stroke="var(--bg-soft)" stroke-width="8"/>
+                  <circle cx="60" cy="60" r="54" fill="none" stroke="var(--pink-400)" stroke-width="8" stroke-linecap="round"
+                    stroke-dasharray="${2 * Math.PI * 54}"
+                    stroke-dashoffset="${2 * Math.PI * 54 * (1 - pct / 100)}"
+                    transform="rotate(-90 60 60)" class="score-circle"/>
+                </svg>
+                <div class="score-inner">
+                  <span class="score-pct">${pct}%</span>
+                </div>
+              </div>
+              <div class="score-detail">
+                <span class="score-fraction">${score} / ${total}</span>
+                <span class="score-label">correct</span>
+              </div>
             </div>
 
             <p class="sub">

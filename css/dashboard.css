@@ -161,6 +161,52 @@
   transition: width 0.4s ease;
 }
 
+.goal-milestone {
+  margin-top: 14px;
+  padding: 12px;
+  background: rgba(236, 111, 160, 0.08);
+  border: 1px solid rgba(236, 111, 160, 0.25);
+  border-radius: var(--radius-md);
+  animation: milestoneIn 0.35s ease-out;
+}
+
+.goal-milestone-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.goal-milestone-icon {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.goal-milestone-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-hi);
+}
+
+.goal-upsell {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.goal-upsell-btn {
+  flex: 1 1 auto;
+  min-width: 120px;
+  justify-content: center;
+  padding: 8px 10px;
+  font-size: 13px;
+}
+
+@keyframes milestoneIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 .continue-card h4 {
   font-family: var(--font-display);
   font-size: 20px;

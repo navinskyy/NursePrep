@@ -188,10 +188,11 @@ input, select, textarea { font-family: inherit; }
   text-decoration: none;
   font-size: 14.5px;
   font-weight: 500;
-  transition: background 0.15s ease, color 0.15s ease;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+  position: relative;
 }
 
-.dash-nav a svg { opacity: 0.85; }
+.dash-nav a svg { opacity: 0.85; transition: opacity 0.25s ease; }
 
 .dash-nav a:hover {
   background: var(--surface-hover);
@@ -199,8 +200,44 @@ input, select, textarea { font-family: inherit; }
 }
 
 .dash-nav a.active {
-  background: rgba(236, 111, 160, 0.12);
+  background: rgba(236, 111, 160, 0.18);
   color: var(--pink-300);
+}
+
+.dash-nav a.active svg { opacity: 1; }
+
+.dash-nav a:active {
+  transform: scale(0.97);
+}
+
+.dash-nav {
+  position: relative;
+}
+
+.dash-nav-indicator {
+  position: absolute;
+  left: 0;
+  width: 3px;
+  background: var(--pink-400);
+  border-radius: 0 3px 3px 0;
+  transition: top 0.3s cubic-bezier(0.4, 0, 0.2, 1), height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 8px var(--pink-glow);
+  pointer-events: none;
+}
+
+.page-enter {
+  animation: pageIn 0.35s ease-out both;
+}
+
+@keyframes pageIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .review-badge {
