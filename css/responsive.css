@@ -1,9 +1,61 @@
 /* ============================================
-   Responsive Breakpoints
-   Mirrors global.css breakpoints for consistency
+   NursePrep — Responsive Breakpoints
+   Imported by every page-specific stylesheet
    ============================================ */
 
-/* Tablet — 768px and below */
+/* ============================================
+   Large screens — 1400px and above
+   ============================================ */
+@media (min-width: 1400px) {
+
+  .dash-main {
+    max-width: 1280px;
+  }
+
+  .dash-stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .subjects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  }
+}
+
+/* ============================================
+   Tablet landscape — 1024px and below
+   ============================================ */
+@media (max-width: 1024px) {
+
+  .dash-main {
+    padding: 36px 32px 48px;
+  }
+
+  .dash-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .analytics-top-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .leaderboard-header-row,
+  .leaderboard-card {
+    grid-template-columns: 60px 1fr 70px 90px;
+    gap: 10px;
+    padding: 12px 16px;
+  }
+
+  .col-streak,
+  .lb-streak,
+  .col-score,
+  .lb-score {
+    display: none;
+  }
+}
+
+/* ============================================
+   Tablet — 768px and below
+   ============================================ */
 @media (max-width: 768px) {
 
   /* Sidebar */
@@ -207,6 +259,16 @@
     font-size: 28px;
   }
 
+  /* Leaderboard */
+  .leaderboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .leaderboard-header h1 {
+    font-size: 24px;
+  }
+
   /* Auth pages */
   .auth-shell {
     grid-template-columns: 1fr;
@@ -267,12 +329,14 @@
   }
 }
 
-/* Mobile — 480px and below */
-@media (max-width: 480px) {
+/* ============================================
+   Tablet portrait / small tablet — 600px and below
+   ============================================ */
+@media (max-width: 600px) {
 
   .dash-main {
     margin-left: 52px;
-    padding: 16px 12px 32px;
+    padding: 20px 16px 36px;
   }
 
   .dash-sidebar {
@@ -285,15 +349,36 @@
     margin-bottom: 16px;
   }
 
-  /* Stats cards — 2x2 grid */
+  .dash-sidebar .brand svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .dash-nav a svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* Ensure touch targets meet 44x44px minimum */
+  .dash-nav a {
+    min-height: 44px;
+    padding: 10px 6px;
+  }
+
+  .dash-nav a.active {
+    width: 36px;
+    height: 36px;
+  }
+
+  /* Dashboard */
   .dash-stats {
     grid-template-columns: 1fr 1fr;
-    gap: 8px;
+    gap: 10px;
     margin-top: 18px;
   }
 
   .stat-card {
-    padding: 14px;
+    padding: 16px;
   }
 
   .stat-card .stat-value .num {
@@ -308,9 +393,507 @@
     font-size: 11px;
   }
 
-  /* Analytics cards */
+  .dash-header h1 {
+    font-size: 24px;
+  }
+
+  .dash-header p {
+    font-size: 14px;
+  }
+
+  .section-title {
+    font-size: 18px;
+    margin: 32px 0 14px;
+  }
+
+  /* Goal card */
+  .goal-upsell-btn {
+    min-width: 100px;
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  /* Subject cards */
+  .dash-subjects {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .subjects-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .subject-card {
+    padding: 18px;
+  }
+
+  /* Continue card */
+  .continue-card {
+    padding: 18px;
+  }
+
+  .continue-card h4 {
+    font-size: 18px;
+  }
+
+  /* Activity list */
+  .activity-list {
+    padding: 4px 12px;
+  }
+
+  .activity-item {
+    padding: 12px 0;
+    font-size: 13px;
+  }
+
+  /* Flashcards */
+  .flash-card {
+    height: 300px;
+  }
+
+  .flash-front .flash-text {
+    font-size: 17px;
+  }
+
+  .flash-back .flash-text {
+    font-size: 14px;
+  }
+
+  .flash-toolbar {
+    gap: 10px;
+  }
+
+  .flash-toolbar-right {
+    gap: 10px;
+  }
+
+  /* Ensure icon buttons are touch-friendly */
+  .icon-btn {
+    width: 44px;
+    height: 44px;
+  }
+
+  /* Quiz */
+  .quiz-shell {
+    max-width: 100%;
+  }
+
+  .quiz-shell h1 {
+    font-size: 22px;
+  }
+
+  .question-card {
+    padding: 18px;
+  }
+
+  .question-card h3 {
+    font-size: 18px;
+    margin: 0 0 20px;
+  }
+
+  .choice {
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .choice .letter {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+
+  .choice span.label-text {
+    font-size: 14px;
+  }
+
+  .submit-btn {
+    padding: 14px;
+    font-size: 15px;
+  }
+
+  .quiz-footer {
+    gap: 10px;
+  }
+
+  .quiz-footer button {
+    flex: 1;
+    justify-content: center;
+    padding: 12px;
+  }
+
+  /* Quiz result */
+  .quiz-result {
+    padding: 36px 20px;
+  }
+
+  .quiz-result h1 {
+    font-size: 24px;
+  }
+
+  .score-display {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .score-ring {
+    width: 120px;
+    height: 120px;
+  }
+
+  .score-pct {
+    font-size: 28px;
+  }
+
+  .score-fraction {
+    font-size: 24px;
+  }
+
+  /* Profile */
+  .profile-shell {
+    padding-bottom: 60px;
+  }
+
+  .id-band {
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .id-photo-frame {
+    width: 64px;
+    height: 64px;
+  }
+
+  .id-info h1 {
+    font-size: 22px;
+  }
+
+  .id-info p {
+    font-size: 13px;
+  }
+
+  .progression-strip {
+    gap: 8px;
+  }
+
+  .level-badge {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+
+  .xp-text {
+    font-size: 11px;
+  }
+
+  .ranking-chip {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+
+  .field-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .field-item {
+    padding: 14px;
+  }
+
+  .vital {
+    padding: 12px 8px;
+  }
+
+  .vital-num {
+    font-size: 20px;
+  }
+
+  /* Analytics */
+  .analytics-top-cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .analytics-card {
+    padding: 16px;
+  }
+
   .analytics-card .analytics-card-value .num {
     font-size: 20px;
+  }
+
+  .analytics-card .analytics-card-value .suffix {
+    font-size: 13px;
+  }
+
+  .analytics-card-desc {
+    font-size: 11px;
+  }
+
+  .analytics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .analytics-double-chart {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-container {
+    height: 200px;
+  }
+
+  .analytics-achievements {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .achievement-badge {
+    padding: 14px;
+  }
+
+  .achievement-icon {
+    font-size: 22px;
+  }
+
+  .achievement-name {
+    font-size: 12px;
+  }
+
+  .achievement-desc {
+    font-size: 11px;
+  }
+
+  .ring-container {
+    width: 140px;
+    height: 140px;
+  }
+
+  .ring-value {
+    font-size: 24px;
+  }
+
+  .quiz-history-item {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    padding: 14px;
+  }
+
+  .quiz-history-date {
+    font-size: 11px;
+  }
+
+  .quiz-history-subject {
+    font-size: 14px;
+  }
+
+  .quiz-history-score {
+    font-size: 14px;
+  }
+
+  /* Leaderboard */
+  .leaderboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .leaderboard-header h1 {
+    font-size: 22px;
+  }
+
+  .leaderboard-tabs {
+    width: 100%;
+  }
+
+  .tab {
+    flex: 1;
+    text-align: center;
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .leaderboard-table-wrap {
+    border-radius: var(--radius-md);
+  }
+
+  .leaderboard-header-row,
+  .leaderboard-card {
+    grid-template-columns: 44px 1fr 60px;
+    gap: 8px;
+    padding: 12px;
+  }
+
+  .col-level,
+  .lb-level,
+  .col-xp,
+  .lb-xp,
+  .col-streak,
+  .lb-streak,
+  .col-score,
+  .lb-score,
+  .col-badges,
+  .lb-badges {
+    display: none;
+  }
+
+  .lb-name {
+    font-size: 13px;
+  }
+
+  .lb-avatar {
+    width: 32px;
+    height: 32px;
+  }
+
+  .leaderboard-legend {
+    padding: 14px;
+  }
+
+  .leaderboard-legend p {
+    font-size: 12px;
+  }
+
+  /* Review */
+  .review-shell {
+    max-width: 100%;
+  }
+
+  .review-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .review-progress-track {
+    margin-bottom: 20px;
+  }
+
+  .review-card {
+    padding: 20px;
+  }
+
+  .review-card .review-question {
+    font-size: 15px;
+  }
+
+  .review-choice {
+    padding: 14px;
+    font-size: 13px;
+  }
+
+  .review-choice .letter {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+
+  /* Auth */
+  .auth-card {
+    padding: 24px 18px;
+  }
+
+  .auth-card h2 {
+    font-size: 24px;
+  }
+
+  .hero-text h1 {
+    font-size: 28px;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .landing-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .nav {
+    padding: 10px 14px;
+  }
+
+  /* Modal */
+  .modal-content {
+    padding: 20px;
+    margin: 0 12px;
+  }
+}
+
+/* ============================================
+   Mobile — 480px and below
+   ============================================ */
+@media (max-width: 480px) {
+
+  .dash-main {
+    margin-left: 48px;
+    padding: 16px 10px 28px;
+  }
+
+  .dash-sidebar {
+    width: 48px;
+    padding: 10px 4px;
+  }
+
+  .dash-sidebar .brand {
+    font-size: 11px;
+    margin-bottom: 12px;
+  }
+
+  .dash-sidebar .brand svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .dash-nav a svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .dash-nav a {
+    min-height: 44px;
+    padding: 8px 4px;
+  }
+
+  .dash-nav a.active {
+    width: 32px;
+    height: 32px;
+  }
+
+  .dash-sidebar-foot {
+    padding: 8px;
+  }
+
+  /* Stats cards — 2x2 grid, compact */
+  .dash-stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .stat-card {
+    padding: 14px;
+  }
+
+  .stat-card .stat-value .num {
+    font-size: 18px;
+  }
+
+  .stat-card .stat-value .suffix {
+    font-size: 11px;
+  }
+
+  .stat-card .trend {
+    font-size: 10px;
+  }
+
+  .stat-card .sparkline {
+    height: 28px;
+    margin-top: 10px;
+  }
+
+  /* Analytics cards */
+  .analytics-card .analytics-card-value .num {
+    font-size: 18px;
   }
 
   .analytics-top-cards {
@@ -323,12 +906,8 @@
   }
 
   .section-title {
-    font-size: 18px;
-    margin: 32px 0 12px;
-  }
-
-  .analytics-grid {
-    grid-template-columns: 1fr;
+    font-size: 17px;
+    margin: 28px 0 10px;
   }
 
   .chart-container {
@@ -340,46 +919,112 @@
     grid-template-columns: 1fr;
   }
 
-  /* Quiz */
-  .question-card {
+  .subjects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .subject-card {
     padding: 16px;
   }
 
-  .choice {
-    padding: 10px 12px;
+  .subject-card h4 {
+    font-size: 14px;
   }
 
-  .choice .letter {
-    width: 26px;
-    height: 26px;
-    font-size: 11px;
+  .subject-card p {
+    font-size: 13px;
   }
 
   /* Flashcards */
   .flash-card {
-    height: 280px;
+    height: 260px;
   }
 
   .flash-front .flash-text {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .flash-back .flash-text {
     font-size: 13px;
   }
 
-  /* Profile */
-  .id-band {
+  /* Quiz */
+  .question-card {
     padding: 16px;
   }
 
+  .question-card h3 {
+    font-size: 16px;
+    margin: 0 0 16px;
+  }
+
+  .choice {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .choice .letter {
+    width: 28px;
+    height: 28px;
+    font-size: 11px;
+  }
+
+  .choice span.label-text {
+    font-size: 13px;
+  }
+
+  .submit-btn {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  /* Quiz result */
+  .quiz-result {
+    padding: 28px 16px;
+  }
+
+  .quiz-result h1 {
+    font-size: 20px;
+  }
+
+  .score-ring {
+    width: 100px;
+    height: 100px;
+  }
+
+  .score-pct {
+    font-size: 24px;
+  }
+
+  .score-fraction {
+    font-size: 20px;
+  }
+
+  .score-label {
+    font-size: 12px;
+  }
+
+  /* Profile */
+  .id-band {
+    padding: 16px;
+    gap: 12px;
+  }
+
   .id-photo-frame {
-    width: 60px;
-    height: 60px;
+    width: 56px;
+    height: 56px;
+  }
+
+  .id-info h1 {
+    font-size: 20px;
+  }
+
+  .id-info p {
+    font-size: 12px;
   }
 
   .vital-num {
-    font-size: 22px;
+    font-size: 18px;
   }
 
   /* Achievements */
@@ -389,55 +1034,92 @@
 
   /* Auth card */
   .auth-card {
-    padding: 22px 16px;
+    padding: 20px 14px;
   }
 
   .auth-card h2 {
-    font-size: 26px;
+    font-size: 22px;
   }
 
-  /* Landing hero */
   .hero-text h1 {
-    font-size: 28px;
+    font-size: 24px;
   }
 
-  .hero-actions {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .hero-actions .btn {
-    width: 100%;
-    justify-content: center;
-  }
-
-  /* Landing stats */
   .landing-stats {
     grid-template-columns: 1fr 1fr;
   }
 
-  /* Footer */
   .nav {
     padding: 10px 14px;
   }
 
-  /* Quiz history */
-  .quiz-history-item {
-    padding: 10px 12px;
-  }
-
   /* Modal */
   .modal-content {
-    padding: 22px;
-    margin: 0 12px;
+    padding: 18px;
+    margin: 0 10px;
   }
 }
 
-/* Small mobile — 360px and below */
+/* ============================================
+   Small mobile — 360px and below
+   ============================================ */
 @media (max-width: 360px) {
+
+  .dash-main {
+    margin-left: 44px;
+    padding: 12px 8px 24px;
+  }
+
+  .dash-sidebar {
+    width: 44px;
+    padding: 8px 4px;
+  }
+
+  .dash-sidebar .brand {
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+
+  .dash-sidebar .brand svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .dash-nav a svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .dash-nav a {
+    min-height: 40px;
+    padding: 6px 2px;
+  }
+
+  .dash-nav a.active {
+    width: 28px;
+    height: 28px;
+  }
+
+  .dash-sidebar-foot {
+    padding: 6px;
+  }
+
+  /* Stats — single column if very narrow */
+  .dash-stats {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .stat-card .stat-value .num {
+    font-size: 18px;
+  }
 
   .analytics-top-cards {
     grid-template-columns: 1fr;
+  }
+
+  .analytics-card .analytics-card-value .num {
+    font-size: 18px;
   }
 
   .analytics-achievements {
@@ -448,23 +1130,129 @@
     grid-template-columns: 1fr;
   }
 
-  .dash-stats {
-    grid-template-columns: 1fr 1fr;
+  .flash-card {
+    height: 240px;
+  }
+
+  .quiz-shell h1 {
+    font-size: 20px;
+  }
+
+  .question-card {
+    padding: 14px;
+  }
+
+  .question-card h3 {
+    font-size: 15px;
+  }
+
+  .choice {
+    padding: 10px;
+  }
+
+  .choice .letter {
+    width: 26px;
+    height: 26px;
+    font-size: 10px;
+  }
+
+  .choice span.label-text {
+    font-size: 12px;
+  }
+
+  .id-info h1 {
+    font-size: 18px;
+  }
+
+  .progression-strip {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .xp-bar {
+    width: 100%;
   }
 }
 
-/* Large screens — 1400px and above */
-@media (min-width: 1400px) {
+/* ============================================
+   Safe area insets for notched phones
+   ============================================ */
+@supports (padding-top: env(safe-area-inset-top)) {
+  .dash-sidebar {
+    padding-top: calc(16px + env(safe-area-inset-top));
+    padding-bottom: calc(16px + env(safe-area-inset-bottom));
+  }
 
   .dash-main {
-    max-width: 1280px;
+    padding-bottom: calc(60px + env(safe-area-inset-bottom));
   }
 
-  .dash-stats {
-    grid-template-columns: repeat(4, 1fr);
+  .dash-sidebar-bottom {
+    margin-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* ============================================
+   Prevent horizontal overflow on all pages
+   ============================================ */
+.dash-body,
+.dash-main,
+.quiz-shell,
+.review-shell,
+.flash-shell,
+.profile-shell,
+.leaderboard-shell {
+  overflow-x: hidden;
+}
+
+/* ============================================
+   Touch optimization — remove tap highlights
+   ============================================ */
+.dash-nav a,
+.btn,
+.choice,
+.review-choice,
+.icon-btn,
+.tab {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* ============================================
+   Landscape mobile — 480px height and below
+   ============================================ */
+@media (max-width: 768px) and (max-height: 480px) {
+  .dash-sidebar {
+    padding: 8px 6px;
   }
 
-  .subjects-grid {
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  .dash-sidebar .brand {
+    margin-bottom: 12px;
+  }
+
+  .dash-nav a {
+    min-height: 36px;
+    padding: 6px 8px;
+  }
+
+  .dash-main {
+    padding: 16px 14px 24px;
+  }
+
+  .flash-card {
+    height: 220px;
+  }
+
+  .quiz-result {
+    padding: 24px 16px;
+  }
+
+  .score-ring {
+    width: 90px;
+    height: 90px;
+  }
+
+  .score-pct {
+    font-size: 22px;
   }
 }

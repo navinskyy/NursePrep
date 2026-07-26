@@ -210,6 +210,17 @@ input, select, textarea { font-family: inherit; }
   transform: scale(0.97);
 }
 
+/* Ensure minimum touch target size for nav links */
+.dash-nav a {
+  min-height: 44px;
+}
+
+.dash-nav a svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
 .dash-nav {
   position: relative;
 }
@@ -238,6 +249,55 @@ input, select, textarea { font-family: inherit; }
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* ============================================
+   Mobile optimizations
+   ============================================ */
+
+/* Prevent horizontal overflow */
+html {
+  overflow-x: hidden;
+}
+
+/* Remove tap highlight on interactive elements */
+a, button, .choice, .review-choice, .icon-btn, .tab {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Improve touch response */
+a, button, .choice, .review-choice {
+  touch-action: manipulation;
+}
+
+/* Ensure buttons have minimum touch target */
+.btn {
+  min-height: 44px;
+  justify-content: center;
+}
+
+/* Select elements need native touch handling */
+select {
+  touch-action: manipulation;
+}
+
+/* Prevent text selection on UI elements */
+.dash-nav a,
+.btn,
+.icon-btn,
+.tab {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent zoom on input focus (iOS) */
+input, select, textarea {
+  font-size: 16px;
 }
 
 .review-badge {

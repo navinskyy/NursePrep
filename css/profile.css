@@ -107,6 +107,20 @@
   transform: scale(1.06);
 }
 
+@media (max-width: 600px) {
+  .upload-btn {
+    width: 36px;
+    height: 36px;
+    right: -4px;
+    bottom: -4px;
+  }
+
+  .upload-btn svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
 .id-info {
   flex: 1;
   min-width: 0;

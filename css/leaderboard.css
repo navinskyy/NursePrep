@@ -227,3 +227,56 @@
     display: none;
   }
 }
+
+@media (max-width: 600px) {
+  .leaderboard-header h1 {
+    font-size: 20px;
+  }
+
+  .leaderboard-header-row,
+  .leaderboard-card {
+    grid-template-columns: 40px 1fr 60px;
+    gap: 6px;
+    padding: 10px;
+  }
+
+  .col-level,
+  .lb-level,
+  .col-xp,
+  .lb-xp {
+    display: none;
+  }
+
+  .lb-name {
+    font-size: 12px;
+  }
+
+  .lb-avatar {
+    width: 28px;
+    height: 28px;
+  }
+
+  .tab {
+    padding: 10px 12px;
+    font-size: 12px;
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 480px) {
+  .leaderboard-header-row,
+  .leaderboard-card {
+    grid-template-columns: 36px 1fr;
+    gap: 6px;
+    padding: 10px;
+  }
+
+  .col-rank,
+  .lb-rank {
+    font-size: 12px;
+  }
+
+  .lb-name {
+    font-size: 11px;
+  }
+}
