@@ -147,7 +147,8 @@ const DEFAULT_PROFILE = {
   flashcardsTodayDate: null,
   goalCompletedDates: [],
   badges: [],
-  lastActionTimestamps: {}
+  lastActionTimestamps: {},
+  userProgress: {}
 };
 
 // ============================================
@@ -398,6 +399,14 @@ export async function recordQuizResult(uid, { subject, total, correct }) {
   await setDoc(ref, updates, { merge: true });
 
   const updated = { ...data, ...updates };
+
+  await recordQuizAttempt(uid, subject, {
+    total,
+    correct,
+    scorePct,
+    completedAt: new Date()
+  });
+
   await updateAverageScore(uid, scorePct, total);
   await awardXP(uid, "quizComplete");
   if (scorePct >= 80) await awardXP(uid, "scoreBonus80");
@@ -406,6 +415,28 @@ export async function recordQuizResult(uid, { subject, total, correct }) {
   await checkAchievements(uid, updated);
 
   return updated;
+}
+
+async function recordQuizAttempt(uid, quizId, { total, correct, scorePct, completedAt }) {
+  const progressRef = doc(db, "userProgress", uid, "quizzes", quizId);
+  const snap = await getDoc(progressRef);
+
+  const prev = snap.exists() ? snap.data() : {};
+  const attempts = (prev.attempts || 0) + 1;
+  const prevBest = prev.bestScore || 0;
+  const bestScore = Math.max(prevBest, scorePct);
+  const completed = scorePct === 100 || total === correct;
+
+  await setDoc(progressRef, {
+    attempts,
+    bestScore,
+    completed,
+    correctAnswers: (prev.correctAnswers || 0) + correct,
+    totalQuestions: (prev.totalQuestions || 0) + total,
+    lastAttempt: completedAt,
+    lastAnsweredAt: completedAt,
+    updatedAt: completedAt
+  });
 }
 
 // ============================================

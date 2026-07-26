@@ -96,3 +96,35 @@ export function percentage(value, total) {
     return Math.round((value / total) * 100);
 
 }
+
+// ======================================
+// QUESTION BANK CACHE
+// ======================================
+
+let _questionBank = null;
+
+export async function getQuestionBank() {
+    if (_questionBank) return _questionBank;
+    try {
+        const res = await fetch("./data/quiz.json");
+        _questionBank = await res.json();
+    } catch (e) {
+        console.error("Failed to load question bank:", e);
+        _questionBank = {};
+    }
+    return _questionBank;
+}
+
+export function getAvailableQuestionCount(quiz, bank) {
+    if (!bank) return quiz.itemCount || 0;
+    if (quiz.subjectKey && Array.isArray(bank[quiz.subjectKey])) {
+        return bank[quiz.subjectKey].length;
+    }
+    let total = 0;
+    for (const key of Object.keys(bank)) {
+        if (Array.isArray(bank[key])) {
+            total += bank[key].length;
+        }
+    }
+    return total;
+}

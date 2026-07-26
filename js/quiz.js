@@ -5,6 +5,8 @@ import { recordActivity } from "../js/activity.js";
 import { recordQuizResult } from "../js/userProfile.js";
 
 import {
+    getQuestionBank,
+    getAvailableQuestionCount,
     pad,
     getSubjectFromURL
 } from "../utils/utils.js";
@@ -36,11 +38,12 @@ const SUBJECT_NAMES = {
 const LETTERS = ["A", "B", "C", "D", "E", "F"];
 
 let bank = {};            // full JSON bank, fetched once
-let questions = [];       // active subject's questions
+let questions = [];       // active quiz's questions
 let currentQuestion = 0;
 let score = 0;
-let answers = [];         // stores selected index per question, resets per subject
+let answers = [];         // stores selected index per question, resets per quiz
 let currentSubject = getSubjectFromURL("fundamentals");
+let currentQuizId = "";
 
 // ELEMENTS
 const countEl       = document.getElementById("quizCount");
@@ -55,8 +58,36 @@ const shellEl       = document.getElementById("quizShell");
 const subjectTitle  = document.getElementById("subjectTitle");
 
 // ======================================
+// HELPERS
+// ======================================
+
+function getQuizIdFromURL() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get("quizId") || "";
+}
+
+async function loadCatalog() {
+    try {
+        const res = await fetch("./data/quiz-catalog.json");
+        return await res.json();
+    } catch (err) {
+        console.error("Failed to load quiz catalog:", err);
+        return { categories: [] };
+    }
+}
+
+function findQuizInCatalog(catalog, quizId) {
+    for (const cat of catalog.categories || []) {
+        const quiz = (cat.quizzes || []).find(q => q.quizId === quizId);
+        if (quiz) return quiz;
+    }
+    return null;
+}
+
+// ======================================
 // RENDER
 // ======================================
+
 function renderChoices(q, selectedIndex) {
   choicesEl.innerHTML = "";
   q.choices.forEach((text, index) => {
@@ -94,11 +125,16 @@ function loadQuestion(index) {
 
 
 function showEmptyState() {
-  shellEl.innerHTML = `<p class="quiz-warning show">No questions found for this subject yet. Check back soon!</p>`;
+  shellEl.innerHTML = `<p class="quiz-warning show">No questions found for this quiz yet. Check back soon!</p>`;
 }
 
-function loadSubject(subjectKey) {
+async function loadQuizBank() {
+  bank = await getQuestionBank();
+}
+
+async function loadSubject(subjectKey) {
   currentSubject = subjectKey;
+  currentQuizId = "";
   subjectTitle.textContent =
     SUBJECT_NAMES[subjectKey];
   currentQuestion = 0;
@@ -106,9 +142,9 @@ function loadSubject(subjectKey) {
   questions = bank[subjectKey] || [];
   answers = new Array(questions.length).fill(null);
 
-  // reflect in URL without reloading the page
   const url = new URL(window.location);
   url.searchParams.set("subject", subjectKey);
+  url.searchParams.delete("quizId");
   window.history.replaceState(null, "", url);
 
   if (!questions.length) {
@@ -117,6 +153,71 @@ function loadSubject(subjectKey) {
   }
 
   loadQuestion(currentQuestion);
+}
+
+async function loadQuizById(quizId) {
+    currentQuizId = quizId;
+    currentSubject = "";
+    currentQuestion = 0;
+    score = 0;
+    questions = [];
+    answers = [];
+
+    const catalog = await loadCatalog();
+    const quizMeta = findQuizInCatalog(catalog, quizId);
+    const allData = await getQuestionBank();
+    const availableCount = quizMeta ? getAvailableQuestionCount(quizMeta, allData) : 0;
+    const displayCount = quizMeta ? Math.min(quizMeta.itemCount || availableCount, availableCount) : availableCount;
+
+    if (quizMeta) {
+        subjectTitle.textContent = `${quizMeta.title} (${displayCount} items)`;
+    } else {
+        subjectTitle.textContent = "Quiz";
+    }
+
+    const url = new URL(window.location);
+    url.searchParams.set("quizId", quizId);
+    url.searchParams.delete("subject");
+    window.history.replaceState(null, "", url);
+
+    try {
+        let matchedQuestions = [];
+        if (quizMeta && quizMeta.subjectKey && Array.isArray(allData[quizMeta.subjectKey])) {
+            const qs = allData[quizMeta.subjectKey];
+            matchedQuestions = qs.map((q, idx) => ({
+                ...q,
+                _subjectKey: quizMeta.subjectKey,
+                _originalIndex: idx
+            }));
+        } else if (allData) {
+            for (const [subjectKey, qs] of Object.entries(allData)) {
+                if (!Array.isArray(qs)) continue;
+                const mapped = qs.map((q, idx) => ({
+                    ...q,
+                    _subjectKey: subjectKey,
+                    _originalIndex: idx
+                }));
+                matchedQuestions = matchedQuestions.concat(mapped);
+            }
+        }
+
+        if (matchedQuestions.length > 0) {
+            const shuffled = matchedQuestions.sort(() => Math.random() - 0.5);
+            const count = Math.min(quizMeta ? quizMeta.itemCount || displayCount : displayCount, matchedQuestions.length);
+            questions = shuffled.slice(0, count);
+        }
+    } catch (err) {
+        console.error("Failed to load questions:", err);
+    }
+
+    answers = new Array(questions.length).fill(null);
+
+    if (!questions.length) {
+        showEmptyState();
+        return;
+    }
+
+    loadQuestion(currentQuestion);
 }
 
 // ======================================
@@ -191,7 +292,7 @@ async function showResult() {
         }
     });
 
-    console.log("[quiz] mistakes found:", mistakes.length, "subject:", currentSubject);
+    console.log("[quiz] mistakes found:", mistakes.length, "subject:", currentSubject, "quizId:", currentQuizId);
 
     const user = auth.currentUser;
 
@@ -206,8 +307,9 @@ async function showResult() {
 
             if (mistakes.length > 0) {
                 try {
-                    console.log("[quiz] saving", mistakes.length, "mistakes for", currentSubject);
-                    await saveWrongAnswers(currentSubject, mistakes);
+                    const subjectKey = currentSubject || currentQuizId || "unknown";
+                    console.log("[quiz] saving", mistakes.length, "mistakes for", subjectKey);
+                    await saveWrongAnswers(subjectKey, mistakes);
                     console.log("[quiz] saveWrongAnswers succeeded");
                 } catch (err) {
                     console.error("[quiz] Failed to save wrong answers:", err);
@@ -216,8 +318,10 @@ async function showResult() {
 
             const answeredThisQuiz = answers.filter(answer => answer !== null).length;
 
+            const subjectKey = currentSubject || currentQuizId || "unknown";
+
             await recordQuizResult(user.uid, {
-                subject: currentSubject,
+                subject: subjectKey,
                 total: total,
                 correct: score
             });
@@ -226,17 +330,17 @@ async function showResult() {
 
                 type: "quiz",
 
-                subject: currentSubject,
+                subject: subjectKey,
 
-                subjectKey: currentSubject,
+                subjectKey: subjectKey,
 
-                label: `${currentSubject} Quiz`,
+                label: `${subjectKey} Quiz`,
 
                 detail: `${score}/${total} correct`,
 
                 score: pct,
 
-                path: `quiz.html?subject=${currentSubject}`,
+                path: `quiz.html?quizId=${currentQuizId || subjectKey}`,
 
                 questionsCount: answeredThisQuiz
 
@@ -308,7 +412,7 @@ async function showResult() {
 
                 ${mistakes.length > 0 ? `
                 <a
-                    href="review.html?subject=${encodeURIComponent(currentSubject)}"
+                    href="review.html?subject=${encodeURIComponent(currentSubject || currentQuizId)}"
                     class="btn btn-primary review-mistakes-btn">
 
                     Review ${mistakes.length} Mistake${mistakes.length > 1 ? "s" : ""}
@@ -333,14 +437,17 @@ async function showResult() {
 // LOAD JSON (fetched once, cached in `bank`)
 // ======================================
 async function loadQuiz() {
-  try {
-    const res = await fetch("./data/quiz.json");
-    bank = await res.json();
+  await loadQuizBank();
 
-    loadSubject(currentSubject);    
-  } catch (err) {
-    console.error("Failed to load quiz data:", err);
-    showEmptyState();
+  const quizId = getQuizIdFromURL();
+  const subject = getSubjectFromURL();
+
+  if (quizId) {
+      await loadQuizById(quizId);
+  } else if (subject) {
+      await loadSubject(subject);
+  } else {
+      await loadSubject("fundamentals");
   }
 }
 

@@ -1,232 +1,153 @@
+import { auth, db } from "../firebase/firebase.js";
+import { doc, getDoc } from "firebase/firestore";
+import { getTotalWrongAnswerCount } from "../services/wrongAnswerService.js";
 
-import {
-    auth,
-    db
-} from "../firebase/firebase.js";
-
-import {
-    doc,
-    getDoc
-} from "firebase/firestore";
-
-const ICONS = {
-
-    fundamentals: `
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <rect x="4" y="4" width="16" height="16" rx="2"/>
-        </svg>
-    `,
-
-    medSurg: `
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <path d="M2 12H7L9.5 4L14.5 20L17 12H22"
-                stroke-linecap="round"
-                stroke-linejoin="round"/>
-        </svg>
-    `,
-
-    maternal: `
-        <svg width="20" height="20" viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="1.8">
-
-            <circle cx="12" cy="6" r="3"/>
-
-            <path
-                d="M8 21C8 15 9.5 12 12 12C14.5 12 16 15 16 21"
-                stroke-linecap="round"/>
-
-        </svg>
-    `,
-
-    pediatric: `
-        <svg width="20" height="20" viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="1.8">
-
-            <circle cx="12" cy="8" r="3"/>
-
-            <path
-                d="M6 20C6 16.5 8.5 15 12 15C15.5 15 18 16.5 18 20"/>
-
-        </svg>
-    `,
-
-    psychiatric: `
-        <svg width="20" height="20" viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="1.8">
-
-            <circle cx="12" cy="12" r="8"/>
-
-            <path
-                d="M12 8V12L15 14"
-                stroke-linecap="round"/>
-
-        </svg>
-    `,
-
-    community: `
-        <svg width="20" height="20" viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="1.8">
-
-            <circle cx="12" cy="12" r="9"/>
-
-            <path d="M3 12H21"/>
-
-            <path
-                d="M12 3C14.5 6 14.5 18 12 21C9.5 18 9.5 6 12 3Z"/>
-
-        </svg>
-    `,
-
-    pharma: `
-        <svg width="20" height="20" viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="1.8">
-
-            <rect x="4" y="5" width="12" height="16" rx="2"/>
-
-            <rect x="8" y="3" width="12" height="16" rx="2"/>
-
-        </svg>
-    `,
-
-    leadership: `
-        <svg width="20" height="20" viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="1.8">
-
-            <circle cx="9" cy="8" r="3"/>
-
-            <path
-                d="M3 20C3 16.5 5.5 15 9 15C12.5 15 15 16.5 15 20"/>
-
-            <path d="M16 15C19 15 21 16.5 21 19.5"/>
-
-        </svg>
-    `
-
-};
-
-const SUBJECT_NAMES = {
-
-    fundamentals: "Fundamentals of Nursing",
-    medSurg: "Medical-Surgical Nursing",
-    maternal: "Maternal Nursing",
-    pediatric: "Pediatric Nursing",
-    psychiatric: "Psychiatric Nursing",
-    community: "Community Health Nursing",
-    pharma: "Pharmacology",
-    leadership: "Leadership & Management"
-
-};
+import { getQuestionBank, getAvailableQuestionCount } from "../utils/utils.js";
 
 const container = document.getElementById("subjectsGrid");
+const sidebarStreak = document.getElementById("sidebarStreak");
+const reviewBadge = document.getElementById("reviewBadge");
 
-async function loadSubjects() {
+let catalog = { categories: [] };
+let userProgress = {};
+let questionBank = null;
 
-    // Load quiz.json
-    const response = await fetch("/data/quiz.json");
-
-    if (!response.ok) {
-        console.error("Failed to load quiz.json");
-        return;
-    }
-
-    const quizData = await response.json();
-    console.log("Quiz Data:", quizData);
-
-    const user = auth.currentUser;
-
-    if (!user) return;
-
-    const snap = await getDoc(
-        doc(db, "users", user.uid)
-    );
-
-    const data = snap.data() || {};
-    if (sidebarStreak) {
-    sidebarStreak.textContent = `${data.streak || 0} days`;
-}
-    const subjectProgress = data.subjectProgress || {};
-
-    container.innerHTML = "";
-
-    Object.keys(quizData).forEach((key, index) => {
-
-        const stats = subjectProgress[key] || {
-            answered: 0,
-            correct: 0
-        };
-
-        const progress =
-            stats.answered > 0
-                ? Math.round((stats.correct / stats.answered) * 100)
-                : 0;
-
-        const questionCount = quizData[key].length;
-
-        const notStarted = stats.answered === 0;
-
-        const progressLabel = notStarted
-            ? "Not started"
-            : `${progress}%`;
-
-        const card = document.createElement("div");
-
-        card.className = "subject-card";
-        card.style.setProperty("--delay", `${index * 0.07}s`);
-
-        card.innerHTML = `
-            <div class="subject-top">
-                <div class="subject-icon">
-                    ${ICONS[key]}
-                </div>
-
-                <div class="subject-progress ${notStarted ? "not-started" : ""}">
-                    ${progressLabel}
-                </div>
-            </div>
-
-            <h3>${SUBJECT_NAMES[key]}</h3>
-
-            <p>${questionCount} questions available</p>
-
-            <div class="progress-track">
-                <div class="progress-fill" style="--progress:${progress}%"></div>
-            </div>
-
-            <div class="subject-actions">
-                <a href="quiz.html?subject=${key}" class="btn btn-primary">
-                    Start Quiz
-                </a>
-
-                <a href="flashcards.html?subject=${key}" class="btn btn-secondary">
-                    Flashcards
-                </a>
-            </div>
-        `;
-
-        container.appendChild(card);
-
-    });
-
+async function loadCatalog() {
+  try {
+    const res = await fetch("./data/quiz-catalog.json");
+    catalog = await res.json();
+  } catch (err) {
+    console.error("Failed to load quiz catalog:", err);
+    catalog = { categories: [] };
+  }
 }
 
-auth.onAuthStateChanged((user) => {
+async function loadUserProgress() {
+  const user = auth.currentUser;
+  if (!user) return;
 
-    if (user) {
-
-        loadSubjects();
-
+  try {
+    const ref = doc(db, "userProgress", user.uid);
+    const snap = await getDoc(ref);
+    if (snap.exists()) {
+      userProgress = snap.data() || {};
     }
+  } catch (err) {
+    console.error("Failed to load user progress:", err);
+  }
+}
 
+function getCategoryStats(category) {
+  const quizzes = category.quizzes || [];
+  let totalItems = 0;
+  let completedCount = 0;
+  let bestScores = [];
+
+  quizzes.forEach(q => {
+    totalItems += questionBank
+      ? Math.min(q.itemCount || Infinity, getAvailableQuestionCount(q, questionBank))
+      : (q.itemCount || 0);
+    const progress = userProgress[q.quizId];
+    if (progress && progress.completed) {
+      completedCount++;
+    }
+    if (progress && typeof progress.bestScore === "number") {
+      bestScores.push(progress.bestScore);
+    }
+  });
+
+  const overallProgress = totalItems > 0 && bestScores.length > 0
+    ? Math.round(bestScores.reduce((a, b) => a + b, 0) / bestScores.length)
+    : 0;
+
+  return {
+    quizCount: quizzes.length,
+    totalItems,
+    completedCount,
+    overallProgress
+  };
+}
+
+function renderCategories() {
+  if (!container) return;
+
+  container.innerHTML = "";
+
+  const sorted = [...catalog.categories].sort((a, b) => (a.order || 0) - (b.order || 0));
+
+  sorted.forEach((category, index) => {
+    const stats = getCategoryStats(category);
+    const card = document.createElement("div");
+    card.className = "subject-card";
+    card.style.setProperty("--delay", `${index * 0.07}s`);
+
+    const progressLabel = stats.completedCount > 0
+      ? `${stats.overallProgress}%`
+      : "Not started";
+
+    const progressClass = stats.completedCount === 0 ? "not-started" : "";
+
+    card.innerHTML = `
+      <div class="subject-top">
+        <div class="subject-icon">
+          <span style="font-size: 20px;">${category.icon || "📋"}</span>
+        </div>
+        <div class="subject-progress ${progressClass}">
+          ${progressLabel}
+        </div>
+      </div>
+
+      <h3>${category.name}</h3>
+      <p>${stats.quizCount} quizzes · ${stats.totalItems} items</p>
+
+      <div class="progress-track">
+        <div class="progress-fill" style="--progress: ${stats.overallProgress}%"></div>
+      </div>
+
+      <div class="subject-actions">
+        <a href="quiz-list.html?category=${encodeURIComponent(category.id)}" class="btn btn-primary">
+          View Quizzes
+        </a>
+      </div>
+    `;
+
+    container.appendChild(card);
+  });
+}
+
+async function init() {
+  questionBank = await getQuestionBank();
+  await loadCatalog();
+  await loadUserProgress();
+  renderCategories();
+}
+
+auth.onAuthStateChanged(async (user) => {
+  if (!user) {
+    window.location.href = "login.html";
+    return;
+  }
+
+  if (sidebarStreak) {
+    try {
+      const snap = await getDoc(doc(db, "users", user.uid));
+      if (snap.exists()) {
+        sidebarStreak.textContent = `${snap.data().streak || 0} days`;
+      }
+    } catch (err) {
+      console.error("Failed to load streak:", err);
+    }
+  }
+
+  if (reviewBadge) {
+    try {
+      const total = await getTotalWrongAnswerCount();
+      reviewBadge.textContent = total;
+      reviewBadge.style.display = total > 0 ? "inline-flex" : "none";
+    } catch (err) {
+      console.error("Failed to load review badge count:", err);
+    }
+  }
+
+  await init();
 });

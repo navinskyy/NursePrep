@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" href="/favicon.png">
-<title>Subjects | NursePrep</title>
+<title>Quizzes | NursePrep</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./css/subjects.css">
@@ -72,16 +72,20 @@
 <main class="dash-main">
   <div class="dash-header">
     <span class="eyebrow">PNLE Review</span>
-    <h1>Subjects</h1>
-    <p>Choose a category to explore quizzes, track progress, and start studying.</p>
+    <h1 id="categoryTitle">Quizzes</h1>
+    <p id="categoryDescription">Select a quiz to begin.</p>
   </div>
 
-  <section class="subjects-grid" id="subjectsGrid"></section>
+  <div class="quiz-list-controls">
+    <input type="text" id="quizSearch" placeholder="Search quizzes..." autocomplete="off">
+  </div>
+
+  <section class="quiz-grid" id="quizGrid"></section>
 </main>
 
 <div class="sidebar-overlay" aria-hidden="true"></div>
 
-<script type="module" src="js/subjects.js"></script>
+<script type="module" src="js/quiz-list.js"></script>
 <script type="module" src="js/sidebar.js"></script>
 </body>
 </html>

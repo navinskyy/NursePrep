@@ -42,7 +42,7 @@ const BADGE_RULES = [
 function renderLeaderboardCard(entry, rank) {
     const badges = BADGE_RULES
         .filter(b => b.condition({ ...entry, rank }))
-        .map(b => `<span class="lb-badge" title="${b.description}">${b.icon}</span>`)
+        .map(b => `<span class="lb-badge" data-badge-tooltip="${b.description}" title="${b.description}">${b.icon}</span>`)
         .join("");
 
     const rankClass = rank === 1 ? "rank-1" : rank === 2 ? "rank-2" : rank === 3 ? "rank-3" : "";

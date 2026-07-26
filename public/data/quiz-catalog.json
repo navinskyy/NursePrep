@@ -1,0 +1,300 @@
+{
+  "categories": [
+    {
+      "id": "pnleSets",
+      "name": "Comprehensive PNLE Sets",
+      "icon": "📚",
+      "description": "Full-length PNLE practice examinations",
+      "order": 1,
+      "quizzes": [
+        {
+          "quizId": "pnle-set1-part1",
+          "title": "PNLE I: Foundation of Professional Nursing Practice",
+          "itemCount": 100,
+          "difficulty": "Hard",
+          "description": "Comprehensive review covering all major nursing topics.",
+          "categoryId": "pnleSets",
+          "subcategoryId": "set1",
+          "order": 1
+        },
+        {
+          "quizId": "pnle-set1-part2",
+          "title": "PNLE II: Community Health Nursing and Care of the Mother and Child",
+          "itemCount": 100,
+          "difficulty": "Hard",
+          "description": "Continuation of PNLE Set 1 with advanced scenarios.",
+          "categoryId": "pnleSets",
+          "subcategoryId": "set1",
+          "order": 2
+        },
+        {
+          "quizId": "pnle-set1-part3",
+          "title": "PNLE III: Care of Clients with Physiologic and Psychosocial Alterations - Part 1",
+          "itemCount": 100,
+          "difficulty": "Hard",
+          "description": "Third segment of PNLE Set 1.",
+          "categoryId": "pnleSets",
+          "subcategoryId": "set1",
+          "order": 3
+        },
+        {
+          "quizId": "pnle-set1-part4",
+          "title": "PNLE IV: Care of Clients with Physiologic and Psychosocial Alterations - Part 2",
+          "itemCount": 100,
+          "difficulty": "Hard",
+          "description": "Fourth segment of PNLE Set 1.",
+          "categoryId": "pnleSets",
+          "subcategoryId": "set1",
+          "order": 4
+        },
+        {
+          "quizId": "pnle-set1-part5",
+          "title": "PNLE V: Care of Clients with Physiologic and Psychosocial Alterations - Part 3",
+          "itemCount": 100,
+          "difficulty": "Hard",
+          "description": "Final segment of PNLE Set 1.",
+          "categoryId": "pnleSets",
+          "subcategoryId": "set1",
+          "order": 5
+        },
+        {
+          "quizId": "pnle-set2",
+          "title": "PNLE Set 2",
+          "itemCount": 250,
+          "difficulty": "Hard",
+          "description": "Complete 250-item PNLE practice set.",
+          "categoryId": "pnleSets",
+          "subcategoryId": "set2",
+          "order": 6
+        },
+        {
+          "quizId": "pnle-set3",
+          "title": "PNLE Set 3",
+          "itemCount": 150,
+          "difficulty": "Medium",
+          "description": "Focused 150-item PNLE practice set.",
+          "categoryId": "pnleSets",
+          "subcategoryId": "set3",
+          "order": 7
+        }
+      ]
+    },
+    {
+      "id": "foundation",
+      "name": "Foundation of Nursing",
+      "icon": "🏥",
+      "description": "Core nursing fundamentals and processes",
+      "order": 2,
+      "quizzes": [
+        {
+          "quizId": "foundation-history",
+          "title": "History of Nursing",
+          "itemCount": 50,
+          "difficulty": "Easy",
+          "description": "Trace the evolution of nursing from Florence Nightingale to modern practice.",
+          "categoryId": "foundation",
+          "subcategoryId": "history",
+          "order": 1
+        },
+        {
+          "quizId": "foundation-infectionControl",
+          "title": "Infection Control",
+          "itemCount": 50,
+          "difficulty": "Medium",
+          "description": "Standard precautions, transmission-based precautions, and asepsis.",
+          "categoryId": "foundation",
+          "subcategoryId": "infectionControl",
+          "order": 2
+        },
+        {
+          "quizId": "foundation-nursingProcess",
+          "title": "Nursing Process",
+          "itemCount": 50,
+          "difficulty": "Medium",
+          "description": "ADPIE: Assessment, Diagnosis, Planning, Implementation, Evaluation.",
+          "categoryId": "foundation",
+          "subcategoryId": "nursingProcess",
+          "order": 3
+        },
+        {
+          "quizId": "foundation-fundamentals",
+          "title": "Fundamentals Exam",
+          "itemCount": 100,
+          "difficulty": "Medium",
+          "description": "Comprehensive fundamentals examination covering vital signs, documentation, and patient care.",
+          "categoryId": "foundation",
+          "subcategoryId": "fundamentals",
+          "subjectKey": "fundamentals",
+          "order": 4
+        }
+      ]
+    },
+    {
+      "id": "maternalChild",
+      "name": "Maternal & Child Nursing",
+      "icon": "👶",
+      "description": "Maternal, newborn, and pediatric nursing care",
+      "order": 3,
+      "quizzes": [
+        {
+          "quizId": "maternal-maternalHealth",
+          "title": "Maternal / Child Health Nursing",
+          "itemCount": 75,
+          "difficulty": "Hard",
+          "description": "Antepartum, intrapartum, postpartum, and newborn care.",
+          "categoryId": "maternalChild",
+          "subcategoryId": "maternal",
+          "subjectKey": "maternal",
+          "order": 1
+        },
+        {
+          "quizId": "maternal-pediatric",
+          "title": "Pediatric Nursing",
+          "itemCount": 75,
+          "difficulty": "Hard",
+          "description": "Growth and development, pediatric disorders, and family-centered care.",
+          "categoryId": "maternalChild",
+          "subcategoryId": "pediatric",
+          "subjectKey": "pediatric",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "id": "community",
+      "name": "Community Health Nursing",
+      "icon": "🌍",
+      "description": "Population-focused nursing and public health",
+      "order": 4,
+      "quizzes": [
+        {
+          "quizId": "community-1",
+          "title": "Community Health — Module 1",
+          "itemCount": 40,
+          "difficulty": "Medium",
+          "description": "Health promotion, disease prevention, and community assessment.",
+          "categoryId": "community",
+          "subcategoryId": "module1",
+          "order": 1
+        },
+        {
+          "quizId": "community-2",
+          "title": "Community Health — Module 2",
+          "itemCount": 40,
+          "difficulty": "Medium",
+          "description": "Environmental health, disaster preparedness, and epidemiology.",
+          "categoryId": "community",
+          "subcategoryId": "module2",
+          "order": 2
+        },
+        {
+          "quizId": "community-3",
+          "title": "Community Health — Module 3",
+          "itemCount": 40,
+          "difficulty": "Medium",
+          "description": "Family health, maternal-child care in the community.",
+          "categoryId": "community",
+          "subcategoryId": "module3",
+          "order": 3
+        },
+        {
+          "quizId": "community-4",
+          "title": "Community Health — Module 4",
+          "itemCount": 40,
+          "difficulty": "Medium",
+          "description": "Community mental health and substance abuse prevention.",
+          "categoryId": "community",
+          "subcategoryId": "module4",
+          "order": 4
+        },
+        {
+          "quizId": "community-5",
+          "title": "Community Health — Module 5",
+          "itemCount": 40,
+          "difficulty": "Medium",
+          "description": "Health care delivery systems and community resources.",
+          "categoryId": "community",
+          "subcategoryId": "module5",
+          "order": 5
+        }
+      ]
+    },
+    {
+      "id": "medSurg",
+      "name": "Medical-Surgical Nursing",
+      "icon": "🩺",
+      "description": "Adult health, disease processes, and surgical care",
+      "order": 5,
+      "quizzes": [
+        {
+          "quizId": "medSurg-1",
+          "title": "Med-Surg — Module 1",
+          "itemCount": 60,
+          "difficulty": "Hard",
+          "description": "Cardiovascular, respiratory, and hematologic disorders.",
+          "categoryId": "medSurg",
+          "subcategoryId": "module1",
+          "order": 1
+        },
+        {
+          "quizId": "medSurg-2",
+          "title": "Med-Surg — Module 2",
+          "itemCount": 60,
+          "difficulty": "Hard",
+          "description": "Neurological, sensory, and integumentary disorders.",
+          "categoryId": "medSurg",
+          "subcategoryId": "module2",
+          "order": 2
+        },
+        {
+          "quizId": "medSurg-3",
+          "title": "Med-Surg — Module 3",
+          "itemCount": 60,
+          "difficulty": "Hard",
+          "description": "Gastrointestinal, urinary, and renal disorders.",
+          "categoryId": "medSurg",
+          "subcategoryId": "module3",
+          "order": 3
+        },
+        {
+          "quizId": "medSurg-4",
+          "title": "Med-Surg — Module 4",
+          "itemCount": 60,
+          "difficulty": "Hard",
+          "description": "Endocrine, musculoskeletal, and oncologic disorders.",
+          "categoryId": "medSurg",
+          "subcategoryId": "module4",
+          "order": 4
+        }
+      ]
+    },
+    {
+      "id": "psychiatric",
+      "name": "Psychiatric Nursing",
+      "icon": "🧠",
+      "description": "Mental health assessment, disorders, and therapeutic communication",
+      "order": 6,
+      "quizzes": [
+        {
+          "quizId": "psychiatric-1",
+          "title": "Psychiatric Nursing — Exam 1",
+          "itemCount": 50,
+          "difficulty": "Medium",
+          "description": "Therapeutic communication, mental health assessment, and common psychiatric disorders.",
+          "categoryId": "psychiatric",
+          "subcategoryId": "exam1",
+          "subjectKey": "psychiatric",
+          "order": 1
+        }
+      ]
+    },
+    {
+      "id": "allTopics",
+      "name": "All Topics",
+      "icon": "📋",
+      "description": "Master view of all available quizzes across every category",
+      "order": 7,
+      "quizzes": []
+    }
+  ]
+}
