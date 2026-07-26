@@ -6,6 +6,52 @@ import { getTotalWrongAnswerCount } from "../services/wrongAnswerService.js";
 const sidebarStreak = document.getElementById("sidebarStreak");
 const reviewBadge = document.getElementById("reviewBadge");
 
+function initMobileMenu() {
+    const toggle = document.querySelector(".menu-toggle");
+    const sidebar = document.querySelector(".dash-sidebar");
+    const overlay = document.querySelector(".sidebar-overlay");
+
+    if (!toggle || !sidebar) return;
+
+    function openMenu() {
+        sidebar.classList.add("is-open");
+        if (overlay) overlay.classList.add("show");
+        document.body.style.overflow = "hidden";
+    }
+
+    function closeMenu() {
+        sidebar.classList.remove("is-open");
+        if (overlay) overlay.classList.remove("show");
+        document.body.style.overflow = "";
+    }
+
+    toggle.addEventListener("click", () => {
+        if (sidebar.classList.contains("is-open")) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+    });
+
+    if (overlay) {
+        overlay.addEventListener("click", closeMenu);
+    }
+
+    sidebar.querySelectorAll(".dash-nav a").forEach(link => {
+        link.addEventListener("click", () => {
+            if (window.innerWidth <= 768) {
+                closeMenu();
+            }
+        });
+    });
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && sidebar.classList.contains("is-open")) {
+            closeMenu();
+        }
+    });
+}
+
 function initNavIndicator() {
     const nav = document.querySelector(".dash-nav");
     if (!nav) return;
@@ -75,6 +121,7 @@ auth.onAuthStateChanged(async (user) => {
     }
 
     initNavIndicator();
+    initMobileMenu();
     animatePageEnter();
 
     if (sidebarStreak) {
