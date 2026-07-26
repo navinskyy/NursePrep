@@ -544,3 +544,141 @@ font-size:32px;
 }
 
 }
+
+/* ==========================================
+   Mobile overrides for register page
+   ========================================== */
+
+@media (max-width: 600px) {
+  .auth-main {
+    padding: 24px 16px;
+  }
+
+  .auth-card {
+    padding: 24px 18px;
+  }
+
+  .auth-card h2 {
+    font-size: 24px;
+  }
+
+  .auth-card > p {
+    font-size: 13.5px;
+    margin-bottom: 24px;
+  }
+
+  .field {
+    margin-bottom: 16px;
+  }
+
+  .field label {
+    font-size: 12.5px;
+    margin-bottom: 6px;
+  }
+
+  .field input {
+    height: 48px;
+    padding: 0 14px;
+    font-size: 14px;
+  }
+
+  .auth-submit {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .divider {
+    margin: 18px 0;
+  }
+
+  .bottom-text {
+    font-size: 12.5px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-main {
+    padding: 20px 12px;
+  }
+
+  .auth-card {
+    padding: 20px 14px;
+  }
+
+  .auth-card h2 {
+    font-size: 22px;
+  }
+
+  .auth-card > p {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .field {
+    margin-bottom: 14px;
+  }
+
+  .field input {
+    height: 46px;
+    padding: 0 12px;
+    font-size: 13px;
+  }
+
+  .auth-submit {
+    padding: 11px;
+    font-size: 13px;
+  }
+
+  .divider {
+    margin: 16px 0;
+  }
+
+  .bottom-text {
+    font-size: 12px;
+    margin-top: 18px;
+  }
+}
+
+@media (max-width: 360px) {
+  .auth-main {
+    padding: 16px 10px;
+  }
+
+  .auth-card {
+    padding: 16px 12px;
+  }
+
+  .auth-card h2 {
+    font-size: 20px;
+  }
+
+  .auth-card > p {
+    font-size: 12px;
+    margin-bottom: 16px;
+  }
+
+  .field {
+    margin-bottom: 12px;
+  }
+
+  .field input {
+    height: 44px;
+    padding: 0 10px;
+    font-size: 12px;
+  }
+
+  .auth-submit {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .divider {
+    margin: 14px 0;
+  }
+
+  .bottom-text {
+    font-size: 11px;
+    margin-top: 16px;
+  }
+}

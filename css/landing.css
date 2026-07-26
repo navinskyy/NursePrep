@@ -67,7 +67,7 @@
 .hero-text h1 {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 50px;
+  font-size: clamp(32px, 5vw, 50px);
   line-height: 1.12;
   margin: 0;
   letter-spacing: -0.01em;
@@ -83,7 +83,7 @@
 
 .hero-text p {
   color: var(--text-mid);
-  font-size: 16.5px;
+  font-size: clamp(14px, 2vw, 16.5px);
   line-height: 1.65;
   margin-top: 20px;
   max-width: 480px;
@@ -146,7 +146,7 @@
 
 .vitals-readout .num {
   font-family: var(--font-mono);
-  font-size: 34px;
+  font-size: clamp(28px, 4vw, 34px);
   font-weight: 600;
   color: var(--pink-300);
 }
@@ -208,7 +208,7 @@
 .features h2 {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 32px;
+  font-size: clamp(26px, 4vw, 32px);
   margin: 0 0 46px;
 }
 
@@ -258,8 +258,8 @@
 }
 
 /* ============================================
-    Landing — About
-    ============================================ */
+     Landing — About
+     ============================================ */
 .about {
   padding: 60px 56px 80px;
   max-width: 720px;
@@ -272,7 +272,7 @@
 .about h2 {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 32px;
+  font-size: clamp(26px, 4vw, 32px);
   margin: 0 0 36px;
 }
 
@@ -286,7 +286,7 @@
 
 .about-content p {
   color: var(--text-mid);
-  font-size: 15.5px;
+  font-size: clamp(14px, 2vw, 15.5px);
   line-height: 1.7;
   margin: 0 0 16px;
   max-width: 600px;
@@ -300,8 +300,8 @@
 }
 
 /* ============================================
-     Landing — Contact
-     ============================================ */
+      Landing — Contact
+      ============================================ */
 .contact {
   text-align: center;
 }
@@ -309,7 +309,7 @@
 .contact h2 {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 36px;
+  font-size: clamp(28px, 4vw, 36px);
   line-height: 1.15;
   margin: 8px 0 18px;
   letter-spacing: -0.01em;
@@ -317,7 +317,7 @@
 
 .contact-intro {
   color: var(--text-mid);
-  font-size: 15.5px;
+  font-size: clamp(14px, 2vw, 15.5px);
   line-height: 1.7;
   max-width: 520px;
   margin: 0 auto 48px;
@@ -516,12 +516,269 @@
 }
 
 /* ============================================
-    Footer
-    ============================================ */
+     Footer
+     ============================================ */
 footer {
   border-top: 1px solid var(--border-soft);
   text-align: center;
   padding: 26px;
   color: var(--text-low);
   font-size: 13.5px;
+}
+
+/* ============================================
+     Landing — Responsive
+     ============================================ */
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 60px 24px 50px;
+    gap: 40px;
+  }
+
+  .hero-text h1 {
+    font-size: clamp(30px, 6vw, 42px);
+  }
+
+  .features {
+    padding: 30px 24px 80px;
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about {
+    padding: 50px 24px 60px;
+  }
+
+  .nav {
+    padding: 14px 20px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 50px 20px 40px;
+    gap: 30px;
+  }
+
+  .hero-text h1 {
+    font-size: clamp(28px, 7vw, 36px);
+  }
+
+  .hero-text p {
+    font-size: 14px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .vitals-card {
+    padding: 20px;
+  }
+
+  .vitals-readout .num {
+    font-size: 28px;
+  }
+
+  .features {
+    padding: 24px 20px 60px;
+  }
+
+  .features h2 {
+    font-size: clamp(24px, 5vw, 28px);
+    margin-bottom: 32px;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .feature-card {
+    padding: 22px 20px;
+  }
+
+  .about {
+    padding: 40px 20px 50px;
+  }
+
+  .about h2 {
+    font-size: clamp(24px, 5vw, 28px);
+    margin-bottom: 28px;
+  }
+
+  .about-lead {
+    font-size: 18px;
+  }
+
+  .contact h2 {
+    font-size: clamp(26px, 5vw, 32px);
+  }
+
+  .contact-intro {
+    font-size: 14px;
+    margin-bottom: 32px;
+  }
+
+  .connect-row {
+    gap: 20px;
+  }
+
+  .nav {
+    padding: 10px 14px;
+  }
+
+  footer {
+    padding: 20px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 40px 16px 30px;
+    gap: 24px;
+  }
+
+  .hero-text h1 {
+    font-size: clamp(26px, 8vw, 32px);
+  }
+
+  .hero-text p {
+    font-size: 13px;
+  }
+
+  .hero-actions {
+    gap: 8px;
+  }
+
+  .vitals-card {
+    padding: 18px;
+  }
+
+  .vitals-card h3 {
+    font-size: 16px;
+  }
+
+  .vitals-readout .num {
+    font-size: 26px;
+  }
+
+  .features {
+    padding: 20px 16px 50px;
+  }
+
+  .features h2 {
+    font-size: clamp(22px, 6vw, 26px);
+    margin-bottom: 24px;
+  }
+
+  .feature-card {
+    padding: 18px 16px;
+  }
+
+  .feature-card h3 {
+    font-size: 16px;
+  }
+
+  .feature-card p {
+    font-size: 13px;
+  }
+
+  .about {
+    padding: 32px 16px 40px;
+  }
+
+  .about h2 {
+    font-size: clamp(22px, 6vw, 26px);
+    margin-bottom: 24px;
+  }
+
+  .about-lead {
+    font-size: 17px;
+  }
+
+  .about-content p {
+    font-size: 13px;
+  }
+
+  .contact h2 {
+    font-size: clamp(24px, 6vw, 28px);
+  }
+
+  .contact-intro {
+    font-size: 13px;
+    margin-bottom: 28px;
+  }
+
+  .connect-row {
+    gap: 16px;
+  }
+
+  .connect-item {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero {
+    padding: 32px 12px 24px;
+    gap: 20px;
+  }
+
+  .hero-text h1 {
+    font-size: clamp(24px, 8vw, 28px);
+  }
+
+  .hero-text p {
+    font-size: 12px;
+  }
+
+  .vitals-card {
+    padding: 14px;
+  }
+
+  .vitals-readout .num {
+    font-size: 24px;
+  }
+
+  .features {
+    padding: 16px 12px 40px;
+  }
+
+  .features h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .feature-card {
+    padding: 16px 14px;
+  }
+
+  .about {
+    padding: 28px 12px 32px;
+  }
+
+  .contact-intro {
+    margin-bottom: 24px;
+  }
+
+  .connect-row {
+    flex-direction: column;
+    gap: 12px;
+  }
 }

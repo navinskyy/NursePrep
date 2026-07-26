@@ -36,6 +36,13 @@
   --radius-sm: 10px;
   --radius-md: 16px;
   --radius-lg: 22px;
+
+  /* Fluid typography base */
+  --fluid-xs: clamp(0.7rem, 0.65rem + 0.25vw, 0.8rem);
+  --fluid-sm: clamp(0.8rem, 0.75rem + 0.25vw, 0.9rem);
+  --fluid-base: clamp(0.9rem, 0.85rem + 0.25vw, 1rem);
+  --fluid-md: clamp(1rem, 0.95rem + 0.25vw, 1.1rem);
+  --fluid-lg: clamp(1.1rem, 1rem + 0.5vw, 1.35rem);
 }
 
 * { box-sizing: border-box; }
@@ -48,7 +55,10 @@
 
 *::-webkit-scrollbar-thumb:hover { background: var(--pink-400); }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  font-size: var(--fluid-base);
+}
 
 body {
   margin: 0;
@@ -56,6 +66,8 @@ body {
   background: var(--bg);
   color: var(--text-hi);
   -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  overflow-x: hidden;
 }
 
 ::selection {

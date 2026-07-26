@@ -366,3 +366,194 @@ to{
 }
 
 }
+
+/* ==========================================
+   Mobile overrides for login page
+   ========================================== */
+
+@media (max-width: 900px) {
+  .auth-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-aside {
+    display: none;
+  }
+
+  .auth-main {
+    padding: 30px 20px;
+  }
+
+  .auth-card {
+    max-width: 100%;
+    padding: 32px 24px;
+  }
+
+  .auth-card h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .auth-main {
+    padding: 24px 16px;
+  }
+
+  .auth-card {
+    padding: 24px 18px;
+  }
+
+  .auth-card h2 {
+    font-size: 24px;
+  }
+
+  .auth-card p {
+    font-size: 13.5px;
+    margin-bottom: 24px;
+  }
+
+  .field {
+    margin-bottom: 16px;
+  }
+
+  .field label {
+    font-size: 12.5px;
+    margin-bottom: 6px;
+  }
+
+  .field-input input {
+    height: 48px;
+    padding: 0 14px;
+    font-size: 14px;
+  }
+
+  .field-input input#password {
+    padding-right: 44px;
+  }
+
+  .auth-row {
+    font-size: 12.5px;
+    margin-bottom: 20px;
+  }
+
+  .auth-submit {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .auth-divider {
+    margin: 18px 0;
+    font-size: 12px;
+  }
+
+  .small-text {
+    font-size: 12.5px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-main {
+    padding: 20px 12px;
+  }
+
+  .auth-card {
+    padding: 20px 14px;
+  }
+
+  .auth-card h2 {
+    font-size: 22px;
+  }
+
+  .auth-card p {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .field {
+    margin-bottom: 14px;
+  }
+
+  .field-input input {
+    height: 46px;
+    padding: 0 12px;
+    font-size: 13px;
+  }
+
+  .field-input input#password {
+    padding-right: 40px;
+  }
+
+  .auth-row {
+    font-size: 12px;
+    margin-bottom: 18px;
+  }
+
+  .auth-submit {
+    padding: 11px;
+    font-size: 13px;
+  }
+
+  .auth-divider {
+    margin: 16px 0;
+    font-size: 11px;
+  }
+
+  .small-text {
+    font-size: 12px;
+    margin-top: 18px;
+  }
+}
+
+@media (max-width: 360px) {
+  .auth-main {
+    padding: 16px 10px;
+  }
+
+  .auth-card {
+    padding: 16px 12px;
+  }
+
+  .auth-card h2 {
+    font-size: 20px;
+  }
+
+  .auth-card p {
+    font-size: 12px;
+    margin-bottom: 16px;
+  }
+
+  .field {
+    margin-bottom: 12px;
+  }
+
+  .field-input input {
+    height: 44px;
+    padding: 0 10px;
+    font-size: 12px;
+  }
+
+  .field-input input#password {
+    padding-right: 36px;
+  }
+
+  .auth-row {
+    font-size: 11px;
+    margin-bottom: 14px;
+  }
+
+  .auth-submit {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .auth-divider {
+    margin: 14px 0;
+    font-size: 11px;
+  }
+
+  .small-text {
+    font-size: 11px;
+    margin-top: 16px;
+  }
+}
