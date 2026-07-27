@@ -21,14 +21,13 @@ import {
 
 // Inlined here (not relying on utils.js's classic-script globals inside this module)
 const SUBJECT_NAMES = {
-  fundamentals: "Fundamentals of Nursing",
-  medSurg:      "Medical-Surgical Nursing",
-  maternal:     "Maternal Nursing",
-  pediatric:    "Pediatric Nursing",
-  psychiatric:  "Psychiatric Nursing",
+  pnleSets:      "Comprehensive PNLE SETS",
+  fundamentals: "Foundation of Nursing",
+  maternal:     "Maternal & Child Nursing",
   community:    "Community Health Nursing",
-  pharma:       "Pharmacology",
-  leadership:   "Leadership & Management",
+  medSurg:      "Medical-Surgical Nursing",
+  psychiatric:  "Psychiatric Nursing",
+  allTopics:    "All Topics",
 };
 
 function pad(n) {

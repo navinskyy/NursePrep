@@ -16,36 +16,33 @@ import {
 import { getAchievementStatus } from "./userProfile.js";
 
 const SUBJECT_KEYS = [
+    "pnleSets",
     "fundamentals",
-    "medSurg",
     "maternal",
-    "pediatric",
-    "psychiatric",
     "community",
-    "pharma",
-    "leadership"
+    "medSurg",
+    "psychiatric",
+    "allTopics"
 ];
 
 const SUBJECT_LABELS = {
-    fundamentals: "Fundamentals",
-    medSurg: "Medical Surgical",
-    maternal: "Maternal",
-    pediatric: "Pediatric",
-    psychiatric: "Psychiatric",
-    community: "Community",
-    pharma: "Pharmacology",
-    leadership: "Leadership"
+    pnleSets: "Comprehensive PNLE SETS",
+    fundamentals: "Foundation of Nursing",
+    maternal: "Maternal & Child Nursing",
+    community: "Community Health Nursing",
+    medSurg: "Medical-Surgical Nursing",
+    psychiatric: "Psychiatric Nursing",
+    allTopics: "All Topics"
 };
 
 const SUBJECT_COLORS = {
+    pnleSets: "#FFD700",
     fundamentals: "#EC6FA0",
-    medSurg: "#7C8CFF",
     maternal: "#FF9F7F",
-    pediatric: "#00C9A7",
-    psychiatric: "#A78BFA",
     community: "#22C55E",
-    pharma: "#38BDF8",
-    leadership: "#FACC15"
+    medSurg: "#7C8CFF",
+    psychiatric: "#A78BFA",
+    allTopics: "#888888"
 };
 
 // ===========================

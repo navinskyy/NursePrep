@@ -223,12 +223,6 @@ async function init() {
   const category = catalog.categories.find(c => c.id === categoryId);
   quizzes = category ? category.quizzes : [];
 
-  if (categoryId === "allTopics") {
-    quizzes = catalog.categories.flatMap(c => c.quizzes || []);
-    if (categoryTitle) categoryTitle.textContent = "All Topics";
-    if (categoryDescription) categoryDescription.textContent = "Master view of every available quiz across all categories.";
-  }
-
   await loadUserProgress();
   initSearch();
   renderQuizzes();

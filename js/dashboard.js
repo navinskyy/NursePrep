@@ -541,14 +541,13 @@ onAuthStateChanged(auth, async (user) => {
 
             const map = {
 
-                "Fundamentals": "fundamentals",
-                "Medical Surgical": "medSurg",
-                "OB": "maternal",
-                "Pediatrics": "pediatric",
-                "Psychiatric": "psychiatric",
-                "Community Health": "community",
-                "Pharmacology": "pharma",
-                "Leadership": "leadership"
+                "Comprehensive PNLE SETS": "pnleSets",
+                "Foundation of Nursing": "fundamentals",
+                "Maternal & Child Nursing": "maternal",
+                "Community Health Nursing": "community",
+                "Medical-Surgical Nursing": "medSurg",
+                "Psychiatric Nursing": "psychiatric",
+                "All Topics": "allTopics"
 
             };
 

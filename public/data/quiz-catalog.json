@@ -2,7 +2,7 @@
   "categories": [
     {
       "id": "pnleSets",
-      "name": "Comprehensive PNLE Sets",
+      "name": "Comprehensive PNLE SETS",
       "icon": "📚",
       "description": "Full-length PNLE practice examinations",
       "order": 1,
@@ -294,7 +294,28 @@
       "icon": "📋",
       "description": "Master view of all available quizzes across every category",
       "order": 7,
-      "quizzes": []
+      "quizzes": [
+        {
+          "quizId": "pnle-exam-1",
+          "title": "PNLE EXAM 1",
+          "itemCount": 100,
+          "difficulty": "Hard",
+          "description": "Comprehensive PNLE practice examination 1 covering all major nursing topics.",
+          "categoryId": "allTopics",
+          "subcategoryId": "exam1",
+          "order": 1
+        },
+        {
+          "quizId": "pnle-exam-2",
+          "title": "PNLE EXAM 2",
+          "itemCount": 100,
+          "difficulty": "Hard",
+          "description": "Comprehensive PNLE practice examination 2 covering all major nursing topics.",
+          "categoryId": "allTopics",
+          "subcategoryId": "exam2",
+          "order": 2
+        }
+      ]
     }
   ]
 }
