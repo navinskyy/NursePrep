@@ -10,8 +10,13 @@
 <link rel="stylesheet" href="./css/quiz.css">
 </head>
 <body class="dash-body">
+  <div class="alarm-bg" aria-hidden="true"></div>
+  <div class="corner-flash corner-tl" aria-hidden="true"></div>
+  <div class="corner-flash corner-tr" aria-hidden="true"></div>
+  <div class="corner-flash corner-bl" aria-hidden="true"></div>
+  <div class="corner-flash corner-br" aria-hidden="true"></div>
 
-<button class="menu-toggle" aria-label="Open navigation menu" type="button">
+  <button class="menu-toggle" aria-label="Open navigation menu" type="button">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <line x1="3" y1="6" x2="21" y2="6"></line>
     <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -69,6 +74,7 @@
 
 <main class="dash-main dash-main-center">
   <div class="quiz-shell" id="quizShell">
+    <div class="quiz-urgency-vignette" id="quizUrgencyVignette" aria-hidden="true"></div>
 
     <div class="quiz-progress-row">
     <div class="subject-picker">
@@ -82,7 +88,19 @@
      </h2>
 
 </div>
-      <span class="quiz-count" id="quizCount">01 / 05</span>
+      <div class="quiz-meta">
+        <div class="quiz-timer-widget" id="quizTimerWidget" aria-live="polite" aria-atomic="true">
+          <div class="quiz-timer-ring-wrap">
+            <svg class="quiz-timer-ring" viewBox="0 0 44 44" aria-hidden="true">
+              <circle class="quiz-timer-ring-bg" cx="22" cy="22" r="19"/>
+              <circle class="quiz-timer-ring-fill" id="quizTimerRing" cx="22" cy="22" r="19"/>
+            </svg>
+            <span class="quiz-timer" id="quizTimer">00:30</span>
+          </div>
+          <span class="quiz-timer-label" id="quizTimerLabel">Time left</span>
+        </div>
+        <span class="quiz-count" id="quizCount">01 / 05</span>
+      </div>
     </div>
     <div class="quiz-progress-track"><span id="quizProgressFill" style="width:0%"></span></div>
 

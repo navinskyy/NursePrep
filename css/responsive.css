@@ -190,8 +190,8 @@
   }
 
   /* Quiz */
-  .quiz-shell h1 {
-    font-size: 24px;
+  .quiz-meta {
+    gap: 8px;
   }
 
   .question-card {
@@ -203,10 +203,10 @@
   }
 
   /* Profile */
-  .id-band {
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
+.id-band {
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
   }
 
   .id-photo-frame {
@@ -477,8 +477,21 @@
     max-width: 100%;
   }
 
-  .quiz-shell h1 {
-    font-size: 22px;
+  .quiz-meta {
+    gap: 8px;
+  }
+
+  .quiz-timer-ring-wrap {
+    width: 46px;
+    height: 46px;
+  }
+
+  .quiz-timer {
+    font-size: 10px;
+  }
+
+  .quiz-timer-widget.timer-critical .quiz-timer {
+    font-size: 11px;
   }
 
   .question-card {
@@ -1268,10 +1281,6 @@
 
   .flash-card {
     height: 240px;
-  }
-
-  .quiz-shell h1 {
-    font-size: 20px;
   }
 
   .question-card {

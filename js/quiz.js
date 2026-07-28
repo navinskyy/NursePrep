@@ -44,6 +44,15 @@ let answers = [];         // stores selected index per question, resets per quiz
 let currentSubject = getSubjectFromURL("fundamentals");
 let currentQuizId = "";
 
+const MIN_QUESTION_SECONDS = 30;
+let timeLeft = MIN_QUESTION_SECONDS;
+let timerInterval = null;
+let timerDeadline = null;
+let urgencyPulseInterval = null;
+let urgencyPulseActive = false;
+const TIMER_RING_CIRC = 2 * Math.PI * 19;
+const ORIGINAL_PAGE_TITLE = document.title;
+
 // ELEMENTS
 const countEl       = document.getElementById("quizCount");
 const progressFill  = document.getElementById("quizProgressFill");
@@ -55,6 +64,241 @@ const prevBtn       = document.getElementById("quizPrev");
 const nextBtn       = document.getElementById("quizNext");
 const shellEl       = document.getElementById("quizShell");
 const subjectTitle  = document.getElementById("subjectTitle");
+const timerEl       = document.getElementById("quizTimer");
+const timerWidgetEl = document.getElementById("quizTimerWidget");
+const timerRingEl   = document.getElementById("quizTimerRing");
+const timerLabelEl  = document.getElementById("quizTimerLabel");
+const questionCard  = shellEl.querySelector(".question-card");
+const cornerFlashes = document.querySelectorAll(".corner-flash");
+
+// ======================================
+// URGENCY AUDIO (Web Audio API)
+// ======================================
+
+let audioCtx = null;
+let audioUnlocked = false;
+
+function ensureAudio() {
+  if (!audioCtx) {
+    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  }
+  if (audioCtx.state === "suspended") {
+    audioCtx.resume();
+  }
+  audioUnlocked = audioCtx.state === "running";
+  return audioCtx;
+}
+
+function unlockAudio() {
+  ensureAudio();
+}
+
+function playTone(freq, duration, volume, type = "sine") {
+  const ctx = ensureAudio();
+  if (!audioUnlocked) return;
+
+  const osc = ctx.createOscillator();
+  const gain = ctx.createGain();
+  osc.type = type;
+  osc.frequency.value = freq;
+  gain.gain.setValueAtTime(volume, ctx.currentTime);
+  gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + duration);
+  osc.connect(gain);
+  gain.connect(ctx.destination);
+  osc.start(ctx.currentTime);
+  osc.stop(ctx.currentTime + duration);
+}
+
+function playTimerTick(secondsLeft) {
+  if (secondsLeft <= 5) {
+    playTone(920, 0.12, 0.35, "square");
+    setTimeout(() => playTone(1100, 0.08, 0.25, "square"), 60);
+  } else if (secondsLeft <= 10) {
+    playTone(740, 0.08, 0.22, "triangle");
+  } else if (secondsLeft <= 20) {
+    playTone(600, 0.06, 0.15, "triangle");
+  } else {
+    playTone(440, 0.05, 0.1, "sine");
+  }
+}
+
+function playTimeoutAlarm() {
+  if (!audioUnlocked) return;
+  [0, 100, 200, 300, 400].forEach((delay) => {
+    setTimeout(() => playTone(880, 0.15, 0.3, "square"), delay);
+  });
+}
+
+function playHeartbeat(intensity) {
+  playTone(180 + intensity * 40, 0.12, 0.08 + intensity * 0.06, "sine");
+}
+
+function startUrgencyPulse() {
+  if (urgencyPulseActive) return;
+  urgencyPulseActive = true;
+  let pulseTick = 0;
+  urgencyPulseInterval = setInterval(() => {
+    if (!timerDeadline || document.hidden) return;
+    pulseTick++;
+    if (timeLeft <= 5) {
+      playHeartbeat(3);
+      if (pulseTick % 2 === 0) playTone(920, 0.06, 0.2, "square");
+    } else if (timeLeft <= 10 && pulseTick % 2 === 0) {
+      playHeartbeat(2);
+    } else if (timeLeft <= 20 && pulseTick % 4 === 0) {
+      playHeartbeat(1);
+    }
+  }, 200);
+}
+
+function stopUrgencyPulse() {
+  if (urgencyPulseInterval) {
+    clearInterval(urgencyPulseInterval);
+    urgencyPulseInterval = null;
+  }
+  urgencyPulseActive = false;
+}
+
+// ======================================
+// TIMER (deadline-based — survives tab switches)
+// ======================================
+
+function getRemainingSeconds() {
+  if (!timerDeadline) return 0;
+  return Math.max(0, Math.ceil((timerDeadline - Date.now()) / 1000));
+}
+
+function getTimerPhase(seconds) {
+  if (seconds <= 5) return "critical";
+  if (seconds <= 10) return "urgent";
+  if (seconds <= 20) return "warning";
+  return "calm";
+}
+
+function updateTimerDisplay(isTick = false) {
+  const mins = Math.floor(timeLeft / 60);
+  const secs = timeLeft % 60;
+  timerEl.textContent = `${String(mins).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
+
+  const phase = getTimerPhase(timeLeft);
+  const phases = ["calm", "warning", "urgent", "critical"];
+  phases.forEach((p) => {
+    timerWidgetEl.classList.toggle(`timer-${p}`, phase === p && p !== "calm");
+  });
+
+  shellEl.classList.toggle("timer-urgent-active", phase === "urgent" || phase === "critical");
+  shellEl.classList.toggle("timer-critical-active", phase === "critical");
+
+  document.body.classList.toggle("timer-critical-active", phase === "critical");
+
+  if (timerRingEl) {
+    const progress = timeLeft / MIN_QUESTION_SECONDS;
+    timerRingEl.style.strokeDashoffset = String(TIMER_RING_CIRC * (1 - progress));
+  }
+
+  if (phase === "critical") {
+    timerLabelEl.textContent = "HURRY";
+  } else if (phase === "urgent") {
+    timerLabelEl.textContent = "Running out";
+  } else if (phase === "warning") {
+    timerLabelEl.textContent = "Time left";
+  } else {
+    timerLabelEl.textContent = "Time left";
+  }
+
+  if (isTick) {
+    timerWidgetEl.classList.add("timer-tick");
+    setTimeout(() => timerWidgetEl.classList.remove("timer-tick"), 150);
+  }
+
+  if (document.hidden && timerDeadline) {
+    const icon = timeLeft <= 5 ? "🚨" : timeLeft <= 10 ? "⚠️" : "⏱";
+    document.title = `${icon} ${timerEl.textContent} — ANSWER NOW | NursePrep`;
+  } else {
+    document.title = ORIGINAL_PAGE_TITLE;
+  }
+
+  if (timeLeft <= 20 && timerDeadline) {
+    startUrgencyPulse();
+  } else {
+    stopUrgencyPulse();
+  }
+}
+
+function tickTimer() {
+  if (!timerDeadline) return;
+
+  const remaining = getRemainingSeconds();
+  if (remaining !== timeLeft) {
+    timeLeft = remaining;
+    updateTimerDisplay(true);
+    playTimerTick(timeLeft);
+  }
+
+  if (timeLeft <= 0) {
+    stopTimer();
+    playTimeoutAlarm();
+    handleTimeout();
+  }
+}
+
+function startTimer() {
+  stopTimer();
+  timeLeft = MIN_QUESTION_SECONDS;
+  timerDeadline = Date.now() + timeLeft * 1000;
+  updateTimerDisplay();
+  timerInterval = setInterval(tickTimer, 200);
+}
+
+function stopTimer() {
+  if (timerInterval) {
+    clearInterval(timerInterval);
+    timerInterval = null;
+  }
+  stopUrgencyPulse();
+  timerDeadline = null;
+  document.title = ORIGINAL_PAGE_TITLE;
+  timerWidgetEl.classList.remove("timer-warning", "timer-urgent", "timer-critical", "timer-tick");
+  shellEl.classList.remove("timer-urgent-active", "timer-critical-active");
+  document.body.classList.remove("timer-critical-active");
+  if (timerRingEl) {
+    timerRingEl.style.strokeDashoffset = "0";
+  }
+  if (timerLabelEl) {
+    timerLabelEl.textContent = "Time left";
+  }
+}
+
+document.addEventListener("visibilitychange", () => {
+  if (!timerDeadline) return;
+  tickTimer();
+  if (timeLeft <= 20) startUrgencyPulse();
+});
+
+document.addEventListener("click", unlockAudio, { once: true });
+document.addEventListener("keydown", unlockAudio, { once: true });
+choicesEl.addEventListener("change", unlockAudio);
+
+function autoSubmitAnswer() {
+  const selected = choicesEl.querySelector("input[name='quiz-choice']:checked");
+  if (!selected) return;
+
+  const answerIndex = Number(selected.value);
+  const alreadyAnswered = answers[currentQuestion] !== null;
+  answers[currentQuestion] = answerIndex;
+  if (!alreadyAnswered && answerIndex === questions[currentQuestion].answer) {
+    score++;
+  }
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = "Answer Submitted";
+  nextBtn.disabled = false;
+}
+
+function handleTimeout() {
+  autoSubmitAnswer();
+  setTimeout(() => goNext(), 600);
+}
 
 // ======================================
 // HELPERS
@@ -120,10 +364,13 @@ function loadQuestion(index) {
       answers[index] !== null
           ? "Answer Submitted"
           : "Submit Answer";
+
+  startTimer();
 }
 
 
 function showEmptyState() {
+  stopTimer();
   shellEl.innerHTML = `<p class="quiz-warning show">No questions found for this quiz yet. Check back soon!</p>`;
 }
 
@@ -232,10 +479,31 @@ function checkAnswer() {
 
   const answerIndex = Number(selected.value);
   const alreadyAnswered = answers[currentQuestion] !== null;
+  const isCorrect = answerIndex === questions[currentQuestion].answer;
 
   answers[currentQuestion] = answerIndex;
-  if (!alreadyAnswered && answerIndex === questions[currentQuestion].answer) {
+  if (!alreadyAnswered && isCorrect) {
     score++;
+  }
+
+  if (!isCorrect && questionCard) {
+    questionCard.classList.remove("shake");
+    void questionCard.offsetWidth;
+    questionCard.classList.add("shake");
+    questionCard.addEventListener("animationend", () => {
+      questionCard.classList.remove("shake");
+    }, { once: true });
+  }
+
+  if (!isCorrect && cornerFlashes.length) {
+    cornerFlashes.forEach((el) => {
+      el.classList.remove("active");
+      void el.offsetWidth;
+      el.classList.add("active");
+      el.addEventListener("animationend", () => {
+        el.classList.remove("active");
+      }, { once: true });
+    });
   }
 
   nextBtn.disabled = false;
@@ -265,6 +533,8 @@ function goNext() {
 }
 
 async function showResult() {
+
+    stopTimer();
 
     const total = questions.length;
 

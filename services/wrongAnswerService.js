@@ -136,3 +136,22 @@ export async function getTotalWrongAnswerCount() {
     const all = await getAllWrongAnswers();
     return Object.values(all).reduce((sum, mistakes) => sum + mistakes.length, 0);
 }
+
+export async function clearAllMistakes() {
+    const ref = getWrongAnswersRef();
+    if (!ref) return;
+
+    const snap = await getDoc(ref);
+    if (!snap.exists()) return;
+
+    const data = snap.data();
+    const cleaned = {};
+    for (const [subject, val] of Object.entries(data)) {
+        if (subject !== "lastUpdated" && val.mistakes) {
+            cleaned[subject] = { mistakes: [], lastUpdated: Date.now() };
+        }
+    }
+
+    await setDoc(ref, cleaned);
+    console.log("[wrongAnswerService] cleared all mistakes");
+}

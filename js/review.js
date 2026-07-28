@@ -17,7 +17,8 @@ import {
     removeMistake,
     markMistakePracticed,
     getWrongAnswerCounts,
-    getTotalWrongAnswerCount
+    getTotalWrongAnswerCount,
+    clearAllMistakes
 } from "../services/wrongAnswerService.js";
 
 import {
@@ -263,7 +264,8 @@ window._removeCurrentMistake = async function() {
     }
 };
 
-function showCompletion() {
+async function showCompletion() {
+    await clearAllMistakes();
     reviewContent.innerHTML = `
         <div class="review-complete">
             <span class="eyebrow">Session Complete</span>
