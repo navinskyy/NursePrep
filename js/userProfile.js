@@ -64,6 +64,48 @@ const ACHIEVEMENTS = [
     description: "Maintain a 30-day study streak",
     icon: "👑",
     check: (data) => (data.streak || 0) >= 30
+  },
+  {
+    id: "study_5h",
+    name: "Focused Mind",
+    description: "Study for 5 hours total",
+    icon: "⏱️",
+    check: (data) => (data.studyTime || 0) >= 18000
+  },
+  {
+    id: "study_25h",
+    name: "Study Machine",
+    description: "Study for 25 hours total",
+    icon: "📚",
+    check: (data) => (data.studyTime || 0) >= 90000
+  },
+  {
+    id: "study_50h",
+    name: "Marathon Learner",
+    description: "Study for 50 hours total",
+    icon: "🎓",
+    check: (data) => (data.studyTime || 0) >= 180000
+  },
+  {
+    id: "questions_500",
+    name: "500 Questions",
+    description: "Answer 500 questions total",
+    icon: "🔢",
+    check: (data) => (data.questionsAnswered || 0) >= 500
+  },
+  {
+    id: "quizzes_50",
+    name: "Quiz Veteran",
+    description: "Complete 50 quizzes",
+    icon: "🗂️",
+    check: (data) => (data.quizzesTaken || 0) >= 50
+  },
+  {
+    id: "perfect_10",
+    name: "Flawless Ten",
+    description: "Get 100% on 10 quizzes",
+    icon: "💎",
+    check: (data) => (data.perfectScores || 0) >= 10
   }
 ];
 

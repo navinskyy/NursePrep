@@ -61,6 +61,17 @@ let score = 0;
 let answers = [];         // stores selected index per question, resets per quiz
 let currentSubject = getSubjectFromURL("fundamentals");
 let currentQuizId = "";
+let currentQuizMeta = null;
+
+// Canonical storage key for a quiz's mistakes. Prefer the catalog subjectKey,
+// then quizId, so mistakes are always saved (and later retrieved) under one
+// stable key regardless of whether the quiz was launched by quizId or subject.
+function getCanonicalSubjectKey() {
+    if (currentQuizMeta) {
+        return currentQuizMeta.subjectKey || currentQuizMeta.quizId;
+    }
+    return currentSubject || currentQuizId || "unknown";
+}
 
 const MIN_QUESTION_SECONDS = 30;
 let timeLeft = MIN_QUESTION_SECONDS;
@@ -397,6 +408,7 @@ async function loadSubject(subjectKey) {
 
   const catalog = await loadCatalog();
   const quizMeta = catalog.categories.flatMap(c => c.quizzes || []).find(q => q.quizId === resolvedKey || q.subjectKey === resolvedKey);
+  currentQuizMeta = quizMeta || null;
   subjectTitle.textContent = quizMeta ? quizMeta.title : (SUBJECT_NAMES[subjectKey] || resolvedKey);
 
   currentQuestion = 0;
@@ -427,6 +439,7 @@ async function loadQuizById(quizId) {
 
     const catalog = await loadCatalog();
     const quizMeta = findQuizInCatalog(catalog, quizId);
+    currentQuizMeta = quizMeta || null;
     const allData = await getQuestionBank();
     const availableCount = quizMeta ? getAvailableQuestionCount(quizMeta, allData) : 0;
     const displayCount = quizMeta ? Math.min(quizMeta.itemCount || availableCount, availableCount) : availableCount;
@@ -581,9 +594,10 @@ async function showResult() {
             saveStatus.textContent = "Saving progress…";
             shellEl.appendChild(saveStatus);
 
+            const subjectKey = getCanonicalSubjectKey();
+
             if (mistakes.length > 0) {
                 try {
-                    const subjectKey = currentSubject || currentQuizId || "unknown";
                     console.log("[quiz] saving", mistakes.length, "mistakes for", subjectKey);
                     await saveWrongAnswers(subjectKey, mistakes);
                     console.log("[quiz] saveWrongAnswers succeeded");
@@ -593,8 +607,6 @@ async function showResult() {
             }
 
             const answeredThisQuiz = answers.filter(answer => answer !== null).length;
-
-            const subjectKey = currentSubject || currentQuizId || "unknown";
 
             await recordQuizResult(user.uid, {
                 subject: subjectKey,
@@ -688,7 +700,7 @@ async function showResult() {
 
                 ${mistakes.length > 0 ? `
                 <a
-                    href="review.html?subject=${encodeURIComponent(currentSubject || currentQuizId)}"
+                    href="review.html?subject=${encodeURIComponent(getCanonicalSubjectKey())}"
                     class="btn btn-primary review-mistakes-btn">
 
                     Review ${mistakes.length} Mistake${mistakes.length > 1 ? "s" : ""}

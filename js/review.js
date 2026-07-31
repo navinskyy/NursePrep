@@ -83,6 +83,49 @@ function resolveSubjectKey(rawKey) {
     return legacy[rawKey] || rawKey;
 }
 
+// Returns every storage key a quiz's mistakes could have been saved under.
+// Quizzes can be launched by quizId (quiz.html?quizId=) or by subject
+// (quiz.html?subject=), and the catalog recently added a distinct subjectKey
+// field, so the same quiz may have been persisted under any of these aliases.
+function getEquivalentKeys(rawKey) {
+    const keys = new Set();
+    if (!rawKey) return keys;
+
+    keys.add(rawKey);
+    keys.add(resolveSubjectKey(rawKey));
+
+    if (catalog && Array.isArray(catalog.categories)) {
+        const quizzes = catalog.categories.flatMap(c => c.quizzes || []);
+        for (const candidate of keys.size ? Array.from(keys) : []) {
+            const quiz = quizzes.find(
+                q => q.quizId === candidate || q.subjectKey === candidate
+            );
+            if (quiz) {
+                if (quiz.quizId) keys.add(quiz.quizId);
+                if (quiz.subjectKey) keys.add(quiz.subjectKey);
+            }
+        }
+    }
+
+    return keys;
+}
+
+// Maps any alias (quizId, subjectKey, legacy name) to the catalog quizId that
+// the subject <select> uses as its option value.
+function catalogQuizIdFor(rawKey) {
+    if (!catalog || !Array.isArray(catalog.categories)) return null;
+    const resolved = resolveSubjectKey(rawKey);
+    const quiz = catalog.categories
+        .flatMap(c => c.quizzes || [])
+        .find(q =>
+            q.quizId === rawKey ||
+            q.subjectKey === rawKey ||
+            q.quizId === resolved ||
+            q.subjectKey === resolved
+        );
+    return quiz ? quiz.quizId : null;
+}
+
 async function loadBank() {
     try {
         const res = await fetch("./data/quiz.json");
@@ -348,10 +391,25 @@ async function loadMistakes() {
             });
         }
     } else {
-        console.log("[review] loading mistakes for subject:", currentSubject);
-        const subjectMistakes = await getWrongAnswers(currentSubject);
-        console.log("[review] got", subjectMistakes.length, "mistakes");
-        allMistakes = subjectMistakes.map(m => ({ ...m, subject: currentSubject }));
+        // A quiz's mistakes may be stored under any of its aliases (quizId,
+        // subjectKey, or a legacy subject name). Look up all of them and merge.
+        const keys = Array.from(getEquivalentKeys(currentSubject));
+        console.log("[review] loading mistakes for subject:", currentSubject, "keys:", keys);
+
+        const seen = new Set();
+        for (const key of keys) {
+            const subjectMistakes = await getWrongAnswers(key);
+            subjectMistakes.forEach(m => {
+                // Dedupe in case the same question was persisted under two keys.
+                const dedupeId = `${m.question}::${m.idx}`;
+                if (seen.has(dedupeId)) return;
+                seen.add(dedupeId);
+                // Keep the real storage key so practice/remove target the
+                // correct field in the Firestore document.
+                allMistakes.push({ ...m, subject: key });
+            });
+        }
+        console.log("[review] got", allMistakes.length, "mistakes across", keys.length, "keys");
     }
 
     mistakes = allMistakes;
@@ -425,6 +483,8 @@ onAuthStateChanged(auth, async (user) => {
     }
 
     currentSubject = resolvedSubject;
-    subjectSelect.value = currentSubject;
+    // The dropdown option values are quizIds; map whatever alias arrived in the
+    // URL to the matching quizId so the correct option is selected.
+    subjectSelect.value = catalogQuizIdFor(currentSubject) || currentSubject;
     await loadMistakes();
 });

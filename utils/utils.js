@@ -100,11 +100,34 @@ export function percentage(value, total) {
 
 let _questionBank = null;
 
+// Some quizzes in quiz.json store the correct option under `correct_answer`
+// instead of `answer`. Normalize every question so the rest of the app can
+// rely on a single `answer` field (used for scoring and mistake detection).
+function normalizeQuestion(q) {
+    if (!q || typeof q !== "object") return q;
+    if (q.answer === undefined || q.answer === null) {
+        if (q.correct_answer !== undefined && q.correct_answer !== null) {
+            return { ...q, answer: q.correct_answer };
+        }
+    }
+    return q;
+}
+
+function normalizeQuestionBank(bank) {
+    if (!bank || typeof bank !== "object") return bank;
+    for (const key of Object.keys(bank)) {
+        if (Array.isArray(bank[key])) {
+            bank[key] = bank[key].map(normalizeQuestion);
+        }
+    }
+    return bank;
+}
+
 export async function getQuestionBank() {
     if (_questionBank) return _questionBank;
     try {
         const res = await fetch("./data/quiz.json");
-        _questionBank = await res.json();
+        _questionBank = normalizeQuestionBank(await res.json());
     } catch (e) {
         console.error("Failed to load question bank:", e);
         _questionBank = {};

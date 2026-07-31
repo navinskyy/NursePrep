@@ -17,7 +17,7 @@ import {
     addDoc
 } from "firebase/firestore";
 
-import { ensureUserProfile, bumpDailyStreak, getAchievementStatus, awardXP, getMonday } from "./userProfile.js";
+import { ensureUserProfile, bumpDailyStreak, getAchievementStatus, awardXP, getMonday, checkAchievements } from "./userProfile.js";
 
 // ===========================
 // ELEMENTS
@@ -498,6 +498,18 @@ async function saveStudySessionToFirestore(uid, elapsedSeconds) {
             durationSeconds: elapsedSeconds,
             date: now.toLocaleDateString("en-CA")
         });
+
+        // Accumulate total study time on user doc
+        const userRef = doc(db, "users", uid);
+        const userSnap = await getDoc(userRef);
+        if (userSnap.exists()) {
+            const data = userSnap.data();
+            const newStudyTime = (data.studyTime || 0) + elapsedSeconds;
+            await updateDoc(userRef, { studyTime: newStudyTime });
+            
+            // Check for study-time achievements
+            await checkAchievements(uid, { ...data, studyTime: newStudyTime });
+        }
     } catch (err) {
         console.error("Couldn't save study session:", err);
     }

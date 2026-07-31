@@ -3155,7 +3155,6 @@
       "answer": 1,
       "explanation": "Psychologic adaptation involves emotional and cognitive responses to stressful situations. Andy's anger and expression of frustration after receiving disciplinary action demonstrate an emotional coping response. Although kicking the door is a maladaptive coping behavior, it still falls under the psychological mode of adaptation because it reflects an emotional reaction to stress."
     }
-
   ],
 
   "foundation-stress-crisis-communication": [
@@ -3167,7 +3166,7 @@
         "Decreases force of contractility",
         "Decreases cardiac output"
       ],
-      "correct_answer": "Vasodilatation",
+      "correct_answer": 1,
       "explanation": "Unlike most peripheral blood vessels, the coronary arteries dilate during sympathetic stimulation. Sympathetic activation increases the heart's workload and oxygen demand, so the coronary arteries dilate to deliver more oxygen-rich blood to the myocardium. This ensures adequate perfusion during periods of increased cardiac activity."
     },
     {
@@ -3178,7 +3177,7 @@
         "Client will appear restless",
         "Blood pressure will increase"
       ],
-      "correct_answer": "Blood pressure will increase",
+      "correct_answer": 3,
       "explanation": "Hypoglycemia activates the sympathetic nervous system. Catecholamines (epinephrine and norepinephrine) are released, causing tachycardia, increased blood pressure, sweating, tremors, and anxiety. Although restlessness can occur, increased blood pressure is the most characteristic physiologic stress response listed."
     },
     {
@@ -3189,7 +3188,7 @@
         "Protect the tissue from injury by producing pain",
         "Prepare for tissue repair"
       ],
-      "correct_answer": "Increase heat, thereby produce abatement of phagocytosis",
+      "correct_answer": 0,
       "explanation": "Inflammation promotes phagocytosis rather than reducing it. Increased blood flow raises tissue temperature, which enhances leukocyte activity and phagocytosis. The remaining choices are legitimate purposes of inflammation, including limiting tissue damage, protecting the area, and initiating healing."
     },
     {
@@ -3200,7 +3199,7 @@
         "Immediate Vasoconstriction",
         "Transient Vasodilation"
       ],
-      "correct_answer": "Immediate Vasoconstriction",
+      "correct_answer": 2,
       "explanation": "Immediately after tissue injury, blood vessels undergo a brief vasoconstriction lasting a few seconds to minimize blood loss. This is followed by vasodilation, increased capillary permeability, and migration of inflammatory cells."
     },
     {
@@ -3211,7 +3210,7 @@
         "The affected part will lose its normal function",
         "Exudates will flow from the injured site"
       ],
-      "correct_answer": "The affected part will lose its normal function",
+      "correct_answer": 2,
       "explanation": "The five cardinal signs of inflammation are redness (rubor), heat (calor), swelling (tumor), pain (dolor), and loss of function (functio laesa). Loss of function develops after the other inflammatory changes because pain and swelling eventually interfere with normal movement or organ function."
     },
     {
@@ -3222,7 +3221,7 @@
         "Purulent",
         "Sanguinous"
       ],
-      "correct_answer": "Purulent",
+      "correct_answer": 2,
       "explanation": "Purulent exudate contains large numbers of neutrophils, bacteria, tissue debris, and dead cells. It is commonly associated with bacterial infections where antibody-antigen reactions stimulate an intense inflammatory response."
     },
     {
@@ -3233,7 +3232,7 @@
         "Pain, which causes guarding of the area",
         "Increase heat due to transient vasodilation"
       ],
-      "correct_answer": "Redness on the affected area",
+      "correct_answer": 0,
       "explanation": "Redness (rubor) is the earliest visible sign of inflammation. It occurs because injured blood vessels dilate, increasing blood flow to the affected tissue. Heat, swelling, pain, and eventually loss of function follow."
     },
     {
@@ -3244,7 +3243,7 @@
         "Eosinophils",
         "Monocytes"
       ],
-      "correct_answer": "Monocytes",
+      "correct_answer": 3,
       "explanation": "Monocytes migrate into tissues and mature into macrophages, the primary phagocytic cells involved in chronic inflammation. Neutrophils dominate acute inflammation, while macrophages sustain chronic inflammatory responses and aid tissue repair."
     },
     {
@@ -3255,7 +3254,7 @@
         "Eosinophils",
         "Monocytes"
       ],
-      "correct_answer": "Eosinophils",
+      "correct_answer": 2,
       "explanation": "Eosinophils increase in allergic reactions and parasitic infections. During anaphylaxis, eosinophils help regulate allergic inflammation by releasing enzymes that neutralize histamine and other inflammatory mediators."
     },
     {
@@ -3266,7 +3265,7 @@
         "Eosinophils",
         "Monocytes"
       ],
-      "correct_answer": "Neutrophils",
+      "correct_answer": 0,
       "explanation": "Neutrophils are the first white blood cells to arrive at the site of acute injury, usually within 6 to 24 hours. They rapidly migrate through chemotaxis and perform phagocytosis of bacteria and damaged tissue, making them the first cellular responders in acute inflammation."
     },
     {
@@ -3277,7 +3276,7 @@
         "Pavementation",
         "Chemotaxis"
       ],
-      "correct_answer": "Pavementation",
+      "correct_answer": 2,
       "explanation": "Pavementation is the first cellular event of inflammation. During this process, leukocytes adhere to the inner walls of the blood vessels before migrating into the injured tissue. The sequence is: pavementation → emigration (diapedesis) → chemotaxis → phagocytosis."
     },
     {
@@ -3288,7 +3287,7 @@
         "We call that Emigration",
         "I don't know the answer, perhaps I can tell you after I find it out later"
       ],
-      "correct_answer": "I don't know the answer, perhaps I can tell you after I find it out later",
+      "correct_answer": 3,
       "explanation": "The correct scientific term is chemotaxis, which is not among the choices. Chemotaxis refers to the movement of leukocytes toward the site of injury in response to chemical signals. Since none of the listed scientific terms is correct, the only appropriate answer is to admit not knowing rather than provide incorrect information."
     },
     {
@@ -3299,7 +3298,7 @@
         "Third intention",
         "Fourth intention"
       ],
-      "correct_answer": "Third intention",
+      "correct_answer": 2,
       "explanation": "Healing by third intention (tertiary intention or delayed primary closure) occurs when an infected or contaminated wound is initially left open to allow drainage and control of infection before being surgically closed several days later."
     },
     {
@@ -3310,7 +3309,7 @@
         "Third intention",
         "Fourth intention"
       ],
-      "correct_answer": "First intention",
+      "correct_answer": 0,
       "explanation": "Healing by first intention (primary intention) occurs in clean surgical wounds with well-approximated edges. There is minimal tissue loss, little risk of infection, rapid healing, and minimal scar formation."
     },
     {
@@ -3321,7 +3320,7 @@
         "Third intention",
         "Fourth intention"
       ],
-      "correct_answer": "Second intention",
+      "correct_answer": 1,
       "explanation": "Healing by second intention occurs when there is extensive tissue loss, wound edges cannot be approximated, and healing occurs through granulation tissue formation, wound contraction, and epithelialization. It results in a larger scar and longer healing time."
     },
     {
@@ -3332,7 +3331,7 @@
         "High calorie, Low protein with Vitamin A and C rich foods",
         "Low calorie, Low protein with Vitamin A and C rich foods"
       ],
-      "correct_answer": "High protein, High calorie with Vitamin A and C rich foods",
+      "correct_answer": 1,
       "explanation": "Wound healing requires increased calories to meet energy demands and high protein for collagen synthesis and tissue repair. Vitamin A promotes epithelial growth and immune function, while Vitamin C is essential for collagen formation and capillary integrity."
     },
     {
@@ -3343,7 +3342,7 @@
         "It is a type of dressing wherein the wound is covered with wet or dry dressing to prevent contamination",
         "It is a type of dressing wherein a cellophane or plastic is placed on the wound over a wet dressing to stimulate healing of the wound in a wet medium"
       ],
-      "correct_answer": "It is a type of mechanical debridement using wet dressing that is applied and left to dry to remove dead tissues",
+      "correct_answer": 0,
       "explanation": "Wet-to-dry dressing is a form of mechanical debridement. A moist gauze is placed on the wound and allowed to dry. When removed, it pulls away necrotic tissue and debris. Although effective, it may also remove healthy granulation tissue, so it is used selectively."
     },
     {
@@ -3354,7 +3353,7 @@
         "Compression of the local nerve endings by the edema fluids",
         "Circulation is lessened, supply of oxygen is insufficient"
       ],
-      "correct_answer": "Compression of the local nerve endings by the edema fluids",
+      "correct_answer": 2,
       "explanation": "Inflammatory edema increases tissue pressure, compressing local nerve endings and producing pain. Chemical mediators such as bradykinin and prostaglandins also contribute, but the expected answer emphasizes compression caused by accumulated inflammatory fluid."
     },
     {
@@ -3365,7 +3364,7 @@
         "Constipation, Urinary frequency, and Increased blood pressure",
         "Constipation and Increased blood pressure"
       ],
-      "correct_answer": "Constipation, Hyperglycemia, and Increased blood pressure",
+      "correct_answer": 1,
       "explanation": "Sympathetic stimulation decreases gastrointestinal motility, leading to constipation. It also stimulates glycogenolysis, causing hyperglycemia, and increases heart rate and vasoconstriction, resulting in elevated blood pressure. Urinary frequency is not expected because sympathetic stimulation promotes urinary retention."
     },
     {
@@ -3376,7 +3375,7 @@
         "Brush his teeth the morning before operation",
         "Smoke cigarette around 3:00 A.M."
       ],
-      "correct_answer": "Smoke cigarette around 3:00 A.M.",
+      "correct_answer": 3,
       "explanation": "Smoking after the prescribed NPO period increases gastric secretions, airway irritation, and the risk of aspiration during anesthesia. For patient safety, surgery is often postponed if the patient violates NPO instructions by smoking shortly before the procedure."
     },
     {
@@ -3387,7 +3386,7 @@
         "Warm, flushed, dry skin",
         "Low serum sodium levels"
       ],
-      "correct_answer": "Decrease Urine output",
+      "correct_answer": 1,
       "explanation": "Activation of the adrenocortical response (HPA axis) increases secretion of cortisol and aldosterone. Aldosterone promotes sodium and water reabsorption by the kidneys, resulting in decreased urine output. Blood pressure tends to increase, and serum sodium is retained rather than decreased."
     },
     {
@@ -3398,7 +3397,7 @@
         "Goals are set solely by the nurse",
         "Maintained even after the client no longer needs the nurse's help"
       ],
-      "correct_answer": "Directed towards helping an individual both physically and emotionally",
+      "correct_answer": 0,
       "explanation": "A therapeutic nurse-client relationship is a professional, goal-oriented relationship focused on promoting the client's physical, emotional, psychosocial, and spiritual well-being. It is not based on friendship, goals are established collaboratively, and the relationship ends once therapeutic goals have been achieved."
     },
     {
@@ -3409,7 +3408,7 @@
         "Rogers",
         "Travelbee"
       ],
-      "correct_answer": "Peplau",
+      "correct_answer": 1,
       "explanation": "Hildegard Peplau developed the Interpersonal Relations Theory, which describes the nurse-patient relationship through four phases: Orientation, Identification, Exploitation, and Resolution (Termination). This theory remains the foundation of psychiatric nursing."
     },
     {
@@ -3420,7 +3419,7 @@
         "Working",
         "Termination"
       ],
-      "correct_answer": "Pre-Orientation",
+      "correct_answer": 0,
       "explanation": "The Pre-Orientation phase occurs before the nurse meets the client. During this stage, the nurse reviews the medical record, gathers available information, plans the initial interaction, and examines personal feelings or biases that may affect care."
     },
     {
@@ -3431,7 +3430,7 @@
         "Working",
         "Termination"
       ],
-      "correct_answer": "Orientation",
+      "correct_answer": 1,
       "explanation": "The Orientation phase begins with the first meeting between nurse and client. During this phase, rapport is established, expectations are clarified, contracts are discussed, assessments are completed, nursing problems are identified, and goals are formulated."
     },
     {
@@ -3442,7 +3441,7 @@
         "Working",
         "Termination"
       ],
-      "correct_answer": "Working",
+      "correct_answer": 2,
       "explanation": "The Working phase is when therapeutic interventions are implemented. The nurse helps the client solve problems, promotes adaptive behaviors, sets limits on inappropriate actions, and assists the client in achieving established goals."
     },
     {
@@ -3453,7 +3452,7 @@
         "Comfortable sense of self",
         "Self-awareness"
       ],
-      "correct_answer": "Positive regard",
+      "correct_answer": 1,
       "explanation": "Positive regard, also known as unconditional positive regard, means accepting and respecting the client as a worthwhile person regardless of behavior, illness, beliefs, or actions. The nurse separates the person's worth from the inappropriate behavior."
     },
     {
@@ -3464,7 +3463,7 @@
         "Comfortable sense of self",
         "Self-awareness"
       ],
-      "correct_answer": "Positive regard",
+      "correct_answer": 1,
       "explanation": "Labeling a client by a diagnosis rather than recognizing the individual demonstrates a lack of positive regard. Nurses should avoid stigmatizing language and instead acknowledge the client as a person first, not merely by the illness."
     },
     {
@@ -3475,7 +3474,7 @@
         "It has always been a part of human experience.",
         "It is something each person has to cope with."
       ],
-      "correct_answer": "It is a nervous energy.",
+      "correct_answer": 0,
       "explanation": "Hans Selye's modern stress theory states that stress is the nonspecific response of the body to any demand placed upon it. Stress is not a form of nervous energy. It is a normal part of life, can be beneficial or harmful, and every individual must develop ways to cope with it."
     },
     {
@@ -3486,14 +3485,10 @@
         "The exhaustion stage of General Adaptation Syndrome",
         "Crisis"
       ],
-      "correct_answer": "Crisis",
+      "correct_answer": 3,
       "explanation": "A crisis is a temporary state of emotional disequilibrium that occurs when a stressful event overwhelms an individual's usual coping mechanisms. Martina's inability to cope effectively with the significant life event indicates she is experiencing a crisis rather than ordinary stress or anxiety."
     }
   ],
-
-
-
-
 
 
 
