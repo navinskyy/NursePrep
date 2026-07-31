@@ -11,6 +11,14 @@
 </head>
 <body class="dash-body">
 
+<!-- ECG decorative background -->
+<div class="ecg-bg" aria-hidden="true">
+  <svg class="ecg-waveform" viewBox="0 0 1200 200" preserveAspectRatio="none">
+    <path d="M0 100 L200 100 L240 100 L260 60 L280 140 L300 20 L320 180 L340 100 L400 100 L600 100 L640 100 L660 60 L680 140 L700 20 L720 180 L740 100 L800 100 L1000 100 L1040 100 L1060 60 L1080 140 L1100 20 L1120 180 L1140 100 L1200 100" 
+          fill="none" stroke="rgba(236, 111, 160, 0.08)" stroke-width="2"/>
+  </svg>
+</div>
+
 <button class="menu-toggle" aria-label="Open navigation menu" type="button">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -101,6 +109,55 @@
       <span class="eyebrow">Streak</span>
       <div class="stat-value"><span class="num" id="streak">0</span><span class="suffix">days</span></div>
       <p class="trend" id="bestStreak">Best streak: 0 days</p>
+    </div>
+  </div>
+
+  <div class="dash-timer-row">
+    <div class="mini-card timer-card">
+      <span class="eyebrow">PNLE Board Exam Countdown</span>
+      <div class="pnle-countdown" id="pnleCountdown">
+        <div class="countdown-unit">
+          <span class="countdown-value" id="countdownDays">00</span>
+          <span class="countdown-label">Days</span>
+        </div>
+        <div class="countdown-separator">:</div>
+        <div class="countdown-unit">
+          <span class="countdown-value" id="countdownHours">00</span>
+          <span class="countdown-label">Hours</span>
+        </div>
+        <div class="countdown-separator">:</div>
+        <div class="countdown-unit">
+          <span class="countdown-value" id="countdownMinutes">00</span>
+          <span class="countdown-label">Minutes</span>
+        </div>
+        <div class="countdown-separator">:</div>
+        <div class="countdown-unit">
+          <span class="countdown-value" id="countdownSeconds">00</span>
+          <span class="countdown-label">Seconds</span>
+        </div>
+      </div>
+      <p class="timer-subtitle" id="pnleExamDate">Next PNLE: March 14, 2027</p>
+    </div>
+
+    <div class="mini-card time-tracker-card">
+      <span class="eyebrow">Study Time Tracker</span>
+      <div class="time-tracker-display">
+        <span class="time-tracker-value" id="studyTimeToday">00:00:00</span>
+        <span class="time-tracker-label">Today's study time</span>
+      </div>
+      <div class="time-tracker-actions">
+        <button class="btn btn-primary time-tracker-btn" id="startTimerBtn">Start Session</button>
+        <button class="btn btn-secondary time-tracker-btn" id="stopTimerBtn" disabled>Stop</button>
+      </div>
+      <div class="time-tracker-week" id="weeklyTimeChart">
+        <div class="week-bar" data-day="Mon" style="--pct:0%"><span>Mon</span></div>
+        <div class="week-bar" data-day="Tue" style="--pct:0%"><span>Tue</span></div>
+        <div class="week-bar" data-day="Wed" style="--pct:0%"><span>Wed</span></div>
+        <div class="week-bar" data-day="Thu" style="--pct:0%"><span>Thu</span></div>
+        <div class="week-bar" data-day="Fri" style="--pct:0%"><span>Fri</span></div>
+        <div class="week-bar" data-day="Sat" style="--pct:0%"><span>Sat</span></div>
+        <div class="week-bar" data-day="Sun" style="--pct:0%"><span>Sun</span></div>
+      </div>
     </div>
   </div>
 

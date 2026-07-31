@@ -1,5 +1,5 @@
 import { auth, db } from "../firebase/firebase.js";
-import { doc, getDoc } from "firebase/firestore";
+import { doc, getDoc, collection, getDocs } from "firebase/firestore";
 import { getTotalWrongAnswerCount } from "../services/wrongAnswerService.js";
 
 import { getQuestionBank, getAvailableQuestionCount } from "../utils/utils.js";
@@ -27,13 +27,15 @@ async function loadUserProgress() {
   if (!user) return;
 
   try {
-    const ref = doc(db, "userProgress", user.uid);
-    const snap = await getDoc(ref);
-    if (snap.exists()) {
-      userProgress = snap.data() || {};
-    }
+    const quizzesRef = collection(db, "userProgress", user.uid, "quizzes");
+    const snap = await getDocs(quizzesRef);
+    userProgress = {};
+    snap.forEach((docSnap) => {
+      userProgress[docSnap.id] = docSnap.data();
+    });
   } catch (err) {
     console.error("Failed to load user progress:", err);
+    userProgress = {};
   }
 }
 
@@ -42,30 +44,69 @@ function getCategoryStats(category) {
   let totalItems = 0;
   let completedCount = 0;
   let bestScores = [];
+  let totalAttempts = 0;
+  let lastAttemptDate = null;
 
   quizzes.forEach(q => {
     totalItems += questionBank
       ? Math.min(q.itemCount || Infinity, getAvailableQuestionCount(q, questionBank))
       : (q.itemCount || 0);
     const progress = userProgress[q.quizId];
-    if (progress && progress.completed) {
-      completedCount++;
-    }
-    if (progress && typeof progress.bestScore === "number") {
-      bestScores.push(progress.bestScore);
+    if (progress) {
+      if (progress.completed) {
+        completedCount++;
+      }
+      if (typeof progress.bestScore === "number") {
+        bestScores.push(progress.bestScore);
+      }
+      if (typeof progress.attempts === "number") {
+        totalAttempts += progress.attempts;
+      }
+      if (progress.lastAttempt) {
+        const attemptDate = progress.lastAttempt.toDate
+          ? progress.lastAttempt.toDate()
+          : new Date(progress.lastAttempt);
+        if (!lastAttemptDate || attemptDate > lastAttemptDate) {
+          lastAttemptDate = attemptDate;
+        }
+      }
     }
   });
 
-  const overallProgress = totalItems > 0 && bestScores.length > 0
+  const overallProgress = bestScores.length > 0
     ? Math.round(bestScores.reduce((a, b) => a + b, 0) / bestScores.length)
+    : 0;
+
+  const bestScore = bestScores.length > 0
+    ? Math.max(...bestScores)
     : 0;
 
   return {
     quizCount: quizzes.length,
     totalItems,
     completedCount,
-    overallProgress
+    overallProgress,
+    bestScore,
+    totalAttempts,
+    lastAttemptDate
   };
+}
+
+function getStars(score) {
+  if (score <= 0) {
+    return '<span class="star-empty">★</span>'.repeat(5);
+  }
+  const rounded = Math.ceil(score / 20);
+  let html = "";
+  for (let i = 1; i <= 5; i++) {
+    html += i <= rounded ? '<span class="star-filled">★</span>' : '<span class="star-empty">★</span>';
+  }
+  return html;
+}
+
+function formatDate(date) {
+  if (!date) return "Never";
+  return date.toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" });
 }
 
 function renderCategories() {
@@ -87,6 +128,14 @@ function renderCategories() {
 
     const progressClass = stats.completedCount === 0 ? "not-started" : "";
 
+    const lastAttemptText = stats.totalAttempts > 0
+      ? formatDate(stats.lastAttemptDate)
+      : "No attempts yet";
+
+    const starsHtml = stats.bestScore > 0
+      ? getStars(stats.bestScore)
+      : '<span class="star-empty">★</span>'.repeat(5);
+
     card.innerHTML = `
       <div class="subject-top">
         <div class="subject-icon">
@@ -99,6 +148,25 @@ function renderCategories() {
 
       <h3>${category.name}</h3>
       <p>${stats.quizCount} quizzes · ${stats.totalItems} items</p>
+
+      <div class="subject-stats">
+        <div class="subject-stat">
+          <span class="subject-stat-value">${stats.bestScore > 0 ? stats.bestScore + "%" : "—"}</span>
+          <span class="subject-stat-label">Best Score</span>
+        </div>
+        <div class="subject-stat">
+          <span class="subject-stat-value">${stats.totalAttempts}</span>
+          <span class="subject-stat-label">Attempts</span>
+        </div>
+        <div class="subject-stat">
+          <span class="subject-stat-value">${lastAttemptText}</span>
+          <span class="subject-stat-label">Last Attempt</span>
+        </div>
+        <div class="subject-stat">
+          <span class="subject-stat-value stars">${starsHtml}</span>
+          <span class="subject-stat-label">Rating</span>
+        </div>
+      </div>
 
       <div class="progress-track">
         <div class="progress-fill" style="--progress: ${stats.overallProgress}%"></div>

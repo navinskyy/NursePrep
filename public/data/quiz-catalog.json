@@ -3,7 +3,7 @@
     {
       "id": "pnleSets",
       "name": "Comprehensive PNLE SETS",
-      "icon": "📚",
+      "icon": "\ud83d\udcda",
       "description": "Full-length PNLE practice examinations",
       "order": 1,
       "quizzes": [
@@ -15,7 +15,8 @@
           "description": "Comprehensive review covering all major nursing topics.",
           "categoryId": "pnleSets",
           "subcategoryId": "set1",
-          "order": 1
+          "order": 1,
+          "subjectKey": "pnle-set1-part1"
         },
         {
           "quizId": "pnle-set1-part2",
@@ -25,7 +26,8 @@
           "description": "Continuation of PNLE Set 1 with advanced scenarios.",
           "categoryId": "pnleSets",
           "subcategoryId": "set1",
-          "order": 2
+          "order": 2,
+          "subjectKey": "pnle-set1-part2"
         },
         {
           "quizId": "pnle-set1-part3",
@@ -35,7 +37,8 @@
           "description": "Third segment of PNLE Set 1.",
           "categoryId": "pnleSets",
           "subcategoryId": "set1",
-          "order": 3
+          "order": 3,
+          "subjectKey": "pnle-set1-part3"
         },
         {
           "quizId": "pnle-set1-part4",
@@ -45,7 +48,8 @@
           "description": "Fourth segment of PNLE Set 1.",
           "categoryId": "pnleSets",
           "subcategoryId": "set1",
-          "order": 4
+          "order": 4,
+          "subjectKey": "pnle-set1-part4"
         },
         {
           "quizId": "pnle-set1-part5",
@@ -55,7 +59,8 @@
           "description": "Final segment of PNLE Set 1.",
           "categoryId": "pnleSets",
           "subcategoryId": "set1",
-          "order": 5
+          "order": 5,
+          "subjectKey": "pnle-set1-part5"
         },
         {
           "quizId": "pnle-set2",
@@ -65,7 +70,8 @@
           "description": "Complete 250-item PNLE practice set.",
           "categoryId": "pnleSets",
           "subcategoryId": "set2",
-          "order": 6
+          "order": 6,
+          "subjectKey": "pnle-set2"
         },
         {
           "quizId": "pnle-set3",
@@ -75,64 +81,112 @@
           "description": "Focused 150-item PNLE practice set.",
           "categoryId": "pnleSets",
           "subcategoryId": "set3",
-          "order": 7
+          "order": 7,
+          "subjectKey": "pnle-set3"
         }
       ]
     },
     {
       "id": "foundation",
       "name": "Foundation of Nursing",
-      "icon": "🏥",
+      "icon": "\ud83c\udfe5",
       "description": "Core nursing fundamentals and processes",
       "order": 2,
       "quizzes": [
         {
-          "quizId": "foundation-history",
-          "title": "History of Nursing",
-          "itemCount": 50,
-          "difficulty": "Easy",
-          "description": "Trace the evolution of nursing from Florence Nightingale to modern practice.",
-          "categoryId": "foundation",
-          "subcategoryId": "history",
-          "order": 1
-        },
-        {
-          "quizId": "foundation-infectionControl",
-          "title": "Infection Control",
-          "itemCount": 50,
-          "difficulty": "Medium",
-          "description": "Standard precautions, transmission-based precautions, and asepsis.",
-          "categoryId": "foundation",
-          "subcategoryId": "infectionControl",
-          "order": 2
-        },
-        {
-          "quizId": "foundation-nursingProcess",
-          "title": "Nursing Process",
-          "itemCount": 50,
-          "difficulty": "Medium",
-          "description": "ADPIE: Assessment, Diagnosis, Planning, Implementation, Evaluation.",
-          "categoryId": "foundation",
-          "subcategoryId": "nursingProcess",
-          "order": 3
-        },
-        {
-          "quizId": "foundation-fundamentals",
-          "title": "Fundamentals Exam",
+          "quizId": "foundation-history-concepts-theories",
+          "title": "PNLE: FON Practice Exam for History, Concepts and Theories",
           "itemCount": 100,
           "difficulty": "Medium",
-          "description": "Comprehensive fundamentals examination covering vital signs, documentation, and patient care.",
+          "description": "History, Concepts and Theories",
           "categoryId": "foundation",
-          "subcategoryId": "fundamentals",
-          "subjectKey": "fundamentals",
-          "order": 4
+          "subcategoryId": "history-concepts-theories",
+          "order": 1,
+          "subjectKey": "foundation-history-concepts-theories"
+        },
+        {
+          "quizId": "foundation-infection-asepsis-stress-illness",
+          "title": "PNLE: FON Practice Exam for Infection, Asepsis, Basic concept of stress and Illness",
+          "itemCount": 100,
+          "difficulty": "Medium",
+          "description": "Infection, Asepsis, Basic concept of stress and Illness",
+          "categoryId": "foundation",
+          "subcategoryId": "infection-asepsis-stress-illness",
+          "order": 2,
+          "subjectKey": "foundation-infection-asepsis-stress-illness"
+        },
+        {
+          "quizId": "foundation-stress-crisis-communication",
+          "title": "PNLE: FON Practice Exam for Stress, Crisis, Crisis Intervention, Communication, Recording, Learning and Documentation",
+          "itemCount": 100,
+          "difficulty": "Medium",
+          "description": "Stress, Crisis, Crisis Intervention, Communication, Recording, Learning and Documentation",
+          "categoryId": "foundation",
+          "subcategoryId": "stress-crisis-communication",
+          "order": 3,
+          "subjectKey": "foundation-stress-crisis-communication"
+        },
+        {
+          "quizId": "foundation-nursing-process-assessment",
+          "title": "PNLE FON Practice Exam for Nursing Process, Physical and Health Assessment and Routine Procedures",
+          "itemCount": 100,
+          "difficulty": "Medium",
+          "description": "Nursing Process, Physical and Health Assessment and Routine Procedures",
+          "categoryId": "foundation",
+          "subcategoryId": "nursing-process-assessment",
+          "order": 4,
+          "subjectKey": "foundation-nursing-process-assessment"
+        },
+        {
+          "quizId": "foundation-oxygenation-nutrition",
+          "title": "PNLE: FON Practice Exam for Oxygenation and Nutrition",
+          "itemCount": 100,
+          "difficulty": "Medium",
+          "description": "Oxygenation and Nutrition",
+          "categoryId": "foundation",
+          "subcategoryId": "oxygenation-nutrition",
+          "order": 5,
+          "subjectKey": "foundation-oxygenation-nutrition"
+        },
+        {
+          "quizId": "foundation-exam-1",
+          "title": "PNLE: Fundamentals in Nursing Exam 1",
+          "itemCount": 25,
+          "difficulty": "Medium",
+          "description": "Fundamentals in Nursing Exam 1",
+          "categoryId": "foundation",
+          "subcategoryId": "exam1",
+          "order": 6,
+          "subjectKey": "foundation-exam-1"
+        },
+        {
+          "quizId": "foundation-exam-2",
+          "title": "PNLE: Fundamentals in Nursing Exam 2",
+          "itemCount": 25,
+          "difficulty": "Medium",
+          "description": "Fundamentals in Nursing Exam 2",
+          "categoryId": "foundation",
+          "subcategoryId": "exam2",
+          "order": 7,
+          "subjectKey": "foundation-exam-2"
+        },
+        {
+          "quizId": "foundation-exam-3",
+          "title": "PNLE: Fundamentals in Nursing Exam 3",
+          "itemCount": 25,
+          "difficulty": "Medium",
+          "description": "Fundamentals in Nursing Exam 3",
+          "categoryId": "foundation",
+          "subcategoryId": "exam3",
+          "order": 8,
+          "subjectKey": "foundation-exam-3"
         }
       ]
     },
     {
       "id": "maternalChild",
       "name": "Maternal & Child Nursing",
-      "icon": "👶",
+      "icon": "\ud83d\udc76",
       "description": "Maternal, newborn, and pediatric nursing care",
       "order": 3,
       "quizzes": [
@@ -144,7 +198,7 @@
           "description": "Antepartum, intrapartum, postpartum, and newborn care.",
           "categoryId": "maternalChild",
           "subcategoryId": "maternal",
-          "subjectKey": "maternal",
+          "subjectKey": "maternal-maternalHealth",
           "order": 1
         },
         {
@@ -155,7 +209,7 @@
           "description": "Growth and development, pediatric disorders, and family-centered care.",
           "categoryId": "maternalChild",
           "subcategoryId": "pediatric",
-          "subjectKey": "pediatric",
+          "subjectKey": "maternal-pediatric",
           "order": 2
         }
       ]
@@ -163,127 +217,136 @@
     {
       "id": "community",
       "name": "Community Health Nursing",
-      "icon": "🌍",
+      "icon": "\ud83c\udf0d",
       "description": "Population-focused nursing and public health",
       "order": 4,
       "quizzes": [
         {
           "quizId": "community-1",
-          "title": "Community Health — Module 1",
+          "title": "Community Health \u2014 Module 1",
           "itemCount": 40,
           "difficulty": "Medium",
           "description": "Health promotion, disease prevention, and community assessment.",
           "categoryId": "community",
           "subcategoryId": "module1",
-          "order": 1
+          "order": 1,
+          "subjectKey": "community-1"
         },
         {
           "quizId": "community-2",
-          "title": "Community Health — Module 2",
+          "title": "Community Health \u2014 Module 2",
           "itemCount": 40,
           "difficulty": "Medium",
           "description": "Environmental health, disaster preparedness, and epidemiology.",
           "categoryId": "community",
           "subcategoryId": "module2",
-          "order": 2
+          "order": 2,
+          "subjectKey": "community-2"
         },
         {
           "quizId": "community-3",
-          "title": "Community Health — Module 3",
+          "title": "Community Health \u2014 Module 3",
           "itemCount": 40,
           "difficulty": "Medium",
           "description": "Family health, maternal-child care in the community.",
           "categoryId": "community",
           "subcategoryId": "module3",
-          "order": 3
+          "order": 3,
+          "subjectKey": "community-3"
         },
         {
           "quizId": "community-4",
-          "title": "Community Health — Module 4",
+          "title": "Community Health \u2014 Module 4",
           "itemCount": 40,
           "difficulty": "Medium",
           "description": "Community mental health and substance abuse prevention.",
           "categoryId": "community",
           "subcategoryId": "module4",
-          "order": 4
+          "order": 4,
+          "subjectKey": "community-4"
         },
         {
           "quizId": "community-5",
-          "title": "Community Health — Module 5",
+          "title": "Community Health \u2014 Module 5",
           "itemCount": 40,
           "difficulty": "Medium",
           "description": "Health care delivery systems and community resources.",
           "categoryId": "community",
           "subcategoryId": "module5",
-          "order": 5
+          "order": 5,
+          "subjectKey": "community-5"
         }
       ]
     },
     {
       "id": "medSurg",
       "name": "Medical-Surgical Nursing",
-      "icon": "🩺",
+      "icon": "\ud83e\ude7a",
       "description": "Adult health, disease processes, and surgical care",
       "order": 5,
       "quizzes": [
         {
           "quizId": "medSurg-1",
-          "title": "Med-Surg — Module 1",
+          "title": "Med-Surg \u2014 Module 1",
           "itemCount": 60,
           "difficulty": "Hard",
           "description": "Cardiovascular, respiratory, and hematologic disorders.",
           "categoryId": "medSurg",
           "subcategoryId": "module1",
-          "order": 1
+          "order": 1,
+          "subjectKey": "medSurg-1"
         },
         {
           "quizId": "medSurg-2",
-          "title": "Med-Surg — Module 2",
+          "title": "Med-Surg \u2014 Module 2",
           "itemCount": 60,
           "difficulty": "Hard",
           "description": "Neurological, sensory, and integumentary disorders.",
           "categoryId": "medSurg",
           "subcategoryId": "module2",
-          "order": 2
+          "order": 2,
+          "subjectKey": "medSurg-2"
         },
         {
           "quizId": "medSurg-3",
-          "title": "Med-Surg — Module 3",
+          "title": "Med-Surg \u2014 Module 3",
           "itemCount": 60,
           "difficulty": "Hard",
           "description": "Gastrointestinal, urinary, and renal disorders.",
           "categoryId": "medSurg",
           "subcategoryId": "module3",
-          "order": 3
+          "order": 3,
+          "subjectKey": "medSurg-3"
         },
         {
           "quizId": "medSurg-4",
-          "title": "Med-Surg — Module 4",
+          "title": "Med-Surg \u2014 Module 4",
           "itemCount": 60,
           "difficulty": "Hard",
           "description": "Endocrine, musculoskeletal, and oncologic disorders.",
           "categoryId": "medSurg",
           "subcategoryId": "module4",
-          "order": 4
+          "order": 4,
+          "subjectKey": "medSurg-4"
         }
       ]
     },
     {
       "id": "psychiatric",
       "name": "Psychiatric Nursing",
-      "icon": "🧠",
+      "icon": "\ud83e\udde0",
       "description": "Mental health assessment, disorders, and therapeutic communication",
       "order": 6,
       "quizzes": [
         {
           "quizId": "psychiatric-1",
-          "title": "Psychiatric Nursing — Exam 1",
+          "title": "Psychiatric Nursing \u2014 Exam 1",
           "itemCount": 50,
           "difficulty": "Medium",
           "description": "Therapeutic communication, mental health assessment, and common psychiatric disorders.",
           "categoryId": "psychiatric",
           "subcategoryId": "exam1",
-          "subjectKey": "psychiatric",
+          "subjectKey": "psychiatric-1",
           "order": 1
         }
       ]
@@ -291,7 +354,7 @@
     {
       "id": "allTopics",
       "name": "All Topics",
-      "icon": "📋",
+      "icon": "\ud83d\udccb",
       "description": "Master view of all available quizzes across every category",
       "order": 7,
       "quizzes": [
@@ -303,7 +366,8 @@
           "description": "Comprehensive PNLE practice examination 1 covering all major nursing topics.",
           "categoryId": "allTopics",
           "subcategoryId": "exam1",
-          "order": 1
+          "order": 1,
+          "subjectKey": "pnle-exam-1"
         },
         {
           "quizId": "pnle-exam-2",
@@ -313,7 +377,48 @@
           "description": "Comprehensive PNLE practice examination 2 covering all major nursing topics.",
           "categoryId": "allTopics",
           "subcategoryId": "exam2",
-          "order": 2
+          "order": 2,
+          "subjectKey": "pnle-exam-2"
+        }
+      ]
+    },
+    {
+      "id": "pharma",
+      "name": "Pharmacology",
+      "icon": "\ud83d\udc8a",
+      "description": "Drug classifications, antidotes, and nursing considerations",
+      "order": 8,
+      "quizzes": [
+        {
+          "quizId": "pharma-1",
+          "title": "Pharmacology \u2014 Exam 1",
+          "itemCount": 40,
+          "difficulty": "Medium",
+          "description": "Drug classifications, antidotes, and nursing considerations.",
+          "categoryId": "pharma",
+          "subcategoryId": "exam1",
+          "subjectKey": "pharma-1",
+          "order": 1
+        }
+      ]
+    },
+    {
+      "id": "leadership",
+      "name": "Leadership & Management",
+      "icon": "\ud83d\udc69\u200d\u2695\ufe0f",
+      "description": "Nursing leadership, delegation, and management principles",
+      "order": 9,
+      "quizzes": [
+        {
+          "quizId": "leadership-1",
+          "title": "Leadership & Management \u2014 Exam 1",
+          "itemCount": 40,
+          "difficulty": "Medium",
+          "description": "Leadership styles, delegation, and management theories.",
+          "categoryId": "leadership",
+          "subcategoryId": "exam1",
+          "subjectKey": "leadership-1",
+          "order": 1
         }
       ]
     }

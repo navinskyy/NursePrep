@@ -69,6 +69,9 @@
 .auth-pulse{
     width:100%;
     opacity:.8;
+    stroke-dasharray: 600;
+    stroke-dashoffset: 600;
+    animation: ecg-draw 3s ease-in-out infinite;
 }
 
 .auth-foot-caption{
@@ -555,5 +558,28 @@ to{
   .small-text {
     font-size: 11px;
     margin-top: 16px;
+  }
+}
+
+/* ==========================================
+   Login — ECG Heartbeat Animation
+   ========================================== */
+
+@keyframes ecg-draw {
+  0% {
+    stroke-dashoffset: 600;
+    opacity: 0.3;
+  }
+  30% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  70% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: -600;
+    opacity: 0.3;
   }
 }

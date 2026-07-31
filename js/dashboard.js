@@ -55,6 +55,20 @@ const weakestValue = document.getElementById("weakestSubjectValue");
 
 const activityList = document.getElementById("activityList");
 
+const countdownDays = document.getElementById("countdownDays");
+const countdownHours = document.getElementById("countdownHours");
+const countdownMinutes = document.getElementById("countdownMinutes");
+const countdownSeconds = document.getElementById("countdownSeconds");
+const pnleExamDate = document.getElementById("pnleExamDate");
+
+const studyTimeTodayEl = document.getElementById("studyTimeToday");
+const startTimerBtn = document.getElementById("startTimerBtn");
+const stopTimerBtn = document.getElementById("stopTimerBtn");
+
+let studyTimerInterval = null;
+let studyStartTime = null;
+let studySecondsToday = 0;
+
 // ===========================
 // GREETING
 // ===========================
@@ -345,6 +359,232 @@ function timeAgo(date) {
 
     return date.toLocaleDateString();
 
+}
+
+// ===========================
+// PNLE COUNTDOWN TIMER
+// ===========================
+
+function initPNLECountdown() {
+    const examDate = new Date(Date.UTC(2026, 7, 29, 0, 0, 0));
+    const now = new Date();
+    const isToday = now.toDateString() === examDate.toDateString();
+
+    if (pnleExamDate) {
+        pnleExamDate.textContent = `Next PNLE: ${examDate.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}`;
+    }
+
+    function updateCountdown() {
+        const now = new Date();
+        let diff = examDate - now;
+
+        if (diff <= 0) {
+            if (countdownDays) countdownDays.textContent = "00";
+            if (countdownHours) countdownHours.textContent = "00";
+            if (countdownMinutes) countdownMinutes.textContent = "00";
+            if (countdownSeconds) countdownSeconds.textContent = "00";
+            if (pnleExamDate) pnleExamDate.textContent = isToday ? "PNLE exam is today! Good luck!" : "PNLE exam has passed.";
+            return;
+        }
+
+        diff = Math.max(diff, 0);
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        if (countdownDays) countdownDays.textContent = String(days).padStart(2, "0");
+        if (countdownHours) countdownHours.textContent = String(hours).padStart(2, "0");
+        if (countdownMinutes) countdownMinutes.textContent = String(minutes).padStart(2, "0");
+        if (countdownSeconds) countdownSeconds.textContent = String(seconds).padStart(2, "0");
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+}
+
+// ===========================
+// STUDY TIME TRACKER
+// ===========================
+
+function loadStudyTimeData() {
+    const stored = localStorage.getItem("studyTimeData");
+    let data = {};
+
+    if (stored) {
+        try {
+            data = JSON.parse(stored);
+        } catch (e) {
+            data = {};
+        }
+    }
+
+    const now = new Date();
+    const today = now.toISOString().slice(0, 10);
+    const todayDayKey = getDayKey(now);
+
+    if (!data.date || data.date !== today) {
+        data = {
+            date: today,
+            dayKey: todayDayKey,
+            seconds: 0,
+            weekly: data.weekly || {}
+        };
+        saveStudyTimeData(data);
+    }
+
+    if (data.dayKey !== todayDayKey) {
+        data.dayKey = todayDayKey;
+        saveStudyTimeData(data);
+    }
+
+    return data;
+}
+
+function saveStudyTimeData(data) {
+    localStorage.setItem("studyTimeData", JSON.stringify(data));
+}
+
+function formatTime(seconds) {
+    const h = Math.floor(seconds / 3600);
+    const m = Math.floor((seconds % 3600) / 60);
+    const s = seconds % 60;
+    return `${String(h).padStart(2, "0")}:${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
+}
+
+function getDayKey(date) {
+    return ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][date.getDay()];
+}
+
+function getTimerStartTime() {
+    const stored = localStorage.getItem("studyTimeTimerStart");
+    if (!stored) return null;
+    const ts = parseInt(stored, 10);
+    return Number.isFinite(ts) ? ts : null;
+}
+
+function setTimerStartTime(ts) {
+    localStorage.setItem("studyTimeTimerStart", String(ts));
+}
+
+function clearTimerStartTime() {
+    localStorage.removeItem("studyTimeTimerStart");
+}
+
+function updateTimerDisplay() {
+    if (!studyStartTime) return;
+
+    const stored = loadStudyTimeData();
+    const elapsed = Math.max(0, Math.floor((Date.now() - studyStartTime) / 1000));
+    studySecondsToday = (stored.seconds || 0) + elapsed;
+
+    if (studyTimeTodayEl) {
+        studyTimeTodayEl.textContent = formatTime(Math.max(0, studySecondsToday));
+    }
+}
+
+function initTimeTracker() {
+    const data = loadStudyTimeData();
+    studySecondsToday = data.seconds || 0;
+
+    if (studyTimeTodayEl) {
+        studyTimeTodayEl.textContent = formatTime(Math.max(0, studySecondsToday));
+    }
+
+    updateWeeklyBars(data);
+
+    const savedStartTime = getTimerStartTime();
+
+    if (savedStartTime && !studyTimerInterval) {
+        studyStartTime = savedStartTime;
+        studyTimerInterval = setInterval(updateTimerDisplay, 1000);
+        updateTimerDisplay();
+        startTimerBtn.disabled = true;
+        stopTimerBtn.disabled = false;
+    }
+
+        if (startTimerBtn) {
+            startTimerBtn.addEventListener("click", () => {
+                if (studyTimerInterval) return;
+
+                const stored = loadStudyTimeData();
+                studySecondsToday = stored.seconds || 0;
+                studyStartTime = Date.now();
+                setTimerStartTime(studyStartTime);
+
+                if (studyTimeTodayEl) {
+                    studyTimeTodayEl.textContent = "00:00:00";
+                }
+
+                studyTimerInterval = setInterval(updateTimerDisplay, 1000);
+
+                startTimerBtn.disabled = true;
+                stopTimerBtn.disabled = false;
+            });
+        }
+
+    if (stopTimerBtn) {
+        stopTimerBtn.addEventListener("click", () => {
+            if (!studyTimerInterval) return;
+
+            clearInterval(studyTimerInterval);
+            studyTimerInterval = null;
+
+            const elapsed = Math.max(0, Math.floor((Date.now() - studyStartTime) / 1000));
+
+            const stored = loadStudyTimeData();
+            stored.seconds = (stored.seconds || 0) + elapsed;
+
+            const today = new Date();
+            const dayKey = getDayKey(today);
+            stored.weekly[dayKey] = (stored.weekly[dayKey] || 0) + elapsed;
+
+            saveStudyTimeData(stored);
+            clearTimerStartTime();
+
+            studySecondsToday = stored.seconds || 0;
+
+            if (studyTimeTodayEl) {
+                studyTimeTodayEl.textContent = formatTime(Math.max(0, studySecondsToday));
+            }
+
+            updateWeeklyBars(stored);
+
+            startTimerBtn.disabled = false;
+            studyStartTime = null;
+        });
+    }
+
+    document.addEventListener("visibilitychange", () => {
+        if (document.visibilityState === "visible") {
+            if (studyTimerInterval && studyStartTime) {
+                updateTimerDisplay();
+            } else if (!studyTimerInterval) {
+                const savedStartTime = getTimerStartTime();
+                if (savedStartTime) {
+                    studyStartTime = savedStartTime;
+                    studyTimerInterval = setInterval(updateTimerDisplay, 1000);
+                    updateTimerDisplay();
+                    startTimerBtn.disabled = true;
+                    stopTimerBtn.disabled = false;
+                }
+            }
+        }
+    });
+}
+
+function updateWeeklyBars(data) {
+    const weekDays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+    const weekly = data.weekly || {};
+    const maxVal = Math.max(...Object.values(weekly), 1);
+
+    document.querySelectorAll(".week-bar").forEach((bar) => {
+        const day = bar.dataset.day;
+        const val = weekly[day] || 0;
+        const pct = Math.round((val / maxVal) * 100);
+        bar.style.setProperty("--pct", pct + "%");
+    });
 }
 
 function renderAchievements(data) {
@@ -659,6 +899,9 @@ onAuthStateChanged(auth, async (user) => {
         // =====================
 
         renderAchievements(data);
+
+        initPNLECountdown();
+        initTimeTracker();
 
     }
 

@@ -1,5 +1,5 @@
 {
-  "fundamentals": [
+  "foundation-fundamentals": [
     {
       "question": "Jake is complaining of shortness of breath. The nurse assesses his respiratory rate to be 30 breaths per minute and documents that Jake is tachypneic. The nurse understands that tachypnea means:",
       "choices": [
@@ -23,15 +23,15 @@
       "explanation": "Wheezes are high-pitched, musical, hissing sounds produced by air moving through narrowed or obstructed airways. They are commonly heard in asthma, COPD, and bronchospasm. Rhonchi are low-pitched, snoring sounds suggesting secretions in larger airways. Vesicular breath sounds are normal soft sounds heard over most lung fields.\n\n**Why other options are incorrect:**\n- **A. Rhonchi** is incorrect because Rhonchi are low-pitched, snoring or gurgling sounds caused by secretions in larger airways. They are not high-pitched or musical. Confusing rhonchi with wheezes can lead to incorrect documentation of breath sounds.\n- **B. Vesicular breath sounds** is incorrect because Vesicular breath sounds are normal, soft, low-pitched sounds heard over most lung fields during inspiration. They are not abnormal findings. Documenting vesicular sounds when wheezes are present would miss the abnormal finding.\n- **D. Gurgles** is incorrect because Gurgles (also called rhonchi) are low-pitched sounds from secretions, not high-pitched musical sounds. This choice confuses different types of adventitious breath sounds."
     },
     {
-      "question": "The nurse measures a patient's temperature at 101°F. What is the equivalent temperature in Celsius?",
+      "question": "The nurse measures a patient's temperature at 101\u00b0F. What is the equivalent temperature in Celsius?",
       "choices": [
-        "38.01°C",
-        "36.3°C",
-        "40.03°C",
-        "37.95°C"
+        "38.01\u00b0C",
+        "36.3\u00b0C",
+        "40.03\u00b0C",
+        "37.95\u00b0C"
       ],
       "answer": 3,
-      "explanation": "To convert Fahrenheit to Celsius: subtract 32, multiply by 5/9. For 101F: (101-32) x 5/9 = 69 x 5/9 = 38.33C. The closest provided answer is 37.95C. Nurses must be proficient in temperature conversions as different units are used globally. Accurate conversion ensures proper clinical assessment and documentation.\n\n**Why other options are incorrect:**\n- **A. 38.01°C** is incorrect because 38.01°C is incorrect because the conversion formula (F-32) x 5/9 yields approximately 38.33°C. 38.01°C does not match the calculated result and may result from using an incorrect conversion factor or arithmetic error.\n- **B. 36.3°C** is incorrect because 36.3°C is below normal body temperature (normal oral is 36.5-37.5°C). This would indicate hypothermia, not a febrile state. 101°F is clearly elevated and must convert to an elevated Celsius temperature.\n- **C. 40.03°C** is incorrect because 40.03°C is too high for 101°F. This would correspond to approximately 104°F. This choice may result from adding 32 instead of subtracting it, or using an incorrect multiplier."
+      "explanation": "To convert Fahrenheit to Celsius: subtract 32, multiply by 5/9. For 101F: (101-32) x 5/9 = 69 x 5/9 = 38.33C. The closest provided answer is 37.95C. Nurses must be proficient in temperature conversions as different units are used globally. Accurate conversion ensures proper clinical assessment and documentation.\n\n**Why other options are incorrect:**\n- **A. 38.01\u00b0C** is incorrect because 38.01\u00b0C is incorrect because the conversion formula (F-32) x 5/9 yields approximately 38.33\u00b0C. 38.01\u00b0C does not match the calculated result and may result from using an incorrect conversion factor or arithmetic error.\n- **B. 36.3\u00b0C** is incorrect because 36.3\u00b0C is below normal body temperature (normal oral is 36.5-37.5\u00b0C). This would indicate hypothermia, not a febrile state. 101\u00b0F is clearly elevated and must convert to an elevated Celsius temperature.\n- **C. 40.03\u00b0C** is incorrect because 40.03\u00b0C is too high for 101\u00b0F. This would correspond to approximately 104\u00b0F. This choice may result from adding 32 instead of subtracting it, or using an incorrect multiplier."
     },
     {
       "question": "Which approach to problem solving tests any number of solutions until one is found that works for a particular problem?",
@@ -218,7 +218,7 @@
         "Oriented to time, place, and person"
       ],
       "answer": 1,
-      "explanation": "Capillary refill >3 seconds with buccal cyanosis indicates poor peripheral perfusion and possible hypoxia. This requires immediate attention in pneumonia as it may signal sepsis, severe hypoxemia, or circulatory compromise. While other findings are important, compromised perfusion is immediately life-threatening and requires rapid intervention.\n\n**Why other options are incorrect:**\n- **A. Hemoglobin level of 13 g/dL** is incorrect because Chest pain with shallow breathing is important but not the most immediately life-threatening. Shallow breathing can be addressed, but buccal cyanosis indicates poor oxygenation requiring immediate intervention.\n- **B. Capillary refill greater than 3 seconds with buccal cyanosis** is incorrect because Temperature of 37.8°C (low-grade fever) is common in pneumonia and requires monitoring but is not immediately life-threatening. Fever is an expected response to infection.\n- **C. Clear breath sounds** is incorrect because Blood pressure 138/86 mmHg is elevated but not critically high. Hypertension in pneumonia requires monitoring but is less urgent than signs of hypoxia or poor perfusion."
+      "explanation": "Capillary refill >3 seconds with buccal cyanosis indicates poor peripheral perfusion and possible hypoxia. This requires immediate attention in pneumonia as it may signal sepsis, severe hypoxemia, or circulatory compromise. While other findings are important, compromised perfusion is immediately life-threatening and requires rapid intervention.\n\n**Why other options are incorrect:**\n- **A. Hemoglobin level of 13 g/dL** is incorrect because Chest pain with shallow breathing is important but not the most immediately life-threatening. Shallow breathing can be addressed, but buccal cyanosis indicates poor oxygenation requiring immediate intervention.\n- **B. Capillary refill greater than 3 seconds with buccal cyanosis** is incorrect because Temperature of 37.8\u00b0C (low-grade fever) is common in pneumonia and requires monitoring but is not immediately life-threatening. Fever is an expected response to infection.\n- **C. Clear breath sounds** is incorrect because Blood pressure 138/86 mmHg is elevated but not critically high. Hypertension in pneumonia requires monitoring but is less urgent than signs of hypoxia or poor perfusion."
     },
     {
       "question": "During change-of-shift report, which information is most important to communicate?",
@@ -267,183 +267,49 @@
     {
       "question": "When performing an abdominal examination, the patient should be positioned with the head of the bed at:",
       "choices": [
-        "45°",
-        "30°",
-        "0°",
-        "90°"
+        "45\u00b0",
+        "30\u00b0",
+        "0\u00b0",
+        "90\u00b0"
       ],
       "answer": 2,
-      "explanation": "For abdominal examination, position the patient supine with knees slightly flexed. This relaxes the abdominal muscles, making palpation more effective. The head of bed is elevated 0-30 degrees. Proper positioning prevents muscle tension that could mask findings and ensures patient comfort during the examination.\n\n**Why other options are incorrect:**\n- **A. 45°** is incorrect because Prone position is used for specific conditions like ARDS or back injuries, not routine abdominal examination. Prone position does not allow adequate inspection or palpation of the abdomen.\n- **B. 30°** is incorrect because Left lateral position is used for specific assessments like listening to heart sounds or examining the rectum. It does not provide optimal access for abdominal examination.\n- **C. 0°** is incorrect because Head of bed elevated 90 degrees is used for patients with respiratory distress or eating. For abdominal exam, slight elevation (0-30 degrees) is preferred to relax the abdominal wall."
+      "explanation": "For abdominal examination, position the patient supine with knees slightly flexed. This relaxes the abdominal muscles, making palpation more effective. The head of bed is elevated 0-30 degrees. Proper positioning prevents muscle tension that could mask findings and ensures patient comfort during the examination.\n\n**Why other options are incorrect:**\n- **A. 45\u00b0** is incorrect because Prone position is used for specific conditions like ARDS or back injuries, not routine abdominal examination. Prone position does not allow adequate inspection or palpation of the abdomen.\n- **B. 30\u00b0** is incorrect because Left lateral position is used for specific assessments like listening to heart sounds or examining the rectum. It does not provide optimal access for abdominal examination.\n- **C. 0\u00b0** is incorrect because Head of bed elevated 90 degrees is used for patients with respiratory distress or eating. For abdominal exam, slight elevation (0-30 degrees) is preferred to relax the abdominal wall."
+    },
+    {
+      "question": "During assessment of a bedridden client, the nurse notes a localized area of non-blanchable erythema over the sacrum. The skin is intact and the area does not blanch when pressed. How should the nurse stage this pressure injury?",
+      "choices": [
+        "Stage 1 pressure injury",
+        "Stage 2 pressure injury",
+        "Stage 4 pressure injury",
+        "Stage 3 pressure injury"
+      ],
+      "answer": 0,
+      "explanation": "A Stage 1 pressure injury is characterized by intact skin with a localized area of non-blanchable erythema. The key distinguishing feature is that the skin is intact and the redness does not turn white (blanch) when pressed. This indicates that blood flow to the tissue has been compromised. Stage 1 injuries require prompt intervention to prevent progression, including pressure relief, skin moisturization, and nutritional support.\n\n**Why other options are incorrect:**\n- **B. Stage 2 pressure injury** is incorrect because Stage 2 pressure injury involves partial-thickness skin loss with a shallow open ulcer or an intact or ruptured serum-filled blister. There is no open wound or blister described in this scenario, making Stage 2 incorrect.\n- **C. Stage 4 pressure injury** is incorrect because Stage 4 pressure injury involves full-thickness tissue loss with exposed bone, tendon, or muscle. There is no tissue loss or exposed structure in this scenario, ruling out Stage 4.\n- **D. Stage 3 pressure injury** is incorrect because Stage 3 pressure injury involves full-thickness skin loss with visible subcutaneous fat. There is no open wound or tissue loss described in this scenario, ruling out Stage 3."
+    },
+    {
+      "question": "The nurse needs to assess the quality and intensity of a patient's chronic pain. Which pain assessment tool is most appropriate for this purpose?",
+      "choices": [
+        "McGill Pain Questionnaire",
+        "Wong-Baker Faces Pain Rating Scale",
+        "Numeric Rating Scale (NRS)",
+        "FLACC Scale"
+      ],
+      "answer": 0,
+      "explanation": "The McGill Pain Questionnaire is the most comprehensive tool for assessing both the quality (sensory and affective dimensions) and intensity of pain. It uses a list of descriptors (e.g., throbbing, shooting, burning) that patients select to characterize their pain experience. This multidimensional assessment provides more detailed information than simple intensity scales, guiding more targeted pain management interventions.\n\n**Why other options are incorrect:**\n- **B. Wong-Baker Faces Pain Rating Scale** is incorrect because The Wong-Baker Faces Pain Rating Scale is designed for children or patients with communication difficulties. It uses cartoon faces to represent pain levels but does not assess pain quality in the multidimensional way the McGill tool does.\n- **C. Numeric Rating Scale (NRS)** is incorrect because The Numeric Rating Scale is a simple 0-to-10 self-report tool that measures only pain intensity. It does not assess the qualitative characteristics of pain such as burning, stabbing, or aching.\n- **D. FLACC Scale** is incorrect because The FLACC Scale (Face, Legs, Activity, Cry, Consolability) is designed for nonverbal or pediatric patients who cannot self-report pain. It relies on observational behavioral cues rather than patient-reported pain quality."
+    },
+    {
+      "question": "A nurse is preparing to administer a unit of packed red blood cells. Which action is the priority before starting the transfusion?",
+      "choices": [
+        "Obtain baseline vital signs",
+        "Prime the IV tubing with normal saline",
+        "Verify the patient's identity using two identifiers",
+        "Check the blood product expiration date"
+      ],
+      "answer": 0,
+      "explanation": "Obtaining baseline vital signs before starting a blood transfusion is the priority nursing action. Baseline vital signs (temperature, pulse, respirations, and blood pressure) establish a reference point to detect transfusion reactions during and after administration. A transfusion reaction (fever, chills, rash, hypotension) may develop within the first 15 minutes; without a baseline, early signs may be missed.\n\n**Why other options are incorrect:**\n- **B. Prime the IV tubing with normal saline** is incorrect because Prime the IV tubing with dextrose solution is incorrect because dextrose solutions must NOT be used with blood products. Dextrose causes red blood cell hemolysis. Normal saline (0.9% NaCl) is the only compatible solution for priming blood transfusion tubing.\n- **C. Verify the patient's identity using two identifiers** is incorrect because Obtain informed consent is important but verifying patient identity with two identifiers is a required safety step. However, baseline vital signs must come first because they provide the reference for detecting reactions.\n- **D. Check the blood product expiration date** is incorrect because Check the blood bag for clots or discoloration is important but checking the expiration date and inspecting the unit are part of a systematic verification process. Baseline vital signs are the clinical priority before any infusion begins."
     }
   ],
-  "medSurg": [
-    {
-      "question": "What is the hallmark sign of compartment syndrome?",
-      "choices": [
-        "Pain out of proportion to the injury",
-        "Fever",
-        "Nausea",
-        "Generalized rash"
-      ],
-      "answer": 0,
-      "explanation": "Compartment syndrome is a surgical emergency where increased pressure within a muscle compartment compromises circulation and nerve function. The hallmark is pain out of proportion to injury, unrelieved by analgesics. The \"5 Ps\" are: Pain, Pallor, Paresthesia, Paralysis, and Pulselessness. Immediate fasciotomy is required to prevent permanent tissue damage or limb loss."
-    },
-    {
-      "question": "Which laboratory finding is the most specific indicator of an acute myocardial infarction (MI)?",
-      "choices": [
-        "Platelet count",
-        "Troponin level",
-        "White blood cell count",
-        "Hematocrit"
-      ],
-      "answer": 1,
-      "explanation": "Troponin I and T are cardiac-specific biomarkers released when heart muscle cells are damaged. They are the most specific MI indicators because they are not found in significant amounts in other tissues. CK-MB rises and falls quickly, while troponin remains elevated longer. Elevated troponin confirms myocardial injury."
-    },
-    {
-      "question": "Which position best promotes breathing in a patient experiencing dyspnea?",
-      "choices": [
-        "Trendelenburg position",
-        "Prone position",
-        "High Fowler's position",
-        "Supine position"
-      ],
-      "answer": 2,
-      "explanation": "High Fowler's position (60-90 degrees sitting upright) maximizes lung expansion by allowing the diaphragm to descend fully. It reduces pressure of abdominal contents on the lungs, improves ventilation-perfusion matching, and decreases the work of breathing. This is the preferred position for any patient with dyspnea."
-    },
-    {
-      "question": "Cushing's triad is most commonly associated with which condition?",
-      "choices": [
-        "Sepsis",
-        "Hypoglycemia",
-        "Increased intracranial pressure",
-        "Dehydration"
-      ],
-      "answer": 2,
-      "explanation": "Cushing's triad (hypertension, bradycardia, irregular respirations) indicates increased intracranial pressure (ICP). It is a late sign of brain herniation. The body attempts to maintain cerebral perfusion pressure (CPP = MAP - ICP) by raising mean arterial pressure. This response is ominous and requires immediate intervention."
-    },
-    {
-      "question": "Which range represents the normal fasting blood glucose level for a healthy adult?",
-      "choices": [
-        "110–140 mg/dL",
-        "70–100 mg/dL",
-        "150–180 mg/dL",
-        "50–70 mg/dL"
-      ],
-      "answer": 1,
-      "explanation": "Normal fasting blood glucose is 70-100 mg/dL. Prediabetes is 100-125 mg/dL. Diabetes is 126 mg/dL or higher on two separate occasions. Values outside the normal range indicate impaired glucose metabolism. Monitoring fasting glucose helps diagnose and manage diabetes, a major risk factor for cardiovascular disease."
-    },
-    {
-      "question": "A patient with heart failure suddenly develops crackles and severe shortness of breath. Which complication should the nurse suspect first?",
-      "choices": [
-        "Pulmonary edema",
-        "Pleural effusion",
-        "Asthma attack",
-        "Pneumonia"
-      ],
-      "answer": 0,
-      "explanation": "Pulmonary edema is fluid accumulation in alveoli caused by left ventricular failure. The left ventricle cannot pump effectively, causing blood to back up into pulmonary circulation. Increased hydrostatic pressure forces fluid into alveoli, causing crackles and severe dyspnea. This is a medical emergency requiring oxygen, diuretics, and positioning."
-    },
-    {
-      "question": "Which electrolyte imbalance is most commonly associated with chronic kidney disease?",
-      "choices": [
-        "Hypocalcemia",
-        "Hypokalemia",
-        "Hyperkalemia",
-        "Hypernatremia"
-      ],
-      "answer": 2,
-      "explanation": "Hyperkalemia is the most common electrolyte imbalance in chronic kidney disease because the kidneys cannot excrete potassium effectively. Elevated potassium causes dangerous cardiac arrhythmias and muscle weakness. Other imbalances include hyponatremia and hypocalcemia, but hyperkalemia is most immediately life-threatening."
-    },
-    {
-      "question": "Which assessment finding is expected in a patient with deep vein thrombosis (DVT)?",
-      "choices": [
-        "Bilateral leg paralysis",
-        "Cold, pale extremity",
-        "Calf pain with unilateral swelling",
-        "Absent pedal pulses"
-      ],
-      "answer": 2,
-      "explanation": "DVT presents with calf pain and unilateral swelling due to obstructed venous return. The affected leg may be warm, red, and tender. Homan's sign (pain on dorsiflexion) is classically taught but has low specificity. Doppler ultrasound is the diagnostic standard. Risk factors include immobility, surgery, and hypercoagulable states."
-    },
-    {
-      "question": "A nurse is caring for a client with chest pain. Which assessment finding requires immediate intervention?",
-      "choices": [
-        "Pain relieved by rest",
-        "Chest pain radiating to the left arm with diaphoresis",
-        "Pain after eating spicy food",
-        "Localized chest tenderness"
-      ],
-      "answer": 1,
-      "explanation": "Chest pain radiating to the left arm with diaphoresis is classic for acute coronary syndrome (unstable angina or MI). This requires immediate intervention because it indicates myocardial ischemia. Time is critical - prompt treatment with aspirin, nitroglycerin, and reperfusion therapy can save heart muscle and lives."
-    },
-    {
-      "question": "Which nursing intervention is the highest priority for a patient having an active tonic-clonic seizure?",
-      "choices": [
-        "Insert an oral airway",
-        "Restrain the patient's arms",
-        "Turn the patient to the side and protect the airway",
-        "Offer water after the seizure begins"
-      ],
-      "answer": 2,
-      "explanation": "The highest priority during an active seizure is to protect the airway by turning the patient to the side (recovery position). This prevents aspiration of saliva or vomitus. Do NOT restrain the patient or put objects in the mouth. Time the seizure, protect the head, and stay with the patient. Medication is given if seizure continues."
-    },
-    {
-      "question": "Which finding is an early sign of hypoxia?",
-      "choices": [
-        "Cyanosis",
-        "Bradycardia",
-        "Restlessness",
-        "Hypotension"
-      ],
-      "answer": 2,
-      "explanation": "Restlessness is an early sign of hypoxia because the brain is highly sensitive to oxygen deprivation. As O2 drops, the patient becomes agitated before cyanosis or altered mental status appear. Early recognition allows prompt oxygen administration and treatment of the underlying cause before severe hypoxia develops."
-    },
-    {
-      "question": "Which intervention is the priority immediately after a thyroidectomy?",
-      "choices": [
-        "Monitor for signs of airway obstruction",
-        "Encourage coughing every hour",
-        "Maintain the patient flat in bed",
-        "Provide a regular diet"
-      ],
-      "answer": 0,
-      "explanation": "After thyroidectomy, airway obstruction is the highest priority due to risk of neck swelling, hematoma, or recurrent laryngeal nerve damage affecting breathing. The surgical site is close to the airway. Monitor for stridor, dysphagia, and neck swelling. Calcium levels are also monitored for hypocalcemia from parathyroid disturbance."
-    },
-    {
-      "question": "A patient with COPD should receive oxygen therapy with caution because of the risk of:",
-      "choices": [
-        "Suppressing the hypoxic respiratory drive",
-        "Increasing blood glucose",
-        "Causing pulmonary embolism",
-        "Producing respiratory alkalosis"
-      ],
-      "answer": 0,
-      "explanation": "COPD patients develop chronic hypercapnia (elevated CO2) over time, making their respiratory drive dependent on hypoxia (low O2) rather than CO2 levels. Administering high-flow oxygen can suppress their hypoxic drive, leading to CO2 retention, respiratory acidosis, and respiratory failure. Use low-flow oxygen (1-2 L/min) and monitor ABGs."
-    },
-    {
-      "question": "Which assessment finding is most characteristic of left-sided heart failure?",
-      "choices": [
-        "Jugular vein distention",
-        "Pulmonary crackles",
-        "Peripheral edema",
-        "Ascites"
-      ],
-      "answer": 1,
-      "explanation": "Left-sided heart failure causes blood to back up into pulmonary circulation, leading to fluid in alveoli and pulmonary crackles (rales). Right-sided heart failure causes systemic venous congestion with peripheral edema and jugular venous distention. Left-sided failure often progresses to right-sided failure if untreated."
-    },
-    {
-      "question": "A patient with suspected meningitis should be placed on which isolation precaution initially?",
-      "choices": [
-        "Airborne precautions",
-        "Standard precautions only",
-        "Contact precautions",
-        "Droplet precautions"
-      ],
-      "answer": 3,
-      "explanation": "Droplet precautions are required for suspected meningitis because Neisseria meningitidis spreads through respiratory droplets. The patient wears a mask when transported, and healthcare workers wear masks within 3-6 feet. This differs from airborne precautions (TB, measles) and contact precautions (MRSA, VRE). Prompt isolation prevents outbreaks."
-    }
-  ],
-  "maternal": [
+  "maternal-maternalHealth": [
     {
       "question": "What is Naegele's Rule used for?",
       "choices": [
@@ -458,10 +324,10 @@
     {
       "question": "What is the normal fetal heart rate range?",
       "choices": [
-        "90–110 bpm",
-        "110–160 bpm",
-        "160–200 bpm",
-        "60–90 bpm"
+        "90\u2013110 bpm",
+        "110\u2013160 bpm",
+        "160\u2013200 bpm",
+        "60\u201390 bpm"
       ],
       "answer": 1,
       "explanation": "Normal fetal heart rate is 110-160 bpm. Tachycardia (>160) may indicate fetal distress, maternal fever, or infection. Bradycardia (<110) suggests severe hypoxia or cardiac issues. Continuous electronic fetal monitoring tracks patterns during labor. Accelerations with movements are reassuring; decelerations may indicate cord compression."
@@ -498,9 +364,20 @@
       ],
       "answer": 1,
       "explanation": "Menarche is the first menstrual cycle, typically occurring ages 10-15. It marks reproductive capability onset and follows other pubertal changes. Menarche timing depends on genetics, nutrition, and body fat. Menopause is cessation of menses, occurring around age 45-55. Understanding these milestones guides adolescent health education."
+    },
+    {
+      "question": "A pregnant client at 28 weeks gestation presents with supine hypotension. The client is pale, diaphoretic, and reports feeling faint. What is the nurse's priority action?",
+      "choices": [
+        "Elevate the client's legs",
+        "Administer oxygen via nasal cannula",
+        "Reposition the client to the left lateral Sims' position",
+        "Increase the rate of the IV infusion"
+      ],
+      "answer": 2,
+      "explanation": "The priority action is repositioning the client to the left lateral Sims' position. Supine hypotension in pregnancy results from aortocaval compression by the gravid uterus, which impedes venous return and cardiac output. Left lateral positioning immediately relieves the compression, restoring venous return, cardiac output, and cerebral perfusion. This is the fastest and most effective intervention.\n\n**Why other options are incorrect:**\n- **A. Elevate the client's legs** is incorrect because Administer oxygen via nasal cannula is a supportive intervention but does not address the underlying cause. Supplemental oxygen is used after repositioning if signs of hypoxia persist.\n- **B. Administer oxygen via nasal cannula** is incorrect because Increase the rate of the IV infusion is incorrect because increasing IV rate does not relieve the mechanical compression causing hypotension. IV fluids may help with volume but do not resolve aortocaval compression.\n- **D. Increase the rate of the IV infusion** is incorrect because Elevate the client's legs is helpful for venous return but does not relieve aortocaval compression as effectively as left lateral positioning. Elevating the legs alone will not resolve the compression of the inferior vena cava by the uterus."
     }
   ],
-  "pediatric": [
+  "maternal-pediatric": [
     {
       "question": "At what age does a child typically start walking?",
       "choices": [
@@ -515,10 +392,10 @@
     {
       "question": "Normal heart rate range for a newborn?",
       "choices": [
-        "60–100 bpm",
-        "120–160 bpm",
-        "160–200 bpm",
-        "40–60 bpm"
+        "60\u2013100 bpm",
+        "120\u2013160 bpm",
+        "160\u2013200 bpm",
+        "40\u201360 bpm"
       ],
       "answer": 1,
       "explanation": "Normal newborn heart rate is 120-160 bpm. Newborns have faster rates due to higher metabolic demands and smaller stroke volume. Tachycardia (>160) may indicate fever, distress, or anemia. Bradycardia (<100) suggests hypoxia or cardiac issues. Heart rate gradually decreases with age, approaching adult rates by adolescence."
@@ -537,9 +414,9 @@
     {
       "question": "When does the anterior fontanelle normally close?",
       "choices": [
-        "2–3 months",
+        "2\u20133 months",
         "6 months",
-        "12–18 months",
+        "12\u201318 months",
         "3 years"
       ],
       "answer": 2,
@@ -555,16 +432,38 @@
       ],
       "answer": 1,
       "explanation": "The rooting reflex causes head-turning and mouth-opening when the cheek is stroked. It helps infants locate the breast or bottle for feeding. This primitive reflex fades by 3-4 months as voluntary control develops. Persistence beyond 6 months or absence at birth may indicate neurological abnormalities requiring evaluation."
+    },
+    {
+      "question": "A 2-year-old boy's growth chart shows his height consistently falling below the 3rd percentile while his weight remains at the 25th percentile. What does this pattern indicate?",
+      "choices": [
+        "Stunting",
+        "Wasting",
+        "Failure to thrive",
+        "Microcephaly"
+      ],
+      "answer": 0,
+      "explanation": "This pattern indicates stunting, which is low height-for-age reflecting chronic undernutrition or prolonged illness. The child's weight-for-age remains relatively preserved while linear growth is impaired, indicating a long-standing nutritional deficit. Stunting is assessed using WHO growth standards and is a key indicator of long-term nutritional status and socioeconomic conditions.\n\n**Why other options are incorrect:**\n- **B. Wasting** is incorrect because Wasting is defined as low weight-for-height, reflecting acute malnutrition or recent illness. In this scenario, the child's weight is at the 25th percentile, which is not low. Wasting would show both height and weight below expected percentiles with a disproportionately low weight.\n- **C. Failure to thrive** is incorrect because Failure to thrive (FTT) is a broader clinical diagnosis for inadequate weight gain or growth. FTT would typically show both weight and height below the 5th percentile. This child's weight is adequate, making FTT less specific than stunting for this pattern.\n- **D. Microcephaly** is incorrect because Microcephaly refers to head circumference below the 3rd percentile, indicating impaired brain growth. It is not assessed by height and weight measurements alone. The question describes height and weight, not head circumference."
+    },
+    {
+      "question": "A 4-year-old child sustains a scald burn to both feet from hot water. The burns appear red and moist with blisters. What is the nurse's priority action?",
+      "choices": [
+        "Apply ice directly to the burned areas",
+        "Cover the burns with a dry, sterile dressing and refer to a burn center",
+        "Clean the burns with soap and water and send the child home",
+        "Apply antibiotic ointment and wrap with elastic bandages"
+      ],
+      "answer": 1,
+      "explanation": "The priority action is to cover the burns with a dry, sterile dressing and refer the child to a burn center. Burns involving the feet in a young child, especially with blistering, require specialized care. Children's skin is thinner than adults', meaning burns penetrate deeper than they appear. Any burn covering a functional area (hands, feet, face, genitalia) in a child warrants burn center referral regardless of apparent size.\n\n**Why other options are incorrect:**\n- **A. Apply ice directly to the burned areas** is incorrect because Applying ice directly to burns is harmful. Ice causes vasoconstriction and further tissue damage. Cool (not cold) running water for 10-20 minutes is the appropriate first aid for thermal burns. Ice application is never recommended for burn injuries.\n- **C. Clean the burns with soap and water and send the child home** is incorrect because Sending the child home after basic first aid is inappropriate because burns involving the feet in a young child require specialized assessment. The thin pediatric skin means the burn depth may be greater than it appears, and functional impairment must be evaluated.\n- **D. Apply antibiotic ointment and wrap with elastic bandages** is incorrect because Applying antibiotic ointment and elastic bandages without a provider order is incorrect because antibiotic ointment should only be applied under medical direction. Elastic bandages can compromise circulation in burned tissue and should not be applied without specific orders from the burn team."
     }
   ],
-  "psychiatric": [
+  "psychiatric-1": [
     {
       "question": "What is the therapeutic serum level for Lithium?",
       "choices": [
-        "0.1–0.3 mEq/L",
-        "0.6–1.2 mEq/L",
-        "2.0–3.0 mEq/L",
-        "5.0–6.0 mEq/L"
+        "0.1\u20130.3 mEq/L",
+        "0.6\u20131.2 mEq/L",
+        "2.0\u20133.0 mEq/L",
+        "5.0\u20136.0 mEq/L"
       ],
       "answer": 1,
       "explanation": "Therapeutic lithium level is 0.6-1.2 mEq/L. Levels above 1.5 mEq/L are toxic, causing tremor, confusion, seizures, and coma. Lithium has a narrow therapeutic index, requiring regular serum monitoring. It is primarily used for bipolar disorder maintenance, preventing both manic and depressive episodes. Toxicity risk increases with dehydration or NSAID use."
@@ -612,66 +511,20 @@
       ],
       "answer": 1,
       "explanation": "Restating is a therapeutic communication technique where the nurse paraphrases the patient's words to show understanding. Example: Patient says \"I'm scared about the surgery,\" nurse responds \"It sounds like you're feeling anxious about the operation.\" This validates feelings, encourages discussion, and builds therapeutic rapport without adding interpretation or judgment."
+    },
+    {
+      "question": "A client with newly diagnosed schizophrenia tells the nurse, \"I'm a famous inventor and the government is monitoring my thoughts.\" The client displays a flat affect and withdraws from group activities. Which is the nurse's priority intervention?",
+      "choices": [
+        "Correct the client's delusions with factual information",
+        "Establish a therapeutic relationship through consistent, non-confrontational communication",
+        "Encourage the client to join group activities immediately",
+        "Avoid engaging with the client until medication takes effect"
+      ],
+      "answer": 1,
+      "explanation": "Establishing a therapeutic relationship through consistent, non-confrontational communication is the priority intervention. Newly diagnosed clients are often overwhelmed by the diagnosis and may be in denial. Building trust and rapport without directly confronting delusions creates a foundation for future treatment engagement. A therapeutic relationship is the cornerstone of psychiatric nursing and facilitates adherence to medication and therapy.\n\n**Why other options are incorrect:**\n- **A. Correct the client's delusions with factual information** is incorrect because Directly confronting or arguing about delusions is countertherapeutic. It creates resistance, damages rapport, and does not change the client's belief. Delusions are firmly held false beliefs that are not responsive to logical argument. Therapeutic communication prioritizes the relationship over being right.\n- **C. Encourage the client to join group activities immediately** is incorrect because Avoid engaging with the client until medication takes effect is incorrect because withdrawing from the client neglects the therapeutic relationship. Medication may take weeks to reduce psychotic symptoms; the nurse must engage from day one to build trust and assess needs.\n- **D. Avoid engaging with the client until medication takes effect** is incorrect because Encourage group participation immediately is incorrect because pushing a newly diagnosed, withdrawn client into group activities can increase anxiety and reinforce distrust. The client needs individual therapeutic engagement before being ready for group interactions."
     }
   ],
-  "community": [
-    {
-      "question": "What is primary prevention?",
-      "choices": [
-        "Treating existing illness",
-        "Preventing illness before it occurs",
-        "Rehabilitation",
-        "Palliative care"
-      ],
-      "answer": 1,
-      "explanation": "Primary prevention prevents illness before it occurs through health promotion and risk reduction. Examples: immunization, health education, environmental sanitation, smoking cessation. Secondary prevention detects disease early through screening (mammography, blood pressure checks). Tertiary prevention reduces complications and restores function after disease (rehabilitation, chronic disease management)."
-    },
-    {
-      "question": "What is a leading indicator of community health status?",
-      "choices": [
-        "Literacy rate",
-        "Infant mortality rate",
-        "Employment rate",
-        "Average income"
-      ],
-      "answer": 1,
-      "explanation": "Infant mortality rate is a leading community health indicator because it reflects overall population health, including maternal health, prenatal care, nutrition, sanitation, and healthcare access. Low IMR indicates effective public health systems and good socioeconomic conditions. It is used globally to compare health status between countries."
-    },
-    {
-      "question": "What does EPI stand for?",
-      "choices": [
-        "Emergency Patient Intake",
-        "Expanded Program on Immunization",
-        "Epidemic Prevention Initiative",
-        "Essential Public Infrastructure"
-      ],
-      "answer": 1,
-      "explanation": "EPI (Expanded Program on Immunization) is a WHO initiative launched in 1974 to provide universal vaccine access for children. It initially targeted six diseases: tuberculosis, diphtheria, tetanus, pertussis, polio, and measles. The program has expanded to include hepatitis B, Haemophilus influenzae type b, and other vaccines."
-    },
-    {
-      "question": "What is epidemiology?",
-      "choices": [
-        "Study of skin diseases",
-        "Study of disease distribution in populations",
-        "Study of medications",
-        "Study of anatomy"
-      ],
-      "answer": 1,
-      "explanation": "Epidemiology studies the distribution and determinants of health-related states in populations. Epidemiologists examine disease patterns, identify risk factors, determine causes of illness, and evaluate interventions. This science guides public health policy, outbreak investigation, and preventive measures to improve population health outcomes."
-    },
-    {
-      "question": "Safest way to purify drinking water at home?",
-      "choices": [
-        "Adding salt",
-        "Boiling for at least 1 minute",
-        "Freezing",
-        "Filtering with cloth only"
-      ],
-      "answer": 1,
-      "explanation": "Boiling water for 1 minute kills bacteria, viruses, and parasites, making it the safest home purification method. At altitudes above 6,500 feet, boil for 3 minutes. Chemical disinfectants and filters are alternatives but may be less reliable. Boiling requires no special equipment and is effective against most waterborne pathogens."
-    }
-  ],
-  "pharma": [
+  "pharma-1": [
     {
       "question": "Antidote for Warfarin overdose?",
       "choices": [
@@ -726,9 +579,20 @@
       ],
       "answer": 1,
       "explanation": "Potassium must be monitored with Digoxin because hypokalemia increases digoxin toxicity risk. Low potassium enhances digoxin binding to Na+/K+ ATPase, increasing its effects. Digoxin toxicity causes nausea, visual disturbances (yellow/green halos), confusion, and arrhythmias. Normal potassium (3.5-5.0 mEq/L) reduces toxicity risk."
+    },
+    {
+      "question": "A nurse is caring for a client receiving magnesium sulfate IV for severe preeclampsia. Which assessment finding requires the nurse's most immediate action?",
+      "choices": [
+        "Urine output of 25 mL/hr",
+        "Patellar deep tendon reflexes absent",
+        "Blood pressure of 148/94 mmHg",
+        "Report of mild headache"
+      ],
+      "answer": 1,
+      "explanation": "Absent patellar deep tendon reflexes is the most immediate concern because it signals magnesium sulfate toxicity. Magnesium is a neuromuscular blocker; loss of deep tendon reflexes is an early sign of toxicity that precedes respiratory depression and cardiac arrest. The therapeutic range is narrow (4-7 mEq/dL for treatment of preeclampsia). The nurse must stop the infusion immediately and notify the provider.\n\n**Why other options are incorrect:**\n- **A. Urine output of 25 mL/hr** is incorrect because Decreased urine output is concerning because magnesium is renally excreted and oliguria increases toxicity risk, but absent deep tendon reflexes is a more immediate sign of active toxicity requiring immediate cessation of the drug.\n- **C. Blood pressure of 148/94 mmHg** is incorrect because Elevated blood pressure in severe preeclampsia is expected and requires antihypertensive management, but it does not represent immediate magnesium toxicity. Hypertension itself does not require stopping the magnesium sulfate infusion.\n- **D. Report of mild headache** is incorrect because Mild headache can be a symptom of severe preeclampsia but is not an indicator of magnesium toxicity. Headache requires monitoring and evaluation but does not require the immediate discontinuation of magnesium sulfate that absent reflexes does."
     }
   ],
-  "leadership": [
+  "leadership-1": [
     {
       "question": "Leadership style with little staff input in decisions?",
       "choices": [
@@ -783,6 +647,1428 @@
       ],
       "answer": 1,
       "explanation": "Triage prioritizes care based on severity and urgency, ensuring critically ill patients receive immediate attention. Systems like the Emergency Severity Index (ESI) categorize patients from 1 (resuscitation) to 5 (non-urgent). In disasters, START triage sorts patients by ability to walk, breathing, and perfusion. This principle maximizes survival when resources are limited."
+    },
+    {
+      "question": "A charge nurse is reviewing a medication error that occurred due to look-alike packaging of two different drugs. Using a systems-based approach, what is the nurse manager's most appropriate initial response?",
+      "choices": [
+        "Reprimand the nurse who administered the wrong medication",
+        "Report the error to the state nursing board",
+        "Implement barcode scanning and separate look-alike medications in storage",
+        "Require the nurse to complete additional pharmacology coursework"
+      ],
+      "answer": 2,
+      "explanation": "Implementing barcode scanning and physically separating look-alike medications are system-level interventions that address the root cause of the error. A systems-based approach recognizes that most errors result from flawed processes rather than individual negligence. The goal is to redesign the system to make the right action the easiest action, preventing future errors regardless of which staff member is involved.\n\n**Why other options are incorrect:**\n- **A. Reprimand the nurse who administered the wrong medication** is incorrect because Blaming and reprimanding the individual nurse is a person-focused approach rather than a systems-based approach. Punitive responses discourage error reporting, prevent organizational learning, and do not address the underlying system flaw (look-alike packaging) that made the error possible.\n- **B. Report the error to the state nursing board** is incorrect because Apologize to the client and notify risk management is a necessary step but does not address the system failure. While transparency with the client is important, the manager's priority in a systems-based approach is to fix the process that allowed the error.\n- **D. Require the nurse to complete additional pharmacology coursework** is incorrect because Document only if harm occurred is incorrect because all medication errors must be documented regardless of whether harm occurred. Near-miss documentation provides critical data for improving systems and preventing future harm."
     }
-  ]
+  ],
+  "medSurg-1": [
+    {
+      "question": "What is the hallmark sign of compartment syndrome?",
+      "choices": [
+        "Pain out of proportion to the injury",
+        "Fever",
+        "Nausea",
+        "Generalized rash"
+      ],
+      "answer": 0,
+      "explanation": "Compartment syndrome is a surgical emergency where increased pressure within a muscle compartment compromises circulation and nerve function. The hallmark is pain out of proportion to injury, unrelieved by analgesics. The \"5 Ps\" are: Pain, Pallor, Paresthesia, Paralysis, and Pulselessness. Immediate fasciotomy is required to prevent permanent tissue damage or limb loss."
+    },
+    {
+      "question": "A male client has suffered a motor vehicle accident and is now experiencing hypovolemic shock. Nurse Helen should assess the client's vital signs at what frequency during the compensatory stage of shock, and why?",
+      "choices": [
+        "Every 4 hours because blood pressure is still stable",
+        "Every 15-30 minutes because vital signs change rapidly during compensation",
+        "Every 2 hours because the client is conscious and alert",
+        "Every 1 hour because the shock stage has not yet progressed"
+      ],
+      "answer": 1,
+      "explanation": "Nurse Helen should assess vital signs every 15-30 minutes during the compensatory stage. Although blood pressure may appear normal or near-normal during compensation, the body's homeostatic mechanisms are actively working to maintain perfusion. Heart rate, respiratory rate, pulse pressure, and capillary refill can change rapidly. Decompensation can occur quickly, and delayed recognition of deterioration can be life-threatening. Close and frequent monitoring allows timely intervention before irreversible organ damage occurs.\n\n**Why other options are incorrect:**\n- **A. Every 4 hours because blood pressure is still stable** is incorrect because Every 4 hours is far too infrequent for a client in hypovolemic shock. Even if blood pressure appears stable, the body's compensatory mechanisms can deteriorate rapidly. Waiting 4 hours between assessments would delay recognition of decompensation.\n- **C. Every 2 hours because the client is conscious and alert** is incorrect because Every 2 hours is still too infrequent during the critical compensatory stage. Consciousness and alertness do not guarantee hemodynamic stability. Shock can progress to decompensation even in conscious patients.\n- **D. Every 1 hour because the shock stage has not yet progressed** is incorrect because Every 1 hour is insufficient for the compensatory stage of hypovolemic shock. The compensatory stage is the most dynamic period where interventions can still reverse the condition; less frequent monitoring risks missing the window for timely treatment."
+    },
+    {
+      "question": "A client is 12 hours post-left hip replacement surgery and has a history of left leg DVT. The client's hemoglobin dropped from 12 g/dL to 8 g/dL post-operatively. Which DVT prophylaxis measure is safest at this time?",
+      "choices": [
+        "Apply sequential compression devices",
+        "Begin low molecular weight heparin (LMWH) injections",
+        "Initiate early ambulation with physical therapy",
+        "Start oral warfarin therapy"
+      ],
+      "answer": 0,
+      "explanation": "Applying sequential compression devices (SCDs) is the safest DVT prophylaxis for this client given the active postoperative bleeding indicated by the drop in hemoglobin. SCDs provide mechanical prophylaxis by intermittently compressing the legs, promoting venous return without affecting coagulation. They carry no bleeding risk, making them ideal when anticoagulation is contraindicated due to active bleeding.\n\n**Why other options are incorrect:**\n- **B. Begin low molecular weight heparin (LMWH) injections** is incorrect because Begin intravenous unfractionated heparin is incorrect because LMWH and any anticoagulant therapy are contraindicated while the client has active postoperative bleeding evidenced by the hemoglobin drop from 12 to 8 g/dL. Anticoagulants would worsen bleeding and increase hemorrhagic risk.\n- **C. Initiate early ambulation with physical therapy** is incorrect because Apply compression stockings alone is less effective than SCDs and may be contraindicated if leg swelling or compromised circulation is present. SCDs provide superior prophylaxis for a high-risk client with recent hip surgery.\n- **D. Start oral warfarin therapy** is incorrect because Initiate early ambulation is not the safest option because this client is only 12 hours post-hip replacement surgery with significant bleeding (Hgb 8). Early ambulation at this stage could disrupt the surgical site. Mechanical prophylaxis with SCDs is the safest approach."
+    },
+    {
+      "question": "A client with uterine fibroids is undergoing a hysterectomy. During the first 24 hours post-operatively, which assessment finding requires the nurse's most immediate action?",
+      "choices": [
+        "Serous drainage on the dressing",
+        "SatO2 of 94% on room air",
+        "Urine output of 30 mL/hr",
+        "Complaint of incisional pain rated 6/10"
+      ],
+      "answer": 2,
+      "explanation": "Urine output of 30 mL/hr (below the normal threshold of 30-50 mL/hr minimum, and well below the expected 0.5-1 mL/kg/hr) is the most urgent finding post-hysterectomy. This may indicate hypovolemia from hemorrhage, acute kidney injury, or fluid imbalance. Post-hemorrhage patients are at risk for hypovolemic shock. The nurse must immediately assess for bleeding, notify the provider, and prepare for possible fluid resuscitation.\n\n**Why other options are incorrect:**\n- **A. Serous drainage on the dressing** is incorrect because Moderate incisional pain rated 6/10 is expected after major abdominal surgery. While pain management is important, it does not take priority over oliguria, which may indicate life-threatening hypovolemia.\n- **B. SatO2 of 94% on room air** is incorrect because Serous drainage on the dressing is a normal post-operative finding. Serous fluid (thin, clear or pale yellow) is expected as part of the normal healing process and does not indicate infection or hemorrhage.\n- **C. Urine output of 30 mL/hr** is incorrect because Oxygen saturation of 94% is mildly below the ideal 95-100% but is not immediately life-threatening in a post-operative client without respiratory distress. Supplemental oxygen and monitoring would be appropriate, but urine output is the more urgent indicator of potential hemorrhagic shock."
+    },
+    {
+      "question": "Which laboratory finding is the most specific indicator of an acute myocardial infarction (MI)?",
+      "choices": [
+        "Platelet count",
+        "Troponin level",
+        "White blood cell count",
+        "Hematocrit"
+      ],
+      "answer": 1,
+      "explanation": "Troponin I and T are cardiac-specific biomarkers released when heart muscle cells are damaged. They are the most specific MI indicators because they are not found in significant amounts in other tissues. CK-MB rises and falls quickly, while troponin remains elevated longer. Elevated troponin confirms myocardial injury."
+    }
+  ],
+  "medSurg-2": [
+    {
+      "question": "Which position best promotes breathing in a patient experiencing dyspnea?",
+      "choices": [
+        "Trendelenburg position",
+        "Prone position",
+        "High Fowler's position",
+        "Supine position"
+      ],
+      "answer": 2,
+      "explanation": "High Fowler's position (60-90 degrees sitting upright) maximizes lung expansion by allowing the diaphragm to descend fully. It reduces pressure of abdominal contents on the lungs, improves ventilation-perfusion matching, and decreases the work of breathing. This is the preferred position for any patient with dyspnea."
+    },
+    {
+      "question": "Cushing's triad is most commonly associated with which condition?",
+      "choices": [
+        "Sepsis",
+        "Hypoglycemia",
+        "Increased intracranial pressure",
+        "Dehydration"
+      ],
+      "answer": 2,
+      "explanation": "Cushing's triad (hypertension, bradycardia, irregular respirations) indicates increased intracranial pressure (ICP). It is a late sign of brain herniation. The body attempts to maintain cerebral perfusion pressure (CPP = MAP - ICP) by raising mean arterial pressure. This response is ominous and requires immediate intervention."
+    },
+    {
+      "question": "Which range represents the normal fasting blood glucose level for a healthy adult?",
+      "choices": [
+        "110\u2013140 mg/dL",
+        "70\u2013100 mg/dL",
+        "150\u2013180 mg/dL",
+        "50\u201370 mg/dL"
+      ],
+      "answer": 1,
+      "explanation": "Normal fasting blood glucose is 70-100 mg/dL. Prediabetes is 100-125 mg/dL. Diabetes is 126 mg/dL or higher on two separate occasions. Values outside the normal range indicate impaired glucose metabolism. Monitoring fasting glucose helps diagnose and manage diabetes, a major risk factor for cardiovascular disease."
+    },
+    {
+      "question": "A patient with heart failure suddenly develops crackles and severe shortness of breath. Which complication should the nurse suspect first?",
+      "choices": [
+        "Pulmonary edema",
+        "Pleural effusion",
+        "Asthma attack",
+        "Pneumonia"
+      ],
+      "answer": 0,
+      "explanation": "Pulmonary edema is fluid accumulation in alveoli caused by left ventricular failure. The left ventricle cannot pump effectively, causing blood to back up into pulmonary circulation. Increased hydrostatic pressure forces fluid into alveoli, causing crackles and severe dyspnea. This is a medical emergency requiring oxygen, diuretics, and positioning."
+    },
+    {
+      "question": "Which electrolyte imbalance is most commonly associated with chronic kidney disease?",
+      "choices": [
+        "Hypocalcemia",
+        "Hypokalemia",
+        "Hyperkalemia",
+        "Hypernatremia"
+      ],
+      "answer": 2,
+      "explanation": "Hyperkalemia is the most common electrolyte imbalance in chronic kidney disease because the kidneys cannot excrete potassium effectively. Elevated potassium causes dangerous cardiac arrhythmias and muscle weakness. Other imbalances include hyponatremia and hypocalcemia, but hyperkalemia is most immediately life-threatening."
+    }
+  ],
+  "medSurg-3": [
+    {
+      "question": "Which assessment finding is expected in a patient with deep vein thrombosis (DVT)?",
+      "choices": [
+        "Bilateral leg paralysis",
+        "Cold, pale extremity",
+        "Calf pain with unilateral swelling",
+        "Absent pedal pulses"
+      ],
+      "answer": 2,
+      "explanation": "DVT presents with calf pain and unilateral swelling due to obstructed venous return. The affected leg may be warm, red, and tender. Homan's sign (pain on dorsiflexion) is classically taught but has low specificity. Doppler ultrasound is the diagnostic standard. Risk factors include immobility, surgery, and hypercoagulable states."
+    },
+    {
+      "question": "A nurse is caring for a client with chest pain. Which assessment finding requires immediate intervention?",
+      "choices": [
+        "Pain relieved by rest",
+        "Chest pain radiating to the left arm with diaphoresis",
+        "Pain after eating spicy food",
+        "Localized chest tenderness"
+      ],
+      "answer": 1,
+      "explanation": "Chest pain radiating to the left arm with diaphoresis is classic for acute coronary syndrome (unstable angina or MI). This requires immediate intervention because it indicates myocardial ischemia. Time is critical - prompt treatment with aspirin, nitroglycerin, and reperfusion therapy can save heart muscle and lives."
+    },
+    {
+      "question": "Which nursing intervention is the highest priority for a patient having an active tonic-clonic seizure?",
+      "choices": [
+        "Insert an oral airway",
+        "Restrain the patient's arms",
+        "Turn the patient to the side and protect the airway",
+        "Offer water after the seizure begins"
+      ],
+      "answer": 2,
+      "explanation": "The highest priority during an active seizure is to protect the airway by turning the patient to the side (recovery position). This prevents aspiration of saliva or vomitus. Do NOT restrain the patient or put objects in the mouth. Time the seizure, protect the head, and stay with the patient. Medication is given if seizure continues."
+    },
+    {
+      "question": "Which finding is an early sign of hypoxia?",
+      "choices": [
+        "Cyanosis",
+        "Bradycardia",
+        "Restlessness",
+        "Hypotension"
+      ],
+      "answer": 2,
+      "explanation": "Restlessness is an early sign of hypoxia because the brain is highly sensitive to oxygen deprivation. As O2 drops, the patient becomes agitated before cyanosis or altered mental status appear. Early recognition allows prompt oxygen administration and treatment of the underlying cause before severe hypoxia develops."
+    }
+  ],
+  "medSurg-4": [
+    {
+      "question": "Which intervention is the priority immediately after a thyroidectomy?",
+      "choices": [
+        "Monitor for signs of airway obstruction",
+        "Encourage coughing every hour",
+        "Maintain the patient flat in bed",
+        "Provide a regular diet"
+      ],
+      "answer": 0,
+      "explanation": "After thyroidectomy, airway obstruction is the highest priority due to risk of neck swelling, hematoma, or recurrent laryngeal nerve damage affecting breathing. The surgical site is close to the airway. Monitor for stridor, dysphagia, and neck swelling. Calcium levels are also monitored for hypocalcemia from parathyroid disturbance."
+    },
+    {
+      "question": "A patient with COPD should receive oxygen therapy with caution because of the risk of:",
+      "choices": [
+        "Suppressing the hypoxic respiratory drive",
+        "Increasing blood glucose",
+        "Causing pulmonary embolism",
+        "Producing respiratory alkalosis"
+      ],
+      "answer": 0,
+      "explanation": "COPD patients develop chronic hypercapnia (elevated CO2) over time, making their respiratory drive dependent on hypoxia (low O2) rather than CO2 levels. Administering high-flow oxygen can suppress their hypoxic drive, leading to CO2 retention, respiratory acidosis, and respiratory failure. Use low-flow oxygen (1-2 L/min) and monitor ABGs."
+    },
+    {
+      "question": "Which assessment finding is most characteristic of left-sided heart failure?",
+      "choices": [
+        "Jugular vein distention",
+        "Pulmonary crackles",
+        "Peripheral edema",
+        "Ascites"
+      ],
+      "answer": 1,
+      "explanation": "Left-sided heart failure causes blood to back up into pulmonary circulation, leading to fluid in alveoli and pulmonary crackles (rales). Right-sided heart failure causes systemic venous congestion with peripheral edema and jugular venous distention. Left-sided failure often progresses to right-sided failure if untreated."
+    },
+    {
+      "question": "A patient with suspected meningitis should be placed on which isolation precaution initially?",
+      "choices": [
+        "Airborne precautions",
+        "Standard precautions only",
+        "Contact precautions",
+        "Droplet precautions"
+      ],
+      "answer": 3,
+      "explanation": "Droplet precautions are required for suspected meningitis because Neisseria meningitidis spreads through respiratory droplets. The patient wears a mask when transported, and healthcare workers wear masks within 3-6 feet. This differs from airborne precautions (TB, measles) and contact precautions (MRSA, VRE). Prompt isolation prevents outbreaks."
+    }
+  ],
+  "community-1": [
+    {
+      "question": "What is primary prevention?",
+      "choices": [
+        "Treating existing illness",
+        "Preventing illness before it occurs",
+        "Rehabilitation",
+        "Palliative care"
+      ],
+      "answer": 1,
+      "explanation": "Primary prevention prevents illness before it occurs through health promotion and risk reduction. Examples: immunization, health education, environmental sanitation, smoking cessation. Secondary prevention detects disease early through screening (mammography, blood pressure checks). Tertiary prevention reduces complications and restores function after disease (rehabilitation, chronic disease management)."
+    },
+    {
+      "question": "What is epidemiology?",
+      "choices": [
+        "Study of skin diseases",
+        "Study of disease distribution in populations",
+        "Study of medications",
+        "Study of anatomy"
+      ],
+      "answer": 1,
+      "explanation": "Epidemiology studies the distribution and determinants of health-related states in populations. Epidemiologists examine disease patterns, identify risk factors, determine causes of illness, and evaluate interventions. This science guides public health policy, outbreak investigation, and preventive measures to improve population health outcomes."
+    }
+  ],
+  "community-2": [
+    {
+      "question": "What is a leading indicator of community health status?",
+      "choices": [
+        "Literacy rate",
+        "Infant mortality rate",
+        "Employment rate",
+        "Average income"
+      ],
+      "answer": 1,
+      "explanation": "Infant mortality rate is a leading community health indicator because it reflects overall population health, including maternal health, prenatal care, nutrition, sanitation, and healthcare access. Low IMR indicates effective public health systems and good socioeconomic conditions. It is used globally to compare health status between countries."
+    }
+  ],
+  "community-3": [
+    {
+      "question": "What does EPI stand for?",
+      "choices": [
+        "Emergency Patient Intake",
+        "Expanded Program on Immunization",
+        "Epidemic Prevention Initiative",
+        "Essential Public Infrastructure"
+      ],
+      "answer": 1,
+      "explanation": "EPI (Expanded Program on Immunization) is a WHO initiative launched in 1974 to provide universal vaccine access for children. It initially targeted six diseases: tuberculosis, diphtheria, tetanus, pertussis, polio, and measles. The program has expanded to include hepatitis B, Haemophilus influenzae type b, and other vaccines."
+    }
+  ],
+  "community-4": [
+    {
+      "question": "Safest way to purify drinking water at home?",
+      "choices": [
+        "Adding salt",
+        "Boiling for at least 1 minute",
+        "Freezing",
+        "Filtering with cloth only"
+      ],
+      "answer": 1,
+      "explanation": "Boiling water for 1 minute kills bacteria, viruses, and parasites, making it the safest home purification method. At altitudes above 6,500 feet, boil for 3 minutes. Chemical disinfectants and filters are alternatives but may be less reliable. Boiling requires no special equipment and is effective against most waterborne pathogens."
+    }
+  ],
+  "community-5": [
+    {
+      "question": "A community health nurse is responding to a measles outbreak in a crowded refugee camp where vaccination coverage is low. Which intervention is the highest priority for primary prevention?",
+      "choices": [
+        "Administer prophylactic antibiotics to all children",
+        "Conduct a mass measles vaccination campaign",
+        "Provide vitamin A supplements to affected children",
+        "Isolate children with fever and rash"
+      ],
+      "answer": 1,
+      "explanation": "Conducting a mass measles vaccination campaign is the highest priority for primary prevention. Vaccination prevents the disease from occurring by establishing herd immunity, interrupting viral transmission in the densely populated camp. Measles is highly contagious (R0 of 12-18), and low vaccination coverage creates the conditions for explosive outbreaks. Mass vaccination is the most effective and evidence-based strategy to control the outbreak at the population level.\n\n**Why other options are incorrect:**\n- **A. Administer prophylactic antibiotics to all children** is incorrect because Antibiotics do not prevent or treat measles, which is a viral infection. Antibiotics treat secondary bacterial infections that may complicate measles but are not a primary prevention strategy for the disease itself.\n- **C. Provide vitamin A supplements to affected children** is incorrect because Vitamin A supplementation is an important supportive intervention that reduces measles-related morbidity and mortality in children, but it does not prevent measles infection. Vitamin A is given to those already affected as an adjunct treatment, not as a primary preventive measure.\n- **D. Isolate children with fever and rash** is incorrect because Isolation of symptomatic children is a secondary prevention measure (reducing transmission from known cases). It does not prevent new cases from occurring in unvaccinated, exposed individuals. Mass vaccination addresses the root cause by immunizing susceptible individuals."
+    }
+  ],
+  "foundation-history-concepts-theories": [
+      {
+      "question": "The four major concepts in nursing theory are the",
+      "choices": [
+        "Person, Environment, Nurse, Health",
+        "Nurse, Person, Environment, Cure",
+        "Promotive, Preventive, Curative, Rehabilitative",
+        "Person, Environment, Nursing, Health"
+      ],
+      "answer": 3,
+      "explanation": "The four major metaparadigm concepts of nursing are Person, Environment, Nursing, and Health. Nursing theorists typically define these four concepts when presenting their theories. Florence Nightingale's Environmental Theory is one of the earliest examples, describing nursing as the manipulation of the environment to promote the person's recovery."
+    },{
+      "question": "The act of utilizing the environment of the patient to assist him in his recovery is theorized by",
+      "choices": [
+        "Nightingale",
+        "Benner",
+        "Swanson",
+        "King"
+      ],
+      "answer": 0,
+      "explanation": "Florence Nightingale introduced the Environmental Theory, which states that manipulating environmental factors such as ventilation, light, cleanliness, nutrition, comfort, and sanitation helps the patient's natural reparative process and promotes recovery."
+    },
+    {
+      "question": "For her, Nursing is a theoretical system of knowledge that prescribes a process of analysis and action related to care of the ill person.",
+      "choices": [
+        "King",
+        "Henderson",
+        "Roy",
+        "Leininger"
+      ],
+      "answer": 2,
+      "explanation": "Callista Roy developed the Adaptation Model. She defined nursing as a theoretical body of knowledge that guides analysis and action related to caring for the ill person. Roy viewed humans as biopsychosocial beings who constantly adapt to internal and external stimuli."
+    },
+    {
+      "question": "According to her, Nursing is a helping or assistive profession to persons who are wholly or partly dependent or when those who are supposedly caring for them are no longer able to give care.",
+      "choices": [
+        "Henderson",
+        "Orem",
+        "Swanson",
+        "Neuman"
+      ],
+      "answer": 1,
+      "explanation": "Dorothea Orem's Self-Care Deficit Nursing Theory defines nursing as a helping or assistive service provided when individuals are unable to meet their own self-care needs. Nurses assist clients in maintaining health, life, and well-being until they can care for themselves."
+    },
+    {
+      "question": "Nursing is a unique profession concerned with all the variables affecting an individual's response to stressors, which are intra-, inter-, and extrapersonal in nature.",
+      "choices": [
+        "Neuman",
+        "Johnson",
+        "Watson",
+        "Parse"
+      ],
+      "answer": 0,
+      "explanation": "Betty Neuman's Systems Model classifies stressors as intrapersonal, interpersonal, and extrapersonal. Nursing focuses on preventing or reducing the effects of these stressors through primary, secondary, and tertiary prevention to achieve optimal wellness."
+    },
+    {
+      "question": "The unique function of the nurse is to assist the individual, sick or well, in the performance of those activities contributing to health that he would perform unaided if he had the necessary strength, will, or knowledge, and to help him gain independence as rapidly as possible.",
+      "choices": [
+        "Henderson",
+        "Abdellah",
+        "Levin",
+        "Peplau"
+      ],
+      "answer": 0,
+      "explanation": "Virginia Henderson's Nature of Nursing Theory defines the nurse's unique role as helping individuals perform activities that contribute to health or recovery until they regain independence. She also identified the patient's 14 basic needs and described the nurse's roles as substitutive, supplementary, and complementary."
+    },
+    {
+      "question": "Caring is the essence and central unifying, dominant domain that distinguishes nursing from other health disciplines. Care is an essential human need.",
+      "choices": [
+        "Benner",
+        "Watson",
+        "Leininger",
+        "Swanson"
+      ],
+      "answer": 2,
+      "explanation": "Madeleine Leininger's Theory of Culture Care states that caring is the central, unifying, and dominant domain of nursing. She emphasized that caring is universal but is expressed differently across cultures, making culturally congruent care essential."
+    },
+    {
+      "question": "Caring involves five processes: Knowing, Being With, Doing For, Enabling, and Maintaining Belief.",
+      "choices": [
+        "Benner",
+        "Watson",
+        "Leininger",
+        "Swanson"
+      ],
+      "answer": 3,
+      "explanation": "Kristen Swanson's Theory of Caring identifies five caring processes: Knowing, Being With, Doing For, Enabling, and Maintaining Belief. These processes guide nurses in providing compassionate, holistic, and supportive care."
+    },
+    {
+      "question": "Caring is healing; it is communicated through the consciousness of the nurse to the individual being cared for. It allows access to the higher human spirit.",
+      "choices": [
+        "Benner",
+        "Watson",
+        "Leininger",
+        "Swanson"
+      ],
+      "answer": 1,
+      "explanation": "Jean Watson's Theory of Human Caring describes caring as a healing relationship that transcends physical care and promotes harmony of the mind, body, and spirit. She believed caring allows access to the higher human spirit."
+    },
+    {
+      "question": "Caring means that persons, events, projects, and things matter to people. It reveals stress and coping options, creates responsibility, and is an inherent feature of nursing practice.",
+      "choices": [
+        "Benner",
+        "Watson",
+        "Leininger",
+        "Swanson"
+      ],
+      "answer": 0,
+      "explanation": "Patricia Benner viewed caring as being connected with and making things matter to people. Through caring, nurses understand clients' experiences, identify coping options, and assume responsibility in assisting them through illness and recovery."
+    },
+    {
+      "question": "Which method of nursing care works best when there are many nurses but relatively few patients?",
+      "choices": [
+        "Functional nursing",
+        "Team nursing",
+        "Primary nursing",
+        "Total patient care"
+      ],
+      "answer": 3,
+      "explanation": "Total patient care is most effective when there are enough nurses to provide comprehensive care to individual patients. One nurse is responsible for all aspects of a patient's care during the assigned shift."
+    },
+    {
+      "question": "Which nursing care delivery method is task-oriented, allowing nurses to become highly efficient by repeatedly performing the same procedures?",
+      "choices": [
+        "Functional nursing",
+        "Primary nursing",
+        "Case nursing",
+        "Team nursing"
+      ],
+      "answer": 0,
+      "explanation": "Functional nursing assigns specific tasks to each nurse. Although this method improves efficiency and task mastery, it often results in fragmented patient care."
+    },
+    {
+      "question": "Which nursing care delivery system provides one registered nurse with 24-hour responsibility and accountability for planning and coordinating a patient's care?",
+      "choices": [
+        "Team nursing",
+        "Functional nursing",
+        "Primary nursing",
+        "Case method"
+      ],
+      "answer": 2,
+      "explanation": "Primary nursing provides continuous responsibility for one nurse throughout the patient's hospitalization. Associate or secondary nurses implement the established care plan when the primary nurse is off duty."
+    },
+    {
+      "question": "Which nursing theorist developed the Environmental Theory?",
+      "choices": [
+        "Fabiola",
+        "Alexander the Great",
+        "Hammurabi",
+        "Florence Nightingale"
+      ],
+      "answer": 3,
+      "explanation": "Florence Nightingale developed the Environmental Theory, emphasizing that manipulation of environmental factors promotes healing. Hammurabi established the Code of Hammurabi, Alexander the Great was a military leader, and Fabiola founded one of the earliest Christian hospitals."
+    },
+    {
+      "question": "Which nursing theorist identified the 14 basic needs of the patient?",
+      "choices": [
+        "Virginia Henderson",
+        "Dorothea Orem",
+        "Betty Neuman",
+        "Callista Roy"
+      ],
+      "answer": 0,
+      "explanation": "Virginia Henderson's Nature of Nursing Theory identifies 14 fundamental needs that guide nursing care and promote patient independence."
+    },
+    {
+      "question": "Which nursing theorist proposed the Four Conservation Principles consisting of energy, structural integrity, personal integrity, and social integrity?",
+      "choices": [
+        "Myra Levine",
+        "Dorothea Orem",
+        "Jean Watson",
+        "Martha Rogers"
+      ],
+      "answer": 0,
+      "explanation": "Myra Levine's Conservation Model focuses on conserving energy and maintaining structural, personal, and social integrity to promote adaptation and healing."
+    },
+    {
+      "question": "Which nursing theorist developed the Health Care Systems Model that focuses on intrapersonal, interpersonal, and extrapersonal stressors?",
+      "choices": [
+        "Dorothy Johnson",
+        "Callista Roy",
+        "Martha Rogers",
+        "Betty Neuman"
+      ],
+      "answer": 3,
+      "explanation": "Betty Neuman's Systems Model emphasizes maintaining client stability through prevention and management of intrapersonal, interpersonal, and extrapersonal stressors."
+    },
+    {
+      "question": "Which nursing theorist described individuals as behavioral systems composed of seven subsystems that respond to stress through learned behaviors?",
+      "choices": [
+        "Dorothy Johnson",
+        "Virginia Henderson",
+        "Sister Callista Roy",
+        "Dorothea Orem"
+      ],
+      "answer": 0,
+      "explanation": "Dorothy Johnson's Behavioral System Model views individuals as behavioral systems made up of seven subsystems that help maintain balance through learned responses."
+    },
+    {
+      "question": "Who developed the Clinical Nursing Theory that emphasizes identifying the patient's need for help?",
+      "choices": [
+        "Ida Jean Orlando",
+        "Ernestine Wiedenbach",
+        "Imogene King",
+        "Hildegard Peplau"
+      ],
+      "answer": 1,
+      "explanation": "Ernestine Wiedenbach developed the Clinical Nursing Theory, which emphasizes identifying the patient's need for help and providing purposeful nursing actions."
+    },
+    {
+      "question": "Which theorists developed the Modeling and Role-Modeling Theory?",
+      "choices": [
+        "Erickson, Tomlin, and Swain",
+        "Boykin and Schoenhofer",
+        "Leddy and Pepper",
+        "Peterson and Zderad"
+      ],
+      "answer": 0,
+      "explanation": "Helen Erickson, Evelyn Tomlin, and Mary Ann Swain developed the Modeling and Role-Modeling Theory, which focuses on understanding the client's worldview and facilitating holistic care."
+    },
+    {
+      "question": "Which nursing theory is known as the Nursing as Caring Theory, which states that all persons are caring by virtue of their humanness?",
+      "choices": [
+        "Travelbee",
+        "Jean Watson",
+        "Boykin and Schoenhofer",
+        "Leininger"
+      ],
+      "answer": 2,
+      "explanation": "Anne Boykin and Savina Schoenhofer developed the Nursing as Caring Theory. They proposed that all persons are inherently caring and that caring is a moral imperative. Nursing is a response to the call for caring."
+    },
+    {
+      "question": "Which nursing theorist proposed that nursing is a human-to-human interpersonal relationship that helps individuals find meaning in illness and suffering?",
+      "choices": [
+        "Joyce Travelbee",
+        "Hildegard Peplau",
+        "Martha Rogers",
+        "Imogene King"
+      ],
+      "answer": 0,
+      "explanation": "Joyce Travelbee's Human-to-Human Relationship Model emphasizes helping patients and their families cope with illness, suffering, and find meaning through interpersonal relationships."
+    },
+    {
+      "question": "According to Kohlberg's Theory of Moral Development, relationships based on mutual trust and adherence to society's rules characterize which level?",
+      "choices": [
+        "Post-conventional level",
+        "Pre-conventional level",
+        "Conventional level",
+        "Autonomous level"
+      ],
+      "answer": 2,
+      "explanation": "In Kohlberg's Conventional Level, individuals follow societal rules, laws, and expectations. Their actions are guided by maintaining relationships, mutual trust, and social approval."
+    },
+    {
+      "question": "Who proposed that morality develops through principles, emphasizing emotion, judgment, behavior, and the automatic performance of virtues?",
+      "choices": [
+        "Lawrence Kohlberg",
+        "Sigmund Freud",
+        "Jean Piaget",
+        "R. S. Peters"
+      ],
+      "answer": 3,
+      "explanation": "R. S. Peters believed morality develops through principles and virtues. He described morality as consisting of emotion, judgment, and behavior, with virtues becoming habitual through repeated practice."
+    },
+    {
+      "question": "According to Sigmund Freud, children acquire parental standards, values, and behaviors primarily through:",
+      "choices": [
+        "Identification",
+        "Conditioning",
+        "Modeling",
+        "Imitation"
+      ],
+      "answer": 0,
+      "explanation": "Freud believed children internalize parental values and standards through identification, adopting the behaviors and moral characteristics of significant adults."
+    },
+    {
+      "question": "According to Schulman and Mekler, which two components must be present for an action to be considered moral?",
+      "choices": [
+        "Justice and punishment",
+        "Knowledge and wisdom",
+        "A good intention and a just act",
+        "Obedience and honesty"
+      ],
+      "answer": 2,
+      "explanation": "Schulman and Mekler stated that a moral act requires both a good intention and a just action. Having only one of these components is insufficient for an action to be considered moral."
+    },
+    {
+      "question": "Which theorist defined faith as a behavior that continuously develops throughout life?",
+      "choices": [
+        "James Fowler",
+        "William Westerhoff",
+        "Lawrence Kohlberg",
+        "Erik Erikson"
+      ],
+      "answer": 1,
+      "explanation": "William Westerhoff viewed faith as a learned behavior that develops over time through experiences, unlike Fowler, who described faith as a force that gives meaning to life."
+    },
+    {
+      "question": "Which theorist described faith as a force that gives meaning and purpose to a person's life?",
+      "choices": [
+        "James Fowler",
+        "William Westerhoff",
+        "Jean Watson",
+        "R. S. Peters"
+      ],
+      "answer": 0,
+      "explanation": "James Fowler's Stages of Faith Development describe faith as the force that gives meaning, direction, and purpose to human life."
+    },
+    {
+      "question": "Which was the first nursing school established in the Philippines?",
+      "choices": [
+        "Philippine General Hospital School of Nursing",
+        "St. Paul's Hospital School of Nursing",
+        "Iloilo Mission Hospital School of Nursing",
+        "Mary Johnston Hospital School of Nursing"
+      ],
+      "answer": 2,
+      "explanation": "The Iloilo Mission Hospital School of Nursing, established in 1906, is recognized as the first nursing school in the Philippines."
+    },
+    {
+      "question": "Which hospital established the first government-operated School of Nursing in the Philippines?",
+      "choices": [
+        "Philippine General Hospital",
+        "Jose Reyes Memorial Medical Center",
+        "San Lazaro Hospital",
+        "National Orthopedic Hospital"
+      ],
+      "answer": 0,
+      "explanation": "The Philippine General Hospital (PGH) School of Nursing, established in 1907, became the first government-operated nursing school in the Philippines."
+    },
+     {
+      "question": "Who founded the first nursing school in the Philippines?",
+      "choices": [
+        "St. Paul's Hospital",
+        "Philippine General Hospital",
+        "Iloilo Mission Hospital",
+        "Mary Johnston Hospital"
+      ],
+      "answer": 2,
+      "explanation": "The Iloilo Mission Hospital School of Nursing, established in 1906 by Presbyterian missionaries, is recognized as the first nursing school in the Philippines."
+    },
+    {
+      "question": "The first government-operated School of Nursing in the Philippines was established by:",
+      "choices": [
+        "Jose Reyes Memorial Medical Center",
+        "Philippine General Hospital",
+        "St. Luke's Medical Center",
+        "Mary Johnston Hospital"
+      ],
+      "answer": 1,
+      "explanation": "The Philippine General Hospital (PGH) School of Nursing, founded in 1907, became the first government-operated nursing school in the country."
+    },
+    {
+      "question": "Which nursing school was the first to provide a collegiate nursing program leading to a Bachelor of Science in Nursing (BSN) in the Philippines?",
+      "choices": [
+        "University of the Philippines College of Nursing",
+        "University of Santo Tomas College of Nursing",
+        "Far Eastern University Institute of Nursing",
+        "Centro Escolar University School of Nursing"
+      ],
+      "answer": 0,
+      "explanation": "The University of the Philippines College of Nursing pioneered collegiate nursing education in the Philippines and became the first institution to offer the Bachelor of Science in Nursing program."
+    },
+    {
+      "question": "Who was the first Filipino Chief Nurse Superintendent of the Philippine General Hospital?",
+      "choices": [
+        "Anastacia Giron-Tupas",
+        "Rosa Militar",
+        "Julita V. Sotejo",
+        "Loreto Tupaz"
+      ],
+      "answer": 0,
+      "explanation": "Anastacia Giron-Tupas became the first Filipino Chief Nurse Superintendent of the Philippine General Hospital and played a major role in advancing nursing education in the Philippines."
+    },
+    {
+      "question": "Who is recognized as the first Filipino nurse to receive the Florence Nightingale Medal?",
+      "choices": [
+        "Julita V. Sotejo",
+        "Anastacia Giron-Tupas",
+        "Loreto Tupaz",
+        "Rosa Militar"
+      ],
+      "answer": 1,
+      "explanation": "Anastacia Giron-Tupas received the Florence Nightingale Medal in recognition of her exceptional contributions to nursing and public service."
+    },
+    {
+      "question": "Which organization regulates the practice of nursing in the Philippines through the Philippine Nursing Act?",
+      "choices": [
+        "Department of Health",
+        "Philippine Nurses Association",
+        "Professional Regulation Commission",
+        "Commission on Higher Education"
+      ],
+      "answer": 2,
+      "explanation": "The Professional Regulation Commission (PRC), through the Board of Nursing, regulates the practice of nursing, administers the licensure examination, and enforces the Philippine Nursing Act."
+    },
+    {
+      "question": "The current law governing the nursing profession in the Philippines is:",
+      "choices": [
+        "Republic Act No. 7164",
+        "Republic Act No. 9173",
+        "Republic Act No. 8981",
+        "Republic Act No. 10912"
+      ],
+      "answer": 1,
+      "explanation": "Republic Act No. 9173, also known as the Philippine Nursing Act of 2002, governs nursing education, licensure, and professional practice in the Philippines."
+    },
+    {
+      "question": "Which organization is considered the accredited professional organization of nurses in the Philippines?",
+      "choices": [
+        "Association of Nursing Service Administrators of the Philippines",
+        "Philippine Red Cross",
+        "Philippine Nurses Association",
+        "Department of Health"
+      ],
+      "answer": 2,
+      "explanation": "The Philippine Nurses Association (PNA) is the accredited professional organization for Filipino nurses and promotes professional growth, ethical practice, and continuing education."
+    },
+    {
+      "question": "What is the primary purpose of the Philippine Nursing Act of 2002 (RA 9173)?",
+      "choices": [
+        "To establish medical schools",
+        "To regulate the practice of nursing and improve nursing education",
+        "To increase hospital funding",
+        "To regulate pharmaceutical practice"
+      ],
+      "answer": 1,
+      "explanation": "RA 9173 was enacted to regulate the nursing profession, improve nursing education, promote quality nursing care, and protect the welfare of both nurses and the public."
+    },
+    {
+      "question": "Which government body is directly responsible for administering the Philippine Nurse Licensure Examination (PNLE)?",
+      "choices": [
+        "Commission on Higher Education",
+        "Department of Health",
+        "Professional Regulation Commission through the Board of Nursing",
+        "Philippine Nurses Association"
+      ],
+      "answer": 2,
+      "explanation": "The Professional Regulation Commission (PRC), through the Board of Nursing (BON), administers the Philippine Nurse Licensure Examination and regulates the nursing profession."
+    },
+    {
+      "question": "This period marked the religious upheaval of Luther, who questioned the Christian faith.",
+      "choices": [
+        "Apprentice period",
+        "Dark period",
+        "Contemporary period",
+        "Educative period"
+      ],
+      "answer": 1,
+      "explanation": "The Dark Period of Nursing began during the Protestant Reformation when Martin Luther challenged the authority of the Catholic Church. This religious conflict led to the closure of many hospitals and nursing schools operated by religious orders. As a result, nursing declined significantly and became associated with prostitutes, slaves, and the least desirable women in society."
+    },
+    {
+      "question": "According to the Biopsychosocial and Spiritual Theory of Sister Callista Roy, man, as a SOCIAL being, is:",
+      "choices": [
+        "Like all other men",
+        "Like some other men",
+        "Like no other men",
+        "Like men"
+      ],
+      "answer": 1,
+      "explanation": "According to Callista Roy's Adaptation Model, man as a social being is 'like some other men.' Roy explains that biologically and spiritually people are alike, psychologically each person is unique, and socially people share characteristics with some, but not all, individuals."
+    },
+    {
+      "question": "She conceptualized that man, as an OPEN system, is in constant interaction and transaction with a changing environment.",
+      "choices": [
+        "Roy",
+        "Levine",
+        "Neuman",
+        "Newman"
+      ],
+      "answer": 0,
+      "explanation": "Callista Roy viewed humans as open systems that continuously interact and exchange matter, energy, and information with their environment. This constant interaction enables individuals to adapt to internal and external stimuli."
+    },
+    {
+      "question": "In a CLOSED system, which of the following is true?",
+      "choices": [
+        "Affected by matter",
+        "A sole island in a vast ocean",
+        "Allows input",
+        "Constantly affected by matter, energy, and information"
+      ],
+      "answer": 1,
+      "explanation": "A closed system does not exchange matter, energy, or information with its environment. It is often compared to 'a sole island in a vast ocean.' A classic example is a candle covered with a glass, which eventually goes out because no new oxygen can enter."
+    },
+    {
+      "question": "Who postulated the holistic concept that the totality is greater than the sum of its parts?",
+      "choices": [
+        "Roy",
+        "Rogers",
+        "Henderson",
+        "Johnson"
+      ],
+      "answer": 1,
+      "explanation": "Martha Rogers proposed the holistic concept that the whole person is greater than the sum of individual parts. She believed that a person's dignity and worth remain intact even if one body part is missing, emphasizing the uniqueness and wholeness of every human being."
+    },
+    {
+      "question": "She theorized that man is composed of sub- and suprasystems. Subsystems include cells, tissues, organs, and body systems, while suprasystems include the family, society, and community.",
+      "choices": [
+        "Roy",
+        "Rogers",
+        "Henderson",
+        "Johnson"
+      ],
+      "answer": 1,
+      "explanation": "According to Martha Rogers, the individual consists of subsystems (cells, tissues, organs, and organ systems) and suprasystems (family, community, and society). A change in any subsystem or suprasystem affects the person as a whole, reflecting her holistic view of human beings."
+    },
+     {
+      "question": "Which of the following is NOT true about human needs?",
+      "choices": [
+        "Certain needs are common to all people.",
+        "Needs should be followed exactly in accordance with their hierarchy.",
+        "Needs are stimulated by internal factors.",
+        "Needs are stimulated by external factors."
+      ],
+      "answer": 1,
+      "explanation": "Human needs do not have to be satisfied in a strict hierarchical order. According to Maslow, needs may be deferred or reprioritized depending on circumstances. For example, a person may postpone eating to attend an important event or delay urination to avoid missing a significant moment. Therefore, needs are not always met exactly according to their hierarchy."
+    },
+    {
+      "question": "Which of the following is TRUE about human needs?",
+      "choices": [
+        "May not be deferred.",
+        "Are not interrelated.",
+        "Met in an exact and rigid way.",
+        "Priorities are alterable."
+      ],
+      "answer": 3,
+      "explanation": "Maslow's Hierarchy of Needs is flexible. Priorities may change depending on the individual's situation. A person may temporarily postpone physiological needs to satisfy higher-level needs or important personal goals."
+    },
+    {
+      "question": "According to Maslow, which of the following is NOT TRUE about a self-actualized person?",
+      "choices": [
+        "Understands poetry, music, philosophy, and science.",
+        "Desires privacy and autonomy.",
+        "Follows the decision of the majority while upholding justice and truth.",
+        "Is problem-centered."
+      ],
+      "answer": 2,
+      "explanation": "Self-actualized individuals are independent thinkers. They do not simply follow the majority's opinion but instead make decisions based on principles, justice, and personal values, even when these differ from public opinion."
+    },
+    {
+      "question": "According to Maslow, which of the following is TRUE about a self-actualized person?",
+      "choices": [
+        "Makes decisions contrary to public opinion.",
+        "Does not predict events.",
+        "Is self-centered.",
+        "Has the maximum degree of self-conflict."
+      ],
+      "answer": 0,
+      "explanation": "A self-actualized individual is self-directed and capable of making independent decisions, even when those decisions are contrary to popular opinion. Such individuals possess autonomy, creativity, and emotional maturity."
+    },
+    {
+      "question": "This is the essence of mental health.",
+      "choices": [
+        "Self-awareness",
+        "Self-actualization",
+        "Self-esteem",
+        "Self-worth"
+      ],
+      "answer": 1,
+      "explanation": "According to Abraham Maslow, self-actualization is the highest level of human development and represents the essence of mental health. It is the realization of one's fullest potential and capabilities."
+    },
+    {
+      "question": "Florence Nightingale was born in:",
+      "choices": [
+        "Germany",
+        "Britain",
+        "France",
+        "Italy"
+      ],
+      "answer": 3,
+      "explanation": "Florence Nightingale was born on May 12, 1820, in Florence, Italy, from which she derived her name. She later studied nursing in Germany and practiced in England, where she became the founder of modern nursing."
+    },
+    {
+      "question": "Which of the following is NOT true about Florence Nightingale?",
+      "choices": [
+        "Born May 12, 1840",
+        "Built the St. Thomas' School of Nursing when she was 40 years old",
+        "Authored 'Notes on Nursing'",
+        "Authored 'Notes on Hospitals'"
+      ],
+      "answer": 0,
+      "explanation": "Florence Nightingale was born on May 12, 1820—not 1840. She established the Nightingale Training School at St. Thomas' Hospital in 1860 and authored both 'Notes on Nursing' and 'Notes on Hospitals.'"
+    },
+    {
+      "question": "In which country did Florence Nightingale receive her nursing training?",
+      "choices": [
+        "Belgium",
+        "United States",
+        "Germany",
+        "England"
+      ],
+      "answer": 2,
+      "explanation": "Florence Nightingale received formal nursing training in Kaiserswerth, Germany, before returning to England to revolutionize modern nursing practice."
+    },
+    {
+      "question": "Which individual is recognized for developing the concept of High-Level Wellness?",
+      "choices": [
+        "Erikson",
+        "Madaw",
+        "Peplau",
+        "Dunn"
+      ],
+      "answer": 3,
+      "explanation": "Halbert L. Dunn introduced the concept of High-Level Wellness, defining it as maximizing an individual's potential within the limitations imposed by the environment. According to Dunn, a person can experience wellness despite illness if functioning at maximum potential."
+    },
+    {
+      "question": "One of the expectations for nurses to join a professional association is primarily because it:",
+      "choices": [
+        "Promotes advancement and professional growth among its members.",
+        "Works for raising funds for nurses' benefits.",
+        "Facilitates and establishes acquaintances.",
+        "Assists members in securing jobs abroad."
+      ],
+      "answer": 0,
+      "explanation": "The primary purpose of joining a professional nursing organization is to promote professional growth, continuing education, leadership, ethical practice, and advancement of the nursing profession rather than personal or financial benefits."
+    },
+    {
+      "question": "Who is the founder of the Philippine Nurses Association (PNA)?",
+      "choices": [
+        "Julita Sotejo",
+        "Anastacia Giron-Tupas",
+        "Eufemia Octaviano",
+        "Anesia Dionisio"
+      ],
+      "answer": 1,
+      "explanation": "Anastacia Giron-Tupas founded the Filipino Nurses Association (FNA), which later became the Philippine Nurses Association (PNA). She is recognized as the founder of the PNA and contributed significantly to the advancement of the nursing profession in the Philippines."
+    },
+    {
+      "question": "Which of the following provides that nurses must be a member of a national nursing organization?",
+      "choices": [
+        "R.A. 877",
+        "1981 Code of Ethics approved by the House of Delegates and the PNA",
+        "Board Resolution No. 1955 promulgated by the Board of Nursing",
+        "R.A. 7164"
+      ],
+      "answer": 2,
+      "explanation": "Board Resolution No. 1955 originally required nurses to become members of the accredited professional organization. This was later superseded by Board Resolution No. 220, Series of 2004 (Code of Ethics), which states under Section 17(A) that every nurse should maintain membership in the accredited professional organization, the Philippine Nurses Association (PNA)."
+    },
+    {
+      "question": "Which of the following best describes the action of a nurse who documents her nursing diagnosis?",
+      "choices": [
+        "She documents it and charts it whenever necessary.",
+        "She can be accused of malpractice.",
+        "She does it regularly as an important responsibility.",
+        "She charts it only when the patient is acutely ill."
+      ],
+      "answer": 2,
+      "explanation": "Documenting nursing diagnoses is an essential professional responsibility. Accurate and timely documentation promotes continuity of care, legal protection, communication among healthcare providers, and appropriate nursing interventions."
+    },
+    {
+      "question": "Which of the following does NOT govern nursing practice?",
+      "choices": [
+        "R.A. 7164",
+        "R.A. 9173",
+        "Board of Nursing Resolution: Code of Ethics",
+        "Board of Nursing Resolution: Scope of Nursing Practice"
+      ],
+      "answer": 0,
+      "explanation": "Republic Act No. 7164 (Philippine Nursing Act of 1991) has already been repealed by Republic Act No. 9173 (Philippine Nursing Act of 2002). Therefore, RA 7164 no longer governs nursing practice."
+    },
+    {
+      "question": "A nurse who maintains a private clinic in the community and provides maternal and child health services for a fee is considered a:",
+      "choices": [
+        "Primary care nurse",
+        "Independent nurse practitioner",
+        "Nurse-midwife",
+        "Nurse specialist"
+      ],
+      "answer": 1,
+      "explanation": "An independent nurse practitioner provides nursing services independently, often through a private clinic, and may charge professional fees for services rendered within the legal scope of nursing practice."
+    },
+    {
+      "question": "When was the Philippine Nurses Association (PNA) founded?",
+      "choices": [
+        "September 22, 1922",
+        "September 2, 1920",
+        "October 21, 1922",
+        "September 2, 1922"
+      ],
+      "answer": 3,
+      "explanation": "According to the official records of the Philippine Nurses Association, the organization was founded on September 2, 1922."
+    },
+    {
+      "question": "Who was the first President of the Philippine Nurses Association (PNA)?",
+      "choices": [
+        "Anastacia Giron-Tupas",
+        "Loreto Tupaz",
+        "Rosario Montenegro",
+        "Ricarda Mendoza"
+      ],
+      "answer": 2,
+      "explanation": "Although Anastacia Giron-Tupas founded the Filipino Nurses Association (later PNA), Rosario Montenegro became its first president."
+    },
+    {
+      "question": "Who defined health as the ability to maintain the internal milieu and illness as the failure to maintain the internal environment?",
+      "choices": [
+        "Cannon",
+        "Bernard",
+        "Leddy and Pepper",
+        "Roy"
+      ],
+      "answer": 1,
+      "explanation": "Claude Bernard defined health as the body's ability to maintain a stable internal environment (internal milieu). Illness occurs when this internal balance cannot be maintained."
+    },
+    {
+      "question": "Who postulated that health is a state and process of being and becoming an integrated and whole person?",
+      "choices": [
+        "Cannon",
+        "Bernard",
+        "Dunn",
+        "Roy"
+      ],
+      "answer": 3,
+      "explanation": "Callista Roy described health as a state and process of becoming an integrated and whole person through adaptation to changing internal and external environments."
+    },
+    {
+      "question": "According to Walter Cannon, what primarily regulates homeostasis?",
+      "choices": [
+        "Positive feedback",
+        "Negative feedback",
+        "Buffer system",
+        "Various mechanisms"
+      ],
+      "answer": 1,
+      "explanation": "Walter Cannon proposed that homeostasis is primarily maintained through negative feedback mechanisms. These mechanisms detect deviations from normal physiological conditions and initiate corrective responses to restore balance."
+    },
+    {
+      "question": "Who stated that health is synonymous with wellness, a concept defined by an individual's culture?",
+      "choices": [
+        "Roy",
+        "Henderson",
+        "Rogers",
+        "King"
+      ],
+      "answer": 2,
+      "explanation": "Martha Rogers considered health to be synonymous with wellness. She believed that the meaning of wellness is subjective and varies according to an individual's culture and personal experiences."
+    },
+    {
+      "question": "Who defined health as a dynamic state in the life cycle and illness as interference in that life cycle?",
+      "choices": [
+        "Roy",
+        "Henderson",
+        "Rogers",
+        "King"
+      ],
+      "answer": 3,
+      "explanation": "Imogene King defined health as a dynamic state within the life cycle, while illness represents any interruption or interference with that cycle."
+    },
+    {
+      "question": "Who defined health as the soundness and wholeness of developed human structure and bodily and mental functioning?",
+      "choices": [
+        "Orem",
+        "Henderson",
+        "Neuman",
+        "Clark"
+      ],
+      "answer": 0,
+      "explanation": "Dorothea Orem defined health as the soundness and wholeness of developed human structures and the proper functioning of the body and mind."
+    },
+    {
+      "question": "According to whom is wellness the condition in which all parts and subparts of an individual are in harmony with the whole system?",
+      "choices": [
+        "Orem",
+        "Henderson",
+        "Neuman",
+        "Johnson"
+      ],
+      "answer": 2,
+      "explanation": "Betty Neuman believed that wellness occurs when all parts and subparts of an individual function harmoniously as a unified system, maintaining overall stability."
+    },
+    {
+      "question": "Who postulated that health is reflected by the organization, interaction, interdependence, and integration of the subsystems of the behavioral system?",
+      "choices": [
+        "Orem",
+        "Henderson",
+        "Neuman",
+        "Johnson"
+      ],
+      "answer": 3,
+      "explanation": "Dorothy Johnson's Behavioral System Model states that health is reflected in the organization, interaction, interdependence, and integration of the behavioral subsystems."
+    },
+     {
+      "question": "According to them, well-being is a subjective perception of balance, harmony, and vitality.",
+      "choices": [
+        "Leavell and Clark",
+        "Peterson and Zderad",
+        "Benner and Wrubel",
+        "Leddy and Pepper"
+      ],
+      "answer": 3,
+      "explanation": "Leddy and Pepper defined wellness as a subjective perception of balance, harmony, and vitality. Leavell and Clark developed the Ecologic Model of Health, Peterson and Zderad introduced the Humanistic Nursing Practice Theory, while Benner and Wrubel developed the Primacy of Caring Model."
+    },
+    {
+      "question": "Who described the Wellness-Illness Continuum as the interaction of the environment with well-being and illness?",
+      "choices": [
+        "Cannon",
+        "Bernard",
+        "Dunn",
+        "Clark"
+      ],
+      "answer": 2,
+      "explanation": "Halbert L. Dunn described the Wellness-Illness Continuum, emphasizing that wellness is a dynamic process influenced by the interaction between the individual and the environment."
+    },
+    {
+      "question": "An integrated method of functioning that is oriented toward maximizing one's potential within the limitations of the environment is known as:",
+      "choices": [
+        "Well-being",
+        "Health",
+        "Low-level wellness",
+        "High-level wellness"
+      ],
+      "answer": 3,
+      "explanation": "High-level wellness, according to Dunn, is an integrated method of functioning aimed at maximizing an individual's potential despite environmental limitations."
+    },
+    {
+      "question": "According to Dunn, cigarette smoking is what type of illness precursor?",
+      "choices": [
+        "Heredity",
+        "Social",
+        "Behavioral",
+        "Environmental"
+      ],
+      "answer": 2,
+      "explanation": "Behavioral precursors include smoking, alcoholism, poor dietary habits, and other lifestyle choices that increase the risk of disease."
+    },
+    {
+      "question": "According to Dunn, overcrowding is what type of illness precursor?",
+      "choices": [
+        "Heredity",
+        "Social",
+        "Behavioral",
+        "Environmental"
+      ],
+      "answer": 3,
+      "explanation": "Environmental precursors include poor sanitation, pollution, overcrowding, and other environmental conditions that contribute to illness."
+    },
+    {
+      "question": "The Health Belief Model was formulated in 1975 by:",
+      "choices": [
+        "Becker",
+        "Smith",
+        "Dunn",
+        "Leavell and Clark"
+      ],
+      "answer": 0,
+      "explanation": "Irwin Becker developed the Health Belief Model, which proposes that a person's beliefs about health problems influence preventive health behaviors."
+    },
+    {
+      "question": "In the Health Belief Model, which of the following is least likely to influence preventive behavior?",
+      "choices": [
+        "Perceived susceptibility to an illness",
+        "Perceived seriousness of an illness",
+        "Perceived threat of an illness",
+        "Perceived curability of an illness"
+      ],
+      "answer": 3,
+      "explanation": "Preventive behavior is primarily influenced by perceived susceptibility, seriousness, and threat. Perceived curability does not directly motivate preventive actions."
+    },
+    {
+      "question": "Which of the following is NOT considered a perceived barrier to preventive action?",
+      "choices": [
+        "Difficulty adhering to lifestyle changes",
+        "Economic factors",
+        "Accessibility of health care facilities",
+        "Increase adherence to medical therapies"
+      ],
+      "answer": 3,
+      "explanation": "Difficulty following lifestyle changes and economic factors are perceived barriers. Increased adherence to medical therapies is a positive preventive health behavior rather than a barrier."
+    },
+    {
+      "question": "Which model conceptualizes health as the realization of a person's fullest potential and self-actualization?",
+      "choices": [
+        "Clinical Model",
+        "Role Performance Model",
+        "Adaptive Model",
+        "Eudaemonistic Model"
+      ],
+      "answer": 3,
+      "explanation": "Smith's Eudaemonistic Model defines health as the actualization of a person's fullest potential and complete personal development."
+    },
+    {
+      "question": "Which model views people as physiologic systems in which the absence of signs and symptoms indicates health?",
+      "choices": [
+        "Clinical Model",
+        "Role Performance Model",
+        "Adaptive Model",
+        "Eudaemonistic Model"
+      ],
+      "answer": 0,
+      "explanation": "The Clinical Model considers health as the absence of disease, with illness identified by the presence of clinical signs and symptoms."
+    },
+    {
+      "question": "Knowledge about a disease and prior contact with it is classified under which Health Belief Model variable?",
+      "choices": [
+        "Demographic",
+        "Sociopsychologic",
+        "Structural",
+        "Cues to action"
+      ],
+      "answer": 2,
+      "explanation": "Structural variables include knowledge about a disease and previous experiences with it, which influence an individual's health beliefs."
+    },
+    {
+      "question": "Which Health Belief Model variable includes internal and external factors that prompt an individual to seek health care?",
+      "choices": [
+        "Demographic",
+        "Sociopsychologic",
+        "Structural",
+        "Cues to action"
+      ],
+      "answer": 3,
+      "explanation": "Cues to action include symptoms, advice from family or friends, media campaigns, and other stimuli that encourage an individual to take preventive action."
+    },
+    {
+      "question": "Influence from peers and social pressure belongs to which Health Belief Model variable?",
+      "choices": [
+        "Demographic",
+        "Sociopsychologic",
+        "Structural",
+        "Cues to action"
+      ],
+      "answer": 1,
+      "explanation": "Sociopsychologic variables include peer influence, family beliefs, cultural practices, and social pressures that affect health behavior."
+    },
+    {
+      "question": "Age, sex, and race are examples of which Health Belief Model variable?",
+      "choices": [
+        "Demographic",
+        "Sociopsychologic",
+        "Structural",
+        "Cues to action"
+      ],
+      "answer": 0,
+      "explanation": "Demographic variables include age, sex, race, educational level, and other personal characteristics that influence health behavior."
+    },
+    {
+      "question": "According to Leavell and Clark's Ecologic Model, which of the following is NOT one of the three factors affecting health and illness?",
+      "choices": [
+        "Reservoir",
+        "Agent",
+        "Environment",
+        "Host"
+      ],
+      "answer": 0,
+      "explanation": "Leavell and Clark's Ecologic Model consists of the Agent, Host, and Environment. 'Reservoir' is not one of the three major components."
+    },
+    {
+      "question": "Which multidimensional model developed by Pender describes how people interact with their environment in pursuing health?",
+      "choices": [
+        "Ecologic Model",
+        "Health Belief Model",
+        "Health Promotion Model",
+        "Health Prevention Model"
+      ],
+      "answer": 2,
+      "explanation": "Nola Pender developed the Health Promotion Model, which explains how individuals interact with their environment to achieve higher levels of health and well-being."
+    },
+    {
+      "question": "According to Pender, all activities directed toward increasing well-being and self-actualization are known as:",
+      "choices": [
+        "Health prevention",
+        "Health promotion",
+        "Health teaching",
+        "Self-actualization"
+      ],
+      "answer": 1,
+      "explanation": "Health promotion includes activities such as exercise, healthy eating, immunization, and lifestyle modification that enhance overall well-being and self-actualization."
+    },
+    {
+      "question": "What is defined as an alteration in normal body function resulting in reduced capacity or shortened life span?",
+      "choices": [
+        "Illness",
+        "Disease",
+        "Health",
+        "Wellness"
+      ],
+      "answer": 1,
+      "explanation": "Disease is an objective alteration in body function that can reduce functional capacity or shorten life expectancy."
+    },
+    {
+      "question": "What refers to the personal state in which a person feels unhealthy?",
+      "choices": [
+        "Illness",
+        "Disease",
+        "Health",
+        "Wellness"
+      ],
+      "answer": 0,
+      "explanation": "Illness is the subjective experience of feeling unwell, which may or may not be accompanied by an objectively diagnosed disease."
+    },
+    {
+      "question": "According to her, caring is defined as a nurturant way of responding to a valued client toward whom the nurse feels a sense of commitment and responsibility.",
+      "choices": [
+        "Benner",
+        "Watson",
+        "Leininger",
+        "Swanson"
+      ],
+      "answer": 1,
+      "explanation": "Jean Watson's Theory of Human Caring defines caring as a nurturing response toward a valued person with whom the nurse establishes commitment, compassion, and responsibility."
+    },
+     {
+      "question": "Which method of nursing care assigns specific tasks to each nursing personnel, allowing them to become highly efficient in performing repetitive procedures?",
+      "choices": [
+        "Functional Nursing",
+        "Primary Nursing",
+        "Team Nursing",
+        "Case Method"
+      ],
+      "answer": 0,
+      "explanation": "Functional Nursing is a task-oriented method of delivering care. Each nurse is assigned specific duties such as medication administration or wound care. Although it increases efficiency, it may result in fragmented patient care due to the lack of continuity."
+    },
+    {
+      "question": "Which nursing care delivery system provides one registered nurse with 24-hour responsibility and accountability for planning and coordinating a patient's care?",
+      "choices": [
+        "Team Nursing",
+        "Case Method",
+        "Primary Nursing",
+        "Functional Nursing"
+      ],
+      "answer": 2,
+      "explanation": "Primary Nursing gives one registered nurse continuous responsibility for planning, directing, and evaluating a patient's care throughout hospitalization. Associate nurses implement the established care plan when the primary nurse is off duty."
+    },
+    {
+      "question": "Who developed the Environmental Theory, which emphasizes manipulating the patient's surroundings to promote recovery?",
+      "choices": [
+        "Dorothea Orem",
+        "Florence Nightingale",
+        "Virginia Henderson",
+        "Betty Neuman"
+      ],
+      "answer": 1,
+      "explanation": "Florence Nightingale's Environmental Theory states that proper ventilation, sanitation, cleanliness, nutrition, light, and quiet promote healing by supporting the body's natural reparative processes."
+    },
+    {
+      "question": "Which nursing theorist identified the 14 Basic Needs that guide nursing care and promote patient independence?",
+      "choices": [
+        "Virginia Henderson",
+        "Dorothea Orem",
+        "Callista Roy",
+        "Jean Watson"
+      ],
+      "answer": 0,
+      "explanation": "Virginia Henderson developed the Nature of Nursing Theory and identified 14 basic needs that nurses assist patients in meeting until they become independent."
+    },
+    {
+      "question": "Who proposed the Four Conservation Principles consisting of conservation of energy, structural integrity, personal integrity, and social integrity?",
+      "choices": [
+        "Myra Levine",
+        "Martha Rogers",
+        "Dorothy Johnson",
+        "Dorothea Orem"
+      ],
+      "answer": 0,
+      "explanation": "Myra Levine's Conservation Model focuses on maintaining energy and preserving structural, personal, and social integrity to facilitate adaptation and healing."
+    },
+    {
+      "question": "Which nursing theorist developed the Systems Model that emphasizes intrapersonal, interpersonal, and extrapersonal stressors?",
+      "choices": [
+        "Callista Roy",
+        "Betty Neuman",
+        "Dorothy Johnson",
+        "Martha Rogers"
+      ],
+      "answer": 1,
+      "explanation": "Betty Neuman's Systems Model views the client as an open system affected by intrapersonal, interpersonal, and extrapersonal stressors. Nursing interventions focus on primary, secondary, and tertiary prevention."
+    },
+    {
+      "question": "Which nursing theorist viewed the individual as a behavioral system composed of seven interrelated subsystems?",
+      "choices": [
+        "Dorothy Johnson",
+        "Martha Rogers",
+        "Virginia Henderson",
+        "Dorothea Orem"
+      ],
+      "answer": 0,
+      "explanation": "Dorothy Johnson's Behavioral System Model describes the individual as a behavioral system composed of seven subsystems working together to maintain balance and stability."
+    },
+    {
+      "question": "Who developed the Clinical Nursing Theory that emphasizes identifying the patient's immediate need for help?",
+      "choices": [
+        "Ernestine Wiedenbach",
+        "Ida Jean Orlando",
+        "Hildegard Peplau",
+        "Imogene King"
+      ],
+      "answer": 0,
+      "explanation": "Ernestine Wiedenbach's Clinical Nursing Theory emphasizes identifying the patient's need for help and providing purposeful nursing actions to meet those needs."
+    },
+    {
+      "question": "Which theorists developed the Modeling and Role-Modeling Theory, emphasizing understanding the client's worldview before planning nursing care?",
+      "choices": [
+        "Boykin and Schoenhofer",
+        "Peterson and Zderad",
+        "Erickson, Tomlin, and Swain",
+        "Leddy and Pepper"
+      ],
+      "answer": 2,
+      "explanation": "Helen Erickson, Evelyn Tomlin, and Mary Ann Swain developed the Modeling and Role-Modeling Theory. The theory emphasizes understanding the client's unique perspective and using that understanding to provide individualized, holistic nursing care."
+    }
+
+  ],
+
+
+
+
+
+
+
+
+
+
+
+  "foundation-infection-asepsis-stress-illness": [],
+  "foundation-stress-crisis-communication": [],
+  "foundation-nursing-process-assessment": [],
+  "foundation-oxygenation-nutrition": [],
+  "foundation-exam-1": [],
+  "foundation-exam-2": [],
+  "foundation-exam-3": [],
+  "pnle-exam-1": [],
+  "pnle-exam-2": [],
+  "pnle-set1-part1": [],
+  "pnle-set1-part4": [],
+  "pnle-set1-part3": [],
+  "pnle-set1-part5": [],
+  "pnle-set1-part2": [],
+  "pnle-set2": [],
+  "pnle-set3": []
 }

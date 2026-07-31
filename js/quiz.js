@@ -34,6 +34,24 @@ const SUBJECT_NAMES = {
 
 };
 
+function getLegacySubjectMap() {
+    return {
+        fundamentals: "foundation-nursing-process-assessment",
+        maternal: "maternal-maternalHealth",
+        pediatric: "maternal-pediatric",
+        psychiatric: "psychiatric-1",
+        medSurg: "medSurg-1",
+        community: "community-1",
+        pharma: "pharma-1",
+        leadership: "leadership-1"
+    };
+}
+
+function resolveSubjectKey(rawKey) {
+    const legacy = getLegacySubjectMap();
+    return legacy[rawKey] || rawKey;
+}
+
 const LETTERS = ["A", "B", "C", "D", "E", "F"];
 
 let bank = {};            // full JSON bank, fetched once
@@ -134,22 +152,17 @@ function playHeartbeat(intensity) {
 }
 
 function startUrgencyPulse() {
-  if (urgencyPulseActive) return;
-  urgencyPulseActive = true;
-  let pulseTick = 0;
-  urgencyPulseInterval = setInterval(() => {
-    if (!timerDeadline || document.hidden) return;
-    pulseTick++;
-    if (timeLeft <= 5) {
-      playHeartbeat(3);
-      if (pulseTick % 2 === 0) playTone(920, 0.06, 0.2, "square");
-    } else if (timeLeft <= 10 && pulseTick % 2 === 0) {
-      playHeartbeat(2);
-    } else if (timeLeft <= 20 && pulseTick % 4 === 0) {
-      playHeartbeat(1);
-    }
-  }, 200);
-}
+   if (urgencyPulseActive) return;
+   urgencyPulseActive = true;
+   let pulseTick = 0;
+   urgencyPulseInterval = setInterval(() => {
+     if (!timerDeadline || document.hidden) return;
+     pulseTick++;
+     if (timeLeft <= 5) {
+       playHeartbeat(1);
+     }
+   }, 500);
+ }
 
 function stopUrgencyPulse() {
   if (urgencyPulseInterval) {
@@ -176,54 +189,55 @@ function getTimerPhase(seconds) {
 }
 
 function updateTimerDisplay(isTick = false) {
-  const mins = Math.floor(timeLeft / 60);
-  const secs = timeLeft % 60;
-  timerEl.textContent = `${String(mins).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
+   const mins = Math.floor(timeLeft / 60);
+   const secs = timeLeft % 60;
+   timerEl.textContent = `${String(mins).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
 
-  const phase = getTimerPhase(timeLeft);
-  const phases = ["calm", "warning", "urgent", "critical"];
-  phases.forEach((p) => {
-    timerWidgetEl.classList.toggle(`timer-${p}`, phase === p && p !== "calm");
-  });
+   const phase = getTimerPhase(timeLeft);
+   const phases = ["calm", "warning", "urgent", "critical"];
+   phases.forEach((p) => {
+     timerWidgetEl.classList.toggle(`timer-${p}`, phase === p && p !== "calm");
+   });
 
-  shellEl.classList.toggle("timer-urgent-active", phase === "urgent" || phase === "critical");
-  shellEl.classList.toggle("timer-critical-active", phase === "critical");
+   if (timerRingEl) {
+     const progress = timeLeft / MIN_QUESTION_SECONDS;
+     timerRingEl.style.strokeDashoffset = String(TIMER_RING_CIRC * (1 - progress));
+   }
 
-  document.body.classList.toggle("timer-critical-active", phase === "critical");
+   if (phase === "critical") {
+     timerLabelEl.textContent = "HURRY";
+     if (!questionCard.classList.contains("shake")) {
+       questionCard.classList.add("shake");
+       questionCard.addEventListener("animationend", () => {
+         questionCard.classList.remove("shake");
+       }, { once: true });
+     }
+   } else if (phase === "urgent") {
+     timerLabelEl.textContent = "Running out";
+   } else if (phase === "warning") {
+     timerLabelEl.textContent = "Time left";
+   } else {
+     timerLabelEl.textContent = "Time left";
+   }
 
-  if (timerRingEl) {
-    const progress = timeLeft / MIN_QUESTION_SECONDS;
-    timerRingEl.style.strokeDashoffset = String(TIMER_RING_CIRC * (1 - progress));
-  }
+   if (isTick) {
+     timerWidgetEl.classList.add("timer-tick");
+     setTimeout(() => timerWidgetEl.classList.remove("timer-tick"), 150);
+   }
 
-  if (phase === "critical") {
-    timerLabelEl.textContent = "HURRY";
-  } else if (phase === "urgent") {
-    timerLabelEl.textContent = "Running out";
-  } else if (phase === "warning") {
-    timerLabelEl.textContent = "Time left";
-  } else {
-    timerLabelEl.textContent = "Time left";
-  }
+   if (document.hidden && timerDeadline) {
+     const icon = timeLeft <= 5 ? "🚨" : timeLeft <= 10 ? "⚠️" : "⏱";
+     document.title = `${icon} ${timerEl.textContent} — ANSWER NOW | NursePrep`;
+   } else {
+     document.title = ORIGINAL_PAGE_TITLE;
+   }
 
-  if (isTick) {
-    timerWidgetEl.classList.add("timer-tick");
-    setTimeout(() => timerWidgetEl.classList.remove("timer-tick"), 150);
-  }
-
-  if (document.hidden && timerDeadline) {
-    const icon = timeLeft <= 5 ? "🚨" : timeLeft <= 10 ? "⚠️" : "⏱";
-    document.title = `${icon} ${timerEl.textContent} — ANSWER NOW | NursePrep`;
-  } else {
-    document.title = ORIGINAL_PAGE_TITLE;
-  }
-
-  if (timeLeft <= 20 && timerDeadline) {
-    startUrgencyPulse();
-  } else {
-    stopUrgencyPulse();
-  }
-}
+if (timeLeft <= 5 && timerDeadline) {
+     startUrgencyPulse();
+   } else {
+     stopUrgencyPulse();
+   }
+ }
 
 function tickTimer() {
   if (!timerDeadline) return;
@@ -257,11 +271,9 @@ function stopTimer() {
   }
   stopUrgencyPulse();
   timerDeadline = null;
-  document.title = ORIGINAL_PAGE_TITLE;
-  timerWidgetEl.classList.remove("timer-warning", "timer-urgent", "timer-critical", "timer-tick");
-  shellEl.classList.remove("timer-urgent-active", "timer-critical-active");
-  document.body.classList.remove("timer-critical-active");
-  if (timerRingEl) {
+document.title = ORIGINAL_PAGE_TITLE;
+   timerWidgetEl.classList.remove("timer-warning", "timer-urgent", "timer-critical", "timer-tick");
+   if (timerRingEl) {
     timerRingEl.style.strokeDashoffset = "0";
   }
   if (timerLabelEl) {
@@ -270,10 +282,10 @@ function stopTimer() {
 }
 
 document.addEventListener("visibilitychange", () => {
-  if (!timerDeadline) return;
-  tickTimer();
-  if (timeLeft <= 20) startUrgencyPulse();
-});
+   if (!timerDeadline) return;
+   tickTimer();
+   if (timeLeft <= 5) startUrgencyPulse();
+ });
 
 document.addEventListener("click", unlockAudio, { once: true });
 document.addEventListener("keydown", unlockAudio, { once: true });
@@ -379,17 +391,21 @@ async function loadQuizBank() {
 }
 
 async function loadSubject(subjectKey) {
-  currentSubject = subjectKey;
+  const resolvedKey = resolveSubjectKey(subjectKey);
+  currentSubject = resolvedKey;
   currentQuizId = "";
-  subjectTitle.textContent =
-    SUBJECT_NAMES[subjectKey];
+
+  const catalog = await loadCatalog();
+  const quizMeta = catalog.categories.flatMap(c => c.quizzes || []).find(q => q.quizId === resolvedKey || q.subjectKey === resolvedKey);
+  subjectTitle.textContent = quizMeta ? quizMeta.title : (SUBJECT_NAMES[subjectKey] || resolvedKey);
+
   currentQuestion = 0;
   score = 0;
-  questions = bank[subjectKey] || [];
+  questions = bank[resolvedKey] || [];
   answers = new Array(questions.length).fill(null);
 
   const url = new URL(window.location);
-  url.searchParams.set("subject", subjectKey);
+  url.searchParams.set("subject", resolvedKey);
   url.searchParams.delete("quizId");
   window.history.replaceState(null, "", url);
 
@@ -416,7 +432,7 @@ async function loadQuizById(quizId) {
     const displayCount = quizMeta ? Math.min(quizMeta.itemCount || availableCount, availableCount) : availableCount;
 
     if (quizMeta) {
-        subjectTitle.textContent = `${quizMeta.title} (${displayCount} items)`;
+        subjectTitle.textContent = quizMeta.title;
     } else {
         subjectTitle.textContent = "Quiz";
     }
@@ -428,23 +444,14 @@ async function loadQuizById(quizId) {
 
     try {
         let matchedQuestions = [];
-        if (quizMeta && quizMeta.subjectKey && Array.isArray(allData[quizMeta.subjectKey])) {
-            const qs = allData[quizMeta.subjectKey];
-            matchedQuestions = qs.map((q, idx) => ({
+        const questionBankKey = quizMeta ? quizMeta.quizId : quizId;
+
+        if (Array.isArray(allData[questionBankKey])) {
+            matchedQuestions = allData[questionBankKey].map((q, idx) => ({
                 ...q,
-                _subjectKey: quizMeta.subjectKey,
+                _subjectKey: questionBankKey,
                 _originalIndex: idx
             }));
-        } else if (allData) {
-            for (const [subjectKey, qs] of Object.entries(allData)) {
-                if (!Array.isArray(qs)) continue;
-                const mapped = qs.map((q, idx) => ({
-                    ...q,
-                    _subjectKey: subjectKey,
-                    _originalIndex: idx
-                }));
-                matchedQuestions = matchedQuestions.concat(mapped);
-            }
         }
 
         if (matchedQuestions.length > 0) {
@@ -716,7 +723,7 @@ async function loadQuiz() {
   } else if (subject) {
       await loadSubject(subject);
   } else {
-      await loadSubject("fundamentals");
+      await loadSubject("foundation-nursing-process-assessment");
   }
 }
 

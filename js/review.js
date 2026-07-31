@@ -29,6 +29,7 @@ import {
     bumpDailyStreak
 } from "./userProfile.js";
 
+// Inlined here (not relying on utils.js's classic-script globals inside this module)
 const SUBJECT_NAMES = {
     pnleSets: "Comprehensive PNLE SETS",
     fundamentals: "Foundation of Nursing",
@@ -48,6 +49,7 @@ let currentIdx = 0;
 let currentSubject = "all";
 let selectedAnswer = null;
 let answered = false;
+let catalog = null;
 
 const reviewShell = document.getElementById("reviewShell");
 const reviewContent = document.getElementById("reviewContent");
@@ -56,9 +58,29 @@ const reviewCount = document.getElementById("reviewCount");
 const reviewProgressFill = document.getElementById("reviewProgressFill");
 const sidebarStreak = document.getElementById("sidebarStreak");
 
+function getQuizTitle(quizId) {
+    if (!catalog) return SUBJECT_NAMES[quizId] || quizId;
+    const quiz = catalog.categories.flatMap(c => c.quizzes || []).find(q => q.quizId === quizId || q.subjectKey === quizId);
+    return quiz ? quiz.title : (SUBJECT_NAMES[quizId] || quizId);
+}
+
 function getSubjectFromURL(defaultKey = "all") {
     const params = new URLSearchParams(window.location.search);
     return params.get("subject") || defaultKey;
+}
+
+function resolveSubjectKey(rawKey) {
+    const legacy = {
+        "fundamentals": "foundation-nursing-process-assessment",
+        "maternal": "maternal-maternalHealth",
+        "pediatric": "maternal-pediatric",
+        "psychiatric": "psychiatric-1",
+        "medSurg": "medSurg-1",
+        "community": "community-1",
+        "pharma": "pharma-1",
+        "leadership": "leadership-1"
+    };
+    return legacy[rawKey] || rawKey;
 }
 
 async function loadBank() {
@@ -162,7 +184,7 @@ function renderMistakeCard(mistake) {
     reviewContent.innerHTML = `
         <div class="review-card">
             <span class="review-q-label">
-                ${SUBJECT_NAMES[mistake.subject] || mistake.subject}
+                ${getQuizTitle(mistake.subject)}
                 ${practiceCount > 0 ? `<span class="practice-badge">Practiced ${practiceCount}x</span>` : ""}
             </span>
             <div class="review-meta">
@@ -182,9 +204,40 @@ function renderMistakeCard(mistake) {
     reviewProgressFill.style.width = `${progress}%`;
 }
 
+async function loadCatalog() {
+    try {
+        const res = await fetch("./data/quiz-catalog.json");
+        catalog = await res.json();
+    } catch (err) {
+        console.error("Failed to load quiz catalog:", err);
+        catalog = { categories: [] };
+    }
+    return catalog;
+}
+
+function populateSubjectSelect() {
+    if (!catalog) return;
+    subjectSelect.innerHTML = '<option value="all">All Subjects</option>';
+
+    for (const category of catalog.categories) {
+        const optgroup = document.createElement("optgroup");
+        optgroup.label = `${category.icon} ${category.name}`;
+
+        for (const quiz of category.quizzes) {
+            const option = document.createElement("option");
+            option.value = quiz.quizId;
+            option.textContent = quiz.title;
+            optgroup.appendChild(option);
+        }
+
+        subjectSelect.appendChild(optgroup);
+    }
+}
+
 function pad(n) {
     return String(n).padStart(2, "0");
 }
+
 
 window._selectReviewAnswer = function(idx) {
     if (answered) return;
@@ -354,8 +407,20 @@ onAuthStateChanged(auth, async (user) => {
         return;
     }
 
+    await loadCatalog();
+    populateSubjectSelect();
+
     await loadBank();
-    currentSubject = getSubjectFromURL("all");
+    let subjectParam = getSubjectFromURL("all");
+    let resolvedSubject = subjectParam === "all" ? "all" : resolveSubjectKey(subjectParam);
+    
+    if (resolvedSubject !== subjectParam) {
+        const url = new URL(window.location);
+        url.searchParams.set("subject", resolvedSubject);
+        window.history.replaceState(null, "", url);
+    }
+
+    currentSubject = resolvedSubject;
     subjectSelect.value = currentSubject;
     await loadMistakes();
 });

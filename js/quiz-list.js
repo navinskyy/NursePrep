@@ -1,5 +1,5 @@
 import { auth, db } from "../firebase/firebase.js";
-import { doc, getDoc } from "firebase/firestore";
+import { doc, getDoc, collection, getDocs } from "firebase/firestore";
 
 import { getTotalWrongAnswerCount } from "../services/wrongAnswerService.js";
 
@@ -62,7 +62,10 @@ function getStatusClass(status) {
 }
 
 function getStars(score) {
-  const rounded = Math.round(score / 20);
+  if (score <= 0) {
+    return '<span class="star-empty">★</span>'.repeat(5);
+  }
+  const rounded = Math.ceil(score / 20);
   let html = "";
   for (let i = 1; i <= 5; i++) {
     html += i <= rounded ? '<span class="star-filled">★</span>' : '<span class="star-empty">★</span>';
@@ -119,7 +122,7 @@ function renderQuizzes() {
     const actualCount = questionBank
       ? Math.min(quiz.itemCount || Infinity, getAvailableQuestionCount(quiz, questionBank))
       : (quiz.itemCount || 0);
-    const displayTitle = `${quiz.title} (${actualCount} items)`;
+    const displayTitle = quiz.title;
 
     return `
       <div class="quiz-card" style="--delay: ${index * 0.05}s">
@@ -190,13 +193,15 @@ async function loadUserProgress() {
   if (!user) return;
 
   try {
-    const ref = doc(db, "userProgress", user.uid);
-    const snap = await getDoc(ref);
-    if (snap.exists()) {
-      userProgress = snap.data() || {};
-    }
+    const quizzesRef = collection(db, "userProgress", user.uid, "quizzes");
+    const snap = await getDocs(quizzesRef);
+    userProgress = {};
+    snap.forEach((docSnap) => {
+      userProgress[docSnap.id] = docSnap.data();
+    });
   } catch (err) {
     console.error("Failed to load user progress:", err);
+    userProgress = {};
   }
 }
 

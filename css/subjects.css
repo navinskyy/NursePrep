@@ -83,6 +83,51 @@
   margin: 0;
 }
 
+.subject-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+
+.subject-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.subject-stat-value {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-hi);
+  line-height: 1.2;
+  word-break: break-word;
+}
+
+.subject-stat-label {
+  font-size: 11px;
+  color: var(--text-low);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.subject-stat .stars {
+  display: flex;
+  gap: 2px;
+  font-size: 13px;
+}
+
+.star-filled {
+  color: var(--amber);
+}
+
+.star-empty {
+  color: var(--border);
+}
+
 .progress-track {
     margin-top: 20px;
     height: 6px;

@@ -114,6 +114,9 @@ export async function getQuestionBank() {
 
 export function getAvailableQuestionCount(quiz, bank) {
     if (!bank) return quiz.itemCount || 0;
+    if (quiz.quizId && Array.isArray(bank[quiz.quizId])) {
+        return bank[quiz.quizId].length;
+    }
     if (quiz.subjectKey && Array.isArray(bank[quiz.subjectKey])) {
         return bank[quiz.subjectKey].length;
     }
