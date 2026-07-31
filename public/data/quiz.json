@@ -2042,7 +2042,1453 @@
       "answer": 2,
       "explanation": "Helen Erickson, Evelyn Tomlin, and Mary Ann Swain developed the Modeling and Role-Modeling Theory. The theory emphasizes understanding the client's unique perspective and using that understanding to provide individualized, holistic nursing care."
     }
+  ],
+  "foundation-infection-asepsis-stress-illness": [
+    {
+      "question": "When the General adaptation syndrome is activated, FLIGHT OR FIGHT response sets in. Sympathetic nervous system releases norepinephrine while the adrenal medulla secretes epinephrine. Which of the following is true with regards to that statement?",
+      "choices":[
+        "Pupils will constrict",
+        "Client will be lethargic",
+        "Lungs will bronchodilate",
+        "Gastric motility will increase"
+      ],
+      "answer": 2,
+      "explanation": "C. Lungs will bronchodilate. To better understand the concept : The autonomic nervous system is composed of SYMPATHETIC and PARASYMPATHETIC Nervous system. It is called AUTONOMIC Because it is Involuntary and stimuli based. You cannot tell your heart to kindly beat for 60 per minute, Nor, Tell your blood vessels, Please constrict, because you need to wear skirt today and your varicosities are bulging. Sympathetic Nervous system is the FIGHT or FLIGHT mechanism. When people FIGHT or RUN, we tend to stimulate the ANS and dominate over SNS. Just Imagine a person FIGHTING and RUNNING to get the idea on the signs of SNS Domination. Imagine a resting and digesting person to get a picture of PNS Domination. A person RUNNING or FIGHTING Needs to bronchodilate, because the oxygen need is increased due to higher demand of the body. Pupils will DILATE to be able to see the enemy clearly. Client will be fully alert to dodge attacks and leap through obstacles during running. The client’s gastric motility will DECREASE Because you cannot afford to urinate or defecate during fighting nor running"
+    },
+    {
+      "question": "Which of the following response is NOT expected in a person whose General Adaptation Syndrome (GAS) is activated and the fight-or-flight response sets in?",
+      "choices": [
+        "The client will not urinate due to relaxation of the detrusor muscle.",
+        "The client will be restless and alert.",
+        "The client's blood pressure will increase and there will be vasodilation.",
+        "There will be increased glycogenolysis, and the pancreas will decrease insulin secretion."
+      ],
+      "answer": 2,
+      "explanation": "The sympathetic nervous system activates the fight-or-flight response during stress. Expected responses include increased alertness, bronchodilation, increased heart rate, increased blood pressure due to vasoconstriction, relaxation of the detrusor muscle causing urinary retention, increased glycogenolysis to provide glucose, and decreased insulin secretion. Vasodilation is not the generalized response because most systemic blood vessels constrict to maintain blood pressure, although skeletal muscle vessels may dilate locally. Therefore, the statement describing increased blood pressure together with generalized vasodilation is inaccurate."
+    },
+    {
+      "question": "State in which a person's physical, emotional, intellectual, social, or spiritual functioning is diminished or impaired compared with a previous experience.",
+      "choices": [
+        "Illness",
+        "Disease",
+        "Health",
+        "Wellness"
+      ],
+      "answer": 0,
+      "explanation": "Illness is the individual's subjective experience of not feeling well or functioning normally. It may exist even without objective evidence of disease. Disease refers to a pathological condition with identifiable signs, symptoms, or diagnostic findings, whereas health and wellness describe positive states of functioning."
+    },
+    {
+      "question": "This is the first stage of illness wherein the person starts to believe that something is wrong. It is also known as the transition phase from wellness to illness.",
+      "choices": [
+        "Symptom Experience",
+        "Assumption of Sick Role",
+        "Medical Care Contact",
+        "Dependent Patient Role"
+      ],
+      "answer": 0,
+      "explanation": "The Symptom Experience stage is the first stage of illness behavior. During this stage, the individual notices physical or emotional changes, recognizes that something is wrong, and begins interpreting the symptoms. The person has not yet sought professional medical help."
+    },
+    {
+      "question": "In this stage of illness, the person accepts or rejects a professional's suggestions. The person also becomes passive and may regress to an earlier stage.",
+      "choices": [
+        "Symptom Experience",
+        "Assumption of Sick Role",
+        "Medical Care Contact",
+        "Dependent Patient Role"
+      ],
+      "answer": 3,
+      "explanation": "During the Dependent Patient Role stage, the patient accepts treatment from healthcare professionals and relies on them for care. The patient may become dependent, passive, and even regress emotionally while receiving treatment. Compliance or refusal of treatment also occurs during this stage."
+    },
+    {
+      "question": "In this stage of illness, the person learns to accept the illness.",
+      "choices": [
+        "Symptom Experience",
+        "Assumption of Sick Role",
+        "Medical Care Contact",
+        "Dependent Patient Role"
+      ],
+      "answer": 1,
+      "explanation": "The Assumption of Sick Role occurs when the individual accepts the diagnosis, adjusts to being ill, and recognizes the need for treatment and temporary exemption from usual responsibilities. Acceptance of the illness is the hallmark of this stage."
+    },
+    {
+      "question": "In this stage, the person tries to find answers for the illness. The individual wants the illness validated, symptoms explained, and the outcome predicted.",
+      "choices": [
+        "Symptom Experience",
+        "Assumption of Sick Role",
+        "Medical Care Contact",
+        "Dependent Patient Role"
+      ],
+      "answer": 2,
+      "explanation": "The Medical Care Contact stage begins when the individual seeks professional assistance. The patient wants confirmation of the illness, an explanation of symptoms, a diagnosis, and information regarding treatment and prognosis."
+    },
+    {
+      "question": "The following are true regarding the aspects of the sick role EXCEPT:",
+      "choices": [
+        "One should be held responsible for the condition.",
+        "One is excused from societal roles.",
+        "One is obliged to get well as soon as possible.",
+        "One is obliged to seek competent help."
+      ],
+      "answer": 0,
+      "explanation": "According to Talcott Parsons' Sick Role Theory, a sick person is not blamed or held responsible for becoming ill. However, the individual is expected to try to recover, cooperate with treatment, and seek competent healthcare. Therefore, holding the patient responsible for the illness contradicts the concept of the sick role."
+    },
+    {
+      "question": "Refers to conditions that increase the vulnerability of an individual or group to illness or accident.",
+      "choices": [
+        "Predisposing factor",
+        "Etiology",
+        "Risk factor",
+        "Modifiable risks"
+      ],
+      "answer": 2,
+      "explanation": "A risk factor is any characteristic, behavior, environmental exposure, or condition that increases the likelihood of developing a disease or sustaining an injury. Risk factors may be modifiable, such as smoking, or non-modifiable, such as age and genetics. Etiology refers to the actual cause of disease."
+    },
+    {
+      "question": "Refers to the degree of resistance the potential host has against a certain pathogen.",
+      "choices": [
+        "Susceptibility",
+        "Immunity",
+        "Virulence",
+        "Etiology"
+      ],
+      "answer": 1,
+      "explanation": "Immunity is the body's ability to resist or defend against infectious organisms through innate or acquired immune mechanisms. Susceptibility refers to the likelihood of becoming infected, whereas virulence describes the severity or disease-producing capability of a microorganism. Etiology refers to the cause of disease."
+    },
+    {
+      "question": "A group of symptoms that collectively constitute a disease.",
+      "choices": [
+        "Syndrome",
+        "Symptoms",
+        "Signs",
+        "Etiology"
+      ],
+      "answer": 0,
+      "explanation": "A syndrome is a collection of signs and symptoms that consistently occur together and characterize a particular condition or disease. Symptoms are subjective experiences reported by the patient, signs are objective findings observed by healthcare providers, and etiology refers to the cause of a disease."
+    },
+     {
+      "question": "A woman undergoing radiation therapy developed redness and burning of the skin around the breast. This is best classified as what type of disease?",
+      "choices": [
+        "Neoplastic",
+        "Traumatic",
+        "Nosocomial",
+        "Iatrogenic"
+      ],
+      "answer": 3,
+      "explanation": "An iatrogenic condition is one that results directly from medical treatment, procedures, or interventions. In this case, the skin redness and burning are adverse effects of radiation therapy rather than the disease itself. Neoplastic refers to cancer, traumatic results from physical injury, and nosocomial refers to infections acquired in a healthcare facility."
+    },
+    {
+      "question": "The classification of CANCER according to its etiology is best described as:",
+      "choices": [
+        "Nosocomial",
+        "Idiopathic",
+        "Neoplastic",
+        "Traumatic"
+      ],
+      "answer": 2,
+      "explanation": "Cancer is classified as a neoplastic disease because it involves abnormal and uncontrolled proliferation of cells, resulting in the formation of benign or malignant tumors. It is not considered nosocomial, traumatic, or idiopathic as a general classification."
+    },
+    {
+      "question": "The combination that correctly identifies diseases classified as congenital and degenerative is:",
+      "choices": [
+        "5 and 2",
+        "2 and 3",
+        "3 and 4",
+        "3 and 5"
+      ],
+      "answer": 3,
+      "explanation": "Congenital diseases are present at birth due to genetic or developmental abnormalities, while degenerative diseases result from progressive deterioration of tissues or organs over time. Based on the original item numbering, the correct combination is '3 and 5.'"
+    },
+    {
+      "question": "What term describes the reactivation and recurrence of pronounced symptoms of a disease?",
+      "choices": [
+        "Remission",
+        "Emission",
+        "Exacerbation",
+        "Subacute"
+      ],
+      "answer": 2,
+      "explanation": "Exacerbation refers to the worsening or recurrence of disease manifestations after a period of improvement. Remission is a period during which symptoms lessen or disappear. 'Emission' is not a medical term for disease progression, while subacute describes the duration or onset of a disease."
+    },
+    {
+      "question": "A type of illness characterized by periods of remission and exacerbation is:",
+      "choices": [
+        "Chronic",
+        "Acute",
+        "Subacute",
+        "Subchronic"
+      ],
+      "answer": 0,
+      "explanation": "A chronic illness develops gradually, persists for a long period, and is commonly characterized by alternating periods of remission and exacerbation. Acute illnesses have rapid onset and short duration, while subacute illnesses fall between acute and chronic conditions."
+    },
+    {
+      "question": "Diseases that result from changes in the normal body structure, producing recognizable anatomical changes in organs or tissues, are termed:",
+      "choices": [
+        "Functional",
+        "Occupational",
+        "Inorganic",
+        "Organic"
+      ],
+      "answer": 3,
+      "explanation": "Organic diseases involve structural or anatomical abnormalities that can usually be identified through physical examination, laboratory tests, or imaging studies. Functional diseases, in contrast, produce symptoms without identifiable structural changes."
+    },
+    {
+      "question": "It is the science of organisms as affected by factors in their environment and deals with the relationship between disease and the geographical environment.",
+      "choices": [
+        "Epidemiology",
+        "Ecology",
+        "Statistics",
+        "Geography"
+      ],
+      "answer": 1,
+      "explanation": "Ecology is the study of the relationship between living organisms and their environment. In health sciences, it examines how environmental factors influence health and disease. Epidemiology focuses primarily on the occurrence and distribution of diseases within populations."
+    },
+    {
+      "question": "This is the study of the patterns of health and disease, including their occurrence and distribution in humans for the purpose of disease prevention and control.",
+      "choices": [
+        "Epidemiology",
+        "Ecology",
+        "Statistics",
+        "Geography"
+      ],
+      "answer": 0,
+      "explanation": "Epidemiology is the scientific study of the distribution and determinants of health-related events in populations. It provides the foundation for disease prevention, surveillance, health promotion, and public health interventions."
+    },
+    {
+      "question": "Refers to diseases that produce no anatomical changes but result from an abnormal response to a stimulus.",
+      "choices": [
+        "Functional",
+        "Occupational",
+        "Inorganic",
+        "Organic"
+      ],
+      "answer": 0,
+      "explanation": "Functional diseases are characterized by impaired body function without detectable structural abnormalities. Examples include certain gastrointestinal functional disorders and some psychosomatic conditions. Organic diseases, on the other hand, involve identifiable structural changes."
+    },
+    {
+      "question": "According to Leavell and Clark, in what level of prevention does the nurse support the client in obtaining the highest possible level of functioning after a disease or injury?",
+      "choices": [
+        "Primary",
+        "Secondary",
+        "Tertiary",
+        "None of the above"
+      ],
+      "answer": 2,
+      "explanation": "Tertiary prevention focuses on rehabilitation, restoration of function, prevention of complications, and helping individuals achieve the highest possible quality of life after illness, injury, or disability. Primary prevention aims to prevent disease before it occurs, while secondary prevention emphasizes early detection and prompt treatment."
+    },
+    {
+      "question": "In what level of prevention does the nurse encourage optimal health and reduce a person's susceptibility to illness?",
+      "choices": [
+        "Primary",
+        "Secondary",
+        "Tertiary",
+        "None of the above"
+      ],
+      "answer": 0,
+      "explanation": "Primary prevention focuses on promoting health and preventing the occurrence of disease before it develops. Nursing interventions include health education, immunization, proper nutrition, regular exercise, sanitation, and lifestyle modification. The goal is to reduce risk factors and strengthen the individual's resistance to illness."
+    },
+    {
+      "question": "Also known as HEALTH MAINTENANCE prevention.",
+      "choices": [
+        "Primary",
+        "Secondary",
+        "Tertiary",
+        "None of the above"
+      ],
+      "answer": 0,
+      "explanation": "Primary prevention is also called health maintenance because it aims to preserve wellness and prevent disease before it occurs. Examples include immunization programs, health teaching, smoking cessation, and promoting healthy lifestyles."
+    },
+    {
+      "question": "PPD (Purified Protein Derivative) testing in occupational health nursing is what level of prevention?",
+      "choices": [
+        "Primary",
+        "Secondary",
+        "Tertiary",
+        "None of the above"
+      ],
+      "answer": 1,
+      "explanation": "PPD testing is a screening procedure used to detect latent tuberculosis infection before symptoms develop. Screening tests are examples of secondary prevention because they emphasize early detection and prompt intervention to prevent disease progression."
+    },
+    {
+      "question": "BCG vaccination in community health nursing is what level of prevention?",
+      "choices": [
+        "Primary",
+        "Secondary",
+        "Tertiary",
+        "None of the above"
+      ],
+      "answer": 0,
+      "explanation": "The Bacillus Calmette-Guérin (BCG) vaccine protects against severe forms of tuberculosis. Immunization is a classic example of primary prevention because it prevents disease before it occurs by stimulating the body's immune response."
+    },
+    {
+      "question": "A regular Pap smear for women every three years after three consecutive normal results belongs to which level of prevention?",
+      "choices": [
+        "Primary",
+        "Secondary",
+        "Tertiary",
+        "None of the above"
+      ],
+      "answer": 1,
+      "explanation": "Pap smear is a screening test for cervical cancer. Screening procedures are classified as secondary prevention because they detect disease at an early stage when treatment is more effective and complications can be prevented."
+    },
+    {
+      "question": "Self-monitoring of blood glucose for diabetic clients belongs to which level of prevention?",
+      "choices": [
+        "Primary",
+        "Secondary",
+        "Tertiary",
+        "None of the above"
+      ],
+      "answer": 2,
+      "explanation": "Self-monitoring of blood glucose is part of disease management after diabetes has already been diagnosed. It helps prevent complications, evaluate treatment effectiveness, and maintain optimal health, making it an example of tertiary prevention."
+    },
+    {
+      "question": "Which is the best way to disseminate health information to the public?",
+      "choices": [
+        "Newspaper",
+        "School bulletins",
+        "Community billboards",
+        "Radio and Television"
+      ],
+      "answer": 3,
+      "explanation": "Radio and television have the widest audience reach and can rapidly disseminate health information to large populations regardless of literacy level. Because of their accessibility and broad coverage, they remain highly effective tools for public health education."
+    },
+    {
+      "question": "Who conceptualized health as the integration of all parts and subparts of an individual?",
+      "choices": [
+        "Newman",
+        "Neuman",
+        "Watson",
+        "Rogers"
+      ],
+      "answer": 1,
+      "explanation": "Betty Neuman defined wellness as the harmonious integration of all parts and subparts of the individual. Her Systems Model views the person as an open system constantly interacting with internal and external stressors, and health is achieved when the system remains stable."
+    },
+    {
+      "question": "Which of the following are recognized concepts of health?\n\n1. Health is a state of complete physical, mental, and social well-being and not merely the absence of disease or infirmity.\n2. Health is the ability to maintain balance.\n3. Health is the ability to maintain the internal milieu.\n4. Health is the integration of all parts and subparts of an individual.",
+      "choices": [
+        "1, 2, 3",
+        "1, 3, 4",
+        "2, 3, 4",
+        "1, 2, 3, 4"
+      ],
+      "answer": 3,
+      "explanation": "All four statements are accepted concepts of health from different theorists and organizations. The World Health Organization defines health as complete physical, mental, and social well-being. Walter Cannon described health as maintaining dynamic balance or homeostasis. Claude Bernard emphasized maintenance of the internal milieu, while Betty Neuman viewed health as harmony among all parts and subparts of the individual."
+    },
+    {
+      "question": "The theorist who advocated that health is the ability to maintain dynamic equilibrium is:",
+      "choices": [
+        "Bernard",
+        "Selye",
+        "Cannon",
+        "Rogers"
+      ],
+      "answer": 2,
+      "explanation": "Walter Cannon introduced the concept of homeostasis and described health as the body's ability to maintain dynamic equilibrium despite internal and external changes. Through negative feedback mechanisms, the body continuously regulates functions such as temperature, blood pressure, blood glucose, and fluid balance to maintain stability."
+    },
+    {
+      "question": "Excessive alcohol intake is what type of risk factor?",
+      "choices": [
+        "Genetics",
+        "Age",
+        "Environment",
+        "Lifestyle"
+      ],
+      "answer": 3,
+      "explanation": "Lifestyle risk factors are behaviors or habits that increase an individual's likelihood of developing disease. Excessive alcohol consumption is considered a lifestyle risk factor because it is related to personal behavior and is modifiable. It contributes to liver disease, hypertension, stroke, certain cancers, and numerous other chronic illnesses. Unlike age or genetics, lifestyle factors can often be changed through health promotion and education."
+    },
+    {
+      "question": "Osteoporosis and degenerative diseases such as osteoarthritis belong to what type of risk factor?",
+      "choices": [
+        "Genetics",
+        "Age",
+        "Environment",
+        "Lifestyle"
+      ],
+      "answer": 1,
+      "explanation": "Age is a non-modifiable risk factor. As people grow older, normal physiologic changes increase the likelihood of developing degenerative conditions such as osteoporosis and osteoarthritis. Although lifestyle and genetics may contribute, advancing age remains the primary risk factor for these disorders."
+    },
+    {
+      "question": "Also known as STERILE TECHNIQUE.",
+      "choices": [
+        "Surgical Asepsis",
+        "Medical Asepsis",
+        "Sepsis",
+        "Asepsis"
+      ],
+      "answer": 0,
+      "explanation": "Surgical asepsis, also called sterile technique, involves practices that eliminate all microorganisms, including bacterial spores. It is required during invasive procedures such as surgery, urinary catheterization, central line insertion, and sterile dressing changes. Medical asepsis, in contrast, aims only to reduce the number and spread of microorganisms."
+    },
+    {
+      "question": "This is a person or animal who has no signs of illness but harbors pathogens that can be transmitted to another individual.",
+      "choices": [
+        "Host",
+        "Agent",
+        "Environment",
+        "Carrier"
+      ],
+      "answer": 3,
+      "explanation": "A carrier is an individual or animal that harbors a pathogenic organism without showing clinical signs of disease but is still capable of transmitting the organism to others. Well-known examples include asymptomatic carriers of Salmonella typhi and hepatitis B virus."
+    },
+    {
+      "question": "Refers to a person or animal known or believed to have been exposed to a disease.",
+      "choices": [
+        "Carrier",
+        "Contact",
+        "Agent",
+        "Host"
+      ],
+      "answer": 1,
+      "explanation": "A contact is a person or animal that has been exposed to an infected individual or a contaminated source and therefore has the potential to develop or transmit the disease. Unlike a carrier, a contact may not actually harbor the infectious organism."
+    },
+    {
+      "question": "A substance usually intended for use on inanimate objects that destroys pathogenic microorganisms but not bacterial spores.",
+      "choices": [
+        "Sterilization",
+        "Disinfectant",
+        "Antiseptic",
+        "Autoclave"
+      ],
+      "answer": 1,
+      "explanation": "A disinfectant is a chemical agent applied to non-living objects to destroy most pathogenic microorganisms but generally does not eliminate bacterial spores. Antiseptics are used on living tissue, while sterilization destroys all microorganisms including spores. An autoclave is equipment used to achieve sterilization through steam under pressure."
+    },
+    {
+      "question": "This is the process of removing or destroying pathogenic microorganisms but not their spores.",
+      "choices": [
+        "Sterilization",
+        "Autoclaving",
+        "Disinfection",
+        "Medical asepsis"
+      ],
+      "answer": 2,
+      "explanation": "Disinfection destroys most disease-causing microorganisms on inanimate objects but does not reliably eliminate bacterial spores. Sterilization is the only process that destroys all microorganisms, including spores. Medical asepsis refers to practices that reduce the spread of microorganisms rather than eliminating them completely."
+    },
+    {
+      "question": "The third period of the infectious process, characterized by the development of specific signs and symptoms, is called:",
+      "choices": [
+        "Incubation period",
+        "Prodromal period",
+        "Illness period",
+        "Convalescent period"
+      ],
+      "answer": 2,
+      "explanation": "The illness period is the stage in which the disease reaches its greatest severity and characteristic signs and symptoms are fully evident. The incubation period occurs before symptoms appear, the prodromal period includes vague early symptoms, and the convalescent period begins when recovery starts."
+    },
+    {
+      "question": "A child exposed to another child with rubella later develops fever and generalized weakness before the characteristic rash appears. In what stage of the infectious process is the child?",
+      "choices": [
+        "Incubation period",
+        "Prodromal period",
+        "Illness period",
+        "Convalescent period"
+      ],
+      "answer": 1,
+      "explanation": "The prodromal period is characterized by nonspecific symptoms such as fever, malaise, fatigue, and weakness before the appearance of disease-specific manifestations. Since the child is experiencing general symptoms but has not yet developed the classic rash, the child is in the prodromal stage."
+    },
+    {
+      "question": "A 50-year-old mail carrier was exposed to anthrax powder but has not yet developed any signs or symptoms. In what stage of the infectious process is he?",
+      "choices": [
+        "Incubation period",
+        "Prodromal period",
+        "Illness period",
+        "Convalescent period"
+      ],
+      "answer": 0,
+      "explanation": "The incubation period is the interval between exposure to an infectious agent and the appearance of the first symptoms. During this stage, the microorganism is multiplying within the host, but the individual remains asymptomatic. Because the mail carrier has no manifestations immediately after exposure, he is in the incubation period."
+    },
+     {
+      "question": "Considered as the WEAKEST LINK in the chain of infection that nurses can manipulate to prevent the spread of infection and disease.",
+      "choices": [
+        "Etiologic/Infectious agent",
+        "Portal of Entry",
+        "Susceptible host",
+        "Mode of transmission"
+      ],
+      "answer": 3,
+      "explanation": "The mode of transmission is considered the weakest link in the chain of infection because it is the easiest component for healthcare professionals to interrupt. Nursing interventions such as proper hand hygiene, use of personal protective equipment (PPE), environmental cleaning, isolation precautions, and sterilization effectively break the chain of transmission and prevent infection from spreading. Although the infectious agent, portal of entry, and susceptible host are also important, they are often more difficult to control than the method by which microorganisms are transmitted."
+    },
+    {
+      "question": "Which of the following is the correct sequence of the chain of infection?",
+      "choices": [
+        "1, 2, 3, 4, 5, 6",
+        "5, 4, 2, 3, 6, 1",
+        "4, 5, 3, 6, 2, 1",
+        "6, 5, 4, 3, 2, 1"
+      ],
+      "answer": 2,
+      "explanation": "The correct sequence of the chain of infection is: (1) Infectious agent, (2) Reservoir, (3) Portal of exit, (4) Mode of transmission, (5) Portal of entry, and (6) Susceptible host. Based on the numbering in the question, this corresponds to 4, 5, 3, 6, 2, 1. Understanding this sequence is essential because interrupting any single link can effectively prevent disease transmission."
+    },
+    {
+      "question": "Markee, a 15-year-old high school student, asks about the mode of transmission of Lyme disease. Which is the correct answer?",
+      "choices": [
+        "Direct contact transmission",
+        "Vehicle-borne transmission",
+        "Airborne transmission",
+        "Vector-borne transmission"
+      ],
+      "answer": 3,
+      "explanation": "Lyme disease is caused by the bacterium *Borrelia burgdorferi* and is transmitted through the bite of infected Ixodes ticks. Since ticks are living organisms that carry and transmit the pathogen, Lyme disease is classified as a vector-borne disease. Vehicle-borne transmission involves contaminated food, water, or objects, while direct contact and airborne transmission are not the modes of spread for Lyme disease."
+    },
+    {
+      "question": "The ability of an infectious agent to cause disease primarily depends on all of the following EXCEPT:",
+      "choices": [
+        "Pathogenicity",
+        "Virulence",
+        "Invasiveness",
+        "Non-specificity"
+      ],
+      "answer": 3,
+      "explanation": "The disease-producing capability of a microorganism depends on its pathogenicity (ability to produce disease), virulence (degree of pathogenicity), and invasiveness (ability to enter and spread through tissues). 'Non-specificity' is not a recognized characteristic that determines the infectivity or severity of a microorganism."
+    },
+    {
+      "question": "Contact transmission of infectious organisms in the hospital is usually caused by:",
+      "choices": [
+        "Urinary catheterization",
+        "Spread from patient to patient",
+        "Spread by cross-contamination via the hands of caregivers",
+        "Unclean instruments used by doctors and nurses"
+      ],
+      "answer": 2,
+      "explanation": "The hands of healthcare workers are the most common vehicle for transmitting microorganisms within healthcare facilities. Failure to perform proper hand hygiene allows pathogens to spread from one patient to another through cross-contamination. This is why handwashing is considered the single most effective measure for preventing healthcare-associated infections."
+    },
+    {
+      "question": "Transmission occurs when an infected person sneezes, coughs, or laughs, projecting respiratory secretions approximately three feet.",
+      "choices": [
+        "Droplet transmission",
+        "Airborne transmission",
+        "Vehicle transmission",
+        "Vector-borne transmission"
+      ],
+      "answer": 0,
+      "explanation": "Droplet transmission occurs through large respiratory droplets expelled during coughing, sneezing, talking, or laughing. These droplets usually travel only about 3 to 6 feet before settling. Diseases such as influenza, pertussis, and rubella are commonly spread through droplet transmission. Airborne transmission involves much smaller particles that remain suspended in the air for longer periods."
+    },
+    {
+      "question": "Which of the following is considered the body's first line of defense against infection?",
+      "choices": [
+        "Skin",
+        "White blood cells",
+        "Leukocytes",
+        "Immunization"
+      ],
+      "answer": 0,
+      "explanation": "The skin serves as the body's first line of defense by providing a physical barrier that prevents microorganisms from entering the body. Intact skin, mucous membranes, and their secretions form part of the innate immune system. White blood cells and leukocytes function as the second line of defense after pathogens have breached the body's physical barriers."
+    },
+    {
+      "question": "All of the following contribute to host susceptibility EXCEPT:",
+      "choices": [
+        "Creed",
+        "Immunization",
+        "Current medication being taken",
+        "Color of the skin"
+      ],
+      "answer": 0,
+      "explanation": "Host susceptibility is influenced by factors such as immune status, nutritional status, age, chronic diseases, medications, stress, and immunization history. Religious belief or creed does not directly alter a person's physiologic susceptibility to infection. Although skin color may influence the prevalence of certain diseases due to genetic variations, it is not generally considered a determinant of susceptibility in the chain of infection."
+    },
+    {
+      "question": "Graciel has received her fifth dose (TT5) of tetanus toxoid vaccine. What type of immunity does this vaccination provide?",
+      "choices": [
+        "Natural active immunity",
+        "Natural passive immunity",
+        "Artificial active immunity",
+        "Artificial passive immunity"
+      ],
+      "answer": 2,
+      "explanation": "Tetanus toxoid vaccination stimulates the individual's immune system to produce its own antibodies and memory cells against *Clostridium tetani*. Because immunity develops through vaccination rather than natural infection, it is classified as artificial active immunity. This type of immunity develops gradually but provides long-lasting protection."
+    },
+    {
+      "question": "Agatha sustained multiple injuries and was given Tetanus Immune Globulin (TIG). What type of immunity does TIG provide?",
+      "choices": [
+        "Natural active immunity",
+        "Natural passive immunity",
+        "Artificial active immunity",
+        "Artificial passive immunity"
+      ],
+      "answer": 3,
+      "explanation": "Tetanus Immune Globulin (TIG) contains preformed antibodies that provide immediate protection against tetanus. Since the antibodies are administered from an external source rather than produced by the patient's own immune system, this is artificial passive immunity. Passive immunity offers immediate but temporary protection because no immunologic memory is formed."
+    },
+    {
+      "question": "This is the single most important procedure that prevents cross-contamination and infection.",
+      "choices": [
+        "Cleaning",
+        "Disinfecting",
+        "Sterilizing",
+        "Handwashing"
+      ],
+      "answer": 3,
+      "explanation": "Handwashing is universally recognized as the single most effective measure in preventing the spread of infection. The hands of healthcare workers are the primary vehicle for transmitting microorganisms between patients, healthcare personnel, and the environment. Proper hand hygiene significantly reduces healthcare-associated infections (HAIs) and breaks the chain of infection by interrupting the mode of transmission."
+    },
+    {
+      "question": "This is considered the most important aspect of handwashing.",
+      "choices": [
+        "Time",
+        "Friction",
+        "Water",
+        "Soap"
+      ],
+      "answer": 1,
+      "explanation": "Friction is the most important component of handwashing because the rubbing action mechanically loosens and removes dirt, oils, transient microorganisms, and organic material from the skin. Although soap, water, and adequate washing time are necessary, friction is the primary factor responsible for physically removing microorganisms."
+    },
+    {
+      "question": "In handwashing using medical asepsis, the hands are held:",
+      "choices": [
+        "Above the elbows because the hands must always be above the waist.",
+        "Above the elbows because the hands are cleaner than the elbows.",
+        "Below the elbows because medical asepsis does not require the hands to be above the waist.",
+        "Below the elbows because the hands are dirtier than the lower arms."
+      ],
+      "answer": 3,
+      "explanation": "During routine handwashing (medical asepsis), the hands are considered more contaminated than the forearms. Therefore, they should be held below the elbows so that water flows from the cleaner area (forearms) toward the dirtier area (hands and fingertips), preventing contaminated water from flowing back onto the forearms. Keeping the hands above the elbows is a principle reserved for surgical hand scrubbing."
+    },
+    {
+      "question": "The suggested time for washing each hand using the time method is:",
+      "choices": [
+        "5 to 10 seconds",
+        "10 to 15 seconds",
+        "15 to 30 seconds",
+        "30 to 60 seconds"
+      ],
+      "answer": 2,
+      "explanation": "The recommended duration for washing each hand using the traditional time method is 15 to 30 seconds. This amount of time allows adequate friction to remove transient microorganisms. Washing for a shorter duration may not effectively eliminate pathogens, while excessively long washing offers little additional benefit during routine hand hygiene."
+    },
+    {
+      "question": "The minimum time for washing each hand should never be below:",
+      "choices": [
+        "5 seconds",
+        "10 seconds",
+        "15 seconds",
+        "30 seconds"
+      ],
+      "answer": 2,
+      "explanation": "The minimum recommended duration for washing each hand is 15 seconds. Studies have shown that washing for less than 15 seconds significantly reduces the effectiveness of removing transient microorganisms. Many current infection-control guidelines recommend handwashing for at least 20 seconds, but the traditional nursing standard identifies 15 seconds as the minimum acceptable duration."
+    },
+    {
+      "question": "How many milliliters of liquid soap are recommended during handwashing?",
+      "choices": [
+        "1–2 mL",
+        "2–3 mL",
+        "2–4 mL",
+        "5–10 mL"
+      ],
+      "answer": 0,
+      "explanation": "Approximately 1 to 2 mL of liquid soap is sufficient for effective handwashing. This amount allows adequate lather formation and coverage of all hand surfaces while avoiding unnecessary waste. The effectiveness of handwashing depends more on proper technique and friction than on the quantity of soap used."
+    },
+    {
+      "question": "Which of the following is NOT true regarding sterilization, cleaning, and disinfection?",
+      "choices": [
+        "Equipment with small lumens is easier to clean.",
+        "Sterilization completely destroys all viable microorganisms, including spores.",
+        "Some microorganisms are easily destroyed, whereas others with coagulated proteins require longer exposure.",
+        "The greater the number of microorganisms present, the longer the time required for sterilization."
+      ],
+      "answer": 0,
+      "explanation": "Equipment with small lumens is actually more difficult to clean because microorganisms and organic debris can become trapped inside narrow channels. Proper cleaning of lumened instruments often requires specialized brushes and flushing techniques before sterilization. The remaining statements accurately describe principles of sterilization."
+    },
+    {
+      "question": "Karlita asks how long glass baby bottles should be boiled for effective disinfection. What is the correct recommendation?",
+      "choices": [
+        "At least 5 minutes",
+        "At least 10 minutes",
+        "At least 15 minutes",
+        "The duration does not matter as long as the water reaches 100°C."
+      ],
+      "answer": 2,
+      "explanation": "For boiling to achieve effective high-level disinfection, articles should be immersed in continuously boiling water for at least 15 minutes after the water reaches a rolling boil. Boiling destroys most pathogenic microorganisms but does not reliably destroy bacterial spores. Therefore, boiling is considered a method of disinfection rather than true sterilization."
+    },
+    {
+      "question": "Which method is best for sterilizing drugs, foods, and other heat-sensitive materials before they are used or consumed?",
+      "choices": [
+        "Boiling water",
+        "Gas sterilization",
+        "Steam under pressure",
+        "Radiation"
+      ],
+      "answer": 3,
+      "explanation": "Radiation sterilization, particularly gamma radiation, is widely used for sterilizing heat-sensitive materials such as pharmaceuticals, certain foods, disposable medical supplies, and laboratory products. It effectively destroys microorganisms without exposing the products to high temperatures that could alter their composition."
+    },
+    {
+      "question": "After a patient with pulmonary tuberculosis is discharged, an ultraviolet (UV) lamp is used to disinfect the room. This is an example of:",
+      "choices": [
+        "Concurrent disinfection",
+        "Terminal disinfection",
+        "Regular disinfection",
+        "Routine disinfection"
+      ],
+      "answer": 1,
+      "explanation": "Terminal disinfection is performed after a patient has been discharged, transferred, or has died to eliminate microorganisms remaining in the environment before another patient occupies the room. Ultraviolet germicidal irradiation (UVGI) may be used as an adjunct to environmental cleaning to reduce airborne microorganisms, particularly *Mycobacterium tuberculosis*."
+    },
+    {
+      "question": "Which of the following is NOT true when implementing medical asepsis?",
+      "choices": [
+        "Wash hands before and after patient contact.",
+        "Keep soiled linens from touching your clothing.",
+        "Shake the linens to remove dust.",
+        "Practice good personal hygiene."
+      ],
+      "answer": 2,
+      "explanation": "Soiled linens should never be shaken because doing so disperses microorganisms, dust, and skin particles into the air, increasing the risk of airborne contamination and cross-infection. Instead, linens should be handled gently, kept away from the nurse's uniform, and placed directly into designated laundry bags. Proper hand hygiene and good personal hygiene remain essential principles of medical asepsis."
+    },
+    {
+      "question": "Which of the following is TRUE about autoclaving or steam under pressure?",
+      "choices": [
+        "All kinds of microorganisms and their spores are destroyed by an autoclave.",
+        "Autoclaved instruments can be used for one month as long as the packaging is intact.",
+        "Instruments with hinges should be placed in the unlocked or open position during autoclaving.",
+        "Different kinds of metals should be autoclaved together."
+      ],
+      "answer": 2,
+      "explanation": "Instruments with hinges, such as forceps and scissors, should be placed in the open or unlocked position to allow steam to reach all surfaces effectively. Although steam under pressure destroys microorganisms and spores when the cycle is completed correctly, sterility maintenance depends on storage conditions rather than a fixed one-month period. Different metals should not always be processed together because they may require different sterilization conditions or may corrode."
+    },
+    {
+      "question": "Which of the following statements about masks is TRUE?",
+      "choices": [
+        "Masks should only cover the nose.",
+        "Masks function better when moistened with alcohol.",
+        "Masks provide unlimited protection even after prolonged use.",
+        "N95 respirators can filter very small airborne particles."
+      ],
+      "answer": 3,
+      "explanation": "N95 respirators are designed to filter at least 95% of airborne particles measuring approximately 0.3 microns or larger and provide protection against airborne diseases such as tuberculosis and measles. Masks should completely cover both the nose and mouth, should not be moistened with alcohol, and should be replaced when wet, soiled, or after prolonged use because their filtration efficiency decreases."
+    },
+    {
+      "question": "Where should a wet adult diaper be discarded?",
+      "choices": [
+        "Green trash can",
+        "Black trash can",
+        "Orange trash can",
+        "Yellow trash can"
+      ],
+      "answer": 1,
+      "explanation": "A wet diaper that is not contaminated with blood or infectious body fluids is considered non-infectious general waste and should be disposed of in the black trash can. Yellow containers are reserved for infectious waste, while other color codes are used for different waste categories depending on institutional policy."
+    },
+    {
+      "question": "Needles, scalpels, broken glass, and lancets are classified as injurious waste. How should these items be discarded?",
+      "choices": [
+        "Puncture-proof sharps container",
+        "Reused PET bottle",
+        "Black trash can",
+        "Yellow trash can labeled 'Injurious Wastes'"
+      ],
+      "answer": 0,
+      "explanation": "Sharps such as needles, scalpels, lancets, and broken glass must be disposed of immediately into a puncture-resistant, leak-proof sharps container. This prevents accidental needlestick injuries and protects healthcare workers, waste handlers, and the public. Household containers such as PET bottles should never be used unless specifically approved by institutional policy."
+    },
+    {
+      "question": "A patient receiving internal radiation therapy has a radioactive implant that has become displaced and is protruding from the vagina. What is the nurse's INITIAL action?",
+      "choices": [
+        "Using long forceps, push it back toward the cervix and then notify the physician.",
+        "Wear gloves, remove it gently, and place it in a lead container.",
+        "Using long forceps, remove it and place it in a lead container.",
+        "Notify the physician because the nurse is not allowed to touch or remove the implant."
+      ],
+      "answer": 2,
+      "explanation": "If a sealed radioactive implant becomes dislodged, the nurse should use long-handled forceps to pick it up and immediately place it into the designated lead-lined container to minimize radiation exposure. The physician and radiation safety officer should then be notified immediately. The nurse should never attempt to reposition the implant with bare hands or delay action while waiting for the physician."
+    },
+    {
+      "question": "After leech therapy, where should the leeches be discarded?",
+      "choices": [
+        "Specially marked biohazard container",
+        "Yellow trash can",
+        "Black trash can",
+        "Return them to the culture room for reuse."
+      ],
+      "answer": 0,
+      "explanation": "Leeches used for medical therapy are considered biohazardous waste because they contain human blood. After use, they must be placed in a designated biohazard container according to institutional infection-control protocols. They must never be reused because of the risk of transmitting blood-borne pathogens."
+    },
+    {
+      "question": "Which of the following nursing actions should be AVOIDED to prevent the spread of infection?",
+      "choices": [
+        "Recapping the needle before disposal to prevent injuries.",
+        "Never pointing a needle toward any part of the body.",
+        "Using Standard Precautions when caring for patients with HIV/AIDS.",
+        "Avoid giving fresh, uncooked fruits and vegetables to a patient with neutropenia."
+      ],
+      "answer": 0,
+      "explanation": "Needles should never be recapped after use because recapping is one of the leading causes of accidental needlestick injuries. Used needles should be disposed of immediately into an approved sharps container without recapping. Standard Precautions are appropriate for all patients regardless of diagnosis, and neutropenic patients should avoid raw fruits and vegetables to reduce the risk of infection."
+    },
+    {
+      "question": "Where should a patient diagnosed with Category II pulmonary tuberculosis be placed?",
+      "choices": [
+        "Positive-pressure room with at least 3 air exchanges per hour",
+        "Positive-pressure room with at least 6 air exchanges per hour",
+        "Negative-pressure room with at least 3 air exchanges per hour",
+        "Negative-pressure room with at least 6 air exchanges per hour"
+      ],
+      "answer": 3,
+      "explanation": "Patients with pulmonary tuberculosis require airborne isolation in a negative-pressure room to prevent contaminated air from escaping into surrounding areas. The room should have adequate air exchanges, with modern recommendations being at least 6 to 12 air changes per hour. Negative pressure directs airflow into the room and protects other patients, visitors, and healthcare workers."
+    },
+    {
+      "question": "A client has been diagnosed with rubella. Which transmission-based precaution should be implemented?",
+      "choices": [
+        "Standard Precaution",
+        "Airborne Precaution",
+        "Droplet Precaution",
+        "Contact Precaution"
+      ],
+      "answer": 2,
+      "explanation": "Rubella (German measles) is transmitted primarily through respiratory droplets expelled during coughing, sneezing, or talking. Therefore, Droplet Precautions are required. Healthcare workers should wear a surgical mask when within close proximity of the patient, while Standard Precautions continue to apply to all aspects of care."
+    },
+    {
+      "question": "A client has been diagnosed with measles. Which transmission-based precaution should be implemented?",
+      "choices": [
+        "Standard Precaution",
+        "Airborne Precaution",
+        "Droplet Precaution",
+        "Contact Precaution"
+      ],
+      "answer": 1,
+      "explanation": "Measles (rubeola) is one of the most highly contagious airborne diseases. The virus remains suspended in the air for up to two hours after an infected person leaves the room. Patients should be placed in a negative-pressure room, and healthcare workers should wear a fit-tested N95 respirator. Therefore, Airborne Precautions are required."
+    },
+    {
+      "question": "A client has been diagnosed with impetigo. Which transmission-based precaution should be implemented?",
+      "choices": [
+        "Standard Precaution",
+        "Airborne Precaution",
+        "Droplet Precaution",
+        "Contact Precaution"
+      ],
+      "answer": 3,
+      "explanation": "Impetigo is a highly contagious bacterial skin infection caused by Staphylococcus aureus or Streptococcus pyogenes. It spreads through direct contact with infected skin lesions or contaminated objects. Contact Precautions are indicated, including the use of gloves and gowns when touching the patient or contaminated items."
+    },
+    {
+      "question": "While inserting a nasogastric tube, the distal end accidentally touches the client's glass of distilled drinking water, which is not sterile. What should the nurse do?",
+      "choices": [
+        "Continue inserting the tube because distilled water is clean.",
+        "Obtain a new nasogastric tube.",
+        "Disinfect the tube before inserting it.",
+        "Ask the senior nurse what to do."
+      ],
+      "answer": 1,
+      "explanation": "Once a sterile item becomes contaminated, it is considered unsterile and should not be used. Distilled drinking water is not sterile and cannot maintain the sterility of medical equipment. The nurse should discard the contaminated tube and obtain a new sterile nasogastric tube to prevent introducing microorganisms into the patient's gastrointestinal tract."
+    },
+    {
+      "question": "Which of the following is NOT a principle of surgical asepsis?",
+      "choices": [
+        "Microorganisms travel more easily through moisture than through dry surfaces.",
+        "When in doubt about an object's sterility, consider it contaminated.",
+        "Once the skin has been prepared with antiseptic, it should be considered permanently sterile.",
+        "Instead of reaching over a sterile field, move around it to obtain needed supplies."
+      ],
+      "answer": 2,
+      "explanation": "Skin can never be made completely sterile because microorganisms normally reside in deeper layers and hair follicles. Surgical skin preparation only reduces the number of microorganisms. Therefore, prepared skin is considered surgically clean, not permanently sterile. The remaining statements are fundamental principles of surgical asepsis."
+    },
+    {
+      "question": "Which of the following statements about surgical asepsis is TRUE?",
+      "choices": [
+        "Autoclaved gowns and linens remain sterile for about four months as long as the package remains intact.",
+        "Maintaining surgical asepsis is solely the responsibility of each individual nurse.",
+        "A sterile conscience is the best safeguard in maintaining sterile technique.",
+        "A scrubbed person who leaves the sterile area only needs to change gloves before returning."
+      ],
+      "answer": 2,
+      "explanation": "A sterile conscience means consistently following sterile technique even when no one is watching. It is considered the most important safeguard against contamination. Sterility depends on event-related factors rather than a fixed period, maintaining a sterile field is a team responsibility, and a scrubbed person who leaves the sterile area must repeat the entire surgical scrub and don a new sterile gown and gloves."
+    },
+    {
+      "question": "During the open-gloving technique, which hand should be gloved first?",
+      "choices": [
+        "Dominant hand",
+        "Non-dominant hand",
+        "Left hand",
+        "Either hand; no specific order is required."
+      ],
+      "answer": 1,
+      "explanation": "In the open-gloving technique, the non-dominant hand is gloved first because it will then be used to assist in gloving the dominant hand while maintaining sterility. This minimizes the chance of contaminating the sterile gloves during the procedure."
+    },
+    {
+      "question": "Before a surgical procedure, when should the nurse apply the cap, mask, and shoe covers?",
+      "choices": [
+        "Immediately after entering the sterile field",
+        "After performing the surgical hand scrub",
+        "Before performing the surgical hand scrub",
+        "After putting on sterile gloves"
+      ],
+      "answer": 2,
+      "explanation": "The cap, mask, and shoe covers should be worn before beginning the surgical hand scrub. This prevents contamination of the freshly scrubbed hands while putting on protective attire. After completing the hand scrub, the nurse proceeds with gowning and gloving using sterile technique."
+    },
+    {
+      "question": "Which nursing action is correct when applying sterile gloves before a surgical procedure?",
+      "choices": [
+        "Insert all fingers of the gloved hand inside the cuff of the second glove when picking it up.",
+        "Pick up the first glove by inserting four fingers underneath the cuff while keeping the thumb away.",
+        "Glove the dominant hand first.",
+        "Adjust the gloves individually before both gloves are on."
+      ],
+      "answer": 3,
+      "explanation": "The fit of sterile gloves should only be adjusted after both gloves have been completely applied. Adjusting one glove before the other is on increases the risk of contaminating the sterile glove. Proper gloving technique minimizes contact with the glove's outer sterile surface throughout the procedure."
+    },
+    {
+      "question": "Which glove should be removed first after completing a sterile procedure?",
+      "choices": [
+        "The glove on the non-dominant hand",
+        "The glove on the dominant hand",
+        "The glove on the left hand",
+        "The order is not important."
+      ],
+      "answer": 0,
+      "explanation": "The glove on the non-dominant hand is removed first using the glove-to-glove, skin-to-skin technique. This method allows the remaining gloved hand to avoid touching the contaminated outer surface, thereby reducing the risk of contaminating the bare hand during glove removal."
+    },
+    {
+      "question": "Before a surgical procedure, what is the correct sequence for applying protective equipment?",
+      "choices": [
+        "Mask → Cap → Goggles → Gown → Gloves",
+        "Mask → Cap → Goggles → Gloves → Gown",
+        "Cap → Mask → Goggles → Gown → Gloves",
+        "Cap → Mask → Goggles → Gloves → Gown"
+      ],
+      "answer": 2,
+      "explanation": "The proper sequence is Cap → Mask → Goggles/Eye protection → Sterile Gown → Sterile Gloves. Hair is covered first, followed by the mask and eye protection before the surgical hand scrub is completed. After scrubbing, the nurse dons the sterile gown and finally the sterile gloves. This sequence minimizes contamination throughout the preparation process."
+    },
+    {
+      "question": "Before removing personal protective equipment (PPE), what is the correct sequence for removing the following items: Gloves, Mask, Gown, Goggles, and Cap?",
+      "choices": [
+        "Gloves → Mask → Gown → Goggles → Cap",
+        "Cap → Mask → Goggles → Gown → Gloves",
+        "Gown → Gloves → Mask → Cap → Goggles",
+        "Goggles → Cap → Mask → Gloves → Gown"
+      ],
+      "answer": 0,
+      "explanation": "The safest sequence follows the principle of removing the most contaminated items first. Gloves are removed first because they have the highest concentration of microorganisms. The mask is then removed carefully without touching its front surface, followed by the gown, goggles or face shield, and finally the cap. Hand hygiene should always be performed immediately after all PPE has been removed."
+    },
+    {
+      "question": "When pouring sterile normal saline solution into a sterile receptacle, how high should the bottle be held above the container?",
+      "choices": [
+        "1 inch (2.5 cm)",
+        "3 inches (7.5 cm)",
+        "6 inches (15 cm)",
+        "10 inches (25 cm)"
+      ],
+      "answer": 2,
+      "explanation": "The sterile solution container should be held approximately 6 inches (15 cm) above the sterile receptacle. This height prevents accidental contact between the bottle and the sterile field while minimizing splashing that could contaminate the field."
+    },
+    {
+      "question": "How should sterile transfer forceps be held during use?",
+      "choices": [
+        "The tip should always be lower than the handle.",
+        "The tip should always be higher than the handle.",
+        "The tip and handle should remain at the same level.",
+        "The handle should point downward while the tip points upward."
+      ],
+      "answer": 0,
+      "explanation": "The tips of sterile forceps should always be pointed downward. Gravity prevents contaminated fluids from running from the handle toward the sterile tips. If the tips are held upward, microorganisms from the handle may contaminate the sterile ends, making the forceps unsafe for use."
+    },
+    {
+      "question": "The nurse enters the room of a patient with pulmonary tuberculosis who is on airborne precautions. Which nursing actions are appropriate?\n\n1. Wear a mask covering both the nose and mouth.\n2. Perform hand hygiene before and after removing gloves after suctioning secretions.\n3. Remove gloves and perform hand hygiene before leaving the room.\n4. Discard the contaminated suction catheter in the waste container inside the patient's room.",
+      "choices": [
+        "1 and 2 only",
+        "1, 2, and 3 only",
+        "1, 2, 3, and 4",
+        "1 and 3 only"
+      ],
+      "answer": 2,
+      "explanation": "All four nursing actions are appropriate. Healthcare workers should wear the appropriate respiratory protection (preferably an N95 respirator), perform hand hygiene before and after glove use, remove gloves before leaving the patient's room, and dispose of contaminated equipment inside the isolation room according to infection-control policies to minimize environmental contamination."
+    },
+    {
+      "question": "During a surgical hand scrub, which nursing actions help prevent contamination?\n\n1. Keep fingernails short, clean, and free of nail polish.\n2. Turn the faucet on and off using knee or foot controls.\n3. Keep the hands above the elbows while washing and rinsing.\n4. Wear the cap, mask, and shoe covers after completing the scrub.",
+      "choices": [
+        "1 and 2 only",
+        "2 and 3 only",
+        "1, 2, and 3 only",
+        "2, 3, and 4 only"
+      ],
+      "answer": 0,
+      "explanation": "Keeping fingernails short and free of nail polish reduces bacterial colonization, while using knee or foot controls prevents recontamination of the hands. During surgical hand scrub, the hands should remain above the elbows—not the reverse—so water flows from the cleanest area (hands) toward the less clean area (elbows). Protective attire such as the cap, mask, and shoe covers should already be worn before beginning the surgical scrub."
+    },
+    {
+      "question": "Which of the following is an inappropriate nursing action when removing gloves?",
+      "choices": [
+        "Wash or sanitize gloved hands if visibly contaminated before removal.",
+        "Peel the gloves off inside out.",
+        "Use the glove-to-glove and skin-to-skin removal technique.",
+        "Remove the mask and gown before removing the gloves."
+      ],
+      "answer": 3,
+      "explanation": "Gloves are the most contaminated part of personal protective equipment and should be removed first. Removing the mask or gown while contaminated gloves are still on increases the risk of transferring microorganisms to the face, clothing, or skin. The glove-to-glove and skin-to-skin technique is the recommended method for safe glove removal."
+    },
+    {
+      "question": "Which statement about stress is TRUE?",
+      "choices": [
+        "Stress is not always present during illness.",
+        "Stress affects only psychological functioning.",
+        "All stressors produce a common adaptive response in the body.",
+        "Homeostasis refers to uncontrolled body imbalance."
+      ],
+      "answer": 2,
+      "explanation": "Hans Selye proposed that regardless of the type of stressor—physical, emotional, or environmental—the body responds through a common physiological adaptation known as the General Adaptation Syndrome (GAS). Homeostasis refers to a dynamic state of internal balance, not imbalance, and stress may occur even in healthy individuals."
+    },
+    {
+      "question": "According to Hans Selye's Modern Stress Theory, stress is:",
+      "choices": [
+        "The non-specific response of the body to any demand placed upon it.",
+        "The body's inability to maintain homeostasis.",
+        "A purely psychological reaction to difficult situations.",
+        "A condition that always results in disease."
+      ],
+      "answer": 0,
+      "explanation": "Hans Selye defined stress as the non-specific response of the body to any demand or challenge. Regardless of whether the stressor is physical, emotional, or environmental, the body activates physiological mechanisms designed to restore balance. Stress itself is not always harmful; excessive or prolonged stress, however, can contribute to illness."
+    },
+    {
+      "question": "Which statement is NOT true regarding the Modern Stress Theory?",
+      "choices": [
+        "Stress is not a form of nervous energy.",
+        "Humans adapt to stressors they encounter.",
+        "Stress should always be avoided.",
+        "Stress does not always lead to distress."
+      ],
+      "answer": 2,
+      "explanation": "Stress is a normal part of life and is not always harmful. Positive stress (eustress) can promote growth, motivation, and adaptation. Only excessive or prolonged stress may result in distress. Therefore, it is incorrect to say that stress should always be avoided."
+    },
+    {
+      "question": "Which statement is TRUE regarding the Modern Stress Theory?",
+      "choices": [
+        "Stress is essential for adaptation and survival.",
+        "People experience no stress while sleeping.",
+        "A single stressor always causes disease.",
+        "Stress always leads to distress."
+      ],
+      "answer": 0,
+      "explanation": "Stress is a normal physiological response that helps individuals adapt to changing internal and external demands. Moderate levels of stress enhance survival by preparing the body to respond to challenges. Disease usually results from prolonged, excessive, or poorly managed stress rather than from a single stressful event."
+    },
+    {
+      "question": "Which of the following is TRUE during the Alarm stage of the General Adaptation Syndrome (GAS)?",
+      "choices": [
+        "Results from prolonged exposure to stress.",
+        "The level of resistance is increased.",
+        "The body is characterized by adaptation.",
+        "The fight-or-flight response is activated."
+      ],
+      "answer": 3,
+      "explanation": "The Alarm stage is the body's immediate response to a stressor. During this stage, the sympathetic nervous system is activated, triggering the fight-or-flight response. Catecholamines such as epinephrine and norepinephrine are released, causing increased heart rate, blood pressure, respiratory rate, blood glucose, and alertness. Adaptation has not yet occurred during this stage."
+    },
+    {
+      "question": "During which stage of the General Adaptation Syndrome (GAS) do the body's adaptive mechanisms begin to function?",
+      "choices": [
+        "Alarm stage",
+        "Resistance stage",
+        "Homeostasis stage",
+        "Exhaustion stage"
+      ],
+      "answer": 1,
+      "explanation": "The Resistance stage begins after the initial alarm reaction. During this stage, the body attempts to adapt to the stressor while maintaining physiologic stability. Cortisol remains elevated, resistance to the stressor increases, and normal body functions gradually stabilize if adaptation is successful."
+    },
+    {
+      "question": "Which stage of the General Adaptation Syndrome (GAS) is characterized by successful adaptation to the stressor?",
+      "choices": [
+        "Alarm stage",
+        "Resistance stage",
+        "Homeostasis stage",
+        "Exhaustion stage"
+      ],
+      "answer": 1,
+      "explanation": "The Resistance stage is characterized by adaptation. During this period, the body continues to cope with the stressor, physiological responses become less dramatic than during the alarm stage, and the individual functions relatively normally while adapting to the stressful situation."
+    },
+    {
+      "question": "During which stage of the General Adaptation Syndrome (GAS) does the body's level of resistance begin to decrease?",
+      "choices": [
+        "Alarm stage",
+        "Resistance stage",
+        "Homeostasis stage",
+        "Exhaustion stage"
+      ],
+      "answer": 3,
+      "explanation": "The Exhaustion stage occurs when exposure to stress is prolonged and the body's adaptive resources become depleted. Resistance falls below normal levels, making the individual more susceptible to illness, organ dysfunction, and, in severe cases, death if effective adaptation is no longer possible."
+    },
+    {
+      "question": "In which stage of the General Adaptation Syndrome (GAS) does the individual return to a state of homeostasis?",
+      "choices": [
+        "Alarm stage",
+        "Resistance stage",
+        "Homeostasis stage",
+        "Exhaustion stage"
+      ],
+      "answer": 2,
+      "explanation": "If the stressor is successfully managed or removed, the individual returns to Homeostasis. During this stage, physiologic functions normalize, stress hormones decline to baseline levels, and the body regains its normal state of equilibrium."
+    },
+    {
+      "question": "Which stage of the General Adaptation Syndrome (GAS) results from prolonged exposure to stress and may eventually lead to death if no additional adaptive mechanisms are available?",
+      "choices": [
+        "Alarm stage",
+        "Resistance stage",
+        "Homeostasis stage",
+        "Exhaustion stage"
+      ],
+      "answer": 3,
+      "explanation": "The Exhaustion stage develops when the body has been exposed to stress for an extended period and can no longer maintain adaptation. Physiologic reserves become depleted, immunity decreases, chronic illness may develop, and severe cases may progress to organ failure or death if the stress continues."
+    },
+    {
+      "question": "Which of the following is NOT a characteristic of an adaptive response?",
+      "choices": [
+        "It attempts to maintain homeostasis.",
+        "It produces a total-body response.",
+        "It is immediately mobilized and requires no time.",
+        "It varies from one person to another."
+      ],
+      "answer": 2,
+      "explanation": "Adaptive responses are not instantaneous. The body requires time to recognize a stressor, activate physiologic and psychological mechanisms, and adjust to the situation. Adaptive responses aim to maintain homeostasis, involve the whole person, and differ among individuals depending on genetics, health status, and previous experiences."
+    },
+    {
+      "question": "Andy, a newly hired nurse, is learning to operate new electronic equipment and healthcare technologies used in the hospital. Which mode of adaptation is Andy demonstrating?",
+      "choices": [
+        "Biologic/Physiologic adaptation",
+        "Psychologic adaptation",
+        "Sociocultural adaptation",
+        "Technological adaptation"
+      ],
+      "answer": 3,
+      "explanation": "Technological adaptation refers to adjusting to new equipment, digital systems, medical devices, and technological advances. Andy is learning to use unfamiliar hospital technologies, making this an example of technological adaptation rather than biological, psychological, or sociocultural adjustment."
+    },
+    {
+      "question": "Andy recently moved to Quebec and is learning French because most people in the community speak the language. Which mode of adaptation is Andy demonstrating?",
+      "choices": [
+        "Biologic/Physiologic adaptation",
+        "Psychologic adaptation",
+        "Sociocultural adaptation",
+        "Technological adaptation"
+      ],
+      "answer": 2,
+      "explanation": "Sociocultural adaptation involves adjusting to the customs, beliefs, language, traditions, and social expectations of a community. Learning the local language allows Andy to communicate effectively and integrate into the new culture, making this an example of sociocultural adaptation."
+    },
+    {
+      "question": "After receiving a written warning from his senior nurse, Andy went home angry and kicked the door. Which mode of adaptation does this behavior represent?",
+      "choices": [
+        "Biologic/Physiologic adaptation",
+        "Psychologic adaptation",
+        "Sociocultural adaptation",
+        "Technological adaptation"
+      ],
+      "answer": 1,
+      "explanation": "Psychologic adaptation involves emotional and cognitive responses to stressful situations. Andy's anger and expression of frustration after receiving disciplinary action demonstrate an emotional coping response. Although kicking the door is a maladaptive coping behavior, it still falls under the psychological mode of adaptation because it reflects an emotional reaction to stress."
+    }
 
+  ],
+
+  "foundation-stress-crisis-communication": [
+     {
+      "question": "The coronary vessels, unlike any other blood vessels in the body, respond to sympathetic stimulation by",
+      "choices": [
+        "Vasoconstriction",
+        "Vasodilatation",
+        "Decreases force of contractility",
+        "Decreases cardiac output"
+      ],
+      "correct_answer": "Vasodilatation",
+      "explanation": "Unlike most peripheral blood vessels, the coronary arteries dilate during sympathetic stimulation. Sympathetic activation increases the heart's workload and oxygen demand, so the coronary arteries dilate to deliver more oxygen-rich blood to the myocardium. This ensures adequate perfusion during periods of increased cardiac activity."
+    },
+    {
+      "question": "What stress response can you expect from a patient with blood sugar of 50 mg/dL?",
+      "choices": [
+        "Body will try to decrease the glucose level",
+        "There will be a halt in release of sex hormones",
+        "Client will appear restless",
+        "Blood pressure will increase"
+      ],
+      "correct_answer": "Blood pressure will increase",
+      "explanation": "Hypoglycemia activates the sympathetic nervous system. Catecholamines (epinephrine and norepinephrine) are released, causing tachycardia, increased blood pressure, sweating, tremors, and anxiety. Although restlessness can occur, increased blood pressure is the most characteristic physiologic stress response listed."
+    },
+    {
+      "question": "All of the following are purpose of inflammation except",
+      "choices": [
+        "Increase heat, thereby produce abatement of phagocytosis",
+        "Localized tissue injury by increasing capillary permeability",
+        "Protect the tissue from injury by producing pain",
+        "Prepare for tissue repair"
+      ],
+      "correct_answer": "Increase heat, thereby produce abatement of phagocytosis",
+      "explanation": "Inflammation promotes phagocytosis rather than reducing it. Increased blood flow raises tissue temperature, which enhances leukocyte activity and phagocytosis. The remaining choices are legitimate purposes of inflammation, including limiting tissue damage, protecting the area, and initiating healing."
+    },
+    {
+      "question": "The initial response of tissue after injury is",
+      "choices": [
+        "Immediate Vasodilation",
+        "Transient Vasoconstriction",
+        "Immediate Vasoconstriction",
+        "Transient Vasodilation"
+      ],
+      "correct_answer": "Immediate Vasoconstriction",
+      "explanation": "Immediately after tissue injury, blood vessels undergo a brief vasoconstriction lasting a few seconds to minimize blood loss. This is followed by vasodilation, increased capillary permeability, and migration of inflammatory cells."
+    },
+    {
+      "question": "The last expected process in the stages of inflammation is characterized by",
+      "choices": [
+        "There will be sudden redness of the affected part",
+        "Heat will increase on the affected part",
+        "The affected part will lose its normal function",
+        "Exudates will flow from the injured site"
+      ],
+      "correct_answer": "The affected part will lose its normal function",
+      "explanation": "The five cardinal signs of inflammation are redness (rubor), heat (calor), swelling (tumor), pain (dolor), and loss of function (functio laesa). Loss of function develops after the other inflammatory changes because pain and swelling eventually interfere with normal movement or organ function."
+    },
+    {
+      "question": "What kind of exudates is expected when there is an antibody-antigen reaction as a result of microorganism infection?",
+      "choices": [
+        "Serous",
+        "Serosanguinous",
+        "Purulent",
+        "Sanguinous"
+      ],
+      "correct_answer": "Purulent",
+      "explanation": "Purulent exudate contains large numbers of neutrophils, bacteria, tissue debris, and dead cells. It is commonly associated with bacterial infections where antibody-antigen reactions stimulate an intense inflammatory response."
+    },
+    {
+      "question": "The first manifestation of inflammation is",
+      "choices": [
+        "Redness on the affected area",
+        "Swelling of the affected area",
+        "Pain, which causes guarding of the area",
+        "Increase heat due to transient vasodilation"
+      ],
+      "correct_answer": "Redness on the affected area",
+      "explanation": "Redness (rubor) is the earliest visible sign of inflammation. It occurs because injured blood vessels dilate, increasing blood flow to the affected tissue. Heat, swelling, pain, and eventually loss of function follow."
+    },
+    {
+      "question": "The client has a chronic tissue injury. Upon examining the client's antibody for a particular cellular response, which WBC component is responsible for phagocytosis in chronic tissue injury?",
+      "choices": [
+        "Neutrophils",
+        "Basophils",
+        "Eosinophils",
+        "Monocytes"
+      ],
+      "correct_answer": "Monocytes",
+      "explanation": "Monocytes migrate into tissues and mature into macrophages, the primary phagocytic cells involved in chronic inflammation. Neutrophils dominate acute inflammation, while macrophages sustain chronic inflammatory responses and aid tissue repair."
+    },
+    {
+      "question": "Which of the following WBC component proliferates in cases of Anaphylaxis?",
+      "choices": [
+        "Neutrophils",
+        "Basophils",
+        "Eosinophils",
+        "Monocytes"
+      ],
+      "correct_answer": "Eosinophils",
+      "explanation": "Eosinophils increase in allergic reactions and parasitic infections. During anaphylaxis, eosinophils help regulate allergic inflammation by releasing enzymes that neutralize histamine and other inflammatory mediators."
+    },
+    {
+      "question": "Icheanne asked you which WBC component is responsible for proliferation at the injured site immediately following an injury. You answer:",
+      "choices": [
+        "Neutrophils",
+        "Basophils",
+        "Eosinophils",
+        "Monocytes"
+      ],
+      "correct_answer": "Neutrophils",
+      "explanation": "Neutrophils are the first white blood cells to arrive at the site of acute injury, usually within 6 to 24 hours. They rapidly migrate through chemotaxis and perform phagocytosis of bacteria and damaged tissue, making them the first cellular responders in acute inflammation."
+    },
+    {
+      "question": "Icheanne then asked you, what is the first process that occurs in the inflammatory response after injury. You tell her:",
+      "choices": [
+        "Phagocytosis",
+        "Emigration",
+        "Pavementation",
+        "Chemotaxis"
+      ],
+      "correct_answer": "Pavementation",
+      "explanation": "Pavementation is the first cellular event of inflammation. During this process, leukocytes adhere to the inner walls of the blood vessels before migrating into the injured tissue. The sequence is: pavementation → emigration (diapedesis) → chemotaxis → phagocytosis."
+    },
+    {
+      "question": "Icheanne asked you again, What is that term that describes the magnetic attraction of injured tissue to bring phagocytes to the site of injury?",
+      "choices": [
+        "Icheanne, you better sleep now, you asked a lot of questions",
+        "It is Diapedesis",
+        "We call that Emigration",
+        "I don't know the answer, perhaps I can tell you after I find it out later"
+      ],
+      "correct_answer": "I don't know the answer, perhaps I can tell you after I find it out later",
+      "explanation": "The correct scientific term is chemotaxis, which is not among the choices. Chemotaxis refers to the movement of leukocytes toward the site of injury in response to chemical signals. Since none of the listed scientific terms is correct, the only appropriate answer is to admit not knowing rather than provide incorrect information."
+    },
+    {
+      "question": "This type of healing occurs when there is a delayed surgical closure of infected wound.",
+      "choices": [
+        "First intention",
+        "Second intention",
+        "Third intention",
+        "Fourth intention"
+      ],
+      "correct_answer": "Third intention",
+      "explanation": "Healing by third intention (tertiary intention or delayed primary closure) occurs when an infected or contaminated wound is initially left open to allow drainage and control of infection before being surgically closed several days later."
+    },
+    {
+      "question": "Type of healing when scars are minimal due to careful surgical incision and good healing.",
+      "choices": [
+        "First intention",
+        "Second intention",
+        "Third intention",
+        "Fourth intention"
+      ],
+      "correct_answer": "First intention",
+      "explanation": "Healing by first intention (primary intention) occurs in clean surgical wounds with well-approximated edges. There is minimal tissue loss, little risk of infection, rapid healing, and minimal scar formation."
+    },
+    {
+      "question": "Imelda was slashed and hacked by unknown suspects. She suffered massive tissue loss and laceration on her arms and elbow. As a nurse, you know that the type of healing that will most likely occur is",
+      "choices": [
+        "First intention",
+        "Second intention",
+        "Third intention",
+        "Fourth intention"
+      ],
+      "correct_answer": "Second intention",
+      "explanation": "Healing by second intention occurs when there is extensive tissue loss, wound edges cannot be approximated, and healing occurs through granulation tissue formation, wound contraction, and epithelialization. It results in a larger scar and longer healing time."
+    },
+    {
+      "question": "Imelda is in the recovery stage after the incident. As a nurse, you know that the diet that will be prescribed to Miss Imelda is",
+      "choices": [
+        "Low calorie, High protein with Vitamin A and C rich foods",
+        "High protein, High calorie with Vitamin A and C rich foods",
+        "High calorie, Low protein with Vitamin A and C rich foods",
+        "Low calorie, Low protein with Vitamin A and C rich foods"
+      ],
+      "correct_answer": "High protein, High calorie with Vitamin A and C rich foods",
+      "explanation": "Wound healing requires increased calories to meet energy demands and high protein for collagen synthesis and tissue repair. Vitamin A promotes epithelial growth and immune function, while Vitamin C is essential for collagen formation and capillary integrity."
+    },
+    {
+      "question": "Miss Imelda asked you, What is WET TO DRY Dressing method? Your best response is",
+      "choices": [
+        "It is a type of mechanical debridement using wet dressing that is applied and left to dry to remove dead tissues",
+        "It is a type of surgical debridement with the use of wet dressing to remove the necrotic tissues",
+        "It is a type of dressing wherein the wound is covered with wet or dry dressing to prevent contamination",
+        "It is a type of dressing wherein a cellophane or plastic is placed on the wound over a wet dressing to stimulate healing of the wound in a wet medium"
+      ],
+      "correct_answer": "It is a type of mechanical debridement using wet dressing that is applied and left to dry to remove dead tissues",
+      "explanation": "Wet-to-dry dressing is a form of mechanical debridement. A moist gauze is placed on the wound and allowed to dry. When removed, it pulls away necrotic tissue and debris. Although effective, it may also remove healthy granulation tissue, so it is used selectively."
+    },
+    {
+      "question": "The primary cause of pain in inflammation is",
+      "choices": [
+        "Release of pain mediators",
+        "Injury to the nerve endings",
+        "Compression of the local nerve endings by the edema fluids",
+        "Circulation is lessened, supply of oxygen is insufficient"
+      ],
+      "correct_answer": "Compression of the local nerve endings by the edema fluids",
+      "explanation": "Inflammatory edema increases tissue pressure, compressing local nerve endings and producing pain. Chemical mediators such as bradykinin and prostaglandins also contribute, but the expected answer emphasizes compression caused by accumulated inflammatory fluid."
+    },
+    {
+      "question": "The client is in stress because he was told by the physician he needs surgery for removal of a bladder tumor. Which of the following are effects of sympatho-adreno-medullary response?",
+      "choices": [
+        "Constipation and Urinary frequency",
+        "Constipation, Hyperglycemia, and Increased blood pressure",
+        "Constipation, Urinary frequency, and Increased blood pressure",
+        "Constipation and Increased blood pressure"
+      ],
+      "correct_answer": "Constipation, Hyperglycemia, and Increased blood pressure",
+      "explanation": "Sympathetic stimulation decreases gastrointestinal motility, leading to constipation. It also stimulates glycogenolysis, causing hyperglycemia, and increases heart rate and vasoconstriction, resulting in elevated blood pressure. Urinary frequency is not expected because sympathetic stimulation promotes urinary retention."
+    },
+    {
+      "question": "The client is on NPO post midnight. Which of the following, if done by the client, is sufficient to cancel the operation in the morning?",
+      "choices": [
+        "Eat a full meal at 10:00 P.M.",
+        "Drink fluids at 11:50 P.M.",
+        "Brush his teeth the morning before operation",
+        "Smoke cigarette around 3:00 A.M."
+      ],
+      "correct_answer": "Smoke cigarette around 3:00 A.M.",
+      "explanation": "Smoking after the prescribed NPO period increases gastric secretions, airway irritation, and the risk of aspiration during anesthesia. For patient safety, surgery is often postponed if the patient violates NPO instructions by smoking shortly before the procedure."
+    },
+    {
+      "question": "The client is placed on NPO for preparation of the blood test. Adreno-cortical response is activated and which of the following below is an expected response?",
+      "choices": [
+        "Low BP",
+        "Decrease Urine output",
+        "Warm, flushed, dry skin",
+        "Low serum sodium levels"
+      ],
+      "correct_answer": "Decrease Urine output",
+      "explanation": "Activation of the adrenocortical response (HPA axis) increases secretion of cortisol and aldosterone. Aldosterone promotes sodium and water reabsorption by the kidneys, resulting in decreased urine output. Blood pressure tends to increase, and serum sodium is retained rather than decreased."
+    },
+    {
+      "question": "Which of the following is true about therapeutic relationship?",
+      "choices": [
+        "Directed towards helping an individual both physically and emotionally",
+        "Based on friendship and mutual trust",
+        "Goals are set solely by the nurse",
+        "Maintained even after the client no longer needs the nurse's help"
+      ],
+      "correct_answer": "Directed towards helping an individual both physically and emotionally",
+      "explanation": "A therapeutic nurse-client relationship is a professional, goal-oriented relationship focused on promoting the client's physical, emotional, psychosocial, and spiritual well-being. It is not based on friendship, goals are established collaboratively, and the relationship ends once therapeutic goals have been achieved."
+    },
+    {
+      "question": "According to her, a nurse-patient relationship is composed of four stages: Orientation, Identification, Exploitation, and Resolution.",
+      "choices": [
+        "Roy",
+        "Peplau",
+        "Rogers",
+        "Travelbee"
+      ],
+      "correct_answer": "Peplau",
+      "explanation": "Hildegard Peplau developed the Interpersonal Relations Theory, which describes the nurse-patient relationship through four phases: Orientation, Identification, Exploitation, and Resolution (Termination). This theory remains the foundation of psychiatric nursing."
+    },
+    {
+      "question": "In what phase of the nurse-patient relationship does a nurse review the client's medical records, thereby learning as much as possible about the client?",
+      "choices": [
+        "Pre-Orientation",
+        "Orientation",
+        "Working",
+        "Termination"
+      ],
+      "correct_answer": "Pre-Orientation",
+      "explanation": "The Pre-Orientation phase occurs before the nurse meets the client. During this stage, the nurse reviews the medical record, gathers available information, plans the initial interaction, and examines personal feelings or biases that may affect care."
+    },
+    {
+      "question": "Nurse Aida has seen her patient Roger for the first time. She establishes a contract regarding the frequency of meetings, introduces the expected termination, performs baseline assessment, and sets interventions and outcomes. On what phase of the nurse-patient relationship do Nurse Aida and Roger belong?",
+      "choices": [
+        "Pre-Orientation",
+        "Orientation",
+        "Working",
+        "Termination"
+      ],
+      "correct_answer": "Orientation",
+      "explanation": "The Orientation phase begins with the first meeting between nurse and client. During this phase, rapport is established, expectations are clarified, contracts are discussed, assessments are completed, nursing problems are identified, and goals are formulated."
+    },
+    {
+      "question": "Roger has been seen agitated, shouting, and running. As Nurse Aida approaches, he shouts and swears, calling Aida names. Nurse Aida responds, 'That is unacceptable behavior Roger. Stop and go to your room now.' The situation is most likely in what phase of the nurse-patient relationship?",
+      "choices": [
+        "Pre-Orientation",
+        "Orientation",
+        "Working",
+        "Termination"
+      ],
+      "correct_answer": "Working",
+      "explanation": "The Working phase is when therapeutic interventions are implemented. The nurse helps the client solve problems, promotes adaptive behaviors, sets limits on inappropriate actions, and assists the client in achieving established goals."
+    },
+    {
+      "question": "Despite the incident, Nurse Aida still considers Roger worthwhile simply because he is a human being. What major ingredient of therapeutic communication is Nurse Aida demonstrating?",
+      "choices": [
+        "Empathy",
+        "Positive regard",
+        "Comfortable sense of self",
+        "Self-awareness"
+      ],
+      "correct_answer": "Positive regard",
+      "explanation": "Positive regard, also known as unconditional positive regard, means accepting and respecting the client as a worthwhile person regardless of behavior, illness, beliefs, or actions. The nurse separates the person's worth from the inappropriate behavior."
+    },
+    {
+      "question": "Nurse Irma saw Roger and told Nurse Aida, 'Oh look at that psychotic patient.' Nurse Aida should intervene because this statement shows a lack of",
+      "choices": [
+        "Empathy",
+        "Positive regard",
+        "Comfortable sense of self",
+        "Self-awareness"
+      ],
+      "correct_answer": "Positive regard",
+      "explanation": "Labeling a client by a diagnosis rather than recognizing the individual demonstrates a lack of positive regard. Nurses should avoid stigmatizing language and instead acknowledge the client as a person first, not merely by the illness."
+    },
+    {
+      "question": "Which of the following statements is NOT true about stress?",
+      "choices": [
+        "It is a nervous energy.",
+        "It is an essential aspect of existence.",
+        "It has always been a part of human experience.",
+        "It is something each person has to cope with."
+      ],
+      "correct_answer": "It is a nervous energy.",
+      "explanation": "Hans Selye's modern stress theory states that stress is the nonspecific response of the body to any demand placed upon it. Stress is not a form of nervous energy. It is a normal part of life, can be beneficial or harmful, and every individual must develop ways to cope with it."
+    },
+    {
+      "question": "Martina, a tennis champion, became depressed after many competitors outperformed her. She is frequently seen crying. Martina is clearly experiencing",
+      "choices": [
+        "Stress",
+        "Anxiety",
+        "The exhaustion stage of General Adaptation Syndrome",
+        "Crisis"
+      ],
+      "correct_answer": "Crisis",
+      "explanation": "A crisis is a temporary state of emotional disequilibrium that occurs when a stressful event overwhelms an individual's usual coping mechanisms. Martina's inability to cope effectively with the significant life event indicates she is experiencing a crisis rather than ordinary stress or anxiety."
+    }
   ],
 
 
@@ -2054,9 +3500,6 @@
 
 
 
-
-  "foundation-infection-asepsis-stress-illness": [],
-  "foundation-stress-crisis-communication": [],
   "foundation-nursing-process-assessment": [],
   "foundation-oxygenation-nutrition": [],
   "foundation-exam-1": [],

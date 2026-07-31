@@ -80,6 +80,8 @@ let subjectBarChart = null;
 let progressRingChart = null;
 let weeklyBarChart = null;
 let accuracyTrendChart = null;
+let studyTimeTrendChart = null;
+let studyTimeHeatmapChart = null;
 
 // ===========================
 // CHART.JS GLOBAL DEFAULTS
@@ -406,6 +408,274 @@ function renderAccuracyTrend(activities) {
 }
 
 // ===========================
+// STUDY TIME ANALYTICS
+// ===========================
+
+async function fetchStudySessions(uid) {
+    try {
+        const sessionsRef = collection(db, "users", uid, "studySessions");
+        const q = query(sessionsRef);
+        const snap = await getDocs(q);
+        const sessions = [];
+        snap.forEach((docSnap) => {
+            const data = docSnap.data();
+            sessions.push({
+                id: docSnap.id,
+                ...data
+            });
+        });
+        return sessions;
+    } catch (err) {
+        console.error("Failed to load study sessions:", err);
+        return [];
+    }
+}
+
+function renderStudySummary(sessions) {
+    const totalSeconds = sessions.reduce((sum, s) => sum + (s.durationSeconds || 0), 0);
+    const totalSessions = sessions.length;
+    const avgSeconds = totalSessions > 0 ? Math.round(totalSeconds / totalSessions) : 0;
+
+    const totalHoursEl = document.getElementById("studyTotalHours");
+    const totalSessionsEl = document.getElementById("studyTotalSessions");
+    const avgSessionEl = document.getElementById("studyAvgSession");
+    const currentStreakEl = document.getElementById("studyCurrentStreak");
+
+    if (totalHoursEl) {
+        const h = Math.floor(totalSeconds / 3600);
+        const m = Math.floor((totalSeconds % 3600) / 60);
+        totalHoursEl.textContent = `${h}h ${m}m`;
+    }
+
+    if (totalSessionsEl) {
+        totalSessionsEl.textContent = totalSessions;
+    }
+
+    if (avgSessionEl) {
+        const m = Math.floor(avgSeconds / 60);
+        const s = avgSeconds % 60;
+        avgSessionEl.textContent = s > 0 ? `${m}m ${s}s` : `${m}m`;
+    }
+
+    if (currentStreakEl) {
+        const streak = calculateStudyStreak(sessions);
+        currentStreakEl.textContent = `${streak} day${streak !== 1 ? "s" : ""}`;
+    }
+}
+
+function calculateStudyStreak(sessions) {
+    if (!sessions.length) return 0;
+
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const dates = new Set(sessions.map(s => {
+        const d = new Date(s.date);
+        d.setHours(0, 0, 0, 0);
+        return d.getTime();
+    }));
+
+    let streak = 0;
+    let checkDate = new Date(today);
+
+    // Check if studied today or yesterday to continue streak
+    const hasToday = dates.has(checkDate.getTime());
+    const yesterday = new Date(today);
+    yesterday.setDate(yesterday.getDate() - 1);
+    const hasYesterday = dates.has(yesterday.getTime());
+
+    if (!hasToday && !hasYesterday) return 0;
+
+    if (hasYesterday) {
+        checkDate = new Date(yesterday);
+    }
+
+    while (dates.has(checkDate.getTime())) {
+        streak++;
+        checkDate.setDate(checkDate.getDate() - 1);
+    }
+
+    return streak;
+}
+
+function renderStudyTimeTrend(sessions) {
+    const ctx = document.getElementById("studyTimeTrendChart");
+    if (!ctx) return;
+
+    if (studyTimeTrendChart) studyTimeTrendChart.destroy();
+
+    const days = [];
+    const minutes = [];
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    for (let i = 13; i >= 0; i--) {
+        const d = new Date(today);
+        d.setDate(d.getDate() - i);
+        const dateStr = d.toLocaleDateString("en-CA");
+        days.push(d.toLocaleDateString("en-US", { month: "short", day: "numeric" }));
+        minutes.push(0);
+    }
+
+    const dayIndexMap = {};
+    days.forEach((label, idx) => {
+        const d = new Date(today);
+        d.setDate(d.getDate() - (13 - idx));
+        dayIndexMap[d.toLocaleDateString("en-CA")] = idx;
+    });
+
+    sessions.forEach((s) => {
+        const idx = dayIndexMap[s.date];
+        if (idx != null) {
+            minutes[idx] += Math.round((s.durationSeconds || 0) / 60);
+        }
+    });
+
+    const maxMinutes = Math.max(...minutes, 1);
+
+    studyTimeTrendChart = new Chart(ctx, {
+        type: "line",
+        data: {
+            labels: days,
+            datasets: [{
+                label: "Study Minutes",
+                data: minutes,
+                borderColor: "#5EEAD4",
+                backgroundColor: "rgba(94, 234, 212, 0.08)",
+                borderWidth: 2.5,
+                pointBackgroundColor: "#5EEAD4",
+                pointBorderColor: "#131A2C",
+                pointBorderWidth: 2,
+                pointRadius: 4,
+                pointHoverRadius: 6,
+                fill: true,
+                tension: 0.4
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    backgroundColor: "#131A2C",
+                    titleColor: "#F6F5F8",
+                    bodyColor: "#B7BED2",
+                    borderColor: "#232C45",
+                    borderWidth: 1,
+                    cornerRadius: 8,
+                    padding: 10,
+                    callbacks: {
+                        label: (ctx) => `${ctx.parsed.y} min`
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    grid: { display: false },
+                    ticks: { font: { size: 10 }, maxRotation: 0 }
+                },
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        stepSize: 10,
+                        callback: (v) => v + "m"
+                    },
+                    grid: { color: GRID_COLOR }
+                }
+            },
+            animation: {
+                duration: 1000,
+                easing: "easeOutQuart"
+            }
+        }
+    });
+}
+
+function renderStudyTimeHeatmap(sessions) {
+    const ctx = document.getElementById("studyTimeHeatmapChart");
+    if (!ctx) return;
+
+    if (studyTimeHeatmapChart) studyTimeHeatmapChart.destroy();
+
+    const hourBuckets = new Array(24).fill(0);
+    const hourCounts = new Array(24).fill(0);
+
+    sessions.forEach((s) => {
+        const start = s.startTime?.toDate ? s.startTime.toDate() : new Date(s.startTime || Date.now());
+        const hour = start.getHours();
+        hourBuckets[hour] += Math.round((s.durationSeconds || 0) / 60);
+        hourCounts[hour] += 1;
+    });
+
+    const maxMinutes = Math.max(...hourBuckets, 1);
+
+    studyTimeHeatmapChart = new Chart(ctx, {
+        type: "bar",
+        data: {
+            labels: Array.from({ length: 24 }, (_, i) => `${i}:00`),
+            datasets: [{
+                label: "Minutes",
+                data: hourBuckets,
+                backgroundColor: hourBuckets.map((m) => {
+                    const intensity = maxMinutes > 0 ? m / maxMinutes : 0;
+                    return `rgba(94, 234, 212, ${0.15 + intensity * 0.7})`;
+                }),
+                borderRadius: 4,
+                borderSkipped: false
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    backgroundColor: "#131A2C",
+                    titleColor: "#F6F5F8",
+                    bodyColor: "#B7BED2",
+                    borderColor: "#232C45",
+                    borderWidth: 1,
+                    cornerRadius: 8,
+                    padding: 10,
+                    callbacks: {
+                        title: (items) => {
+                            const idx = items[0].dataIndex;
+                            const sessCount = hourCounts[idx];
+                            return `Hour ${idx}:00 — ${sessCount} session${sessCount !== 1 ? "s" : ""}`;
+                        },
+                        label: (ctx) => `${ctx.parsed.y} min`
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    grid: { display: false },
+                    ticks: {
+                        font: { size: 9 },
+                        maxRotation: 0,
+                        callback: function(val, index) {
+                            return index % 4 === 0 ? this.getLabelForValue(val) : "";
+                        }
+                    }
+                },
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        stepSize: 5,
+                        callback: (v) => v + "m"
+                    },
+                    grid: { color: GRID_COLOR }
+                }
+            },
+            animation: {
+                duration: 800,
+                easing: "easeOutQuart"
+            }
+        }
+    });
+}
+
+// ===========================
 // QUIZ HISTORY
 // ===========================
 
@@ -576,6 +846,12 @@ async function renderAnalytics(uid) {
 
         renderWeeklyBarChart(activities);
         renderAccuracyTrend(activities);
+
+        const studySessions = await fetchStudySessions(uid);
+        renderStudyTimeTrend(studySessions);
+        renderStudyTimeHeatmap(studySessions);
+        renderStudySummary(studySessions);
+
         renderQuizHistory(activities);
         renderAchievements(data);
 

@@ -274,15 +274,19 @@ window._submitReviewAnswer = async function() {
         if (warning) warning.classList.remove("show");
     }
 
-    await markMistakePracticed(mistake.subject, mistake.idx);
+    try {
+        await markMistakePracticed(mistake.subject, mistake.idx);
 
-    const user = auth.currentUser;
-    if (user && isCorrect) {
-        const userRef = doc(db, "users", user.uid);
-        await updateDoc(userRef, {
-            correctAnswers: increment(1),
-            questionsAnswered: increment(1)
-        }).catch(() => {});
+        const user = auth.currentUser;
+        if (user && isCorrect) {
+            const userRef = doc(db, "users", user.uid);
+            await updateDoc(userRef, {
+                correctAnswers: increment(1),
+                questionsAnswered: increment(1)
+            }).catch(() => {});
+        }
+    } catch (err) {
+        console.error("[review] Failed to update practice record:", err);
     }
 
     renderMistakeCard(mistake);

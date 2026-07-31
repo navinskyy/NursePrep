@@ -13,7 +13,8 @@ import {
     getDocs,
     query,
     orderBy,
-    limit
+    limit,
+    addDoc
 } from "firebase/firestore";
 
 import { ensureUserProfile, bumpDailyStreak, getAchievementStatus, awardXP, getMonday } from "./userProfile.js";
@@ -55,19 +56,20 @@ const weakestValue = document.getElementById("weakestSubjectValue");
 
 const activityList = document.getElementById("activityList");
 
-const countdownDays = document.getElementById("countdownDays");
-const countdownHours = document.getElementById("countdownHours");
-const countdownMinutes = document.getElementById("countdownMinutes");
-const countdownSeconds = document.getElementById("countdownSeconds");
-const pnleExamDate = document.getElementById("pnleExamDate");
+    const countdownDays = document.getElementById("countdownDays");
+    const countdownHours = document.getElementById("countdownHours");
+    const countdownMinutes = document.getElementById("countdownMinutes");
+    const countdownSeconds = document.getElementById("countdownSeconds");
+    const pnleExamDate = document.getElementById("pnleExamDate");
 
-const studyTimeTodayEl = document.getElementById("studyTimeToday");
-const startTimerBtn = document.getElementById("startTimerBtn");
-const stopTimerBtn = document.getElementById("stopTimerBtn");
+    const studyTimeTodayEl = document.getElementById("studyTimeToday");
+    const startTimerBtn = document.getElementById("startTimerBtn");
+    const stopTimerBtn = document.getElementById("stopTimerBtn");
 
-let studyTimerInterval = null;
-let studyStartTime = null;
-let studySecondsToday = 0;
+    let studyTimerInterval = null;
+    let studyStartTime = null;
+    let studySecondsToday = 0;
+    let currentAuthUid = null;
 
 // ===========================
 // GREETING
@@ -421,7 +423,7 @@ function loadStudyTimeData() {
     }
 
     const now = new Date();
-    const today = now.toISOString().slice(0, 10);
+    const today = now.toLocaleDateString("en-CA");
     const todayDayKey = getDayKey(now);
 
     if (!data.date || data.date !== today) {
@@ -484,7 +486,24 @@ function updateTimerDisplay() {
     }
 }
 
-function initTimeTracker() {
+async function saveStudySessionToFirestore(uid, elapsedSeconds) {
+    if (!uid || elapsedSeconds <= 0) return;
+
+    try {
+        const sessionsRef = collection(db, "users", uid, "studySessions");
+        const now = new Date();
+        await addDoc(sessionsRef, {
+            startTime: new Date(now.getTime() - elapsedSeconds * 1000),
+            endTime: now,
+            durationSeconds: elapsedSeconds,
+            date: now.toLocaleDateString("en-CA")
+        });
+    } catch (err) {
+        console.error("Couldn't save study session:", err);
+    }
+}
+
+function initTimeTracker(uid) {
     const data = loadStudyTimeData();
     studySecondsToday = data.seconds || 0;
 
@@ -525,7 +544,7 @@ function initTimeTracker() {
         }
 
     if (stopTimerBtn) {
-        stopTimerBtn.addEventListener("click", () => {
+        stopTimerBtn.addEventListener("click", async () => {
             if (!studyTimerInterval) return;
 
             clearInterval(studyTimerInterval);
@@ -553,6 +572,8 @@ function initTimeTracker() {
 
             startTimerBtn.disabled = false;
             studyStartTime = null;
+
+            await saveStudySessionToFirestore(currentAuthUid, elapsed);
         });
     }
 
@@ -901,7 +922,8 @@ onAuthStateChanged(auth, async (user) => {
         renderAchievements(data);
 
         initPNLECountdown();
-        initTimeTracker();
+        currentAuthUid = user.uid;
+        initTimeTracker(user.uid);
 
     }
 

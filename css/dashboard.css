@@ -580,6 +580,12 @@
   padding: 24px;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
 }
 
 .timer-card::before {
@@ -598,7 +604,6 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  margin-top: 16px;
   flex-wrap: wrap;
 }
 
