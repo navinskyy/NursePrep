@@ -13,5 +13,21 @@
   },
   "dependencies": {
     "firebase": "^12.15.0"
-  }
+  },
+  "description": "A personalized PNLE review platform with adaptive quizzes, flashcards, progress tracking, and AI-powered explanations.",
+  "main": "generate-exams.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/navinskyy/NursePrep.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/navinskyy/NursePrep/issues"
+  },
+  "homepage": "https://github.com/navinskyy/NursePrep#readme"
 }

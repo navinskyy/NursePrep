@@ -82,6 +82,71 @@ let urgencyPulseActive = false;
 const TIMER_RING_CIRC = 2 * Math.PI * 19;
 const ORIGINAL_PAGE_TITLE = document.title;
 
+// ======================================
+// RESUME QUIZ PERSISTENCE
+// ======================================
+
+function getQuizStorageKey() {
+  return currentQuizId ? `quiz_progress_${currentQuizId}` : `quiz_progress_${currentSubject}`;
+}
+
+function saveQuizProgress() {
+  if (!questions.length) return;
+  
+  const answeredCount = answers.filter(a => a !== null).length;
+  if (answeredCount === 0) return; // Don't save if nothing answered yet
+  
+  const snapshot = {
+    quizId: currentQuizId,
+    subject: currentSubject,
+    title: subjectTitle.textContent,
+    questions: questions,
+    answers: answers,
+    currentQuestion: currentQuestion,
+    score: score,
+    savedAt: Date.now()
+  };
+  
+  try {
+    localStorage.setItem(getQuizStorageKey(), JSON.stringify(snapshot));
+  } catch (err) {
+    console.error("Failed to save quiz progress:", err);
+  }
+}
+
+function loadQuizProgress() {
+  const key = getQuizStorageKey();
+  try {
+    const saved = localStorage.getItem(key);
+    if (!saved) return null;
+    
+    const snapshot = JSON.parse(saved);
+    
+    // Validate snapshot matches current quiz
+    if (currentQuizId && snapshot.quizId !== currentQuizId) return null;
+    if (!currentQuizId && snapshot.subject !== currentSubject) return null;
+    
+    // Check if not complete
+    const answeredCount = snapshot.answers.filter(a => a !== null).length;
+    const totalCount = snapshot.questions.length;
+    if (answeredCount === 0 || answeredCount === totalCount) return null;
+    
+    return snapshot;
+  } catch (err) {
+    console.error("Failed to load quiz progress:", err);
+    return null;
+  }
+}
+
+function clearQuizProgress() {
+  const key = getQuizStorageKey();
+  try {
+    localStorage.removeItem(key);
+  } catch (err) {
+    console.error("Failed to clear quiz progress:", err);
+  }
+}
+
 // ELEMENTS
 const countEl       = document.getElementById("quizCount");
 const progressFill  = document.getElementById("quizProgressFill");
@@ -316,6 +381,8 @@ function autoSubmitAnswer() {
   submitBtn.disabled = true;
   submitBtn.textContent = "Answer Submitted";
   nextBtn.disabled = false;
+
+  saveQuizProgress();
 }
 
 function handleTimeout() {
@@ -397,6 +464,72 @@ function showEmptyState() {
   shellEl.innerHTML = `<p class="quiz-warning show">No questions found for this quiz yet. Check back soon!</p>`;
 }
 
+// ======================================
+// RESUME PROMPT
+// ======================================
+
+function restoreQuizState(snapshot) {
+  questions = snapshot.questions;
+  answers = snapshot.answers;
+  currentQuestion = snapshot.currentQuestion;
+  score = snapshot.score;
+  subjectTitle.textContent = snapshot.title;
+  loadQuestion(currentQuestion);
+}
+
+function showResumePrompt(snapshot, onContinue, onRestart) {
+  stopTimer();
+
+  const answeredCount = snapshot.answers.filter(a => a !== null).length;
+  const totalCount = snapshot.questions.length;
+
+  const pct = totalCount ? Math.round((answeredCount / totalCount) * 100) : 0;
+
+  const promptEl = document.createElement("div");
+  promptEl.className = "quiz-resume-overlay";
+  promptEl.innerHTML = `
+    <div class="quiz-resume-card" role="dialog" aria-modal="true" aria-labelledby="quizResumeHeading">
+      <div class="quiz-resume-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 12a9 9 0 1 0 3-6.7"></path>
+          <path d="M3 4v4h4"></path>
+          <path d="M12 8v4l3 2"></path>
+        </svg>
+      </div>
+      <h1 id="quizResumeHeading">Resume Previous Quiz?</h1>
+      <p class="quiz-resume-sub">You left this quiz unfinished. Pick up right where you stopped.</p>
+      <div class="quiz-resume-panel">
+        <p class="quiz-resume-title">${snapshot.title}</p>
+        <div class="quiz-resume-progress-row">
+          <span class="quiz-resume-progress">${answeredCount} / ${totalCount} answered</span>
+          <span class="quiz-resume-pct">${pct}%</span>
+        </div>
+        <div class="quiz-resume-bar"><span style="width:${pct}%"></span></div>
+      </div>
+      <div class="quiz-resume-footer">
+        <button class="btn btn-secondary" id="quizRestartBtn">Restart</button>
+        <button class="btn btn-primary" id="quizContinueBtn">Continue</button>
+      </div>
+    </div>
+  `;
+
+  document.body.appendChild(promptEl);
+
+  const continueBtn = document.getElementById("quizContinueBtn");
+  const restartBtn = document.getElementById("quizRestartBtn");
+
+  continueBtn.addEventListener("click", () => {
+    promptEl.remove();
+    onContinue();
+  });
+
+  restartBtn.addEventListener("click", () => {
+    promptEl.remove();
+    clearQuizProgress();
+    onRestart();
+  });
+}
+
 async function loadQuizBank() {
   bank = await getQuestionBank();
 }
@@ -426,7 +559,16 @@ async function loadSubject(subjectKey) {
     return;
   }
 
-  loadQuestion(currentQuestion);
+  const saved = loadQuizProgress();
+  if (saved) {
+    showResumePrompt(
+      saved,
+      () => restoreQuizState(saved),
+      () => loadQuestion(currentQuestion)
+    );
+  } else {
+    loadQuestion(currentQuestion);
+  }
 }
 
 async function loadQuizById(quizId) {
@@ -483,7 +625,16 @@ async function loadQuizById(quizId) {
         return;
     }
 
-    loadQuestion(currentQuestion);
+    const saved = loadQuizProgress();
+    if (saved) {
+        showResumePrompt(
+            saved,
+            () => restoreQuizState(saved),
+            () => loadQuestion(currentQuestion)
+        );
+    } else {
+        loadQuestion(currentQuestion);
+    }
 }
 
 // ======================================
@@ -529,12 +680,15 @@ function checkAnswer() {
   nextBtn.disabled = false;
   submitBtn.disabled = true;
 
+  saveQuizProgress();
+
 }
 
 function goPrev() {
   if (currentQuestion === 0) return;
   currentQuestion--;
   loadQuestion(currentQuestion);
+  saveQuizProgress();
 }
 
 function goNext() {
@@ -543,6 +697,7 @@ function goNext() {
 
         currentQuestion++;
         loadQuestion(currentQuestion);
+        saveQuizProgress();
 
     } else {
 
@@ -555,6 +710,7 @@ function goNext() {
 async function showResult() {
 
     stopTimer();
+    clearQuizProgress();
 
     const total = questions.length;
 

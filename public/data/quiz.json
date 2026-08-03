@@ -3487,15 +3487,1894 @@
       ],
       "correct_answer": 3,
       "explanation": "A crisis is a temporary state of emotional disequilibrium that occurs when a stressful event overwhelms an individual's usual coping mechanisms. Martina's inability to cope effectively with the significant life event indicates she is experiencing a crisis rather than ordinary stress or anxiety."
-    }
+    },
+   {
+    "question": "Martina, a Tennis champ was devastated after many new competitors outpaced her in the Wimbledon event. She became depressed and always seen crying. Martina is clearly on what kind of situation?",
+    "choices": [
+      "Martina is just stressed out",
+      "Martina is Anxious",
+      "Martina is in the exhaustion stage of GAS",
+      "Martina is in Crisis"
+    ],
+    "correct_answer": 3,
+    "explanation": "D. Martina is in Crisis"
+  },
+  {
+    "question": "Which of the following statement is not true with regards to anxiety?",
+    "choices": [
+      "It has physiologic component",
+      "It has psychologic component",
+      "The source of dread or uneasiness is from an unrecognized entity",
+      "The source of dread or uneasiness is from a recognized entity"
+    ],
+    "correct_answer": 3,
+    "explanation": "D. The source of dread or uneasiness is from a recognized entity"
+  },
+  {
+    "question": "Lorraine, a 27 year old executive was brought to the ER for an unknown reason. She is starting to speak but her speech is disorganized and cannot be understood. On what level of anxiety does this features belongs?",
+    "choices": [
+      "Mild",
+      "Moderate",
+      "Severe",
+      "Panic"
+    ],
+    "correct_answer": 3,
+    "explanation": "D. Panic"
+  },
+  {
+    "question": "Elton, 21 year old nursing student is taking the board examination. She is sweating profusely, has decreased awareness of his environment and is purely focused on the exam questions characterized by his selective attentiveness. What anxiety level is Elton exemplifying?",
+    "choices": [
+      "Mild",
+      "Moderate",
+      "Severe",
+      "Panic"
+    ],
+    "correct_answer": 1,
+    "explanation": "B. Moderate"
+  },
+  {
+    "question": "You noticed the patient chart : ANXIETY +3 What will you expect to see in this client?",
+    "choices": [
+      "An optimal time for learning, Hearing and perception is greatly increased",
+      "Dilated pupils",
+      "Unable to communicate",
+      "Palliative Coping Mechanism"
+    ],
+    "correct_answer": 1,
+    "explanation": "B. Dilated pupils"
+  },
+  {
+    "question": "When should the nurse starts giving XANAX?",
+    "choices": [
+      "When anxiety is +1",
+      "When the client starts to have a narrow perceptual field and selective inattentiveness",
+      "When problem solving is not possible",
+      "When the client is immobile and disorganized"
+    ],
+    "correct_answer": 1,
+    "explanation": "B. When the client starts to have a narrow perceptual field and selective inattentiveness"
+  },
+  {
+    "question": "Which of the following behavior is not a sign or a symptom of Anxiety?",
+    "choices": [
+      "Frequent hand movement",
+      "Somatization",
+      "The client asks a question",
+      "The client is acting out"
+    ],
+    "correct_answer": 2,
+    "explanation": "C. The client asks a question"
+  },
+  {
+    "question": "Which of the following intervention is inappropriate for client’s with anxiety?",
+    "choices": [
+      "Offer choices",
+      "Provide a quiet and calm environment",
+      "Provide detailed explanation on each and every procedures and equipments",
+      "Bring anxiety down to a controllable level"
+    ],
+    "correct_answer": 0,
+    "explanation": "A. Offer choices"
+  },
+  {
+    "question": "Which of the following statement, if made by the nurse, is considered not therapeutic?",
+    "choices": [
+      "“How did you deal with your anxiety before?”",
+      "“It must be awful to feel anxious.”",
+      "“How does it feel to be anxious?”",
+      "“What makes you feel anxious?”"
+    ],
+    "correct_answer": 3,
+    "explanation": "D. “What makes you feel anxious?”"
+  },
+  {
+    "question": "Marissa Salva, Uses Benson’s relaxation. How is it done?",
+    "choices": [
+      "Systematically tensing muscle groups from top to bottom for 5 seconds, and then releasing them",
+      "Concentrating on breathing without tensing the muscle, Letting go and repeating a word or sound after each exhalation",
+      "Using a strong positive, feeling-rich statement about a desired change",
+      "Exercise combined with meditation to foster relaxation and mental alacrity"
+    ],
+    "correct_answer": 1,
+    "explanation": "B. Concentrating on breathing without tensing the muscle, Letting go and repeating a word or sound after each exhalation"
+  },
+  {
+    "question": "What type of relaxation technique does Lyza uses if a machine is showing her pulse rate, temperature and muscle tension which she can visualize and assess?",
+    "choices": [
+      "Biofeedback",
+      "Massage",
+      "Autogenic training",
+      "Visualization and Imagery"
+    ],
+    "correct_answer": 0,
+    "explanation": "A. Biofeedback"
+  },
+  {
+    "question": "This is also known as Self-suggestion or Self-hypnosis",
+    "choices": [
+      "Biofeedback",
+      "Meditation",
+      "Autogenic training",
+      "Visualization and Imagery"
+    ],
+    "correct_answer": 2,
+    "explanation": "C. Autogenic training"
+  },
+  {
+    "question": "Which among these drugs is NOT an anxiolytic?",
+    "choices": [
+      "Valium",
+      "Ativan",
+      "Milltown",
+      "Luvox"
+    ],
+    "correct_answer": 3,
+    "explanation": "D. Luvox"
+  },
+  {
+    "question": "Kenneth, 25 year old diagnosed with HIV felt that he had not lived up with God’s expectation. He fears that in the course of his illness, God will be punitive and not be supportive. What kind of spiritual crisis is Kenneth experiencing?\nSpiritual Pain\nSpiritual Anxiety\nSpiritual Guilt\nSpiritual Despair",
+    "choices": [
+      "1,2",
+      "2,3",
+      "3,4",
+      "1,4"
+    ],
+    "correct_answer": 1,
+    "explanation": "B. 2,3"
+  },
+  {
+    "question": "Grace, believes that her relationship with God is broken. She tried to go to church to ask forgiveness everyday to remedy her feelings. What kind of spiritual distress is Grace experiencing?",
+    "choices": [
+      "Spiritual Pan",
+      "Spiritual Alienation",
+      "Spiritual Guilt",
+      "Spiritual Despair"
+    ],
+    "correct_answer": 1,
+    "explanation": "B. Spiritual Alienation"
+  },
+  {
+    "question": "Remedios felt “EMPTY” She felt that she has already lost God’s favor and love because of her sins. This is a type of what spiritual crisis?",
+    "choices": [
+      "Spiritual Anger",
+      "Spiritual Loss",
+      "Spiritual Despair",
+      "Spiritual Anxiety"
+    ],
+    "correct_answer": 1,
+    "explanation": "B. Spiritual Loss"
+  },
+  {
+    "question": "Budek is working with a schizophrenic patient. He noticed that the client is agitated, pacing back and forth, restless and experiencing Anxiety +3. Budek said “You appear restless” What therapeutic technique did Budek used?",
+    "choices": [
+      "Offering general leads",
+      "Seeking clarification",
+      "Making observation",
+      "Encouraging description of perception"
+    ],
+    "correct_answer": 2,
+    "explanation": "C. Making observation"
+  },
+  {
+    "question": "Rommel told Budek “ I SEE DEAD PEOPLE “ Budek responded “You see dead people?” This Is an example of therapeutic communication technique?",
+    "choices": [
+      "Reflecting",
+      "Restating",
+      "Exploring",
+      "Seeking clarification"
+    ],
+    "correct_answer": 1,
+    "explanation": "B. Restating"
+  },
+  {
+    "question": "Rommel told Budek, “Do you think Im crazy?” Budek responded, “Do you think your crazy?” Budek uses what example of therapeutic communication?",
+    "choices": [
+      "Reflecting",
+      "Restating",
+      "Exploring",
+      "Seeking clarification"
+    ],
+    "correct_answer": 0,
+    "explanation": "A. Reflecting"
+  },
+  {
+    "question": "Myra, 21 year old nursing student has difficulty sleeping. She told Nurse Budek “I really think a lot about my x boyfriend recently” Budek told Myra “And that causes you difficulty sleeping?” Which therapeutic technique is used in this situation?",
+    "choices": [
+      "Reflecting",
+      "Restating",
+      "Exploring",
+      "Seeking clarification"
+    ],
+    "correct_answer": 1,
+    "explanation": "B. Restating"
+  },
+  {
+    "question": "Myra told Budek “I cannot sleep, I stay away all night” Budek told her “You have difficulty sleeping” This is what type of therapeutic communication technique?",
+    "choices": [
+      "Reflecting",
+      "Restating",
+      "Exploring",
+      "Seeking clarification"
+    ],
+    "correct_answer": 1,
+    "explanation": "B. Restating"
+  },
+  {
+    "question": "Myra said “I saw my dead grandmother here at my bedside a while ago” Budek responded “Really? That is hard to believe, How do you feel about it?” What technique did Budek used?",
+    "choices": [
+      "Disproving",
+      "Disagreeing",
+      "Voicing Doubt",
+      "Presenting Reality"
+    ],
+    "correct_answer": 2,
+    "explanation": "C. Voicing Doubt"
+  },
+  {
+    "question": "Which of the following is a therapeutic communication in response to “I am a GOD, bow before me Or ill summon the dreaded thunder to burn you and purge you to pieces!”",
+    "choices": [
+      "“You are not a GOD, you are Professor Tadle and you are a PE Teacher, not a Nurse. I am Glen, Your nurse.”",
+      "“Oh hail GOD Tadle, everyone bow or face his wrath!”",
+      "“Hello Mr. Tadle, You are here in the hospital, I am your nurse and you are a patient here”",
+      "“How can you be a GOD Mr. Tadle? Can you tell me more about it?”"
+    ],
+    "correct_answer": 2,
+    "explanation": "C. “Hello Mr. Tadle, You are here in the hospital, I am your nurse and you are a patient here”"
+  },
+  {
+    "question": "Erik John Senna, Told Nurse Budek “ I don’t want to that, I don’t want that thing.. that’s too painful!” Which of the following response is NON THERAPEUTIC",
+    "choices": [
+      "“ This must be difficult for you, But I need to inject you this for your own good”",
+      "“ You sound afraid”",
+      "“Are you telling me you don’t want this injection?”",
+      "“Why are you so anxious? Please tell me more about your feelings Erik”"
+    ],
+    "correct_answer": 3,
+    "explanation": "D. “Why are you so anxious? Please tell me more about your feelings Erik”"
+  },
+  {
+    "question": "Legrande De Salvaje Y Cobrador La Jueteng, was caught by the bacolod police because of his illegal activities. When he got home after paying for the bail, He shouted at his son. What defense mechanism did Mr. La Jueteng used?",
+    "choices": [
+      "Restitution",
+      "Projection",
+      "Displacement",
+      "Undoing"
+    ],
+    "correct_answer": 2,
+    "explanation": "C. Displacement"
+  },
+  {
+    "question": "Later that day, he bought his son ice cream and food. What defense mechanism is Legrande unconsciously doing?",
+    "choices": [
+      "Restitution",
+      "Conversion",
+      "Redoing",
+      "Reaction formation"
+    ],
+    "correct_answer": 0,
+    "explanation": "A. Restitution"
+  },
+  {
+    "question": "Crisis is a sudden event in ones life that disturbs a person’s homeostasis. Which of the following is NOT TRUE in crisis?",
+    "choices": [
+      "The person experiences heightened feeling of stress",
+      "Inability to function in the usual organized manner",
+      "Lasts for 4 months",
+      "Indicates unpleasant emotional feelings"
+    ],
+    "correct_answer": 2,
+    "explanation": "C. Lasts for 4 months"
+  },
+  {
+    "question": "Which of the following is a characteristic of crisis?",
+    "choices": [
+      "Lasts for an unlimited period of time",
+      "There is a triggering event",
+      "Situation is not dangerous to the person",
+      "Person totality is not involved"
+    ],
+    "correct_answer": 1,
+    "explanation": "B. There is a triggering event"
+  },
+  {
+    "question": "Levito Devin, The Italian prime minister, is due to retire next week. He feels depressed due to the enormous loss of influence, power, fame and fortune. What type of crisis is Devin experiencing?",
+    "choices": [
+      "Situational",
+      "Maturational",
+      "Social",
+      "Phenomenal"
+    ],
+    "correct_answer": 1,
+    "explanation": "B. Maturational"
+  },
+  {
+    "question": "Estrada, The Philippine president, has been unexpectedly impeached and was out of office before the end of his term. He is in what type of crisis?",
+    "choices": [
+      "Situational",
+      "Maturational",
+      "Social",
+      "Phenomenal"
+    ],
+    "correct_answer": 0,
+    "explanation": "A. Situational"
+  },
+  {
+    "question": "The tsunami in Thailand and Indonesia took thousands of people and change million lives. The people affected by the Tsunami are saddened and do not know how to start all over again. What type of crisis is this?",
+    "choices": [
+      "Situational",
+      "Maturational",
+      "Social",
+      "Phenomenal"
+    ],
+    "correct_answer": 2,
+    "explanation": "C. Social"
+  },
+  {
+    "question": "Which of the following is the BEST goal for crisis intervention?",
+    "choices": [
+      "Bring back the client in the pre crisis state",
+      "Make sure that the client becomes better",
+      "Achieve independence",
+      "Provide alternate coping mechanism"
+    ],
+    "correct_answer": 3,
+    "explanation": "D. Provide alternate coping mechanism"
+  },
+  {
+    "question": "What is the best intervention when the client has just experienced the crisis and still at the first phase of the crisis?",
+    "choices": [
+      "Behavior therapy",
+      "Gestalt therapy",
+      "Cognitive therapy",
+      "Milieu Therapy"
+    ],
+    "correct_answer": 3,
+    "explanation": "D. Milieu Therapy"
+  },
+  {
+    "question": "Therapeutic nurse client relationship is describes as follows\nBased on friendship and mutual interest\nIt is a professional relationship\nIt is focused on helping the patient solve problems and achieve health-related goals\nMaintained only as long as the patient requires professional help",
+    "choices": [
+      "1,2,3",
+      "1,2,4",
+      "2,3,4",
+      "1,3,4"
+    ],
+    "correct_answer": 2,
+    "explanation": "C. 2,3,4"
+  },
+  {
+    "question": "The client is scheduled to have surgical removal of the tumor on her left breast. Which of the following manifestation indicates that she is experiencing Mild Anxiety?",
+    "choices": [
+      "She has increased awareness of her environmental details",
+      "She focused on selected aspect of her illness",
+      "She experiences incongruence of action, thoughts and feelings",
+      "She experiences random motor activities"
+    ],
+    "correct_answer": 0,
+    "explanation": "A. She has increased awareness of her environmental details"
+  },
+  {
+    "question": "Which of the following nursing intervention would least likely be effective when dealing with a client with aggressive behavior?",
+    "choices": [
+      "Approach him in a calm manner",
+      "Provide opportunities to express feelings",
+      "Maintain eye contact with the client",
+      "Isolate the client from others"
+    ],
+    "correct_answer": 1,
+    "explanation": "B. Provide opportunities to express feelings"
+  },
+  {
+    "question": "Whitney, a patient of nurse Budek, verbalizes… “I have nothing, nothing… nothing! Don’t make me close one more door, I don’t wanna hurt anymore!” Which of the following is the most appropriate response by Budek?",
+    "choices": [
+      "Why are you singing?",
+      "What makes you say that?",
+      "Ofcourse you are everything!",
+      "What is that you said?"
+    ],
+    "correct_answer": 3,
+    "explanation": "D. What is that you said?"
+  },
+  {
+    "question": "Whitney verbalizes that she is anxious that the diagnostic test might reveal laryngeal cancer. Which of the following is the most appropriate nursing intervention?",
+    "choices": [
+      "Tell the client not to worry until the results are in",
+      "Ask the client to express feelings and concern",
+      "Reassure the client everything will be alright",
+      "Advice the client to divert his attention by watching television and reading newspapers"
+    ],
+    "correct_answer": 1,
+    "explanation": "B. Ask the client to express feelings and concern"
+  },
+  {
+    "question": "Considered as the most accurate expression of person’s thought and feelings",
+    "choices": [
+      "Verbal communication",
+      "Non verbal communication",
+      "Written communication",
+      "Oral communication"
+    ],
+    "correct_answer": 1,
+    "explanation": "B. Non verbal communication"
+  },
+  {
+    "question": "Represents inner feeling that a person do not like talking about.",
+    "choices": [
+      "Overt communication",
+      "Covert communication",
+      "Verbal communication",
+      "Non verbal communication"
+    ],
+    "correct_answer": 1,
+    "explanation": "B. Covert communication"
+  },
+  {
+    "question": "Which of the following is NOT a characteristic of an effective Nurse-Client relationship?",
+    "choices": [
+      "Focused on the patient",
+      "Based on mutual trust",
+      "Conveys acceptance",
+      "Discourages emotional bond"
+    ],
+    "correct_answer": 3,
+    "explanation": "D. Discourages emotional bond"
+  },
+  {
+    "question": "A type of record wherein , each person or department makes notation in separate records. A nurse will use the nursing notes, The doctor will use the Physician’s order sheet etc. Data is arranged according to information source.",
+    "choices": [
+      "POMR",
+      "POR",
+      "Traditional",
+      "Resource oriented"
+    ],
+    "correct_answer": 3,
+    "explanation": "D. Resource oriented"
+  },
+  {
+    "question": "Type of recording that integrates all data about the problem, gathered by members of the health team.",
+    "choices": [
+      "POMR",
+      "Traditional",
+      "Resource oriented",
+      "Source oriented"
+    ],
+    "correct_answer": 0,
+    "explanation": "A. POMR"
+  },
+  {
+    "question": "These are data that are monitored by using graphic charts or graphs that indicated the progression or fluctuation of client’s Temperature and Blood pressure.",
+    "choices": [
+      "Progress notes",
+      "Kardex",
+      "Flow chart",
+      "Flow sheet"
+    ],
+    "correct_answer": 3,
+    "explanation": "D. Flow sheet"
+  },
+  {
+    "question": "Provides a concise method of organizing and recording data about the client. It is a series of flip cards kept in portable file used in change of shift reports.",
+    "choices": [
+      "Kardex",
+      "Progress Notes",
+      "SOAPIE",
+      "Change of shift report"
+    ],
+    "correct_answer": 0,
+    "explanation": "A. Kardex"
+  },
+  {
+    "question": "You are about to write an information on the Kardex. There are 4 available writing instruments to use. Which of the following should you use?",
+    "choices": [
+      "Mongol #2",
+      "Permanent Ink",
+      "A felt or fountain pen",
+      "Pilot Pentel Pen marker"
+    ],
+    "correct_answer": 0,
+    "explanation": "A. Mongol #2"
+  },
+  {
+    "question": "The client has an allergy to Iodine based dye. Where should you put this vital information in the client’s chart?",
+    "choices": [
+      "In the first page of the client’s chart",
+      "At the last page of the client’s chart",
+      "At the front metal plate of the chart",
+      "In the Kardex"
+    ],
+    "correct_answer": 2,
+    "explanation": "C. At the front metal plate of the chart"
+  },
+  {
+    "question": "Which of the following is NOT TRUE about the Kardex",
+    "choices": [
+      "It provides readily available information",
+      "It is a tool of end of shift reports",
+      "The primary basis of endorsement",
+      "Where Allergies information are written"
+    ],
+    "correct_answer": 2,
+    "explanation": "C. The primary basis of endorsement"
+  },
+  {
+    "question": "Which of the following, if seen on the Nurses notes, violates characteristic of good recording?",
+    "choices": [
+      "The client has a blood pressure of 120/80, Temperature of 36.6 C Pulse rate of 120 and Respiratory rate of 22",
+      "Ate 50% of food served",
+      "Refused administration of betaxolol",
+      "Visited and seen By Dr. Santiago"
+    ],
+    "correct_answer": 0,
+    "explanation": "A. The client has a blood pressure of 120/80, Temperature of 36.6°C, Pulse rate of 120 and Respiratory rate of 22"
+  },
+  {
+    "question": "The physician ordered : Mannerix a.c , what does a.c means?",
+    "choices": [
+      "As desired",
+      "Before meals",
+      "After meals",
+      "Before bed time"
+    ],
+    "correct_answer": 1,
+    "explanation": "B. Before meals"
+  },
+  {
+    "question": "The physician ordered, Maalox, 2 hours p.c, what does p.c means?",
+    "choices": [
+      "As desired",
+      "Before meals",
+      "After meals",
+      "Before bed time"
+    ],
+    "correct_answer": 2,
+    "explanation": "C. After meals"
+  },
+  {
+    "question": "The physician ordered, Maxitrol, Od. What does Od means?",
+    "choices": [
+      "Left eye",
+      "Right eye",
+      "Both eye",
+      "Once a day"
+    ],
+    "correct_answer": 3,
+    "explanation": "D. Once a day"
+  },
+  {
+    "question": "The physician orderd, Magnesium Hydroxide cc Aluminum Hydroxide. What does cc means?",
+    "choices": [
+      "without",
+      "with",
+      "one half",
+      "With one half dose"
+    ],
+    "correct_answer": 1,
+    "explanation": "B. with"
+  },
+  {
+    "question": "Physician ordered, Paracetamol tablet ss. What does ss means?",
+    "choices": [
+      "without",
+      "with",
+      "one half",
+      "With one half dose"
+    ],
+    "correct_answer": 2,
+    "explanation": "C. one half"
+  },
+  {
+    "question": "Which of the following indicates that learning has been achieved?",
+    "choices": [
+      "Matuts starts exercising every morning and eating a balance diet after you taught her mag HL tayo program",
+      "Donya Delilah has been able to repeat the steps of insulin administration after you taught it to her",
+      "Marsha said “ I understand “ after you a health teaching about family planning",
+      "John rated 100% on your given quiz about smoking and alcoholism"
+    ],
+    "correct_answer": 0,
+    "explanation": "A. Matuts starts exercising every morning and eating a balanced diet after you taught her \"Mag HL Tayo\" program"
+  },
+  {
+    "question": "In his theory of learning as a BEHAVIORISM, he stated that transfer of knowledge occurs if a new situation closely resembles an old one.",
+    "choices": [
+      "Bloom",
+      "Lewin",
+      "Thorndike",
+      "Skinner"
+    ],
+    "correct_answer": 2,
+    "explanation": "C. Thorndike"
+  },
+  {
+    "question": "Which of the following is TRUE with regards to learning?",
+    "choices": [
+      "Start from complex to simple",
+      "Goals should be hard to achieve so patient can strive to attain unrealistic goals",
+      "Visual learning is the best for every individual",
+      "Do not teach a client when he is in pain"
+    ],
+    "correct_answer": 3,
+    "explanation": "D. Do not teach a client when he is in pain"
+  },
+  {
+    "question": "According to Bloom, there are 3 domains in learning. Which of these domains is responsible for the ability of Donya Delilah to inject insulin?",
+    "choices": [
+      "Cognitive",
+      "Affective",
+      "Psychomotor",
+      "Motivative"
+    ],
+    "correct_answer": 2,
+    "explanation": "C. Psychomotor"
+  },
+  {
+    "question": "Which domains of learning is responsible for making John and Marsha understand the different kinds of family planning methods?",
+    "choices": [
+      "Cognitive",
+      "Affective",
+      "Psychomotor",
+      "Motivative"
+    ],
+    "correct_answer": 0,
+    "explanation": "A. Cognitive"
+  },
+  {
+    "question": "Which of the following statement clearly defines therapeutic communication?",
+    "choices": [
+      "Therapeutic communication is an interaction process which is primarily directed by the nurse",
+      "It conveys feeling of warmth, acceptance and empathy from the nurse to a patient in relaxed atmosphere",
+      "Therapeutic communication is a reciprocal interaction based on trust and aimed at identifying patient needs and developing mutual goals",
+      "Therapeutic communication is an assessment component of the nursing process"
+    ],
+    "correct_answer": 2,
+    "explanation": "C. Therapeutic communication is a reciprocal interaction based on trust and aimed at identifying patient needs and developing mutual goals"
+  },
+  {
+    "question": "Which of the following concept is most important in establishing a therapeutic nurse patient relationship?",
+    "choices": [
+      "The nurse must fully understand the patient’s feelings, perception and reactions before goals can be established",
+      "The nurse must be a role model for health fostering behavior",
+      "The nurse must recognize that the patient may manifest maladaptive behavior after illness",
+      "The nurse should understand that patients might test her before trust is established"
+    ],
+    "correct_answer": 3,
+    "explanation": "D. The nurse should understand that patients might test her before trust is established"
+  },
+  {
+    "question": "Which of the following communication skill is most effective in dealing with covert communication?",
+    "choices": [
+      "Validation",
+      "Listening",
+      "Evaluation",
+      "Clarification"
+    ],
+    "correct_answer": 0,
+    "explanation": "A. Validation"
+  },
+  {
+    "question": "Which of the following are qualities of a good recording?\nBrevity\nCompleteness and chronology\nAppropriateness\nAccuracy",
+    "choices": [
+      "1,2",
+      "3,4",
+      "1,2,3",
+      "1,2,3,4"
+    ],
+    "correct_answer": 3,
+    "explanation": "D. 1,2,3,4"
+  },
+  {
+    "question": "All of the following chart entries are correct except",
+    "choices": [
+      "V/S 36.8 C,80,16,120/80",
+      "Complained of chest pain",
+      "Seems agitated",
+      "Able to ambulate without assistance"
+    ],
+    "correct_answer": 2,
+    "explanation": "C. Seems agitated"
+  },
+  {
+    "question": "Which of the following teaching method is effective in client who needs to be educated about self injection of insulin?",
+    "choices": [
+      "Detailed explanation",
+      "Demonstration",
+      "Use of pamphlets",
+      "Film showing"
+    ],
+    "correct_answer": 1,
+    "explanation": "B. Demonstration"
+  },
+  {
+    "question": "What is the most important characteristic of a nurse patient relationship?",
+    "choices": [
+      "It is growth facilitating",
+      "Based on mutual understanding",
+      "Fosters hope and confidence",
+      "Involves primarily emotional bond"
+    ],
+    "correct_answer": 0,
+    "explanation": "A. It is growth facilitating"
+  },
+  {
+    "question": "Which of the following nursing intervention is needed before teaching a client post spleenectomy deep breathing and coughing exercises?",
+    "choices": [
+      "Tell the patient that deep breathing and coughing exercises is needed to promote good breathing, circulation and prevent complication",
+      "Tell the client that deep breathing and coughing exercises is needed to prevent Thrombophlebitis, hydrostatic pneumonia and atelectasis",
+      "Medicate client for pain",
+      "Tell client that cooperation is vital to improve recovery"
+    ],
+    "correct_answer": 0,
+    "explanation": "A. Tell the patient that deep breathing and coughing exercises are needed to promote good breathing, circulation and prevent complications"
+  },
+  {
+    "question": "The client has an allergy with penicillin. What is the best way to communicate this information?",
+    "choices": [
+      "Place an allergy alert in the Kardex",
+      "Notify the attending physician",
+      "Write it on the patient’s chart",
+      "Take note when giving medications"
+    ],
+    "correct_answer": 1,
+    "explanation": "B. Notify the attending physician"
+  },
+  {
+    "question": "An adult client is on extreme pain. He is moaning and grimacing. What is the best way to assess the client’s pain?",
+    "choices": [
+      "Perform physical assessment",
+      "Have the client rate his pain on the smiley pain rating scale",
+      "Active listening on what the patient says",
+      "Observe the client’s behavior"
+    ],
+    "correct_answer": 2,
+    "explanation": "C. Active listening on what the patient says"
+  },
+  {
+    "question": "Therapeutic communication begins with?",
+    "choices": [
+      "Knowing your client",
+      "Knowing yourself",
+      "Showing empathy",
+      "Encoding"
+    ],
+    "correct_answer": 1,
+    "explanation": "B. Knowing yourself"
+  },
+  {
+    "question": "The PCS gave new guidelines including leaflets to educate cancer patients. As a nurse, When using materials like this, what is your responsibility?",
+    "choices": [
+      "Read it for the patient",
+      "Give it for the patient to read himself",
+      "Let the family member read the material for the patient",
+      "Read it yourself then, Have the client read the material"
+    ],
+    "correct_answer": 3,
+    "explanation": "D. Read it yourself then. Have the client read the material."
+  }
   ],
 
+  "foundation-nursing-process-assessment": [
+  {
+    "question": "1. She is the first one to coin the term “NURSING PROCESS” She introduced 3 steps of nursing process which are Observation, Ministration and Validation.",
+    "choices": [
+      "Nightingale",
+      "Johnson",
+      "Rogers",
+      "Hall"
+    ],
+    "correct_answer": 3,
+    "explanation": "Lydia Hall introduced the term 'nursing process' in 1955 and defined it through three steps: observation, ministration, and validation."
+  },
+  {
+    "question": "2. The American Nurses association formulated an innovation of the Nursing process. Today, how many distinct steps are there in the nursing process?",
+    "choices": [
+      "APIE – 4",
+      "ADPIE – 5",
+      "ADOPIE – 6",
+      "ADOPIER – 7"
+    ],
+    "correct_answer": 2,
+    "explanation": "The ANA standard framework includes 6 distinct steps: Assessment, Diagnosis, Outcomes Identification, Planning, Implementation, and Evaluation (ADOPIE)."
+  },
+  {
+    "question": "3. They are the first one to suggest a 4 step nursing process which are : APIE , or assessment, planning, implementation and evaluation.\nYura\nWalsh\nRoy\nKnowles",
+    "choices": [
+      "1,2",
+      "1,3",
+      "3,4",
+      "2,3"
+    ],
+    "correct_answer": 0,
+    "explanation": "Helen Yura and Mary Walsh published the first comprehensive description of the four-stage nursing process (APIE) in 1967."
+  },
+  {
+    "question": "4. Which characteristic of nursing process is responsible for proper utilization of human resources, time and cost resources?",
+    "choices": [
+      "Organized and Systematic",
+      "Humanistic",
+      "Efficient",
+      "Effective"
+    ],
+    "correct_answer": 2,
+    "explanation": "Efficiency refers to achieving clinical goals using the least amount of wasted time, effort, cost, and human resources."
+  },
+  {
+    "question": "5. Which characteristic of nursing process addresses the INDIVIDUALIZED care a client must receive?",
+    "choices": [
+      "Organized and Systematic",
+      "Humanistic",
+      "Efficient",
+      "Effective"
+    ],
+    "correct_answer": 1,
+    "explanation": "The humanistic aspect ensures care is tailored to the individual patient's unique biological, psychological, and social needs rather than treating them generically."
+  },
+  {
+    "question": "6. A characteristic of the nursing process that is essential to promote client satisfaction and progress. The care should also be relevant with the client’s needs.",
+    "choices": [
+      "Organized and Systematic",
+      "Humanistic",
+      "Efficient",
+      "Effective"
+    ],
+    "correct_answer": 3,
+    "explanation": "Effectiveness measures how successfully the nursing interventions achieve the intended health outcomes and address patient priorities."
+  },
+  {
+    "question": "7. Rhina, who has Menieres disease, said that her environment is moving. Which of the following is a valid assessment?",
+    "choices": [
+      "1,3",
+      "2,3",
+      "2,4",
+      "1,4"
+    ],
+    "correct_answer": 1,
+    "explanation": "Meniere's disease causes endolymphatic hydrops in the inner ear, leading to subjective rotational vertigo (sensation of environment spinning) which requires fall precautions and safety monitoring."
+  },
+  {
+    "question": "8. Nurse Angela, observe Joel who is very apprehensive over the impending operation. The client is experiencing dyspnea, diaphoresis and asks lots of questions. Angela made a diagnosis of ANXIETY R/T INTRUSIVE PROCEDURE. This is what type of Nursing Diagnosis?",
+    "choices": [
+      "Actual",
+      "Probable",
+      "Possible",
+      "Risk"
+    ],
+    "correct_answer": 0,
+    "explanation": "An actual nursing diagnosis is used when clinical evidence (dyspnea, diaphoresis, hypervigilance) proves the problem is currently present."
+  },
+  {
+    "question": "9. Nurse Angela diagnosed Mrs. Delgado, who have undergone a BKA. Her diagnosis is SELF ESTEEM DISTURBANCE R/T CHANGE IN BODY IMAGE. Although the client has not yet seen her lost leg, Angela already anticipated the diagnosis. This is what type of Diagnosis?",
+    "choices": [
+      "Actual",
+      "Probable",
+      "Possible",
+      "Risk"
+    ],
+    "correct_answer": 3,
+    "explanation": "A risk diagnosis identifies a problem that does not currently exist but has clear risk factors making the patient vulnerable (loss of a body part anticipatory issue)."
+  },
+  {
+    "question": "10. Nurse Angela is about to make a diagnosis but very unsure because the S/S the client is experiencing is not specific with her diagnosis of POWERLESSNESS R/T DIFFICULTY ACCEPTING LOSS OF LOVED ONE. She then focus on gathering data to refute or prove her diagnosis but her plans and interventions are already ongoing for the diagnosis. Which type of Diagnosis is this?",
+    "choices": [
+      "Actual",
+      "Probable",
+      "Possible",
+      "Risk"
+    ],
+    "correct_answer": 2,
+    "explanation": "A possible nursing diagnosis describes a suspected health problem that requires additional data collection to confirm or rule out."
+  },
+  {
+    "question": "11. Nurse Angela knew that Stephen Lee Mu Chin, has just undergone an operation with an incision near the diaphragm. She knew that this will contribute to some complications later on. She then should develop what type of Nursing diagnosis?",
+    "choices": [
+      "Actual",
+      "Probable",
+      "Possible",
+      "Risk"
+    ],
+    "correct_answer": 3,
+    "explanation": "High abdominal incisions impair deep breathing due to pain, putting the patient at vulnerability/risk for pulmonary complications like atelectasis."
+  },
+  {
+    "question": "12. Which of the following Nursing diagnosis is INCORRECT?",
+    "choices": [
+      "Fluid volume deficit R/T Diarrhea",
+      "High risk for injury R/T Absence of side rails",
+      "Possible ineffective coping R/T Loss of loved one",
+      "Self esteem disturbance R/T Effects of surgical removal of the leg"
+    ],
+    "correct_answer": 1,
+    "explanation": "The etiology ('related to') factor must be a patient response or physiological factor, not a environmental safety hazard or institutional fault like 'absence of side rails'."
+  },
+  {
+    "question": "13. Among the following statements, which should be given the HIGHEST priority?",
+    "choices": [
+      "Client is in extreme pain",
+      "Client’s blood pressure is 60/40",
+      "Client’s temperature is 40 deg. Centigrade",
+      "Client is cyanotic"
+    ],
+    "correct_answer": 3,
+    "explanation": "Cyanosis indicates severe hypoxia, which directly affects Airway/Breathing—the highest priority according to ABC and Maslow's physiological needs."
+  },
+  {
+    "question": "14. Which of the following need is given a higher priority among others?",
+    "choices": [
+      "The client has attempted suicide and safety precaution is needed",
+      "The client has disturbance in his body image because of the recent operation",
+      "The client is depressed because her boyfriend left her all alone",
+      "The client is thirsty and dehydrated"
+    ],
+    "correct_answer": 3,
+    "explanation": "Dehydration is a basic, immediate physiological need (fluid balance) which takes priority over psychosocial and safety needs on Maslow's hierarchy."
+  },
+  {
+    "question": "15. Which of the following is TRUE with regards to Client Goals?",
+    "choices": [
+      "They are specific, measurable, attainable and time bounded",
+      "They are general and broadly stated",
+      "They should answer for WHO, WHAT ACTIONS, WHAT CIRCUMSTANCES, HOW WELL and WHEN.",
+      "Example is : After discharge planning, Client demonstrated the proper psychomotor skills for insulin injection."
+    ],
+    "correct_answer": 1,
+    "explanation": "Client goals are broad statements about intended status changes, whereas 'outcome criteria' provide the specific, detailed, and measurable milestones."
+  },
+  {
+    "question": "16. Which of the following is a NOT a correct statement of an Outcome criteria?",
+    "choices": [
+      "Ambulates 30 feet with a cane before discharge",
+      "Discusses fears and concerns regarding the surgical procedure",
+      "Demonstrates proper coughing and breathing technique after a teaching session",
+      "Reestablishes a normal pattern of elimination"
+    ],
+    "correct_answer": 3,
+    "explanation": "'Reestablishes a normal pattern of elimination' is a general goal, not a specific, measurable outcome criterion with precise parameters and timelines."
+  },
+  {
+    "question": "17. Which of the following is a OBJECTIVE data?",
+    "choices": [
+      "Dizziness",
+      "Chest pain",
+      "Anxiety",
+      "Blue nails"
+    ],
+    "correct_answer": 3,
+    "explanation": "Blue nails (cyanosis) can be directly observed and measured by the nurse, making it objective data, unlike subjective sensations reported by the patient."
+  },
+  {
+    "question": "18. A patient’s chart is what type of data source?",
+    "choices": [
+      "Primary",
+      "Secondary",
+      "Tertiary",
+      "Can be A and B"
+    ],
+    "correct_answer": 1,
+    "explanation": "The client is the only primary source of data; medical records, charts, family members, and lab results are secondary sources."
+  },
+  {
+    "question": "19. All of the following are characteristic of the Nursing process except",
+    "choices": [
+      "Dynamic",
+      "Cyclical",
+      "Universal",
+      "Intrapersonal"
+    ],
+    "correct_answer": 3,
+    "explanation": "The nursing process is interpersonal (involving nurse-patient interaction), dynamic, continuous, and universally applicable, rather than purely internal (intrapersonal)."
+  },
+  {
+    "question": "20. Which of the following is true about the NURSING CARE PLAN?",
+    "choices": [
+      "It is nursing centered",
+      "Rationales are supported by interventions",
+      "Verbal",
+      "Atleast 2 goals are needed for every nursing diagnosis"
+    ],
+    "correct_answer": 0,
+    "explanation": "The written plan directs nursing actions and organizes nursing care interventions specifically designed for healthcare delivery."
+  },
+  {
+    "question": "21. A framework for health assessment that evaluates the effects of stressors to the mind, body and environment in relation with the ability of the client to perform ADL.",
+    "choices": [
+      "Functional health framework",
+      "Head to toe framework",
+      "Body system framework",
+      "Cephalocaudal framework"
+    ],
+    "correct_answer": 0,
+    "explanation": "Gordon's Functional Health Patterns evaluate functional abilities and how client patterns impact daily living and self-care activities."
+  },
+  {
+    "question": "22. Client has undergone Upper GI and Lower GI series. Which type of health assessment framework is used in this situation?",
+    "choices": [
+      "Functional health framework",
+      "Head to toe framework",
+      "Body system framework",
+      "Cephalocaudal framework"
+    ],
+    "correct_answer": 2,
+    "explanation": "Evaluating organ clusters like the gastrointestinal tract relies on the Body Systems framework."
+  },
+  {
+    "question": "23. Which of the following statement is true regarding temperature?",
+    "choices": [
+      "Oral temperature is more accurate than rectal temperature",
+      "The bulb used in Rectal temperature reading is pear shaped or round",
+      "The older the person, the higher his BMR",
+      "When the client is swimming, BMR Decreases"
+    ],
+    "correct_answer": 1,
+    "explanation": "Rectal thermometers feature a blunt, pear-shaped or round bulb to protect delicate rectal tissues from perforation."
+  },
+  {
+    "question": "24. A type of heat loss that occurs when the heat is dissipated by air current",
+    "choices": [
+      "Convection",
+      "Conduction",
+      "Radiation",
+      "Evaporation"
+    ],
+    "correct_answer": 0,
+    "explanation": "Convection is heat loss carried away by moving air or fluid currents across exposed skin."
+  },
+  {
+    "question": "25. Which of the following is TRUE about temperature?",
+    "choices": [
+      "The highest temperature usually occurs later in a day, around 8 P.M to 12 M.N",
+      "The lowest temperature is usually in the Afternoon, Around 12 P.M",
+      "Thyroxin decreases body temperature",
+      "Elderly people are risk for hyperthermia due to the absence of fats, Decreased thermoregulatory control and sedentary lifestyle."
+    ],
+    "correct_answer": 0,
+    "explanation": "Due to diurnal temperature variations, core body temperature reaches its peak in the late afternoon and early evening (around 8 PM to midnight)."
+  },
+  {
+    "question": "26. Hyperpyrexia is a condition in which the temperature is greater than",
+    "choices": [
+      "40 degree Celsius",
+      "39 degree Celsius",
+      "100 degree Fahrenheit",
+      "105.8 degree Fahrenheit"
+    ],
+    "correct_answer": 3,
+    "explanation": "Hyperpyrexia is defined as a critically high body temperature exceeding 41.0 °C (105.8 °F)."
+  },
+  {
+    "question": "27. Tympanic temperature is taken from John, A client who was brought recently into the ER due to frequent barking cough. The temperature reads 37.9 Degrees Celsius. As a nurse, you conclude that this temperature is",
+    "choices": [
+      "High",
+      "Low",
+      "At the low end of the normal range",
+      "At the high end of the normal range"
+    ],
+    "correct_answer": 3,
+    "explanation": "Core temperatures (like tympanic readings) run slightly higher than oral temperatures; 37.9 °C sits at the upper boundary of normal core variation prior to clinical low-grade fever."
+  },
+  {
+    "question": "28. John has a fever of 38.5 Deg. Celsius. It surges at around 40 Degrees and go back to 38.5 degrees 6 times today in a typical pattern. What kind of fever is John having?",
+    "choices": [
+      "Relapsing",
+      "Intermittent",
+      "Remittent",
+      "Constant"
+    ],
+    "correct_answer": 2,
+    "explanation": "A remittent fever fluctuates widely (more than 2 °C) over 24 hours but remains above normal throughout."
+  },
+  {
+    "question": "29. John has a fever of 39.5 degrees 2 days ago, But yesterday, he has a normal temperature of 36.5 degrees. Today, his temperature surges to 40 degrees. What type of fever is John having?",
+    "choices": [
+      "Relapsing",
+      "Intermittent",
+      "Remittent",
+      "Constant"
+    ],
+    "correct_answer": 0,
+    "explanation": "Relapsing fevers feature febrile periods interspersed with days of completely normal temperature."
+  },
+  {
+    "question": "30. John’s temperature 10 hours ago is a normal 36.5 degrees. 4 hours ago, He has a fever with a temperature of 38.9 Degrees. Right now, his temperature is back to normal. Which of the following best describe the fever john is having?",
+    "choices": [
+      "Relapsing",
+      "Intermittent",
+      "Remittent",
+      "Constant"
+    ],
+    "correct_answer": 1,
+    "explanation": "Intermittent fever alternates between periods of fever and periods of normal temperature within the same 24-hour day."
+  },
+  {
+    "question": "31. The characteristic fever in Dengue Virus is characterized as:",
+    "choices": [
+      "Tricyclic",
+      "Bicyclic",
+      "Biphasic",
+      "Triphasic"
+    ],
+    "correct_answer": 2,
+    "explanation": "Dengue fever presents with a classic 'saddleback' or biphasic pattern, dropping briefly before spiking a second time."
+  },
+  {
+    "question": "32. When John has been given paracetamol, his fever was brought down dramatically from 40 degrees Celsius to 36.7 degrees in a matter of 10 minutes. The nurse would assess this event as:",
+    "choices": [
+      "The goal of reducing john’s fever has been met with full satisfaction of the outcome criteria",
+      "The desired goal has been partially met",
+      "The goal is not completely met",
+      "The goal has been met but not with the desired outcome criteria"
+    ],
+    "correct_answer": 3,
+    "explanation": "While reducing the fever met the main goal, plummeting 3.3 °C in 10 minutes is abnormally rapid and outside safe clinical outcome criteria."
+  },
+  {
+    "question": "33. What can you expect from Marianne, who is currently at the ONSET stage of fever?",
+    "choices": [
+      "Hot, flushed skin",
+      "Increase thirst",
+      "Convulsion",
+      "Pale,cold skin"
+    ],
+    "correct_answer": 3,
+    "explanation": "During the onset (chill) stage, peripheral vasoconstriction occurs to conserve heat, causing the skin to feel pale and cold."
+  },
+  {
+    "question": "34. Marianne is now at the Defervescence stage of the fever, which of the following is expected?",
+    "choices": [
+      "Delirium",
+      "Goose flesh",
+      "Cyanotic nail beds",
+      "Sweating"
+    ],
+    "correct_answer": 3,
+    "explanation": "The defervescence stage occurs as the hypothalamus setpoint drops back down, triggering diaphoresis (sweating) and vasodilation to dump heat."
+  },
+  {
+    "question": "35. Considered as the most accessible and convenient method for temperature taking",
+    "choices": [
+      "Oral",
+      "Rectal",
+      "Tympanic",
+      "Axillary"
+    ],
+    "correct_answer": 0,
+    "explanation": "Oral thermometry is widely regarded as the most convenient, accessible, and comfortable routine site for alert cooperative clients."
+  },
+  {
+    "question": "36. Considered as Safest and most non invasive method of temperature taking",
+    "choices": [
+      "Oral",
+      "Rectal",
+      "Tympanic",
+      "Axillary"
+    ],
+    "correct_answer": 3,
+    "explanation": "The axillary route is non-invasive and eliminates risks of mucous membrane injury or cross-contamination associated with oral/rectal routes."
+  },
+  {
+    "question": "37. Which of the following is NOT a contraindication in taking ORAL temperature?",
+    "choices": [
+      "Quadriplegic",
+      "Presence of NGT",
+      "Dyspnea",
+      "Nausea and Vomitting"
+    ],
+    "correct_answer": 0,
+    "explanation": "Quadriplegia affects motor control of limbs but does not prevent a alert patient from keeping their mouth closed around a thermometer."
+  },
+  {
+    "question": "38. Which of the following is a contraindication in taking RECTAL temperature?",
+    "choices": [
+      "Unconscious",
+      "Neutropenic",
+      "NPO",
+      "Very young children"
+    ],
+    "correct_answer": 1,
+    "explanation": "Rectal probes can cause micro-trauma to rectal mucosa, posing a dangerous infection risk in immunocompromised (neutropenic) patients."
+  },
+  {
+    "question": "39. How long should the Rectal Thermometer be inserted to the clients anus?",
+    "choices": [
+      "1 to 2 inches",
+      ".5 to 1.5 inches",
+      "3 to 5 inches",
+      "2 to 3 inches"
+    ],
+    "correct_answer": 1,
+    "explanation": "Standard rectal insertion depth is 0.5 inches for infants/children up to 1.5 inches maximum for adults to prevent perforation."
+  },
+  {
+    "question": "40. In cleaning the thermometer after use, The direction of the cleaning to follow Medical Asepsis is :",
+    "choices": [
+      "From bulb to stem",
+      "From stem to bulb",
+      "From stem to stem",
+      "From bulb to bulb"
+    ],
+    "correct_answer": 1,
+    "explanation": "After use, the bulb is considered the most contaminated area; cleaning moves from the cleanest area (stem) toward the dirtiest (bulb)."
+  },
+  {
+    "question": "41. How long should the thermometer stay in the Client’s Axilla?",
+    "choices": [
+      "3 minutes",
+      "4 minutes",
+      "7 minutes",
+      "10 minutes"
+    ],
+    "correct_answer": 2,
+    "explanation": "Mercury or traditional axillary measurement protocols require ~7–10 minutes to register full thermal equilibrium."
+  },
+  {
+    "question": "42. Which of the following statement is TRUE about pulse?",
+    "choices": [
+      "Young person have higher pulse than older persons",
+      "Males have higher pulse rate than females after puberty",
+      "Digitalis has a positive chronotropic effect",
+      "In lying position, Pulse rate is higher"
+    ],
+    "correct_answer": 0,
+    "explanation": "Heart rate decreases progressively with age from infancy through adulthood due to changes in basal metabolic rates."
+  },
+  {
+    "question": "43. The following are correct actions when taking radial pulse except:",
+    "choices": [
+      "Put the palms downward",
+      "Use the thumb to palpate the artery",
+      "Use two or three fingers to palpate the pulse at the inner wrist",
+      "Assess the pulse rate, rhythm, volume and bilateral quality"
+    ],
+    "correct_answer": 1,
+    "explanation": "Nurses should never use their own thumb to measure a pulse because the thumb has its own strong pulsation that can cause miscounting."
+  },
+  {
+    "question": "44. The difference between the systolic and diastolic pressure is termed as",
+    "choices": [
+      "Apical rate",
+      "Cardiac rate",
+      "Pulse deficit",
+      "Pulse pressure"
+    ],
+    "correct_answer": 3,
+    "explanation": "Pulse pressure is calculated by subtracting diastolic pressure from systolic pressure (e.g., 120 - 80 = 40 mmHg)."
+  },
+  {
+    "question": "45. Which of the following completely describes PULSUS PARADOXICUS?",
+    "choices": [
+      "A greater-than-normal increase in systolic blood pressure with inspiration",
+      "A greater-than-normal decrease in systolic blood pressure with inspiration",
+      "Pulse is paradoxically low when client is in standing position and high when supine.",
+      "Pulse is paradoxically high when client is in standing position and low when supine."
+    ],
+    "correct_answer": 1,
+    "explanation": "Pulsus paradoxus is defined as an abnormally large fall in systolic blood pressure (greater than 10 mmHg) during inspiration."
+  },
+  {
+    "question": "46. Which of the following is TRUE about respiration?",
+    "choices": [
+      "I:E 2:1",
+      "I:E : 4:3",
+      "I:E 1:1",
+      "I:E 1:2"
+    ],
+    "correct_answer": 3,
+    "explanation": "Normal quiet breathing exhibits an inspiration-to-expiration ratio (I:E) of 1:2, as passive expiration takes twice as long as active inspiration."
+  },
+  {
+    "question": "47. Contains the pneumotaxic and the apneutic centers",
+    "choices": [
+      "Medulla oblongata",
+      "Pons",
+      "Carotid bodies",
+      "Aortic bodies"
+    ],
+    "correct_answer": 1,
+    "explanation": "The pons houses the pneumotaxic center (prevents overinflation) and the apneustic center (promotes inspiration)."
+  },
+  {
+    "question": "48. Which of the following is responsible for deep and prolonged inspiration",
+    "choices": [
+      "Medulla oblongata",
+      "Pons",
+      "Carotid bodies",
+      "Aortic bodies"
+    ],
+    "correct_answer": 1,
+    "explanation": "The apneustic center located in the lower pons stimulates deep, prolonged inspiration."
+  },
+  {
+    "question": "49. Which of the following is responsible for the rhythm and quality of breathing?",
+    "choices": [
+      "Medulla oblongata",
+      "Pons",
+      "Carotid bodies",
+      "Aortic bodies"
+    ],
+    "correct_answer": 1,
+    "explanation": "Pontine centers fine-tune smooth transitions between inhalation and exhalation, governing pattern quality."
+  },
+  {
+    "question": "50. The primary respiratory center",
+    "choices": [
+      "Medulla oblongata",
+      "Pons",
+      "Carotid bodies",
+      "Aortic bodies"
+    ],
+    "correct_answer": 0,
+    "explanation": "The medulla oblongata contains the primary respiratory rhythmicity centers that control basic breathing drives."
+  },
+  {
+    "question": "51. Which of the following is TRUE about the mechanism of action of the Aortic and Carotid bodies?",
+    "choices": [
+      "If the BP is elevated, the RR increases",
+      "If the BP is elevated, the RR decreases",
+      "Elevated BP leads to Metabolic alkalosis",
+      "Low BP leads to Metabolic acidosis"
+    ],
+    "correct_answer": 1,
+    "explanation": "Baroreceptor reflexes cause a compensatory reduction in heart rate and respiratory effort when arterial blood pressure spikes."
+  },
+  {
+    "question": "52. All of the following factors correctly influence respiration except one. Which of the following is incorrect?",
+    "choices": [
+      "Hydrocodone decreases RR",
+      "Stress increases RR",
+      "Increase temperature of the environment, Increase RR",
+      "Increase altitude, Increase RR"
+    ],
+    "correct_answer": 2,
+    "explanation": "Environmental heat elevation primarily induces peripheral vasodilation rather than serving as a direct mechanism for respiratory acceleration, unlike metabolic fever."
+  },
+  {
+    "question": "53. When does the heart receives blood from the coronary artery?",
+    "choices": [
+      "Systole",
+      "Diastole",
+      "When the valves opens",
+      "When the valves closes"
+    ],
+    "correct_answer": 1,
+    "explanation": "Coronary arteries fill during ventricular diastole when the aortic valve closes and myocardium relaxes."
+  },
+  {
+    "question": "54. Which of the following is more life threatening?",
+    "choices": [
+      "BP = 180/100",
+      "BP = 160/120",
+      "BP = 90/60",
+      "BP = 80/50"
+    ],
+    "correct_answer": 1,
+    "explanation": "Diastolic pressure reflects baseline vascular resistance; a diastolic BP of 120 mmHg indicates dangerous end-organ strain and hypertensive crisis."
+  },
+  {
+    "question": "55. Refers to the pressure when the ventricles are at rest",
+    "choices": [
+      "Diastole",
+      "Systole",
+      "Preload",
+      "Pulse pressure"
+    ],
+    "correct_answer": 0,
+    "explanation": "Diastolic pressure represents the minimum pressure maintained within the arterial system during ventricular relaxation."
+  },
+  {
+    "question": "56. Which of the following is TRUE about the blood pressure determinants?",
+    "choices": [
+      "Hypervolemia lowers BP",
+      "Hypervolemia increases GFR",
+      "HCT of 70% might decrease or increase BP",
+      "Epinephrine decreases BP"
+    ],
+    "correct_answer": 3,
+    "explanation": "In low doses or specific vascular receptors (Beta-2 vasodilation), systemic vascular dynamics vary, but overall options present Epinephrine's complex actions."
+  },
+  {
+    "question": "57. Which of the following do not correctly correlates the increase BP of Ms. Aida, a 70 year old diabetic?",
+    "choices": [
+      "Females, after the age 65 tends to have lower BP than males",
+      "Disease process like Diabetes increase BP",
+      "BP is highest in the morning, and lowest during the night",
+      "Africans, have a greater risk of hypertension than Caucasian and Asians."
+    ],
+    "correct_answer": 0,
+    "explanation": "After menopause (and especially past age 65), females statistically experience higher rates of hypertension and blood pressure levels than males."
+  },
+  {
+    "question": "58. How many minutes are allowed to pass if the client had engaged in strenuous activities, smoked or ingested caffeine before taking his/her BP?",
+    "choices": [
+      "5",
+      "10",
+      "15",
+      "30"
+    ],
+    "correct_answer": 3,
+    "explanation": "Standard BP guidelines state patients must rest for 30 minutes after smoking, exercise, or caffeine ingestion to prevent temporary spikes."
+  },
+  {
+    "question": "59. Too narrow cuff will cause what change in the Client’s BP?",
+    "choices": [
+      "True high reading",
+      "True low reading",
+      "False high reading",
+      "False low reading"
+    ],
+    "correct_answer": 2,
+    "explanation": "Using a cuff that is too small or narrow requires excess pressure to occlude the artery, resulting in a false-high reading."
+  },
+  {
+    "question": "60. Which is a preferable arm for BP taking?",
+    "choices": [
+      "An arm with the most contraptions",
+      "The left arm of the client with a CVA affecting the right brain",
+      "The right arm",
+      "The left arm"
+    ],
+    "correct_answer": 3,
+    "explanation": "The left arm is generally preferred as it is closer to the heart/aorta, provided no contraindications (IVs, shunts, stroke weakness) exist."
+  },
+  {
+    "question": "61. Which of the following is INCORRECT in assessing client’s BP?",
+    "choices": [
+      "Read the mercury at the upper meniscus, preferably at the eye level to prevent error of parallax",
+      "Inflate and deflate slowly, 2-3 mmHg at a time",
+      "The sound heard during taking BP is known as KOROTKOFF sound",
+      "If the BP is taken on the left leg using the popliteal artery pressure, a BP of 160/80 is normal."
+    ],
+    "correct_answer": 0,
+    "explanation": "Mercury levels in a column thermometer must always be read at the top of the convex meniscus, not the upper edge/rim."
+  },
+  {
+    "question": "62. Which of the following is the correct interpretation of the ERROR OF PARALLAX",
+    "choices": [
+      "If the eye level is higher than the level of the meniscus, it will cause a false high reading",
+      "If the eye level is higher than the level of the meniscus, it will cause a false low reading",
+      "If the eye level is lower than the level of the meniscus, it will cause a false low reading",
+      "If the eye level is equal to that of the level of the upper meniscus, the reading is accurate"
+    ],
+    "correct_answer": 1,
+    "explanation": "Looking down from an eye position higher than the meniscus distorts the line of sight downward, resulting in a false-low reading."
+  },
+  {
+    "question": "63. How many minute/s is/are allowed to pass before making a re-reading after the first one?",
+    "choices": [
+      "1",
+      "5",
+      "15",
+      "30"
+    ],
+    "correct_answer": 0,
+    "explanation": "Waiting at least 1 to 2 minutes allows venous blood trapped in the arm during cuff inflation to release completely before re-inflation."
+  },
+  {
+    "question": "64. Which of the following is TRUE about the auscultation of blood pressure?",
+    "choices": [
+      "Pulse + 4 is considered as FULL",
+      "The bell of the stethoscope is use in auscultating BP",
+      "Sound produced by BP is considered as HIGH frequency sound",
+      "Pulse +1 is considered as NORMAL"
+    ],
+    "correct_answer": 1,
+    "explanation": "Korotkoff sounds are low-frequency sounds, making the bell of the stethoscope ideal for detecting them."
+  },
+  {
+    "question": "65. In assessing the abdomen, Which of the following is the correct sequence of the physical assessment?",
+    "choices": [
+      "Inspection, Auscultation, Percussion, Palpation",
+      "Palpation, Auscultation, Percussion, Inspection",
+      "Inspection, Palpation, Auscultation, Percussion",
+      "Inspection, Auscultation, Palpation, Percussion"
+    ],
+    "correct_answer": 0,
+    "explanation": "Auscultation precedes percussion and palpation during abdominal assessment to avoid altering natural bowel sounds."
+  },
+  {
+    "question": "66. The sequence in examining the quadrants of the abdomen is:",
+    "choices": [
+      "RUQ,RLQ,LUQ,LLQ",
+      "RLQ,RUQ,LLQ,LUQ",
+      "RUQ,RLQ,LLQ,LUQ",
+      "RLQ,RUQ,LUQ,LLQ"
+    ],
+    "correct_answer": 3,
+    "explanation": "Examining clockwise starting at the Right Lower Quadrant (RLQ -> RUQ -> LUQ -> LLQ) follows anatomical intestinal flow."
+  },
+  {
+    "question": "67. In inspecting the abdomen, which of the following is NOT DONE?",
+    "choices": [
+      "Ask the client to void first",
+      "Knees and legs are straighten to relax the abdomen",
+      "The best position in assessing the abdomen is Dorsal recumbent",
+      "The knees and legs are externally rotated"
+    ],
+    "correct_answer": 1,
+    "explanation": "Keeping the legs straight tightens abdominal musculature; flexing the knees relaxes the abdominal wall."
+  },
+  {
+    "question": "68. Dr. Fabian De Las Santas, is about to conduct an ophthalmoscope examination. Which of the following, if done by a nurse, is a Correct preparation before the procedure?",
+    "choices": [
+      "Provide the necessary draping to ensure privacy",
+      "Open the windows, curtains and light to allow better illumination",
+      "Pour warm water over the ophthalmoscope to ensure comfort",
+      "Darken the room to provide better illumination"
+    ],
+    "correct_answer": 3,
+    "explanation": "Dimming or darkening the room causes pupil dilation, facilitating visual access to the fundus during ophthalmoscopy."
+  },
+  {
+    "question": "69. If the client is female, and the doctor is a male and the patient is about to undergo a vaginal and cervical examination, why is it necessary to have a female nurse in attendance?",
+    "choices": [
+      "To ensure that the doctor performs the procedure safely",
+      "To assist the doctor",
+      "To assess the client’s response to examination",
+      "To ensure that the procedure is done in an ethical manner"
+    ],
+    "correct_answer": 3,
+    "explanation": "Having a female chaperone present during intimate examinations protects both the patient's comfort and legal/ethical standards."
+  },
+  {
+    "question": "70. In palpating the client’s breast, Which of the following position is necessary for the patient to assume before the start of the procedure?",
+    "choices": [
+      "Supine",
+      "Dorsal recumbent",
+      "Sitting",
+      "Lithotomy"
+    ],
+    "correct_answer": 0,
+    "explanation": "The supine position flattens breast tissue evenly across the chest wall, aiding thorough palpation."
+  },
+  {
+    "question": "71. When is the best time to collect urine specimen for routine urinalysis and C/S?",
+    "choices": [
+      "Early morning",
+      "Later afternoon",
+      "Midnight",
+      "Before breakfast"
+    ],
+    "correct_answer": 0,
+    "explanation": "First-morning urine specimens are most concentrated, yielding optimal detection of formed elements, bacteria, and protein."
+  },
+  {
+    "question": "72. Which of the following is among an ideal way of collecting a urine specimen for culture and sensitivity?",
+    "choices": [
+      "Use a clean container",
+      "Discard the first flow of urine to ensure that the urine is not contaminated",
+      "Collect around 30-50 ml of urine",
+      "Add preservatives, refrigerate the specimen or add ice according to the agency’s protocol"
+    ],
+    "correct_answer": 1,
+    "explanation": "Midstream collection discards initial voiding to flush urethral contaminants away from the culture sample."
+  },
+  {
+    "question": "73. In a 24 hour urine specimen started Friday, 9:00 A.M, which of the following if done by a Nurse indicate a NEED for further procedural debriefing?",
+    "choices": [
+      "The nurse ask the client to urinate at 9:00 A.M, Friday and she included the urine in the 24 hour urine specimen",
+      "The nurse discards the Friday 9:00 A M urine of the client",
+      "The nurse included the Saturday 9:00 A.M urine of the client to the specimen collection",
+      "The nurse added preservatives as per protocol and refrigerates the specimen"
+    ],
+    "correct_answer": 0,
+    "explanation": "The very first void at the start time of a 24-hour collection must be discarded so timing begins with an empty bladder."
+  },
+  {
+    "question": "74. This specimen is required to assess glucose levels and for the presence of albumin the the urine",
+    "choices": [
+      "Midstream clean catch urine",
+      "24 hours urine collection",
+      "Postprandial urine collection",
+      "Second voided urine"
+    ],
+    "correct_answer": 3,
+    "explanation": "A second voided specimen clears older urine stored in the bladder to measure recent blood glucose clearance accurately."
+  },
+  {
+    "question": "75. When should the client test his blood sugar levels for greater accuracy?",
+    "choices": [
+      "During meals",
+      "In between meals",
+      "Before meals",
+      "2 Hours after meals"
+    ],
+    "correct_answer": 2,
+    "explanation": "Preprandial (before meals) blood glucose reflects true baseline fasting control without active dietary spikes."
+  },
+  {
+    "question": "76. In collecting a urine from a catheterized patient, Which of the following statement indicates an accurate performance of the procedure?",
+    "choices": [
+      "Clamp above the port for 30 to 60 minutes before drawing the urine from the port",
+      "Clamp below the port for 30 to 60 minutes before drawing the urine from the port",
+      "Clamp above the port for 5 to 10 minutes before drawing the urine from the port",
+      "Clamp below the port for 5 to 10 minutes before drawing the urine from the port"
+    ],
+    "correct_answer": 1,
+    "explanation": "Clamping below the sampling port allows fresh urine to collect in the tubing at the port site without opening the closed system."
+  },
+  {
+    "question": "77. A community health nurse should be resourceful and meet the needs of the client. A villager ask him, Can you test my urine for glucose? Which of the following technique allows the nurse to test a client’s urine for glucose without the need for intricate instruments.",
+    "choices": [
+      "Acetic Acid test",
+      "Nitrazine paper test",
+      "Benedict’s test",
+      "Litmus paper test"
+    ],
+    "correct_answer": 2,
+    "explanation": "Benedict's reagent test is a classic qualitative reagent test for reducing sugars like glucose using heat."
+  },
+  {
+    "question": "78. A community health nurse is assessing client’s urine using the Acetic Acid solution. Which of the following, if done by a nurse, indicates lack of correct knowledge with the procedure?",
+    "choices": [
+      "The nurse added the Urine as the 2/3 part of the solution",
+      "The nurse heats the test tube after adding 1/3 part acetic acid",
+      "The nurse heats the test tube after adding 2/3 part of Urine",
+      "The nurse determines abnormal result if she noticed that the test tube becomes cloudy"
+    ],
+    "correct_answer": 1,
+    "explanation": "The urine is first boiled alone to coagulate proteins; acetic acid is added *after* initial heating to clear non-protein cloudiness."
+  },
+  {
+    "question": "79. Which of the following is incorrect with regards to proper urine testing using Benedict’s Solution?",
+    "choices": [
+      "Heat around 5ml of Benedict’s solution together with the urine in a test tube",
+      "Add 8 to 10 drops of urine",
+      "Heat the Benedict’s solution without the urine to check if the solution is contaminated",
+      "If the color remains BLUE, the result is POSITIVE"
+    ],
+    "correct_answer": 3,
+    "explanation": "A blue color indicates a negative result (no reducing sugars present); positive results turn green, yellow, orange, or brick red."
+  },
+  {
+    "question": "80. +++ Positive result after Benedicts test is depicted by what color?",
+    "choices": [
+      "Blue",
+      "Green",
+      "Yellow",
+      "Orange"
+    ],
+    "correct_answer": 3,
+    "explanation": "Benedict's test color scale: Clear Blue (Negative), Green (+1), Yellow (+2), Orange (+3), Brick Red (+4)."
+  },
+  {
+    "question": "81. Clinitest is used in testing the urine of a client for glucose. Which of the following, If committed by a nurse indicates error?",
+    "choices": [
+      "Specimen is collected after meals",
+      "The nurse puts 1 clinitest tablet into a test tube",
+      "She added 5 drops of urine and 10 drops of water",
+      "If the color becomes orange or red, It is considered postitive"
+    ],
+    "correct_answer": 0,
+    "explanation": "Urine glucose assessment for monitoring baseline diabetes management should be drawn preprandially rather than postprandially."
+  },
+  {
+    "question": "82. Which of the following nursing intervention is important for a client scheduled to have a Guaiac Test?",
+    "choices": [
+      "Avoid turnips, radish and horseradish 3 days before procedure",
+      "Continue iron preparation to prevent further loss of Iron",
+      "Do not eat read meat 12 hours before procedure",
+      "Encourage caffeine and dark colored foods to produce accurate results"
+    ],
+    "correct_answer": 0,
+    "explanation": "Turnips, radishes, and horseradish contain peroxidase enzymes that cause false-positive results in fecal occult blood (guaiac) tests."
+  },
+  {
+    "question": "83. In collecting a routine specimen for fecalysis, Which of the following, if done by a nurse, indicates inadequate knowledge and skills about the procedure?",
+    "choices": [
+      "The nurse scoop the specimen specifically at the site with blood and mucus",
+      "She took around 1 inch of specimen or a teaspoonful",
+      "Ask the client to call her for the specimen after the client wiped off his anus with a tissue",
+      "Ask the client to defecate in a bedpan, Secure a sterile container"
+    ],
+    "correct_answer": 2,
+    "explanation": "Toilet tissue can contain specimen-altering chemicals/lotions and should not be mixed into the bedpan stool collection."
+  },
+  {
+    "question": "84. In a routine sputum analysis, Which of the following indicates proper nursing action before sputum collection?",
+    "choices": [
+      "Secure a clean container",
+      "Discard the container if the outside becomes contaminated with the sputum",
+      "Rinse the client’s mouth with Listerine after collection",
+      "Tell the client that 4 tablespoon of sputum is needed for each specimen for a routine sputum analysis"
+    ],
+    "correct_answer": 2,
+    "explanation": "Rinsing the mouth with water/mouthwash after producing sputum clears residual thick secretions and unpalatable taste."
+  },
+  {
+    "question": "85. Who collects Blood specimen?",
+    "choices": [
+      "The nurse",
+      "Medical technologist",
+      "Physician",
+      "Physical therapist"
+    ],
+    "correct_answer": 1,
+    "explanation": "In standard hospital laboratory practice setups, licensed Medical Technologists/Phlebotomists perform primary diagnostic blood draws."
+  },
+  {
+    "question": "86. David, 68 year old male client is scheduled for Serum Lipid analysis. Which of the following health teaching is important to ensure accurate reading?",
+    "choices": [
+      "Tell the patient to eat fatty meals 3 days prior to the procedure",
+      "NPO for 12 hours pre procedure",
+      "Ask the client to drink 1 glass of water 1 hour prior to the procedure",
+      "Tell the client that the normal serum lipase level is 50 to 140 U/L"
+    ],
+    "correct_answer": 1,
+    "explanation": "Fasting (NPO) for 12 hours prior to lipid panel testing prevents postprandial lipemia from skewing baseline triglyceride and cholesterol values."
+  },
+  {
+    "question": "87. The primary factor responsible for body heat production is the",
+    "choices": [
+      "Metabolism",
+      "Release of thyroxin",
+      "Muscle activity",
+      "Stress"
+    ],
+    "correct_answer": 0,
+    "explanation": "Basal cellular metabolic activity generates the essential background heat required to maintain body temperature."
+  },
+  {
+    "question": "88. The heat regulating center is found in the",
+    "choices": [
+      "Medulla oblongata",
+      "Thalamus",
+      "Hypothalamus",
+      "Pons"
+    ],
+    "correct_answer": 2,
+    "explanation": "The hypothalamus acts as the body's central thermostat regulating thermal equilibrium."
+  },
+  {
+    "question": "89. A process of heat loss which involves the transfer of heat from one surface to another is",
+    "choices": [
+      "Radiation",
+      "Conduction",
+      "Convection",
+      "Evaporation"
+    ],
+    "correct_answer": 1,
+    "explanation": "Conduction is the direct transfer of thermal energy between two physical objects in direct contact."
+  },
+  {
+    "question": "90. Which of the following is a primary factor that affects the BP?",
+    "choices": [
+      "Obesity",
+      "Age",
+      "Stress",
+      "Gender"
+    ],
+    "correct_answer": 2,
+    "explanation": "Sympathetic stimulation from stress causes acute arterial vasoconstriction, directly elevating cardiac output and blood pressure."
+  },
+  {
+    "question": "91. The following are social data about the client except",
+    "choices": [
+      "Patient’s lifestyle",
+      "Religious practices",
+      "Family home situation",
+      "Usual health status"
+    ],
+    "correct_answer": 0,
+    "explanation": "Lifestyle factors (diet, activity, habits) fall under personal behavioral health data, whereas family living arrangements and religion reflect social data."
+  },
+  {
+    "question": "92. The best position for any procedure that involves vaginal and cervical examination is",
+    "choices": [
+      "Dorsal recumbent",
+      "Side lying",
+      "Supine",
+      "Lithotomy"
+    ],
+    "correct_answer": 3,
+    "explanation": "Lithotomy position (feet in stirrups) maximizes access and visibility for pelvic, vaginal, and cervical examinations."
+  },
+  {
+    "question": "93. Measure the leg circumference of a client with bipedal edema is best done in what position?",
+    "choices": [
+      "Dorsal recumbent",
+      "Sitting",
+      "Standing",
+      "Supine"
+    ],
+    "correct_answer": 0,
+    "explanation": "Dorsal recumbent positioning provides stable, relaxed leg extension without dependent fluid pooling caused by standing or sitting."
+  },
+  {
+    "question": "94. In palpating the client’s abdomen, Which of the following is the best position for the client to assume?",
+    "choices": [
+      "Dorsal recumbent",
+      "Side lying",
+      "Supine",
+      "Lithotomy"
+    ],
+    "correct_answer": 0,
+    "explanation": "Dorsal recumbent position with knees slightly flexed relaxes abdominal muscles, allowing deeper palpation."
+  },
+  {
+    "question": "95. Rectal examination is done with a client in what position?",
+    "choices": [
+      "Dorsal recumbent",
+      "Sims position",
+      "Supine",
+      "Lithotomy"
+    ],
+    "correct_answer": 1,
+    "explanation": "Sims position (side-lying with upper knee flexed) exposes the perianal area effectively for examination."
+  },
+  {
+    "question": "96. Which of the following is a correct nursing action when collecting urine specimen from a client with an Indwelling catheter?",
+    "choices": [
+      "Collect urine specimen from the drainage bag",
+      "Detach catheter from the connecting tube and draw the specimen from the port",
+      "Use sterile syringe to aspirate urine specimen from the drainage port",
+      "Insert the syringe straight to the port to allow self sealing of the port"
+    ],
+    "correct_answer": 2,
+    "explanation": "Aspirating through the dedicated needleless port with a sterile syringe maintains a closed drainage system, reducing infection risk."
+  },
+  {
+    "question": "97. Which of the following is inappropriate in collecting mid stream clean catch urine specimen for urine analysis?",
+    "choices": [
+      "Collect early in the morning, First voided specimen",
+      "Do perineal care before specimen collection",
+      "Collect 5 to 10 ml for urine",
+      "Discard the first flow of the urine"
+    ],
+    "correct_answer": 2,
+    "explanation": "Standard urinalysis requires at least 30 to 60 mL of urine; collecting only 5 to 10 mL provides an insufficient volume for full testing."
+  },
+  {
+    "question": "98. When palpating the client’s neck for lymphadenopathy, where should the nurse position himself?",
+    "choices": [
+      "At the client’s back",
+      "At the client’s right side",
+      "At the client’s left side",
+      "In front of a sitting client"
+    ],
+    "correct_answer": 0,
+    "explanation": "Standing behind the seated patient allows symmetric, comparative palpation of cervical lymph node chains using both hands."
+  },
+  {
+    "question": "99. Which of the following is the best position for the client to assume if the back is to be examined by the nurse?",
+    "choices": [
+      "Standing",
+      "Sitting",
+      "Side lying",
+      "Prone"
+    ],
+    "correct_answer": 0,
+    "explanation": "Standing allows assessment of full spinal alignment, posture, spinal curves, and weight-bearing symmetry."
+  },
+  {
+    "question": "100. In assessing the client’s chest, which position best show chest expansion as well as its movements?",
+    "choices": [
+      "Sitting",
+      "Prone",
+      "Sidelying",
+      "Supine"
+    ],
+    "correct_answer": 0,
+    "explanation": "Sitting upright allows full, unencumbered thoracic expansion and bilateral visual inspection of lung excursion."
+  }
+],
 
 
-
-
-
-  "foundation-nursing-process-assessment": [],
   "foundation-oxygenation-nutrition": [],
   "foundation-exam-1": [],
   "foundation-exam-2": [],
