@@ -1,0 +1,39 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Signed-in helper
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    // --- users/{uid} and everything beneath it -------------------------------
+    // Owner can read and write their own profile and all subcollections:
+    //   users/{uid}/activity/*
+    //   users/{uid}/studySessions/*
+    //   users/{uid}/progress/flashcards
+    //   users/{uid}/wrongAnswers/master
+    match /users/{userId}/{document=**} {
+      allow read, write: if isOwner(userId);
+    }
+
+    // Leaderboard lists the whole `users` collection
+    // (query orderBy xp / weeklyXP, limit 100). Allow any signed-in user to
+    // READ top-level user documents so the leaderboard works. Writes stay
+    // owner-only via the rule above.
+    match /users/{userId} {
+      allow read: if isSignedIn();
+    }
+
+    // --- userProgress/{uid}/quizzes/{quizId} ---------------------------------
+    // Per-quiz progress, owner-only.
+    match /userProgress/{userId}/{document=**} {
+      allow read, write: if isOwner(userId);
+    }
+  }
+}
