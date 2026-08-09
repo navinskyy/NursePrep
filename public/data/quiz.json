@@ -9515,8 +9515,8 @@
   }
   ],
   "pnle-exam-2": [
-    {
-    "question": "1. A woman in a child bearing age receives a rubella vaccination. Nurse Joy would give her which of the following instructions?",
+   {
+    "question": "A woman in a child bearing age receives a rubella vaccination. Nurse Joy would give her which of the following instructions?",
     "choices": [
       "Refrain from eating eggs or egg products for 24 hours",
       "Avoid having sexual intercourse",
@@ -9524,10 +9524,10 @@
       "Avoid exposure to sun"
     ],
     "answer": 2,
-    "explanation": "Don’t get pregnant at least 3 months. Rubella vaccine is a live attenuated virus, which carries a theoretical risk of causing congenital rubella syndrome or fetal harm if pregnancy occurs shortly after administration."
+    "explanation": "The rubella vaccine is a live attenuated virus. Because there is a theoretical risk of teratogenic effects to a developing fetus, women are instructed to strictly avoid pregnancy for at least 28 days to 3 months following vaccination."
   },
   {
-    "question": "2. Jonas who is diagnosed with encephalitis is under the treatment of Mannitol. Which of the following patient outcomes indicate to Nurse Ronald that the treatment of Mannitol has been effective for a patient that has increased intracranial pressure?",
+    "question": "Jonas who is diagnosed with encephalitis is under the treatment of Mannitol. Which of the following patient outcomes indicate to Nurse Ronald that the treatment of Mannitol has been effective for a patient that has increased intracranial pressure?",
     "choices": [
       "Increased urinary output",
       "Decreased RR",
@@ -9535,10 +9535,10 @@
       "Decreased level of consciousness"
     ],
     "answer": 0,
-    "explanation": "Increased urinary output. Mannitol is an osmotic diuretic that draws fluid from brain tissue into the vascular space to reduce intracranial pressure, which is then excreted via the kidneys, resulting in increased urine output."
+    "explanation": "Mannitol is an osmotic diuretic that pulls fluid from brain tissue into the vascular space to reduce cerebral edema and intracranial pressure. Increased urinary output confirms that the drug is promoting fluid excretion as intended."
   },
   {
-    "question": "3. Mary asked Nurse Maureen about the incubation period of rabies. Which statement by the Nurse Maureen is appropriate?",
+    "question": "Mary asked Nurse Maureen about the incubation period of rabies. Which statement by the Nurse Maureen is appropriate?",
     "choices": [
       "Incubation period is 6 months",
       "Incubation period is 1 week",
@@ -9546,10 +9546,10 @@
       "Incubation period varies depending on the site of the bite"
     ],
     "answer": 3,
-    "explanation": "Incubation period varies depending on the site of the bite. Rabies virus travels along peripheral nerves to the central nervous system; therefore, bites closer to the head and central nervous system (e.g., face or neck) have shorter incubation periods than bites on distal extremities."
+    "explanation": "The rabies virus travels along peripheral nerves to the central nervous system. Therefore, the incubation period varies depending on the proximity of the bite site to the brain, the severity of the wound, and viral load."
   },
   {
-    "question": "4. Which of the following should Nurse Cherry do first in taking care of a male client with rabies?",
+    "question": "Which of the following should Nurse Cherry do first in taking care of a male client with rabies?",
     "choices": [
       "Encourage the patient to take a bath",
       "Cover IV bottle with brown paper bag",
@@ -9557,10 +9557,10 @@
       "Place the patient near the door"
     ],
     "answer": 1,
-    "explanation": "Cover IV bottle with brown paper bag. Rabies patients experience severe hydrophobia and photophobia; seeing fluid or bright reflections can trigger painful pharyngeal spasms."
+    "explanation": "Clients with rabies suffer from severe hydrophobia and photophobia, where even visual stimuli like sight or movement of fluids can trigger painful throat spasms. Covering IV bottles and minimizing environmental triggers is essential."
   },
   {
-    "question": "5. Which of the following is the screening test for dengue hemorrhagic fever?",
+    "question": "Which of the following is the screening test for dengue hemorrhagic fever?",
     "choices": [
       "Complete blood count",
       "ELISA",
@@ -9568,10 +9568,10 @@
       "Sedimentation rate"
     ],
     "answer": 2,
-    "explanation": "Rumpel-leede test. Also known as the capillary fragility test or tourniquet test, this is a bedside screening procedure used to assess capillary fragility and microvascular bleeding risks in suspected dengue."
+    "explanation": "The Rumpel-Leede test (tourniquet test) measures capillary fragility. It serves as a rapid clinical screening tool to detect hemorrhagic tendencies in suspected Dengue cases."
   },
   {
-    "question": "6. Mr. Dela Rosa is suspected to have malaria after a business trip in Palawan. The most important diagnostic test in malaria is:",
+    "question": "Mr. Dela Rosa is suspected to have malaria after a business trip in Palawan. The most important diagnostic test in malaria is:",
     "choices": [
       "WBC count",
       "Urinalysis",
@@ -9579,10 +9579,10 @@
       "Peripheral blood smear"
     ],
     "answer": 3,
-    "explanation": "Peripheral blood smear. Microscopic examination of thick and thin peripheral blood smears remains the gold standard for detecting and identifying Plasmodium species in erythrocytes."
+    "explanation": "Microscopic examination of thick and thin peripheral blood smears remains the definitive diagnostic gold standard to visualize Plasmodium parasites within red blood cells."
   },
   {
-    "question": "7. The Nurse supervisor is planning for patient’s assignment for the AM shift. The nurse supervisor avoids assigning which of the following staff members to a client with herpes zoster?",
+    "question": "The Nurse supervisor is planning for patient’s assignment for the AM shift. The nurse supervisor avoids assigning which of the following staff members to a client with herpes zoster?",
     "choices": [
       "Nurse who never had chicken pox",
       "Nurse who never had roseola",
@@ -9590,10 +9590,10 @@
       "Nurse who never had mumps"
     ],
     "answer": 0,
-    "explanation": "Nurse who never had chicken pox. Herpes zoster is caused by the reactivation of the varicella-zoster virus; a healthcare provider who lacks immunity (never had chickenpox/varicella) is at high risk of contracting primary varicella."
+    "explanation": "Herpes Zoster (Shingles) and Varicella (Chickenpox) are caused by the same Varicella-Zoster virus. A healthcare provider who has never had chickenpox or the vaccine lacks immunity and risks contracting primary varicella upon exposure."
   },
   {
-    "question": "8. Clarissa is 7 weeks pregnant. Further examination revealed that she is susceptible to rubella. When would be the most appropriate for her to receive rubella immunization?",
+    "question": "Clarissa is 7 weeks pregnant. Further examination revealed that she is susceptible to rubella. When would be the most appropriate for her to receive rubella immunization?",
     "choices": [
       "At once",
       "During 2nd trimester",
@@ -9601,10 +9601,10 @@
       "After the delivery of the baby"
     ],
     "answer": 3,
-    "explanation": "After the delivery of the baby. Rubella vaccine contains a live virus and is contraindicated during pregnancy due to potential teratogenic effects, so susceptible mothers receive vaccination postpartum."
+    "explanation": "Because the rubella vaccine is a live attenuated virus, it is strictly contraindicated during pregnancy due to teratogenic risks. Susceptible pregnant women are immunized immediately postpartum prior to discharge."
   },
   {
-    "question": "9. A female child with rubella should be isolated from a:",
+    "question": "A female child with rubella should be isolated from a:",
     "choices": [
       "21 year old male cousin living in the same house",
       "18 year old sister who recently got married",
@@ -9612,10 +9612,10 @@
       "4 year old girl who lives next door"
     ],
     "answer": 1,
-    "explanation": "18 year old sister who recently got married. Women of childbearing age who could potentially be pregnant must avoid exposure to rubella to prevent congenital rubella syndrome in a developing fetus."
+    "explanation": "The primary risk of rubella exposure is Congenital Rubella Syndrome in unborn children. Isolating the infected child from a recently married sister (who may be in her childbearing years or early undetected pregnancy) takes high priority."
   },
   {
-    "question": "10. What is the primary prevention of leprosy?",
+    "question": "What is the primary prevention of leprosy?",
     "choices": [
       "Nutrition",
       "Vitamins",
@@ -9623,10 +9623,10 @@
       "DPT vaccination"
     ],
     "answer": 2,
-    "explanation": "BCG vaccination. Bacillus Calmette–Guérin (BCG) vaccine provides cross-reactive cell-mediated immunity against Mycobacterium leprae, offering partial primary protection against leprosy."
+    "explanation": "The Bacillus Calmette-Guérin (BCG) vaccine, primarily used for tuberculosis, shares cross-reactive mycobacterial antigens and provides significant cross-protective primary immunity against Mycobacterium leprae."
   },
   {
-    "question": "11. A bacteria which causes diphtheria is also known as?",
+    "question": "A bacteria which causes diphtheria is also known as?",
     "choices": [
       "Amoeba",
       "Cholera",
@@ -9634,10 +9634,10 @@
       "Spirochete"
     ],
     "answer": 2,
-    "explanation": "Klebs-loeffler bacillus. Corynebacterium diphtheriae is historically known as Klebs-Löffler bacillus after the scientists who discovered and characterized it."
+    "explanation": "Corynebacterium diphtheriae is historically known as the Klebs-Löffler bacillus, named after the microbiologists Edwin Klebs and Friedrich Löffler who discovered and characterized it."
   },
   {
-    "question": "12. Nurse Ron performed mantoux skin test today (Monday) to a male adult client. Which statement by the client indicates that he understood the instruction well?",
+    "question": "Nurse Ron performed mantoux skin test today (Monday) to a male adult client. Which statement by the client indicates that he understood the instruction well?",
     "choices": [
       "I will come back later",
       "I will come back next month",
@@ -9645,10 +9645,10 @@
       "I will come back on Wednesday, same time, to read the result"
     ],
     "answer": 3,
-    "explanation": "I will come back on Wednesday, same time, to read the result. Tuberculin skin tests (Mantoux) must be read 48 to 72 hours after administration; 48 hours from Monday is Wednesday."
+    "explanation": "A Mantoux tuberculin skin test (TST) site must be evaluated by a healthcare professional 48 to 72 hours after administration. Administering on Monday requires reading on Wednesday (48 hours later)."
   },
   {
-    "question": "13. A male client had undergone Mantoux skin test. Nurse Ronald notes an 8mm area of indurations at the site of the skin test. The nurse interprets the result as:",
+    "question": "A male client had undergone Mantoux skin test. Nurse Ronald notes an 8mm area of indurations at the site of the skin test. The nurse interprets the result as:",
     "choices": [
       "Negative",
       "Uncertain and needs to be repeated",
@@ -9656,10 +9656,10 @@
       "Inconclusive"
     ],
     "answer": 2,
-    "explanation": "Positive. An induration of 5 mm to 10 mm or greater is considered positive depending on high-risk factors (e.g., immunocompromised, close contact, clinical suspicion)."
+    "explanation": "Induration measuring 5mm or greater is considered positive in high-risk groups (such as immunocompromised or HIV-infected individuals), while 10mm is general positive; in baseline clinical context test standards, 8mm induration meets threshold criteria for a positive result."
   },
   {
-    "question": "14. Tony will start a 6 month therapy with Isoniazid (INH). Nurse Trish plans to teach the client to:",
+    "question": "Tony will start a 6 month therapy with Isoniazid (INH). Nurse Trish plans to teach the client to:",
     "choices": [
       "Use alcohol moderately",
       "Avoid vitamin supplements while o therapy",
@@ -9667,10 +9667,10 @@
       "May be discontinued if symptoms subsides"
     ],
     "answer": 1,
-    "explanation": "Avoid vitamin supplements while o therapy. INH can cause peripheral neuropathy due to pyridoxine (Vitamin B6) depletion, but indiscriminate over-the-counter vitamin supplementation without clinician oversight or specific B6 supplementation needs careful guidance."
+    "explanation": "Isoniazid (INH) interferes with vitamin B6 (pyridoxine) metabolism, causing peripheral neuropathy. However, unmonitored baseline vitamin supplements or improper interaction profiles require clear dietary guidance, specifically avoiding counter-indicated nutrient depletion interactions or alcohol."
   },
   {
-    "question": "15. Which is the primary characteristic lesion of syphilis?",
+    "question": "Which is the primary characteristic lesion of syphilis?",
     "choices": [
       "Sore eyes",
       "Sore throat",
@@ -9678,10 +9678,10 @@
       "Chancre"
     ],
     "answer": 3,
-    "explanation": "Chancre. Primary syphilis typically manifests as a single, painless, firm ulcerative lesion called a chancre at the site of infection."
+    "explanation": "Primary syphilis manifests classically as a single, painless, firm, and ulcerated skin lesion called a hard chancre at the site of Treponema pallidum inoculation."
   },
   {
-    "question": "16. What is the fast breathing of Jana who is 3 weeks old?",
+    "question": "What is the fast breathing of Jana who is 3 weeks old?",
     "choices": [
       "60 breaths per minute",
       "40 breaths per minute",
@@ -9689,10 +9689,10 @@
       "20 breaths per minute"
     ],
     "answer": 0,
-    "explanation": "60 breaths per minute. According to Integrated Management of Childhood Illness (IMCI) guidelines, fast breathing in an infant under 2 months of age is defined as 60 breaths per minute or more."
+    "explanation": "According to Integrated Management of Childhood Illness (IMCI) guidelines, fast breathing in an infant under 2 months of age is defined as a respiratory rate of 60 breaths per minute or more."
   },
   {
-    "question": "17. Which of the following signs and symptoms indicate some dehydration?",
+    "question": "Which of the following signs and symptoms indicate some dehydration?",
     "choices": [
       "Drinks eagerly",
       "Restless and irritable",
@@ -9700,10 +9700,10 @@
       "A and B"
     ],
     "answer": 3,
-    "explanation": "A and B. Under IMCI classification, a child with 'some dehydration' presents with restlessness/irritability and drinks eagerly/thirstily."
+    "explanation": "Under IMCI guidelines, criteria for 'some dehydration' include restlessness/irritability, sunken eyes, skin pinch going back slowly, and drinking eagerly due to thirst."
   },
   {
-    "question": "18. What is the first line for dysentery?",
+    "question": "What is the first line for dysentery?",
     "choices": [
       "Amoxicillin",
       "Tetracycline",
@@ -9711,10 +9711,10 @@
       "Cotrimoxazole"
     ],
     "answer": 3,
-    "explanation": "Cotrimoxazole. In classical public health and IMCI protocols, Cotrimoxazole (Trimethoprim-Sulfamethoxazole) is designated as a standard primary oral antibiotic treatment for bacterial dysentery (Shigellosis)."
+    "explanation": "In classic public health and IMCI guidelines, Cotrimoxazole (Trimethoprim-Sulfamethoxazole) is designated as a primary first-line oral antimicrobial for treating Shigella dysentery."
   },
   {
-    "question": "19. In home made oresol, what is the ratio of salt and sugar if you want to prepare with 1 liter of water?",
+    "question": "In home made oresol, what is the ratio of salt and sugar if you want to prepare with 1 liter of water?",
     "choices": [
       "1 tbsp. salt and 8 tbsp. sugar",
       "1 tbsp. salt and 8 tsp. sugar",
@@ -9722,10 +9722,10 @@
       "8 tsp. salt and 8 tsp. sugar"
     ],
     "answer": 2,
-    "explanation": "1 tsp. salt and 8 tsp. sugar. Standard community oral rehydration solution (Oresol) recipes mix 1 teaspoon of salt and 8 teaspoons of sugar dissolved in 1 liter of clean water."
+    "explanation": "Standard community health guidelines for preparing homemade oral rehydration solution (ORESOR) specify mixing 1 level teaspoon of salt and 8 level teaspoons of sugar dissolved in 1 liter of clean water."
   },
   {
-    "question": "20. Gentian Violet is used for:",
+    "question": "Gentian Violet is used for:",
     "choices": [
       "Wound",
       "Umbilical infections",
@@ -9733,10 +9733,10 @@
       "Burn"
     ],
     "answer": 1,
-    "explanation": "Umbilical infections. Gentian Violet (1%) has topical antiseptic and antifungal properties commonly utilized in primary healthcare settings for superficial skin and umbilical cord (omphalitis) infections."
+    "explanation": "Gentian Violet possesses effective topical antibacterial and antifungal properties traditionally utilized in primary community health nursing to treat superficial skin or umbilical cord infections (omphalitis)."
   },
   {
-    "question": "21. Which of the following is a live attenuated bacterial vaccine?",
+    "question": "Which of the following is a live attenuated bacterial vaccine?",
     "choices": [
       "BCG",
       "OPV",
@@ -9744,10 +9744,10 @@
       "None of the above"
     ],
     "answer": 0,
-    "explanation": "BCG. BCG (Bacillus Calmette–Guérin) is derived from a live, weakened strain of Mycobacterium bovis, making it a live attenuated bacterial vaccine."
+    "explanation": "BCG (Bacillus Calmette-Guérin) is prepared from a live attenuated strain of Mycobacterium bovis. OPV and Measles are live viral vaccines."
   },
   {
-    "question": "22. EPI is based on?",
+    "question": "EPI is based on?",
     "choices": [
       "Basic health services",
       "Scope of community affected",
@@ -9755,10 +9755,10 @@
       "Research studies"
     ],
     "answer": 2,
-    "explanation": "Epidemiological situation. The Expanded Program on Immunization (EPI) formulates targets, schedules, and priorities based on local surveillance and disease patterns (epidemiological situation)."
+    "explanation": "The Expanded Program on Immunization (EPI) formulates targets, schedules, and priority vaccine inclusions based on prevailing local epidemiological data and disease surveillance patterns."
   },
   {
-    "question": "23. TT? provides how many percentage of protection against tetanus?",
+    "question": "TT? provides how many percentage of protection against tetanus?",
     "choices": [
       "100",
       "99",
@@ -9766,10 +9766,10 @@
       "90"
     ],
     "answer": 3,
-    "explanation": "90. Tetanus toxoid immunization doses build cumulative immunity; three doses (TT3) provide approximately 90% protection against neonatal and maternal tetanus."
+    "explanation": "In maternal tetanus toxoid (TT) immunization schedules, receiving TT3 provides 90% protection against neonatal and maternal tetanus."
   },
   {
-    "question": "24. Temperature of refrigerator to maintain potency of measles and OPV vaccine is:",
+    "question": "Temperature of refrigerator to maintain potency of measles and OPV vaccine is:",
     "choices": [
       "-3c to -8c",
       "-15c to -25c",
@@ -9777,10 +9777,10 @@
       "+3c to +8c"
     ],
     "answer": 1,
-    "explanation": "-15c to -25c. Heat-sensitive live viral vaccines like Oral Polio Vaccine (OPV) and Measles are stored in the freezer compartment at -15°C to -25°C at regional or main cold chain levels."
+    "explanation": "Heat-sensitive live viral vaccines like Oral Polio Vaccine (OPV) and Measles are stored in the freezer compartment at temperatures between -15°C and -25°C to preserve potency."
   },
   {
-    "question": "25. Diptheria is a:",
+    "question": "Diptheria is a:",
     "choices": [
       "Bacterial toxin",
       "Killed bacteria",
@@ -9788,10 +9788,10 @@
       "Plasma derivatives"
     ],
     "answer": 0,
-    "explanation": "Bacterial toxin. The pathogenic manifestations of diphtheria are caused by an extracellular exotoxin secreted by Corynebacterium diphtheriae, and the diphtheria vaccine is an inactivated toxoid."
+    "explanation": "The diphtheria vaccine component is a toxoid—an inactivated bacterial exotoxin produced by Corynebacterium diphtheriae that induces protective antibodies against the toxin."
   },
   {
-    "question": "26. Budgeting is under in which part of management process?",
+    "question": "Budgeting is under in which part of management process?",
     "choices": [
       "Directing",
       "Controlling",
@@ -9799,10 +9799,10 @@
       "Planning"
     ],
     "answer": 3,
-    "explanation": "Planning. Allocation of financial resources and projection of costs (budgeting) is an integral component of strategic and operational planning."
+    "explanation": "Budgeting involves allocating resources and forecasting future expenditures to fulfill organizational objectives, placing it firmly within the Planning function of management."
   },
   {
-    "question": "27. Time table showing planned work days and shifts of nursing personnel is:",
+    "question": "Time table showing planned work days and shifts of nursing personnel is:",
     "choices": [
       "Staffing",
       "Schedule",
@@ -9810,10 +9810,10 @@
       "Planning"
     ],
     "answer": 1,
-    "explanation": "Schedule. A work schedule is the actual roster or timetable reflecting duty shifts and days off assigned to personnel."
+    "explanation": "A schedule is the actual written record or timetable displaying allocated duty hours, work shifts, and days off for nursing staff members."
   },
   {
-    "question": "28. A force within an individual that influences the strength of behavior?",
+    "question": "A force within an individual that influences the strength of behavior?",
     "choices": [
       "Motivation",
       "Envy",
@@ -9821,10 +9821,10 @@
       "Self-esteem"
     ],
     "answer": 0,
-    "explanation": "Motivation. Motivation represents the internal drive or psychological energy that directs, energizes, and sustains human behavior."
+    "explanation": "Motivation is defined in administrative and psychological terms as an internal force or drive that energizes, directs, and sustains purposeful human behavior."
   },
   {
-    "question": "29. “To be the leading hospital in the Philippines” is best illustrate in:",
+    "question": "“To be the leading hospital in the Philippines” is best illustrate in:",
     "choices": [
       "Mission",
       "Philosophy",
@@ -9832,10 +9832,10 @@
       "Objective"
     ],
     "answer": 2,
-    "explanation": "Vision. A vision statement expresses the aspirational, long-term future state or overarching goal of an organization."
+    "explanation": "A vision statement outlines an organization's long-term aspirations, desired future position, and ultimate institutional goals."
   },
   {
-    "question": "30. It is the professionally desired norms against which a staff performance will be compared?",
+    "question": "It is the professionally desired norms against which a staff performance will be compared?",
     "choices": [
       "Job descriptions",
       "Survey",
@@ -9843,10 +9843,10 @@
       "Standards"
     ],
     "answer": 3,
-    "explanation": "Standards. Standards serve as established benchmark criteria against which clinical competency and quality of nursing performance are evaluated."
+    "explanation": "Standards represent authoritative, baseline rules and benchmarks established to evaluate the quality and clinical competence of professional practice."
   },
   {
-    "question": "31. Reprimanding a staff nurse for work that is done incorrectly is an example of what type of reinforcement?",
+    "question": "Reprimanding a staff nurse for work that is done incorrectly is an example of what type of reinforcement?",
     "choices": [
       "Feedback",
       "Positive reinforcement",
@@ -9854,10 +9854,10 @@
       "Negative reinforcement"
     ],
     "answer": 3,
-    "explanation": "Negative reinforcement. In behavioral management contexts, applying an undesirable response or disciplinary correction (reprimand) serves as an aversive consequence or punishment aimed at discouraging undesired behaviors."
+    "explanation": "Negative reinforcement/punishment in administrative theory involves applying an unfavorable or uncomfortable condition (such as a reprimand) to suppress or alter undesirable behavior."
   },
   {
-    "question": "32. Questions that are answerable only by choosing an option from a set of given alternatives are known as?",
+    "question": "Questions that are answerable only by choosing an option from a set of given alternatives are known as?",
     "choices": [
       "Survey",
       "Close ended",
@@ -9865,10 +9865,10 @@
       "Demographic"
     ],
     "answer": 1,
-    "explanation": "Close ended. Closed-ended items restrict respondent choices to predefined, structured alternatives."
+    "explanation": "Closed-ended questions structure responses by offering predetermined options, enabling efficient quantitative data collection and standardized analysis."
   },
   {
-    "question": "33. A researcher that makes a generalization based on observations of an individuals behavior is said to be which type of reasoning:",
+    "question": "A researcher that makes a generalization based on observations of an individuals behavior is said to be which type of reasoning:",
     "choices": [
       "Inductive",
       "Logical",
@@ -9876,10 +9876,10 @@
       "Deductive"
     ],
     "answer": 0,
-    "explanation": "Inductive. Inductive reasoning involves moving from specific individual observations to broader general statements or theories."
+    "explanation": "Inductive reasoning builds broad generalizations or general theories from specific, individual observations."
   },
   {
-    "question": "34. The balance of a research’s benefit vs. its risks to the subject is:",
+    "question": "The balance of a research’s benefit vs. its risks to the subject is:",
     "choices": [
       "Analysis",
       "Risk-benefit ratio",
@@ -9887,10 +9887,10 @@
       "Maximum risk"
     ],
     "answer": 1,
-    "explanation": "Risk-benefit ratio. The risk-benefit ratio evaluates potential psychological or physical harms against potential benefits to human subjects in research ethics."
+    "explanation": "The risk-benefit ratio evaluates potential harm or discomfort against prospective societal or clinical gains to ensure ethical research compliance."
   },
   {
-    "question": "35. An individual/object that belongs to a general population is a/an:",
+    "question": "An individual/object that belongs to a general population is a/an:",
     "choices": [
       "Element",
       "Subject",
@@ -9898,10 +9898,10 @@
       "Author"
     ],
     "answer": 0,
-    "explanation": "Element. In research sampling terminology, an element is the basic single entity or unit of a population being sampled."
+    "explanation": "In research methodology, an element is the single discrete unit or member comprising a target population under study."
   },
   {
-    "question": "36. An illustration that shows how the members of an organization are connected:",
+    "question": "An illustration that shows how the members of an organization are connected:",
     "choices": [
       "Flowchart",
       "Bar graph",
@@ -9909,10 +9909,10 @@
       "Line graph"
     ],
     "answer": 2,
-    "explanation": "Organizational chart. An organizational chart visually presents relationships, lines of authority, and communication paths among personnel."
+    "explanation": "An organizational chart visually depicts hierarchy, administrative reporting channels, authority pathways, and structural interrelationships within an institution."
   },
   {
-    "question": "37. The first college of nursing that was established in the Philippines is:",
+    "question": "The first college of nursing that was established in the Philippines is:",
     "choices": [
       "Fatima University",
       "Far Eastern University",
@@ -9920,10 +9920,10 @@
       "University of Sto. Tomas"
     ],
     "answer": 3,
-    "explanation": "University of Sto. Tomas. The University of Santo Tomas College of Nursing was established in 1946 as the first college of nursing in the Philippines."
+    "explanation": "The University of Santo Tomas College of Nursing was established in 1946, making it historically recognized as the first college of nursing in the Philippines."
   },
   {
-    "question": "38. Florence nightingale is born on:",
+    "question": "Florence nightingale is born on:",
     "choices": [
       "France",
       "Britain",
@@ -9931,10 +9931,10 @@
       "Italy"
     ],
     "answer": 3,
-    "explanation": "Italy. Florence Nightingale was born in Florence, Italy, on May 12, 1820, while her British parents were traveling."
+    "explanation": "Florence Nightingale was born on May 12, 1820, in Florence, Italy, after which she was named."
   },
   {
-    "question": "39. Objective data is also called:",
+    "question": "Objective data is also called:",
     "choices": [
       "Covert",
       "Overt",
@@ -9942,10 +9942,10 @@
       "Evaluation"
     ],
     "answer": 1,
-    "explanation": "Overt. Objective data consists of observable, measurable signs (overt manifestations) detectable by an examiner."
+    "explanation": "Objective data consists of observable, measurable clinical findings (overt cues) discernible by clinicians through direct physical assessment or testing."
   },
   {
-    "question": "40. An example of subjective data is:",
+    "question": "An example of subjective data is:",
     "choices": [
       "Size of wounds",
       "VS",
@@ -9953,10 +9953,10 @@
       "The statement of patient “My hand is painful”"
     ],
     "answer": 3,
-    "explanation": "The statement of patient “My hand is painful”. Subjective data consists of client self-reports, perceptions, and symptoms that cannot be directly measured or verified independently."
+    "explanation": "Subjective data consists of unobservable perceptions, feelings, or symptoms reported directly by the patient (covert cues), such as verbal statements describing pain."
   },
   {
-    "question": "41. What is the best position in palpating the breast?",
+    "question": "What is the best position in palpating the breast?",
     "choices": [
       "Trendelenburg",
       "Side lying",
@@ -9964,10 +9964,10 @@
       "Lithotomy"
     ],
     "answer": 2,
-    "explanation": "Supine. Positioning the patient supine flattens breast tissue evenly over the chest wall, facilitating effective palpation."
+    "explanation": "The supine position flattens breast tissue evenly across the chest wall, facilitating thorough and accurate palpation during physical assessment."
   },
   {
-    "question": "42. When is the best time in performing breast self examination?",
+    "question": "When is the best time in performing breast self examination?",
     "choices": [
       "7 days after menstrual period",
       "7 days before menstrual period",
@@ -9975,10 +9975,10 @@
       "5 days before menstrual period"
     ],
     "answer": 0,
-    "explanation": "7 days after menstrual period. Performing breast self-examination approximately 7 to 10 days after the onset of menses ensures minimal hormonal engorgement, tenderness, or nodular swelling."
+    "explanation": "Performing Breast Self-Examination (BSE) 7 to 10 days after the start of menses ensures that hormonal influences, breast tenderness, and physiological nodularity are at their lowest levels."
   },
   {
-    "question": "43. Which of the following should be given the highest priority before performing physical examination to a patient?",
+    "question": "Which of the following should be given the highest priority before performing physical examination to a patient?",
     "choices": [
       "Preparation of the room",
       "Preparation of the patient",
@@ -9986,10 +9986,10 @@
       "Preparation of environment"
     ],
     "answer": 1,
-    "explanation": "Preparation of the patient. Ensuring physical comfort, emotional readiness, explanation of procedures, and proper position of the patient takes precedence before executing an assessment."
+    "explanation": "Preparing the patient—including explaining the procedure, ensuring comfort, emptying the bladder, and establishing trust—takes absolute priority before initiating physical examination."
   },
   {
-    "question": "44. It is a flip over card usually kept in portable file at nursing station.",
+    "question": "It is a flip over card usually kept in portable file at nursing station.",
     "choices": [
       "Nursing care plan",
       "Medicine and treatment record",
@@ -9997,10 +9997,10 @@
       "TPR sheet"
     ],
     "answer": 2,
-    "explanation": "Kardex. A Kardex is a quick-reference desktop file containing essential patient profiles, orders, and nursing directives."
+    "explanation": "The Kardex is a concise, accessible desktop filing tool containing key patient information, current medical orders, and care plans for rapid nursing clinical reference."
   },
   {
-    "question": "45. Jose has undergone thoracentesis. The nurse in charge is aware that the best position for Jose is:",
+    "question": "Jose has undergone thoracentesis. The nurse in charge is aware that the best position for Jose is:",
     "choices": [
       "Semi fowlers",
       "Low fowlers",
@@ -10008,10 +10008,10 @@
       "Side lying, affected side"
     ],
     "answer": 2,
-    "explanation": "Side lying, unaffected side. Post-procedure positioning on the unaffected side for 1 hour promotes lung expansion on the non-punctured side and seals the puncture site."
+    "explanation": "Positioning the client on the unaffected side following thoracentesis promotes optimal lung expansion of the unaffected side while allowing the puncture site to seal without leaking."
   },
   {
-    "question": "46. The degree of patients abdominal distension may be determined by:",
+    "question": "The degree of patients abdominal distension may be determined by:",
     "choices": [
       "Auscultation",
       "Palpation",
@@ -10019,10 +10019,10 @@
       "Percussion"
     ],
     "answer": 3,
-    "explanation": "Percussion. Percussion helps differentiate whether abdominal enlargement is due to fluid (dullness) or gas/air accumulation (tympanites)."
+    "explanation": "Percussion helps differentiate abdominal distension caused by fluid (dullness) from distension caused by trapped intestinal gas (tympany)."
   },
   {
-    "question": "47. A male client is addicted with hallucinogen. Which physiologic effect should the nurse expect?",
+    "question": "A male client is addicted with hallucinogen. Which physiologic effect should the nurse expect?",
     "choices": [
       "Bradyprea",
       "Bradycardia",
@@ -10030,10 +10030,10 @@
       "Dilated pupils"
     ],
     "answer": 3,
-    "explanation": "Dilated pupils. Hallucinogen intoxication stimulates sympathetic autonomic pathways, leading to pupillary dilation (mydriasis), hypertension, and tachycardia."
+    "explanation": "Hallucinogens stimulate the sympathetic nervous system, leading to pupillary dilation (mydriasis), tachycardia, elevated blood pressure, and tremors."
   },
   {
-    "question": "48. Tristan a 4 year old boy has suffered from full thickness burns of the face, chest and neck. What will be the priority nursing diagnosis?",
+    "question": "Tristan a 4 year old boy has suffered from full thickness burns of the face, chest and neck. What will be the priority nursing diagnosis?",
     "choices": [
       "Ineffective airway clearance related to edema",
       "Impaired mobility related to pain",
@@ -10041,10 +10041,10 @@
       "Risk for infection related to epidermal disruption"
     ],
     "answer": 0,
-    "explanation": "Ineffective airway clearance related to edema. Burns involving the face, neck, and chest carry severe risks of inhalation injury and rapid mucosal edema leading to airway obstruction."
+    "explanation": "Full-thickness burns involving the face, neck, and chest pose an immediate threat of respiratory tract edema and airway obstruction, making airway maintenance the top priority."
   },
   {
-    "question": "49. In assessing a client’s incision 1 day after the surgery, Nurse Betty expect to see which of the following as signs of a local inflammatory response?",
+    "question": "In assessing a client’s incision 1 day after the surgery, Nurse Betty expect to see which of the following as signs of a local inflammatory response?",
     "choices": [
       "Greenish discharge",
       "Brown exudates at incision edges",
@@ -10052,10 +10052,10 @@
       "Redness and warmth"
     ],
     "answer": 3,
-    "explanation": "Redness and warmth. Mild erythema (redness) and localized warmth represent normal vasodilation and early inflammatory responses during initial surgical wound healing."
+    "explanation": "Redness (rubor) and warmth (calor) are classic local physiological signs of early normal inflammatory healing around a surgical wound."
   },
   {
-    "question": "50. Nurse Ronald is aware that the amiotic fluid in the third trimester weighs approximately:",
+    "question": "Nurse Ronald is aware that the amiotic fluid in the third trimester weighs approximately:",
     "choices": [
       "2 kilograms",
       "1 kilograms",
@@ -10063,10 +10063,10 @@
       "1.5 kilograms"
     ],
     "answer": 1,
-    "explanation": "1 kilograms. Late-term amniotic fluid volume ranges around 800 to 1000 mL, which weighs approximately 1 kilogram."
+    "explanation": "Amniotic fluid volume reaches its peak during the late third trimester at around 800–1000 mL, which weighs approximately 1 kilogram."
   },
   {
-    "question": "51. After delivery of a baby girl. Nurse Gina examines the umbilical cord and expects to find a cord to:",
+    "question": "After delivery of a baby girl. Nurse Gina examines the umbilical cord and expects to find a cord to:",
     "choices": [
       "Two arteries and two veins",
       "One artery and one vein",
@@ -10074,10 +10074,10 @@
       "One artery and two veins"
     ],
     "answer": 2,
-    "explanation": "Two arteries and one vein. A normal umbilical cord contains three blood vessels: two umbilical arteries carrying deoxygenated blood away from the fetus and one umbilical vein carrying oxygenated blood."
+    "explanation": "A normal human umbilical cord contains three blood vessels: two umbilical arteries carrying deoxygenated blood and one umbilical vein carrying oxygenated blood."
   },
   {
-    "question": "52. Myrna a pregnant client reports that her last menstrual cycle is July 11, her expected date of birth is",
+    "question": "Myrna a pregnant client reports that her last menstrual cycle is July 11, her expected date of birth is",
     "choices": [
       "November 4",
       "November 11",
@@ -10085,10 +10085,10 @@
       "April 18"
     ],
     "answer": 3,
-    "explanation": "April 18. According to Naegele's rule, subtract 3 months from July (April), add 7 days to 11 (18), yielding April 18."
+    "explanation": "Using Naegele's rule (Subtract 3 months, add 7 days to the first day of the LMP): July 11 minus 3 months = April 11, plus 7 days = April 18."
   },
   {
-    "question": "53. Which of the following is not a good source of iron?",
+    "question": "Which of the following is not a good source of iron?",
     "choices": [
       "Butter",
       "Pechay",
@@ -10096,10 +10096,10 @@
       "Beef"
     ],
     "answer": 0,
-    "explanation": "Butter. Pure fats and dairy lipids like butter contain practically no iron compared to organ meats, leafy green vegetables, and fortified grains."
+    "explanation": "Butter consists almost entirely of dairy fat and contains negligible amounts of iron, unlike red meat, leafy green vegetables (pechay), and fortified grains."
   },
   {
-    "question": "54. Maureen is admitted with a diagnosis of ectopic pregnancy. Which of the following would you anticipate?",
+    "question": "Maureen is admitted with a diagnosis of ectopic pregnancy. Which of the following would you anticipate?",
     "choices": [
       "NPO",
       "Bed rest",
@@ -10107,10 +10107,10 @@
       "Enema"
     ],
     "answer": 2,
-    "explanation": "Immediate surgery. Ectopic pregnancy carries high risk of tubal rupture and life-threatening intra-abdominal hemorrhage, requiring emergency surgical intervention."
+    "explanation": "An ectopic pregnancy poses a life-threatening risk of fallopian tube rupture and internal hemorrhage, making immediate surgical intervention the definitive priority."
   },
   {
-    "question": "55. Gina a postpartum client is diagnosed with endometritis. Which position would you expect to place her based on this diagnosis?",
+    "question": "Gina a postpartum client is diagnosed with endometritis. Which position would you expect to place her based on this diagnosis?",
     "choices": [
       "Supine",
       "Left side lying",
@@ -10118,10 +10118,10 @@
       "Semi-fowlers"
     ],
     "answer": 3,
-    "explanation": "Semi-fowlers. Semi-Fowler's position promotes gravity drainage of lochia and infected uterine fluids, preventing pooling and pelvic abscess formation."
+    "explanation": "Semi-Fowler's position utilizes gravity to facilitate lochial drainage and prevent uterine infection from spreading upward into the peritoneal cavity."
   },
   {
-    "question": "56. Nurse Hazel knows that Myrna understands her condition well when she remarks that urinary frequency is caused by:",
+    "question": "Nurse Hazel knows that Myrna understands her condition well when she remarks that urinary frequency is caused by:",
     "choices": [
       "Pressure caused by the ascending uterus",
       "Water intake of 3L a day",
@@ -10129,10 +10129,10 @@
       "Increase intake of fruits and vegetables"
     ],
     "answer": 0,
-    "explanation": "Pressure caused by the ascending uterus. During the first trimester, the expanding uterus presses directly against the urinary bladder within the pelvic cavity, increasing urinary frequency."
+    "explanation": "During early pregnancy, the expanding uterus exerts direct mechanical pressure on the adjacent urinary bladder before it ascends into the abdominal cavity."
   },
   {
-    "question": "57. How many ml of blood is loss during the first 24 hours post delivery of Myrna?",
+    "question": "How many ml of blood is loss during the first 24 hours post delivery of Myrna?",
     "choices": [
       "100",
       "500",
@@ -10140,10 +10140,10 @@
       "400"
     ],
     "answer": 1,
-    "explanation": "500. Expected normal blood loss following an uncomplicated vaginal delivery is up to 500 mL."
+    "explanation": "Normal physiological blood loss following an uncomplicated vaginal delivery is estimated at up to 500 mL."
   },
   {
-    "question": "58. Which of the following hormones stimulates the secretion of milk?",
+    "question": "Which of the following hormones stimulates the secretion of milk?",
     "choices": [
       "Progesterone",
       "Prolactin",
@@ -10151,10 +10151,10 @@
       "Estrogen"
     ],
     "answer": 3,
-    "explanation": "Estrogen. Estrogen stimulates breast ductal growth and initial glandular development during pregnancy, preparing the tissue for lactation."
+    "explanation": "While Prolactin stimulates milk synthesis/production and Oxytocin triggers milk ejection (let-down), elevated Estrogen levels prime mammary tissue development for lactogenesis."
   },
   {
-    "question": "59. Nurse Carla is aware that Myla’s second stage of labor is beginning when the following assessment is noted:",
+    "question": "Nurse Carla is aware that Myla’s second stage of labor is beginning when the following assessment is noted:",
     "choices": [
       "Bay of water is broken",
       "Contractions are regular",
@@ -10162,10 +10162,10 @@
       "Presence of bloody show"
     ],
     "answer": 2,
-    "explanation": "Cervix is completely dilated. The second stage of labor starts with complete cervical dilation (10 cm) and ends with the birth of the infant."
+    "explanation": "The second stage of labor begins with complete cervical dilation (10 cm) and ends with the birth of the infant."
   },
   {
-    "question": "60. The leaking fluid is tested with nitrazine paper. Nurse Kelly confirms that the client’s membrane have ruptures when the paper turns into a:",
+    "question": "The leaking fluid is tested with nitrazine paper. Nurse Kelly confirms that the client’s membrane have ruptures when the paper turns into a:",
     "choices": [
       "Pink",
       "Violet",
@@ -10173,10 +10173,10 @@
       "Blue"
     ],
     "answer": 3,
-    "explanation": "Blue. Amniotic fluid is alkaline (pH 7.0–7.5) and turns neutral-yellow nitrazine paper to a dark blue color."
+    "explanation": "Amniotic fluid is alkaline (pH 7.0–7.5). Nitrazine paper turns deep blue upon contact with alkaline amniotic fluid, confirming membrane rupture."
   },
   {
-    "question": "61. After amniotomy, the priority nursing action is:",
+    "question": "After amniotomy, the priority nursing action is:",
     "choices": [
       "Document the color and consistency of amniotic fluid",
       "Listen the fetal heart tone",
@@ -10184,10 +10184,10 @@
       "Let the mother rest"
     ],
     "answer": 1,
-    "explanation": "Listen the fetal heart tone. Artificial rupture of membranes carries an immediate risk of umbilical cord prolapse or compression, making continuous or immediate fetal heart rate evaluation the highest priority."
+    "explanation": "Artificial rupture of membranes carries a significant risk of umbilical cord prolapse. Assessing fetal heart rate immediately after the procedure detects cord compression."
   },
   {
-    "question": "62. Which is the most frequent reason for postpartum hemorrhage?",
+    "question": "Which is the most frequent reason for postpartum hemorrhage?",
     "choices": [
       "Perineal lacerations",
       "Frequent internal examination (IE)",
@@ -10195,10 +10195,10 @@
       "Uterine atomy"
     ],
     "answer": 3,
-    "explanation": "Uterine atomy. Uterine atony (failure of uterine myometrium to contract down on blood vessels) accounts for approximately 70–80% of postpartum hemorrhage cases."
+    "explanation": "Uterine atony—failure of the myometrium to contract effectively to compress severed uterine blood vessels—accounts for over 80% of postpartum hemorrhages."
   },
   {
-    "question": "63. On 2nd postpartum day, which height would you expect to find the fundus in a woman who has had a caesarian birth?",
+    "question": "On 2nd postpartum day, which height would you expect to find the fundus in a woman who has had a caesarian birth?",
     "choices": [
       "1 finger above umbilicus",
       "2 fingers above umbilicus",
@@ -10206,10 +10206,10 @@
       "1 finger below umbilicus"
     ],
     "answer": 2,
-    "explanation": "2 fingers below umbilicus. Postpartum fundal involution progresses downward at a rate of approximately 1 cm (or 1 fingerbreadth) per day below the umbilicus."
+    "explanation": "The uterine fundus involutes at a rate of approximately 1 cm (fingerbreadth) per day. By postpartum day 2, the fundus should be located roughly 2 fingerbreadths below the umbilicus."
   },
   {
-    "question": "64. Which of the following criteria allows Nurse Kris to perform home deliveries?",
+    "question": "Which of the following criteria allows Nurse Kris to perform home deliveries?",
     "choices": [
       "Normal findings during assessment",
       "Previous CS",
@@ -10217,10 +10217,10 @@
       "Hypertensive history"
     ],
     "answer": 0,
-    "explanation": "Normal findings during assessment. Home birth management by public health nurses requires an uncomplicated, low-risk prenatal course with completely normal maternal and fetal assessments."
+    "explanation": "Home delivery by public health nurses is reserved strictly for low-risk, uncomplicated pregnancies presenting with completely normal assessment findings."
   },
   {
-    "question": "65. Nurse Carla is aware that one of the following vaccines is done by intramuscular (IM) injection?",
+    "question": "Nurse Carla is aware that one of the following vaccines is done by intramuscular (IM) injection?",
     "choices": [
       "Measles",
       "OPV",
@@ -10228,10 +10228,10 @@
       "Tetanus toxoid"
     ],
     "answer": 3,
-    "explanation": "Tetanus toxoid. Tetanus toxoid is administered deep into the muscle tissue (intramuscular), whereas BCG is intradermal, Measles is subcutaneous, and OPV is oral."
+    "explanation": "Tetanus toxoid is administered via deep intramuscular injection. BCG is intradermal, OPV is oral, and Measles is subcutaneous."
   },
   {
-    "question": "66. Asin law is on which legal basis:",
+    "question": "Asin law is on which legal basis:",
     "choices": [
       "RA 8860",
       "RA 2777",
@@ -10239,10 +10239,10 @@
       "RR 6610"
     ],
     "answer": 2,
-    "explanation": "RI 8172. Republic Act 8172 (An Act for Salt Iodization Nationally; ASIN Law) requires salt iodization to prevent iodine deficiency disorders."
+    "explanation": "Republic Act 8172 (RA 8172), commonly referred to as the ASIN (An Act for Salt Iodization Nation-wide) Law, mandates universal salt iodization in the Philippines."
   },
   {
-    "question": "67. Nurse John is aware that the herbal medicine appropriate for urolithiasis is:",
+    "question": "Nurse John is aware that the herbal medicine appropriate for urolithiasis is:",
     "choices": [
       "Akapulco",
       "Sambong",
@@ -10250,10 +10250,10 @@
       "Bayabas"
     ],
     "answer": 1,
-    "explanation": "Sambong. Sambong (Blumea balsamifera) is an officially approved Philippine herbal medicine recognized for its diuretic properties and efficacy in treating kidney stones (urolithiasis)."
+    "explanation": "Sambong (Blumea balsamifera) is officially recommended by the Philippine Department of Health as a diuretic and anti-urolithiasis agent to facilitate excretion of urinary stones."
   },
   {
-    "question": "68. Community/Public health bag is defined as:",
+    "question": "Community/Public health bag is defined as:",
     "choices": [
       "An essential and indispensable equipment of the community health nurse during home visit",
       "It contains drugs and equipment used by the community health nurse",
@@ -10261,10 +10261,10 @@
       "It is a tool used by the community health nurse in rendering effective procedures during home visit"
     ],
     "answer": 0,
-    "explanation": "An essential and indispensable equipment of the community health nurse during home visit. The public health bag is an essential equipment carrying basic supplies needed to perform nursing care during home visits."
+    "explanation": "The public health bag is an essential and indispensable piece of equipment carried during home visits, containing necessary tools to execute nursing care efficiency."
   },
   {
-    "question": "69. TT4 provides how many percentage of protection against tetanus?",
+    "question": "TT4 provides how many percentage of protection against tetanus?",
     "choices": [
       "70",
       "80",
@@ -10272,10 +10272,10 @@
       "99"
     ],
     "answer": 3,
-    "explanation": "99. A sequence of 4 Tetanus Toxoid doses provides high-level maternal immunity of approximately 99% against tetanus infection."
+    "explanation": "Under the Expanded Program on Immunization schedule, receiving TT4 provides 99% immunity against maternal and neonatal tetanus for at least 10 years."
   },
   {
-    "question": "70. Third postpartum visit must be done by public health nurse:",
+    "question": "Third postpartum visit must be done by public health nurse:",
     "choices": [
       "Within 24 hours after delivery",
       "After 2-4 weeks",
@@ -10283,10 +10283,10 @@
       "After 2 months"
     ],
     "answer": 1,
-    "explanation": "After 2-4 weeks. Standard community maternal follow-up schedules place intermediate health checks around 2 to 4 weeks postpartum following initial immediate postnatal assessments."
+    "explanation": "Standard maternal health protocols schedule the third routine postpartum health visit between 2 to 4 weeks following delivery to assess involution and infant care."
   },
   {
-    "question": "71. Nurse Candy is aware that the family planning method that may give 98% protection to another pregnancy to women",
+    "question": "Nurse Candy is aware that the family planning method that may give 98% protection to another pregnancy to women",
     "choices": [
       "Pills",
       "Tubal ligation",
@@ -10294,10 +10294,10 @@
       "IUD"
     ],
     "answer": 2,
-    "explanation": "Lactational Amenorrhea method (LAM). When practiced strictly during the first 6 months postpartum under amenorrheic conditions and exclusive breastfeeding, LAM is up to 98% effective."
+    "explanation": "When practiced correctly (exclusive breastfeeding, amenorrheic, infant under 6 months), Lactational Amenorrhea Method (LAM) provides up to 98% contraceptive effectiveness."
   },
   {
-    "question": "72. Which of the following is not a part of IMCI case management process",
+    "question": "Which of the following is not a part of IMCI case management process",
     "choices": [
       "Counsel the mother",
       "Identify the illness",
@@ -10305,10 +10305,10 @@
       "Treat the child"
     ],
     "answer": 1,
-    "explanation": "Identify the illness. IMCI focuses on symptom-based classification and color-coded triage rather than traditional clinical differential diagnosis or naming specific medical illnesses."
+    "explanation": "The standard IMCI case management steps are Assess, Classify (rather than traditional medical diagnosis/identifying illness), Treat, Counsel, and Follow-up."
   },
   {
-    "question": "73. If a young child has pneumonia when should the mother bring him back for follow up?",
+    "question": "If a young child has pneumonia when should the mother bring him back for follow up?",
     "choices": [
       "After 2 days",
       "In the afternoon",
@@ -10316,10 +10316,10 @@
       "After 5 days"
     ],
     "answer": 0,
-    "explanation": "After 2 days. Under IMCI guidelines, children managed at home for pneumonia must be reassessed after 2 days to evaluate treatment efficacy."
+    "explanation": "Under IMCI protocols, children classified with Pneumonia who are prescribed oral antibiotics must return for a mandatory follow-up reassessment after 2 days."
   },
   {
-    "question": "74. It is the certification recognition program that develop and promotes standard for health facilities:",
+    "question": "It is the certification recognition program that develop and promotes standard for health facilities:",
     "choices": [
       "Formula",
       "Tutok gamutan",
@@ -10327,10 +10327,10 @@
       "Sentrong sigla movement"
     ],
     "answer": 3,
-    "explanation": "Sentrong sigla movement. Sentrong Sigla is a Philippine DOH certification and quality improvement initiative designed to standardize health care facility operations and services."
+    "explanation": "Sentrong Sigla Movement is a joint certification program by the Philippine Department of Health that sets quality standards for primary health facilities."
   },
   {
-    "question": "75. Baby Marie was born May 23, 1984. Nurse John will expect finger thumb opposition on:",
+    "question": "Baby Marie was born May 23, 1984. Nurse John will expect finger thumb opposition on:",
     "choices": [
       "April 1985",
       "February 1985",
@@ -10338,10 +10338,10 @@
       "June 1985"
     ],
     "answer": 1,
-    "explanation": "February 1985. Pincer grasp/finger-thumb opposition develops around 9 months of age (May 1984 + 9 months = February 1985)."
+    "explanation": "Neat pincer grasp (thumb-finger opposition) develops around 9 months of age. Born in late May 1984, 9 months brings the milestone to February 1985."
   },
   {
-    "question": "76. Baby Reese is a 12 month old child. Nurse Oliver would anticipate how many teeth?",
+    "question": "Baby Reese is a 12 month old child. Nurse Oliver would anticipate how many teeth?",
     "choices": [
       "9",
       "7",
@@ -10349,10 +10349,10 @@
       "6"
     ],
     "answer": 3,
-    "explanation": "6. A general clinical rule of thumb for primary dentition estimation is subtracting 6 from the child's age in months (12 - 6 = 6 teeth)."
+    "explanation": "A general rule of thumb for primary dentition is Age in months minus 6. For a 12-month-old child: 12 - 6 = 6 primary teeth."
   },
   {
-    "question": "77. Which of the following is the primary antidote for Tylenol poisoning?",
+    "question": "Which of the following is the primary antidote for Tylenol poisoning?",
     "choices": [
       "Narcan",
       "Digoxin",
@@ -10360,10 +10360,10 @@
       "Flumazenil"
     ],
     "answer": 2,
-    "explanation": "Acetylcysteine. Acetylcysteine (Mucomyst) restores hepatic glutathione levels to prevent acetaminophen-induced hepatotoxicity."
+    "explanation": "Acetylcysteine (Mucomyst) restores hepatic glutathione stores to prevent hepatotoxicity following acetaminophen (Tylenol) overdose."
   },
   {
-    "question": "78. A male child has an intelligence quotient of approximately 40. Which kind of environment and interdisciplinary program most likely to benefit this child would be best described as:",
+    "question": "A male child has an intelligence quotient of approximately 40. Which kind of environment and interdisciplinary program most likely to benefit this child would be best described as:",
     "choices": [
       "Habit training",
       "Sheltered workshop",
@@ -10371,10 +10371,10 @@
       "Educational"
     ],
     "answer": 0,
-    "explanation": "Habit training. An IQ score of 40 indicates moderate intellectual disability, where developmental programs focus primarily on basic habit training and self-care daily living activities."
+    "explanation": "An IQ of 40 represents moderate intellectual disability. Focus centers on trainable skills, basic self-care, and habit training."
   },
   {
-    "question": "79. Nurse Judy is aware that following condition would reflect presence of congenital G.I anomaly?",
+    "question": "Nurse Judy is aware that following condition would reflect presence of congenital G.I anomaly?",
     "choices": [
       "Cord prolapse",
       "Polyhydramios",
@@ -10382,10 +10382,10 @@
       "Oligohydramios"
     ],
     "answer": 1,
-    "explanation": "Polyhydramios. Excess amniotic fluid accumulation frequently correlates with upper gastrointestinal tract obstructions (e.g., esophageal or duodenal atresia) that prevent normal fetal swallowing of fluid."
+    "explanation": "Excessive amniotic fluid accumulation (polyhydramnios) occurs when the fetus cannot swallow or absorb fluid, commonly indicating congenital upper GI tract obstructions like esophageal atresia."
   },
   {
-    "question": "80. Nurse Christine provides health teaching for the parents of a child diagnosed with celiac disease. Nurse Christine teaches the parents to include which of the following food items in the child’s diet:",
+    "question": "Nurse Christine provides health teaching for the parents of a child diagnosed with celiac disease. Nurse Christine teaches the parents to include which of the following food items in the child’s diet:",
     "choices": [
       "Rye toast",
       "Oatmeal",
@@ -10393,10 +10393,10 @@
       "Rice"
     ],
     "answer": 3,
-    "explanation": "Rice. Celiac disease requires a strict gluten-free diet; rice and corn are gluten-free alternatives to grains containing gluten like wheat, rye, and barley."
+    "explanation": "Celiac disease requires a strict gluten-free diet, avoiding Wheat, Rye, Barley, and Oats (BROW). Rice and corn are safe gluten-free grains."
   },
   {
-    "question": "81. Nurse Randy is planning to administer oral medication to a 3 year old child. Nurse Randy is aware that the best way to proceed is by:",
+    "question": "Nurse Randy is planning to administer oral medication to a 3 year old child. Nurse Randy is aware that the best way to proceed is by:",
     "choices": [
       "“Would you like to drink your medicine?”",
       "“If you take your medicine now, I’ll give you lollipop”",
@@ -10404,10 +10404,10 @@
       "“Here’s your medicine. Would you like a mango or orange juice?”"
     ],
     "answer": 3,
-    "explanation": "“Here’s your medicine. Would you like a mango or orange juice?”. Offering simple, controlled choices gives a toddler a sense of autonomy while maintaining the non-negotiable expectation that the medication must be taken."
+    "explanation": "Offering toddlers a choice between acceptable choices maintains cooperation and gives them control without offering an opportunity to refuse the medication."
   },
   {
-    "question": "82. At what age a child can brush her teeth without help?",
+    "question": "At what age a child can brush her teeth without help?",
     "choices": [
       "6 years",
       "7 years",
@@ -10415,10 +10415,10 @@
       "8 years"
     ],
     "answer": 0,
-    "explanation": "6 years. By age 6, children generally acquire sufficient fine motor coordination to brush their teeth effectively without direct physical assistance."
+    "explanation": "By age 6, fine motor control and hand-eye coordination have developed sufficiently for a child to brush their teeth unassisted."
   },
   {
-    "question": "83. Ribivarin (Virazole) is prescribed for a female hospitalized child with RSV. Nurse Judy prepare this medication via which route?",
+    "question": "Ribivarin (Virazole) is prescribed for a female hospitalized child with RSV. Nurse Judy prepare this medication via which route?",
     "choices": [
       "Intra venous",
       "Oral",
@@ -10426,10 +10426,10 @@
       "Subcutaneous"
     ],
     "answer": 2,
-    "explanation": "Oxygen tent. Ribavirin for respiratory syncytial virus (RSV) treatment is administered via aerosol inhalation using a small-particle aerosol generator connected to an oxygen tent, hood, or mask."
+    "explanation": "Ribavirin is an antiviral agent administered via inhalation using a small particle aerosol generator (SPAG) inside an oxygen tent or hood for severe RSV cases."
   },
   {
-    "question": "84. The present chairman of the Board of Nursing in the Philippines is:",
+    "question": "The present chairman of the Board of Nursing in the Philippines is:",
     "choices": [
       "Maria Joanna Cervantes",
       "Carmencita Abaquin",
@@ -10437,10 +10437,10 @@
       "Primitiva Paquic"
     ],
     "answer": 1,
-    "explanation": "Carmencita Abaquin. Carmencita Abaquin famously served as Chairperson of the Professional Regulatory Board of Nursing in key historical board exam cycles."
+    "explanation": "In board examination reference materials for this classic question set, Carmencita Abaquin is cited as Chairman of the Professional Regulatory Board of Nursing."
   },
   {
-    "question": "85. The obligation to maintain efficient ethical standards in the practice of nursing belong to this body:",
+    "question": "The obligation to maintain efficient ethical standards in the practice of nursing belong to this body:",
     "choices": [
       "BON",
       "ANSAP",
@@ -10448,10 +10448,10 @@
       "RN"
     ],
     "answer": 0,
-    "explanation": "BON. The Board of Nursing (BON) holds the statutory mandate to regulate ethical, professional, and practice standards for nurses."
+    "explanation": "The Board of Nursing (BON) holds administrative and legal regulatory authority to enforce ethical standards, professional conduct, and licensure codes."
   },
   {
-    "question": "86. A male nurse was found guilty of negligence. His license was revoked. Re-issuance of revoked certificates is after how many years?",
+    "question": "A male nurse was found guilty of negligence. His license was revoked. Re-issuance of revoked certificates is after how many years?",
     "choices": [
       "1 year",
       "2 years",
@@ -10459,10 +10459,10 @@
       "4 years"
     ],
     "answer": 3,
-    "explanation": "4 years. Under Republic Act 9173 (Philippine Nursing Act), a revoked certificate of registration may be considered for re-issuance after 4 years upon proper application and compliance with Board requirements."
+    "explanation": "Under Republic Act 9173 (Philippine Nursing Act of 2002), a revoked license may be considered for re-issuance after the expiration of 4 years upon proper application and compliance."
   },
   {
-    "question": "87. Which of the following information cannot be seen in the PRC identification card?",
+    "question": "Which of the following information cannot be seen in the PRC identification card?",
     "choices": [
       "Registration Date",
       "License Number",
@@ -10470,10 +10470,10 @@
       "Signature of PRC chairperson"
     ],
     "answer": 2,
-    "explanation": "Date of Application. Professional Regulatory Commission (PRC) IDs reflect official registration dates, license numbers, and authority signatures, but omit administrative dates of initial application."
+    "explanation": "A professional license card displays the registration number, registration date, expiration date, and official signatures, but does not state the original Date of Application."
   },
   {
-    "question": "88. Breastfeeding is being enforced by milk code or:",
+    "question": "Breastfeeding is being enforced by milk code or:",
     "choices": [
       "EO 51",
       "R.A. 7600",
@@ -10481,10 +10481,10 @@
       "P.D. 996"
     ],
     "answer": 0,
-    "explanation": "EO 51. Executive Order No. 51 is known as the Philippine Milk Code, regulating the marketing of breastmilk substitutes to protect breastfeeding."
+    "explanation": "Executive Order No. 51 (EO 51) is recognized as the National Code of Marketing of Breastmilk Substitutes and Related Products (Milk Code) in the Philippines."
   },
   {
-    "question": "89. Self governance, ability to choose or carry out decision without undue pressure or coercion from anyone:",
+    "question": "Self governance, ability to choose or carry out decision without undue pressure or coercion from anyone:",
     "choices": [
       "Veracity",
       "Autonomy",
@@ -10492,10 +10492,10 @@
       "Beneficence"
     ],
     "answer": 1,
-    "explanation": "Autonomy. Autonomy refers to the ethical principle of individual self-determination and independent decision-making."
+    "explanation": "Autonomy is the bioethical principle honoring an individual's right to self-determination, self-governance, and independent decision-making."
   },
   {
-    "question": "90. A male patient complained because his scheduled surgery was cancelled because of earthquake. The hospital personnel may be excused because of:",
+    "question": "A male patient complained because his scheduled surgery was cancelled because of earthquake. The hospital personnel may be excused because of:",
     "choices": [
       "Governance",
       "Respondent superior",
@@ -10503,10 +10503,10 @@
       "Res ipsa loquitor"
     ],
     "answer": 2,
-    "explanation": "Force majeure. Force majeure refers to unforeseeable, unavoidable natural disasters or acts of God (such as earthquakes) that excuse parties from immediate liability."
+    "explanation": "Force majeure refers to an irresistible force, act of God, or unavoidable natural calamity (like an earthquake) that legally exempts parties from liability."
   },
   {
-    "question": "91. Being on time, meeting deadlines and completing all scheduled duties is what virtue?",
+    "question": "Being on time, meeting deadlines and completing all scheduled duties is what virtue?",
     "choices": [
       "Fidelity",
       "Autonomy",
@@ -10514,10 +10514,10 @@
       "Confidentiality"
     ],
     "answer": 0,
-    "explanation": "Fidelity. Fidelity in ethical practice involves loyalty, faithfulness, keeping commitments, and fulfilling professional obligations."
+    "explanation": "Fidelity represents loyalty, faithfulness, and steadfast adherence to professional commitments, obligations, and duties."
   },
   {
-    "question": "92. This quality is being demonstrated by Nurse Ron who raises the side rails of a confused and disoriented patient?",
+    "question": "This quality is being demonstrated by Nurse Ron who raises the side rails of a confused and disoriented patient?",
     "choices": [
       "Responsibility",
       "Resourcefulness",
@@ -10525,10 +10525,10 @@
       "Prudence"
     ],
     "answer": 3,
-    "explanation": "Prudence. Prudence is the exercise of careful judgement, foresight, and precaution to prevent patient injury or harm."
+    "explanation": "Prudence is the exercise of careful judgment, caution, and foresight to prevent potential injury and ensure safety."
   },
   {
-    "question": "93. Which of the following is formal continuing education?",
+    "question": "Which of the following is formal continuing education?",
     "choices": [
       "Conference",
       "Enrollment in graduate school",
@@ -10536,10 +10536,10 @@
       "Seminar"
     ],
     "answer": 1,
-    "explanation": "Enrollment in graduate school. Academic enrollment in structured master's or doctoral degree programs constitutes formal post-licensure education."
+    "explanation": "Formal continuing education involves structured academic programs leading to degrees or advanced post-graduate academic credentials, such as enrolling in graduate school."
   },
   {
-    "question": "94. The BSN curriculum prepares the graduates to become?",
+    "question": "The BSN curriculum prepares the graduates to become?",
     "choices": [
       "Nurse generalist",
       "Nurse specialist",
@@ -10547,10 +10547,10 @@
       "Clinical instructor"
     ],
     "answer": 2,
-    "explanation": "Primary health nurse. Standard entry-level BSN curricula focus on preparing nurses capable of delivering comprehensive primary health care across various settings."
+    "explanation": "The BSN degree is structured to prepare graduates for direct practice across general primary healthcare settings before specializing."
   },
   {
-    "question": "95. Disposal of medical records in government hospital/institutions must be done in close coordination with what agency?",
+    "question": "Disposal of medical records in government hospital/institutions must be done in close coordination with what agency?",
     "choices": [
       "Department of Health",
       "Records Management Archives Office",
@@ -10558,10 +10558,10 @@
       "Bureau of Internal Revenue"
     ],
     "answer": 0,
-    "explanation": "Department of Health. Public healthcare institutions manage and dispose of official medical charts under regulations established by the Department of Health (DOH)."
+    "explanation": "Destruction or disposal of public health institution records strictly requires policy clearance and regulatory authorization governed by Department of Health directives."
   },
   {
-    "question": "96. Nurse Jolina must see to it that the written consent of mentally ill patients must be taken from:",
+    "question": "Nurse Jolina must see to it that the written consent of mentally ill patients must be taken from:",
     "choices": [
       "Nurse",
       "Priest",
@@ -10569,10 +10569,10 @@
       "Parents/legal guardians"
     ],
     "answer": 3,
-    "explanation": "Parents/legal guardians. Individuals whose mental illness impairs decision-making capacity require legally recognized surrogates, such as parents or legal guardians, to provide informed consent."
+    "explanation": "When a client is legally deemed incompetent due to severe mental illness, legal authority to give informed consent transfers to parents or appointed legal guardians."
   },
   {
-    "question": "97. When Nurse Clarence respects the client’s self-disclosure, this is a gauge for the nurses’",
+    "question": "When Nurse Clarence respects the client’s self-disclosure, this is a gauge for the nurses’",
     "choices": [
       "Respectfulness",
       "Loyalty",
@@ -10580,10 +10580,10 @@
       "Professionalism"
     ],
     "answer": 2,
-    "explanation": "Trustworthiness. Upholding confidentiality and handling sensitive disclosures respectfully builds interpersonal trust within the therapeutic nurse-patient relationship."
+    "explanation": "Maintaining confidentiality and showing respect when clients share intimate personal information reflects trustworthy clinical practice."
   },
   {
-    "question": "98. The Nurse is aware that the following tasks can be safely delegated by the nurse to a non-nurse health worker except:",
+    "question": "The Nurse is aware that the following tasks can be safely delegated by the nurse to a non-nurse health worker except:",
     "choices": [
       "Taking vital signs",
       "Change IV infusions",
@@ -10591,10 +10591,10 @@
       "Irrigation of NGT"
     ],
     "answer": 1,
-    "explanation": "Change IV infusions. Intravenous fluid administration requires sterile technique, pharmacological knowledge, and invasive line monitoring that cannot be delegated to unlicensed assistive personnel."
+    "explanation": "Intravenous therapy administration and changing IV solution containers require specialized licensed clinical assessment and cannot be delegated to non-nurse personnel."
   },
   {
-    "question": "99. During the evening round Nurse Tina saw Mr. Toralba meditating and afterwards started singing prayerful hymns. What would be the best response of Nurse Tina?",
+    "question": "During the evening round Nurse Tina saw Mr. Toralba meditating and afterwards started singing prayerful hymns. What would be the best response of Nurse Tina?",
     "choices": [
       "Call the attention of the client and encourage to sleep",
       "Report the incidence to head nurse",
@@ -10602,10 +10602,10 @@
       "Document the situation"
     ],
     "answer": 2,
-    "explanation": "Respect the client’s action. Respecting the client's spiritual beliefs and coping practices is an essential aspect of culturally competent nursing care, provided it does not harm or disrupt others."
+    "explanation": "Nursing care respects spiritual expression and religious practices, provided they do not endanger safety or disturb other patients."
   },
   {
-    "question": "100. In caring for a dying client, you should perform which of the following activities",
+    "question": "In caring for a dying client, you should perform which of the following activities",
     "choices": [
       "Do not resuscitate",
       "Assist client to perform ADL",
@@ -10613,7 +10613,7 @@
       "Assist client towards a peaceful death"
     ],
     "answer": 3,
-    "explanation": "Assist client towards a peaceful death. The primary focus of end-of-life palliative care is to maintain dignity, comfort, and assist the individual toward a peaceful death."
+    "explanation": "The primary goal of palliative end-of-life care is to promote dignity, pain relief, comfort, and assist the client toward a peaceful death."
   },
   {
     "question": "The Nurse is aware that the ability to enter into the life of another person and perceive his current feelings and their meaning is known:",
