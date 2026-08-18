@@ -16,7 +16,8 @@ export default defineConfig({
         analytics: resolve(__dirname, "analytics.html"),
         review: resolve(__dirname, "review.html"),
         profile: resolve(__dirname, "profile.html"),
-        leaderboard: resolve(__dirname, "leaderboard.html")
+        leaderboard: resolve(__dirname, "leaderboard.html"),
+        settings: resolve(__dirname, "settings.html")
       }
     }
   }

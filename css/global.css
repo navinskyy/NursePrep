@@ -160,7 +160,7 @@ input, select, textarea { font-family: inherit; }
   background: var(--bg-soft);
   border-right: 1px solid var(--border-soft);
   height: 100vh;
-  padding: 26px 18px;
+  padding: 24px 16px;
   position: fixed;
   z-index: 10;
   display: flex;
@@ -170,13 +170,13 @@ input, select, textarea { font-family: inherit; }
 .dash-sidebar .brand {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 19px;
   color: var(--text-hi);
-  padding: 0 10px;
-  margin-bottom: 34px;
+  padding: 0 12px;
+  margin-bottom: 24px;
 }
 
 .dash-sidebar .brand svg { flex-shrink: 0; }
@@ -184,7 +184,7 @@ input, select, textarea { font-family: inherit; }
 .dash-nav {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 8px;
 }
 
 .dash-nav a {
@@ -234,14 +234,73 @@ input, select, textarea { font-family: inherit; }
   position: relative;
 }
 
-.dash-nav-indicator {
+.dash-nav a.active::before {
+  content: "";
   position: absolute;
   left: 0;
+  top: 50%;
+  transform: translateY(-50%);
   width: 3px;
+  height: 22px;
   background: var(--pink-400);
   border-radius: 0 3px 3px 0;
-  transition: top 0.3s cubic-bezier(0.4, 0, 0.2, 1), height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 0 8px var(--pink-glow);
+}
+
+/* ============================================
+   Navigation groups (collapsible sections)
+   ============================================ */
+.nav-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-group-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 12px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-low);
+  border-radius: var(--radius-sm);
+  transition: color 0.2s ease;
+}
+
+.nav-group-header:hover {
+  color: var(--text-mid);
+}
+
+.nav-group-chevron {
+  flex-shrink: 0;
+  opacity: 0.7;
+  transition: transform 0.25s ease;
+}
+
+.nav-group.collapsed .nav-group-chevron {
+  transform: rotate(-90deg);
+}
+
+.nav-group-items {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow: hidden;
+  max-height: 400px;
+  transition: max-height 0.3s ease, opacity 0.2s ease;
+}
+
+.nav-group.collapsed .nav-group-items {
+  max-height: 0;
+  opacity: 0;
   pointer-events: none;
 }
 
@@ -291,16 +350,38 @@ select {
 }
 
 /* ============================================
-   Hamburger menu button (mobile)
+   Mobile top bar + hamburger
    ============================================ */
-.menu-toggle {
-  display: none;
+.mobile-topbar {
+  display: none; /* shown on mobile via responsive.css */
   position: fixed;
-  top: 16px;
-  left: 16px;
-  z-index: 1001;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
+  align-items: center;
+  gap: 8px;
+  padding: 0 8px;
+  background: var(--bg-soft);
+  border-bottom: 1px solid var(--border-soft);
+  z-index: 900;
+}
+
+.topbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--text-hi);
+}
+
+.menu-toggle {
+  display: inline-flex;
   width: 44px;
   height: 44px;
+  flex-shrink: 0;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   background: var(--surface);
@@ -326,7 +407,6 @@ select {
    Sidebar overlay (mobile)
    ============================================ */
 .sidebar-overlay {
-  display: none;
   position: fixed;
   inset: 0;
   z-index: 999;
@@ -334,12 +414,13 @@ select {
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   opacity: 0;
-  transition: opacity 0.3s ease;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .sidebar-overlay.show {
-  display: block;
   opacity: 1;
+  visibility: visible;
 }
 
 .dash-sidebar {
@@ -412,12 +493,199 @@ input, select, textarea {
   margin-top: auto;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
 .dash-logout-btn {
   width: 100%;
   justify-content: center;
+}
+
+/* ============================================
+   Sidebar account + logout
+   ============================================ */
+.sidebar-account {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.account-card {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 8px;
+  border-radius: var(--radius-sm);
+  color: var(--text-hi);
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.account-card:hover {
+  background: var(--surface-hover);
+}
+
+.account-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+}
+
+.account-meta {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  line-height: 1.25;
+}
+
+.account-name {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-hi);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.account-email {
+  font-size: 11.5px;
+  color: var(--text-low);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebar-logout {
+  width: 100%;
+  gap: 8px;
+  padding: 8px 12px;
+  font-size: 13px;
+}
+
+.sidebar-logout svg {
+  flex-shrink: 0;
+}
+
+/* ============================================
+   Desktop collapse toggle + icon rail
+   ============================================ */
+.sidebar-collapse {
+  display: none; /* desktop-only; shown via min-width query below */
+  margin-left: auto;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-mid);
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.sidebar-collapse:hover {
+  background: var(--surface-hover);
+  border-color: var(--pink-400);
+  color: var(--text-hi);
+}
+
+.sidebar-collapse svg {
+  transition: transform 0.25s ease;
+}
+
+.dash-body.sidebar-collapsed .sidebar-collapse svg {
+  transform: rotate(180deg);
+}
+
+/* Smooth width/margin changes once the initial state has been applied. */
+.sidebar-transitions .dash-sidebar {
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sidebar-transitions .dash-main {
+  transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (min-width: 769px) {
+  .sidebar-collapse {
+    display: inline-flex;
+  }
+
+  .dash-body.sidebar-collapsed .dash-sidebar {
+    width: 76px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .dash-body.sidebar-collapsed .dash-main {
+    margin-left: 76px;
+  }
+
+  .dash-body.sidebar-collapsed .brand {
+    justify-content: center;
+    gap: 4px;
+  }
+
+  .dash-body.sidebar-collapsed .sidebar-collapse {
+    margin-left: 0;
+  }
+
+  .dash-body.sidebar-collapsed .nav-group-header,
+  .dash-body.sidebar-collapsed .dash-sidebar-foot {
+    display: none;
+  }
+
+  /* Hide labels visually but keep them as accessible names in the rail. */
+  .dash-body.sidebar-collapsed .brand-text,
+  .dash-body.sidebar-collapsed .nav-label,
+  .dash-body.sidebar-collapsed .account-meta,
+  .dash-body.sidebar-collapsed .sidebar-logout span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  /* Never hide nav items in the rail, even if their group was collapsed. */
+  .dash-body.sidebar-collapsed .nav-group.collapsed .nav-group-items {
+    max-height: 400px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .dash-body.sidebar-collapsed .dash-nav a {
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .dash-body.sidebar-collapsed .dash-nav a .review-badge {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    margin: 0;
+  }
+
+  .dash-body.sidebar-collapsed .account-card {
+    justify-content: center;
+    padding: 8px;
+  }
+
+  .dash-body.sidebar-collapsed .sidebar-logout {
+    justify-content: center;
+    padding: 8px;
+  }
 }
 
 /* ============================================
@@ -546,4 +814,18 @@ input, select, textarea {
 
 .shake {
   animation: shake-subtle 0.35s ease-in-out;
+}
+
+/* ============================================
+   Reduced motion — respect user preference
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

@@ -58,8 +58,8 @@
    ============================================ */
 @media (max-width: 768px) {
 
-  /* Show hamburger menu on mobile */
-  .menu-toggle {
+  /* Show the mobile top bar (contains the hamburger) */
+  .mobile-topbar {
     display: flex;
   }
 
@@ -118,10 +118,6 @@
     margin: 0;
   }
 
-  .dash-nav-indicator {
-    display: block;
-  }
-
   .dash-sidebar-foot {
     padding: 10px;
     text-align: left;
@@ -131,10 +127,14 @@
     font-size: inherit;
   }
 
-  /* Main content */
+  /* Main content — offset for the fixed 56px mobile top bar */
   .dash-main {
     margin-left: 0;
-    padding: 24px 20px 40px;
+    padding: 72px 20px 40px;
+  }
+
+  .dash-main-center {
+    min-height: calc(100vh - 72px);
   }
 
   /* Dashboard */
@@ -384,13 +384,7 @@
 
   .dash-main {
     margin-left: 0;
-    padding: 20px 16px 36px;
-  }
-
-  /* Sidebar continues overlay behavior from 768px */
-  .dash-sidebar {
-    width: 260px;
-    padding: 24px 18px;
+    padding: 72px 16px 36px;
   }
 
   /* Dashboard */
@@ -1081,13 +1075,7 @@
 
   .dash-main {
     margin-left: 0;
-    padding: 16px 10px 28px;
-  }
-
-  /* Sidebar continues overlay behavior from 768px */
-  .dash-sidebar {
-    width: 260px;
-    padding: 24px 18px;
+    padding: 72px 10px 28px;
   }
 
   /* Stats cards — 2x2 grid, compact */
@@ -1329,13 +1317,7 @@
 
   .dash-main {
     margin-left: 0;
-    padding: 12px 8px 24px;
-  }
-
-  /* Sidebar continues overlay behavior from 768px */
-  .dash-sidebar {
-    width: 260px;
-    padding: 24px 18px;
+    padding: 68px 8px 24px;
   }
 
   /* Stats — single column if very narrow */
@@ -1483,7 +1465,7 @@
   }
 
   .dash-main {
-    padding: 16px 14px 24px;
+    padding: 64px 14px 24px;
   }
 
   .flash-card {

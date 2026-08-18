@@ -1,0 +1,23 @@
+@import url('./global.css');
+@import url('./responsive.css');
+
+.settings-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  margin-top: 24px;
+}
+
+.settings-section h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 18px;
+  margin: 0 0 8px;
+}
+
+.settings-placeholder {
+  margin: 0;
+  color: var(--text-mid);
+  font-size: 14px;
+}
