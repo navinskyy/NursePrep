@@ -236,18 +236,7 @@
   }
 
   .vitals-strip {
-    flex-direction: column;
-  }
-
-  .vital {
-    border-left: none;
-    border-top: 1px solid var(--border-soft);
-    padding: 12px 4px 0;
-  }
-
-  .vital:first-child {
-    border-top: none;
-    padding-top: 4px;
+    grid-template-columns: 1fr 1fr;
   }
 
   /* Analytics */

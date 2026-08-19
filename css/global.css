@@ -181,6 +181,9 @@ input, select, textarea { font-family: inherit; }
 
 .dash-sidebar .brand svg { flex-shrink: 0; }
 
+/* ============================================
+   Brand lockup + logo hover interaction
+   ============================================ */
 .dash-nav {
   display: flex;
   flex-direction: column;
@@ -628,13 +631,64 @@ input, select, textarea {
     margin-left: 76px;
   }
 
+  /* --- Collapsed rail: the NursePrep logo is the toggle control --- */
   .dash-body.sidebar-collapsed .brand {
+    position: relative;
     justify-content: center;
-    gap: 4px;
+    padding: 0;
+    cursor: pointer;
   }
 
+  /* Hide the wordmark so only the logo shows in the rail. */
+  .dash-body.sidebar-collapsed .brand-wordmark {
+    display: none;
+  }
+
+  /* The collapse toggle is embedded inside the logo: it overlaps the
+     logo with no standalone chrome and is hidden until hovered/focused.
+     Clicking it (which sits over the logo) expands the sidebar. */
   .dash-body.sidebar-collapsed .sidebar-collapse {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 32px;
+    height: 32px;
     margin-left: 0;
+    background: transparent;
+    border-color: transparent;
+    border-radius: 50%;
+    transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  /* The embedded icon stays hidden until the logo is hovered/focused. */
+  .dash-body.sidebar-collapsed .sidebar-collapse svg {
+    opacity: 0;
+    transform: rotate(180deg) scale(0.5);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+  }
+
+  .dash-body.sidebar-collapsed .brand > svg {
+    transition: opacity 0.25s ease;
+  }
+
+  /* Hovering (or focusing) the logo smoothly reveals the embedded
+     toggle, with a subtle ring to signal it is clickable. */
+  .dash-body.sidebar-collapsed .brand:hover .sidebar-collapse,
+  .dash-body.sidebar-collapsed .sidebar-collapse:focus-visible {
+    background: var(--surface-hover);
+    border-color: var(--pink-400);
+    box-shadow: 0 0 0 3px rgba(236, 111, 160, 0.18);
+  }
+
+  .dash-body.sidebar-collapsed .brand:hover .sidebar-collapse svg,
+  .dash-body.sidebar-collapsed .sidebar-collapse:focus-visible svg {
+    opacity: 1;
+    transform: rotate(180deg) scale(1);
+  }
+
+  .dash-body.sidebar-collapsed .brand:hover > svg {
+    opacity: 0.35;
   }
 
   .dash-body.sidebar-collapsed .nav-group-header,
@@ -643,7 +697,6 @@ input, select, textarea {
   }
 
   /* Hide labels visually but keep them as accessible names in the rail. */
-  .dash-body.sidebar-collapsed .brand-text,
   .dash-body.sidebar-collapsed .nav-label,
   .dash-body.sidebar-collapsed .account-meta,
   .dash-body.sidebar-collapsed .sidebar-logout span {

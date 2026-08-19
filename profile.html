@@ -31,15 +31,18 @@
       <span class="id-status" id="profileStatus">Reviewer</span>
       <h1 id="profileName">Loading…</h1>
       <p id="profileCourse">Loading…</p>
+      <p class="id-meta" id="profileMemberSince" hidden></p>
       <div class="progression-strip">
         <div class="progression-level">
           <span class="level-badge" id="levelBadge">Lv.1</span>
           <span class="xp-text" id="xpText">0 / 100 XP</span>
         </div>
         <div class="xp-bar"><span id="xpFill" style="width:0%"></span></div>
-        <div class="ranking-chip" id="rankingChip">Rank Score: 0</div>
+        <div class="progression-chips">
+          <span class="meta-chip" id="totalXpChip">0 XP total</span>
+          <span class="ranking-chip" id="rankingChip">Rank Score: 0</span>
+        </div>
       </div>
-      <a href="vocation.html" class="id-vocation-link">View my page →</a>
     </div>
 
     <button class="btn btn-primary id-edit-btn" id="editProfileBtn">Edit details</button>
@@ -100,6 +103,18 @@
         <span class="vital-num" id="statQuizzes">0</span>
         <span class="vital-label">Quizzes taken</span>
       </div>
+      <div class="vital">
+        <span class="vital-num" id="statStudyTime">0m</span>
+        <span class="vital-label">Study time</span>
+      </div>
+      <div class="vital">
+        <span class="vital-num" id="statMastered">0</span>
+        <span class="vital-label">Cards mastered</span>
+      </div>
+      <div class="vital">
+        <span class="vital-num" id="statPerfect">0</span>
+        <span class="vital-label">Perfect scores</span>
+      </div>
     </div>
   </section>
 
@@ -108,6 +123,10 @@
     <div class="section-head">
       <h2>Achievements</h2>
       <span class="section-note" id="achievementsCount">0 / 14 unlocked</span>
+    </div>
+
+    <div class="ach-summary">
+      <div class="ach-summary-track"><span id="achBar" style="width:0%"></span></div>
     </div>
 
     <div class="achievements-grid" id="achievementsGrid">
@@ -130,9 +149,9 @@
 </main>
 
 <!-- EDIT MODAL -->
-<div class="modal" id="editModal">
+<div class="modal" id="editModal" role="dialog" aria-modal="true" aria-labelledby="editModalTitle">
   <div class="modal-content">
-    <h2>Edit profile</h2>
+    <h2 id="editModalTitle">Edit profile</h2>
 
     <div class="form-group">
       <label>Full name</label>
@@ -159,9 +178,9 @@
 </div>
 
 <!-- CHANGE PASSWORD MODAL -->
-<div class="modal" id="passwordModal">
+<div class="modal" id="passwordModal" role="dialog" aria-modal="true" aria-labelledby="passwordModalTitle">
   <div class="modal-content">
-    <h2>Change password</h2>
+    <h2 id="passwordModalTitle">Change password</h2>
 
     <div class="form-group">
       <label>Current password</label>
@@ -184,9 +203,9 @@
 </div>
 
 <!-- LOGOUT CONFIRM MODAL -->
-<div class="modal" id="logoutModal">
+<div class="modal" id="logoutModal" role="dialog" aria-modal="true" aria-labelledby="logoutModalTitle">
   <div class="modal-content modal-confirm">
-    <h2>Log out?</h2>
+    <h2 id="logoutModalTitle">Log out?</h2>
     <p>Are you sure you want to log out of NursePrep?</p>
 
     <div class="modal-actions">
@@ -197,12 +216,12 @@
 </div>
 
 <!-- Loading -->
-<div id="loadingOverlay" class="loading-overlay">
+<div id="loadingOverlay" class="loading-overlay" aria-hidden="true">
   <div class="spinner"></div>
 </div>
 
 <!-- Toast -->
-<div id="toast" class="toast"></div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
 
 
 

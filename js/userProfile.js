@@ -11,42 +11,48 @@ const ACHIEVEMENTS = [
     name: "First Quiz",
     description: "Complete your first quiz",
     icon: "📝",
-    check: (data) => (data.quizzesTaken || 0) >= 1
+    check: (data) => (data.quizzesTaken || 0) >= 1,
+    progress: (data) => (data.quizzesTaken || 0) / 1
   },
   {
     id: "streak_7",
     name: "7 Day Streak",
     description: "Maintain a 7-day study streak",
     icon: "🔥",
-    check: (data) => (data.streak || 0) >= 7
+    check: (data) => (data.streak || 0) >= 7,
+    progress: (data) => (data.streak || 0) / 7
   },
   {
     id: "questions_100",
     name: "100 Questions",
     description: "Answer 100 questions total",
     icon: "💯",
-    check: (data) => (data.questionsAnswered || 0) >= 100
+    check: (data) => (data.questionsAnswered || 0) >= 100,
+    progress: (data) => (data.questionsAnswered || 0) / 100
   },
   {
     id: "accuracy_90",
     name: "90% Accuracy",
     description: "Reach 90% overall accuracy",
     icon: "🎯",
-    check: (data) => (data.accuracy || 0) >= 90
+    check: (data) => (data.accuracy || 0) >= 90,
+    progress: (data) => (data.accuracy || 0) / 90
   },
   {
     id: "perfect_score",
     name: "Perfect Score",
     description: "Get 100% on any quiz",
     icon: "🏆",
-    check: (data) => (data.perfectScores || 0) >= 1
+    check: (data) => (data.perfectScores || 0) >= 1,
+    progress: (data) => (data.perfectScores || 0) / 1
   },
   {
     id: "flashcard_master",
     name: "Flashcard Master",
     description: "Master 50 flashcards",
     icon: "🧠",
-    check: (data) => (data.masteredCards || 0) >= 50
+    check: (data) => (data.masteredCards || 0) >= 50,
+    progress: (data) => (data.masteredCards || 0) / 50
   },
   {
     id: "all_subjects",
@@ -56,56 +62,64 @@ const ACHIEVEMENTS = [
     check: (data) => {
       const subjects = Object.keys(data.subjectProgress || {});
       return subjects.length >= 8;
-    }
+    },
+    progress: (data) => Object.keys(data.subjectProgress || {}).length / 8
   },
   {
     id: "streak_30",
     name: "30 Day Champion",
     description: "Maintain a 30-day study streak",
     icon: "👑",
-    check: (data) => (data.streak || 0) >= 30
+    check: (data) => (data.streak || 0) >= 30,
+    progress: (data) => (data.streak || 0) / 30
   },
   {
     id: "study_5h",
     name: "Focused Mind",
     description: "Study for 5 hours total",
     icon: "⏱️",
-    check: (data) => (data.studyTime || 0) >= 18000
+    check: (data) => (data.studyTime || 0) >= 18000,
+    progress: (data) => (data.studyTime || 0) / 18000
   },
   {
     id: "study_25h",
     name: "Study Machine",
     description: "Study for 25 hours total",
     icon: "📚",
-    check: (data) => (data.studyTime || 0) >= 90000
+    check: (data) => (data.studyTime || 0) >= 90000,
+    progress: (data) => (data.studyTime || 0) / 90000
   },
   {
     id: "study_50h",
     name: "Marathon Learner",
     description: "Study for 50 hours total",
     icon: "🎓",
-    check: (data) => (data.studyTime || 0) >= 180000
+    check: (data) => (data.studyTime || 0) >= 180000,
+    progress: (data) => (data.studyTime || 0) / 180000
   },
   {
     id: "questions_500",
     name: "500 Questions",
     description: "Answer 500 questions total",
     icon: "🔢",
-    check: (data) => (data.questionsAnswered || 0) >= 500
+    check: (data) => (data.questionsAnswered || 0) >= 500,
+    progress: (data) => (data.questionsAnswered || 0) / 500
   },
   {
     id: "quizzes_50",
     name: "Quiz Veteran",
     description: "Complete 50 quizzes",
     icon: "🗂️",
-    check: (data) => (data.quizzesTaken || 0) >= 50
+    check: (data) => (data.quizzesTaken || 0) >= 50,
+    progress: (data) => (data.quizzesTaken || 0) / 50
   },
   {
     id: "perfect_10",
     name: "Flawless Ten",
     description: "Get 100% on 10 quizzes",
     icon: "💎",
-    check: (data) => (data.perfectScores || 0) >= 10
+    check: (data) => (data.perfectScores || 0) >= 10,
+    progress: (data) => (data.perfectScores || 0) / 10
   }
 ];
 
@@ -534,10 +548,19 @@ export async function checkAchievements(uid, data) {
 
 export function getAchievementStatus(data) {
   const unlocked = new Set(data.achievements || []);
-  return ACHIEVEMENTS.map(ach => ({
-    ...ach,
-    unlocked: unlocked.has(ach.id)
-  }));
+  return ACHIEVEMENTS.map(ach => {
+    const isUnlocked = unlocked.has(ach.id);
+    let progress = isUnlocked ? 1 : 0;
+    if (!isUnlocked && typeof ach.progress === "function") {
+      const ratio = ach.progress(data);
+      progress = Math.min(1, Math.max(0, Number.isFinite(ratio) ? ratio : 0));
+    }
+    return {
+      ...ach,
+      unlocked: isUnlocked,
+      progress
+    };
+  });
 }
 
 export { calculateLevel, getLevelProgress, calculateRankingScore, LEVEL_THRESHOLDS, XP_RULES };

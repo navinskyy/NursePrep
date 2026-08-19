@@ -23,6 +23,8 @@ const levelBadge = document.getElementById("levelBadge");
 const xpText = document.getElementById("xpText");
 const xpFill = document.getElementById("xpFill");
 const rankingChip = document.getElementById("rankingChip");
+const totalXpChip = document.getElementById("totalXpChip");
+const profileMemberSince = document.getElementById("profileMemberSince");
 
 const profileEmail = document.getElementById("profileEmail");
 const profileSchool = document.getElementById("profileSchool");
@@ -34,9 +36,13 @@ const statAccuracy = document.getElementById("statAccuracy");
 const statStreak = document.getElementById("statStreak");
 const statBest = document.getElementById("statBest");
 const statQuizzes = document.getElementById("statQuizzes");
+const statStudyTime = document.getElementById("statStudyTime");
+const statMastered = document.getElementById("statMastered");
+const statPerfect = document.getElementById("statPerfect");
 
 const achievementsGrid = document.getElementById("achievementsGrid");
 const achievementsCount = document.getElementById("achievementsCount");
+const achBar = document.getElementById("achBar");
 
 const sidebarStreak = document.getElementById("sidebarStreak");
 
@@ -93,6 +99,34 @@ function fallbackAvatar(name) {
   return `https://placehold.co/200x200/131A2C/EC6FA0?text=${initial}`;
 }
 
+// Format a whole number with thousands separators (e.g. 12,340).
+function formatNum(n) {
+  return (Number(n) || 0).toLocaleString();
+}
+
+// Turn a duration in seconds into a compact, human label (e.g. "2h 15m").
+function formatDuration(seconds) {
+  const total = Math.max(0, Math.round(Number(seconds) || 0));
+  if (total < 60) return "0m";
+  const hours = Math.floor(total / 3600);
+  const minutes = Math.floor((total % 3600) / 60);
+  if (hours && minutes) return `${hours}h ${minutes}m`;
+  if (hours) return `${hours}h`;
+  return `${minutes}m`;
+}
+
+// Firestore timestamps expose toDate(); new profiles hold an unresolved
+// sentinel until the next read, so guard before formatting.
+function formatMemberSince(createdAt) {
+  try {
+    const date = createdAt?.toDate ? createdAt.toDate() : (createdAt ? new Date(createdAt) : null);
+    if (!date || Number.isNaN(date.getTime())) return "";
+    return date.toLocaleDateString(undefined, { month: "long", year: "numeric" });
+  } catch {
+    return "";
+  }
+}
+
 function renderAchievements(data) {
   if (!achievementsGrid) return;
 
@@ -103,18 +137,40 @@ function renderAchievements(data) {
     achievementsCount.textContent = `${unlockedCount} / ${achievements.length} unlocked`;
   }
 
-  achievementsGrid.innerHTML = achievements.map(ach => `
+  if (achBar) {
+    const pct = achievements.length ? (unlockedCount / achievements.length) * 100 : 0;
+    achBar.style.width = `${pct}%`;
+  }
+
+  // Surface earned badges first, then the closest-to-unlock ones, so the
+  // most relevant progress is always at the top of the grid.
+  const ordered = [...achievements].sort((a, b) => {
+    if (a.unlocked !== b.unlocked) return a.unlocked ? -1 : 1;
+    return (b.progress || 0) - (a.progress || 0);
+  });
+
+  achievementsGrid.innerHTML = ordered.map(ach => {
+    const pct = Math.round((ach.progress || 0) * 100);
+    const progressBar = ach.unlocked
+      ? ""
+      : `<div class="achievement-progress" role="progressbar" aria-valuenow="${pct}" aria-valuemin="0" aria-valuemax="100" aria-label="${ach.name} progress">
+           <span style="width:${pct}%"></span>
+         </div>`;
+
+    return `
     <div class="achievement-card ${ach.unlocked ? "unlocked" : "locked"}">
       <div class="achievement-icon">${ach.icon}</div>
       <div class="achievement-info">
         <h4>${ach.name}</h4>
         <p>${ach.description}</p>
+        ${progressBar}
       </div>
-      <div class="achievement-badge">
+      <div class="achievement-badge" aria-hidden="true">
         ${ach.unlocked ? "&#10003;" : "&#128274;"}
       </div>
     </div>
-  `).join("");
+  `;
+  }).join("");
 }
 
 // ======================================
@@ -138,22 +194,41 @@ function renderProfile(data) {
   const nextLevelXP = LEVEL_THRESHOLDS[level] || LEVEL_THRESHOLDS[LEVEL_THRESHOLDS.length - 1];
   const currentLevelXP = LEVEL_THRESHOLDS[level - 1] || 0;
   const rankingScore = calculateRankingScore(data);
+  const isMaxLevel = level >= LEVEL_THRESHOLDS.length;
 
   if (levelBadge) levelBadge.textContent = `Lv.${level}`;
-  if (xpText) xpText.textContent = `${xp - currentLevelXP} / ${nextLevelXP - currentLevelXP} XP`;
-  if (xpFill) xpFill.style.width = `${levelProgress}%`;
-  if (rankingChip) rankingChip.textContent = `Rank Score: ${rankingScore.toLocaleString()}`;
+  if (xpText) {
+    xpText.textContent = isMaxLevel
+      ? "Max level"
+      : `${formatNum(xp - currentLevelXP)} / ${formatNum(nextLevelXP - currentLevelXP)} XP`;
+  }
+  if (xpFill) xpFill.style.width = `${isMaxLevel ? 100 : levelProgress}%`;
+  if (rankingChip) rankingChip.textContent = `Rank Score: ${formatNum(rankingScore)}`;
+  if (totalXpChip) totalXpChip.textContent = `${formatNum(xp)} XP total`;
+
+  const memberSince = formatMemberSince(data.createdAt);
+  if (profileMemberSince) {
+    if (memberSince) {
+      profileMemberSince.textContent = `Member since ${memberSince}`;
+      profileMemberSince.hidden = false;
+    } else {
+      profileMemberSince.hidden = true;
+    }
+  }
 
   profileEmail.textContent = data.email || "—";
   profileSchool.textContent = data.school || "Not set";
   profileCourseFull.textContent = data.course || "Not set";
   profileYear.textContent = data.yearLevel || "Not set";
 
-  statQuestions.textContent = data.questionsAnswered || 0;
+  statQuestions.textContent = formatNum(data.questionsAnswered);
   statAccuracy.textContent = `${data.accuracy || 0}%`;
-  statStreak.textContent = data.streak || 0;
-  statBest.textContent = data.longestStreak || 0;
-  statQuizzes.textContent = data.quizzesTaken || 0;
+  statStreak.textContent = formatNum(data.streak);
+  statBest.textContent = formatNum(data.longestStreak);
+  statQuizzes.textContent = formatNum(data.quizzesTaken);
+  if (statStudyTime) statStudyTime.textContent = formatDuration(data.studyTime);
+  if (statMastered) statMastered.textContent = formatNum(data.masteredCards);
+  if (statPerfect) statPerfect.textContent = formatNum(data.perfectScores);
 
   if (sidebarStreak) {
     sidebarStreak.textContent = `${data.streak || 0} days`;
@@ -271,6 +346,7 @@ editProfileBtn.addEventListener("click", () => {
   editCourse.value = currentData?.course || "";
   editYear.value = currentData?.yearLevel || "";
   editModal.classList.add("show");
+  openModalFocus(editModal);
 });
 
 cancelEdit.addEventListener("click", () => {
@@ -314,6 +390,7 @@ changePasswordBtn.addEventListener("click", () => {
   newPassword.value = "";
   confirmNewPassword.value = "";
   passwordModal.classList.add("show");
+  openModalFocus(passwordModal);
 });
 
 cancelPassword.addEventListener("click", () => {
@@ -375,6 +452,7 @@ savePassword.addEventListener("click", async () => {
 
 function openLogoutConfirm() {
   logoutModal.classList.add("show");
+  openModalFocus(logoutModal);
 }
 
 logoutBtn?.addEventListener("click", openLogoutConfirm);
@@ -391,6 +469,42 @@ logoutModal.addEventListener("click", (e) => {
 confirmLogout.addEventListener("click", async () => {
   await signOut(auth);
   window.location.href = "login.html";
+});
+
+// ======================================
+// MODAL KEYBOARD & FOCUS UX
+// ======================================
+
+const allModals = [editModal, passwordModal, logoutModal];
+
+// Move focus into a modal when it opens (keyboard + screen-reader users).
+function openModalFocus(modal) {
+  requestAnimationFrame(() => {
+    const target = modal.querySelector(
+      'input, button.btn-primary, button.btn-danger, button'
+    );
+    if (target && typeof target.focus === "function") target.focus();
+  });
+}
+
+// Escape closes the open modal; Enter inside a field triggers its action.
+document.addEventListener("keydown", (e) => {
+  const openModal = allModals.find((m) => m && m.classList.contains("show"));
+  if (!openModal) return;
+
+  if (e.key === "Escape") {
+    e.preventDefault();
+    openModal.classList.remove("show");
+    return;
+  }
+
+  if (e.key === "Enter" && e.target && e.target.tagName === "INPUT") {
+    e.preventDefault();
+    const primary = openModal.querySelector(
+      ".modal-actions .btn-primary, .modal-actions .btn-danger"
+    );
+    if (primary) primary.click();
+  }
 });
 
 // ======================================

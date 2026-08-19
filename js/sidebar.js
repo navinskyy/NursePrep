@@ -108,9 +108,9 @@ function sidebarHTML() {
   <aside class="dash-sidebar" id="${SIDEBAR_ID}" aria-label="Sidebar">
     <div class="brand">
       ${BRAND_SVG}
-      <span class="brand-text">NursePrep</span>
+      <span class="brand-wordmark">NursePrep</span>
       <button class="sidebar-collapse" type="button" aria-label="Collapse sidebar" aria-expanded="true">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/></svg>
       </button>
     </div>
 
