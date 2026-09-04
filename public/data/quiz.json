@@ -8405,11 +8405,1116 @@
     "explanation": "(A) Hypotension. A major side effect of anticoagulant therapy is bleeding, which can be identified by hypotension (a systolic blood pressure under 100 mm Hg). Anticoagulants do not result in the other three conditions."
   }
   ],
-  "pnle-set1-part1": [],
+  "pnle-set1-part1": [
+  {
+    "question": "The nurse In-charge in labor and delivery unit administered a dose of terbutaline to a client without checking the client’s pulse. The standard that would be used to determine if the nurse was negligent is:",
+    "choices": [
+      "The physician’s orders.",
+      "The action of a clinical nurse specialist who is recognized expert in the field.",
+      "The statement in the drug literature about administration of terbutaline.",
+      "The actions of a reasonably prudent nurse with similar education and experience."
+    ],
+    "answer": 3,
+    "explanation": "In nursing malpractice and negligence cases, the legal standard of care is determined by comparing the nurse's performance to the actions that a reasonably prudent nurse with similar education, training, and experience would perform under similar circumstances."
+  },
+  {
+    "question": "Nurse Trish is caring for a female client with a history of GI bleeding, sickle cell disease, and a platelet count of 22,000/μl. The female client is dehydrated and receiving dextrose 5% in half-normal saline solution at 150 ml/hr. The client complains of severe bone pain and is scheduled to receive a dose of morphine sulfate. In administering the medication, Nurse Trish should avoid which route?",
+    "choices": [
+      "I.V",
+      "I.M",
+      "Oral",
+      "S.C"
+    ],
+    "answer": 1,
+    "explanation": "Intramuscular (I.M.) injections should be avoided in clients with severe thrombocytopenia (platelet count of 22,000/μl) due to the high risk of severe tissue hematoma and bleeding at the injection site."
+  },
+  {
+    "question": "Dr. Garcia writes the following order for the client who has been recently admitted “Digoxin .125 mg P.O. once daily.” To prevent a dosage error, how should the nurse document this order onto the medication administration record?",
+    "choices": [
+      "“Digoxin .1250 mg P.O. once daily”",
+      "“Digoxin 0.1250 mg P.O. once daily”",
+      "“Digoxin 0.125 mg P.O. once daily”",
+      "“Digoxin .125 mg P.O. once daily”"
+    ],
+    "answer": 2,
+    "explanation": "To prevent dosage calculation and misinterpretation errors, a leading zero must always precede a decimal point (e.g., 0.125 mg) and trailing zeros should be avoided."
+  },
+  {
+    "question": "A newly admitted female client was diagnosed with deep vein thrombosis. Which nursing diagnosis should receive the highest priority?",
+    "choices": [
+      "Ineffective peripheral tissue perfusion related to venous congestion.",
+      "Risk for injury related to edema.",
+      "Excess fluid volume related to peripheral vascular disease.",
+      "Impaired gas exchange related to increased blood flow."
+    ],
+    "answer": 0,
+    "explanation": "Deep vein thrombosis directly impairs venous blood return, leading to vascular congestion and compromised tissue perfusion in the affected extremity, making it the highest priority physiological diagnosis."
+  },
+  {
+    "question": "Nurse Betty is assigned to the following clients. The client that the nurse would see first after endorsement?",
+    "choices": [
+      "A 34 year-old post operative appendectomy client of five hours who is complaining of pain.",
+      "A 44 year-old myocardial infarction (MI) client who is complaining of nausea.",
+      "A 26 year-old client admitted for dehydration whose intravenous (IV) has infiltrated.",
+      "A 63 year-old post operative’s abdominal hysterectomy client of three days whose incisional dressing is saturated with serosanguinous fluid."
+    ],
+    "answer": 1,
+    "explanation": "Nausea in a client with a recent myocardial infarction can be a sign of re-infarction, cardiogenic shock, or autonomic destabilization, requiring immediate assessment over stable postoperative complaints."
+  },
+  {
+    "question": "Nurse Gail places a client in a four-point restraint following orders from the physician. The client care plan should include:",
+    "choices": [
+      "Assess temperature frequently.",
+      "Provide diversional activities.",
+      "Check circulation every 15-30 minutes.",
+      "Socialize with other patients once a shift."
+    ],
+    "answer": 2,
+    "explanation": "Safety guidelines for physical restraints require frequent assessment of neurovascular status and peripheral circulation (pulses, skin temperature, capillary refill) every 15 to 30 minutes to prevent tissue damage."
+  },
+  {
+    "question": "A male client who has severe burns is receiving H2 receptor antagonist therapy. The nurse In-charge knows the purpose of this therapy is to:",
+    "choices": [
+      "Prevent stress ulcer",
+      "Block prostaglandin synthesis",
+      "Facilitate protein synthesis.",
+      "Enhance gas exchange"
+    ],
+    "answer": 0,
+    "explanation": "Clients with severe burn injuries are at high risk for developing stress ulcers (Curling's ulcers) due to ischemia of the gastric mucosa; H2 receptor antagonists reduce gastric acid secretion to prevent this complication."
+  },
+  {
+    "question": "The doctor orders hourly urine output measurement for a postoperative male client. The nurse Trish records the following amounts of output for 2 consecutive hours: 8 a.m.: 50 ml; 9 a.m.: 60 ml. Based on these amounts, which action should the nurse take?",
+    "choices": [
+      "Increase the I.V. fluid infusion rate",
+      "Irrigate the indwelling urinary catheter",
+      "Notify the physician",
+      "Continue to monitor and record hourly urine output"
+    ],
+    "answer": 3,
+    "explanation": "Normal adequate urine output for an adult is at least 30 mL/hour. Since the client's output is 50 mL and 60 mL per hour, renal perfusion is adequate and routine monitoring should continue."
+  },
+  {
+    "question": "Tony, a basketball player twist his right ankle while playing on the court and seeks care for ankle pain and swelling. After the nurse applies ice to the ankle for 30 minutes, which statement by Tony suggests that ice application has been effective?",
+    "choices": [
+      "“My ankle looks less swollen now”.",
+      "“My ankle feels warm”.",
+      "“My ankle appears redder now”.",
+      "“I need something stronger for pain relief”"
+    ],
+    "answer": 0,
+    "explanation": "Cold therapy induces local vasoconstriction, which decreases localized tissue edema and inflammation following acute soft tissue injury."
+  },
+  {
+    "question": "The physician prescribes a loop diuretic for a client. When administering this drug, the nurse anticipates that the client may develop which electrolyte imbalance?",
+    "choices": [
+      "Hypernatremia",
+      "Hyperkalemia",
+      "Hypokalemia",
+      "Hypervolemia"
+    ],
+    "answer": 2,
+    "explanation": "Loop diuretics (such as furosemide) inhibit sodium and chloride reabsorption in the loop of Henle, promoting the renal excretion of potassium along with water and sodium, which leads to hypokalemia."
+  },
+  {
+    "question": "She finds out that some managers have benevolent-authoritative style of management. Which of the following behaviors will she exhibit most likely?",
+    "choices": [
+      "Have condescending trust and confidence in their subordinates.",
+      "Gives economic and ego awards.",
+      "Communicates downward to staffs.",
+      "Allows decision making among subordinates."
+    ],
+    "answer": 0,
+    "explanation": "Under Likert's management systems, a benevolent-authoritative manager displays a patronizing or condescending form of trust and confidence in subordinates, making decisions top-down while allowing minor operational choices."
+  },
+  {
+    "question": "Nurse Amy is aware that the following is true about functional nursing",
+    "choices": [
+      "Provides continuous, coordinated and comprehensive nursing services.",
+      "One-to-one nurse patient ratio.",
+      "Emphasize the use of group collaboration.",
+      "Concentrates on tasks and activities."
+    ],
+    "answer": 3,
+    "explanation": "Functional nursing is a task-oriented model of care delivery where nursing staff are assigned specific tasks (e.g., administering medications, taking vital signs) rather than holistic patient care."
+  },
+  {
+    "question": "Which type of medication order might read “Vitamin K 10 mg I.M. daily × 3 days?”",
+    "choices": [
+      "Single order",
+      "Standard written order",
+      "Standing order",
+      "Stat order"
+    ],
+    "answer": 1,
+    "explanation": "A standard written order (or routine order) specifies a course of therapy that continues for a specific number of days or until explicitly canceled or replaced."
+  },
+  {
+    "question": "A female client with a fecal impaction frequently exhibits which clinical manifestation?",
+    "choices": [
+      "Increased appetite",
+      "Loss of urge to defecate",
+      "Hard, brown, formed stools",
+      "Liquid or semi-liquid stools"
+    ],
+    "answer": 3,
+    "explanation": "A key classic sign of fecal impaction is the seepage of liquid or semi-liquid stool around the hard, impacted fecal mass, often mistook for diarrhea."
+  },
+  {
+    "question": "Nurse Linda prepares to perform an otoscopic examination on a female client. For proper visualization, the nurse should position the client’s ear by:",
+    "choices": [
+      "Pulling the lobule down and back",
+      "Pulling the helix up and forward",
+      "Pulling the helix up and back",
+      "Pulling the lobule down and forward"
+    ],
+    "answer": 2,
+    "explanation": "For an adult client, pulling the pinna/helix up and back straightens the auditory canal to allow clear visual inspection of the tympanic membrane."
+  },
+  {
+    "question": "Which instruction should nurse Tom give to a male client who is having external radiation therapy:",
+    "choices": [
+      "Protect the irritated skin from sunlight.",
+      "Eat 3 to 4 hours before treatment.",
+      "Wash the skin over regularly.",
+      "Apply lotion or oil to the radiated area when it is red or sore."
+    ],
+    "answer": 0,
+    "explanation": "Skin subjected to external beam radiation is extremely fragile and susceptible to severe radiation dermatitis; it must be shielded from direct sunlight and harsh chemicals."
+  },
+  {
+    "question": "In assisting a female client for immediate surgery, the nurse In-charge is aware that she should:",
+    "choices": [
+      "Encourage the client to void following preoperative medication.",
+      "Explore the client’s fears and anxieties about the surgery.",
+      "Assist the client in removing dentures and nail polish.",
+      "Encourage the client to drink water prior to surgery."
+    ],
+    "answer": 2,
+    "explanation": "Preoperative preparation requires removing prosthetics like dentures (to maintain airway safety during intubation) and nail polish (to permit accurate capillary refill and pulse oximetry monitoring)."
+  },
+  {
+    "question": "A male client is admitted and diagnosed with acute pancreatitis after a holiday celebration of excessive food and alcohol. Which assessment finding reflects this diagnosis?",
+    "choices": [
+      "Blood pressure above normal range.",
+      "Presence of crackles in both lung fields.",
+      "Hyperactive bowel sounds",
+      "Sudden onset of continuous epigastric and back pain."
+    ],
+    "answer": 3,
+    "explanation": "The hallmark clinical symptom of acute pancreatitis is severe, continuous epigastric abdominal pain that often radiates directly to the back."
+  },
+  {
+    "question": "Which dietary guidelines are important for nurse Oliver to implement in caring for the client with burns?",
+    "choices": [
+      "Provide high-fiber, high-fat diet",
+      "Provide high-protein, high-carbohydrate diet.",
+      "Monitor intake to prevent weight gain.",
+      "Provide ice chips or water intake."
+    ],
+    "answer": 1,
+    "explanation": "Severe burn injuries induce a massive hypermetabolic and hypercatabolic state, requiring a diet high in protein (for wound healing and tissue repair) and carbohydrates (for energy)."
+  },
+  {
+    "question": "Nurse Hazel will administer a unit of whole blood, which priority information should the nurse have about the client?",
+    "choices": [
+      "Blood pressure and pulse rate.",
+      "Height and weight.",
+      "Calcium and potassium levels",
+      "Hgb and Hct levels."
+    ],
+    "answer": 0,
+    "explanation": "Baseline vital signs, particularly blood pressure and pulse, must be obtained immediately prior to starting a blood transfusion to serve as a reference point for detecting acute transfusion reactions."
+  },
+  {
+    "question": "Nurse Michelle witnesses a female client sustain a fall and suspects that the leg may be broken. The nurse takes which priority action?",
+    "choices": [
+      "Takes a set of vital signs.",
+      "Call the radiology department for X-ray.",
+      "Reassure the client that everything will be alright.",
+      "Immobilize the leg before moving the client."
+    ],
+    "answer": 3,
+    "explanation": "When a fracture is suspected, immobilizing the extremity prior to moving the client prevents further tissue trauma, blood vessel damage, severe pain, and neurovascular impairment."
+  },
+  {
+    "question": "A male client is being transferred to the nursing unit for admission after receiving a radium implant for bladder cancer. The nurse in-charge would take which priority action in the care of this client?",
+    "choices": [
+      "Place client on reverse isolation.",
+      "Admit the client into a private room.",
+      "Encourage the client to take frequent rest periods.",
+      "Encourage family and friends to visit."
+    ],
+    "answer": 1,
+    "explanation": "Clients undergoing internal radiation therapy (brachytherapy) emit radiation and must be assigned to a private room with dedicated facilities to protect healthcare personnel and other clients from exposure."
+  },
+  {
+    "question": "A newly admitted female client was diagnosed with agranulocytosis. The nurse formulates which priority nursing diagnosis?",
+    "choices": [
+      "Constipation",
+      "Diarrhea",
+      "Risk for infection",
+      "Deficient knowledge"
+    ],
+    "answer": 2,
+    "explanation": "Agranulocytosis is a severe drop in white blood cell count (granulocytes), severely compromising the immune system and placing the client at extreme risk for life-threatening opportunistic infections."
+  },
+  {
+    "question": "A male client is receiving total parenteral nutrition suddenly demonstrates signs and symptoms of an air embolism. What is the priority action by the nurse?",
+    "choices": [
+      "Notify the physician.",
+      "Place the client on the left side in the Trendelenburg position.",
+      "Place the client in high-Fowlers position.",
+      "Stop the total parenteral nutrition."
+    ],
+    "answer": 1,
+    "explanation": "Positioning the client in the left lateral Trendelenburg position causes trapped air bubbles to rise into the apex of the right ventricle, preventing the air embolism from entering the pulmonary artery."
+  },
+  {
+    "question": "Nurse May attends an educational conference on leadership styles. The nurse is sitting with a nurse employed at a large trauma center who states that the leadership style at the trauma center is task-oriented and directive. The nurse determines that the leadership style used at the trauma center is:",
+    "choices": [
+      "Autocratic.",
+      "Laissez-faire.",
+      "Democratic.",
+      "Situational"
+    ],
+    "answer": 0,
+    "explanation": "Autocratic leadership is characterized by directive control, clear task orientation, and top-down decision-making without consulting team members."
+  },
+  {
+    "question": "The physician orders DS 500 cc with KCl 10 mEq/liter at 30 cc/hr. The nurse in-charge is going to hang a 500 cc bag. KCl is supplied 20 mEq/10 cc. How many cc’s of KCl will be added to the IV solution?",
+    "choices": [
+      ".5 cc",
+      "5 cc",
+      "1.5 cc",
+      "2.5 cc"
+    ],
+    "answer": 3,
+    "explanation": "The order requires 10 mEq of KCl per liter (1000 cc). For a 500 cc bag, 5 mEq of KCl is required. Given 20 mEq/10 cc (2 mEq/cc), 5 mEq ÷ 2 mEq/cc = 2.5 cc."
+  },
+  {
+    "question": "A child of 10 years old is to receive 400 cc of IV fluid in an 8 hour shift. The IV drip factor is 60. The IV rate that will deliver this amount is:",
+    "choices": [
+      "50 cc/ hour",
+      "55 cc/ hour",
+      "24 cc/ hour",
+      "66 cc/ hour"
+    ],
+    "answer": 0,
+    "explanation": "To calculate hourly infusion rate: 400 cc ÷ 8 hours = 50 cc/hour."
+  },
+  {
+    "question": "The nurse is aware that the most important nursing action when a client returns from surgery is:",
+    "choices": [
+      "Assess the IV for type of fluid and rate of flow.",
+      "Assess the client for presence of pain.",
+      "Assess the Foley catheter for patency and urine output",
+      "Assess the dressing for drainage."
+    ],
+    "answer": 1,
+    "explanation": "Assessing the client's immediate comfort, vital status, and pain level enables proper stabilization and early detection of postoperative distress."
+  },
+  {
+    "question": "Which of the following vital sign assessments that may indicate cardiogenic shock after myocardial infarction?",
+    "choices": [
+      "BP – 80/60, Pulse – 110 irregular",
+      "BP – 90/50, Pulse – 50 regular",
+      "BP – 130/80, Pulse – 100 regular",
+      "BP – 180/100, Pulse – 90 irregular"
+    ],
+    "answer": 0,
+    "explanation": "Cardiogenic shock is characterized by severe hypotension (systolic BP < 90 mmHg) and compensatory tachycardia with irregular, weak cardiac rhythms due to pump failure."
+  },
+  {
+    "question": "Which is the most appropriate nursing action in obtaining a blood pressure measurement?",
+    "choices": [
+      "Take the proper equipment, place the client in a comfortable position, and record the appropriate information in the client’s chart.",
+      "Measure the client’s arm, if you are not sure of the size of cuff to use.",
+      "Have the client recline or sit comfortably in a chair with the forearm at the level of the heart.",
+      "Document the measurement, which extremity was used, and the position that the client was in during the measurement."
+    ],
+    "answer": 0,
+    "explanation": "Selecting appropriate equipment and placing the client comfortably ensures foundational clinical accuracy prior to recording parameters."
+  },
+  {
+    "question": "Asking the questions to determine if the person understands the health teaching provided by the nurse would be included during which step of the nursing process?",
+    "choices": [
+      "Assessment",
+      "Evaluation",
+      "Implementation",
+      "Planning and goals"
+    ],
+    "answer": 1,
+    "explanation": "Evaluation involves reassessing client understanding and determining whether the desired learning outcomes and goals were successfully achieved."
+  },
+  {
+    "question": "Which of the following item is considered the single most important factor in assisting the health professional in arriving at a diagnosis or determining the person’s needs?",
+    "choices": [
+      "Diagnostic test results",
+      "Biographical date",
+      "History of present illness",
+      "Physical examination"
+    ],
+    "answer": 2,
+    "explanation": "A detailed history of the present illness provides the vital subjective context and clinical timeline necessary to direct diagnostic investigations and determine client needs."
+  },
+  {
+    "question": "In preventing the development of an external rotation deformity of the hip in a client who must remain in bed for any period of time, the most appropriate nursing action would be to use:",
+    "choices": [
+      "Trochanter roll extending from the crest of the ileum to the midthigh.",
+      "Pillows under the lower legs.",
+      "Footboard",
+      "Hip-abductor pillow"
+    ],
+    "answer": 0,
+    "explanation": "A trochanter roll placed alongside the lateral surface of the hip prevents external rotation of the femur when the client is immobilized in a supine position."
+  },
+  {
+    "question": "Which stage of pressure ulcer development does the ulcer extend into the subcutaneous tissue?",
+    "choices": [
+      "Stage I",
+      "Stage II",
+      "Stage III",
+      "Stage IV"
+    ],
+    "answer": 2,
+    "explanation": "Stage III pressure ulcers are characterized by full-thickness skin loss extending into the subcutaneous tissue layer, without exposing bone, tendon, or muscle."
+  },
+  {
+    "question": "When the method of wound healing is one in which wound edges are not surgically approximated and integumentary continuity is restored by granulations, the wound healing is termed",
+    "choices": [
+      "Second intention healing",
+      "Primary intention healing",
+      "Third intention healing",
+      "First intention healing"
+    ],
+    "answer": 0,
+    "explanation": "Healing by secondary intention occurs when open wounds with unapproximated edges gradually fill in from the base with granulation tissue."
+  },
+  {
+    "question": "An 80-year-old male client is admitted to the hospital with a diagnosis of pneumonia. Nurse Oliver learns that the client lives alone and hasn’t been eating or drinking. When assessing him for dehydration, nurse Oliver would expect to find:",
+    "choices": [
+      "Hypothermia",
+      "Hypertension",
+      "Distended neck veins",
+      "Tachycardia"
+    ],
+    "answer": 3,
+    "explanation": "Dehydration reduces circulatory vascular volume, causing compensatory tachycardia to maintain adequate cardiac output."
+  },
+  {
+    "question": "The physician prescribes meperidine (Demerol), 75 mg I.M. every 4 hours as needed, to control a client’s postoperative pain. The package insert is “Meperidine, 100 mg/ml.” How many milliliters of meperidine should the client receive?",
+    "choices": [
+      "0.75",
+      "0.6",
+      "0.5",
+      "0.25"
+    ],
+    "answer": 0,
+    "explanation": "Using the dosage formula: Desired (75 mg) ÷ Have (100 mg/mL) = 0.75 mL."
+  },
+  {
+    "question": "A male client with diabetes mellitus is receiving insulin. Which statement correctly describes an insulin unit?",
+    "choices": [
+      "It’s a common measurement in the metric system.",
+      "It’s the basis for solids in the avoirdupois system.",
+      "It’s the smallest measurement in the apothecary system.",
+      "It’s a measure of effect, not a standard measure of weight or quantity."
+    ],
+    "answer": 3,
+    "explanation": "An insulin unit is a standardized biological measure of physiological effect or potency rather than a mass or metric measurement of weight."
+  },
+  {
+    "question": "Nurse Oliver measures a client’s temperature at 102° F. What is the equivalent Centigrade temperature?",
+    "choices": [
+      "40.1 °C",
+      "38.9 °C",
+      "48 °C",
+      "38 °C"
+    ],
+    "answer": 1,
+    "explanation": "To convert Fahrenheit to Celsius: (°F - 32) × 5/9 = (102 - 32) × 5/9 = 70 × 5/9 = 38.88°C ≈ 38.9°C."
+  },
+  {
+    "question": "The nurse is assessing a 48-year-old client who has come to the physician’s office for his annual physical exam. One of the first physical signs of aging is:",
+    "choices": [
+      "Accepting limitations while developing assets.",
+      "Increasing loss of muscle tone.",
+      "Failing eyesight, especially close vision.",
+      "Having more frequent aches and pains."
+    ],
+    "answer": 2,
+    "explanation": "Presbyopia, the gradual loss of the eye's ability to focus on near objects due to decreased lens elasticity, is commonly one of the earliest physical manifestations of aging."
+  },
+  {
+    "question": "The physician inserts a chest tube into a female client to treat a pneumothorax. The tube is connected to water-seal drainage. The nurse in-charge can prevent chest tube air leaks by:",
+    "choices": [
+      "Checking and taping all connections.",
+      "Checking patency of the chest tube.",
+      "Keeping the head of the bed slightly elevated.",
+      "Keeping the chest drainage system below the level of the chest."
+    ],
+    "answer": 0,
+    "explanation": "Ensuring all tube-to-system connections are securely taped prevents atmospheric air from leaking into the closed chest drainage system."
+  },
+  {
+    "question": "Nurse Trish must verify the client’s identity before administering medication. She is aware that the safest way to verify identity is to:",
+    "choices": [
+      "Check the client’s identification band.",
+      "Ask the client to state his name.",
+      "State the client’s name out loud and wait a client to repeat it.",
+      "Check the room number and the client’s name on the bed."
+    ],
+    "answer": 0,
+    "explanation": "Checking the client's wrist identification band directly against the medication administration record provides the primary, error-free method of client verification."
+  },
+  {
+    "question": "The physician orders dextrose 5 % in water, 1,000 ml to be infused over 8 hours. The I.V. tubing delivers 15 drops/ml. Nurse John should run the I.V. infusion at a rate of:",
+    "choices": [
+      "30 drops/minute",
+      "32 drops/minute",
+      "20 drops/minute",
+      "18 drops/minute"
+    ],
+    "answer": 1,
+    "explanation": "Formula: (Volume in mL × Drop factor) ÷ Time in minutes = (1000 mL × 15) ÷ (8 hours × 60 min) = 15000 ÷ 480 = 31.25 ≈ 31-32 gtts/min."
+  },
+  {
+    "question": "If a central venous catheter becomes disconnected accidentally, what should the nurse in-charge do immediately?",
+    "choices": [
+      "Clamp the catheter",
+      "Call another nurse",
+      "Call the physician",
+      "Apply a dry sterile dressing to the site."
+    ],
+    "answer": 0,
+    "explanation": "Clamping the catheter immediately prevents atmospheric air from entering the central circulation and causing a fatal air embolism."
+  },
+  {
+    "question": "A female client was recently admitted. She has fever, weight loss, and watery diarrhea is being admitted to the facility. While assessing the client, Nurse Hazel inspects the client’s abdomen and notice that it is slightly concave. Additional assessment should proceed in which order:",
+    "choices": [
+      "Palpation, auscultation, and percussion.",
+      "Percussion, palpation, and auscultation.",
+      "Palpation, percussion, and auscultation.",
+      "Auscultation, percussion, and palpation."
+    ],
+    "answer": 3,
+    "explanation": "The proper sequential order for abdominal physical assessment is Inspection, Auscultation, Percussion, and Palpation so that mechanical manipulation does not alter bowel sounds."
+  },
+  {
+    "question": "Nurse Betty is assessing tactile fremitus in a client with pneumonia. For this examination, nurse Betty should use the:",
+    "choices": [
+      "Fingertips",
+      "Finger pads",
+      "Dorsal surface of the hand",
+      "Ulnar surface of the hand"
+    ],
+    "answer": 3,
+    "explanation": "The ulnar aspect or palmar base of the hand is most sensitive to low-frequency tactile vibrations transmitted through the chest wall."
+  },
+  {
+    "question": "Which type of evaluation occurs continuously throughout the teaching and learning process?",
+    "choices": [
+      "Summative",
+      "Informative",
+      "Formative",
+      "Retrospective"
+    ],
+    "answer": 2,
+    "explanation": "Formative evaluation occurs continuously during the instructional process to monitor progress and adjust teaching tactics dynamically."
+  },
+  {
+    "question": "A 45 year old client, has no family history of breast cancer or other risk factors for this disease. Nurse John should instruct her to have mammogram how often?",
+    "choices": [
+      "Twice per year",
+      "Once per year",
+      "Every 2 years",
+      "Once, to establish baseline"
+    ],
+    "answer": 1,
+    "explanation": "Standard traditional screening guidelines recommend annual mammography for average-risk women starting around age 40 to 45."
+  },
+  {
+    "question": "A male client has the following arterial blood gas values: pH 7.30; Pao2 89 mmHg; Paco2 50 mmHg; and HCO3 26mEq/L. Based on these values, Nurse Patricia should expect which condition?",
+    "choices": [
+      "Respiratory acidosis",
+      "Respiratory alkalosis",
+      "Metabolic acidosis",
+      "Metabolic alkalosis"
+    ],
+    "answer": 0,
+    "explanation": "A pH below 7.35 indicates acidosis, and an elevated PaCO2 (>45 mmHg) with normal bicarbonate indicates respiratory origin."
+  },
+  {
+    "question": "Nurse Len refers a female client with terminal cancer to a local hospice. What is the goal of this referral?",
+    "choices": [
+      "To help the client find appropriate treatment options.",
+      "To provide support for the client and family in coping with terminal illness.",
+      "To ensure that the client gets counseling regarding health care costs.",
+      "To teach the client and family about cancer and its treatment."
+    ],
+    "answer": 1,
+    "explanation": "Hospice care focuses on palliative management, quality of life, and comprehensive supportive care for terminally ill clients and their families."
+  },
+  {
+    "question": "When caring for a male client with a 3-cm stage I pressure ulcer on the coccyx, which of the following actions can the nurse institute independently?",
+    "choices": [
+      "Massaging the area with an astringent every 2 hours.",
+      "Applying an antibiotic cream to the area three times per day.",
+      "Using normal saline solution to clean the ulcer and applying a protective dressing as necessary.",
+      "Using a povidone-iodine wash on the ulceration three times per day."
+    ],
+    "answer": 2,
+    "explanation": "Cleansing with non-cytotoxic solutions like normal saline and applying protective wound coverings fall within independent nursing scope of practice."
+  },
+  {
+    "question": "Nurse Oliver must apply an elastic bandage to a client’s ankle and calf. He should apply the bandage beginning at the client’s:",
+    "choices": [
+      "Knee",
+      "Ankle",
+      "Lower thigh",
+      "Foot"
+    ],
+    "answer": 3,
+    "explanation": "Elastic compression bandages must be wrapped distal to proximal (starting at the foot) to promote venous return and prevent peripheral venous stasis."
+  },
+  {
+    "question": "A 10 year old child with type 1 diabetes develops diabetic ketoacidosis and receives a continuous insulin infusion. Which condition represents the greatest risk to this child?",
+    "choices": [
+      "Hypernatremia",
+      "Hypokalemia",
+      "Hyperphosphatemia",
+      "Hypercalcemia"
+    ],
+    "answer": 1,
+    "explanation": "Insulin administration drives extracellular potassium back into cells, which can induce rapid hypokalemia and precipitate fatal cardiac dysrhythmias."
+  },
+  {
+    "question": "Nurse Len is administering sublingual nitrglycerin (Nitrostat) to the newly admitted client. Immediately afterward, the client may experience:",
+    "choices": [
+      "Throbbing headache or dizziness",
+      "Nervousness or paresthesia.",
+      "Drowsiness or blurred vision.",
+      "Tinnitus or diplopia."
+    ],
+    "answer": 0,
+    "explanation": "Nitroglycerin causes widespread systemic vasodilation, frequently resulting in transient cerebral vasodilation (throbbing headache) and postural hypotension/dizziness."
+  },
+  {
+    "question": "Nurse Michelle hears the alarm sound on the telemetry monitor. The nurse quickly looks at the monitor and notes that a client is in a ventricular tachycardia. The nurse rushes to the client’s room. Upon reaching the client’s bedside, the nurse would take which action first?",
+    "choices": [
+      "Prepare for cardioversion",
+      "Prepare to defibrillate the client",
+      "Call a code",
+      "Check the client’s level of consciousness"
+    ],
+    "answer": 3,
+    "explanation": "The initial step when observing ventricular tachycardia on a telemetry monitor is to assess the client's clinical responsiveness and presence of a pulse before initiating interventions."
+  },
+  {
+    "question": "Nurse Hazel is preparing to ambulate a female client. The best and the safest position for the nurse in assisting the client is to stand:",
+    "choices": [
+      "On the unaffected side of the client.",
+      "On the affected side of the client.",
+      "In front of the client.",
+      "Behind the client."
+    ],
+    "answer": 1,
+    "explanation": "Standing slightly behind and on the client's affected (weaker) side allows the nurse to offer optimum physical support if the client loses balance."
+  },
+  {
+    "question": "Nurse Janah is monitoring the ongoing care given to the potential organ donor who has been diagnosed with brain death. The nurse determines that the standard of care had been maintained if which of the following data is observed?",
+    "choices": [
+      "Urine output: 45 ml/hr",
+      "Capillary refill: 5 seconds",
+      "Serum pH: 7.32",
+      "Blood pressure: 90/48 mmHg"
+    ],
+    "answer": 0,
+    "explanation": "Maintaining adequate end-organ perfusion in a brain-dead organ donor requires maintaining urine output at or above 30-50 mL/hour."
+  },
+  {
+    "question": "Nurse Amy has an order to obtain a urinalysis from a male client with an indwelling urinary catheter. The nurse avoids which of the following, which contaminate the specimen?",
+    "choices": [
+      "Wiping the port with an alcohol swab before inserting the syringe.",
+      "Aspirating a sample from the port on the drainage bag.",
+      "Clamping the tubing of the drainage bag.",
+      "Obtaining the specimen from the urinary drainage bag."
+    ],
+    "answer": 3,
+    "explanation": "Collecting urine directly from the collection bag risks contamination with bacteria colonizing the container; samples must be aspirated sterilely from the sampling port."
+  },
+  {
+    "question": "Nurse Meredith is in the process of giving a client a bed bath. In the middle of the procedure, the unit secretary calls the nurse on the intercom to tell the nurse that there is an emergency phone call. The appropriate nursing action is to:",
+    "choices": [
+      "Immediately walk out of the client’s room and answer the phone call.",
+      "Cover the client, place the call light within reach, and answer the phone call.",
+      "Finish the bed bath before answering the phone call.",
+      "Leave the client’s door open so the client can be monitored and the nurse can answer the phone call."
+    ],
+    "answer": 1,
+    "explanation": "Ensuring patient warmth, privacy, and safety (call light accessible) before briefly stepping away prioritizes client security during urgent events."
+  },
+  {
+    "question": "Nurse Janah is collecting a sputum specimen for culture and sensitivity testing from a client who has a productive cough. Nurse Janah plans to implement which intervention to obtain the specimen?",
+    "choices": [
+      "Ask the client to expectorate a small amount of sputum into the emesis basin.",
+      "Ask the client to obtain the specimen after breakfast.",
+      "Use a sterile plastic container for obtaining the specimen.",
+      "Provide tissues for expectoration and obtaining the specimen."
+    ],
+    "answer": 2,
+    "explanation": "Culture and sensitivity testing requires strict aseptic collection into a sterile container to avoid environmental contamination."
+  },
+  {
+    "question": "Nurse Ron is observing a male client using a walker. The nurse determines that the client is using the walker correctly if the client:",
+    "choices": [
+      "Puts all the four points of the walker flat on the floor, puts weight on the hand pieces, and then walks into it.",
+      "Puts weight on the hand pieces, moves the walker forward, and then walks into it.",
+      "Puts weight on the hand pieces, slides the walker forward, and then walks into it.",
+      "Walks into the walker, puts weight on the hand pieces, and then puts all four points of the walker flat on the floor."
+    ],
+    "answer": 0,
+    "explanation": "Correct walker safety involves placing all four tips firmly on the ground before bearing weight through the handles and stepping forward."
+  },
+  {
+    "question": "Nurse Amy has documented an entry regarding client care in the client’s medical record. When checking the entry, the nurse realizes that incorrect information was documented. How does the nurse correct this error?",
+    "choices": [
+      "Erases the error and writes in the correct information.",
+      "Uses correction fluid to cover up the incorrect information and writes in the correct information.",
+      "Draws one line to cross out the incorrect information and then initials the change.",
+      "Covers up the incorrect information completely using a black pen and writes in the correct information"
+    ],
+    "answer": 2,
+    "explanation": "Legal medical documentation standards require drawing a single line through an error, leaving it legible, and initialing/dating the correction."
+  },
+  {
+    "question": "Nurse Ron is assisting with transferring a client from the operating room table to a stretcher. To provide safety to the client, the nurse should:",
+    "choices": [
+      "Moves the client rapidly from the table to the stretcher.",
+      "Uncovers the client completely before transferring to the stretcher.",
+      "Secures the client safety belts after transferring to the stretcher.",
+      "Instructs the client to move self from the table to the stretcher."
+    ],
+    "answer": 2,
+    "explanation": "Fastening safety straps immediately upon positioning the client on a transfer stretcher prevents falls during transport."
+  },
+  {
+    "question": "Nurse Myrna is providing instructions to a nursing assistant assigned to give a bed bath to a client who is on contact precautions. Nurse Myrna instructs the nursing assistant to use which of the following protective items when giving bed bath?",
+    "choices": [
+      "Gown and goggles",
+      "Gown and gloves",
+      "Gloves and shoe protectors",
+      "Gloves and goggles"
+    ],
+    "answer": 1,
+    "explanation": "Contact precautions require wearing a gown and gloves for direct physical contact with the client or immediate environment."
+  },
+  {
+    "question": "Nurse Oliver is caring for a client with impaired mobility that occurred as a result of a stroke. The client has right sided arm and leg weakness. The nurse would suggest that the client use which of the following assistive devices that would provide the best stability for ambulating?",
+    "choices": [
+      "Crutches",
+      "Single straight-legged cane",
+      "Quad cane",
+      "Walker"
+    ],
+    "answer": 2,
+    "explanation": "A quad cane provides a wide, stable base of support for clients with hemiparesis while allowing single-handed operation."
+  },
+  {
+    "question": "A male client with a right pleural effusion noted on a chest X-ray is being prepared for thoracentesis. The client experiences severe dizziness when sitting upright. To provide a safe environment, the nurse assists the client to which position for the procedure?",
+    "choices": [
+      "Prone with head turned toward the side supported by a pillow.",
+      "Sims’ position with the head of the bed flat.",
+      "Right side-lying with the head of the bed elevated 45 degrees.",
+      "Left side-lying with the head of the bed elevated 45 degrees."
+    ],
+    "answer": 3,
+    "explanation": "If a client cannot sit upright, positioning them lying on the unaffected side (left) with the head elevated provides access to the affected pleural space while preventing dizziness."
+  },
+  {
+    "question": "Nurse John develops methods for data gathering. Which of the following criteria of a good instrument refers to the ability of the instrument to yield the same results upon its repeated administration?",
+    "choices": [
+      "Validity",
+      "Specificity",
+      "Sensitivity",
+      "Reliability"
+    ],
+    "answer": 3,
+    "explanation": "Reliability refers to the consistency or repeatability of a measurement tool across multiple administrations."
+  },
+  {
+    "question": "Harry knows that he has to protect the rights of human research subjects. Which of the following actions of Harry ensures anonymity?",
+    "choices": [
+      "Keep the identities of the subject secret",
+      "Obtain informed consent",
+      "Provide equal treatment to all the subjects of the study.",
+      "Release findings only to the participants of the study"
+    ],
+    "answer": 0,
+    "explanation": "Anonymity is maintained when the researcher cannot link individual subjects to their reported data or identities."
+  },
+  {
+    "question": "Patient’s refusal to divulge information is a limitation because it is beyond the control of Tifanny”. What type of research is appropriate for this study?",
+    "choices": [
+      "Descriptive- correlational",
+      "Experiment",
+      "Quasi-experiment",
+      "Historical"
+    ],
+    "answer": 0,
+    "explanation": "Descriptive-correlational studies assess naturally occurring relationships among variables without direct experimental manipulation."
+  },
+  {
+    "question": "Nurse Ronald is aware that the best tool for data gathering is?",
+    "choices": [
+      "Interview schedule",
+      "Questionnaire",
+      "Use of laboratory data",
+      "Observation"
+    ],
+    "answer": 2,
+    "explanation": "Laboratory data offers objective, precise, and measurable physiological parameters, minimizing subjective reporting bias."
+  },
+  {
+    "question": "Monica is aware that there are times when only manipulation of study variables is possible and the elements of control or randomization are not attendant. Which type of research is referred to this?",
+    "choices": [
+      "Field study",
+      "Quasi-experiment",
+      "Solomon-Four group design",
+      "Post-test only design"
+    ],
+    "answer": 1,
+    "explanation": "Quasi-experimental designs involve manipulation of an independent variable but lack random assignment or full control group comparison."
+  },
+  {
+    "question": "Cherry notes down ideas that were derived from the description of an investigation written by the person who conducted it. Which type of reference source refers to this?",
+    "choices": [
+      "Footnote",
+      "Bibliography",
+      "Primary source",
+      "Endnotes"
+    ],
+    "answer": 2,
+    "explanation": "A primary source is an original report or document authored by the investigator who directly conducted the research."
+  },
+  {
+    "question": "When Nurse Trish is providing care to his patient, she must remember that her duty is bound not to do doing any action that will cause the patient harm. This is the meaning of the bioethical principle:",
+    "choices": [
+      "Non-maleficence",
+      "Beneficence",
+      "Justice",
+      "Solidarity"
+    ],
+    "answer": 0,
+    "explanation": "Non-maleficence is the bioethical duty to do no harm to the patient."
+  },
+  {
+    "question": "When a nurse in-charge causes an injury to a female patient and the injury caused becomes the proof of the negligent act, the presence of the injury is said to exemplify the principle of:",
+    "choices": [
+      "Force majeure",
+      "Respondeat superior",
+      "Res ipsa loquitor",
+      "Holdover doctrine"
+    ],
+    "answer": 2,
+    "explanation": "Res ipsa loquitur (\"the thing speaks for itself\") applies when an injury clearly indicates that negligence occurred because the harm could not have happened without it."
+  },
+  {
+    "question": "Nurse Myrna is aware that the Board of Nursing has quasi-judicial power. An example of this power is:",
+    "choices": [
+      "The Board can issue rules and regulations that will govern the practice of nursing",
+      "The Board can investigate violations of the nursing law and code of ethics",
+      "The Board can visit a school applying for a permit in collaboration with CHED",
+      "The Board prepares the board examinations"
+    ],
+    "answer": 1,
+    "explanation": "Quasi-judicial powers authorize administrative boards to investigate, hear, and adjudicate potential legal and ethical violations."
+  },
+  {
+    "question": "When the license of nurse Krina is revoked, it means that she:",
+    "choices": [
+      "Is no longer allowed to practice the profession for the rest of her life",
+      "Will never have her/his license re-issued since it has been revoked",
+      "May apply for re-issuance of his/her license based on certain conditions stipulated in RA 9173",
+      "Will remain unable to practice professional nursing"
+    ],
+    "answer": 2,
+    "explanation": "Under nursing regulation laws (e.g., RA 9173), a revoked license may be re-issued upon application after satisfying specified statutory criteria and timeline requirements."
+  },
+  {
+    "question": "Ronald plans to conduct a research on the use of a new method of pain assessment scale. Which of the following is the second step in the conceptualizing phase of the research process?",
+    "choices": [
+      "Formulating the research hypothesis",
+      "Review related literature",
+      "Formulating and delimiting the research problem",
+      "Design the theoretical and conceptual framework"
+    ],
+    "answer": 1,
+    "explanation": "Following the initial formulation of the research problem, conducting a thorough review of related literature is the second step in conceptualizing a research study."
+  },
+  {
+    "question": "The leader of the study knows that certain patients who are in a specialized research setting tend to respond psychologically to the conditions of the study. This referred to as :",
+    "choices": [
+      "Cause and effect",
+      "Hawthorne effect",
+      "Halo effect",
+      "Horns effect"
+    ],
+    "answer": 1,
+    "explanation": "The Hawthorne effect occurs when study participants alter their behavior simply because they are conscious of being observed."
+  },
+  {
+    "question": "Mary finally decides to use judgment sampling on her research. Which of the following actions of is correct?",
+    "choices": [
+      "Plans to include whoever is there during his study.",
+      "Determines the different nationality of patients frequently admitted and decides to get representations samples from each.",
+      "Assigns numbers for each of the patients, place these in a fishbowl and draw 10 from it.",
+      "Decides to get 20 samples from the admitted patients"
+    ],
+    "answer": 1,
+    "explanation": "Judgmental (purposive) sampling involves selecting participants based on pre-established clinical criteria and subjective expert selection."
+  },
+  {
+    "question": "The nursing theorist who developed transcultural nursing theory is:",
+    "choices": [
+      "Florence Nightingale",
+      "Madeleine Leininger",
+      "Albert Moore",
+      "Sr. Callista Roy"
+    ],
+    "answer": 1,
+    "explanation": "Madeleine Leininger founded Transcultural Nursing Theory (Culture Care Diversity and Universality)."
+  },
+  {
+    "question": "Marion is aware that the sampling method that gives equal chance to all units in the population to get picked is:",
+    "choices": [
+      "Random",
+      "Accidental",
+      "Quota",
+      "Judgment"
+    ],
+    "answer": 0,
+    "explanation": "Simple random sampling ensures every member of the target population has an equal and independent probability of selection."
+  },
+  {
+    "question": "John plans to use a Likert Scale to his study to determine the:",
+    "choices": [
+      "Degree of agreement and disagreement",
+      "Compliance to expected standards",
+      "Level of satisfaction",
+      "Degree of acceptance"
+    ],
+    "answer": 0,
+    "explanation": "A standard Likert scale measures the extent or intensity of a participant's agreement or disagreement with specific statements."
+  },
+  {
+    "question": "Which of the following theory addresses the four modes of adaptation?",
+    "choices": [
+      "Madeleine Leininger",
+      "Sr. Callista Roy",
+      "Florence Nightingale",
+      "Jean Watson"
+    ],
+    "answer": 1,
+    "explanation": "Sister Callista Roy's Adaptation Model defines four adaptive modes: physiological-physical, self-concept-group identity, role function, and interdependence."
+  },
+  {
+    "question": "Ms. Garcia is responsible to the number of personnel reporting to her. This principle refers to:",
+    "choices": [
+      "Span of control",
+      "Unity of command",
+      "Downward communication",
+      "Leader"
+    ],
+    "answer": 0,
+    "explanation": "Span of control defines the specific number of subordinates directly supervised by a manager."
+  },
+  {
+    "question": "Ensuring that there is an informed consent on the part of the patient before a surgery is done, illustrates the bioethical principle of:",
+    "choices": [
+      "Beneficence",
+      "Autonomy",
+      "Veracity",
+      "Non-maleficence"
+    ],
+    "answer": 1,
+    "explanation": "Informed consent honors self-determination and client autonomy in medical decision-making."
+  },
+  {
+    "question": "Nurse Reese is teaching a female client with peripheral vascular disease about foot care; Nurse Reese should include which instruction?",
+    "choices": [
+      "Avoid wearing cotton socks.",
+      "Avoid using a nail clipper to cut toenails.",
+      "Avoid wearing canvas shoes.",
+      "Avoid using cornstarch on feet."
+    ],
+    "answer": 2,
+    "explanation": "Clients with peripheral vascular disease should avoid canvas or synthetic shoes that do not breathe or offer protective structure."
+  },
+  {
+    "question": "A client is admitted with multiple pressure ulcers. When developing the client’s diet plan, the nurse should include:",
+    "choices": [
+      "Fresh orange slices",
+      "Steamed broccoli",
+      "Ice cream",
+      "Ground beef patties"
+    ],
+    "answer": 3,
+    "explanation": "Ground beef is high in complete biological protein, necessary for tissue regeneration and pressure ulcer healing."
+  },
+  {
+    "question": "The nurse prepares to administer a cleansing enema. What is the most common client position used for this procedure?",
+    "choices": [
+      "Lithotomy",
+      "Supine",
+      "Prone",
+      "Sims’ left lateral"
+    ],
+    "answer": 3,
+    "explanation": "Sims' left lateral position facilitates fluid flow along the natural anatomical curvature of the sigmoid colon and rectum."
+  },
+  {
+    "question": "Nurse Marian is preparing to administer a blood transfusion. Which action should the nurse take first?",
+    "choices": [
+      "Arrange for typing and cross matching of the client’s blood.",
+      "Compare the client’s identification wristband with the tag on the unit of blood.",
+      "Start an I.V. infusion of normal saline solution.",
+      "Measure the client’s vital signs."
+    ],
+    "answer": 0,
+    "explanation": "Ensuring blood typing and crossmatching is completed precedes receiving or preparing blood components for infusion."
+  },
+  {
+    "question": "A 65 years old male client requests his medication at 9 p.m. instead of 10 p.m. so that he can go to sleep earlier. Which type of nursing intervention is required?",
+    "choices": [
+      "Independent",
+      "Dependent",
+      "Interdependent",
+      "Intradependent"
+    ],
+    "answer": 0,
+    "explanation": "Adjusting administrative timing within safe institutional parameters to support patient routine is an independent nursing action."
+  },
+  {
+    "question": "A female client is to be discharged from an acute care facility after treatment for right leg thrombophlebitis. The Nurse Betty notes that the client’s leg is pain-free, without redness or edema. The nurse’s actions reflect which step of the nursing process?",
+    "choices": [
+      "Assessment",
+      "Diagnosis",
+      "Implementation",
+      "Evaluation"
+    ],
+    "answer": 3,
+    "explanation": "Comparing client physical status against expected therapeutic outcomes constitutes evaluation."
+  },
+  {
+    "question": "Nursing care for a female client includes removing elastic stockings once per day. The Nurse Betty is aware that the rationale for this intervention?",
+    "choices": [
+      "To increase blood flow to the heart",
+      "To observe the lower extremities",
+      "To allow the leg muscles to stretch and relax",
+      "To permit veins in the legs to fill with blood."
+    ],
+    "answer": 1,
+    "explanation": "Daily removal allows inspection of underlying skin integrity and tissue perfusion."
+  },
+  {
+    "question": "Which nursing intervention takes highest priority when caring for a newly admitted client who’s receiving a blood transfusion?",
+    "choices": [
+      "Instructing the client to report any itching, swelling, or dyspnea.",
+      "Informing the client that the transfusion usually take 1 ½ to 2 hours.",
+      "Documenting blood administration in the client care record.",
+      "Assessing the client’s vital signs when the transfusion ends."
+    ],
+    "answer": 0,
+    "explanation": "Patient education regarding early reaction symptoms allows immediate intervention during acute transfusion events."
+  },
+  {
+    "question": "A male client complains of abdominal discomfort and nausea while receiving tube feedings. Which intervention is most appropriate for this problem?",
+    "choices": [
+      "Give the feedings at room temperature.",
+      "Decrease the rate of feedings and the concentration of the formula.",
+      "Place the client in semi-Fowler’s position while feeding.",
+      "Change the feeding container every 12 hours."
+    ],
+    "answer": 1,
+    "explanation": "Slowing administration rate and osmolarity reduces GI distress, delayed gastric emptying, and hyperosmolality."
+  },
+  {
+    "question": "Nurse Patricia is reconstituting a powdered medication in a vial. After adding the solution to the powder, she nurse should:",
+    "choices": [
+      "Do nothing.",
+      "Invert the vial and let it stand for 3 to 5 minutes.",
+      "Shake the vial vigorously.",
+      "Roll the vial gently between the palms."
+    ],
+    "answer": 3,
+    "explanation": "Gently rolling avoids shearing protein structures or producing excess agitation and foaming."
+  },
+  {
+    "question": "Which intervention should the nurse Trish use when administering oxygen by face mask to a female client?",
+    "choices": [
+      "Secure the elastic band tightly around the client’s head.",
+      "Assist the client to the semi-Fowler position if possible.",
+      "Apply the face mask from the client’s chin up over the nose.",
+      "Loosen the connectors between the oxygen equipment and humidifier."
+    ],
+    "answer": 1,
+    "explanation": "Semi-Fowler's position maximizes diaphragmatic excursion and pulmonary expansion."
+  },
+  {
+    "question": "The maximum transfusion time for a unit of packed red blood cells (RBCs) is:",
+    "choices": [
+      "6 hours",
+      "4 hours",
+      "3 hours",
+      "2 hours"
+    ],
+    "answer": 1,
+    "explanation": "Blood components must complete infusion within 4 hours to minimize bacterial proliferation risks at room temperature."
+  },
+  {
+    "question": "Nurse Monique is monitoring the effectiveness of a client’s drug therapy. When should the nurse Monique obtain a blood sample to measure the trough drug level?",
+    "choices": [
+      "1 hour before administering the next dose.",
+      "Immediately before administering the next dose.",
+      "Immediately after administering the next dose.",
+      "30 minutes after administering the next dose."
+    ],
+    "answer": 1,
+    "explanation": "Trough levels measure minimum circulating serum drug concentration immediately prior to the next scheduled dose."
+  },
+  {
+    "question": "Nurse May is aware that the main advantage of using a floor stock system is:",
+    "choices": [
+      "The nurse can implement medication orders quickly.",
+      "The nurse receives input from the pharmacist.",
+      "The system minimizes transcription errors.",
+      "The system reinforces accurate calculations."
+    ],
+    "answer": 0,
+    "explanation": "Immediate availability of floor stock allows rapid medication retrieval without waiting for pharmacy delivery."
+  },
+  {
+    "question": "Nurse Oliver is assessing a client’s abdomen. Which finding should the nurse report as abnormal?",
+    "choices": [
+      "Dullness over the liver.",
+      "Bowel sounds occurring every 10 seconds.",
+      "Shifting dullness over the abdomen.",
+      "Vascular sounds heard over the renal arteries."
+    ],
+    "answer": 2,
+    "explanation": "Shifting dullness indicates fluid accumulation (ascites) in the peritoneal cavity."
+  }
+  ],
+
+  "pnle-set1-part2": [
+  ],
+  "pnle-set1-part3": [
+  ],
   "pnle-set1-part4": [],
-  "pnle-set1-part3": [],
   "pnle-set1-part5": [],
-  "pnle-set1-part2": [],
+  
   "pnle-set2": [],
   "pnle-set3": [],
   "pnle-exam-1": [
