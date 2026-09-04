@@ -38,11 +38,11 @@ const toast = document.getElementById("toast");
 // =======================
 
 function showLoading() {
-    loading.style.display = "flex";
+    loading.classList.add("show");
 }
 
 function hideLoading() {
-    loading.style.display = "none";
+    loading.classList.remove("show");
 }
 
 function showToast(message) {
@@ -65,19 +65,19 @@ function showToast(message) {
 
 togglePassword.addEventListener("click", () => {
 
-    password.type =
-        password.type === "password"
-        ? "text"
-        : "password";
+    const isText = password.type === "text";
+    password.type = isText ? "password" : "text";
+    togglePassword.setAttribute("aria-pressed", String(!isText));
+    togglePassword.setAttribute("aria-label", isText ? "Show password" : "Hide password");
 
 });
 
 toggleConfirm.addEventListener("click", () => {
 
-    confirmPassword.type =
-        confirmPassword.type === "password"
-        ? "text"
-        : "password";
+    const isText = confirmPassword.type === "text";
+    confirmPassword.type = isText ? "password" : "text";
+    toggleConfirm.setAttribute("aria-pressed", String(!isText));
+    toggleConfirm.setAttribute("aria-label", isText ? "Show confirm password" : "Hide confirm password");
 
 });
 

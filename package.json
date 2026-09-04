@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "impeccable": "^3.6.1",
     "vite": "^8.1.1"
   },
   "dependencies": {

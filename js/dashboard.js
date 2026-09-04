@@ -18,6 +18,7 @@ import {
 } from "firebase/firestore";
 
 import { ensureUserProfile, bumpDailyStreak, getAchievementStatus, awardXP, getMonday, checkAchievements } from "./userProfile.js";
+import { getDailyGoal as readSavedDailyGoal, getUserSettings } from "../utils/utils.js";
 
 // ===========================
 // ELEMENTS
@@ -105,6 +106,32 @@ function renderGoal(answeredToday, dailyGoal) {
     goalFill.style.width = percent + "%";
     goalText.textContent = `${answeredToday}/${dailyGoal} questions today`;
 
+}
+
+// Pull the latest saved Daily Goal (local or remote) and re-render the goal
+// widget. Called on storage events / visibility change so the Dashboard
+// reflects Settings changes without a hard reload.
+async function refreshDailyGoalFromSettings(userRef, answeredToday) {
+    try {
+        let remoteGoal = null;
+        try {
+            const snap = await getDoc(userRef);
+            if (snap.exists() && Number.isFinite(snap.data().dailyGoal)) {
+                remoteGoal = snap.data().dailyGoal;
+            }
+        } catch (err) {
+            console.warn("Daily goal remote refresh failed:", err);
+        }
+
+        const localGoal = readSavedDailyGoal();
+        const next = remoteGoal ?? localGoal;
+        if (Number.isFinite(next) && next > 0) {
+            renderGoal(answeredToday, next);
+            wireGoalEditing(userRef, next, answeredToday);
+        }
+    } catch (err) {
+        console.warn("Daily goal refresh failed:", err);
+    }
 }
 
 function wireGoalEditing(userRef, initialGoal, answeredToday) {
@@ -905,6 +932,22 @@ onAuthStateChanged(auth, async (user) => {
         renderGoal(questionsToday, dailyGoal);
         wireGoalEditing(userRef, dailyGoal, questionsToday);
         wireGoalMilestone(userRef, dailyGoal);
+
+        // React to Settings changes without a manual reload:
+        //  - "storage" fires when another tab/window updates the same
+        //    localStorage key (and across same-tab via custom dispatch).
+        //  - "pageshow"/"visibilitychange" re-read when Dashboard becomes
+        //    visible again after navigating to Settings and back.
+        const onSettingsChanged = () => {
+            refreshDailyGoalFromSettings(userRef, questionsToday);
+        };
+        window.addEventListener("storage", (e) => {
+            if (!e.key || e.key === "nurseprep:settings") onSettingsChanged();
+        });
+        window.addEventListener("pageshow", onSettingsChanged);
+        document.addEventListener("visibilitychange", () => {
+            if (!document.hidden) onSettingsChanged();
+        });
 
         if (goalMilestoneDate !== todayStr) {
             goalMilestoneShown = false;

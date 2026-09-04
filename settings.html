@@ -11,21 +11,106 @@
 </head>
 <body class="dash-body">
 
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 <!-- Sidebar injected by js/sidebar.js -->
 
-<main class="dash-main">
+<main id="main-content" class="dash-main">
   <div class="dash-header">
     <span class="eyebrow">Account · Settings</span>
     <h1>Settings</h1>
-    <p>Manage your account preferences.</p>
+    <p>Manage your study preferences and account access.</p>
   </div>
 
-  <section class="settings-section">
-    <h2>Preferences</h2>
-    <p class="settings-placeholder">Settings options are coming soon.</p>
-  </section>
+  <form id="settingsForm" novalidate>
+
+    <section class="settings-section" aria-labelledby="prefStudy">
+      <h2 id="prefStudy">Study preferences</h2>
+      <p class="settings-help">These apply to your quizzes and study sessions.</p>
+
+      <div class="settings-row">
+        <div class="settings-row-text">
+          <h3>Daily question goal</h3>
+          <p>How many questions do you want to answer each day?</p>
+        </div>
+        <div class="settings-row-control">
+          <input type="number" id="dailyGoal" min="5" max="200" step="5" value="20" inputmode="numeric" class="settings-input" aria-describedby="dailyGoalHint">
+          <small id="dailyGoalHint" class="settings-hint">Between 5 and 200</small>
+        </div>
+      </div>
+
+      <div class="settings-row">
+        <div class="settings-row-text">
+          <h3>Question timer</h3>
+          <p>Seconds allowed per question in timed mode.</p>
+        </div>
+        <div class="settings-row-control">
+          <select id="questionTimer" class="settings-input">
+            <option value="30">30 seconds</option>
+            <option value="45">45 seconds</option>
+            <option value="60" selected>60 seconds</option>
+            <option value="90">90 seconds</option>
+            <option value="0">No timer</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="settings-row">
+        <div class="settings-row-text">
+          <h3>Shuffle questions</h3>
+          <p>Show questions in a random order each session.</p>
+        </div>
+        <div class="settings-row-control">
+          <label class="switch">
+            <input type="checkbox" id="shuffleQuestions" checked>
+            <span class="switch-track"><span class="switch-thumb"></span></span>
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <section class="settings-section" aria-labelledby="prefDisplay">
+      <h2 id="prefDisplay">Display</h2>
+      <p class="settings-help">Visual preferences for this device.</p>
+
+      <div class="settings-row">
+        <div class="settings-row-text">
+          <h3>Reduced motion</h3>
+          <p>Disable non-essential animations and transitions.</p>
+        </div>
+        <div class="settings-row-control">
+          <label class="switch">
+            <input type="checkbox" id="reducedMotion">
+            <span class="switch-track"><span class="switch-thumb"></span></span>
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <section class="settings-section" aria-labelledby="accountActions">
+      <h2 id="accountActions">Account</h2>
+      <p class="settings-help">Security and account access.</p>
+
+      <div class="settings-actions">
+        <a href="profile.html" class="btn btn-secondary">Edit profile</a>
+        <button type="button" class="btn btn-secondary" id="changePasswordBtn">Change password</button>
+        <button type="button" class="btn btn-danger" id="logoutBtn">Log out</button>
+      </div>
+    </section>
+
+    <div class="settings-save-bar">
+      <span class="settings-save-status" id="saveStatus" aria-live="polite"></span>
+      <button type="submit" class="btn btn-primary" id="saveSettings">Save changes</button>
+    </div>
+
+  </form>
 </main>
 
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
 <script type="module" src="js/sidebar.js"></script>
+<script type="module" src="js/settings.js"></script>
 </body>
 </html>
+
+

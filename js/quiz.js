@@ -8,7 +8,9 @@ import {
     getQuestionBank,
     getAvailableQuestionCount,
     pad,
-    getSubjectFromURL
+    getSubjectFromURL,
+    getQuestionTimerSeconds,
+    getUserSettings
 } from "../utils/utils.js";
 
 import {
@@ -73,14 +75,25 @@ function getCanonicalSubjectKey() {
     return currentSubject || currentQuizId || "unknown";
 }
 
-const MIN_QUESTION_SECONDS = 30;
-let timeLeft = MIN_QUESTION_SECONDS;
+const TIMER_RING_CIRC = 2 * Math.PI * 19;
+const ORIGINAL_PAGE_TITLE = document.title;
+
+let timeLeft = 0;
 let timerInterval = null;
 let timerDeadline = null;
 let urgencyPulseInterval = null;
 let urgencyPulseActive = false;
-const TIMER_RING_CIRC = 2 * Math.PI * 19;
-const ORIGINAL_PAGE_TITLE = document.title;
+
+// Returns the active per-question duration from saved settings.
+// Re-read each call so changes in Settings take effect on the next question.
+function getQuestionDuration() {
+  return getQuestionTimerSeconds();
+}
+
+// "No timer" mode (setting = 0) means skip the timer entirely.
+function isTimerDisabled() {
+  return getQuestionDuration() === 0;
+}
 
 // ======================================
 // RESUME QUIZ PERSISTENCE
@@ -153,6 +166,7 @@ const progressFill  = document.getElementById("quizProgressFill");
 const questionEl    = document.getElementById("quizQuestion");
 const choicesEl     = document.getElementById("quizChoices");
 const warningEl     = document.getElementById("quizWarning");
+// submitBtn may be absent (immediate-feedback quiz). Guard every reference.
 const submitBtn     = document.getElementById("quizSubmit");
 const prevBtn       = document.getElementById("quizPrev");
 const nextBtn       = document.getElementById("quizNext");
@@ -164,6 +178,11 @@ const timerRingEl   = document.getElementById("quizTimerRing");
 const timerLabelEl  = document.getElementById("quizTimerLabel");
 const questionCard  = shellEl.querySelector(".question-card");
 const cornerFlashes = document.querySelectorAll(".corner-flash");
+const feedbackEl    = document.getElementById("quizFeedback");
+const feedbackIconEl = document.getElementById("quizFeedbackIcon");
+const feedbackTextEl = document.getElementById("quizFeedbackText");
+const explanationEl = document.getElementById("quizExplanation");
+const explanationTextEl = document.getElementById("quizExplanationText");
 
 // ======================================
 // URGENCY AUDIO (Web Audio API)
@@ -227,6 +246,20 @@ function playHeartbeat(intensity) {
   playTone(180 + intensity * 40, 0.12, 0.08 + intensity * 0.06, "sine");
 }
 
+function playCorrectAnswerSound() {
+  if (!audioUnlocked) return;
+  // Bright ascending chime, reusing the existing playTone infrastructure.
+  playTone(660, 0.12, 0.22, "sine");
+  setTimeout(() => playTone(880, 0.14, 0.22, "sine"), 80);
+}
+
+function playIncorrectAnswerSound() {
+  if (!audioUnlocked) return;
+  // Short low buzz, reusing the existing playTone infrastructure.
+  playTone(220, 0.14, 0.22, "square");
+  setTimeout(() => playTone(180, 0.18, 0.18, "square"), 90);
+}
+
 function startUrgencyPulse() {
    if (urgencyPulseActive) return;
    urgencyPulseActive = true;
@@ -268,6 +301,9 @@ function updateTimerDisplay(isTick = false) {
    const mins = Math.floor(timeLeft / 60);
    const secs = timeLeft % 60;
    timerEl.textContent = `${String(mins).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
+   timerWidgetEl.setAttribute("aria-label",
+     `Time remaining: ${timeLeft} second${timeLeft === 1 ? "" : "s"}`);
+   timerWidgetEl.dataset.phase = getTimerPhase(timeLeft);
 
    const phase = getTimerPhase(timeLeft);
    const phases = ["calm", "warning", "urgent", "critical"];
@@ -276,12 +312,14 @@ function updateTimerDisplay(isTick = false) {
    });
 
    if (timerRingEl) {
-     const progress = timeLeft / MIN_QUESTION_SECONDS;
+     const duration = getQuestionDuration();
+     const progress = duration > 0 ? timeLeft / duration : 0;
      timerRingEl.style.strokeDashoffset = String(TIMER_RING_CIRC * (1 - progress));
    }
 
    if (phase === "critical") {
-     timerLabelEl.textContent = "HURRY";
+     timerLabelEl.textContent = "Hurry";
+     timerLabelEl.setAttribute("data-state", "critical");
      if (!questionCard.classList.contains("shake")) {
        questionCard.classList.add("shake");
        questionCard.addEventListener("animationend", () => {
@@ -290,10 +328,13 @@ function updateTimerDisplay(isTick = false) {
      }
    } else if (phase === "urgent") {
      timerLabelEl.textContent = "Running out";
+     timerLabelEl.setAttribute("data-state", "urgent");
    } else if (phase === "warning") {
      timerLabelEl.textContent = "Time left";
+     timerLabelEl.setAttribute("data-state", "warning");
    } else {
      timerLabelEl.textContent = "Time left";
+     timerLabelEl.setAttribute("data-state", "calm");
    }
 
    if (isTick) {
@@ -333,11 +374,34 @@ function tickTimer() {
 }
 
 function startTimer() {
+  // Defensive: always clear any existing timer state first so we never
+  // run two intervals side-by-side.
   stopTimer();
-  timeLeft = MIN_QUESTION_SECONDS;
-  timerDeadline = Date.now() + timeLeft * 1000;
+
+  const duration = getQuestionDuration();
+  console.log("[Quiz Timer] starting question:", currentQuestion + 1,
+              "duration:", duration + "s",
+              "timerDisabled:", duration === 0);
+
+  if (duration <= 0) {
+    // No timer mode: leave deadline null so tickTimer short-circuits.
+    timeLeft = 0;
+    timerDeadline = null;
+    if (timerEl) timerEl.textContent = "—:—";
+    if (timerLabelEl) timerLabelEl.textContent = "No timer";
+    if (timerRingEl) timerRingEl.style.strokeDashoffset = String(TIMER_RING_CIRC);
+    timerWidgetEl?.classList.remove("timer-warning", "timer-urgent", "timer-critical", "timer-tick");
+    return;
+  }
+
+  timeLeft = duration;
+  timerDeadline = Date.now() + duration * 1000;
+  console.log("[Quiz Timer] configured duration:", duration + "s",
+              "deadline in:", duration * 1000 + "ms");
   updateTimerDisplay();
-  timerInterval = setInterval(tickTimer, 200);
+  // Use 250ms tick rate — fires fast enough that the displayed seconds
+  // value is always correct within a quarter-second, and avoids drift.
+  timerInterval = setInterval(tickTimer, 250);
 }
 
 function stopTimer() {
@@ -347,14 +411,17 @@ function stopTimer() {
   }
   stopUrgencyPulse();
   timerDeadline = null;
-document.title = ORIGINAL_PAGE_TITLE;
-   timerWidgetEl.classList.remove("timer-warning", "timer-urgent", "timer-critical", "timer-tick");
-   if (timerRingEl) {
+  document.title = ORIGINAL_PAGE_TITLE;
+  timerWidgetEl.classList.remove("timer-warning", "timer-urgent", "timer-critical", "timer-tick");
+  if (timerRingEl) {
     timerRingEl.style.strokeDashoffset = "0";
   }
   if (timerLabelEl) {
     timerLabelEl.textContent = "Time left";
+    timerLabelEl.setAttribute("data-state", "calm");
   }
+  timerWidgetEl.setAttribute("data-state", "inactive");
+  timerWidgetEl.setAttribute("aria-label", "Timer paused");
 }
 
 document.addEventListener("visibilitychange", () => {
@@ -368,26 +435,67 @@ document.addEventListener("keydown", unlockAudio, { once: true });
 choicesEl.addEventListener("change", unlockAudio);
 
 function autoSubmitAnswer() {
-  const selected = choicesEl.querySelector("input[name='quiz-choice']:checked");
-  if (!selected) return;
+  // Timed-out: lock question with no selection so the user can still advance.
+  if (answers[currentQuestion] !== null) return;
 
-  const answerIndex = Number(selected.value);
-  const alreadyAnswered = answers[currentQuestion] !== null;
-  answers[currentQuestion] = answerIndex;
-  if (!alreadyAnswered && answerIndex === questions[currentQuestion].answer) {
-    score++;
+  stopTimer();
+  stopUrgencyPulse();
+  timerWidgetEl.setAttribute("data-state", "timeout");
+  if (timerLabelEl) {
+    timerLabelEl.textContent = "Time's up";
+    timerLabelEl.setAttribute("data-state", "critical");
   }
 
-  submitBtn.disabled = true;
-  submitBtn.textContent = "Answer Submitted";
+  answers[currentQuestion] = -1; // sentinel: no selection (timed out)
+  lockChoicesForFeedback();
+
+  feedbackEl.classList.remove("is-correct", "is-incorrect");
+  feedbackEl.classList.add("show", "is-incorrect");
+  feedbackIconEl.textContent = "!";
+  feedbackTextEl.textContent = "Time's up — Incorrect. No points awarded.";
+
+  const correctIndex = questions[currentQuestion].answer;
+  markCorrectChoice(correctIndex);
+
+  const explanation = questions[currentQuestion].explanation;
+  if (explanation) {
+    explanationTextEl.textContent = explanation;
+    explanationEl.classList.add("show");
+  }
+
+  playTimeoutAlarm();
+  playIncorrectAnswerSound();
+
   nextBtn.disabled = false;
+  if (submitBtn) submitBtn.disabled = true;
 
   saveQuizProgress();
 }
 
+function markCorrectChoice(correctIndex) {
+  const labels = choicesEl.querySelectorAll(".choice");
+  const target = labels[correctIndex];
+  if (!target) return;
+  target.classList.add("is-correct");
+  target.setAttribute("aria-label", `Option ${LETTERS[correctIndex]}: ${questions[currentQuestion].choices[correctIndex]} (Correct answer)`);
+  if (!target.querySelector(".choice-tag")) {
+    const tag = document.createElement("span");
+    tag.className = "choice-tag";
+    tag.textContent = "Correct answer";
+    target.appendChild(tag);
+  }
+}
+
+function lockChoicesForFeedback() {
+  choicesEl.classList.add("is-locked");
+  choicesEl.querySelectorAll("input[name='quiz-choice']").forEach((inp) => {
+    inp.disabled = true;
+    inp.setAttribute("aria-disabled", "true");
+  });
+}
+
 function handleTimeout() {
   autoSubmitAnswer();
-  setTimeout(() => goNext(), 600);
 }
 
 // ======================================
@@ -421,41 +529,110 @@ function findQuizInCatalog(catalog, quizId) {
 // RENDER
 // ======================================
 
-function renderChoices(q, selectedIndex) {
+function renderChoices(q, selectedIndex, locked = false) {
   choicesEl.innerHTML = "";
   q.choices.forEach((text, index) => {
     const label = document.createElement("label");
     label.className = "choice";
+    const inputId = `quiz-choice-${index}`;
     label.innerHTML = `
-      <input type="radio" name="quiz-choice" value="${index}" ${index === selectedIndex ? "checked" : ""}>
-      <span class="letter">${LETTERS[index]}</span>
+      <input type="radio" id="${inputId}" name="quiz-choice" value="${index}" ${index === selectedIndex ? "checked" : ""} ${locked ? "disabled" : ""}>
+      <span class="letter" aria-hidden="true">${LETTERS[index]}</span>
       <span class="label-text">${text}</span>
     `;
+    label.setAttribute("role", "radio");
+    label.setAttribute("aria-checked", String(index === selectedIndex));
+    label.setAttribute("aria-label", `Option ${LETTERS[index]}: ${text}`);
     choicesEl.appendChild(label);
   });
+  if (locked) {
+    choicesEl.classList.add("is-locked");
+  } else {
+    choicesEl.classList.remove("is-locked");
+  }
 }
 
 function loadQuestion(index) {
   const q = questions[index];
 
   questionEl.textContent = q.question;
-  renderChoices(q, answers[index]);
+  renderChoices(q, answers[index], answers[index] !== null);
 
   countEl.textContent = `${pad(index + 1)} / ${pad(questions.length)}`;
   progressFill.style.width = `${((index + 1) / questions.length) * 100}%`;
 
   warningEl.classList.remove("show");
+  feedbackEl.classList.remove("show", "is-correct", "is-incorrect");
+  feedbackIconEl.textContent = "";
+  feedbackTextEl.textContent = "";
+  explanationEl.classList.remove("show");
+  explanationTextEl.textContent = "";
 
   prevBtn.disabled = index === 0;
-  submitBtn.disabled = answers[index] !== null;
-  nextBtn.disabled = answers[index] === null;
 
-  submitBtn.textContent =
-      answers[index] !== null
-          ? "Answer Submitted"
-          : "Submit Answer";
+  const alreadyAnswered = answers[index] !== null;
+
+  if (alreadyAnswered) {
+    // Restore feedback view (used after resume / prev navigation).
+    revealAnswerFeedback(index);
+  }
+
+  if (submitBtn) {
+    submitBtn.style.display = "none";
+    submitBtn.disabled = true;
+  }
 
   startTimer();
+}
+
+// Restores the post-answer feedback state for an already-answered question
+// (used by Previous / resume). Does NOT change scoring.
+function revealAnswerFeedback(index) {
+  const q = questions[index];
+  const selectedIndex = answers[index];
+  const correctIndex = q.answer;
+  const timedOut = selectedIndex === -1;
+
+  lockChoicesForFeedback();
+
+  feedbackEl.classList.remove("is-correct", "is-incorrect");
+  feedbackEl.classList.add("show");
+
+  if (timedOut) {
+    feedbackEl.classList.add("is-incorrect");
+    feedbackIconEl.textContent = "!";
+    feedbackTextEl.textContent = "Time's up — Incorrect. No points awarded.";
+  } else {
+    const isCorrect = selectedIndex === correctIndex;
+    if (isCorrect) {
+      feedbackEl.classList.add("is-correct");
+      feedbackIconEl.textContent = "\u2713";
+      feedbackTextEl.textContent = "Correct!";
+    } else {
+      feedbackEl.classList.add("is-incorrect");
+      feedbackIconEl.textContent = "\u2717";
+      feedbackTextEl.textContent = "Incorrect. The correct answer is highlighted below.";
+    }
+
+    const selectedLabel = choicesEl.querySelectorAll(".choice")[selectedIndex];
+    if (selectedLabel && !isCorrect) {
+      selectedLabel.classList.add("is-incorrect");
+      const tag = document.createElement("span");
+      tag.className = "choice-tag";
+      tag.textContent = "Your answer";
+      selectedLabel.appendChild(tag);
+      selectedLabel.setAttribute("aria-label", `Option ${LETTERS[selectedIndex]}: ${q.choices[selectedIndex]} (Your answer, incorrect)`);
+    }
+  }
+
+  markCorrectChoice(correctIndex);
+
+  if (q.explanation) {
+    explanationTextEl.textContent = q.explanation;
+    explanationEl.classList.add("show");
+  }
+
+  nextBtn.disabled = false;
 }
 
 
@@ -640,23 +817,65 @@ async function loadQuizById(quizId) {
 // ======================================
 // CHECK ANSWER / NAV
 // ======================================
-function checkAnswer() {
-  const selected = choicesEl.querySelector("input[name='quiz-choice']:checked");
+function checkAnswer(answerIndex) {
+  if (answers[currentQuestion] !== null) return; // already answered — ignore
+  if (!questions.length) return;
 
-  if (!selected) {
-    warningEl.classList.add("show");
-    return;
-  }
+  stopTimer();
 
-  const answerIndex = Number(selected.value);
+  const q = questions[currentQuestion];
+  const correctIndex = q.answer;
+  const isCorrect = answerIndex === correctIndex;
   const alreadyAnswered = answers[currentQuestion] !== null;
-  const isCorrect = answerIndex === questions[currentQuestion].answer;
 
   answers[currentQuestion] = answerIndex;
   if (!alreadyAnswered && isCorrect) {
     score++;
   }
 
+  // Visual: lock all choices and style selection + correct answer.
+  lockChoicesForFeedback();
+  const selectedLabel = choicesEl.querySelectorAll(".choice")[answerIndex];
+  if (selectedLabel) {
+    if (isCorrect) {
+      selectedLabel.classList.add("is-correct");
+      selectedLabel.setAttribute("aria-label", `Option ${LETTERS[answerIndex]}: ${q.choices[answerIndex]} (Your answer, correct)`);
+    } else {
+      selectedLabel.classList.add("is-incorrect");
+      const tag = document.createElement("span");
+      tag.className = "choice-tag";
+      tag.textContent = "Your answer";
+      selectedLabel.appendChild(tag);
+      selectedLabel.setAttribute("aria-label", `Option ${LETTERS[answerIndex]}: ${q.choices[answerIndex]} (Your answer, incorrect)`);
+    }
+  }
+  if (!isCorrect) {
+    markCorrectChoice(correctIndex);
+  }
+
+  // Feedback banner with text (not color-only).
+  feedbackEl.classList.remove("is-correct", "is-incorrect");
+  feedbackEl.classList.add("show");
+  if (isCorrect) {
+    feedbackEl.classList.add("is-correct");
+    feedbackIconEl.textContent = "\u2713";
+    feedbackTextEl.textContent = "Correct!";
+    playCorrectAnswerSound();
+  } else {
+    feedbackEl.classList.add("is-incorrect");
+    feedbackIconEl.textContent = "\u2717";
+    feedbackTextEl.textContent = "Incorrect. The correct answer is highlighted below.";
+    playIncorrectAnswerSound();
+  }
+
+  // Explanation, if available.
+  if (q.explanation) {
+    explanationTextEl.textContent = q.explanation;
+    explanationEl.classList.add("show");
+  }
+
+  // Incorrect feedback: keep the existing subtle shake + corner flashes,
+  // but no shake on correct answers.
   if (!isCorrect && questionCard) {
     questionCard.classList.remove("shake");
     void questionCard.offsetWidth;
@@ -665,7 +884,6 @@ function checkAnswer() {
       questionCard.classList.remove("shake");
     }, { once: true });
   }
-
   if (!isCorrect && cornerFlashes.length) {
     cornerFlashes.forEach((el) => {
       el.classList.remove("active");
@@ -678,10 +896,9 @@ function checkAnswer() {
   }
 
   nextBtn.disabled = false;
-  submitBtn.disabled = true;
+  if (submitBtn) submitBtn.disabled = true;
 
   saveQuizProgress();
-
 }
 
 function goPrev() {
@@ -898,7 +1115,21 @@ async function loadQuiz() {
 // ======================================
 // EVENTS
 // ======================================
-submitBtn.addEventListener("click", checkAnswer);
+// Immediate feedback: as soon as the user picks a choice, evaluate it.
+choicesEl.addEventListener("change", (e) => {
+  const input = e.target;
+  if (!(input instanceof HTMLInputElement)) return;
+  if (input.name !== "quiz-choice") return;
+  if (answers[currentQuestion] !== null) {
+    // Locked — revert UI selection back to the recorded answer.
+    const recorded = answers[currentQuestion];
+    choicesEl.querySelectorAll("input[name='quiz-choice']").forEach((inp, idx) => {
+      inp.checked = idx === recorded;
+    });
+    return;
+  }
+  checkAnswer(Number(input.value));
+});
 prevBtn.addEventListener("click", goPrev);
 nextBtn.addEventListener("click", goNext);
 

@@ -1,6 +1,10 @@
 @import url('./global.css');
 @import url('./responsive.css');
 
+/* ============================================
+   Review Mistakes — Impeccable polish
+   ============================================ */
+
 .review-shell {
   max-width: 760px;
   width: 100%;
@@ -10,6 +14,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
   margin-bottom: 10px;
 }
 
@@ -19,484 +25,558 @@
   font-family: var(--font-mono);
   font-size: 13px;
   color: var(--pink-300);
+  letter-spacing: -0.01em;
 }
 
 .review-progress-track {
   width: 100%;
   height: 6px;
   background: var(--bg-soft);
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   overflow: hidden;
-  margin-bottom: 30px;
+  margin-bottom: var(--space-7);
 }
 
 .review-progress-track span {
   display: block;
   height: 100%;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: linear-gradient(90deg, var(--pink-400), var(--pink-600));
   transition: width 0.3s ease;
 }
 
+/* ============================================
+   Card
+   ============================================ */
+
 .review-card {
-  background: rgba(19, 26, 44, 0.55);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: var(--radius-md);
-  padding: 28px;
-  margin-bottom: 20px;
-  animation: fadeIn 0.3s ease;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-7);
+  box-shadow: var(--elev-1);
+  animation: reviewCardIn 0.32s var(--ease-out);
 }
 
-@keyframes fadeIn {
+@keyframes reviewCardIn {
   from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-.review-card .review-q-label {
+.review-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-4);
+}
+
+.review-card-meta { min-width: 0; }
+
+.review-card-eyebrow {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--pink-300);
+}
+
+.review-card-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.2;
+  margin: 0;
+  color: var(--text-hi);
+  letter-spacing: -0.01em;
+}
+
+.review-card-progress {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  font-family: var(--font-mono);
+  flex-shrink: 0;
+}
+
+.review-progress-count {
+  font-size: 12px;
+  color: var(--text-mid);
+  letter-spacing: 0.02em;
+}
+
+.review-progress-percent {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--pink-300);
+}
+
+.review-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: var(--space-5);
+}
+
+.review-tag {
   font-family: var(--font-mono);
   font-size: 11px;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--pink-400);
-  font-weight: 600;
-  margin-bottom: 12px;
-  display: block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--text-mid);
+  background: var(--bg-soft);
 }
 
-.review-card .review-question {
+.review-tag-subject {
+  color: var(--pink-300);
+  border-color: rgba(236, 111, 160, 0.3);
+  background: var(--pink-glow, rgba(236, 111, 160, 0.08));
+}
+
+.review-tag-practice {
+  color: var(--amber);
+  border-color: rgba(245, 185, 91, 0.35);
+  background: rgba(245, 185, 91, 0.10);
+}
+
+/* ============================================
+   Question
+   ============================================ */
+
+.review-question {
+  font-family: var(--font-body);
+  font-weight: 600;
   font-size: 17px;
   line-height: 1.55;
-  margin-bottom: 24px;
   color: var(--text-hi);
+  margin: 0 0 var(--space-6);
+  overflow-wrap: break-word;
 }
+
+/* ============================================
+   Choices — primary interactive element
+   ============================================ */
 
 .review-choices {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-bottom: 20px;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
 }
 
-.review-choice {
+button.review-choice {
+  /* Reset button defaults so it inherits our design system */
+  -webkit-appearance: none;
+  appearance: none;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  width: 100%;
+  cursor: pointer;
+
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 14px 16px;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--border);
+  gap: var(--space-4);
   background: var(--bg-soft);
-  cursor: pointer;
-  transition: all 0.2s ease;
-  font-size: 14px;
-  line-height: 1.4;
-  color: var(--text-mid);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-5);
+  min-height: 56px;
+  transition:
+    border-color var(--dur-base) var(--ease-out),
+    background var(--dur-base) var(--ease-out),
+    transform var(--dur-fast, 120ms) var(--ease-out);
 }
 
-.review-choice:hover {
+button.review-choice:hover:not(:disabled) {
+  border-color: var(--pink-500);
+  background: rgba(236, 111, 160, 0.05);
+}
+
+button.review-choice:focus-visible {
+  outline: 2px solid var(--pink-400);
+  outline-offset: 2px;
+}
+
+button.review-choice:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+/* Selected (pre-evaluate) */
+button.review-choice.is-selected {
   border-color: var(--pink-400);
+  background: rgba(236, 111, 160, 0.10);
+}
+
+/* Correct answer — used both for the user's correct pick and as the
+   correct-answer reveal marker on incorrect picks */
+button.review-choice.is-correct {
+  border-color: var(--success);
+  background: var(--success-soft);
+}
+
+button.review-choice.is-correct .review-choice-letter {
+  background: var(--success);
+  color: #062b14;
+}
+
+/* User's incorrect pick */
+button.review-choice.is-user-pick {
+  border-color: var(--danger);
+  background: var(--danger-soft);
+}
+
+button.review-choice.is-user-pick .review-choice-letter {
+  background: var(--danger);
+  color: #2a0a0a;
+}
+
+/* Unpicked choices dimmed once the question is answered */
+button.review-choice.is-dimmed {
+  opacity: 0.5;
+}
+
+/* Disabled / answered state */
+button.review-choice:disabled {
+  cursor: default;
+}
+
+button.review-choice:disabled:not(.is-correct):not(.is-user-pick):hover {
+  border-color: var(--border);
+  background: var(--bg-soft);
+}
+
+.review-choice-letter {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  border-radius: 8px;
   background: var(--surface-hover);
-}
-
-.review-choice.selected {
-  border-color: var(--pink-400);
-  background: rgba(236, 111, 160, 0.08);
-  color: var(--text-hi);
-}
-
-.review-choice.correct {
-  border-color: var(--mint);
-  background: rgba(94, 234, 212, 0.08);
-  color: var(--mint);
-}
-
-.review-choice.wrong {
-  border-color: #F87171;
-  background: rgba(248, 113, 113, 0.08);
-  color: #FCA5A5;
-}
-
-.review-choice .letter {
+  color: var(--text-mid);
   font-family: var(--font-mono);
-  font-weight: 600;
   font-size: 13px;
-  width: 24px;
-  height: 24px;
+  font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 6px;
-  background: var(--border);
+  transition:
+    background var(--dur-base) var(--ease-out),
+    color var(--dur-base) var(--ease-out);
+}
+
+button.review-choice.is-selected .review-choice-letter {
+  background: linear-gradient(135deg, var(--pink-400), var(--pink-600));
+  color: #fff;
+}
+
+.review-choice-text {
+  flex: 1;
+  font-size: 15px;
+  line-height: 1.45;
+  color: var(--text-hi);
+  overflow-wrap: break-word;
+}
+
+.review-choice-tag {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 3px 8px;
+  border-radius: 999px;
   flex-shrink: 0;
 }
 
-.review-choice.correct .letter {
-  background: rgba(94, 234, 212, 0.2);
+button.review-choice.is-correct .review-choice-tag {
+  background: var(--success);
+  color: #062b14;
 }
 
-.review-choice.wrong .letter {
-  background: rgba(248, 113, 113, 0.2);
-}
-
-.review-explanation {
-  background: rgba(94, 234, 212, 0.06);
-  border: 1px solid rgba(94, 234, 212, 0.15);
-  border-radius: var(--radius-sm);
-  padding: 14px 16px;
-  margin-bottom: 20px;
-  font-size: 14px;
-  line-height: 1.5;
-  color: var(--mint);
-  display: none;
-}
-
-.review-explanation.show {
-  display: block;
-  animation: fadeIn 0.3s ease;
-}
-
-.review-explanation strong {
-  color: var(--mint);
-  font-weight: 600;
-}
-
-.review-explanation-dynamic {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  margin-top: 10px;
-}
-
-.explanation-why-wrong,
-.explanation-why-correct {
-  padding: 12px 14px;
-  border-radius: 8px;
-  font-size: 13.5px;
-  line-height: 1.55;
-}
-
-.explanation-why-wrong {
-  background: rgba(248, 113, 113, 0.08);
-  border: 1px solid rgba(248, 113, 113, 0.18);
-  color: #FCA5A5;
-}
-
-.explanation-why-correct {
-  background: rgba(94, 234, 212, 0.08);
-  border: 1px solid rgba(94, 234, 212, 0.18);
-  color: var(--text-mid);
-}
-
-.feedback-label {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-weight: 600;
-  display: block;
-  margin-bottom: 6px;
-}
-
-.feedback-wrong {
-  color: #F87171;
-}
-
-.feedback-correct {
-  color: var(--mint);
-}
-
-.explanation-why-wrong p:last-child,
-.explanation-why-correct p:last-child {
-  margin-bottom: 0;
-}
-
-.feedback-choice {
-  font-weight: 600;
-  margin: 0 0 6px;
-  font-size: 13.5px;
-}
-
-.feedback-reason {
-  margin: 0;
-  font-size: 13px;
-  line-height: 1.55;
-  opacity: 0.9;
-}
-
-.explanation-takeaway {
-  padding: 10px 14px;
-  border-radius: 8px;
-  background: rgba(245, 185, 91, 0.08);
-  border: 1px solid rgba(245, 185, 91, 0.18);
-  margin-top: 4px;
-}
-
-.explanation-takeaway p {
-  margin: 0;
-  font-size: 13px;
-  line-height: 1.55;
-  color: var(--text-mid);
-}
-
-.feedback-tip {
-  color: var(--amber) !important;
+button.review-choice.is-user-pick .review-choice-tag {
+  background: var(--danger);
+  color: #2a0a0a;
 }
 
 /* ============================================
-   Review responsive — 600px and below
+   Feedback panel — Your answer / Correct / Rationale
    ============================================ */
-@media (max-width: 600px) {
-  .review-shell {
-    max-width: 100%;
-  }
 
-  .review-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
+.review-feedback-wrap { margin-bottom: var(--space-6); }
 
-  .review-progress-track {
-    height: 5px;
-    margin-bottom: 20px;
-  }
-
-  .review-card {
-    padding: 18px;
-    border-radius: var(--radius-md);
-  }
-
-  .review-card .review-question {
-    font-size: 15px;
-    margin-bottom: 18px;
-  }
-
-  .review-choices {
-    gap: 8px;
-    margin-bottom: 16px;
-  }
-
-  .review-choice {
-    padding: 14px;
-    gap: 10px;
-    border-radius: var(--radius-sm);
-    min-height: 48px;
-    font-size: 13px;
-  }
-
-  .review-choice .letter {
-    width: 28px;
-    height: 28px;
-    font-size: 11px;
-  }
-
-  .review-explanation {
-    padding: 12px;
-    font-size: 13px;
-  }
-
-  .explanation-why-wrong,
-  .explanation-why-correct {
-    padding: 10px;
-    font-size: 12px;
-  }
-
-  .review-actions {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .review-footer {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .review-warning {
-    font-size: 12px;
-  }
-
-  .review-meta {
-    font-size: 12px;
-  }
-
-  .review-empty {
-    padding: 40px 16px;
-  }
-
-  .review-empty-icon {
-    width: 48px;
-    height: 48px;
-    font-size: 20px;
-  }
-
-  .review-empty h2 {
-    font-size: 20px;
-  }
-
-  .review-empty p {
-    font-size: 13px;
-  }
-
-  .review-complete {
-    padding: 40px 16px;
-  }
-
-  .review-complete h2 {
-    font-size: 22px;
-  }
+.review-feedback {
+  display: grid;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  animation: reviewFeedbackIn 0.3s var(--ease-out);
 }
 
-@media (max-width: 480px) {
-  .review-card {
-    padding: 14px;
-  }
-
-  .review-card .review-question {
-    font-size: 14px;
-  }
-
-  .review-choice {
-    padding: 12px;
-    gap: 8px;
-    font-size: 12px;
-  }
-
-  .review-choice .letter {
-    width: 24px;
-    height: 24px;
-    font-size: 10px;
-  }
-
-  .review-removed {
-    padding: 30px 14px;
-  }
+@keyframes reviewFeedbackIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-@media (max-width: 360px) {
-  .review-card .review-question {
-    font-size: 13px;
-  }
+.review-feedback-row { display: flex; flex-direction: column; gap: 6px; }
 
-  .review-choice {
-    padding: 10px;
-    font-size: 11px;
-  }
-
-  .review-choice .letter {
-    width: 22px;
-    height: 22px;
-    font-size: 9px;
-  }
+.review-feedback-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-low);
 }
 
-.review-actions {
+.review-feedback-user .review-feedback-label { color: var(--danger); }
+.review-feedback-correct .review-feedback-label-correct { color: var(--success); }
+.review-feedback-rationale .review-feedback-label-rationale { color: var(--pink-300); }
+
+.review-feedback-choice {
   display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  margin-top: 20px;
+  align-items: center;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 10px 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  color: var(--text-hi);
 }
 
-.review-footer {
+.review-feedback-letter {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  background: var(--danger);
+  color: #2a0a0a;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 12px;
-  margin-top: 30px;
 }
+
+.review-feedback-letter-correct {
+  background: var(--success);
+  color: #062b14;
+}
+
+.review-feedback-text {
+  flex: 1;
+  overflow-wrap: break-word;
+}
+
+.review-feedback-reason {
+  margin: 0;
+  padding: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--pink-400);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-mid);
+  white-space: pre-line;
+}
+
+/* ============================================
+   Warning + Actions
+   ============================================ */
 
 .review-warning {
   display: none;
   color: var(--pink-300);
   font-size: 13px;
-  margin: 0 0 12px;
-  text-align: center;
+  margin: 0 0 var(--space-4);
 }
 
 .review-warning.show { display: block; }
 
-.review-meta {
+.review-actions {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 16px;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+  flex-wrap: wrap;
+}
+
+.review-actions-right {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.review-remove-btn {
+  /* Prevent accidental click by adding a small visual separator */
+  font-size: 13px;
+}
+
+.review-helper-text {
+  font-family: var(--font-body);
   font-size: 13px;
   color: var(--text-low);
+  padding: 8px 0;
 }
 
-.review-meta .practice-badge {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  padding: 3px 8px;
-  border-radius: 999px;
-  background: rgba(245, 185, 91, 0.12);
-  color: var(--amber);
-  border: 1px solid rgba(245, 185, 91, 0.2);
+.review-actions button[disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
 }
 
-.review-empty {
+/* ============================================
+   Loading / Empty / Error / Complete
+   ============================================ */
+
+.review-state {
   text-align: center;
-  padding: 60px 20px;
+  padding: var(--space-8) var(--space-7);
 }
 
-.review-empty-icon {
+.review-state .eyebrow { justify-content: center; }
+
+.review-state h2 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  line-height: 1.25;
+  margin: 8px 0 var(--space-3);
+  color: var(--text-hi);
+  letter-spacing: -0.01em;
+}
+
+.review-state p {
+  color: var(--text-mid);
+  font-size: 14px;
+  line-height: 1.55;
+  max-width: 420px;
+  margin: 0 auto var(--space-6);
+}
+
+.review-state-hint {
+  margin-top: var(--space-4) !important;
+  font-size: 13px !important;
+  color: var(--text-low) !important;
+}
+
+.review-empty-state .review-empty-icon,
+.review-complete-state .review-complete-icon {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: rgba(94, 234, 212, 0.1);
-  border: 2px solid rgba(94, 234, 212, 0.25);
+  background: var(--success-soft);
+  color: var(--success);
+  font-size: 26px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 20px;
-  font-size: 24px;
-  color: var(--mint);
+  margin: 0 auto var(--space-4);
+  border: 1px solid rgba(74, 222, 128, 0.3);
 }
 
-.review-empty h2 {
-  font-family: var(--font-display);
-  font-size: 22px;
-  margin: 0 0 8px;
+.review-error-state .review-error-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--danger-soft);
+  color: var(--danger);
+  font-size: 26px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-4);
+  border: 1px solid rgba(248, 113, 113, 0.35);
 }
 
-.review-empty p {
-  color: var(--text-low);
-  font-size: 14px;
-  margin: 0 0 24px;
-  max-width: 360px;
-  margin-left: auto;
-  margin-right: auto;
+.review-empty-actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  margin-top: var(--space-4);
 }
 
-.review-complete {
-  text-align: center;
-  padding: 60px 20px;
-  animation: fadeIn 0.4s ease;
+/* Skeleton */
+.review-skeleton-bar {
+  height: 14px;
+  background: linear-gradient(90deg, var(--bg-soft), var(--surface-hover), var(--bg-soft));
+  background-size: 200% 100%;
+  border-radius: 6px;
+  margin: 8px auto;
+  animation: reviewShimmer 1.4s linear infinite;
+}
+.review-skeleton-bar.short { width: 60%; }
+.review-loading-skeletons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: var(--space-5);
+}
+.review-skeleton-choice {
+  height: 52px;
+  background: linear-gradient(90deg, var(--bg-soft), var(--surface-hover), var(--bg-soft));
+  background-size: 200% 100%;
+  border-radius: var(--radius-md);
+  animation: reviewShimmer 1.4s linear infinite;
+}
+@keyframes reviewShimmer {
+  from { background-position: 200% 0; }
+  to   { background-position: -200% 0; }
 }
 
-.review-complete h2 {
-  font-family: var(--font-display);
-  font-size: 28px;
-  margin: 0 0 8px;
+/* ============================================
+   Responsive
+   ============================================ */
+
+@media (max-width: 600px) {
+  .review-card { padding: var(--space-5); }
+  .review-card-title { font-size: 19px; }
+  .review-question { font-size: 15.5px; }
+  .review-choice { padding: var(--space-3); gap: var(--space-3); min-height: 48px; }
+  .review-choice-letter { width: 30px; height: 30px; font-size: 12px; }
+  .review-choice-text { font-size: 14px; }
+  .review-feedback { padding: var(--space-4); }
+  .review-card-progress { width: 100%; align-items: flex-start; }
 }
 
-.review-complete p {
-  color: var(--text-low);
-  margin: 0 0 24px;
+@media (max-width: 480px) {
+  .review-card { padding: var(--space-4); }
+  .review-card-header { flex-direction: column; align-items: flex-start; }
+  .review-card-progress { flex-direction: row; justify-content: space-between; width: 100%; }
+  .review-question { font-size: 15px; }
+  .review-choice { padding: 12px; gap: 10px; }
+  .review-choice-text { font-size: 13.5px; }
+  .review-choice-tag { display: none; }
+  .review-actions { flex-direction: column-reverse; align-items: stretch; }
+  .review-actions-right { width: 100%; flex-direction: column-reverse; }
+  .review-actions-right .btn { width: 100%; }
 }
 
-.review-removed {
-  text-align: center;
-  padding: 40px 20px;
-  animation: fadeIn 0.3s ease;
+@media (max-width: 360px) {
+  .review-card { padding: 12px; }
+  .review-card-title { font-size: 17px; }
+  .review-question { font-size: 14px; }
+  .review-choice { padding: 10px; gap: 8px; min-height: 44px; }
+  .review-choice-letter { width: 26px; height: 26px; font-size: 11px; }
 }
 
-.review-removed .check-icon {
-  font-size: 32px;
-  margin-bottom: 12px;
-}
-
-.review-removed p {
-  color: var(--mint);
-  font-size: 15px;
-  margin: 0 0 16px;
+@media (prefers-reduced-motion: reduce) {
+  .review-card,
+  .review-feedback,
+  .review-choice,
+  .review-skeleton-bar,
+  .review-skeleton-choice {
+    animation: none !important;
+    transition: none !important;
+  }
 }

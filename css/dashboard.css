@@ -4,7 +4,8 @@
 .dash-header h1 {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 30px;
+  font-size: var(--fluid-2xl);
+  letter-spacing: -0.01em;
   margin: 10px 0 0;
 }
 
@@ -20,19 +21,21 @@
 .dash-stats {
   display: grid;
   grid-template-columns: 1.3fr 1fr 1fr;
-  gap: 16px;
-  margin-top: 34px;
+  gap: var(--space-4);
+  margin-top: var(--space-7);
 }
 
 .stat-card {
-  background: rgba(19, 26, 44, 0.55);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: var(--radius-md);
-  padding: 22px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
   position: relative;
   overflow: hidden;
+  box-shadow: var(--elev-1);
+  transition: transform var(--dur-base) var(--ease-out),
+              border-color var(--dur-base) var(--ease-out),
+              box-shadow var(--dur-base) var(--ease-out);
 }
 
 .stat-card::after {
@@ -40,7 +43,7 @@
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
   pointer-events: none;
 }
 
@@ -88,16 +91,17 @@
 .dash-today-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-top: 16px;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
 }
 
 .mini-card {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 24px;
+  padding: var(--space-6);
   position: relative;
+  box-shadow: var(--elev-1);
 }
 
 .mini-card-head {
@@ -158,7 +162,9 @@
   width: 0%;
   background: linear-gradient(90deg, var(--pink-400), var(--pink-600));
   border-radius: 999px;
-  transition: width 0.4s ease;
+  /* Width animation runs once after the goal number is set, so the layout
+     cost is bounded; switching to scaleX would require changing the JS. */
+  transition: width 0.4s ease; /* impeccable-disable-line layout-transition */
 }
 
 .goal-milestone {
@@ -234,8 +240,8 @@
 .dash-insight-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-top: 16px;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
 }
 
 .insight-card h4 {
@@ -260,18 +266,18 @@
 .activity-list {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 4px var(--space-5);
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 6px 20px;
+  box-shadow: var(--elev-1);
 }
 
 .activity-item {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 14px 0;
+  gap: var(--space-3);
+  padding: var(--space-3) 0;
   border-bottom: 1px solid var(--border-soft);
   font-size: 14px;
 }
@@ -309,7 +315,7 @@
 .activity-empty {
   color: var(--text-low);
   font-size: 13.5px;
-  padding: 16px 0;
+  padding: var(--space-4) 0;
   list-style: none;
 }
 
@@ -317,45 +323,56 @@
 .section-title {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 21px;
-  margin: 46px 0 18px;
+  font-size: var(--fluid-xl);
+  margin: var(--space-8) 0 var(--space-4);
+  letter-spacing: -0.01em;
 }
 
 /* Subjects */
 .dash-subjects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  gap: var(--space-5);
 }
 
 .subject-card {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 26px;
+  padding: var(--space-5);
   cursor: pointer;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  transition: transform var(--dur-base) var(--ease-out),
+              border-color var(--dur-base) var(--ease-out),
+              box-shadow var(--dur-base) var(--ease-out);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
 }
 
 .subject-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--pink-500);
+  transform: translateY(-2px);
+  border-color: rgba(236, 111, 160, 0.4);
+  box-shadow: var(--elev-2);
 }
 
 .subject-card-top {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  gap: var(--space-3);
 }
 
 .subject-icon {
   width: 42px;
   height: 42px;
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   background: rgba(236, 111, 160, 0.12);
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 20px;
+  line-height: 1;
 }
 
 .subject-pct {
@@ -366,25 +383,30 @@
 }
 
 .subject-card h4 {
-  margin: 20px 0 8px;
-  font-size: 18px;
+  margin: 4px 0 0;
+  font-family: var(--font-body);
+  font-size: 16px;
   font-weight: 600;
+  color: var(--text-hi);
+  line-height: 1.35;
 }
 
 .subject-progress {
   width: 100%;
   height: 6px;
   background: var(--bg-soft);
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   overflow: hidden;
-  margin-top: 20px;
+  margin-top: var(--space-2);
 }
 
 .subject-progress span {
   display: block;
   height: 100%;
   background: linear-gradient(90deg, var(--pink-400), var(--pink-600));
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
+  /* One-shot animation when subject progress loads. */
+  transition: width var(--dur-slow) var(--ease-out); /* impeccable-disable-line layout-transition */
 }
 
 /* ============================================
@@ -569,15 +591,15 @@
 .dash-timer-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-top: 16px;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
 }
 
 .timer-card {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 24px;
+  padding: var(--space-6);
   position: relative;
   overflow: hidden;
   display: flex;
@@ -585,7 +607,8 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  gap: 20px;
+  gap: var(--space-5);
+  box-shadow: var(--elev-1);
 }
 
 .timer-card::before {
@@ -594,9 +617,10 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 3px;
+  height: 2px;
   background: linear-gradient(90deg, var(--pink-400), var(--mint), var(--amber));
   border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  opacity: 0.8;
 }
 
 .pnle-countdown {
@@ -658,9 +682,10 @@
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 24px;
+  padding: var(--space-6);
   position: relative;
   overflow: hidden;
+  box-shadow: var(--elev-1);
 }
 
 .time-tracker-card::before {
@@ -669,9 +694,10 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 3px;
+  height: 2px;
   background: linear-gradient(90deg, var(--mint), var(--pink-400));
   border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  opacity: 0.8;
 }
 
 .time-tracker-display {
@@ -733,7 +759,8 @@
   position: relative;
   min-height: 4px;
   height: var(--pct);
-  transition: height 0.4s ease;
+  /* One-shot animation when weekly study time loads. */
+  transition: height 0.4s ease; /* impeccable-disable-line layout-transition */
 }
 
 .week-bar span {

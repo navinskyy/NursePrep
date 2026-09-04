@@ -10,6 +10,8 @@
 <link rel="stylesheet" href="./css/quiz.css">
 </head>
 <body class="dash-body">
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
   <div class="alarm-bg" aria-hidden="true"></div>
   <div class="corner-flash corner-tl" aria-hidden="true"></div>
   <div class="corner-flash corner-tr" aria-hidden="true"></div>
@@ -18,7 +20,7 @@
 
   <!-- Sidebar injected by js/sidebar.js -->
 
-<main class="dash-main dash-main-center">
+<main id="main-content" class="dash-main dash-main-center">
   <div class="quiz-shell" id="quizShell">
     <div class="quiz-urgency-vignette" id="quizUrgencyVignette" aria-hidden="true"></div>
 
@@ -35,29 +37,37 @@
 
 </div>
       <div class="quiz-meta">
-        <div class="quiz-timer-widget" id="quizTimerWidget" aria-live="polite" aria-atomic="true">
+        <div class="quiz-timer-widget" id="quizTimerWidget" data-state="idle" aria-live="off" aria-atomic="true">
           <div class="quiz-timer-ring-wrap">
             <svg class="quiz-timer-ring" viewBox="0 0 44 44" aria-hidden="true">
               <circle class="quiz-timer-ring-bg" cx="22" cy="22" r="19"/>
               <circle class="quiz-timer-ring-fill" id="quizTimerRing" cx="22" cy="22" r="19"/>
             </svg>
-            <span class="quiz-timer" id="quizTimer">00:30</span>
+            <span class="quiz-timer" id="quizTimer" aria-hidden="true">--:--</span>
           </div>
-          <span class="quiz-timer-label" id="quizTimerLabel">Time left</span>
+          <span class="quiz-timer-label" id="quizTimerLabel" data-state="calm">Loading</span>
         </div>
         <span class="quiz-count" id="quizCount">01 / 05</span>
       </div>
     </div>
     <div class="quiz-progress-track"><span id="quizProgressFill" style="width:0%"></span></div>
 
-    <div class="question-card">
+    <div class="question-card" role="form" aria-labelledby="quizQuestion">
       <h3 id="quizQuestion">Loading question…</h3>
 
-      <div class="choices" id="quizChoices"></div>
+      <div class="choices" id="quizChoices" role="radiogroup" aria-labelledby="quizQuestion"></div>
 
-      <p class="quiz-warning" id="quizWarning">Please select an answer first.</p>
+      <div class="quiz-feedback" id="quizFeedback" role="status" aria-live="polite" aria-atomic="true">
+        <span class="quiz-feedback-icon" id="quizFeedbackIcon" aria-hidden="true"></span>
+        <span class="quiz-feedback-text" id="quizFeedbackText"></span>
+      </div>
 
-      <button class="btn btn-primary submit-btn" id="quizSubmit">Submit Answer</button>
+      <div class="quiz-explanation" id="quizExplanation" role="region" aria-live="polite" aria-label="Answer explanation">
+        <span class="quiz-explanation-eyebrow">Explanation</span>
+        <p id="quizExplanationText"></p>
+      </div>
+
+      <p class="quiz-warning" id="quizWarning" role="alert">Please select an answer first.</p>
     </div>
 
     <div class="quiz-footer">
@@ -74,3 +84,4 @@
 <script type="module" src="js/sidebar.js"></script>
 </body>
 </html>
+

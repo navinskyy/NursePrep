@@ -11,18 +11,26 @@
 </head>
 <body class="dash-body">
 
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 <!-- Sidebar injected by js/sidebar.js -->
 
-<main class="dash-main profile-shell">
+<main id="main-content" class="dash-main profile-shell">
 
   <div class="shell-eyebrow">Account · Profile</div>
 
   <!-- ================= ID BAND ================= -->
-  <section class="id-band">
+  <div class="dash-header">
+    <h1 id="profilePageTitle">Profile</h1>
+    <p>Your PNLE study record, all in one place.</p>
+  </div>
+
+  <!-- ================= ID BAND ================= -->
+  <section class="id-band" aria-labelledby="profileName">
     <div class="id-photo-frame">
       <img id="profileImage" src="https://placehold.co/200x200/131A2C/EC6FA0?text=RN" alt="Profile photo">
-      <label for="avatarInput" class="upload-btn" title="Change photo" aria-label="Change photo">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M4 7H7L9 4H15L17 7H20V19H4V7Z" stroke-linejoin="round"/><circle cx="12" cy="13" r="3.5"/></svg>
+      <label for="avatarInput" class="upload-btn" title="Change photo" aria-label="Change profile photo">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" aria-hidden="true"><path d="M4 7H7L9 4H15L17 7H20V19H4V7Z" stroke-linejoin="round"/><circle cx="12" cy="13" r="3.5"/></svg>
       </label>
       <input type="file" id="avatarInput" accept="image/*" hidden>
     </div>
@@ -37,7 +45,7 @@
           <span class="level-badge" id="levelBadge">Lv.1</span>
           <span class="xp-text" id="xpText">0 / 100 XP</span>
         </div>
-        <div class="xp-bar"><span id="xpFill" style="width:0%"></span></div>
+        <div class="xp-bar" aria-hidden="true"><span id="xpFill" style="width:0%"></span></div>
         <div class="progression-chips">
           <span class="meta-chip" id="totalXpChip">0 XP total</span>
           <span class="ranking-chip" id="rankingChip">Rank Score: 0</span>
@@ -57,19 +65,19 @@
 
     <div class="field-grid">
       <div class="field">
-        <label>Email</label>
+        <label for="profileEmail">Email</label>
         <p id="profileEmail">Loading…</p>
       </div>
       <div class="field">
-        <label>School</label>
+        <label for="profileSchool">School</label>
         <p id="profileSchool">Loading…</p>
       </div>
       <div class="field">
-        <label>Course</label>
+        <label for="profileCourseFull">Course</label>
         <p id="profileCourseFull">Loading…</p>
       </div>
       <div class="field">
-        <label>Year level</label>
+        <label for="profileYear">Year level</label>
         <p id="profileYear">Loading…</p>
       </div>
     </div>
@@ -154,20 +162,20 @@
     <h2 id="editModalTitle">Edit profile</h2>
 
     <div class="form-group">
-      <label>Full name</label>
-      <input type="text" id="editName">
+      <label for="editName">Full name</label>
+      <input type="text" id="editName" name="fullname">
     </div>
     <div class="form-group">
-      <label>School</label>
-      <input type="text" id="editSchool">
+      <label for="editSchool">School</label>
+      <input type="text" id="editSchool" name="school">
     </div>
     <div class="form-group">
-      <label>Course</label>
-      <input type="text" id="editCourse">
+      <label for="editCourse">Course</label>
+      <input type="text" id="editCourse" name="course">
     </div>
     <div class="form-group">
-      <label>Year level</label>
-      <input type="text" id="editYear">
+      <label for="editYear">Year level</label>
+      <input type="text" id="editYear" name="year">
     </div>
 
     <div class="modal-actions">
@@ -183,16 +191,16 @@
     <h2 id="passwordModalTitle">Change password</h2>
 
     <div class="form-group">
-      <label>Current password</label>
-      <input type="password" id="currentPassword" autocomplete="current-password">
+      <label for="currentPassword">Current password</label>
+      <input type="password" id="currentPassword" name="currentPassword" autocomplete="current-password">
     </div>
     <div class="form-group">
-      <label>New password</label>
-      <input type="password" id="newPassword" autocomplete="new-password">
+      <label for="newPassword">New password</label>
+      <input type="password" id="newPassword" name="newPassword" autocomplete="new-password">
     </div>
     <div class="form-group">
-      <label>Confirm new password</label>
-      <input type="password" id="confirmNewPassword" autocomplete="new-password">
+      <label for="confirmNewPassword">Confirm new password</label>
+      <input type="password" id="confirmNewPassword" name="confirmNewPassword" autocomplete="new-password">
     </div>
 
     <div class="modal-actions">
@@ -229,3 +237,4 @@
 <script type="module" src="js/sidebar.js"></script>
 </body>
 </html>
+

@@ -95,6 +95,54 @@ export function percentage(value, total) {
 }
 
 // ======================================
+// SETTINGS (persisted to localStorage
+// and mirrored to Firestore)
+// ======================================
+
+export const SETTINGS_STORAGE_KEY = "nurseprep:settings";
+
+export const DEFAULT_SETTINGS = {
+    dailyGoal: 20,
+    questionTimer: "60",
+    shuffleQuestions: true,
+    reducedMotion: false
+};
+
+export function getUserSettings() {
+    try {
+        const raw = localStorage.getItem(SETTINGS_STORAGE_KEY);
+        if (!raw) return { ...DEFAULT_SETTINGS };
+        const parsed = JSON.parse(raw);
+        return { ...DEFAULT_SETTINGS, ...parsed };
+    } catch {
+        return { ...DEFAULT_SETTINGS };
+    }
+}
+
+export function saveUserSettings(settings) {
+    try {
+        localStorage.setItem(SETTINGS_STORAGE_KEY, JSON.stringify(settings));
+    } catch (err) {
+        console.warn("Failed to persist settings locally:", err);
+    }
+}
+
+// Returns the per-question timer duration in seconds.
+// "0" means "no timer" — returns 0.
+export function getQuestionTimerSeconds() {
+    const raw = getUserSettings().questionTimer;
+    const n = parseInt(raw, 10);
+    if (!Number.isFinite(n) || n < 0) return parseInt(DEFAULT_SETTINGS.questionTimer, 10);
+    return n;
+}
+
+export function getDailyGoal() {
+    const n = parseInt(getUserSettings().dailyGoal, 10);
+    if (!Number.isFinite(n) || n <= 0) return DEFAULT_SETTINGS.dailyGoal;
+    return n;
+}
+
+// ======================================
 // QUESTION BANK CACHE
 // ======================================
 

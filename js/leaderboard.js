@@ -28,6 +28,7 @@ const tabs = document.querySelectorAll(".leaderboard-tabs .tab");
 const sidebarStreak = document.getElementById("sidebarStreak");
 
 let currentTab = "alltime";
+let currentUid = "";
 
 const BADGE_RULES = [
     { id: "top1", label: "👑 #1", icon: "👑", description: "Top ranked this week", condition: (e) => e.rank === 1 },
@@ -46,13 +47,14 @@ function renderLeaderboardCard(entry, rank) {
         .join("");
 
     const rankClass = rank === 1 ? "rank-1" : rank === 2 ? "rank-2" : rank === 3 ? "rank-3" : "";
+    const youClass = entry.uid === currentUid ? "is-you" : "";
 
     return `
-        <div class="leaderboard-card ${rankClass}">
+        <div class="leaderboard-card ${rankClass} ${youClass}" ${youClass ? 'aria-label="Your row"' : ""}>
             <div class="lb-rank">#${rank}</div>
             <div class="lb-user">
                 <img class="lb-avatar" src="${entry.photoURL || `https://placehold.co/80x80/131A2C/EC6FA0?text=${(entry.fullname || "R").charAt(0).toUpperCase()}`}" alt="">
-                <span class="lb-name">${entry.fullname || "Anonymous"}</span>
+                <span class="lb-name">${entry.fullname || "Anonymous"}${youClass ? ' (you)' : ''}</span>
             </div>
             <div class="lb-level">Lv.${entry.level}</div>
             <div class="lb-xp">${(entry.xp || 0).toLocaleString()}</div>
@@ -177,6 +179,8 @@ onAuthStateChanged(auth, async (user) => {
         window.location.href = "login.html";
         return;
     }
+
+    currentUid = user.uid;
 
     if (sidebarStreak) {
         try {

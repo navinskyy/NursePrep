@@ -91,10 +91,7 @@
 
 .hero-text h1 em {
   font-style: normal;
-  background: linear-gradient(135deg, var(--pink-300), var(--pink-500));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--pink-300);
 }
 
 .hero-text p {

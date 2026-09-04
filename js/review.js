@@ -4,9 +4,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import {
     doc,
     getDoc,
-    setDoc,
     updateDoc,
-    serverTimestamp,
     increment
 } from "firebase/firestore";
 
@@ -16,18 +14,8 @@ import {
     getAllWrongAnswers,
     removeMistake,
     markMistakePracticed,
-    getWrongAnswerCounts,
-    getTotalWrongAnswerCount,
     clearAllMistakes
 } from "../services/wrongAnswerService.js";
-
-import {
-    recordActivity
-} from "../js/activity.js";
-
-import {
-    bumpDailyStreak
-} from "./userProfile.js";
 
 // Inlined here (not relying on utils.js's classic-script globals inside this module)
 const SUBJECT_NAMES = {
@@ -58,6 +46,64 @@ const reviewCount = document.getElementById("reviewCount");
 const reviewProgressFill = document.getElementById("reviewProgressFill");
 const sidebarStreak = document.getElementById("sidebarStreak");
 
+// ======================================
+// AUDIO — reuse quiz's Web Audio API tone
+// infrastructure so sound stays consistent.
+// ======================================
+
+let audioCtx = null;
+let audioUnlocked = false;
+
+function ensureAudio() {
+    if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    }
+    if (audioCtx.state === "suspended") {
+        audioCtx.resume();
+    }
+    audioUnlocked = audioCtx.state === "running";
+    return audioCtx;
+}
+
+function playTone(freq, duration, volume, type = "sine") {
+    const ctx = ensureAudio();
+    if (!audioUnlocked) return;
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.type = type;
+    osc.frequency.value = freq;
+    gain.gain.setValueAtTime(volume, ctx.currentTime);
+    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + duration);
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    osc.start(ctx.currentTime);
+    osc.stop(ctx.currentTime + duration);
+}
+
+function playCorrectAnswerSound() {
+    if (!audioUnlocked) return;
+    playTone(660, 0.12, 0.22, "sine");
+    setTimeout(() => playTone(880, 0.14, 0.22, "sine"), 80);
+}
+
+function playIncorrectAnswerSound() {
+    if (!audioUnlocked) return;
+    playTone(220, 0.14, 0.22, "square");
+    setTimeout(() => playTone(180, 0.18, 0.18, "square"), 90);
+}
+
+function playClickSound() {
+    if (!audioUnlocked) return;
+    playTone(520, 0.04, 0.1, "sine");
+}
+
+document.addEventListener("click", () => ensureAudio(), { once: true });
+document.addEventListener("keydown", () => ensureAudio(), { once: true });
+
+// ======================================
+// CATALOG + SUBJECT HELPERS
+// ======================================
+
 function getQuizTitle(quizId) {
     if (!catalog) return SUBJECT_NAMES[quizId] || quizId;
     const quiz = catalog.categories.flatMap(c => c.quizzes || []).find(q => q.quizId === quizId || q.subjectKey === quizId);
@@ -83,20 +129,14 @@ function resolveSubjectKey(rawKey) {
     return legacy[rawKey] || rawKey;
 }
 
-// Returns every storage key a quiz's mistakes could have been saved under.
-// Quizzes can be launched by quizId (quiz.html?quizId=) or by subject
-// (quiz.html?subject=), and the catalog recently added a distinct subjectKey
-// field, so the same quiz may have been persisted under any of these aliases.
 function getEquivalentKeys(rawKey) {
     const keys = new Set();
     if (!rawKey) return keys;
-
     keys.add(rawKey);
     keys.add(resolveSubjectKey(rawKey));
-
     if (catalog && Array.isArray(catalog.categories)) {
         const quizzes = catalog.categories.flatMap(c => c.quizzes || []);
-        for (const candidate of keys.size ? Array.from(keys) : []) {
+        for (const candidate of Array.from(keys)) {
             const quiz = quizzes.find(
                 q => q.quizId === candidate || q.subjectKey === candidate
             );
@@ -106,12 +146,9 @@ function getEquivalentKeys(rawKey) {
             }
         }
     }
-
     return keys;
 }
 
-// Maps any alias (quizId, subjectKey, legacy name) to the catalog quizId that
-// the subject <select> uses as its option value.
 function catalogQuizIdFor(rawKey) {
     if (!catalog || !Array.isArray(catalog.categories)) return null;
     const resolved = resolveSubjectKey(rawKey);
@@ -136,116 +173,403 @@ async function loadBank() {
     }
 }
 
+function pad(n) {
+    return String(n).padStart(2, "0");
+}
+
+// ======================================
+// LOADING / EMPTY / ERROR STATES
+// ======================================
+
+function renderLoading() {
+    reviewContent.innerHTML = `
+        <div class="review-card review-state" aria-busy="true" aria-live="polite">
+            <span class="eyebrow">Loading</span>
+            <div class="review-loading-row">
+                <div class="review-skeleton-bar"></div>
+                <div class="review-skeleton-bar short"></div>
+            </div>
+            <div class="review-loading-skeletons">
+                <div class="review-skeleton-choice"></div>
+                <div class="review-skeleton-choice"></div>
+                <div class="review-skeleton-choice"></div>
+                <div class="review-skeleton-choice"></div>
+            </div>
+            <p class="review-state-hint">Fetching the questions you got wrong…</p>
+        </div>
+    `;
+    reviewCount.textContent = "— mistakes";
+    reviewProgressFill.style.width = "0%";
+}
+
 function renderEmpty() {
     reviewContent.innerHTML = `
-        <div class="review-empty">
-            <div class="review-empty-icon">&#10003;</div>
-            <h2>No mistakes yet</h2>
-            <p>Complete a quiz and any wrong answers will appear here for review.</p>
-            <a href="subjects.html" class="btn btn-primary">Take a Quiz</a>
+        <div class="review-card review-state review-empty-state">
+            <div class="review-empty-icon" aria-hidden="true">&#10003;</div>
+            <span class="eyebrow">Practice Mistakes</span>
+            <h2>You're all caught up</h2>
+            <p>No mistakes to review right now. Questions you answer incorrectly during quizzes will appear here so you can revisit the reasoning and lock it in.</p>
+            <div class="review-empty-actions">
+                <a href="subjects.html" class="btn btn-primary">Start a Quiz</a>
+                <a href="dashboard.html" class="btn btn-secondary">Back to Dashboard</a>
+            </div>
         </div>
     `;
     reviewCount.textContent = "0 mistakes";
     reviewProgressFill.style.width = "0%";
 }
 
+function renderError() {
+    reviewContent.innerHTML = `
+        <div class="review-card review-state review-error-state">
+            <div class="review-error-icon" aria-hidden="true">!</div>
+            <span class="eyebrow">Practice Mistakes</span>
+            <h2>Couldn't load your mistakes</h2>
+            <p>Something went wrong while loading your saved mistakes. Check your connection and try again.</p>
+            <div class="review-empty-actions">
+                <button class="btn btn-primary" id="reviewRetry">Try Again</button>
+                <a href="dashboard.html" class="btn btn-secondary">Back to Dashboard</a>
+            </div>
+        </div>
+    `;
+    reviewCount.textContent = "— mistakes";
+    reviewProgressFill.style.width = "0%";
+
+    const retry = document.getElementById("reviewRetry");
+    if (retry) retry.addEventListener("click", () => loadMistakes());
+}
+
+// ======================================
+// MAIN MISTAKE CARD RENDER
+// ======================================
+
+function escapeHtml(s) {
+    if (s === null || s === undefined) return "";
+    return String(s)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
+
+function buildFeedbackPanel(mistake) {
+    const correctIdx = mistake.answer;
+    const userIdx = mistake.userAnswer;
+    const correctLetter = LETTERS[correctIdx];
+    const userLetter = LETTERS[userIdx];
+    const correctText = mistake.choices[correctIdx];
+    const userText = mistake.choices[userIdx];
+
+    const rationale = mistake.explanation ||
+        "This is the best answer based on standard nursing knowledge and clinical guidelines. It aligns with established protocols, prioritizes patient safety, and reflects evidence-based practice.";
+
+    return `
+        <div class="review-feedback" role="status" aria-live="polite" aria-atomic="true">
+            <div class="review-feedback-row review-feedback-user">
+                <span class="review-feedback-label">Your answer</span>
+                <p class="review-feedback-choice">
+                    <span class="review-feedback-letter">${escapeHtml(userLetter)}</span>
+                    <span class="review-feedback-text">${escapeHtml(userText)}</span>
+                </p>
+            </div>
+            <div class="review-feedback-row review-feedback-correct">
+                <span class="review-feedback-label review-feedback-label-correct">Correct answer</span>
+                <p class="review-feedback-choice">
+                    <span class="review-feedback-letter review-feedback-letter-correct">${escapeHtml(correctLetter)}</span>
+                    <span class="review-feedback-text">${escapeHtml(correctText)}</span>
+                </p>
+            </div>
+            <div class="review-feedback-row review-feedback-rationale">
+                <span class="review-feedback-label review-feedback-label-rationale">Rationale</span>
+                <p class="review-feedback-reason">${escapeHtml(rationale)}</p>
+            </div>
+        </div>
+    `;
+}
+
 function renderMistakeCard(mistake) {
-    const q = {
-        question: mistake.question,
-        choices: mistake.choices,
-        answer: mistake.answer
-    };
-
     const total = filteredMistakes.length;
+    const totalCount = mistakes.length;
     const progress = total > 0 ? ((currentIdx + 1) / total) * 100 : 0;
-
     const practiceCount = mistake.practiceCount || 0;
 
+    const quizTitle = getQuizTitle(mistake.subject);
+
+    // Build choice buttons. We use real <button> elements for full keyboard
+    // accessibility and a clear interactive hit target.
     let choicesHTML = "";
-    q.choices.forEach((text, i) => {
-        let cls = "review-choice";
+    mistake.choices.forEach((text, i) => {
+        let stateClass = "";
+        let stateTag = "";
+
         if (answered) {
-            if (i === q.answer) cls += " correct";
-            else if (i === mistake.userAnswer && i !== q.answer) cls += " wrong";
+            if (i === mistake.answer) {
+                stateClass = "is-correct";
+                stateTag = `<span class="review-choice-tag" aria-hidden="true">Correct answer</span>`;
+            } else if (i === mistake.userAnswer) {
+                stateClass = "is-user-pick";
+                stateTag = `<span class="review-choice-tag" aria-hidden="true">Your answer</span>`;
+            } else {
+                stateClass = "is-dimmed";
+            }
+        } else if (selectedAnswer === i) {
+            stateClass = "is-selected";
         }
-        if (selectedAnswer === i && !answered) cls += " selected";
+
+        const pressedAttr = answered
+            ? (i === mistake.answer ? "true" : "false")
+            : (selectedAnswer === i ? "true" : "false");
+        const disabledAttr = answered ? "disabled" : "";
 
         choicesHTML += `
-            <div class="${cls}" data-idx="${i}" onclick="window._selectReviewAnswer(${i})">
-                <span class="letter">${LETTERS[i]}</span>
-                <span>${text}</span>
-            </div>
+            <button type="button"
+                    class="review-choice ${stateClass}"
+                    data-idx="${i}"
+                    role="radio"
+                    aria-checked="${pressedAttr}"
+                    aria-label="Option ${LETTERS[i]}: ${escapeHtml(text)}"
+                    ${disabledAttr}>
+                <span class="review-choice-letter" aria-hidden="true">${LETTERS[i]}</span>
+                <span class="review-choice-text">${escapeHtml(text)}</span>
+                ${stateTag}
+            </button>
         `;
     });
 
-    const correctChoice = mistake.choices[mistake.answer];
-    const wrongChoice = mistake.choices[mistake.userAnswer];
-    const wrongLetter = LETTERS[mistake.userAnswer];
-    const correctLetter = LETTERS[mistake.answer];
+    const feedbackHTML = answered ? buildFeedbackPanel(mistake) : "";
 
-    const dynamicExplanation = `
-        <div class="review-explanation-dynamic">
-            <div class="explanation-why-wrong">
-                <span class="feedback-label feedback-wrong">Why your answer is incorrect</span>
-                <p class="feedback-choice">You selected: <strong>${wrongLetter}. ${wrongChoice}</strong></p>
-                <p class="feedback-reason">This choice reflects a common misconception. In this scenario, the selected option fails to account for the priority nursing assessment or intervention required. Specifically, it overlooks critical patient safety considerations, misapplies the nursing process, or confuses similar clinical concepts. Choosing this could result in delayed treatment, improper documentation, or compromised patient outcomes.</p>
-            </div>
-            <div class="explanation-why-correct">
-                <span class="feedback-label feedback-correct">Why the correct answer is right</span>
-                <p class="feedback-choice">Correct answer: <strong>${correctLetter}. ${correctChoice}</strong></p>
-                <p class="feedback-reason">${mistake.explanation || "This is the best answer based on standard nursing knowledge and clinical guidelines. It aligns with established protocols, prioritizes patient safety, and reflects evidence-based practice. This choice demonstrates the correct application of nursing principles to the given clinical situation."}</p>
-            </div>
-            <div class="explanation-takeaway">
-                <span class="feedback-label feedback-tip">Key takeaway</span>
-                <p>When facing similar questions, remember to prioritize patient safety, apply the nursing process systematically, and consider the most clinically significant finding first. Reviewing the correct rationale helps build the critical thinking skills needed for the PNLE and clinical practice.</p>
-            </div>
-        </div>
-    `;
-
-    const explanationHTML = answered
-        ? `<div class="review-explanation show"><strong>Explanation:</strong> ${dynamicExplanation}</div>`
-        : "";
-
-    const actionsHTML = answered ? `
-        <div class="review-actions">
-            <button class="btn btn-secondary" id="reviewRemove" onclick="window._removeCurrentMistake()">
-                Remove from list
-            </button>
-            <button class="btn btn-primary" id="reviewNext" onclick="window._goNextMistake()">
-                ${currentIdx < total - 1 ? "Next" : "Finish"}
-            </button>
-        </div>
-    ` : `
-        <div class="review-actions">
-            <div></div>
-            <button class="btn btn-primary" id="reviewSubmit" onclick="window._submitReviewAnswer()">
-                Submit Answer
-            </button>
-        </div>
-    `;
+    const isLast = currentIdx >= total - 1;
+    const remaining = Math.max(0, total - currentIdx - 1);
+    const primaryLabel = answered
+        ? (isLast ? (remaining === 0 && totalCount > 0 ? "Finish Review" : "Next") : "Next Question")
+        : "Select an answer";
 
     reviewContent.innerHTML = `
-        <div class="review-card">
-            <span class="review-q-label">
-                ${getQuizTitle(mistake.subject)}
-                ${practiceCount > 0 ? `<span class="practice-badge">Practiced ${practiceCount}x</span>` : ""}
-            </span>
-            <div class="review-meta">
-                <span>Question ${pad(currentIdx + 1)} of ${pad(total)}</span>
-                <span>${Math.round(progress)}%</span>
+        <article class="review-card" aria-labelledby="reviewQuestion">
+            <header class="review-card-header">
+                <div class="review-card-meta">
+                    <span class="eyebrow review-card-eyebrow">Review Mistakes</span>
+                    <h1 class="review-card-title" id="reviewQuestion">${escapeHtml(quizTitle)}</h1>
+                </div>
+                <div class="review-card-progress" aria-label="Progress through review">
+                    <span class="review-progress-count">Question ${pad(currentIdx + 1)} of ${pad(total)}</span>
+                    <span class="review-progress-percent">${Math.round(progress)}%</span>
+                </div>
+            </header>
+
+            <div class="review-card-tags">
+                <span class="review-tag review-tag-subject">${escapeHtml(quizTitle)}</span>
+                ${practiceCount > 0 ? `<span class="review-tag review-tag-practice">Practiced ${practiceCount}x</span>` : ""}
             </div>
-            <p class="review-question">${mistake.question}</p>
-            <div class="review-choices" id="reviewChoices">
+
+            <p class="review-question">${escapeHtml(mistake.question)}</p>
+
+            <div class="review-choices" id="reviewChoices" role="radiogroup" aria-label="Answer choices">
                 ${choicesHTML}
             </div>
-            ${explanationHTML}
-            <p class="review-warning" id="reviewWarning">Please select an answer first.</p>
-            ${actionsHTML}
-        </div>
+
+            <div class="review-feedback-wrap">
+                ${feedbackHTML}
+            </div>
+
+            <p class="review-warning" id="reviewWarning" role="alert">Please select an answer first.</p>
+
+            <div class="review-actions">
+                <button type="button" class="btn btn-secondary" id="reviewPrevBtn" ${currentIdx === 0 || !answered ? "disabled" : ""}>
+                    Previous
+                </button>
+                <div class="review-actions-right">
+                    ${answered ? `
+                        <button type="button" class="btn btn-secondary review-remove-btn" id="reviewRemoveBtn">
+                            Remove from list
+                        </button>
+                        <button type="button" class="btn btn-primary" id="reviewNextBtn" disabled>
+                            ${escapeHtml(primaryLabel)}
+                        </button>
+                    ` : `
+                        <span class="review-helper-text">Choose an answer to see feedback</span>
+                    `}
+                </div>
+            </div>
+        </article>
     `;
 
     reviewProgressFill.style.width = `${progress}%`;
+    reviewCount.textContent = `${total} mistake${total !== 1 ? "s" : ""}`;
+
+    bindCardEvents();
 }
+
+// ======================================
+// EVENT WIRING (event delegation on the
+// always-present reviewContent container
+// so re-renders never lose listeners)
+// ======================================
+
+function bindCardEvents() {
+    const choicesContainer = document.getElementById("reviewChoices");
+    if (choicesContainer && !choicesContainer.dataset.wired) {
+        choicesContainer.dataset.wired = "true";
+        choicesContainer.addEventListener("click", (e) => {
+            const btn = e.target.closest(".review-choice");
+            if (!btn) return;
+            const idx = Number(btn.dataset.idx);
+            if (Number.isFinite(idx)) selectAnswer(idx);
+        });
+    }
+
+    const nextBtn = document.getElementById("reviewNextBtn");
+    if (nextBtn) {
+        nextBtn.disabled = false;
+        nextBtn.addEventListener("click", goNextMistake);
+    }
+
+    const removeBtn = document.getElementById("reviewRemoveBtn");
+    if (removeBtn) {
+        removeBtn.addEventListener("click", removeCurrentMistake);
+    }
+
+    const prevBtn = document.getElementById("reviewPrevBtn");
+    if (prevBtn) {
+        prevBtn.addEventListener("click", goPrevMistake);
+    }
+}
+
+// ======================================
+// ANSWER INTERACTION
+// ======================================
+
+async function selectAnswer(idx) {
+    if (answered) return;
+    selectedAnswer = idx;
+    playClickSound();
+
+    // Lightweight pre-submit visual: just mark the picked choice as selected.
+    const card = reviewContent.querySelector(".review-card");
+    if (!card) return;
+    card.querySelectorAll(".review-choice").forEach((el, i) => {
+        el.classList.toggle("is-selected", i === idx);
+        el.setAttribute("aria-checked", i === idx ? "true" : "false");
+    });
+
+    // Brief visual confirmation then evaluate on the next frame so the
+    // user perceives the click as a deliberate selection.
+    evaluateAnswer(idx);
+}
+
+async function evaluateAnswer(idx) {
+    const mistake = filteredMistakes[currentIdx];
+    const isCorrect = idx === mistake.answer;
+
+    answered = true;
+    selectedAnswer = idx;
+
+    if (isCorrect) {
+        playCorrectAnswerSound();
+    } else {
+        playIncorrectAnswerSound();
+    }
+
+    // Re-render the card so all post-answer visuals (correct highlight,
+    // tags, feedback panel, Next button) are present in the DOM at once.
+    renderMistakeCard(mistake);
+
+    // Persist practice count and (on correct) tally stats. Failures here
+    // shouldn't block the user's UI flow.
+    try {
+        await markMistakePracticed(mistake.subject, mistake.idx);
+        // Update local practiceCount for immediate display.
+        mistake.practiceCount = (mistake.practiceCount || 0) + 1;
+
+        const user = auth.currentUser;
+        if (user && isCorrect) {
+            const userRef = doc(db, "users", user.uid);
+            await updateDoc(userRef, {
+                correctAnswers: increment(1),
+                questionsAnswered: increment(1)
+            }).catch(() => {});
+        }
+    } catch (err) {
+        console.error("[review] Failed to update practice record:", err);
+    }
+}
+
+// ======================================
+// NAVIGATION
+// ======================================
+
+function goNextMistake() {
+    if (!answered) return;
+    if (currentIdx < filteredMistakes.length - 1) {
+        currentIdx++;
+        selectedAnswer = null;
+        answered = false;
+        renderMistakeCard(filteredMistakes[currentIdx]);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+        showCompletion();
+    }
+}
+
+function goPrevMistake() {
+    if (currentIdx === 0) return;
+    currentIdx--;
+    selectedAnswer = null;
+    answered = false;
+    renderMistakeCard(filteredMistakes[currentIdx]);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+async function removeCurrentMistake() {
+    const mistake = filteredMistakes[currentIdx];
+    try {
+        await removeMistake(mistake.subject, mistake.idx);
+    } catch (err) {
+        console.error("[review] Failed to remove mistake:", err);
+    }
+    filteredMistakes.splice(currentIdx, 1);
+    mistakes = [...filteredMistakes];
+
+    if (filteredMistakes.length === 0) {
+        renderEmpty();
+        updateCounts();
+        return;
+    }
+    if (currentIdx >= filteredMistakes.length) currentIdx = 0;
+    selectedAnswer = null;
+    answered = false;
+    renderMistakeCard(filteredMistakes[currentIdx]);
+    updateCounts();
+}
+
+async function showCompletion() {
+    try {
+        await clearAllMistakes();
+    } catch (err) {
+        console.warn("[review] Failed to clear mistakes:", err);
+    }
+    const total = mistakes.length;
+
+    reviewContent.innerHTML = `
+        <div class="review-card review-state review-complete-state">
+            <div class="review-complete-icon" aria-hidden="true">&#10003;</div>
+            <span class="eyebrow">Review Complete</span>
+            <h2>Great review session</h2>
+            <p>You reviewed ${total} mistake${total !== 1 ? "s" : ""}. Revisiting the rationale is the fastest way to lock in the reasoning.</p>
+            <div class="review-empty-actions">
+                <a href="subjects.html" class="btn btn-primary">Take a Quiz</a>
+                <a href="dashboard.html" class="btn btn-secondary">Back to Dashboard</a>
+            </div>
+        </div>
+    `;
+    reviewCount.textContent = "0 mistakes";
+    reviewProgressFill.style.width = "100%";
+}
+
+// ======================================
+// CATALOG LOAD + DATA PIPELINE
+// ======================================
 
 async function loadCatalog() {
     try {
@@ -261,155 +585,48 @@ async function loadCatalog() {
 function populateSubjectSelect() {
     if (!catalog) return;
     subjectSelect.innerHTML = '<option value="all">All Subjects</option>';
-
     for (const category of catalog.categories) {
         const optgroup = document.createElement("optgroup");
         optgroup.label = `${category.icon} ${category.name}`;
-
         for (const quiz of category.quizzes) {
             const option = document.createElement("option");
             option.value = quiz.quizId;
             option.textContent = quiz.title;
             optgroup.appendChild(option);
         }
-
         subjectSelect.appendChild(optgroup);
     }
 }
 
-function pad(n) {
-    return String(n).padStart(2, "0");
-}
+async function loadMistakes() {
+    renderLoading();
 
-
-window._selectReviewAnswer = function(idx) {
-    if (answered) return;
-    selectedAnswer = idx;
-    const card = reviewContent.querySelector(".review-card");
-    if (card) {
-        card.querySelectorAll(".review-choice").forEach((el, i) => {
-            el.classList.toggle("selected", i === idx);
-        });
-    }
-};
-
-window._submitReviewAnswer = async function() {
-    if (selectedAnswer === null) {
-        const warning = document.getElementById("reviewWarning");
-        if (warning) warning.classList.add("show");
-        return;
-    }
-
-    answered = true;
-    const mistake = filteredMistakes[currentIdx];
-    const isCorrect = selectedAnswer === mistake.answer;
-
-    const card = reviewContent.querySelector(".review-card");
-    if (card) {
-        card.querySelectorAll(".review-choice").forEach((el, i) => {
-            el.classList.remove("selected");
-            el.style.cursor = "default";
-            if (i === mistake.answer) el.classList.add("correct");
-            else if (i === selectedAnswer && !isCorrect) el.classList.add("wrong");
-        });
-
-        const warning = document.getElementById("reviewWarning");
-        if (warning) warning.classList.remove("show");
-    }
-
+    let allMistakes = [];
     try {
-        await markMistakePracticed(mistake.subject, mistake.idx);
-
-        const user = auth.currentUser;
-        if (user && isCorrect) {
-            const userRef = doc(db, "users", user.uid);
-            await updateDoc(userRef, {
-                correctAnswers: increment(1),
-                questionsAnswered: increment(1)
-            }).catch(() => {});
+        if (currentSubject === "all") {
+            const all = await getAllWrongAnswers();
+            for (const [subject, subjectMistakes] of Object.entries(all)) {
+                subjectMistakes.forEach(m => {
+                    allMistakes.push({ ...m, subject });
+                });
+            }
+        } else {
+            const keys = Array.from(getEquivalentKeys(currentSubject));
+            const seen = new Set();
+            for (const key of keys) {
+                const subjectMistakes = await getWrongAnswers(key);
+                subjectMistakes.forEach(m => {
+                    const dedupeId = `${m.question}::${m.idx}`;
+                    if (seen.has(dedupeId)) return;
+                    seen.add(dedupeId);
+                    allMistakes.push({ ...m, subject: key });
+                });
+            }
         }
     } catch (err) {
-        console.error("[review] Failed to update practice record:", err);
-    }
-
-    renderMistakeCard(mistake);
-};
-
-window._goNextMistake = function() {
-    if (currentIdx < filteredMistakes.length - 1) {
-        currentIdx++;
-        selectedAnswer = null;
-        answered = false;
-        renderMistakeCard(filteredMistakes[currentIdx]);
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    } else {
-        showCompletion();
-    }
-};
-
-window._removeCurrentMistake = async function() {
-    const mistake = filteredMistakes[currentIdx];
-    await removeMistake(mistake.subject, mistake.idx);
-    filteredMistakes.splice(currentIdx, 1);
-    mistakes = [...filteredMistakes];
-
-    if (filteredMistakes.length === 0) {
-        showCompletion();
-    } else {
-        if (currentIdx >= filteredMistakes.length) currentIdx = 0;
-        selectedAnswer = null;
-        answered = false;
-        renderMistakeCard(filteredMistakes[currentIdx]);
-        updateCounts();
-    }
-};
-
-async function showCompletion() {
-    await clearAllMistakes();
-    reviewContent.innerHTML = `
-        <div class="review-complete">
-            <span class="eyebrow">Session Complete</span>
-            <h2>Great review!</h2>
-            <p>Keep practicing and these mistakes will turn into strengths.</p>
-            <div class="quiz-footer" style="justify-content:center;">
-                <a href="dashboard.html" class="btn btn-primary">Back to Dashboard</a>
-            </div>
-        </div>
-    `;
-    reviewCount.textContent = "0 mistakes";
-    reviewProgressFill.style.width = "0%";
-}
-
-async function loadMistakes() {
-    let allMistakes = [];
-
-    if (currentSubject === "all") {
-        const all = await getAllWrongAnswers();
-        for (const [subject, subjectMistakes] of Object.entries(all)) {
-            subjectMistakes.forEach(m => {
-                allMistakes.push({ ...m, subject });
-            });
-        }
-    } else {
-        // A quiz's mistakes may be stored under any of its aliases (quizId,
-        // subjectKey, or a legacy subject name). Look up all of them and merge.
-        const keys = Array.from(getEquivalentKeys(currentSubject));
-        console.log("[review] loading mistakes for subject:", currentSubject, "keys:", keys);
-
-        const seen = new Set();
-        for (const key of keys) {
-            const subjectMistakes = await getWrongAnswers(key);
-            subjectMistakes.forEach(m => {
-                // Dedupe in case the same question was persisted under two keys.
-                const dedupeId = `${m.question}::${m.idx}`;
-                if (seen.has(dedupeId)) return;
-                seen.add(dedupeId);
-                // Keep the real storage key so practice/remove target the
-                // correct field in the Firestore document.
-                allMistakes.push({ ...m, subject: key });
-            });
-        }
-        console.log("[review] got", allMistakes.length, "mistakes across", keys.length, "keys");
+        console.error("[review] Failed to load mistakes:", err);
+        renderError();
+        return;
     }
 
     mistakes = allMistakes;
@@ -429,7 +646,6 @@ async function loadMistakes() {
 
 async function updateCounts() {
     const subjectCount = mistakes.length;
-
     reviewCount.textContent = `${subjectCount} mistake${subjectCount !== 1 ? "s" : ""}`;
 
     const badge = document.getElementById("reviewBadge");
@@ -437,11 +653,11 @@ async function updateCounts() {
         badge.textContent = subjectCount;
         badge.style.display = subjectCount > 0 ? "inline-flex" : "none";
     }
-
-    if (subjectCount === 0) {
-        renderEmpty();
-    }
 }
+
+// ======================================
+// GLOBAL EVENT BINDINGS
+// ======================================
 
 subjectSelect.addEventListener("change", async (e) => {
     currentSubject = e.target.value;
@@ -449,19 +665,30 @@ subjectSelect.addEventListener("change", async (e) => {
 });
 
 document.addEventListener("keydown", (e) => {
-    if (document.activeElement.tagName === "SELECT") return;
-    if (e.key === "ArrowRight" && !answered) {
+    if (document.activeElement && document.activeElement.tagName === "SELECT") return;
+    if (e.key === "ArrowRight") {
         e.preventDefault();
-        if (selectedAnswer === null) {
-            window._selectReviewAnswer(0);
+        if (!answered) {
+            if (selectedAnswer === null) selectAnswer(0);
+            else goNextMistake();
         } else {
-            window._submitReviewAnswer();
+            goNextMistake();
         }
-    } else if (e.key === "ArrowRight" && answered) {
-        e.preventDefault();
-        window._goNextMistake();
+    } else if (e.key === "ArrowLeft") {
+        if (answered) goPrevMistake();
+    } else if (/^[1-4]$/.test(e.key)) {
+        if (!answered) {
+            const idx = Number(e.key) - 1;
+            if (filteredMistakes[currentIdx] && filteredMistakes[currentIdx].choices[idx]) {
+                selectAnswer(idx);
+            }
+        }
     }
 });
+
+// ======================================
+// AUTH + INIT
+// ======================================
 
 onAuthStateChanged(auth, async (user) => {
     if (!user) {
@@ -473,9 +700,10 @@ onAuthStateChanged(auth, async (user) => {
     populateSubjectSelect();
 
     await loadBank();
+
     let subjectParam = getSubjectFromURL("all");
     let resolvedSubject = subjectParam === "all" ? "all" : resolveSubjectKey(subjectParam);
-    
+
     if (resolvedSubject !== subjectParam) {
         const url = new URL(window.location);
         url.searchParams.set("subject", resolvedSubject);
@@ -483,8 +711,6 @@ onAuthStateChanged(auth, async (user) => {
     }
 
     currentSubject = resolvedSubject;
-    // The dropdown option values are quizIds; map whatever alias arrived in the
-    // URL to the matching quizId so the correct option is selected.
     subjectSelect.value = catalogQuizIdFor(currentSubject) || currentSubject;
     await loadMistakes();
 });

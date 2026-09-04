@@ -12,9 +12,11 @@
 </head>
 <body class="dash-body">
 
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 <!-- Sidebar injected by js/sidebar.js -->
 
-<main class="dash-main">
+<main id="main-content" class="dash-main">
   <div class="dash-header">
     <span class="eyebrow">PNLE Review</span>
     <h1 id="categoryTitle">Quizzes</h1>
@@ -22,10 +24,11 @@
   </div>
 
   <div class="quiz-list-controls">
-    <input type="text" id="quizSearch" placeholder="Search quizzes..." autocomplete="off">
+    <label for="quizSearch" class="sr-only">Search quizzes</label>
+    <input type="text" id="quizSearch" placeholder="Search quizzes..." autocomplete="off" aria-label="Search quizzes">
   </div>
 
-  <section class="quiz-grid" id="quizGrid"></section>
+  <section class="quiz-grid" id="quizGrid" aria-live="polite" aria-busy="true"></section>
 </main>
 
 
@@ -34,3 +37,5 @@
 <script type="module" src="js/sidebar.js"></script>
 </body>
 </html>
+
+

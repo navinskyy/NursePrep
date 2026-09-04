@@ -9509,11 +9509,3314 @@
   ],
 
   "pnle-set1-part2": [
+  {
+    "question": "May arrives at the health care clinic and tells the nurse that her last menstrual period was 9 weeks ago. She also tells the nurse that a home pregnancy test was positive but she began to have mild cramps and is now having moderate vaginal bleeding. During the physical examination of the client, the nurse notes that May has a dilated cervix. The nurse determines that May is experiencing which type of abortion?",
+    "choices": [
+      "Inevitable",
+      "Incomplete",
+      "Threatened",
+      "Septic"
+    ],
+    "answer": 0,
+    "explanation": "An inevitable abortion is characterized by vaginal bleeding and cramping with a dilated cervix, indicating that pregnancy loss cannot be prevented. In threatened abortion, the cervix remains closed."
+  },
+  {
+    "question": "Nurse Reese is reviewing the record of a pregnant client for her first prenatal visit. Which of the following data, if noted on the client’s record, would alert the nurse that the client is at risk for a spontaneous abortion?",
+    "choices": [
+      "Age 36 years",
+      "History of syphilis",
+      "History of genital herpes",
+      "History of diabetes mellitus"
+    ],
+    "answer": 1,
+    "explanation": "Syphilis is a maternal infection associated with pregnancy loss and spontaneous abortion. A history of untreated infection is particularly concerning."
+  },
+  {
+    "question": "Nurse Hazel is preparing to care for a client who is newly admitted to the hospital with a possible diagnosis of ectopic pregnancy. Nurse Hazel develops a plan of care for the client and determines that which of the following nursing actions is the priority?",
+    "choices": [
+      "Monitoring weight",
+      "Assessing for edema",
+      "Monitoring apical pulse",
+      "Monitoring temperature"
+    ],
+    "answer": 2,
+    "explanation": "A ruptured ectopic pregnancy can cause significant internal hemorrhage and hypovolemic shock. Tachycardia is an early indicator of blood loss, so pulse monitoring is a priority."
+  },
+  {
+    "question": "Nurse Oliver is teaching a diabetic pregnant client about nutrition and insulin needs during pregnancy. The nurse determines that the client understands dietary and insulin needs if the client states that the second half of pregnancy require:",
+    "choices": [
+      "Decreased caloric intake",
+      "Increased caloric intake",
+      "Decreased Insulin",
+      "Increase Insulin"
+    ],
+    "answer": 1,
+    "explanation": "During the second half of pregnancy, maternal energy requirements increase and insulin resistance normally rises, so caloric and often insulin requirements increase. Of the choices, increased caloric intake is the best answer."
+  },
+  {
+    "question": "Nurse Michelle is assessing a 24 year old client with a diagnosis of hydatidiform mole. She is aware that one of the following is unassociated with this condition?",
+    "choices": [
+      "Excessive fetal activity.",
+      "Larger than normal uterus for gestational age.",
+      "Vaginal bleeding",
+      "Elevated levels of human chorionic gonadotropin."
+    ],
+    "answer": 0,
+    "explanation": "A hydatidiform mole is associated with very high hCG levels, vaginal bleeding, and a uterus larger than expected for gestational age. There is no viable fetus, so excessive fetal activity is not expected."
+  },
+  {
+    "question": "A pregnant client is receiving magnesium sulfate for severe pregnancy induced hypertension (PIH). The clinical findings that would warrant use of the antidote , calcium gluconate is:",
+    "choices": [
+      "Urinary output 90 cc in 2 hours.",
+      "Absent patellar reflexes.",
+      "Rapid respiratory rate above 40/min.",
+      "Rapid rise in blood pressure."
+    ],
+    "answer": 1,
+    "explanation": "Absent deep tendon reflexes are a classic sign of magnesium sulfate toxicity. Calcium gluconate is the antidote used when clinically significant magnesium toxicity occurs."
+  },
+  {
+    "question": "During vaginal examination of Janah who is in labor, the presenting part is at station plus two. Nurse, correctly interprets it as:",
+    "choices": [
+      "Presenting part is 2 cm above the plane of the ischial spines.",
+      "Biparietal diameter is at the level of the ischial spines.",
+      "Presenting part in 2 cm below the plane of the ischial spines.",
+      "Biparietal diameter is 2 cm above the ischial spines."
+    ],
+    "answer": 2,
+    "explanation": "A positive station means the presenting part is below the ischial spines. +2 station means the presenting part is approximately 2 cm below the spines."
+  },
+  {
+    "question": "A pregnant client is receiving oxytocin (Pitocin) for induction of labor. A condition that warrant the nurse in-charge to discontinue I.V. infusion of Pitocin is:",
+    "choices": [
+      "Contractions every 1 ½ minutes lasting 70-80 seconds.",
+      "Maternal temperature 101.2",
+      "Early decelerations in the fetal heart rate.",
+      "Fetal heart rate baseline 140-160 bpm."
+    ],
+    "answer": 0,
+    "explanation": "Very frequent, prolonged contractions indicate uterine tachysystole, which can reduce uteroplacental perfusion and cause fetal compromise. Oxytocin should be stopped and the uterus and fetal status reassessed."
+  },
+  {
+    "question": "Calcium gluconate is being administered to a client with pregnancy induced hypertension (PIH). A nursing action that must be initiated as the plan of care throughout injection of the drug is:",
+    "choices": [
+      "Ventilator assistance",
+      "CVP readings",
+      "EKG tracings",
+      "Continuous CPR"
+    ],
+    "answer": 2,
+    "explanation": "IV calcium gluconate can cause cardiac dysrhythmias if administered too rapidly. Cardiac monitoring, including ECG tracing, is therefore important during IV administration."
+  },
+  {
+    "question": "A trial for vaginal delivery after an earlier caesareans, would likely to be given to a gravida, who had:",
+    "choices": [
+      "First low transverse cesarean was for active herpes type 2 infections; vaginal culture at 39 weeks pregnancy was positive.",
+      "First and second caesareans were for cephalopelvic disproportion.",
+      "First caesarean through a classic incision as a result of severe fetal distress.",
+      "First low transverse caesarean was for breech position. Fetus in this pregnancy is in a vertex presentation."
+    ],
+    "answer": 3,
+    "explanation": "A prior low-transverse cesarean for a nonrecurring indication such as breech presentation can be compatible with a trial of labor when no current contraindication exists. A prior classical incision is a contraindication to TOLAC."
+  },
+  {
+    "question": "Nurse Ryan is aware that the best initial approach when trying to take a crying toddler’s temperature is:",
+    "choices": [
+      "Talk to the mother first and then to the toddler.",
+      "Bring extra help so it can be done quickly.",
+      "Encourage the mother to hold the child.",
+      "Ignore the crying and screaming."
+    ],
+    "answer": 0,
+    "explanation": "A crying toddler is often more cooperative after the nurse first establishes rapport through the parent. Talking with the mother first can reduce the child's anxiety before assessment."
+  },
+  {
+    "question": "Baby Tina a 3 month old infant just had a cleft lip and palate repair. What should the nurse do to prevent trauma to operative site?",
+    "choices": [
+      "Avoid touching the suture line, even when cleaning.",
+      "Place the baby in prone position.",
+      "Give the baby a pacifier.",
+      "Place the infant’s arms in soft elbow restraints."
+    ],
+    "answer": 3,
+    "explanation": "Soft elbow restraints help prevent the infant from rubbing or scratching the operative site. They should be used correctly and removed periodically for skin and circulation checks."
+  },
+  {
+    "question": "Which action should nurse Marian include in the care plan for a 2 month old with heart failure?",
+    "choices": [
+      "Feed the infant when he cries.",
+      "Allow the infant to rest before feeding.",
+      "Bathe the infant and administer medications before feeding.",
+      "Weigh and bathe the infant before feeding."
+    ],
+    "answer": 1,
+    "explanation": "Infants with heart failure fatigue easily. Providing a rest period before feeding conserves energy so the infant can feed more effectively."
+  },
+  {
+    "question": "Nurse Hazel is teaching a mother who plans to discontinue breast feeding after 5 months. The nurse should advise her to include which foods in her infant’s diet?",
+    "choices": [
+      "Skim milk and baby food.",
+      "Whole milk and baby food.",
+      "Iron-rich formula only.",
+      "Iron-rich formula and baby food."
+    ],
+    "answer": 2,
+    "explanation": "Because the mother plans to stop breastfeeding at 5 months, iron-fortified infant formula should replace breast milk. Complementary foods are generally introduced at about 6 months, so baby food is not yet the intended answer at 5 months."
+  },
+  {
+    "question": "Mommy Linda is playing with her infant, who is sitting securely alone on the floor of the clinic. The mother hides a toy behind her back and the infant looks for it. The nurse is aware that estimated age of the infant would be:",
+    "choices": [
+      "6 months",
+      "4 months",
+      "8 months",
+      "10 months"
+    ],
+    "answer": 2,
+    "explanation": "Looking for a hidden object demonstrates developing object permanence and is typically seen around 8 months. Independent sitting also fits this developmental period."
+  },
+  {
+    "question": "Which of the following is the most prominent feature of public health nursing?",
+    "choices": [
+      "It involves providing home care to sick people who are not confined in the hospital.",
+      "Services are provided free of charge to people within the catchments area.",
+      "The public health nurse functions as part of a team providing a public health nursing services.",
+      "Public health nursing focuses on preventive, not curative, services."
+    ],
+    "answer": 3,
+    "explanation": "Public health nursing emphasizes population health and prevention. Its major focus is health promotion and disease prevention rather than primarily curative care."
+  },
+  {
+    "question": "When the nurse determines whether resources were maximized in implementing Ligtas Tigdas, she is evaluating",
+    "choices": [
+      "Effectiveness",
+      "Efficiency",
+      "Adequacy",
+      "Appropriateness"
+    ],
+    "answer": 1,
+    "explanation": "Efficiency concerns how well resources are used to achieve results. Asking whether resources were maximized is therefore an evaluation of efficiency."
+  },
+  {
+    "question": "Vangie is a new B.S.N. graduate. She wants to become a Public Health Nurse. Where should she apply?",
+    "choices": [
+      "Department of Health",
+      "Provincial Health Office",
+      "Regional Health Office",
+      "Rural Health Unit"
+    ],
+    "answer": 3,
+    "explanation": "The Rural Health Unit is the local primary health-care facility where public health nurses commonly provide community-based services under the local health system."
+  },
+  {
+    "question": "Tony is aware the Chairman of the Municipal Health Board is:",
+    "choices": [
+      "Mayor",
+      "Municipal Health Officer",
+      "Public Health Nurse",
+      "Any qualified physician"
+    ],
+    "answer": 0,
+    "explanation": "Under the Philippine local health system, the municipal health board is chaired by the municipal mayor. The municipal health officer serves as vice-chair."
+  },
+  {
+    "question": "Myra is the public health nurse in a municipality with a total population of about 20,000. There are 3 rural health midwives among the RHU personnel. How many more midwife items will the RHU need?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "The RHU does not need any more midwife item."
+    ],
+    "answer": 0,
+    "explanation": "Using the traditional Philippine rural health staffing ratio of one rural health midwife per 5,000 population, a population of 20,000 requires four midwife items. With three already assigned, one additional item is needed."
+  },
+  {
+    "question": "According to Freeman and Heinrich, community health nursing is a developmental service. Which of the following best illustrates this statement?",
+    "choices": [
+      "The community health nurse continuously develops himself personally and professionally.",
+      "Health education and community organizing are necessary in providing community health services.",
+      "Community health nursing is intended primarily for health promotion and prevention and treatment of disease.",
+      "The goal of community health nursing is to provide nursing services to people in their own places of residence."
+    ],
+    "answer": 1,
+    "explanation": "Community health nursing is developmental because it helps people and communities develop their capacity for self-reliance through health education and community organizing."
+  },
+  {
+    "question": "Nurse Tina is aware that the disease declared through Presidential Proclamation No. 4 as a target for eradication in the Philippines is?",
+    "choices": [
+      "Poliomyelitis",
+      "Measles",
+      "Rabies",
+      "Neonatal tetanus"
+    ],
+    "answer": 1,
+    "explanation": "Presidential Proclamation No. 4 of 1998 launched the Philippine Measles Elimination Campaign, associated with the Ligtas Tigdas program."
+  },
+  {
+    "question": "May knows that the step in community organizing that involves training of potential leaders in the community is:",
+    "choices": [
+      "Integration",
+      "Community organization",
+      "Community study",
+      "Core group formation"
+    ],
+    "answer": 3,
+    "explanation": "Core group formation includes developing and training potential community leaders who can help organize and mobilize the community."
+  },
+  {
+    "question": "Beth a public health nurse takes an active role in community participation. What is the primary goal of community organizing?",
+    "choices": [
+      "To educate the people regarding community health problems",
+      "To mobilize the people to resolve community health problems.",
+      "To maximize the community’s resources in dealing with health problems.",
+      "To maximize the community’s resources in dealing with health problems."
+    ],
+    "answer": 3,
+    "explanation": "The primary goal of community organizing is to develop community self-reliance by maximizing available community resources to address health problems. Choices C and D are duplicates; the supplied key is D."
+  },
+  {
+    "question": "Tertiary prevention is needed in which stage of the natural history of disease?",
+    "choices": [
+      "Pre-pathogenesis",
+      "Pathogenesis",
+      "Prodromal",
+      "Terminal"
+    ],
+    "answer": 3,
+    "explanation": "Tertiary prevention limits disability and complications and supports rehabilitation and quality of life in established, advanced, complicated, or terminal disease."
+  },
+  {
+    "question": "The nurse is caring for a primigravid client in the labor and delivery area. Which condition would place the client at risk for disseminated intravascular coagulation (DIC)?",
+    "choices": [
+      "Intrauterine fetal death.",
+      "Placenta accreta.",
+      "Dysfunctional labor.",
+      "Premature rupture of the membranes."
+    ],
+    "answer": 0,
+    "explanation": "Retained products and prolonged fetal death can release thromboplastic substances and activate widespread coagulation, increasing the risk of DIC."
+  },
+  {
+    "question": "A fullterm client is in labor. Nurse Betty is aware that the fetal heart rate would be:",
+    "choices": [
+      "80 to 100 beats/minute",
+      "100 to 120 beats/minute",
+      "120 to 160 beats/minute",
+      "160 to 180 beats/minute"
+    ],
+    "answer": 2,
+    "explanation": "The normal baseline fetal heart rate at term is approximately 110–160 beats/minute. Among the choices, 120–160 beats/minute is correct."
+  },
+  {
+    "question": "The skin in the diaper area of a 7 month old infant is excoriated and red. Nurse Hazel should instruct the mother to:",
+    "choices": [
+      "Change the diaper more often.",
+      "Apply talc powder with diaper changes.",
+      "Wash the area vigorously with each diaper change.",
+      "Decrease the infant’s fluid intake to decrease saturating diapers."
+    ],
+    "answer": 0,
+    "explanation": "Frequent diaper changes reduce prolonged exposure to urine and stool. The area should be cleaned gently and kept dry; talc powder and vigorous washing can worsen irritation."
+  },
+  {
+    "question": "Nurse Carla knows that the common cardiac anomalies in children with Down Syndrome (tri-somy 21) is:",
+    "choices": [
+      "Atrial septal defect",
+      "Pulmonic stenosis",
+      "Ventricular septal defect",
+      "Endocardial cushion defect"
+    ],
+    "answer": 3,
+    "explanation": "Endocardial cushion defects, particularly atrioventricular septal defects, are strongly associated with Down syndrome because of abnormal atrioventricular septal development."
+  },
+  {
+    "question": "Malou was diagnosed with severe preeclampsia is now receiving I.V. magnesium sulfate. The adverse effects associated with magnesium sulfate is:",
+    "choices": [
+      "Anemia",
+      "Decreased urine output",
+      "Hyperreflexia",
+      "Increased respiratory rate"
+    ],
+    "answer": 1,
+    "explanation": "Magnesium is excreted by the kidneys, and toxicity is more likely when urine output falls. Decreased urine output is therefore an important warning sign requiring close monitoring."
+  },
+  {
+    "question": "A 23 year old client is having her menstrual period every 2 weeks that last for 1 week. This type of menstrual pattern is bets defined by:",
+    "choices": [
+      "Menorrhagia",
+      "Metrorrhagia",
+      "Dyspareunia",
+      "Amenorrhea"
+    ],
+    "answer": 0,
+    "explanation": "Menorrhagia refers to abnormally heavy or prolonged menstrual bleeding. A period lasting a week and recurring unusually frequently represents abnormal uterine bleeding; among the listed choices, menorrhagia is the intended term."
+  },
+  {
+    "question": "Jannah is admitted to the labor and delivery unit. The critical laboratory result for this client would be:",
+    "choices": [
+      "Oxygen saturation",
+      "Iron binding capacity",
+      "Blood typing",
+      "Serum Calcium"
+    ],
+    "answer": 2,
+    "explanation": "Blood typing is critical in labor and delivery because knowledge of ABO and Rh status is essential for managing hemorrhage and preventing or treating Rh incompatibility."
+  },
+  {
+    "question": "Nurse Gina is aware that the most common condition found during the second-trimester of pregnancy is:",
+    "choices": [
+      "Metabolic alkalosis",
+      "Respiratory acidosis",
+      "Mastitis",
+      "Physiologic anemia"
+    ],
+    "answer": 3,
+    "explanation": "Plasma volume increases substantially during pregnancy, producing hemodilution. This physiologic anemia is commonly recognized during the second trimester."
+  },
+  {
+    "question": "Nurse Lynette is working in the triage area of an emergency department. She sees that several pediatric clients arrive simultaneously. The client who needs to be treated first is:",
+    "choices": [
+      "A crying 5 year old child with a laceration on his scalp.",
+      "A 4 year old child with a barking coughs and flushed appearance.",
+      "A 3 year old child with Down syndrome who is pale and asleep in his mother’s arms.",
+      "A 2 year old infant with stridorous breath sounds, sitting up in his mother’s arms and drooling."
+    ],
+    "answer": 3,
+    "explanation": "Stridor with drooling and an upright posture suggests severe upper-airway obstruction, potentially epiglottitis. Airway compromise is the immediate priority."
+  },
+  {
+    "question": "Maureen in her third trimester arrives at the emergency room with painless vaginal bleeding. Which of the following conditions is suspected?",
+    "choices": [
+      "Placenta previa",
+      "Abruptio placentae",
+      "Premature labor",
+      "Sexually transmitted disease"
+    ],
+    "answer": 0,
+    "explanation": "Placenta previa classically presents with sudden, painless bright-red vaginal bleeding in the second half of pregnancy. Digital vaginal examination should be avoided until previa is excluded."
+  },
+  {
+    "question": "A young child named Richard is suspected of having pinworms. The community nurse collects a stool specimen to confirm the diagnosis. The nurse should schedule the collection of this specimen for:",
+    "choices": [
+      "Just before bedtime",
+      "After the child has been bathe",
+      "Any time during the day",
+      "Early in the morning"
+    ],
+    "answer": 3,
+    "explanation": "Enterobius vermicularis females migrate to the perianal area at night and deposit eggs there. A morning perianal tape specimen, before bathing or defecation, is preferred for diagnosis."
+  },
+  {
+    "question": "In doing a child’s admission assessment, Nurse Betty should be alert to note which signs or symptoms of chronic lead poisoning?",
+    "choices": [
+      "Irritability and seizures",
+      "Dehydration and diarrhea",
+      "Bradycardia and hypotension",
+      "Petechiae and hematuria"
+    ],
+    "answer": 0,
+    "explanation": "Lead toxicity can affect the nervous system and cause irritability, behavioral changes, encephalopathy, and seizures in severe cases."
+  },
+  {
+    "question": "To evaluate a woman’s understanding about the use of diaphragm for family planning, Nurse Trish asks her to explain how she will use the appliance. Which response indicates a need for further health teaching?",
+    "choices": [
+      "I should check the diaphragm carefully for holes every time I use it",
+      "I may need a different size of diaphragm if I gain or lose weight more than 20 pounds",
+      "The diaphragm must be left in place for atleast 6 hours after intercourse",
+      "I really need to use the diaphragm and jelly most during the middle of my menstrual cycle."
+    ],
+    "answer": 3,
+    "explanation": "A diaphragm with spermicide is used with every act of intercourse, not only around the middle of the cycle. Fertility varies and contraception should be used consistently whenever pregnancy is possible."
+  },
+  {
+    "question": "Hypoxia is a common complication of laryngotracheobronchitis. Nurse Oliver should frequently assess a child with laryngotracheobronchitis for:",
+    "choices": [
+      "Drooling",
+      "Muffled voice",
+      "Restlessness",
+      "Low-grade fever"
+    ],
+    "answer": 2,
+    "explanation": "Restlessness can be an early sign of hypoxia. Progressive airway obstruction can lead to worsening respiratory distress and decreased oxygenation."
+  },
+  {
+    "question": "How should Nurse Michelle guide a child who is blind to walk to the playroom?",
+    "choices": [
+      "Without touching the child, talk continuously as the child walks down the hall.",
+      "Walk one step ahead, with the child’s hand on the nurse’s elbow.",
+      "Walk slightly behind, gently guiding the child forward.",
+      "Walk next to the child, holding the child’s hand."
+    ],
+    "answer": 1,
+    "explanation": "The child should hold the nurse's arm just above the elbow while the nurse walks slightly ahead. This provides safe guidance while allowing the child to detect changes in the path."
+  },
+  {
+    "question": "When assessing a newborn diagnosed with ductus arteriosus, Nurse Olivia should expect that the child most likely would have an:",
+    "choices": [
+      "Loud, machinery-like murmur.",
+      "Bluish color to the lips.",
+      "Decreased BP reading in the upper extremities",
+      "Increased BP reading in the upper extremities."
+    ],
+    "answer": 0,
+    "explanation": "A patent ductus arteriosus characteristically produces a continuous, machinery-like murmur due to persistent blood flow between the aorta and pulmonary artery."
+  },
+  {
+    "question": "The reason nurse May keeps the neonate in a neutral thermal environment is that when a newborn becomes too cool, the neonate requires:",
+    "choices": [
+      "Less oxygen, and the newborn’s metabolic rate increases.",
+      "More oxygen, and the newborn’s metabolic rate decreases.",
+      "More oxygen, and the newborn’s metabolic rate increases.",
+      "Less oxygen, and the newborn’s metabolic rate decreases."
+    ],
+    "answer": 2,
+    "explanation": "Cold stress increases metabolic activity and oxygen consumption as the newborn attempts to generate heat. Prolonged cold stress can therefore cause hypoxia and hypoglycemia."
+  },
+  {
+    "question": "Before adding potassium to an infant’s I.V. line, Nurse Ron must be sure to assess whether this infant has:",
+    "choices": [
+      "Stable blood pressure",
+      "Patant fontanelles",
+      "Moro’s reflex",
+      "Voided"
+    ],
+    "answer": 3,
+    "explanation": "Potassium is excreted by the kidneys. It should not be added to IV fluids until adequate renal function is demonstrated, including evidence that the infant has voided."
+  },
+  {
+    "question": "Nurse Carla should know that the most common causative factor of dermatitis in infants and younger children is:",
+    "choices": [
+      "Baby oil",
+      "Baby lotion",
+      "Laundry detergent",
+      "Powder with cornstarch"
+    ],
+    "answer": 2,
+    "explanation": "Laundry detergents and other irritants can remain in clothing and trigger irritant or allergic contact dermatitis. Avoidance of the offending irritant is an important intervention."
+  },
+  {
+    "question": "During tube feeding, how far above an infant’s stomach should the nurse hold the syringe with formula?",
+    "choices": [
+      "6 inches",
+      "12 inches",
+      "18 inches",
+      "24 inches"
+    ],
+    "answer": 0,
+    "explanation": "For gravity tube feeding, the syringe is generally held about 6 inches above the infant's stomach so formula flows slowly and safely rather than rapidly."
+  },
+  {
+    "question": "In a mothers’ class, Nurse Lhynnete discussed childhood diseases such as chicken pox. Which of the following statements about chicken pox is correct?",
+    "choices": [
+      "The older one gets, the more susceptible he becomes to the complications of chicken pox.",
+      "A single attack of chicken pox will prevent future episodes, including conditions such as shingles.",
+      "To prevent an outbreak in the community, quarantine may be imposed by health authorities.",
+      "Chicken pox vaccine is best given when there is an impending outbreak in the community."
+    ],
+    "answer": 0,
+    "explanation": "Varicella is often more severe in adolescents and adults, with increased risk of complications such as pneumonia. Vaccination is preventive and should not be delayed until an outbreak."
+  },
+  {
+    "question": "Barangay Pinoy had an outbreak of German measles. To prevent congenital rubella, what is the BEST advice that you can give to women in the first trimester of pregnancy in the barangay Pinoy?",
+    "choices": [
+      "Advice them on the signs of German measles.",
+      "Avoid crowded places, such as markets and movie houses.",
+      "Consult at the health center where rubella vaccine may be given.",
+      "Consult a physician who may give them rubella immunoglobulin."
+    ],
+    "answer": 3,
+    "explanation": "Rubella vaccine is a live vaccine and is contraindicated during pregnancy. For a pregnant woman exposed to rubella, medical evaluation is appropriate; rubella immune globulin may be considered in selected exposure situations, although it does not reliably prevent fetal infection."
+  },
+  {
+    "question": "Myrna a public health nurse knows that to determine possible sources of sexually transmitted infections, the BEST method that may be undertaken is:",
+    "choices": [
+      "Contact tracing",
+      "Community survey",
+      "Mass screening tests",
+      "Interview of suspects"
+    ],
+    "answer": 0,
+    "explanation": "Contact tracing identifies sexual contacts of an infected person so they can be evaluated, tested, treated when indicated, and counseled to prevent further transmission."
+  },
+  {
+    "question": "A 33-year old female client came for consultation at the health center with the chief complaint of fever for a week. Accompanying symptoms were muscle pains and body malaise. A week after the start of fever, the client noted yellowish discoloration of his sclera. History showed that he waded in flood waters about 2 weeks before the onset of symptoms. Based on her history, which disease condition will you suspect?",
+    "choices": [
+      "Hepatitis A",
+      "Hepatitis B",
+      "Tetanus",
+      "Leptospirosis"
+    ],
+    "answer": 3,
+    "explanation": "Leptospirosis is transmitted through exposure to water or soil contaminated with urine from infected animals. Fever, severe myalgia, malaise, and jaundice after flood-water exposure are characteristic of severe leptospirosis (Weil disease)."
+  },
+  {
+    "question": "Mickey a 3-year old client was brought to the health center with the chief complaint of severe diarrhea and the passage of “rice water” stools. The client is most probably suffering from which condition?",
+    "choices": [
+      "Giardiasis",
+      "Cholera",
+      "Amebiasis",
+      "Dysentery"
+    ],
+    "answer": 1,
+    "explanation": "Profuse, watery 'rice-water' stools are classic for cholera caused by Vibrio cholerae. Rapid fluid and electrolyte loss can lead to severe dehydration."
+  },
+  {
+    "question": "The most prevalent form of meningitis among children aged 2 months to 3 years is caused by which microorganism?",
+    "choices": [
+      "Hemophilus influenzae",
+      "Morbillivirus",
+      "Steptococcus pneumoniae",
+      "Neisseria meningitidis"
+    ],
+    "answer": 0,
+    "explanation": "The classic teaching for this age group is Haemophilus influenzae type b meningitis, particularly before widespread Hib vaccination. Hib vaccination has greatly reduced its incidence."
+  },
+  {
+    "question": "The student nurse is aware that the pathognomonic sign of measles is Koplik’s spot and you may see Koplik’s spot by inspecting the:",
+    "choices": [
+      "Nasal mucosa",
+      "Buccal mucosa",
+      "Skin on the abdomen",
+      "Skin on neck"
+    ],
+    "answer": 1,
+    "explanation": "Koplik spots are tiny bluish-white lesions on a red base found on the buccal mucosa, usually opposite the molars, before or around the onset of the measles rash."
+  },
+  {
+    "question": "Angel was diagnosed as having Dengue fever. You will say that there is slow capillary refill when the color of the nailbed that you pressed does not return within how many seconds?",
+    "choices": [
+      "3 seconds",
+      "6 seconds",
+      "9 seconds",
+      "10 seconds"
+    ],
+    "answer": 0,
+    "explanation": "Normal capillary refill is generally less than 2 seconds. A refill time of 3 seconds or longer is considered delayed and may indicate poor peripheral perfusion."
+  },
+  {
+    "question": "In Integrated Management of Childhood Illness, the nurse is aware that the severe conditions generally require urgent referral to a hospital. Which of the following severe conditions DOES NOT always require urgent referral to a hospital?",
+    "choices": [
+      "Mastoiditis",
+      "Severe dehydration",
+      "Severe pneumonia",
+      "Severe febrile disease"
+    ],
+    "answer": 1,
+    "explanation": "Severe dehydration can be managed with IMCI Plan C using appropriate rapid IV or oral/NG rehydration where the facility is equipped and the child can be monitored; referral depends on available treatment capability. The other listed severe conditions generally require urgent hospital referral."
+  },
+  {
+    "question": "Myrna a public health nurse will conduct outreach immunization in a barangay Masay with a population of about 1500. The estimated number of infants in the barangay would be:",
+    "choices": [
+      "45 infants",
+      "50 infants",
+      "55 infants",
+      "65 infants"
+    ],
+    "answer": 0,
+    "explanation": "A commonly used Philippine community-health estimate is that infants comprise about 3% of the population. Three percent of 1,500 is 45 infants."
+  },
+  {
+    "question": "The community nurse is aware that the biological used in Expanded Program on Immunization (EPI) should NOT be stored in the freezer?",
+    "choices": [
+      "DPT",
+      "Oral polio vaccine",
+      "Measles vaccine",
+      "MMR"
+    ],
+    "answer": 0,
+    "explanation": "DPT-containing vaccines must be protected from freezing because freezing can damage their components and reduce potency. OPV, measles vaccine, and MMR are freeze-dried or relatively stable to freezing but sensitive to heat/light."
+  },
+  {
+    "question": "It is the most effective way of controlling schistosomiasis in an endemic area?",
+    "choices": [
+      "Use of molluscicides",
+      "Building of foot bridges",
+      "Proper use of sanitary toilets",
+      "Use of protective footwear, such as rubber boots"
+    ],
+    "answer": 2,
+    "explanation": "Sanitary toilets prevent human feces containing Schistosoma eggs from contaminating freshwater and interrupt the parasite's life cycle. Environmental sanitation is therefore a key control measure."
+  },
+  {
+    "question": "Several clients is newly admitted and diagnosed with leprosy. Which of the following clients should be classified as a case of multibacillary leprosy?",
+    "choices": [
+      "3 skin lesions, negative slit skin smear",
+      "3 skin lesions, positive slit skin smear",
+      "5 skin lesions, negative slit skin smear",
+      "5 skin lesions, positive slit skin smear"
+    ],
+    "answer": 3,
+    "explanation": "A positive slit-skin smear indicates multibacillary disease regardless of the number of skin lesions. Therefore, the client with five lesions and a positive smear is multibacillary."
+  },
+  {
+    "question": "Nurses are aware that diagnosis of leprosy is highly dependent on recognition of symptoms. Which of the following is an early sign of leprosy?",
+    "choices": [
+      "Macular lesions",
+      "Inability to close eyelids",
+      "Thickened painful nerves",
+      "Sinking of the nosebridge"
+    ],
+    "answer": 0,
+    "explanation": "Early leprosy commonly presents with hypopigmented or erythematous macular skin lesions accompanied by sensory loss. Eyelid dysfunction, thickened nerves, and nasal deformity generally indicate more advanced disease."
+  },
+  {
+    "question": "Marie brought her 10 month old infant for consultation because of fever, started 4 days prior to consultation. In determining malaria risk, what will you do?",
+    "choices": [
+      "Perform a tourniquet test.",
+      "Ask where the family resides.",
+      "Get a specimen for blood smear.",
+      "Ask if the fever is present everyday."
+    ],
+    "answer": 1,
+    "explanation": "Malaria risk is strongly related to geographic exposure because transmission varies by location. In IMCI assessment, determining whether the child lives in or recently traveled to a malaria-risk area is an important first step."
+  },
+  {
+    "question": "Susie brought her 4 years old daughter to the RHU because of cough and colds. Following the IMCI assessment guide, which of the following is a danger sign that indicates the need for urgent referral to a hospital?",
+    "choices": [
+      "Inability to drink",
+      "High grade fever",
+      "Signs of severe dehydration",
+      "Cough for more than 30 days"
+    ],
+    "answer": 0,
+    "explanation": "Inability to drink or breastfeed is a general danger sign in IMCI and indicates serious illness requiring urgent referral."
+  },
+  {
+    "question": "Jimmy a 2-year old child revealed “baggy pants”. As a nurse, using the IMCI guidelines, how will you manage Jimmy?",
+    "choices": [
+      "Refer the child urgently to a hospital for confinement.",
+      "Coordinate with the social worker to enroll the child in a feeding program.",
+      "Make a teaching plan for the mother, focusing on menu planning for her child.",
+      "Assess and treat the child for health problems like infections and intestinal parasitism."
+    ],
+    "answer": 0,
+    "explanation": "'Baggy pants' indicates severe wasting and severe acute malnutrition. Under IMCI, severe acute malnutrition with complications or danger signs requires urgent referral for appropriate assessment and treatment."
+  },
+  {
+    "question": "Gina is using Oresol in the management of diarrhea of her 3-year old child. She asked you what to do if her child vomits. As a nurse you will tell her to:",
+    "choices": [
+      "Bring the child to the nearest hospital for further assessment.",
+      "Bring the child to the health center for intravenous fluid therapy.",
+      "Bring the child to the health center for assessment by the physician.",
+      "Let the child rest for 10 minutes then continue giving Oresol more slowly."
+    ],
+    "answer": 3,
+    "explanation": "If a child vomits while taking ORS, wait about 10 minutes and then restart more slowly in small, frequent amounts. This improves tolerance and allows continued rehydration."
+  },
+  {
+    "question": "Nikki a 5-month old infant was brought by his mother to the health center because of diarrhea for 4 to 5 times a day. Her skin goes back slowly after a skin pinch and her eyes are sunken. Using the IMCI guidelines, you will classify this infant in which category?",
+    "choices": [
+      "No signs of dehydration",
+      "Some dehydration",
+      "Severe dehydration",
+      "The data is insufficient."
+    ],
+    "answer": 1,
+    "explanation": "Slow return of the skin pinch and sunken eyes are two signs of dehydration. With two signs consistent with some dehydration and no stated severe danger signs, the IMCI classification is some dehydration."
+  },
+  {
+    "question": "Chris a 4-month old infant was brought by her mother to the health center because of cough. His respiratory rate is 42/minute. Using the Integrated Management of Child Illness (IMCI) guidelines of assessment, his breathing is considered as:",
+    "choices": [
+      "Fast",
+      "Slow",
+      "Normal",
+      "Insignificant"
+    ],
+    "answer": 2,
+    "explanation": "For infants younger than 2 months, 60/minute is the fast-breathing cutoff; for children 2–12 months, fast breathing is 50/minute or more. At 4 months, 42/minute is not fast."
+  },
+  {
+    "question": "Maylene had just received her 4th dose of tetanus toxoid. She is aware that her baby will have protection against tetanus for",
+    "choices": [
+      "1 year",
+      "3 years",
+      "5 years",
+      "Lifetime"
+    ],
+    "answer": 0,
+    "explanation": "Traditional maternal tetanus immunization schedules teach that the fourth tetanus toxoid dose provides protection for about 1 year after the last dose. The exact duration depends on the complete immunization history."
+  },
+  {
+    "question": "Nurse Ron is aware that unused BCG should be discarded after how many hours of reconstitution?",
+    "choices": [
+      "2 hours",
+      "4 hours",
+      "8 hours",
+      "At the end of the day"
+    ],
+    "answer": 1,
+    "explanation": "Reconstituted BCG is unstable and should be discarded after 4 hours or at the end of the immunization session, whichever comes first, according to traditional EPI guidance."
+  },
+  {
+    "question": "The nurse explains to a breastfeeding mother that breast milk is sufficient for all of the baby’s nutrient needs only up to:",
+    "choices": [
+      "5 months",
+      "6 months",
+      "1 year",
+      "2 years"
+    ],
+    "answer": 1,
+    "explanation": "Exclusive breastfeeding is recommended for about the first 6 months, after which complementary foods should be introduced while breastfeeding continues."
+  },
+  {
+    "question": "Nurse Ron is aware that the gestational age of a conceptus that is considered viable (able to live outside the womb) is:",
+    "choices": [
+      "8 weeks",
+      "12 weeks",
+      "24 weeks",
+      "32 weeks"
+    ],
+    "answer": 2,
+    "explanation": "Around 24 weeks is the traditional threshold used in nursing education for fetal viability, although outcomes vary and modern neonatal care can support some infants born earlier."
+  },
+  {
+    "question": "When teaching parents of a neonate the proper position for the neonate’s sleep, the nurse Patricia stresses the importance of placing the neonate on his back to reduce the risk of which of the following?",
+    "choices": [
+      "Aspiration",
+      "Sudden infant death syndrome (SIDS)",
+      "Suffocation",
+      "Gastroesophageal reflux (GER)"
+    ],
+    "answer": 1,
+    "explanation": "Placing infants supine for sleep substantially reduces the risk of sudden infant death syndrome. Supine sleep is recommended even for infants with reflux."
+  },
+  {
+    "question": "Which finding might be seen in baby James a neonate suspected of having an infection?",
+    "choices": [
+      "Flushed cheeks",
+      "Increased temperature",
+      "Decreased temperature",
+      "Increased activity level"
+    ],
+    "answer": 2,
+    "explanation": "Newborn infection may present with hypothermia rather than fever. Temperature instability, poor feeding, lethargy, and respiratory changes are important neonatal infection signs."
+  },
+  {
+    "question": "Baby Jenny who is small-for-gestation is at increased risk during the transitional period for which complication?",
+    "choices": [
+      "Anemia probably due to chronic fetal hyposia",
+      "Hyperthermia due to decreased glycogen stores",
+      "Hyperglycemia due to decreased glycogen stores",
+      "Polycythemia probably due to chronic fetal hypoxia"
+    ],
+    "answer": 3,
+    "explanation": "Small-for-gestational-age infants may have chronic placental insufficiency and fetal hypoxia, stimulating erythropoiesis and causing polycythemia."
+  },
+  {
+    "question": "Marjorie has just given birth at 42 weeks’ gestation. When the nurse assessing the neonate, which physical finding is expected?",
+    "choices": [
+      "A sleepy, lethargic baby",
+      "Lanugo covering the body",
+      "Desquamation of the epidermis",
+      "Vernix caseosa covering the body"
+    ],
+    "answer": 2,
+    "explanation": "Post-term infants commonly have dry, peeling or desquamating skin because vernix is reduced or absent. They typically have little lanugo and little vernix."
+  },
+  {
+    "question": "After reviewing the Myrna’s maternal history of magnesium sulfate during labor, which condition would nurse Richard anticipate as a potential problem in the neonate?",
+    "choices": [
+      "Hypoglycemia",
+      "Jitteriness",
+      "Respiratory depression",
+      "Tachycardia"
+    ],
+    "answer": 2,
+    "explanation": "Magnesium crosses the placenta. Maternal magnesium therapy near delivery can depress neonatal neuromuscular and respiratory function, so respiratory depression is an important potential complication."
+  },
+  {
+    "question": "Which symptom would indicate the Baby Alexandra was adapting appropriately to extra-uterine life without difficulty?",
+    "choices": [
+      "Nasal flaring",
+      "Light audible grunting",
+      "Respiratory rate 40 to 60 breaths/minute",
+      "Respiratory rate 60 to 80 breaths/minute"
+    ],
+    "answer": 2,
+    "explanation": "A normal newborn respiratory rate is about 30–60 breaths/minute. A rate of 40–60 without distress signs indicates appropriate adaptation."
+  },
+  {
+    "question": "When teaching umbilical cord care for Jennifer a new mother, the nurse Jenny would include which information?",
+    "choices": [
+      "Apply peroxide to the cord with each diaper change",
+      "Cover the cord with petroleum jelly after bathing",
+      "Keep the cord dry and open to air",
+      "Wash the cord with soap and water each day during a tub bath."
+    ],
+    "answer": 2,
+    "explanation": "Clean, dry cord care with exposure to air promotes drying and separation. Routine application of peroxide, petroleum jelly, or other substances is generally unnecessary."
+  },
+  {
+    "question": "Nurse John is performing an assessment on a neonate. Which of the following findings is considered common in the healthy neonate?",
+    "choices": [
+      "Simian crease",
+      "Conjunctival hemorrhage",
+      "Cystic hygroma",
+      "Bulging fontanelle"
+    ],
+    "answer": 1,
+    "explanation": "Small subconjunctival hemorrhages can occur from pressure during vaginal birth and usually resolve spontaneously. A bulging fontanelle and cystic hygroma are abnormal findings."
+  },
+  {
+    "question": "Dr. Esteves decides to artificially rupture the membranes of a mother who is on labor. Following this procedure, the nurse Hazel checks the fetal heart tones for which the following reasons?",
+    "choices": [
+      "To determine fetal well-being.",
+      "To assess for prolapsed cord",
+      "To assess fetal position",
+      "To prepare for an imminent delivery."
+    ],
+    "answer": 1,
+    "explanation": "After artificial rupture of membranes, the fetal heart rate is checked immediately to detect fetal compromise and especially to identify a possible umbilical cord prolapse."
+  },
+  {
+    "question": "Which of the following would be least likely to indicate anticipated bonding behaviors by new parents?",
+    "choices": [
+      "The parents’ willingness to touch and hold the new born.",
+      "The parent’s expression of interest about the size of the new born.",
+      "The parents’ indication that they want to see the newborn.",
+      "The parents’ interactions with each other."
+    ],
+    "answer": 3,
+    "explanation": "Bonding behaviors focus on the parents' interest in, touching, holding, and interacting with the newborn. Interaction between the parents themselves is not a direct indicator of parent-infant bonding."
+  },
+  {
+    "question": "Following a precipitous delivery, examination of the client’s vagina reveals a fourth-degree laceration. Which of the following would be contraindicated when caring for this client?",
+    "choices": [
+      "Applying cold to limit edema during the first 12 to 24 hours.",
+      "Instructing the client to use two or more peripads to cushion the area.",
+      "Instructing the client on the use of sitz baths if ordered.",
+      "Instructing the client about the importance of perineal (kegel) exercises."
+    ],
+    "answer": 1,
+    "explanation": "A fourth-degree laceration involves the anal sphincter and rectal mucosa. Using multiple pads as a cushion is not recommended because excessive padding can impair drainage and hygiene; the perineal area should be kept clean and monitored."
+  },
+  {
+    "question": "A pregnant woman accompanied by her husband, seeks admission to the labor and delivery area. She states that she’s in labor and says she attended the facility clinic for prenatal care. Which question should the nurse Oliver ask her first?",
+    "choices": [
+      "Do you have any chronic illnesses?",
+      "Do you have any allergies?",
+      "What is your expected due date?",
+      "Who will be with you during labor?"
+    ],
+    "answer": 2,
+    "explanation": "The expected due date establishes gestational age, which immediately guides assessment of labor, fetal maturity, and potential obstetric priorities."
+  },
+  {
+    "question": "A neonate begins to gag and turns a dusky color. What should the nurse do first?",
+    "choices": [
+      "Calm the neonate.",
+      "Notify the physician.",
+      "Provide oxygen via face mask as ordered",
+      "Aspirate the neonate’s nose and mouth with a bulb syringe."
+    ],
+    "answer": 3,
+    "explanation": "Gagging with dusky coloration suggests airway obstruction from secretions. The immediate nursing action is to clear the airway with a bulb syringe, beginning with the mouth and then the nose."
+  },
+  {
+    "question": "When a client states that her “water broke,” which of the following actions would be inappropriate for the nurse to do?",
+    "choices": [
+      "Observing the pooling of straw-colored fluid.",
+      "Checking vaginal discharge with nitrazine paper.",
+      "Conducting a bedside ultrasound for an amniotic fluid index.",
+      "Observing for flakes of vernix in the vaginal discharge."
+    ],
+    "answer": 2,
+    "explanation": "A bedside ultrasound for amniotic fluid volume is not the routine first-line confirmation of rupture of membranes. Pooling, nitrazine testing, and ferning/vernix observations can support assessment."
+  },
+  {
+    "question": "A baby girl is born 8 weeks premature. At birth, she has no spontaneous respirations but is successfully resuscitated. Within several hours she develops respiratory grunting, cyanosis, tachypnea, nasal flaring, and retractions. She’s diagnosed with respiratory distress syndrome, intubated, and placed on a ventilator. Which nursing action should be included in the baby’s plan of care to prevent retinopathy of prematurity?",
+    "choices": [
+      "Cover his eyes while receiving oxygen.",
+      "Keep her body temperature low.",
+      "Monitor partial pressure of oxygen (Pao2) levels.",
+      "Humidify the oxygen."
+    ],
+    "answer": 2,
+    "explanation": "Retinopathy of prematurity is associated with excessive or fluctuating oxygen exposure. Monitoring PaO2 and carefully controlling oxygen delivery helps avoid hyperoxia."
+  },
+  {
+    "question": "Which of the following is normal newborn calorie intake?",
+    "choices": [
+      "110 to 130 calories per kg.",
+      "30 to 40 calories per lb of body weight.",
+      "At least 2 ml per feeding",
+      "90 to 100 calories per kg"
+    ],
+    "answer": 0,
+    "explanation": "Newborns generally require about 110–130 kcal/kg/day for growth. Caloric needs are higher per kilogram than those of older children and adults."
+  },
+  {
+    "question": "Nurse John is knowledgeable that usually individual twins will grow appropriately and at the same rate as singletons until how many weeks?",
+    "choices": [
+      "16 to 18 weeks",
+      "18 to 22 weeks",
+      "30 to 32 weeks",
+      "38 to 40 weeks"
+    ],
+    "answer": 2,
+    "explanation": "Twin fetal growth generally parallels singleton growth during the earlier part of gestation, with growth restriction becoming more common after about 30–32 weeks."
+  },
+  {
+    "question": "Which of the following classifications applies to monozygotic twins for whom the cleavage of the fertilized ovum occurs more than 13 days after fertilization?",
+    "choices": [
+      "conjoined twins",
+      "diamniotic dichorionic twins",
+      "diamniotic monochorionic twin",
+      "monoamniotic monochorionic twins"
+    ],
+    "answer": 0,
+    "explanation": "Very late division of a monozygotic embryo, more than about 13 days after fertilization, can be incomplete and produce conjoined twins."
+  },
+  {
+    "question": "Tyra experienced painless vaginal bleeding has just been diagnosed as having a placenta previa. Which of the following procedures is usually performed to diagnose placenta previa?",
+    "choices": [
+      "Amniocentesis",
+      "Digital or speculum examination",
+      "External fetal monitoring",
+      "Ultrasound"
+    ],
+    "answer": 3,
+    "explanation": "Ultrasound is the standard diagnostic method for locating the placenta and identifying placenta previa. Digital vaginal examination is avoided until previa is excluded because it can provoke severe hemorrhage."
+  },
+  {
+    "question": "Nurse Arnold knows that the following changes in respiratory functioning during pregnancy is considered normal:",
+    "choices": [
+      "Increased tidal volume",
+      "Increased expiratory volume",
+      "Decreased inspiratory capacity",
+      "Decreased oxygen consumption"
+    ],
+    "answer": 0,
+    "explanation": "Pregnancy increases tidal volume and minute ventilation. Oxygen consumption also increases, while inspiratory capacity is not decreased as a normal primary change."
+  },
+  {
+    "question": "Emily has gestational diabetes and it is usually managed by which of the following therapy?",
+    "choices": [
+      "Diet",
+      "Long-acting insulin",
+      "Oral hypoglycemic",
+      "Oral hypoglycemic drug and insulin"
+    ],
+    "answer": 0,
+    "explanation": "Management of gestational diabetes begins with medical nutrition therapy, physical activity as appropriate, and glucose monitoring. Insulin is added when glycemic targets are not achieved with lifestyle measures."
+  },
+  {
+    "question": "Magnesium sulfate is given to Jemma with preeclampsia to prevent which of the following condition?",
+    "choices": [
+      "Hemorrhage",
+      "Hypertension",
+      "Hypomagnesemia",
+      "Seizure"
+    ],
+    "answer": 3,
+    "explanation": "Magnesium sulfate is used for seizure prophylaxis in severe preeclampsia and for treatment/prevention of eclamptic seizures."
+  },
+  {
+    "question": "Cammile with sickle cell anemia has an increased risk for having a sickle cell crisis during pregnancy. Aggressive management of a sickle cell crisis includes which of the following measures?",
+    "choices": [
+      "Antihypertensive agents",
+      "Diuretic agents",
+      "I.V. fluids",
+      "Acetaminophen (Tylenol) for pain"
+    ],
+    "answer": 2,
+    "explanation": "Hydration with appropriate IV fluids helps reduce blood viscosity and supports perfusion during vaso-occlusive crisis. Pain control and oxygen when hypoxemic are also important."
+  },
+  {
+    "question": "Which of the following drugs is the antidote for magnesium toxicity?",
+    "choices": [
+      "Calcium gluconate (Kalcinate)",
+      "Hydralazine (Apresoline)",
+      "Naloxone (Narcan)",
+      "Rho (D) immune globulin (RhoGAM)"
+    ],
+    "answer": 0,
+    "explanation": "IV calcium gluconate antagonizes the neuromuscular and cardiac effects of excessive magnesium and is the standard antidote for magnesium toxicity."
+  },
+  {
+    "question": "Marlyn is screened for tuberculosis during her first prenatal visit. An intradermal injection of purified protein derivative (PPD) of the tuberculin bacilli is given. She is considered to have a positive test for which of the following results?",
+    "choices": [
+      "An indurated wheal under 10 mm in diameter appears in 6 to 12 hours.",
+      "An indurated wheal over 10 mm in diameter appears in 48 to 72 hours.",
+      "A flat circumcised area under 10 mm in diameter appears in 6 to 12 hours.",
+      "A flat circumcised area over 10 mm in diameter appears in 48 to 72 hours."
+    ],
+    "answer": 1,
+    "explanation": "A tuberculin skin test is read 48–72 hours after placement and measures induration, not redness. In a person without special risk factors, 10 mm or more is considered positive; therefore an induration over 10 mm at 48–72 hours fits the choice."
+  },
+  {
+    "question": "Dianne, 24 year-old is 27 weeks’ pregnant arrives at her physician’s office with complaints of fever, nausea, vomiting, malaise, unilateral flank pain, and costovertebral angle tenderness. Which of the following diagnoses is most likely?",
+    "choices": [
+      "Asymptomatic bacteriuria",
+      "Bacterial vaginosis",
+      "Pyelonephritis",
+      "Urinary tract infection (UTI)"
+    ],
+    "answer": 2,
+    "explanation": "Fever, systemic symptoms, flank pain, and costovertebral angle tenderness strongly indicate acute pyelonephritis rather than asymptomatic bacteriuria or uncomplicated lower UTI."
+  },
+  {
+    "question": "Rh isoimmunization in a pregnant client develops during which of the following conditions?",
+    "choices": [
+      "Rh-positive maternal blood crosses into fetal blood, stimulating fetal antibodies.",
+      "Rh-positive fetal blood crosses into maternal blood, stimulating maternal antibodies.",
+      "Rh-negative fetal blood crosses into maternal blood, stimulating maternal antibodies.",
+      "Rh-negative maternal blood crosses into fetal blood, stimulating fetal antibodies."
+    ],
+    "answer": 1,
+    "explanation": "Rh isoimmunization occurs when Rh-positive fetal red cells enter an Rh-negative maternal circulation and stimulate maternal anti-D antibody production."
+  },
+  {
+    "question": "To promote comfort during labor, the nurse John advises a client to assume certain positions and avoid others. Which position may cause maternal hypotension and fetal hypoxia?",
+    "choices": [
+      "Lateral position",
+      "Squatting position",
+      "Supine position",
+      "Standing position"
+    ],
+    "answer": 2,
+    "explanation": "The supine position can compress the inferior vena cava, reducing venous return, maternal cardiac output, and uteroplacental perfusion. This can cause maternal hypotension and fetal hypoxia."
+  },
+  {
+    "question": "Celeste who used heroin during her pregnancy delivers a neonate. When assessing the neonate, the nurse Lhynnette expects to find:",
+    "choices": [
+      "Lethargy 2 days after birth.",
+      "Irritability and poor sucking.",
+      "A flattened nose, small eyes, and thin lips.",
+      "Congenital defects such as limb anomalies."
+    ],
+    "answer": 1,
+    "explanation": "Neonates exposed to opioids in utero commonly develop neonatal opioid withdrawal, characterized by irritability, tremors, poor feeding, high-pitched crying, and sleep disturbance."
+  },
+  {
+    "question": "The uterus returns to the pelvic cavity in which of the following time frames?",
+    "choices": [
+      "7th to 9th day postpartum.",
+      "2 weeks postpartum.",
+      "End of 6th week postpartum.",
+      "When the lochia changes to alba."
+    ],
+    "answer": 0,
+    "explanation": "The uterus descends into the true pelvis by approximately 10–14 days, and traditional nursing references often describe it as returning to the pelvic cavity by about the 7th–9th postpartum day."
+  },
+  {
+    "question": "Maureen, a primigravida client, age 20, has just completed a difficult, forceps-assisted delivery of twins. Her labor was unusually long and required oxytocin (Pitocin) augmentation. The nurse who’s caring for her should stay alert for:",
+    "choices": [
+      "Uterine inversion",
+      "Uterine atony",
+      "Uterine involution",
+      "Uterine discomfort"
+    ],
+    "answer": 1,
+    "explanation": "Prolonged labor, uterine overdistention from twins, and oxytocin augmentation can fatigue the uterine muscle and increase the risk of uterine atony, the leading cause of postpartum hemorrhage."
+  }
   ],
   "pnle-set1-part3": [
+  {
+    "question": "Nurse Michelle should know that the drainage is normal 4 days after a sigmoid colostomy when the stool is:",
+    "choices": [
+      "Green liquid",
+      "Solid formed",
+      "Loose, bloody",
+      "Semiformed"
+    ],
+    "answer": 2,
+    "explanation": "Normal bowel function and soft-formed stool usually do not occur until around the seventh day following surgery. Stool consistency is related to how much water is being absorbed."
+  },
+  {
+    "question": "Where would nurse Kristine place the call light for a male client with a right-sided brain attack and left homonymous hemianopsia?",
+    "choices": [
+      "On the client’s right side",
+      "On the client’s left side",
+      "Directly in front of the client",
+      "Where the client like"
+    ],
+    "answer": 0,
+    "explanation": "The client has left visual field blindness, so the call light should be placed on the client’s right side where it can be seen."
+  },
+  {
+    "question": "A male client is admitted to the emergency department following an accident. What are the first nursing actions of the nurse?",
+    "choices": [
+      "Check respiration, circulation, neurological response.",
+      "Align the spine, check pupils, and check for hemorrhage.",
+      "Check respirations, stabilize spine, and check circulation.",
+      "Assess level of consciousness and circulation."
+    ],
+    "answer": 2,
+    "explanation": "Checking respirations is an airway and breathing priority, while a possible neck injury requires spinal stabilization before further assessment."
+  },
+  {
+    "question": "In evaluating the effect of nitroglycerin, Nurse Arthur should know that it reduces preload and relieves angina by:",
+    "choices": [
+      "Increasing contractility and slowing heart rate.",
+      "Increasing AV conduction and heart rate.",
+      "Decreasing contractility and oxygen consumption.",
+      "Decreasing venous return through vasodilation."
+    ],
+    "answer": 3,
+    "explanation": "Nitroglycerin causes vasodilation, which decreases venous return (preload) and reduces the workload of the heart."
+  },
+  {
+    "question": "Nurse Patricia finds a female client who is post-myocardial infarction (MI) slumped on the side rails of the bed and unresponsive to shaking or shouting. Which is the nurse next action?",
+    "choices": [
+      "Call for help and note the time.",
+      "Clear the airway",
+      "Give two sharp thumps to the precordium, and check the pulse.",
+      "Administer two quick blows."
+    ],
+    "answer": 0,
+    "explanation": "After establishing that the client is unresponsive, the nurse should immediately call for help and note the time as a baseline for the cardiac-arrest response."
+  },
+  {
+    "question": "Nurse Monett is caring for a client recovering from gastro-intestinal bleeding. The nurse should:",
+    "choices": [
+      "Plan care so the client can receive 8 hours of uninterrupted sleep each night.",
+      "Monitor vital signs every 2 hours.",
+      "Make sure that the client takes food and medications at prescribed intervals.",
+      "Provide milk every 2 to 3 hours."
+    ],
+    "answer": 2,
+    "explanation": "Food and prescribed drug therapy help prevent accumulation of gastric hydrochloric acid or neutralize and buffer acid that does accumulate."
+  },
+  {
+    "question": "A male client was on warfarin (Coumadin) before admission, and has been receiving heparin I.V. for 2 days. The partial thromboplastin time (PTT) is 68 seconds. What should Nurse Carla do?",
+    "choices": [
+      "Stop the I.V. infusion of heparin and notify the physician.",
+      "Continue treatment as ordered.",
+      "Expect the warfarin to increase the PTT.",
+      "Increase the dosage, because the level is lower than normal."
+    ],
+    "answer": 1,
+    "explanation": "The source states that heparin is monitored by PTT and that the therapeutic level is about 1.5 to 2 times normal. A PTT of 68 seconds is therefore treated as therapeutic in this question."
+  },
+  {
+    "question": "A client undergone ileostomy, when should the drainage appliance be applied to the stoma?",
+    "choices": [
+      "24 hours later, when edema has subsided.",
+      "In the operating room.",
+      "After the ileostomy begin to function.",
+      "When the client is able to begin self-care procedures."
+    ],
+    "answer": 1,
+    "explanation": "The drainage appliance is applied in the operating room because ileostomy drainage contains digestive enzymes that can rapidly irritate and excoriate surrounding skin."
+  },
+  {
+    "question": "A client undergone spinal anesthetic, it will be important that the nurse immediately position the client in:",
+    "choices": [
+      "On the side, to prevent obstruction of airway by tongue.",
+      "Flat on back.",
+      "On the back, with knees flexed 15 degrees.",
+      "Flat on the stomach, with the head turned to the side."
+    ],
+    "answer": 1,
+    "explanation": "The client is kept flat in a supine position for the specified postoperative period to reduce the risk of spinal headache associated with cerebrospinal-fluid leakage."
+  },
+  {
+    "question": "While monitoring a male client several hours after a motor vehicle accident, which assessment data suggest increasing intracranial pressure?",
+    "choices": [
+      "Blood pressure is decreased from 160/90 to 110/70.",
+      "Pulse is increased from 87 to 95, with an occasional skipped beat.",
+      "The client is oriented when aroused from sleep, and goes back to sleep immediately.",
+      "The client refuses dinner because of anorexia."
+    ],
+    "answer": 2,
+    "explanation": "A decreasing level of consciousness is an important sign of increasing intracranial pressure. Being immediately sleepy again after arousal suggests deteriorating neurologic status."
+  },
+  {
+    "question": "Mrs. Cruz, 80 years old is diagnosed with pneumonia. Which of the following symptoms may appear first?",
+    "choices": [
+      "Altered mental status and dehydration",
+      "Fever and chills",
+      "Hemoptysis and Dyspnea",
+      "Pleuritic chest pain and cough"
+    ],
+    "answer": 0,
+    "explanation": "Older adults with pneumonia may initially present with altered mental status and dehydration because of a blunted immune response rather than classic respiratory symptoms."
+  },
+  {
+    "question": "A male client has active tuberculosis (TB). Which of the following symptoms will be exhibit?",
+    "choices": [
+      "Chest and lower back pain",
+      "Chills, fever, night sweats, and hemoptysis",
+      "Fever of more than 104°F (40°C) and nausea",
+      "Headache and photophobia"
+    ],
+    "answer": 1,
+    "explanation": "Typical active TB symptoms include chills, fever, night sweats, and hemoptysis. The other combinations are not characteristic of active TB."
+  },
+  {
+    "question": "Mark, a 7-year-old client is brought to the emergency department. He’s tachypneic and afebrile and has a respiratory rate of 36 breaths/minute and has a nonproductive cough. He recently had a cold. Form this history; the client may have which of the following conditions?",
+    "choices": [
+      "Acute asthma",
+      "Bronchial pneumonia",
+      "Chronic obstructive pulmonary disease (COPD)",
+      "Emphysema"
+    ],
+    "answer": 0,
+    "explanation": "The history and symptoms are most consistent with acute asthma. The client is young and afebrile, making COPD, emphysema, and bronchial pneumonia less likely in this context."
+  },
+  {
+    "question": "Marichu was given morphine sulfate for pain. She is sleeping and her respiratory rate is 4 breaths/minute. If action isn’t taken quickly, she might have which of the following reactions?",
+    "choices": [
+      "Asthma attack",
+      "Respiratory arrest",
+      "Seizure",
+      "Wake up on his own"
+    ],
+    "answer": 1,
+    "explanation": "Morphine can cause severe respiratory depression. A respiratory rate of 4 breaths/minute indicates a potentially life-threatening progression to respiratory arrest."
+  },
+  {
+    "question": "A 77-year-old male client is admitted for elective knee surgery. Physical examination reveals shallow respirations but no sign of respiratory distress. Which of the following is a normal physiologic change related to aging?",
+    "choices": [
+      "Increased elastic recoil of the lungs",
+      "Increased number of functional capillaries in the alveoli",
+      "Decreased residual volume",
+      "Decreased vital capacity"
+    ],
+    "answer": 3,
+    "explanation": "Normal aging is associated with decreased lung elastic recoil, fewer functional alveolar capillaries, increased residual volume, and decreased vital capacity."
+  },
+  {
+    "question": "Nurse John is caring for a male client receiving lidocaine I.V. Which factor is the most relevant to administration of this medication?",
+    "choices": [
+      "Decrease in arterial oxygen saturation (SaO2) when measured with a pulse oximeter.",
+      "Increase in systemic blood pressure.",
+      "Presence of premature ventricular contractions (PVCs) on a cardiac monitor.",
+      "Increase in intracranial pressure (ICP)."
+    ],
+    "answer": 2,
+    "explanation": "IV lidocaine is commonly used as an antiarrhythmic for ventricular dysrhythmias such as PVCs, making the cardiac-monitor finding most relevant."
+  },
+  {
+    "question": "Nurse Ron is caring for a male client taking an anticoagulant. The nurse should teach the client to:",
+    "choices": [
+      "Report incidents of diarrhea.",
+      "Avoid foods high in vitamin K",
+      "Use a straight razor when shaving.",
+      "Take aspirin to pain relief."
+    ],
+    "answer": 1,
+    "explanation": "The source teaches avoiding large amounts of vitamin K because it can interfere with anticoagulation. A straight razor and aspirin can increase bleeding risk."
+  },
+  {
+    "question": "Nurse Lhynnette is preparing a site for the insertion of an I.V. catheter. The nurse should treat excess hair at the site by:",
+    "choices": [
+      "Leaving the hair intact",
+      "Shaving the area",
+      "Clipping the hair in the area",
+      "Removing the hair with a depilatory."
+    ],
+    "answer": 2,
+    "explanation": "Excess hair should be clipped rather than shaved because shaving can cause skin abrasions and depilatories can irritate the skin."
+  },
+  {
+    "question": "Nurse Michelle is caring for an elderly female with osteoporosis. When teaching the client, the nurse should include information about which major complication:",
+    "choices": [
+      "Bone fracture",
+      "Loss of estrogen",
+      "Negative calcium balance",
+      "Dowager’s hump"
+    ],
+    "answer": 0,
+    "explanation": "Bone fracture is a major complication of osteoporosis because loss of bone mineral increases skeletal fragility. Dowager’s hump results from vertebral fractures."
+  },
+  {
+    "question": "Nurse Len is teaching a group of women to perform BSE. The nurse should explain that the purpose of performing the examination is to discover:",
+    "choices": [
+      "Cancerous lumps",
+      "Areas of thickness or fullness",
+      "Changes from previous examinations.",
+      "Fibrocystic masses"
+    ],
+    "answer": 2,
+    "explanation": "Breast self-examination is intended to help women recognize changes from previous examinations. A clinician is needed to diagnose whether a lump is malignant or benign."
+  },
+  {
+    "question": "When caring for a female client who is being treated for hyperthyroidism, it is important to:",
+    "choices": [
+      "Provide extra blankets and clothing to keep the client warm.",
+      "Monitor the client for signs of restlessness, sweating, and excessive weight loss during thyroid replacement therapy.",
+      "Balance the client’s periods of activity and rest.",
+      "Encourage the client to be active to prevent constipation."
+    ],
+    "answer": 2,
+    "explanation": "Clients with hyperthyroidism can be hyperactive and intolerant of heat, so balancing periods of activity and rest helps prevent excessive fatigue."
+  },
+  {
+    "question": "Nurse Kris is teaching a client with history of atherosclerosis. To decrease the risk of atherosclerosis, the nurse should encourage the client to:",
+    "choices": [
+      "Avoid focusing on his weight.",
+      "Increase his activity level.",
+      "Follow a regular diet.",
+      "Continue leading a high-stress lifestyle."
+    ],
+    "answer": 1,
+    "explanation": "Increasing activity supports cardiovascular health and helps manage risk factors such as excess weight. A low-cholesterol diet and stress reduction are also important."
+  },
+  {
+    "question": "Nurse Greta is working on a surgical floor. Nurse Greta must logroll a client following a:",
+    "choices": [
+      "Laminectomy",
+      "Thoracotomy",
+      "Hemorrhoidectomy",
+      "Cystectomy."
+    ],
+    "answer": 0,
+    "explanation": "A client after spinal surgery such as a laminectomy should be logrolled to keep the spinal column aligned during turning."
+  },
+  {
+    "question": "A 55-year old client underwent cataract removal with intraocular lens implant. Nurse Oliver is giving the client discharge instructions. These instructions should include which of the following?",
+    "choices": [
+      "Avoid lifting objects weighing more than 5 lb (2.25 kg).",
+      "Lie on your abdomen when in bed",
+      "Keep rooms brightly lit.",
+      "Avoiding straining during bowel movement or bending at the waist."
+    ],
+    "answer": 3,
+    "explanation": "Straining, heavy lifting, and bending at the waist can increase intraocular pressure. The client should avoid these activities during recovery."
+  },
+  {
+    "question": "George should be taught about testicular examinations during:",
+    "choices": [
+      "when sexual activity starts",
+      "After age 69",
+      "After age 40",
+      "Before age 20."
+    ],
+    "answer": 3,
+    "explanation": "Testicular cancer commonly occurs in younger men, especially around ages 20 to 30. Teaching testicular self-examination before age 20 is the source's recommended timing."
+  },
+  {
+    "question": "A male client undergone a colon resection. While turning him, wound dehiscence with evisceration occurs. Nurse Trish first response is to:",
+    "choices": [
+      "Call the physician",
+      "Place a saline-soaked sterile dressing on the wound.",
+      "Take a blood pressure and pulse.",
+      "Pull the dehiscence closed."
+    ],
+    "answer": 1,
+    "explanation": "The nurse should immediately cover the exposed tissue with a sterile saline-moistened dressing to prevent drying and contamination, then notify the physician and assess vital signs."
+  },
+  {
+    "question": "Nurse Audrey is caring for a client who has suffered a severe cerebrovascular accident. During routine assessment, the nurse notices Cheyne-Strokes respirations. Cheyne-strokes respirations are:",
+    "choices": [
+      "A progressively deeper breaths followed by shallower breaths with apneic periods.",
+      "Rapid, deep breathing with abrupt pauses between each breath.",
+      "Rapid, deep breathing and irregular breathing without pauses.",
+      "Shallow breathing with an increased respiratory rate."
+    ],
+    "answer": 0,
+    "explanation": "Cheyne-Stokes respirations progressively deepen and then become shallower, followed by periods of apnea. This differs from Biot’s and Kussmaul’s patterns."
+  },
+  {
+    "question": "Nurse Bea is assessing a male client with heart failure. The breath sounds commonly auscultated in clients with heart failure are:",
+    "choices": [
+      "Tracheal",
+      "Fine crackles",
+      "Coarse crackles",
+      "Friction rubs"
+    ],
+    "answer": 1,
+    "explanation": "Fine crackles commonly occur when fluid accumulates in the alveoli, as can happen with heart failure."
+  },
+  {
+    "question": "The nurse is caring for Kenneth experiencing an acute asthma attack. The client stops wheezing and breath sounds aren’t audible. The reason for this change is that:",
+    "choices": [
+      "The attack is over.",
+      "The airways are so swollen that no air cannot get through.",
+      "The swelling has decreased.",
+      "Crackles have replaced wheezes."
+    ],
+    "answer": 1,
+    "explanation": "In a severe asthma attack, wheezing may disappear because airway swelling and obstruction become so severe that little or no air can move through the airways. This is an emergency finding."
+  },
+  {
+    "question": "Mike with epilepsy is having a seizure. During the active seizure phase, the nurse should:",
+    "choices": [
+      "Place the client on his back remove dangerous objects, and insert a bite block.",
+      "Place the client on his side, remove dangerous objects, and insert a bite block.",
+      "Place the client o his back, remove dangerous objects, and hold down his arms.",
+      "Place the client on his side, remove dangerous objects, and protect his head."
+    ],
+    "answer": 3,
+    "explanation": "During an active seizure, place the client on the side, remove nearby hazards, and protect the head. Do not insert a bite block or restrain the client."
+  },
+  {
+    "question": "After insertion of a cheat tube for a pneumothorax, a client becomes hypotensive with neck vein distention, tracheal shift, absent breath sounds, and diaphoresis. Nurse Amanda suspects a tension pneumothorax has occurred. What cause of tension pneumothorax should the nurse check for?",
+    "choices": [
+      "Infection of the lung.",
+      "Kinked or obstructed chest tube",
+      "Excessive water in the water-seal chamber",
+      "Excessive chest tube drainage"
+    ],
+    "answer": 1,
+    "explanation": "A kinked or obstructed chest tube can prevent air from escaping, allowing pressure to build and producing a tension pneumothorax."
+  },
+  {
+    "question": "Nurse Maureen is talking to a male client, the client begins choking on his lunch. He’s coughing forcefully. The nurse should:",
+    "choices": [
+      "Stand him up and perform the abdominal thrust maneuver from behind.",
+      "Lay him down, straddle him, and perform the abdominal thrust maneuver.",
+      "Leave him to get assistance",
+      "Stay with him but not intervene at this time."
+    ],
+    "answer": 3,
+    "explanation": "If the client is coughing forcefully, the airway is not completely obstructed. The nurse should stay with the client and monitor rather than immediately perform abdominal thrusts. If complete obstruction occurs, appropriate choking intervention is required."
+  },
+  {
+    "question": "Nurse Ron is taking a health history of an 84 year old client. Which information will be most useful to the nurse for planning care?",
+    "choices": [
+      "General health for the last 10 years.",
+      "Current health promotion activities.",
+      "Family history of diseases.",
+      "Marital status."
+    ],
+    "answer": 1,
+    "explanation": "Current health-promotion activities are especially useful for planning care because they identify the older client’s present positive health measures and needs."
+  },
+  {
+    "question": "When performing oral care on a comatose client, Nurse Krina should:",
+    "choices": [
+      "Apply lemon glycerin to the client’s lips at least every 2 hours.",
+      "Brush the teeth with client lying supine.",
+      "Place the client in a side lying position, with the head of the bed lowered.",
+      "Clean the client’s mouth with hydrogen peroxide."
+    ],
+    "answer": 2,
+    "explanation": "A side-lying position with the head of the bed lowered helps prevent aspiration of oral secretions during oral care. Hydrogen peroxide and prolonged lemon-glycerin use can damage or dry oral tissues."
+  },
+  {
+    "question": "A 77-year-old male client is admitted with a diagnosis of dehydration and change in mental status. He’s being hydrated with L.V. fluids. When the nurse takes his vital signs, she notes he has a fever of 103°F (39.4°C) a cough producing yellow sputum and pleuritic chest pain. The nurse suspects this client may have which of the following conditions?",
+    "choices": [
+      "Adult respiratory distress syndrome (ARDS)",
+      "Myocardial infarction (MI)",
+      "Pneumonia",
+      "Tuberculosis"
+    ],
+    "answer": 2,
+    "explanation": "Fever, productive cough, and pleuritic chest pain are common findings of pneumonia. A sputum culture may be obtained to help confirm the suspected infection."
+  },
+  {
+    "question": "Nurse Oliver is working in an out patient clinic. He has been alerted that there is an outbreak of tuberculosis (TB). Which of the following clients entering the clinic today most likely to have TB?",
+    "choices": [
+      "A 16-year-old female high school student",
+      "A 33-year-old day-care worker",
+      "A 43-yesr-old homeless man with a history of alcoholism",
+      "A 54-year-old businessman"
+    ],
+    "answer": 2,
+    "explanation": "People who are economically disadvantaged, malnourished, or have reduced immunity have increased risk for TB. A homeless client with alcoholism fits these risk factors."
+  },
+  {
+    "question": "Virgie with a positive Mantoux test result will be sent for a chest X-ray. The nurse is aware that which of the following reasons this is done?",
+    "choices": [
+      "To confirm the diagnosis",
+      "To determine if a repeat skin test is needed",
+      "To determine the extent of lesions",
+      "To determine if this is a primary or secondary infection"
+    ],
+    "answer": 2,
+    "explanation": "A chest X-ray can show the presence and extent of pulmonary lesions. The source states that sputum culture confirms the diagnosis and a chest X-ray cannot determine primary versus secondary infection."
+  },
+  {
+    "question": "Kennedy with acute asthma showing inspiratory and expiratory wheezes and a decreased forced expiratory volume should be treated with which of the following classes of medication right away?",
+    "choices": [
+      "Beta-adrenergic blockers",
+      "Bronchodilators",
+      "Inhaled steroids",
+      "Oral steroids"
+    ],
+    "answer": 1,
+    "explanation": "Bronchodilators are the first-line class for immediate relief of acute bronchoconstriction. Beta blockers can worsen bronchoconstriction, while steroids address inflammation but are not immediate rescue therapy."
+  },
+  {
+    "question": "Mr. Vasquez 56-year-old client with a 40-year history of smoking one to two packs of cigarettes per day has a chronic cough producing thick sputum, peripheral edema and cyanotic nail beds. Based on this information, he most likely has which of the following conditions?",
+    "choices": [
+      "Adult respiratory distress syndrome (ARDS)",
+      "Asthma",
+      "Chronic obstructive bronchitis",
+      "Emphysema"
+    ],
+    "answer": 2,
+    "explanation": "The long smoking history, chronic productive cough, cyanosis, and peripheral edema are most consistent with chronic obstructive bronchitis."
+  },
+  {
+    "question": "The treatment for patients with leukemia is bone marrow transplantation. Which statement about bone marrow transplantation is not correct?",
+    "choices": [
+      "The patient is under local anesthesia during the procedure",
+      "The aspirated bone marrow is mixed with heparin.",
+      "The aspiration site is the posterior or anterior iliac crest.",
+      "The recipient receives cyclophosphamide (Cytoxan) for 4 consecutive days before the procedure."
+    ],
+    "answer": 0,
+    "explanation": "The source states that the patient receives general anesthesia during the transplant procedure, making the statement about local anesthesia incorrect."
+  },
+  {
+    "question": "After several days of admission, Francis becomes disoriented and complains of frequent headaches. The nurse in-charge first action would be:",
+    "choices": [
+      "Call the physician",
+      "Document the patient’s status in his charts.",
+      "Prepare oxygen treatment",
+      "Raise the side rails"
+    ],
+    "answer": 3,
+    "explanation": "A disoriented patient is at increased risk for falling. The source identifies raising the side rails as the initial safety action."
+  },
+  {
+    "question": "During routine care, Francis asks the nurse, “How can I be anemic if this disease causes increased my white blood cell production?” The nurse in-charge best response would be that the increased number of white blood cells (WBC) is:",
+    "choices": [
+      "Crowd red blood cells",
+      "Are not responsible for the anemia.",
+      "Uses nutrients from other cells",
+      "Have an abnormally short life span of cells."
+    ],
+    "answer": 0,
+    "explanation": "The source explains that excessive white blood cell production crowds out red blood cell production in the bone marrow, contributing to anemia."
+  },
+  {
+    "question": "Diagnostic assessment of Francis would probably not reveal:",
+    "choices": [
+      "Predominance of lymhoblasts",
+      "Leukocytosis",
+      "Abnormal blast cells in the bone marrow",
+      "Elevated thrombocyte counts"
+    ],
+    "answer": 1,
+    "explanation": "The source identifies leukocytosis as a characteristic finding of CLL, so this is the keyed response for the question as supplied. Note: the wording of this item is internally inconsistent because leukocytosis is expected in CLL."
+  },
+  {
+    "question": "Robert, a 57-year-old client with acute arterial occlusion of the left leg undergoes an emergency embolectomy. Six hours later, the nurse isn’t able to obtain pulses in his left foot using Doppler ultrasound. The nurse immediately notifies the physician, and asks her to prepare the client for surgery. As the nurse enters the client’s room to prepare him, he states that he won’t have any more surgery. Which of the following is the best initial response by the nurse?",
+    "choices": [
+      "Explain the risks of not having the surgery",
+      "Notifying the physician immediately",
+      "Notifying the nursing supervisor",
+      "Recording the client’s refusal in the nurses’ notes"
+    ],
+    "answer": 0,
+    "explanation": "The nurse should first explain the risks of refusing the surgery. If the client understands the risks and continues to refuse, the physician and supervisor should be notified and the refusal documented."
+  },
+  {
+    "question": "During the endorsement, which of the following clients should the on-duty nurse assess first?",
+    "choices": [
+      "The 58-year-old client who was admitted 2 days ago with heart failure, blood pressure of 126/76 mm Hg, and a respiratory rate of 22 breaths/minute.",
+      "The 89-year-old client with end-stage right-sided heart failure, blood pressure of 78/50 mm Hg, and a “do not resuscitate” order",
+      "The 62-year-old client who was admitted 1 day ago with thrombophlebitis and is receiving I.V. heparin",
+      "The 75-year-old client who was admitted 1 hour ago with new-onset atrial fibrillation and is receiving I.V. diltiazem (Cardizem)"
+    ],
+    "answer": 3,
+    "explanation": "The source identifies the client with new-onset atrial fibrillation receiving IV diltiazem as the highest priority because of the potential for instability and the need for close monitoring."
+  },
+  {
+    "question": "Honey, a 23-year old client complains of substernal chest pain and states that her heart feels like “it’s racing out of the chest”. She reports no history of cardiac disorders. The nurse attaches her to a cardiac monitor and notes sinus tachycardia with a rate of 136beats/minutes. Breath sounds are clear and the respiratory rate is 26 breaths/minutes. Which of the following drugs should the nurse question the client about using?",
+    "choices": [
+      "Barbiturates",
+      "Opioids",
+      "Cocaine",
+      "Benzodiazepines"
+    ],
+    "answer": 2,
+    "explanation": "Cocaine can cause coronary artery spasm, increased myocardial oxygen consumption, tachycardia, ischemia, ventricular dysrhythmias, and myocardial infarction."
+  },
+  {
+    "question": "A 51-year-old female client tells the nurse in-charge that she has found a painless lump in her right breast during her monthly self-examination. Which assessment finding would strongly suggest that this client’s lump is cancerous?",
+    "choices": [
+      "Eversion of the right nipple and mobile mass",
+      "Nonmobile mass with irregular edges",
+      "Mobile mass that is soft and easily delineated",
+      "Nonpalpable right axillary lymph nodes"
+    ],
+    "answer": 1,
+    "explanation": "A breast cancer mass is more likely to be fixed, hard, and irregular. A soft, mobile, well-defined mass is more consistent with a benign cyst."
+  },
+  {
+    "question": "A 35-year-old client with vaginal cancer asks the nurse, “What is the usual treatment for this type of cancer?” Which treatment should the nurse name?",
+    "choices": [
+      "Surgery",
+      "Chemotherapy",
+      "Radiation",
+      "Immunotherapy"
+    ],
+    "answer": 2,
+    "explanation": "The source identifies external or intravaginal radiation therapy as the usual treatment for vaginal cancer."
+  },
+  {
+    "question": "Cristina undergoes a biopsy of a suspicious lesion. The biopsy report classifies the lesion according to the TNM staging system as follows: TIS, N0, M0. What does this classification mean?",
+    "choices": [
+      "No evidence of primary tumor, no abnormal regional lymph nodes, and no evidence of distant metastasis",
+      "Carcinoma in situ, no abnormal regional lymph nodes, and no evidence of distant metastasis",
+      "Can’t assess tumor or regional lymph nodes and no evidence of metastasis",
+      "Carcinoma in situ, no demonstrable metastasis of the regional lymph nodes, and ascending degrees of distant metastasis"
+    ],
+    "answer": 1,
+    "explanation": "Tis indicates carcinoma in situ, N0 indicates no regional lymph-node involvement, and M0 indicates no distant metastasis."
+  },
+  {
+    "question": "Lydia undergoes a laryngectomy to treat laryngeal cancer. When teaching the client how to care for the neck stoma, the nurse should include which instruction?",
+    "choices": [
+      "“Keep the stoma uncovered.”",
+      "“Keep the stoma dry.”",
+      "“Have a family member perform stoma care initially until you get used to the procedure.”",
+      "“Keep the stoma moist.”"
+    ],
+    "answer": 3,
+    "explanation": "The source instructs the client to keep the stoma moist to reduce irritation. A stoma bib can also help filter and warm inhaled air."
+  },
+  {
+    "question": "A 37-year-old client with uterine cancer asks the nurse, “Which is the most common type of cancer in women?” The nurse replies that it’s breast cancer. Which type of cancer causes the most deaths in women?",
+    "choices": [
+      "Breast cancer",
+      "Lung cancer",
+      "Brain cancer",
+      "Colon and rectal cancer"
+    ],
+    "answer": 1,
+    "explanation": "The source identifies lung cancer as the leading cause of cancer death in women, with breast cancer ranking second."
+  },
+  {
+    "question": "Antonio with lung cancer develops Horner’s syndrome when the tumor invades the ribs and affects the sympathetic nerve ganglia. When assessing for signs and symptoms of this syndrome, the nurse should note:",
+    "choices": [
+      "miosis, partial eyelid ptosis, and anhidrosis on the affected side of the face.",
+      "chest pain, dyspnea, cough, weight loss, and fever.",
+      "arm and shoulder pain and atrophy of arm and hand muscles, both on the affected side.",
+      "hoarseness and dysphagia."
+    ],
+    "answer": 0,
+    "explanation": "Horner’s syndrome is characterized by miosis, partial ptosis, and anhidrosis on the affected side of the face."
+  },
+  {
+    "question": "Vic asks the nurse what PSA is. The nurse should reply that it stands for:",
+    "choices": [
+      "prostate-specific antigen, which is used to screen for prostate cancer.",
+      "protein serum antigen, which is used to determine protein levels.",
+      "pneumococcal strep antigen, which is a bacteria that causes pneumonia.",
+      "Papanicolaou-specific antigen, which is used to screen for cervical cancer."
+    ],
+    "answer": 0,
+    "explanation": "PSA stands for prostate-specific antigen. The source describes it as a test used to screen for prostate cancer."
+  },
+  {
+    "question": "What is the most important postoperative instruction that nurse Kate must give a client who has just returned from the operating room after receiving a subarachnoid block?",
+    "choices": [
+      "“Avoid drinking liquids until the gag reflex returns.”",
+      "“Avoid eating milk products for 24 hours.”",
+      "“Notify a nurse if you experience blood in your urine.”",
+      "“Remain supine for the time specified by the physician.”"
+    ],
+    "answer": 3,
+    "explanation": "The source instructs the client to remain supine for the time specified after a subarachnoid block to reduce the risk of spinal headache."
+  },
+  {
+    "question": "A male client suspected of having colorectal cancer will require which diagnostic study to confirm the diagnosis?",
+    "choices": [
+      "Stool Hematest",
+      "Carcinoembryonic antigen (CEA)",
+      "Sigmoidoscopy",
+      "Abdominal computed tomography (CT) scan"
+    ],
+    "answer": 2,
+    "explanation": "The source identifies sigmoidoscopy as a diagnostic study that helps visualize the lower GI tract and detect colorectal cancer. Stool testing and CEA are not confirming tests, while CT is used for staging."
+  },
+  {
+    "question": "During a breast examination, which finding most strongly suggests that Luz has breast cancer?",
+    "choices": [
+      "Slight asymmetry of the breasts.",
+      "A fixed nodular mass with dimpling of the overlying skin",
+      "Bloody discharge from the nipple",
+      "Multiple firm, round, freely movable masses that change with the menstrual cycle"
+    ],
+    "answer": 1,
+    "explanation": "A fixed nodular mass with skin dimpling strongly suggests breast malignancy. The other findings are more commonly benign or nonspecific in the source."
+  },
+  {
+    "question": "A female client with cancer is being evaluated for possible metastasis. Which of the following is one of the most common metastasis sites for cancer cells?",
+    "choices": [
+      "Liver",
+      "Colon",
+      "Reproductive tract",
+      "White blood cells (WBCs)"
+    ],
+    "answer": 0,
+    "explanation": "The liver is one of the common sites of cancer metastasis. Other major sites include lymph nodes, lungs, bones, and brain."
+  },
+  {
+    "question": "Nurse Mandy is preparing a client for magnetic resonance imaging (MRI) to confirm or rule out a spinal cord lesion. During the MRI scan, which of the following would pose a threat to the client?",
+    "choices": [
+      "The client lies still.",
+      "The client asks questions.",
+      "The client hears thumping sounds.",
+      "The client wears a watch and wedding band."
+    ],
+    "answer": 3,
+    "explanation": "MRI uses a strong magnetic field, so metal objects such as watches and wedding rings must be removed because they can become dangerous projectiles or cause injury."
+  },
+  {
+    "question": "Nurse Cecile is teaching a female client about preventing osteoporosis. Which of the following teaching points is correct?",
+    "choices": [
+      "Obtaining an X-ray of the bones every 3 years is recommended to detect bone loss.",
+      "To avoid fractures, the client should avoid strenuous exercise.",
+      "The recommended daily allowance of calcium may be found in a wide variety of foods.",
+      "Obtaining the recommended daily allowance of calcium requires taking a calcium supplement."
+    ],
+    "answer": 2,
+    "explanation": "The recommended calcium intake can often be obtained through a variety of foods. Supplements are not always necessary, and ordinary X-rays are not sensitive for early bone loss."
+  },
+  {
+    "question": "Before Jacob undergoes arthroscopy, the nurse reviews the assessment findings for contraindications for this procedure. Which finding is a contraindication?",
+    "choices": [
+      "Joint pain",
+      "Joint deformity",
+      "Joint flexion of less than 50%",
+      "Joint stiffness"
+    ],
+    "answer": 2,
+    "explanation": "The source identifies joint flexion of less than 50% as a contraindication because it can create technical difficulty in inserting and viewing with the arthroscope."
+  },
+  {
+    "question": "Mr. Rodriguez is admitted with severe pain in the knees. Which form of arthritis is characterized by urate deposits and joint pain, usually in the feet and legs, and occurs primarily in men over age 30?",
+    "choices": [
+      "Septic arthritis",
+      "Traumatic arthritis",
+      "Intermittent arthritis",
+      "Gouty arthritis"
+    ],
+    "answer": 3,
+    "explanation": "Gouty arthritis is characterized by urate crystal deposits and painful inflammation, commonly affecting the feet and legs."
+  },
+  {
+    "question": "A heparin infusion at 1,500 unit/hour is ordered for a 64-year-old client with stroke in evolution. The infusion contains 25,000 units of heparin in 500 ml of saline solution. How many milliliters per hour should be given?",
+    "choices": [
+      "15 ml/hour",
+      "30 ml/hour",
+      "45 ml/hour",
+      "50 ml/hour"
+    ],
+    "answer": 1,
+    "explanation": "The solution contains 25,000 units in 500 mL, or 50 units/mL. At 1,500 units/hour, the required rate is 1,500 ÷ 50 = 30 mL/hour."
+  },
+  {
+    "question": "A 76-year-old male client had a thromboembolic right stroke; his left arm is swollen. Which of the following conditions may cause swelling after a stroke?",
+    "choices": [
+      "Elbow contracture secondary to spasticity",
+      "Loss of muscle contraction decreasing venous return",
+      "Deep vein thrombosis (DVT) due to immobility of the ipsilateral side",
+      "Hypoalbuminemia due to protein escaping from an inflamed glomerulus"
+    ],
+    "answer": 1,
+    "explanation": "After hemiplegia or hemiparesis, loss of muscle contraction can decrease venous return and contribute to swelling of the affected extremity."
+  },
+  {
+    "question": "Heberden’s nodes are a common sign of osteoarthritis. Which of the following statement is correct about this deformity?",
+    "choices": [
+      "It appears only in men",
+      "It appears on the distal interphalangeal joint",
+      "It appears on the proximal interphalangeal joint",
+      "It appears on the dorsolateral aspect of the interphalangeal joint."
+    ],
+    "answer": 1,
+    "explanation": "Heberden’s nodes occur at the distal interphalangeal joints. Bouchard’s nodes involve the proximal interphalangeal joints."
+  },
+  {
+    "question": "Which of the following statements explains the main difference between rheumatoid arthritis and osteoarthritis?",
+    "choices": [
+      "Osteoarthritis is gender-specific, rheumatoid arthritis isn’t",
+      "Osteoarthritis is a localized disease rheumatoid arthritis is systemic",
+      "Osteoarthritis is a systemic disease, rheumatoid arthritis is localized",
+      "Osteoarthritis has dislocations and subluxations, rheumatoid arthritis doesn’t"
+    ],
+    "answer": 1,
+    "explanation": "Osteoarthritis is primarily a localized degenerative joint disease, whereas rheumatoid arthritis is a systemic autoimmune disease."
+  },
+  {
+    "question": "Mrs. Cruz uses a cane for assistance in walking. Which of the following statements is true about a cane or other assistive devices?",
+    "choices": [
+      "A walker is a better choice than a cane.",
+      "The cane should be used on the affected side",
+      "The cane should be used on the unaffected side",
+      "A client with osteoarthritis should be encouraged to ambulate without the cane"
+    ],
+    "answer": 2,
+    "explanation": "A cane is generally held on the unaffected side so it can support the weaker or affected side during ambulation."
+  },
+  {
+    "question": "A male client with type 1 diabetes is scheduled to receive 30 U of 70/30 insulin. There is no 70/30 insulin available. As a substitution, the nurse may give the client:",
+    "choices": [
+      "9 U regular insulin and 21 U neutral protamine Hagedorn (NPH).",
+      "21 U regular insulin and 9 U NPH.",
+      "10 U regular insulin and 20 U NPH.",
+      "20 U regular insulin and 10 U NPH."
+    ],
+    "answer": 0,
+    "explanation": "70/30 insulin contains 70% NPH and 30% regular insulin. For 30 units, that is 21 units NPH and 9 units regular insulin."
+  },
+  {
+    "question": "Nurse Len should expect to administer which medication to a client with gout?",
+    "choices": [
+      "aspirin",
+      "furosemide (Lasix)",
+      "colchicines",
+      "calcium gluconate (Kalcinate)"
+    ],
+    "answer": 2,
+    "explanation": "Colchicine is used to reduce inflammation associated with acute gout. The other listed medications are not standard treatment for the acute gout attack described."
+  },
+  {
+    "question": "Mr. Domingo with a history of hypertension is diagnosed with primary hyperaldosteronism. This diagnosis indicates that the client’s hypertension is caused by excessive hormone secretion from which of the following glands?",
+    "choices": [
+      "Adrenal cortex",
+      "Pancreas",
+      "Adrenal medulla",
+      "Parathyroid"
+    ],
+    "answer": 0,
+    "explanation": "Aldosterone is produced by the adrenal cortex. Excess aldosterone promotes sodium retention and contributes to hypertension."
+  },
+  {
+    "question": "For a diabetic male client with a foot ulcer, the doctor orders bed rest, a wet-to-dry dressing change every shift, and blood glucose monitoring before meals and bedtime. Why are wet-to-dry dressings used for this client?",
+    "choices": [
+      "They contain exudate and provide a moist wound environment.",
+      "They protect the wound from mechanical trauma and promote healing.",
+      "They debride the wound and promote healing by secondary intention.",
+      "They prevent the entrance of microorganisms and minimize wound discomfort."
+    ],
+    "answer": 2,
+    "explanation": "Wet-to-dry dressings mechanically debride exudate and necrotic tissue when removed, supporting healing by secondary intention."
+  },
+  {
+    "question": "Nurse Zeny is caring for a client in acute addisonian crisis. Which laboratory data would the nurse expect to find?",
+    "choices": [
+      "Hyperkalemia",
+      "Reduced blood urea nitrogen (BUN)",
+      "Hypernatremia",
+      "Hyperglycemia"
+    ],
+    "answer": 0,
+    "explanation": "Adrenal insufficiency causes decreased aldosterone, leading to sodium loss and potassium retention, so hyperkalemia is expected."
+  },
+  {
+    "question": "A client is admitted for treatment of the syndrome of inappropriate antidiuretic hormone (SIADH). Which nursing intervention is appropriate?",
+    "choices": [
+      "Infusing I.V. fluids rapidly as ordered",
+      "Encouraging increased oral intake",
+      "Restricting fluids",
+      "Administering glucose-containing I.V. fluids as ordered"
+    ],
+    "answer": 2,
+    "explanation": "SIADH causes excessive water retention, so fluid restriction is an appropriate intervention to reduce worsening dilutional hyponatremia and fluid overload."
+  },
+  {
+    "question": "A female client tells nurse Nikki that she has been working hard for the last 3 months to control her type 2 diabetes mellitus with diet and exercise. To determine the effectiveness of the client’s efforts, the nurse should check:",
+    "choices": [
+      "urine glucose level.",
+      "fasting blood glucose level.",
+      "serum fructosamine level.",
+      "glycosylated hemoglobin level."
+    ],
+    "answer": 3,
+    "explanation": "Glycosylated hemoglobin (HbA1c) reflects average blood glucose control over approximately the preceding 3 months."
+  },
+  {
+    "question": "Nurse Trinity administered neutral protamine Hagedorn (NPH) insulin to a diabetic client at 7 a.m. At what time would the nurse expect the client to be most at risk for a hypoglycemic reaction?",
+    "choices": [
+      "10:00 am",
+      "Noon",
+      "4:00 pm",
+      "10:00 pm"
+    ],
+    "answer": 2,
+    "explanation": "NPH is intermediate-acting and peaks approximately 8 to 12 hours after administration. A 7 a.m. dose therefore places the client at greatest risk during the afternoon."
+  },
+  {
+    "question": "The adrenal cortex is responsible for producing which substances?",
+    "choices": [
+      "Glucocorticoids and androgens",
+      "Catecholamines and epinephrine",
+      "Mineralocorticoids and catecholamines",
+      "Norepinephrine and epinephrine"
+    ],
+    "answer": 0,
+    "explanation": "The adrenal cortex produces glucocorticoids, mineralocorticoids, and androgens. Catecholamines such as epinephrine and norepinephrine are produced by the adrenal medulla."
+  },
+  {
+    "question": "On the third day after a partial thyroidectomy, Proserfina exhibits muscle twitching and hyperirritability of the nervous system. When questioned, the client reports numbness and tingling of the mouth and fingertips. Suspecting a life-threatening electrolyte disturbance, the nurse notifies the surgeon immediately. Which electrolyte disturbance most commonly follows thyroid surgery?",
+    "choices": [
+      "Hypocalcemia",
+      "Hyponatremia",
+      "Hyperkalemia",
+      "Hypermagnesemia"
+    ],
+    "answer": 0,
+    "explanation": "Accidental injury or removal of the parathyroid glands during thyroid surgery can cause hypocalcemia, producing tingling, twitching, and neuromuscular irritability."
+  },
+  {
+    "question": "Which laboratory test value is elevated in clients who smoke and can’t be used as a general indicator of cancer?",
+    "choices": [
+      "Acid phosphatase level",
+      "Serum calcitonin level",
+      "Alkaline phosphatase level",
+      "Carcinoembryonic antigen level"
+    ],
+    "answer": 3,
+    "explanation": "Carcinoembryonic antigen (CEA) can be elevated in smokers, so it is not specific enough to serve as a general cancer indicator. It can still be useful for monitoring certain cancers."
+  },
+  {
+    "question": "Francis with anemia has been admitted to the medical-surgical unit. Which assessment findings are characteristic of iron-deficiency anemia?",
+    "choices": [
+      "Nights sweats, weight loss, and diarrhea",
+      "Dyspnea, tachycardia, and pallor",
+      "Nausea, vomiting, and anorexia",
+      "Itching, rash, and jaundice"
+    ],
+    "answer": 1,
+    "explanation": "Iron-deficiency anemia commonly causes pallor, tachycardia, dyspnea, fatigue, weakness, and headache because of reduced oxygen-carrying capacity."
+  },
+  {
+    "question": "In teaching a female client who is HIV-positive about pregnancy, the nurse would know more teaching is necessary when the client says:",
+    "choices": [
+      "The baby can get the virus from my placenta.”",
+      "“I’m planning on starting on birth control pills.”",
+      "“Not everyone who has the virus gives birth to a baby who has the virus.”",
+      "“I’ll need to have a C-section if I become pregnant and have a baby.”"
+    ],
+    "answer": 3,
+    "explanation": "The source identifies the statement about needing a C-section simply because of HIV infection as requiring more teaching."
+  },
+  {
+    "question": "When preparing Judy with acquired immunodeficiency syndrome (AIDS) for discharge to the home, the nurse should be sure to include which instruction?",
+    "choices": [
+      "“Put on disposable gloves before bathing.”",
+      "“Sterilize all plates and utensils in boiling water.”",
+      "“Avoid sharing such articles as toothbrushes and razors.”",
+      "“Avoid eating foods from serving dishes shared by other family members.”"
+    ],
+    "answer": 2,
+    "explanation": "HIV is concentrated in blood, so personal items that may become blood-contaminated, such as toothbrushes and razors, should not be shared."
+  },
+  {
+    "question": "Nurse Marie is caring for a 32-year-old client admitted with pernicious anemia. Which set of findings should the nurse expect when assessing the client?",
+    "choices": [
+      "Pallor, bradycardia, and reduced pulse pressure",
+      "Pallor, tachycardia, and a sore tongue",
+      "Sore tongue, dyspnea, and weight gain",
+      "Angina, double vision, and anorexia"
+    ],
+    "answer": 1,
+    "explanation": "Pernicious anemia can cause pallor, tachycardia, weakness, fatigue, and a smooth, sore tongue. Neurologic symptoms such as paresthesias may also occur."
+  },
+  {
+    "question": "After receiving a dose of penicillin, a client develops dyspnea and hypotension. Nurse Celestina suspects the client is experiencing anaphylactic shock. What should the nurse do first?",
+    "choices": [
+      "Page an anesthesiologist immediately and prepare to intubate the client.",
+      "Administer epinephrine, as prescribed, and prepare to intubate the client if necessary.",
+      "Administer the antidote for penicillin, as prescribed, and continue to monitor the client’s vital signs.",
+      "Insert an indwelling urinary catheter and begin to infuse I.V. fluids as ordered."
+    ],
+    "answer": 1,
+    "explanation": "Epinephrine is the first-line medication for anaphylaxis. Airway support and additional fluid or medication therapy may follow as clinically indicated."
+  },
+  {
+    "question": "Mr. Marquez with rheumatoid arthritis is about to begin aspirin therapy to reduce inflammation. When teaching the client about aspirin, the nurse discusses adverse reactions to prolonged aspirin therapy. These include:",
+    "choices": [
+      "weight gain.",
+      "fine motor tremors.",
+      "respiratory acidosis.",
+      "bilateral hearing loss."
+    ],
+    "answer": 3,
+    "explanation": "Prolonged salicylate use can cause tinnitus and hearing changes. The source identifies bilateral hearing loss as an adverse effect that can resolve after discontinuation."
+  },
+  {
+    "question": "A 23-year-old client is diagnosed with human immunodeficiency virus (HIV). After recovering from the initial shock of the diagnosis, the client expresses a desire to learn as much as possible about HIV and acquired immunodeficiency syndrome (AIDS). When teaching the client about the immune system, the nurse states that adaptive immunity is provided by which type of white blood cell?",
+    "choices": [
+      "Neutrophil",
+      "Basophil",
+      "Monocyte",
+      "Lymphocyte"
+    ],
+    "answer": 3,
+    "explanation": "Adaptive immunity is mediated by B and T lymphocytes, which recognize antigens and form immunologic memory."
+  },
+  {
+    "question": "In an individual with Sjögren’s syndrome, nursing care should focus on:",
+    "choices": [
+      "moisture replacement.",
+      "electrolyte balance.",
+      "nutritional supplementation.",
+      "arrhythmia management."
+    ],
+    "answer": 0,
+    "explanation": "Sjögren’s syndrome causes loss of lubrication and dryness of mucosal and other tissues, so moisture replacement is a major focus of care."
+  },
+  {
+    "question": "During chemotherapy for lymphocytic leukemia, Mathew develops abdominal pain, fever, and “horse barn” smelling diarrhea. It would be most important for the nurse to advise the physician to order:",
+    "choices": [
+      "enzyme-linked immunosuppressant assay (ELISA) test.",
+      "electrolyte panel and hemogram.",
+      "stool for Clostridium difficile test.",
+      "flat plate X-ray of the abdomen."
+    ],
+    "answer": 2,
+    "explanation": "Chemotherapy and immunosuppression increase the risk of C. difficile infection. A stool test is needed to evaluate this likely cause of characteristic diarrhea."
+  },
+  {
+    "question": "A male client seeks medical evaluation for fatigue, night sweats, and a 20-lb weight loss in 6 weeks. To confirm that the client has been infected with the human immunodeficiency virus (HIV), the nurse expects the physician to order:",
+    "choices": [
+      "E-rosette immunofluorescence.",
+      "quantification of T-lymphocytes.",
+      "enzyme-linked immunosorbent assay (ELISA).",
+      "Western blot test with ELISA."
+    ],
+    "answer": 3,
+    "explanation": "The supplied source uses the historical testing sequence of ELISA followed by Western blot confirmation for HIV antibodies."
+  },
+  {
+    "question": "A complete blood count is commonly performed before a Joe goes into surgery. What does this test seek to identify?",
+    "choices": [
+      "Potential hepatic dysfunction indicated by decreased blood urea nitrogen (BUN) and creatinine levels",
+      "Low levels of urine constituents normally excreted in the urine",
+      "Abnormally low hematocrit (HCT) and hemoglobin (Hb) levels",
+      "Electrolyte imbalance that could affect the blood’s ability to coagulate properly"
+    ],
+    "answer": 2,
+    "explanation": "A CBC provides hemoglobin and hematocrit values and can identify anemia or blood loss risk before surgery."
+  },
+  {
+    "question": "While monitoring a client for the development of disseminated intravascular coagulation (DIC), the nurse should take note of what assessment parameters?",
+    "choices": [
+      "Platelet count, prothrombin time, and partial thromboplastin time",
+      "Platelet count, blood glucose levels, and white blood cell (WBC) count",
+      "Thrombin time, calcium levels, and potassium levels",
+      "Fibrinogen level, WBC, and platelet count"
+    ],
+    "answer": 0,
+    "explanation": "DIC is evaluated with coagulation studies and platelet counts, including PT and PTT. Fibrinogen and thrombin time may also be assessed."
+  },
+  {
+    "question": "When taking a dietary history from a newly admitted female client, Nurse Len should remember that which of the following foods is a common allergen?",
+    "choices": [
+      "Bread",
+      "Carrots",
+      "Orange",
+      "Strawberries"
+    ],
+    "answer": 3,
+    "explanation": "The supplied source identifies strawberries and other berries as common food allergens among the listed choices."
+  },
+  {
+    "question": "Nurse John is caring for clients in the outpatient clinic. Which of the following phone calls should the nurse return first?",
+    "choices": [
+      "A client with hepatitis A who states, “My arms and legs are itching.”",
+      "A client with cast on the right leg who states, “I have a funny feeling in my right leg.”",
+      "A client with osteomyelitis of the spine who states, “I am so nauseous that I can’t eat.”",
+      "A client with rheumatoid arthritis who states, “I am having trouble sleeping.”"
+    ],
+    "answer": 1,
+    "explanation": "A new unusual sensation in a limb with a cast can indicate neurovascular compromise and requires prompt assessment."
+  },
+  {
+    "question": "Nurse Sarah is caring for clients on the surgical floor and has just received report from the previous shift. Which of the following clients should the nurse see first?",
+    "choices": [
+      "A 35-year-old admitted three hours ago with a gunshot wound; 1.5 cm area of dark drainage noted on the dressing.",
+      "A 43-year-old who had a mastectomy two days ago; 23 ml of serosanguinous fluid noted in the Jackson-Pratt drain.",
+      "A 59-year-old with a collapsed lung due to an accident; no drainage noted in the previous eight hours.",
+      "A 62-year-old who had an abdominal-perineal resection three days ago; client complaints of chills."
+    ],
+    "answer": 3,
+    "explanation": "The source prioritizes the client with chills three days after abdominal-perineal resection because this may indicate postoperative infection or peritonitis and requires assessment."
+  },
+  {
+    "question": "Nurse Eve is caring for a client who had a thyroidectomy 12 hours ago for treatment of Grave’s disease. The nurse would be most concerned if which of the following was observed?",
+    "choices": [
+      "Blood pressure 138/82, respirations 16, oral temperature 99 degrees Fahrenheit.",
+      "The client supports his head and neck when turning his head to the right.",
+      "The client spontaneously flexes his wrist when the blood pressure is obtained.",
+      "The client is drowsy and complains of sore throat."
+    ],
+    "answer": 2,
+    "explanation": "Spontaneous wrist flexion or carpal spasm during blood-pressure measurement suggests hypocalcemia, which can occur after thyroidectomy if the parathyroids are affected."
+  },
+  {
+    "question": "Julius is admitted with complaints of severe pain in the lower right quadrant of the abdomen. To assist with pain relief, the nurse should take which of the following actions?",
+    "choices": [
+      "Encourage the client to change positions frequently in bed.",
+      "Administer Demerol 50 mg IM q 4 hours and PRN.",
+      "Apply warmth to the abdomen with a heating pad.",
+      "Use comfort measures and pillows to position the client."
+    ],
+    "answer": 3,
+    "explanation": "The supplied source identifies nonpharmacologic comfort measures and supportive positioning with pillows as the appropriate pain-relief action."
+  },
+  {
+    "question": "Nurse Tina prepares a client for peritoneal dialysis. Which of the following actions should the nurse take first?",
+    "choices": [
+      "Assess for a bruit and a thrill.",
+      "Warm the dialysate solution.",
+      "Position the client on the left side.",
+      "Insert a Foley catheter"
+    ],
+    "answer": 1,
+    "explanation": "The dialysate should be warmed to body temperature to reduce discomfort during peritoneal dialysis. The source specifically identifies warming the solution as the first action."
+  },
+  {
+    "question": "Nurse Jannah teaches an elderly client with right-sided weakness how to use cane. Which of the following behaviors, if demonstrated by the client to the nurse, indicates that the teaching was effective?",
+    "choices": [
+      "The client holds the cane with his right hand, moves the can forward followed by the right leg, and then moves the left leg.",
+      "The client holds the cane with his right hand, moves the cane forward followed by his left leg, and then moves the right leg.",
+      "The client holds the cane with his left hand, moves the cane forward followed by the right leg, and then moves the left leg.",
+      "The client holds the cane with his left hand, moves the cane forward followed by his left leg, and then moves the right leg."
+    ],
+    "answer": 2,
+    "explanation": "The cane should be held on the unaffected left side. The cane moves forward first, followed by the weaker right leg and then the left leg."
+  },
+  {
+    "question": "An elderly client is admitted to the nursing home setting. The client is occasionally confused and her gait is often unsteady. Which of the following actions, if taken by the nurse, is most appropriate?",
+    "choices": [
+      "Ask the woman’s family to provide personal items such as photos or mementos.",
+      "Select a room with a bed by the door so the woman can look down the hall.",
+      "Suggest the woman eat her meals in the room with her roommate.",
+      "Encourage the woman to ambulate in the halls twice a day."
+    ],
+    "answer": 0,
+    "explanation": "Photos and familiar mementos provide visual stimulation and help reduce sensory deprivation in an older adult."
+  },
+  {
+    "question": "Nurse Evangeline teaches an elderly client how to use a standard aluminum walker. Which of the following behaviors, if demonstrated by the client, indicates that the nurse’s teaching was effective?",
+    "choices": [
+      "The client slowly pushes the walker forward 12 inches, then takes small steps forward while leaning on the walker.",
+      "The client lifts the walker, moves it forward 10 inches, and then takes several small steps forward.",
+      "The client supports his weight on the walker while advancing it forward, then takes small steps while balancing on the walker.",
+      "The client slides the walker 18 inches forward, then takes small steps while holding onto the walker for balance."
+    ],
+    "answer": 1,
+    "explanation": "A standard walker is lifted, placed forward on all legs, and then followed by small steps while maintaining balance."
+  },
+  {
+    "question": "Nurse Deric is supervising a group of elderly clients in a residential home setting. The nurse knows that the elderly are at greater risk of developing sensory deprivation for what reason?",
+    "choices": [
+      "Increased sensitivity to the side effects of medications.",
+      "Decreased visual, auditory, and gustatory abilities.",
+      "Isolation from their families and familiar surroundings.",
+      "Decrease musculoskeletal function and mobility."
+    ],
+    "answer": 2,
+    "explanation": "The source identifies isolation from family and familiar surroundings as the reason for increased risk of sensory deprivation in this item."
+  },
+  {
+    "question": "A male client with emphysema becomes restless and confused. What step should nurse Jasmine take next?",
+    "choices": [
+      "Encourage the client to perform pursed lip breathing.",
+      "Check the client’s temperature.",
+      "Assess the client’s potassium level.",
+      "Increase the client’s oxygen flow rate."
+    ],
+    "answer": 0,
+    "explanation": "Pursed-lip breathing helps prevent airway collapse and helps control the rate and depth of breathing in emphysema."
+  }
   ],
-  "pnle-set1-part4": [],
-  "pnle-set1-part5": [],
+  "pnle-set1-part4": [
+  {
+    "question": "Randy has undergone kidney transplant, what assessment would prompt Nurse Katrina to suspect organ rejection?",
+    "choices": [
+      "Sudden weight loss",
+      "Polyuria",
+      "Hypertension",
+      "Shock"
+    ],
+    "answer": 2,
+    "explanation": "Hypertension, along with fever, and tenderness over the grafted kidney, reflects acute rejection."
+  },
+  {
+    "question": "The immediate objective of nursing care for an overweight, mildly hypertensive male client with ureteral colic and hematuria is to decrease:",
+    "choices": [
+      "Pain",
+      "Weight",
+      "Hematuria",
+      "Hypertension"
+    ],
+    "answer": 0,
+    "explanation": "Sharp, severe pain (renal colic) radiating toward the genitalia and thigh is caused by uretheral distention and smooth muscle spasm; relief form pain is the priority."
+  },
+  {
+    "question": "Matilda, with hyperthyroidism is to receive Lugol’s iodine solution before a subtotal thyroidectomy is performed. The nurse is aware that this medication is given to:",
+    "choices": [
+      "Decrease the total basal metabolic rate.",
+      "Maintain the function of the parathyroid glands.",
+      "Block the formation of thyroxine by the thyroid gland.",
+      "Decrease the size and vascularity of the thyroid gland."
+    ],
+    "answer": 3,
+    "explanation": "Lugol’s solution provides iodine, which aids in decreasing the vascularity of the thyroid gland, which limits the risk of hemorrhage when surgery is performed."
+  },
+  {
+    "question": "Ricardo, was diagnosed with type I diabetes. The nurse is aware that acute hypoglycemia also can develop in the client who is diagnosed with:",
+    "choices": [
+      "Liver disease",
+      "Hypertension",
+      "Type 2 diabetes",
+      "Hyperthyroidism"
+    ],
+    "answer": 0,
+    "explanation": "The client with liver disease has a decreased ability to metabolize carbohydrates because of a decreased ability to form glycogen (glycogenesis) and to form glucose from glycogen."
+  },
+  {
+    "question": "Tracy is receiving combination chemotherapy for treatment of metastatic carcinoma. Nurse Ruby should monitor the client for the systemic side effect of:",
+    "choices": [
+      "Ascites",
+      "Nystagmus",
+      "Leukopenia",
+      "Polycythemia"
+    ],
+    "answer": 2,
+    "explanation": "Leukopenia, a reduction in WBCs, is a systemic effect of chemotherapy as a result of myelosuppression."
+  },
+  {
+    "question": "Norma, with recent colostomy expresses concern about the inability to control the passage of gas. Nurse Oliver should suggest that the client plan to:",
+    "choices": [
+      "Eliminate foods high in cellulose.",
+      "Decrease fluid intake at meal times.",
+      "Avoid foods that in the past caused flatus.",
+      "Adhere to a bland diet prior to social events."
+    ],
+    "answer": 2,
+    "explanation": "Foods that bothered a person preoperatively will continue to do so after a colostomy."
+  },
+  {
+    "question": "Nurse Ron begins to teach a male client how to perform colostomy irrigations. The nurse would evaluate that the instructions were understood when the client states, “I should:",
+    "choices": [
+      "Lie on my left side while instilling the irrigating solution.”",
+      "Keep the irrigating container less than 18 inches above the stoma.”",
+      "Instill a minimum of 1200 ml of irrigating solution to stimulate evacuation of the bowel.”",
+      "Insert the irrigating catheter deeper into the stoma if cramping occurs during the procedure.”"
+    ],
+    "answer": 1,
+    "explanation": "This height permits the solution to flow slowly with little force so that excessive peristalsis is not immediately precipitated."
+  },
+  {
+    "question": "Patrick is in the oliguric phase of acute tubular necrosis and is experiencing fluid and electrolyte imbalances. The client is somewhat confused and complains of nausea and muscle weakness. As part of the prescribed therapy to correct this electrolyte imbalance, the nurse would expect to:",
+    "choices": [
+      "Administer Kayexalate",
+      "Restrict foods high in protein",
+      "Increase oral intake of cheese and milk.",
+      "Administer large amounts of normal saline via I.V."
+    ],
+    "answer": 0,
+    "explanation": "Kayexalate, a potassium exchange resin, permits sodium to be exchanged for potassium in the intestine, reducing the serum potassium level."
+  },
+  {
+    "question": "Mario has burn injury. After Forty48 hours, the physician orders for Mario 2 liters of IV fluid to be administered q12 h. The drop factor of the tubing is 10 gtt/ml. The nurse should set the flow to provide:",
+    "choices": [
+      "18 gtt/min",
+      "28 gtt/min",
+      "32 gtt/min",
+      "36 gtt/min"
+    ],
+    "answer": 1,
+    "explanation": "This is the correct flow rate; multiply the amount to be infused (2000 ml) by the drop factor (10) and divide the result by the amount of time in minutes (12 hours x 60 minutes)."
+  },
+  {
+    "question": "Terence suffered form burn injury. Using the rule of nines, which has the largest percent of burns?",
+    "choices": [
+      "Face and neck",
+      "Right upper arm and penis",
+      "Right thigh and penis",
+      "Upper trunk"
+    ],
+    "answer": 3,
+    "explanation": "The percentage designated for each burned part of the body using the rule of nines: Head and neck 9%; Right upper extremity 9%; Left upper extremity 9%; Anterior trunk 18%; Posterior trunk 18%; Right lower extremity 18%; Left lower extremity 18%; Perineum 1%."
+  },
+  {
+    "question": "Herbert, a 45 year old construction engineer is brought to the hospital unconscious after falling from a 2-story building. When assessing the client, the nurse would be most concerned if the assessment revealed:",
+    "choices": [
+      "Reactive pupils",
+      "A depressed fontanel",
+      "Bleeding from ears",
+      "An elevated temperature"
+    ],
+    "answer": 2,
+    "explanation": "The nurse needs to perform a thorough assessment that could indicate alterations in cerebral function, increased intracranial pressures, fractures and bleeding. Bleeding from the ears occurs only with basal skull fractures that can easily contribute to increased intracranial pressure and brain herniation."
+  },
+  {
+    "question": "Nurse Sherry is teaching male client regarding his permanent artificial pacemaker. Which information given by the nurse shows her knowledge deficit about the artificial cardiac pacemaker?",
+    "choices": [
+      "take the pulse rate once a day, in the morning upon awakening",
+      "May be allowed to use electrical appliances",
+      "Have regular follow up care",
+      "May engage in contact sports"
+    ],
+    "answer": 3,
+    "explanation": "The client should be advised by the nurse to avoid contact sports. This will prevent trauma to the area of the pacemaker generator."
+  },
+  {
+    "question": "The nurse is ware that the most relevant knowledge about oxygen administration to a male client with COPD is",
+    "choices": [
+      "Oxygen at 1-2L/min is given to maintain the hypoxic stimulus for breathing.",
+      "Hypoxia stimulates the central chemoreceptors in the medulla that makes the client breath.",
+      "Oxygen is administered best using a non-rebreathing mask",
+      "Blood gases are monitored using a pulse oximeter."
+    ],
+    "answer": 0,
+    "explanation": "COPD causes a chronic CO2 retention that renders the medulla insensitive to the CO2 stimulation for breathing. The hypoxic state of the client then becomes the stimulus for breathing. Giving the client oxygen in low concentrations will maintain the client’s hypoxic drive."
+  },
+  {
+    "question": "Tonny has undergoes a left thoracotomy and a partial pneumonectomy. Chest tubes are inserted, and one-bottle water-seal drainage is instituted in the operating room. In the postanesthesia care unit Tonny is placed in Fowler’s position on either his right side or on his back. The nurse is aware that this position:",
+    "choices": [
+      "Reduce incisional pain.",
+      "Facilitate ventilation of the left lung.",
+      "Equalize pressure in the pleural space.",
+      "Increase venous return"
+    ],
+    "answer": 1,
+    "explanation": "Since only a partial pneumonectomy is done, there is a need to promote expansion of this remaining Left lung by positioning the client on the opposite unoperated side."
+  },
+  {
+    "question": "Kristine is scheduled for a bronchoscopy. When teaching Kristine what to expect afterward, the nurse’s highest priority of information would be:",
+    "choices": [
+      "Food and fluids will be withheld for at least 2 hours.",
+      "Warm saline gargles will be done q 2h.",
+      "Coughing and deep-breathing exercises will be done q2h.",
+      "Only ice chips and cold liquids will be allowed initially."
+    ],
+    "answer": 0,
+    "explanation": "Prior to bronchoscopy, the doctors sprays the back of the throat with anesthetic to minimize the gag reflex and thus facilitate the insertion of the bronchoscope. Giving the client food and drink after the procedure without checking on the return of the gag reflex can cause the client to aspirate. The gag reflex usually returns after two hours."
+  },
+  {
+    "question": "Nurse Tristan is caring for a male client in acute renal failure. The nurse should expect hypertonic glucose, insulin infusions, and sodium bicarbonate to be used to treat:",
+    "choices": [
+      "hypernatremia.",
+      "hypokalemia.",
+      "hyperkalemia.",
+      "hypercalcemia."
+    ],
+    "answer": 2,
+    "explanation": "Hyperkalemia is a common complication of acute renal failure. It’s life-threatening if immediate action isn’t taken to reverse it. The administration of glucose and regular insulin, with sodium bicarbonate if necessary, can temporarily prevent cardiac arrest by moving potassium into the cells and temporarily reducing serum potassium levels. Hypernatremia, hypokalemia, and hypercalcemia don’t usually occur with acute renal failure and aren’t treated with glucose, insulin, or sodium bicarbonate."
+  },
+  {
+    "question": "Ms. X has just been diagnosed with condylomata acuminata (genital warts). What information is appropriate to tell this client?",
+    "choices": [
+      "This condition puts her at a higher risk for cervical cancer; therefore, she should have a Papanicolaou (Pap) smear annually.",
+      "The most common treatment is metronidazole (Flagyl), which should eradicate the problem within 7 to 10 days.",
+      "The potential for transmission to her sexual partner will be eliminated if condoms are used every time they have sexual intercourse.",
+      "The human papillomavirus (HPV), which causes condylomata acuminata, can’t be transmitted during oral sex."
+    ],
+    "answer": 0,
+    "explanation": "Women with condylomata acuminata are at risk for cancer of the cervix and vulva. Yearly Pap smears are very important for early detection. Because condylomata acuminata is a virus, there is no permanent cure. Because condylomata acuminata can occur on the vulva, a condom won’t protect sexual partners. HPV can be transmitted to other parts of the body, such as the mouth, oropharynx, and larynx."
+  },
+  {
+    "question": "Maritess was recently diagnosed with a genitourinary problem and is being examined in the emergency department. When palpating the her kidneys, the nurse should keep which anatomical fact in mind?",
+    "choices": [
+      "The left kidney usually is slightly higher than the right one.",
+      "The kidneys are situated just above the adrenal glands.",
+      "The average kidney is approximately 5 cm (2″) long and 2 to 3 cm (¾” to 1-1/8″) wide.",
+      "The kidneys lie between the 10th and 12th thoracic vertebrae."
+    ],
+    "answer": 0,
+    "explanation": "The left kidney usually is slightly higher than the right one. An adrenal gland lies atop each kidney. The average kidney measures approximately 11 cm (4-3/8″) long, 5 to 5.8 cm (2″ to 2¼”) wide, and 2.5 cm (1″) thick. The kidneys are located retroperitoneally, in the posterior aspect of the abdomen, on either side of the vertebral column. They lie between the 12th thoracic and 3rd lumbar vertebrae."
+  },
+  {
+    "question": "Jestoni with chronic renal failure (CRF) is admitted to the urology unit. The nurse is aware that the diagnostic test are consistent with CRF if the result is:",
+    "choices": [
+      "Increased pH with decreased hydrogen ions.",
+      "Increased serum levels of potassium, magnesium, and calcium.",
+      "Blood urea nitrogen (BUN) 100 mg/dl and serum creatinine 6.5 mg/ dl.",
+      "Uric acid analysis 3.5 mg/dl and phenolsulfonphthalein (PSP) excretion 75%."
+    ],
+    "answer": 2,
+    "explanation": "The normal BUN level ranges 8 to 23 mg/dl; the normal serum creatinine level ranges from 0.7 to 1.5 mg/dl. The test results in option C are abnormally elevated, reflecting CRF and the kidneys’ decreased ability to remove nonprotein nitrogen waste from the blood. CRF causes decreased pH and increased hydrogen ions — not vice versa. CRF also increases serum levels of potassium, magnesium, and phosphorous, and decreases serum levels of calcium. A uric acid analysis of 3.5 mg/dl falls within the normal range of 2.7 to 7.7 mg/dl; PSP excretion of 75% also falls with the normal range of 60% to 75%."
+  },
+  {
+    "question": "Katrina has an abnormal result on a Papanicolaou test. After admitting that she read her chart while the nurse was out of the room, Katrina asks what dysplasia means. Which definition should the nurse provide?",
+    "choices": [
+      "Presence of completely undifferentiated tumor cells that don’t resemble cells of the tissues of their origin.",
+      "Increase in the number of normal cells in a normal arrangement in a tissue or an organ.",
+      "Replacement of one type of fully differentiated cell by another in tissues where the second type normally isn’t found.",
+      "Alteration in the size, shape, and organization of differentiated cells."
+    ],
+    "answer": 3,
+    "explanation": "Dysplasia refers to an alteration in the size, shape, and organization of differentiated cells. The presence of completely undifferentiated tumor cells that don’t resemble cells of the tissues of their origin is called anaplasia. An increase in the number of normal cells in a normal arrangement in a tissue or an organ is called hyperplasia. Replacement of one type of fully differentiated cell by another in tissues where the second type normally isn’t found is called metaplasia."
+  },
+  {
+    "question": "During a routine checkup, Nurse Mariane assesses a male client with acquired immunodeficiency syndrome (AIDS) for signs and symptoms of cancer. What is the most common AIDS-related cancer?",
+    "choices": [
+      "Squamous cell carcinoma",
+      "Multiple myeloma",
+      "Leukemia",
+      "Kaposi’s sarcoma"
+    ],
+    "answer": 3,
+    "explanation": "Kaposi’s sarcoma is the most common cancer associated with AIDS. Squamous cell carcinoma, multiple myeloma, and leukemia may occur in anyone and aren’t associated specifically with AIDS."
+  },
+  {
+    "question": "Ricardo is scheduled for a prostatectomy, and the anesthesiologist plans to use a spinal (subarachnoid) block during surgery. In the operating room, the nurse positions the client according to the anesthesiologist’s instructions. Why does the client require special positioning for this type of anesthesia?",
+    "choices": [
+      "To prevent confusion",
+      "To prevent seizures",
+      "To prevent cerebrospinal fluid (CSF) leakage",
+      "To prevent cardiac arrhythmias"
+    ],
+    "answer": 2,
+    "explanation": "The client receiving a subarachnoid block requires special positioning to prevent CSF leakage and headache and to ensure proper anesthetic distribution. Proper positioning doesn’t help prevent confusion, seizures, or cardiac arrhythmias."
+  },
+  {
+    "question": "A male client had a nephrectomy 2 days ago and is now complaining of abdominal pressure and nausea. The first nursing action should be to:",
+    "choices": [
+      "Auscultate bowel sounds.",
+      "Palpate the abdomen.",
+      "Change the client’s position.",
+      "Insert a rectal tube."
+    ],
+    "answer": 0,
+    "explanation": "If abdominal distention is accompanied by nausea, the nurse must first auscultate bowel sounds. If bowel sounds are absent, the nurse should suspect gastric or small intestine dilation and these findings must be reported to the physician. Palpation should be avoided postoperatively with abdominal distention. If peristalsis is absent, changing positions and inserting a rectal tube won’t relieve the client’s discomfort."
+  },
+  {
+    "question": "Wilfredo with a recent history of rectal bleeding is being prepared for a colonoscopy. How should the nurse Patricia position the client for this test initially?",
+    "choices": [
+      "Lying on the right side with legs straight",
+      "Lying on the left side with knees bent",
+      "Prone with the torso elevated",
+      "Bent over with hands touching the floor"
+    ],
+    "answer": 1,
+    "explanation": "For a colonoscopy, the nurse initially should position the client on the left side with knees bent. Placing the client on the right side with legs straight, prone with the torso elevated, or bent over with hands touching the floor wouldn’t allow proper visualization of the large intestine."
+  },
+  {
+    "question": "A male client with inflammatory bowel disease undergoes an ileostomy. On the first day after surgery, Nurse Oliver notes that the client’s stoma appears dusky. How should the nurse interpret this finding?",
+    "choices": [
+      "Blood supply to the stoma has been interrupted.",
+      "This is a normal finding 1 day after surgery.",
+      "The ostomy bag should be adjusted.",
+      "An intestinal obstruction has occurred."
+    ],
+    "answer": 0,
+    "explanation": "An ileostomy stoma forms as the ileum is brought through the abdominal wall to the surface skin, creating an artificial opening for waste elimination. The stoma should appear cherry red, indicating adequate arterial perfusion. A dusky stoma suggests decreased perfusion, which may result from interruption of the stoma’s blood supply and may lead to tissue damage or necrosis. A dusky stoma isn’t a normal finding. Adjusting the ostomy bag wouldn’t affect stoma color, which depends on blood supply to the area. An intestinal obstruction also wouldn’t change stoma color."
+  },
+  {
+    "question": "Anthony suffers burns on the legs, which nursing intervention helps prevent contractures?",
+    "choices": [
+      "Applying knee splints",
+      "Elevating the foot of the bed",
+      "Hyperextending the client’s palms",
+      "Performing shoulder range-of-motion exercises"
+    ],
+    "answer": 0,
+    "explanation": "Applying knee splints prevents leg contractures by holding the joints in a position of function. Elevating the foot of the bed can’t prevent contractures because this action doesn’t hold the joints in a position of function. Hyperextending a body part for an extended time is inappropriate because it can cause contractures. Performing shoulder range-of-motion exercises can prevent contractures in the shoulders, but not in the legs."
+  },
+  {
+    "question": "Nurse Ron is assessing a client admitted with second- and third-degree burns on the face, arms, and chest. Which finding indicates a potential problem?",
+    "choices": [
+      "Partial pressure of arterial oxygen (PaO2) value of 80 mm Hg.",
+      "Urine output of 20 ml/hour.",
+      "White pulmonary secretions.",
+      "Rectal temperature of 100.6° F (38° C)."
+    ],
+    "answer": 1,
+    "explanation": "A urine output of less than 40 ml/hour in a client with burns indicates a fluid volume deficit. This client’s PaO2 value falls within the normal range (80 to 100 mm Hg). White pulmonary secretions also are normal. The client’s rectal temperature isn’t significantly elevated and probably results from the fluid volume deficit."
+  },
+  {
+    "question": "Mr. Mendoza who has suffered a cerebrovascular accident (CVA) is too weak to move on his own. To help the client avoid pressure ulcers, Nurse Celia should:",
+    "choices": [
+      "Turn him frequently.",
+      "Perform passive range-of-motion (ROM) exercises.",
+      "Reduce the client’s fluid intake.",
+      "Encourage the client to use a footboard."
+    ],
+    "answer": 0,
+    "explanation": "The most important intervention to prevent pressure ulcers is frequent position changes, which relieve pressure on the skin and underlying tissues. If pressure isn’t relieved, capillaries become occluded, reducing circulation and oxygenation of the tissues and resulting in cell death and ulcer formation. During passive ROM exercises, the nurse moves each joint through its range of movement, which improves joint mobility and circulation to the affected area but doesn’t prevent pressure ulcers. Adequate hydration is necessary to maintain healthy skin and ensure tissue repair. A footboard prevents plantar flexion and footdrop by maintaining the foot in a dorsiflexed position."
+  },
+  {
+    "question": "Nurse Maria plans to administer dexamethasone cream to a female client who has dermatitis over the anterior chest. How should the nurse apply this topical agent?",
+    "choices": [
+      "With a circular motion, to enhance absorption.",
+      "With an upward motion, to increase blood supply to the affected area",
+      "In long, even, outward, and downward strokes in the direction of hair growth",
+      "In long, even, outward, and upward strokes in the direction opposite hair growth"
+    ],
+    "answer": 2,
+    "explanation": "When applying a topical agent, the nurse should begin at the midline and use long, even, outward, and downward strokes in the direction of hair growth. This application pattern reduces the risk of follicle irritation and skin inflammation."
+  },
+  {
+    "question": "Nurse Kate is aware that one of the following classes of medication protect the ischemic myocardium by blocking catecholamines and sympathetic nerve stimulation is:",
+    "choices": [
+      "Beta -adrenergic blockers",
+      "Calcium channel blocker",
+      "Narcotics",
+      "Nitrates"
+    ],
+    "answer": 0,
+    "explanation": "Beta-adrenergic blockers work by blocking beta receptors in the myocardium, reducing the response to catecholamines and sympathetic nerve stimulation. They protect the myocardium, helping to reduce the risk of another infraction by decreasing myocardial oxygen demand. Calcium channel blockers reduce the workload of the heart by decreasing the heart rate. Narcotics reduce myocardial oxygen demand, promote vasodilation, and decrease anxiety. Nitrates reduce myocardial oxygen consumption bt decreasing left ventricular end diastolic pressure (preload) and systemic vascular resistance (afterload)."
+  },
+  {
+    "question": "A male client has jugular distention. On what position should the nurse place the head of the bed to obtain the most accurate reading of jugular vein distention?",
+    "choices": [
+      "High Fowler’s",
+      "Raised 10 degrees",
+      "Raised 30 degrees",
+      "Supine position"
+    ],
+    "answer": 2,
+    "explanation": "Jugular venous pressure is measured with a centimeter ruler to obtain the vertical distance between the sternal angle and the point of highest pulsation with the head of the bed inclined between 15 to 30 degrees. Increased pressure can’t be seen when the client is supine or when the head of the bed is raised 10 degrees because the point that marks the pressure level is above the jaw (therefore, not visible). In high Fowler’s position, the veins would be barely discernible above the clavicle."
+  },
+  {
+    "question": "The nurse is aware that one of the following classes of medications maximizes cardiac performance in clients with heart failure by increasing ventricular contractility?",
+    "choices": [
+      "Beta-adrenergic blockers",
+      "Calcium channel blocker",
+      "Diuretics",
+      "Inotropic agents"
+    ],
+    "answer": 3,
+    "explanation": "Inotropic agents are administered to increase the force of the heart’s contractions, thereby increasing ventricular contractility and ultimately increasing cardiac output. Beta-adrenergic blockers and calcium channel blockers decrease the heart rate and ultimately decreased the workload of the heart. Diuretics are administered to decrease the overall vascular volume, also decreasing the workload of the heart."
+  },
+  {
+    "question": "A male client has a reduced serum high-density lipoprotein (HDL) level and an elevated low-density lipoprotein (LDL) level. Which of the following dietary modifications is not appropriate for this client?",
+    "choices": [
+      "Fiber intake of 25 to 30 g daily",
+      "Less than 30% of calories form fat",
+      "Cholesterol intake of less than 300 mg daily",
+      "Less than 10% of calories from saturated fat"
+    ],
+    "answer": 1,
+    "explanation": "A client with low serum HDL and high serum LDL levels should get less than 30% of daily calories from fat. The other modifications are appropriate for this client."
+  },
+  {
+    "question": "A 37-year-old male client was admitted to the coronary care unit (CCU) 2 days ago with an acute myocardial infarction. Which of the following actions would breach the client confidentiality?",
+    "choices": [
+      "The CCU nurse gives a verbal report to the nurse on the telemetry unit before transferring the client to that unit",
+      "The CCU nurse notifies the on-call physician about a change in the client’s condition",
+      "The emergency department nurse calls up the latest electrocardiogram results to check the client’s progress.",
+      "At the client’s request, the CCU nurse updates the client’s wife on his condition"
+    ],
+    "answer": 2,
+    "explanation": "The emergency department nurse is no longer directly involved with the client’s care and thus has no legal right to information about his present condition. Anyone directly involved in his care (such as the telemetry nurse and the on-call physician) has the right to information about his condition. Because the client requested that the nurse update his wife on his condition, doing so doesn’t breach confidentiality."
+  },
+  {
+    "question": "A male client arriving in the emergency department is receiving cardiopulmonary resuscitation from paramedics who are giving ventilations through an endotracheal (ET) tube that they placed in the client’s home. During a pause in compressions, the cardiac monitor shows narrow QRS complexes and a heart rate of beats/minute with a palpable pulse. Which of the following actions should the nurse take first?",
+    "choices": [
+      "Start an L.V. line and administer amiodarone (Cardarone), 300 mg L.V. over 10 minutes.",
+      "Check endotracheal tube placement.",
+      "Obtain an arterial blood gas (ABG) sample.",
+      "Administer atropine, 1 mg L.V."
+    ],
+    "answer": 1,
+    "explanation": "ET tube placement should be confirmed as soon as the client arrives in the emergency department. Once the airways is secured, oxygenation and ventilation should be confirmed using an end-tidal carbon dioxide monitor and pulse oximetry. Next, the nurse should make sure L.V. access is established. If the client experiences symptomatic bradycardia, atropine is administered as ordered 0.5 to 1 mg every 3 to 5 minutes to a total of 3 mg. Then the nurse should try to find the cause of the client’s arrest by obtaining an ABG sample. Amiodarone is indicated for ventricular tachycardia, ventricular fibrillation and atrial flutter – not symptomatic bradycardia."
+  },
+  {
+    "question": "After cardiac surgery, a client’s blood pressure measures 126/80 mm Hg. Nurse Katrina determines that mean arterial pressure (MAP) is which of the following?",
+    "choices": [
+      "46 mm Hg",
+      "80 mm Hg",
+      "95 mm Hg",
+      "90 mm Hg"
+    ],
+    "answer": 2,
+    "explanation": "Use the following formula to calculate MAP: MAP = [systolic + 2(diastolic)] / 3 = [126 mm Hg + 2(80 mm Hg)] / 3 = 286 mm Hg / 3 = 95 mm Hg."
+  },
+  {
+    "question": "A female client arrives at the emergency department with chest and stomach pain and a report of black tarry stool for several months. Which of the following order should the nurse Oliver anticipate?",
+    "choices": [
+      "Cardiac monitor, oxygen, creatine kinase and lactate dehydrogenase levels",
+      "Prothrombin time, partial thromboplastin time, fibrinogen and fibrin split product values.",
+      "Electrocardiogram, complete blood count, testing for occult blood, comprehensive serum metabolic panel.",
+      "Electroencephalogram, alkaline phosphatase and aspartate aminotransferase levels, basic serum metabolic panel"
+    ],
+    "answer": 2,
+    "explanation": "An electrocardiogram evaluates the complaints of chest pain, laboratory tests determines anemia, and the stool test for occult blood determines blood in the stool. Cardiac monitoring, oxygen, and creatine kinase and lactate dehydrogenase levels are appropriate for a cardiac primary problem. A basic metabolic panel and alkaline phosphatase and aspartate aminotransferase levels assess liver function. Prothrombin time, partial thromboplastin time, fibrinogen and fibrin split products are measured to verify bleeding dyscrasias. An electroencephalogram evaluates brain electrical activity."
+  },
+  {
+    "question": "Macario had coronary artery bypass graft (CABG) surgery 3 days ago. Which of the following conditions is suspected by the nurse when a decrease in platelet count from 230,000 ul to 5,000 ul is noted?",
+    "choices": [
+      "Pancytopenia",
+      "Idiopathic thrombocytopemic purpura (ITP)",
+      "Disseminated intravascular coagulation (DIC)",
+      "Heparin-associated thrombosis and thrombocytopenia (HATT)"
+    ],
+    "answer": 3,
+    "explanation": "HATT may occur after CABG surgery due to heparin use during surgery. Although DIC and ITP cause platelet aggregation and bleeding, neither is common in a client after revascularization surgery. Pancytopenia is a reduction in all blood cells."
+  },
+  {
+    "question": "Which of the following drugs would be ordered by the physician to improve the platelet count in a male client with idiopathic thrombocytopenic purpura (ITP)?",
+    "choices": [
+      "Acetylsalicylic acid (ASA)",
+      "Corticosteroids",
+      "Methotrezate",
+      "Vitamin K"
+    ],
+    "answer": 1,
+    "explanation": "Corticosteroid therapy can decrease antibody production and phagocytosis of the antibody-coated platelets, retaining more functioning platelets. Methotrexate can cause thrombocytopenia. Vitamin K is used to treat an excessive anticoagulate state from warfarin overload, and ASA decreases platelet aggregation."
+  },
+  {
+    "question": "A female client is scheduled to receive a heart valve replacement with a porcine valve. Which of the following types of transplant is this?",
+    "choices": [
+      "Allogeneic",
+      "Autologous",
+      "Syngeneic",
+      "Xenogeneic"
+    ],
+    "answer": 3,
+    "explanation": "A xenogeneic transplant is between human and another species. A syngeneic transplant is between identical twins, allogeneic transplant is between two humans, and autologous is a transplant from the same individual."
+  },
+  {
+    "question": "Marco falls off his bicycle and injuries his ankle. Which of the following actions shows the initial response to the injury in the extrinsic pathway?",
+    "choices": [
+      "Release of Calcium",
+      "Release of tissue thromboplastin",
+      "Conversion of factors XII to factor XIIa",
+      "Conversion of factor VIII to factor VIIIa"
+    ],
+    "answer": 1,
+    "explanation": "Tissue thromboplastin is released when damaged tissue comes in contact with clotting factors. Calcium is released to assist the conversion of factors X to Xa. Conversion of factors XII to XIIa and VIII to VIIIa are part of the intrinsic pathway."
+  },
+  {
+    "question": "Instructions for a client with systemic lupus erythematosus (SLE) would include information about which of the following blood dyscrasias?",
+    "choices": [
+      "Dressler’s syndrome",
+      "Polycythemia",
+      "Essential thrombocytopenia",
+      "Von Willebrand’s disease"
+    ],
+    "answer": 2,
+    "explanation": "Essential thrombocytopenia is linked to immunologic disorders, such as SLE and human immunodeficiency virus. The disorder known as von Willebrand’s disease is a type of hemophilia and isn’t linked to SLE. Moderate to severe anemia is associated with SLE, not polycythemia. Dressler’s syndrome is pericarditis that occurs after a myocardial infarction and isn’t linked to SLE."
+  },
+  {
+    "question": "The nurse is aware that the following symptoms is most commonly an early indication of stage 1 Hodgkin’s disease?",
+    "choices": [
+      "Pericarditis",
+      "Night sweat",
+      "Splenomegaly",
+      "Persistent hypothermia"
+    ],
+    "answer": 1,
+    "explanation": "In stage 1, symptoms include a single enlarged lymph node (usually), unexplained fever, night sweats, malaise, and generalized pruritis. Although splenomegaly may be present in some clients, night sweats are generally more prevalent. Pericarditis isn’t associated with Hodgkin’s disease, nor is hypothermia. Moreover, splenomegaly and pericarditis aren’t symptoms. Persistent hypothermia is associated with Hodgkin’s but isn’t an early sign of the disease."
+  },
+  {
+    "question": "Francis with leukemia has neutropenia. Which of the following functions must frequently assessed?",
+    "choices": [
+      "Blood pressure",
+      "Bowel sounds",
+      "Heart sounds",
+      "Breath sounds"
+    ],
+    "answer": 3,
+    "explanation": "Pneumonia, both viral and fungal, is a common cause of death in clients with neutropenia, so frequent assessment of respiratory rate and breath sounds is required. Although assessing blood pressure, bowel sounds, and heart sounds is important, it won’t help detect pneumonia."
+  },
+  {
+    "question": "The nurse knows that neurologic complications of multiple myeloma (MM) usually involve which of the following body system?",
+    "choices": [
+      "Brain",
+      "Muscle spasm",
+      "Renal dysfunction",
+      "Myocardial irritability"
+    ],
+    "answer": 1,
+    "explanation": "Back pain or paresthesia in the lower extremities may indicate impending spinal cord compression from a spinal tumor. This should be recognized and treated promptly as progression of the tumor may result in paraplegia. The other options, which reflect parts of the nervous system, aren’t usually affected by MM."
+  },
+  {
+    "question": "Nurse Patricia is aware that the average length of time from human immunodeficiency virus (HIV) infection to the development of acquired immunodeficiency syndrome (AIDS)?",
+    "choices": [
+      "Less than 5 years",
+      "5 to 7 years",
+      "10 years",
+      "More than 10 years"
+    ],
+    "answer": 2,
+    "explanation": "Epidemiologic studies show the average time from initial contact with HIV to the development of AIDS is 10 years."
+  },
+  {
+    "question": "An 18-year-old male client admitted with heat stroke begins to show signs of disseminated intravascular coagulation (DIC). Which of the following laboratory findings is most consistent with DIC?",
+    "choices": [
+      "Low platelet count",
+      "Elevated fibrinogen levels",
+      "Low levels of fibrin degradation products",
+      "Reduced prothrombin time"
+    ],
+    "answer": 0,
+    "explanation": "In DIC, platelets and clotting factors are consumed, resulting in microthrombi and excessive bleeding. As clots form, fibrinogen levels decrease and the prothrombin time increases. Fibrin degradation products increase as fibrinolysis takes places."
+  },
+  {
+    "question": "Mario comes to the clinic complaining of fever, drenching night sweats, and unexplained weight loss over the past 3 months. Physical examination reveals a single enlarged supraclavicular lymph node. Which of the following is the most probable diagnosis?",
+    "choices": [
+      "Influenza",
+      "Sickle cell anemia",
+      "Leukemia",
+      "Hodgkin’s disease"
+    ],
+    "answer": 3,
+    "explanation": "Hodgkin’s disease typically causes fever, night sweats, weight loss, and lymph node enlargement. Influenza doesn’t last for months. Clients with sickle cell anemia manifest signs and symptoms of chronic anemia with pallor of the mucous membrane, fatigue, and decreased tolerance for exercise; they don’t show fever, night sweats, weight loss or lymph node enlargement. Leukemia doesn’t cause lymph node enlargement."
+  },
+  {
+    "question": "A male client with a gunshot wound requires an emergency blood transfusion. His blood type is AB negative. Which blood type would be the safest for him to receive?",
+    "choices": [
+      "AB Rh-positive",
+      "A Rh-positive",
+      "A Rh-negative",
+      "O Rh-positive"
+    ],
+    "answer": 2,
+    "explanation": "Human blood can sometimes contain an inherited D antigen. Persons with the D antigen have Rh-positive blood type; those lacking the antigen have Rh-negative blood. It’s important that a person with Rh-negative blood receives Rh-negative blood. If Rh-positive blood is administered to an Rh-negative person, the recipient develops anti-Rh agglutinins, and subsequent transfusions with Rh-positive blood may cause serious reactions with clumping and hemolysis of red blood cells."
+  },
+  {
+    "question": "Stacy is discharged from the hospital following her chemotherapy treatments. Which statement of Stacy’s mother indicated that she understands when she will contact the physician?",
+    "choices": [
+      "“I should contact the physician if Stacy has difficulty in sleeping”.",
+      "“I will call my doctor if Stacy has persistent vomiting and diarrhea”.",
+      "“My physician should be called if Stacy is irritable and unhappy”.",
+      "“Should Stacy have continued hair loss, I need to call the doctor”."
+    ],
+    "answer": 1,
+    "explanation": "Persistent (more than 24 hours) vomiting, anorexia, and diarrhea are signs of toxicity and the patient should stop the medication and notify the health care provider. The other manifestations are expected side effects of chemotherapy."
+  },
+  {
+    "question": "Stacy’s mother states to the nurse that it is hard to see Stacy with no hair. The best response for the nurse is:",
+    "choices": [
+      "“Stacy looks very nice wearing a hat”.",
+      "“You should not worry about her hair, just be glad that she is alive”.",
+      "“Yes it is upsetting. But try to cover up your feelings when you are with her or else she may be upset”.",
+      "“This is only temporary; Stacy will re-grow new hair in 3-6 months, but may be different in texture”."
+    ],
+    "answer": 3,
+    "explanation": "This is the appropriate response. The nurse should help the mother how to cope with her own feelings regarding the child’s disease so as not to affect the child negatively."
+  },
+  {
+    "question": "Stacy has beginning stomatitis. To promote oral hygiene and comfort, the nurse in-charge should:",
+    "choices": [
+      "Provide frequent mouthwash with normal saline.",
+      "Apply viscous Lidocaine to oral ulcers as needed.",
+      "Use lemon glycerine swabs every 2 hours.",
+      "Rinse mouth with Hydrogen Peroxide."
+    ],
+    "answer": 1,
+    "explanation": "Stomatitis can cause pain and this can be relieved by applying topical anesthetics such as lidocaine before mouth care. When the patient is already comfortable, the nurse can proceed with providing the patient with oral rinses of saline solution mixed with equal part of water or hydrogen peroxide mixed water in 1:3 concentrations to promote oral hygiene every 2-4 hours."
+  },
+  {
+    "question": "During the administration of chemotherapy agents, Nurse Oliver observed that the IV site is red and swollen, when the IV is touched Stacy shouts in pain. The first nursing action to take is:",
+    "choices": [
+      "Notify the physician",
+      "Flush the IV line with saline solution",
+      "Immediately discontinue the infusion",
+      "Apply an ice pack to the site, followed by warm compress."
+    ],
+    "answer": 2,
+    "explanation": "Edema or swelling at the IV site is a sign that the needle has been dislodged and the IV solution is leaking into the tissues causing the edema. The patient feels pain as the nerves are irritated by pressure and the IV solution. The first action of the nurse would be to discontinue the infusion right away to prevent further edema and other complications."
+  },
+  {
+    "question": "The term “blue bloater” refers to a male client which of the following conditions?",
+    "choices": [
+      "Adult respiratory distress syndrome (ARDS)",
+      "Asthma",
+      "Chronic obstructive bronchitis",
+      "Emphysema"
+    ],
+    "answer": 2,
+    "explanation": "Clients with chronic obstructive bronchitis appear bloated; they have large barrel chest and peripheral edema, cyanotic nail beds, and at times, circumoral cyanosis. Clients with ARDS are acutely short of breath and frequently need intubation for mechanical ventilation and large amount of oxygen. Clients with asthma don’t exhibit characteristics of chronic disease, and clients with emphysema appear pink and cachectic."
+  },
+  {
+    "question": "The term “pink puffer” refers to the female client with which of the following conditions?",
+    "choices": [
+      "Adult respiratory distress syndrome (ARDS)",
+      "Asthma",
+      "Chronic obstructive bronchitis",
+      "Emphysema"
+    ],
+    "answer": 3,
+    "explanation": "Because of the large amount of energy it takes to breathe, clients with emphysema are usually cachectic. They’re pink and usually breathe through pursed lips, hence the term “puffer.” Clients with ARDS are usually acutely short of breath. Clients with asthma don’t have any particular characteristics, and clients with chronic obstructive bronchitis are bloated and cyanotic in appearance."
+  },
+  {
+    "question": "Jose is in danger of respiratory arrest following the administration of a narcotic analgesic. An arterial blood gas value is obtained. Nurse Oliver would expect the paco2 to be which of the following values?",
+    "choices": [
+      "15 mm Hg",
+      "30 mm Hg",
+      "40 mm Hg",
+      "80 mm Hg"
+    ],
+    "answer": 3,
+    "explanation": "A client about to go into respiratory arrest will have inefficient ventilation and will be retaining carbon dioxide. The value expected would be around 80 mm Hg. All other values are lower than expected."
+  },
+  {
+    "question": "Timothy’s arterial blood gas (ABG) results are as follows; pH 7.16; Paco2 80 mm Hg; Pao2 46 mm Hg; HCO3- 24mEq/L; Sao2 81%. This ABG result represents which of the following conditions?",
+    "choices": [
+      "Metabolic acidosis",
+      "Metabolic alkalosis",
+      "Respiratory acidosis",
+      "Respirator y alkalosis"
+    ],
+    "answer": 2,
+    "explanation": "Because Paco2 is high at 80 mm Hg and the metabolic measure, HCO3- is normal, the client has respiratory acidosis. The pH is less than 7.35, acidemic, which eliminates metabolic and respiratory alkalosis as possibilities. If the HCO3- was below 22 mEq/L the client would have metabolic acidosis."
+  },
+  {
+    "question": "Norma has started a new drug for hypertension. Thirty minutes after she takes the drug, she develops chest tightness and becomes short of breath and tachypneic. She has a decreased level of consciousness. These signs indicate which of the following conditions?",
+    "choices": [
+      "Asthma attack",
+      "Pulmonary embolism",
+      "Respiratory failure",
+      "Rheumatoid arthritis"
+    ],
+    "answer": 2,
+    "explanation": "The client was reacting to the drug with respiratory signs of impending anaphylaxis, which could lead to eventual respiratory failure. Although the signs are also related to an asthma attack or a pulmonary embolism, consider the new drug first. Rheumatoid arthritis doesn’t manifest these signs."
+  },
+  {
+    "question": "Which laboratory test indicates liver cirrhosis?",
+    "choices": [
+      "Decreased red blood cell count",
+      "Decreased serum acid phosphate level",
+      "Elevated white blood cell count",
+      "Elevated serum aminotransferase"
+    ],
+    "answer": 3,
+    "explanation": "Hepatic cell death causes release of liver enzymes alanine aminotransferase (ALT), aspartate aminotransferase (AST) and lactate dehydrogenase (LDH) into the circulation. Liver cirrhosis is a chronic and irreversible disease of the liver characterized by generalized inflammation and fibrosis of the liver tissues."
+  },
+  {
+    "question": "The biopsy of Mr. Gonzales confirms the diagnosis of cirrhosis. Mr. Gonzales is at increased risk for excessive bleeding primarily because of:",
+    "choices": [
+      "Impaired clotting mechanism",
+      "Varix formation",
+      "Inadequate nutrition",
+      "Trauma of invasive procedure"
+    ],
+    "answer": 0,
+    "explanation": "Cirrhosis of the liver results in decreased Vitamin K absorption and formation of clotting factors resulting in impaired clotting mechanism."
+  },
+  {
+    "question": "Mr. Gonzales develops hepatic encephalopathy. Which clinical manifestation is most common with this condition?",
+    "choices": [
+      "Increased urine output",
+      "Altered level of consciousness",
+      "Decreased tendon reflex",
+      "Hypotension"
+    ],
+    "answer": 1,
+    "explanation": "Changes in behavior and level of consciousness are the first signs of hepatic encephalopathy. Hepatic encephalopathy is caused by liver failure and develops when the liver is unable to convert protein metabolic product ammonia to urea. This results in accumulation of ammonia and other toxins in the blood that damage the cells."
+  },
+  {
+    "question": "When Mr. Gonzales regained consciousness, the physician orders 50 ml of Lactose p.o. every 2 hours. Mr. Gozales develops diarrhea. The nurse best action would be:",
+    "choices": [
+      "“I’ll see if your physician is in the hospital”.",
+      "“Maybe your reacting to the drug; I will withhold the next dose”.",
+      "“I’ll lower the dosage as ordered so the drug causes only 2 to 4 stools a day”.",
+      "“Frequently, bowel movements are needed to reduce sodium level”."
+    ],
+    "answer": 2,
+    "explanation": "Lactulose is given to a patient with hepatic encephalopathy to reduce absorption of ammonia in the intestines by binding with ammonia and promoting more frequent bowel movements. If the patient experiences diarrhea, it indicates overdosage and the nurse must reduce the amount of medication given to the patient."
+  },
+  {
+    "question": "Which of the following groups of symptoms indicates a ruptured abdominal aortic aneurysm?",
+    "choices": [
+      "Lower back pain, increased blood pressure, decreased re blood cell (RBC) count, increased white blood (WBC) count.",
+      "Severe lower back pain, decreased blood pressure, decreased RBC count, increased WBC count.",
+      "Severe lower back pain, decreased blood pressure, decreased RBC count, decreased RBC count, decreased WBC count.",
+      "Intermitted lower back pain, decreased blood pressure, decreased RBC count, increased WBC count."
+    ],
+    "answer": 1,
+    "explanation": "Severe lower back pain indicates an aneurysm rupture, secondary to pressure being applied within the abdominal cavity. When ruptured occurs, the pain is constant because it can’t be alleviated until the aneurysm is repaired. Blood pressure decreases due to the loss of blood. The WBC count increases as cells migrate to the site of injury."
+  },
+  {
+    "question": "After undergoing a cardiac catheterization, Tracy has a large puddle of blood under his buttocks. Which of the following steps should the nurse take first?",
+    "choices": [
+      "Call for help.",
+      "Obtain vital signs",
+      "Ask the client to “lift up”",
+      "Apply gloves and assess the groin site"
+    ],
+    "answer": 3,
+    "explanation": "Observing standard precautions is the first priority when dealing with any blood fluid. Assessment of the groin site is the second priority. This establishes where the blood is coming from and determines how much blood has been lost."
+  },
+  {
+    "question": "Which of the following treatment is a suitable surgical intervention for a client with unstable angina?",
+    "choices": [
+      "Cardiac catheterization",
+      "Echocardiogram",
+      "Nitroglycerin",
+      "Percutaneous transluminal coronary angioplasty (PTCA)"
+    ],
+    "answer": 3,
+    "explanation": "PTCA can alleviate the blockage and restore blood flow and oxygenation. An echocardiogram is a noninvasive diagnostic test. Nitroglycerin is an oral sublingual medication. Cardiac catheterization is a diagnostic tool – not a treatment."
+  },
+  {
+    "question": "The nurse is aware that the following terms used to describe reduced cardiac output and perfusion impairment due to ineffective pumping of the heart is:",
+    "choices": [
+      "Anaphylactic shock",
+      "Cardiogenic shock",
+      "Distributive shock",
+      "Myocardial infarction (MI)"
+    ],
+    "answer": 1,
+    "explanation": "Cardiogenic shock is shock related to ineffective pumping of the heart. Anaphylactic shock results from an allergic reaction. Distributive shock results from changes in the intravascular volume distribution and is usually associated with increased cardiac output. MI isn’t a shock state, though a severe MI can lead to shock."
+  },
+  {
+    "question": "A client with hypertension ask the nurse which factors can cause blood pressure to drop to normal levels?",
+    "choices": [
+      "Kidneys’ excretion to sodium only.",
+      "Kidneys’ retention of sodium and water",
+      "Kidneys’ excretion of sodium and water",
+      "Kidneys’ retention of sodium and excretion of water"
+    ],
+    "answer": 2,
+    "explanation": "The kidneys respond to a rise in blood pressure by excreting sodium and excess water. This response ultimately affects systolic blood pressure by regulating blood volume."
+  },
+  {
+    "question": "Nurse Rose is aware that the statement that best explains why furosemide (Lasix) is administered to treat hypertension is:",
+    "choices": [
+      "It dilates peripheral blood vessels.",
+      "It decreases sympathetic cardioacceleration.",
+      "It inhibits the angiotensin-coverting enzymes",
+      "It inhibits reabsorption of sodium and water in the loop of Henle."
+    ],
+    "answer": 3,
+    "explanation": "Furosemide is a loop diuretic that inhibits sodium and water reabsorption in the loop of Henle, thereby causing a decrease in blood pressure."
+  },
+  {
+    "question": "Nurse Nikki knows that laboratory results supports the diagnosis of systemic lupus erythematosus (SLE) is:",
+    "choices": [
+      "Elavated serum complement level",
+      "Thrombocytosis, elevated sedimentation rate",
+      "Pancytopenia, elevated antinuclear antibody (ANA) titer",
+      "Leukocysis, elevated blood urea nitrogen (BUN) and creatinine levels"
+    ],
+    "answer": 2,
+    "explanation": "Laboratory findings for clients with SLE usually show pancytopenia, elevated ANA titer, and decreased serum complement levels. Clients may have elevated BUN and creatinine levels from nephritis, but the increase does not indicate SLE."
+  },
+  {
+    "question": "Arnold, a 19-year-old client with a mild concussion is discharged from the emergency department. Before discharge, he complains of a headache. When offered acetaminophen, his mother tells the nurse the headache is severe and she would like her son to have something stronger. Which of the following responses by the nurse is appropriate?",
+    "choices": [
+      "“Your son had a mild concussion, acetaminophen is strong enough.”",
+      "“Aspirin is avoided because of the danger of Reye’s syndrome in children or young adults.”",
+      "“Narcotics are avoided after a head injury because they may hide a worsening condition.”",
+      "Stronger medications may lead to vomiting, which increases the intracarnial pressure (ICP).”"
+    ],
+    "answer": 2,
+    "explanation": "Narcotics may mask changes in the level of consciousness that indicate increased ICP. Aspirin is contraindicated in conditions that may have bleeding, such as trauma, and for children or young adults with viral illnesses due to the danger of Reye’s syndrome."
+  },
+  {
+    "question": "When evaluating an arterial blood gas from a male client with a subdural hematoma, the nurse notes the Paco2 is 30 mm Hg. Which of the following responses best describes the result?",
+    "choices": [
+      "Appropriate; lowering carbon dioxide (CO2) reduces intracranial pressure (ICP)",
+      "Emergent; the client is poorly oxygenated",
+      "Normal",
+      "Significant; the client has alveolar hypoventilation"
+    ],
+    "answer": 0,
+    "explanation": "A normal Paco2 value is 35 to 45 mm Hg. CO2 has vasodilating properties; therefore, lowering Paco2 through hyperventilation will lower ICP caused by dilated cerebral vessels."
+  },
+  {
+    "question": "When prioritizing care, which of the following clients should the nurse Olivia assess first?",
+    "choices": [
+      "A 17-year-old clients 24-hours postappendectomy",
+      "A 33-year-old client with a recent diagnosis of Guillain-Barre syndrome",
+      "A 50-year-old client 3 days postmyocardial infarction",
+      "A 50-year-old client with diverticulitis"
+    ],
+    "answer": 1,
+    "explanation": "Guillain-Barre syndrome is characterized by ascending paralysis and potential respiratory failure. The order of client assessment should follow client priorities, with disorders of airways, breathing, and then circulation taking precedence."
+  },
+  {
+    "question": "JP has been diagnosed with gout and wants to know why colchicine is used in the treatment of gout. Which of the following actions of colchicines explains why it’s effective for gout?",
+    "choices": [
+      "Replaces estrogen",
+      "Decreases infection",
+      "Decreases inflammation",
+      "Decreases bone demineralization"
+    ],
+    "answer": 2,
+    "explanation": "The action of colchicine is to decrease inflammation by reducing the migration of leukocytes to synovial fluid."
+  },
+  {
+    "question": "Norma asks for information about osteoarthritis. Which of the following statements about osteoarthritis is correct?",
+    "choices": [
+      "Osteoarthritis is rarely debilitating",
+      "Osteoarthritis is a rare form of arthritis",
+      "Osteoarthritis is the most common form of arthritis",
+      "Osteoarthritis afflicts people over 60"
+    ],
+    "answer": 2,
+    "explanation": "Osteoarthritis is the most common form of arthritis and can be extremely debilitating. It can afflict people of any age, although most are elderly."
+  },
+  {
+    "question": "Ruby is receiving thyroid replacement therapy develops the flu and forgets to take her thyroid replacement medicine. The nurse understands that skipping this medication will put the client at risk for developing which of the following lifethreatening complications?",
+    "choices": [
+      "Exophthalmos",
+      "Thyroid storm",
+      "Myxedema coma",
+      "Tibial myxedema"
+    ],
+    "answer": 2,
+    "explanation": "Myxedema coma, severe hypothyroidism, is a life-threatening condition that may develop if thyroid replacement medication isn’t taken."
+  },
+  {
+    "question": "Nurse Sugar is assessing a client with Cushing’s syndrome. Which observation should the nurse report to the physician immediately?",
+    "choices": [
+      "Pitting edema of the legs",
+      "An irregular apical pulse",
+      "Dry mucous membranes",
+      "Frequent urination"
+    ],
+    "answer": 1,
+    "explanation": "Because Cushing’s syndrome causes aldosterone overproduction, which increases urinary potassium loss, the disorder may lead to hypokalemia. Therefore, the nurse should immediately report signs and symptoms of hypokalemia, such as an irregular apical pulse, to the physician."
+  },
+  {
+    "question": "Cyrill with severe head trauma sustained in a car accident is admitted to the intensive care unit. Thirty-six hours later, the client’s urine output suddenly rises above 200 ml/hour, leading the nurse to suspect diabetes insipidus. Which laboratory findings support the nurse’s suspicion of diabetes insipidus?",
+    "choices": [
+      "Above-normal urine and serum osmolality levels",
+      "Below-normal urine and serum osmolality levels",
+      "Above-normal urine osmolality level, below-normal serum osmolality level",
+      "Below-normal urine osmolality level, above-normal serum osmolality level"
+    ],
+    "answer": 3,
+    "explanation": "In diabetes insipidus, excessive polyuria causes dilute urine, resulting in a below-normal urine osmolality level. At the same time, polyuria depletes the body of water, causing dehydration that leads to an above-normal serum osmolality level."
+  },
+  {
+    "question": "Jomari is diagnosed with hyperosmolar hyperglycemic nonketotic syndrome (HHNS) is stabilized and prepared for discharge. When preparing the client for discharge and home management, which of the following statements indicates that the client understands her condition and how to control it?",
+    "choices": [
+      "“I can avoid getting sick by not becoming dehydrated and by paying attention to my need to urinate, drink, or eat more than usual.”",
+      "“If I experience trembling, weakness, and headache, I should drink a glass of soda that contains sugar.”",
+      "“I will have to monitor my blood glucose level closely and notify the physician if it’s constantly elevated.”",
+      "“If I begin to feel especially hungry and thirsty, I’ll eat a snack high in carbohydrates.”"
+    ],
+    "answer": 0,
+    "explanation": "Inadequate fluid intake during hyperglycemic episodes often leads to HHNS. By recognizing the signs of hyperglycemia (polyuria, polydipsia, and polyphagia) and increasing fluid intake, the client may prevent HHNS."
+  },
+  {
+    "question": "A 66-year-old client has been complaining of sleeping more, increased urination, anorexia, weakness, irritability, depression, and bone pain that interferes with her going outdoors. Based on these assessment findings, the nurse would suspect which of the following disorders?",
+    "choices": [
+      "Diabetes mellitus",
+      "Diabetes insipidus",
+      "Hypoparathyroidism",
+      "Hyperparathyroidism"
+    ],
+    "answer": 3,
+    "explanation": "Hyperparathyroidism is most common in older women and is characterized by bone pain and weakness from excess parathyroid hormone (PTH). Clients also exhibit hypercalciuria-causing polyuria."
+  },
+  {
+    "question": "Nurse Lourdes is teaching a client recovering from addisonian crisis about the need to take fludrocortisone acetate and hydrocortisone at home. Which statement by the client indicates an understanding of the instructions?",
+    "choices": [
+      "“I’ll take my hydrocortisone in the late afternoon, before dinner.”",
+      "“I’ll take all of my hydrocortisone in the morning, right after I wake up.”",
+      "“I’ll take two-thirds of the dose when I wake up and one-third in the late afternoon.”",
+      "“I’ll take the entire dose at bedtime.”"
+    ],
+    "answer": 2,
+    "explanation": "Hydrocortisone, a glucocorticoid, should be administered according to a schedule that closely reflects the body’s own secretion of this hormone; therefore, two-thirds of the dose of hydrocortisone should be taken in the morning and one-third in the late afternoon."
+  },
+  {
+    "question": "Which of the following laboratory test results would suggest to the nurse Len that a client has a corticotropin-secreting pituitary adenoma?",
+    "choices": [
+      "High corticotropin and low cortisol levels",
+      "Low corticotropin and high cortisol levels",
+      "High corticotropin and high cortisol levels",
+      "Low corticotropin and low cortisol levels"
+    ],
+    "answer": 2,
+    "explanation": "A corticotropin-secreting pituitary tumor would cause high corticotropin and high cortisol levels."
+  },
+  {
+    "question": "A male client is scheduled for a transsphenoidal hypophysectomy to remove a pituitary tumor. Preoperatively, the nurse should assess for potential complications by doing which of the following?",
+    "choices": [
+      "Testing for ketones in the urine",
+      "Testing urine specific gravity",
+      "Checking temperature every 4 hours",
+      "Performing capillary glucose testing every 4 hours"
+    ],
+    "answer": 3,
+    "explanation": "The nurse should perform capillary glucose testing every 4 hours because excess cortisol may cause insulin resistance, placing the client at risk for hyperglycemia."
+  },
+  {
+    "question": "Capillary glucose monitoring is being performed every 4 hours for a client diagnosed with diabetic ketoacidosis. Insulin is administered using a scale of regular insulin according to glucose results. At 2 p.m., the client has a capillary glucose level of 250 mg/dl for which he receives 8 U of regular insulin. Nurse Mariner should expect the dose’s:",
+    "choices": [
+      "onset to be at 2 p.m. and its peak to be at 3 p.m.",
+      "onset to be at 2:15 p.m. and its peak to be at 3 p.m.",
+      "onset to be at 2:30 p.m. and its peak to be at 4 p.m.",
+      "onset to be at 4 p.m. and its peak to be at 6 p.m."
+    ],
+    "answer": 2,
+    "explanation": "Regular insulin, which is a short-acting insulin, has an onset of 15 to 30 minutes and a peak of 2 to 4 hours. Because the nurse gave the insulin at 2 p.m., expected onset is at 2:30 p.m. and its peak at 4 p.m."
+  },
+  {
+    "question": "The physician orders laboratory tests to confirm hyperthyroidism in a female client with classic signs and symptoms of this disorder. Which test result would confirm the diagnosis?",
+    "choices": [
+      "No increase in the thyroid-stimulating hormone (TSH) level after 30 minutes during the TSH stimulation test",
+      "A decreased TSH level",
+      "An increase in the TSH level after 30 minutes during the TSH stimulation test",
+      "Below-normal levels of serum triiodothyronine (T3) and serum thyroxine (T4) as detected by radioimmunoassay"
+    ],
+    "answer": 1,
+    "explanation": "In hyperthyroidism, excess circulating thyroid hormones suppress TSH secretion, leading to a decreased serum TSH level."
+  },
+  {
+    "question": "Rico with diabetes mellitus must learn how to self-administer insulin. The physician has prescribed 10 U of U-100 regular insulin and 35 U of U-100 isophane insulin suspension (NPH) to be taken before breakfast. When teaching the client how to select and rotate insulin injection sites, the nurse should provide which instruction?",
+    "choices": [
+      "“Inject insulin into healthy tissue with large blood vessels and nerves.”",
+      "“Rotate injection sites within the same anatomic region, not among different regions.”",
+      "“Administer insulin into areas of scar tissue or hypotrophy whenever possible.”",
+      "“Administer insulin into sites above muscles that you plan to exercise heavily later that day.”"
+    ],
+    "answer": 1,
+    "explanation": "Rotating injection sites within the same anatomical region helps maintain consistent insulin absorption."
+  },
+  {
+    "question": "Nurse Sarah expects to note an elevated serum glucose level in a client with hyperosmolar hyperglycemic nonketotic syndrome (HHNS). Which other laboratory finding should the nurse anticipate?",
+    "choices": [
+      "Elevated serum acetone level",
+      "Serum ketone bodies",
+      "Serum alkalosis",
+      "Below-normal serum potassium level"
+    ],
+    "answer": 3,
+    "explanation": "Profound osmotic diuresis in HHNS leads to significant loss of water and electrolytes, including potassium, resulting in a below-normal serum potassium level."
+  },
+  {
+    "question": "For a client with Graves’ disease, which nursing intervention promotes comfort?",
+    "choices": [
+      "Restricting intake of oral fluids",
+      "Placing extra blankets on the client’s bed",
+      "Limiting intake of high-carbohydrate foods",
+      "Maintaining room temperature in the low-normal range"
+    ],
+    "answer": 3,
+    "explanation": "Clients with Graves' disease experience heat intolerance due to an elevated metabolic rate, so maintaining a cool room temperature promotes comfort."
+  },
+  {
+    "question": "Patrick is treated in the emergency department for a Colles’ fracture sustained during a fall. What is a Colles’ fracture?",
+    "choices": [
+      "Fracture of the distal radius",
+      "Fracture of the olecranon",
+      "Fracture of the humerus",
+      "Fracture of the carpal scaphoid"
+    ],
+    "answer": 0,
+    "explanation": "A Colles' fracture is a fracture of the distal radius, typically sustained from falling on an outstretched hand."
+  },
+  {
+    "question": "Cleo is diagnosed with osteoporosis. Which electrolytes are involved in the development of this disorder?",
+    "choices": [
+      "Calcium and sodium",
+      "Calcium and phosphorous",
+      "Phosphorous and potassium",
+      "Potassium and sodium"
+    ],
+    "answer": 1,
+    "explanation": "Calcium and phosphorus are the primary minerals involved in bone metabolism and structure."
+  },
+  {
+    "question": "Johnny a firefighter was involved in extinguishing a house fire and is being treated to smoke inhalation. He develops severe hypoxia 48 hours after the incident, requiring intubation and mechanical ventilation. He most likely has developed which of the following conditions?",
+    "choices": [
+      "Adult respiratory distress syndrome (ARDS)",
+      "Atelectasis",
+      "Bronchitis",
+      "Pneumonia"
+    ],
+    "answer": 0,
+    "explanation": "Smoke inhalation injury can cause delayed lung parenchymal damage and acute inflammation, leading to ARDS."
+  },
+  {
+    "question": "A 67-year-old client develops acute shortness of breath and progressive hypoxia requiring right femur. The hypoxia was probably caused by which of the following conditions?",
+    "choices": [
+      "Asthma attack",
+      "Atelectasis",
+      "Bronchitis",
+      "Fat embolism"
+    ],
+    "answer": 3,
+    "explanation": "Long bone fractures (such as a femur fracture) release fat droplets into the bloodstream, which can lodge in pulmonary capillaries causing a fat embolism and acute hypoxia."
+  },
+  {
+    "question": "A client with shortness of breath has decreased to absent breath sounds on the right side, from the apex to the base. Which of the following conditions would best explain this?",
+    "choices": [
+      "Acute asthma",
+      "Chronic bronchitis",
+      "Pneumonia",
+      "Spontaneous pneumothorax"
+    ],
+    "answer": 3,
+    "explanation": "A spontaneous pneumothorax causes air accumulation in the pleural space, collapsing the underlying lung and leading to absent breath sounds throughout that lung field."
+  },
+  {
+    "question": "A 62-year-old male client was in a motor vehicle accident as an unrestrained driver. He’s now in the emergency department complaining of difficulty of breathing and chest pain. On auscultation of his lung field, no breath sounds are present in the upper lobe. This client may have which of the following conditions?",
+    "choices": [
+      "Bronchitis",
+      "Pneumonia",
+      "Pneumothorax",
+      "Tuberculosis (TB)"
+    ],
+    "answer": 2,
+    "explanation": "Trauma to the chest wall can puncture the pleural membrane, causing a pneumothorax and loss of breath sounds over the affected area."
+  },
+  {
+    "question": "If a client requires a pneumonectomy, what fills the area of the thoracic cavity?",
+    "choices": [
+      "The space remains filled with air only",
+      "The surgeon fills the space with a gel",
+      "Serous fluids fills the space and consolidates the region",
+      "The tissue from the other lung grows over to the other side"
+    ],
+    "answer": 2,
+    "explanation": "Following removal of an entire lung (pneumonectomy), serous fluid accumulates in the empty space and eventually consolidates into tissue."
+  },
+  {
+    "question": "Hemoptysis may be present in the client with a pulmonary embolism because of which of the following reasons?",
+    "choices": [
+      "Alveolar damage in the infracted area",
+      "Involvement of major blood vessels in the occluded area",
+      "Loss of lung parenchyma",
+      "Loss of lung tissue"
+    ],
+    "answer": 0,
+    "explanation": "A pulmonary embolism can cause pulmonary infarction, leading to necrosis and alveolar damage in the affected tissue, causing hemoptysis (coughing up blood)."
+  },
+  {
+    "question": "Aldo with a massive pulmonary embolism will have an arterial blood gas analysis performed to determine the extent of hypoxia. The acid-base disorder that may be present is?",
+    "choices": [
+      "Metabolic acidosis",
+      "Metabolic alkalosis",
+      "Respiratory acidosis",
+      "Respiratory alkalosis"
+    ],
+    "answer": 3,
+    "explanation": "A client with massive pulmonary embolism will have a large region and blow off large amount of carbon dioxide, which crosses the unaffected alveolar-capillary membrane more readily than does oxygen and results in respiratory alkalosis."
+  },
+  {
+    "question": "After a motor vehicle accident, Armand an 22-year-old client is admitted with a pneumothorax. The surgeon inserts a chest tube and attaches it to a chest drainage system. Bubbling soon appears in the water seal chamber. Which of the following is the most likely cause of the bubbling?",
+    "choices": [
+      "Air leak",
+      "Adequate suction",
+      "Inadequate suction",
+      "Kinked chest tube"
+    ],
+    "answer": 0,
+    "explanation": "Bubbling in the water seal chamber of a chest drainage system stems from an air leak. In pneumothorax an air leak can occur as air is pulled from the pleural space. Bubbling doesn’t normally occur with either adequate or inadequate suction or any preexisting bubbling in the water seal chamber."
+  },
+  {
+    "question": "Nurse Michelle calculates the IV flow rate for a postoperative client. The client receives 3,000 ml of Ringer’s lactate solution IV to run over 24 hours. The IV infusion set has a drop factor of 10 drops per milliliter. The nurse should regulate the client’s IV to deliver how many drops per minute?",
+    "choices": [
+      "18",
+      "21",
+      "35",
+      "40"
+    ],
+    "answer": 1,
+    "explanation": "3000 x 10 divided by 24 x 60."
+  },
+  {
+    "question": "Mickey, a 6-year-old child with a congenital heart disorder is admitted with congestive heart failure. Digoxin (lanoxin) 0.12 mg is ordered for the child. The bottle of Lanoxin contains .05 mg of Lanoxin in 1 ml of solution. What amount should the nurse administer to the child?",
+    "choices": [
+      "1.2 ml",
+      "2.4 ml",
+      "3.5 ml",
+      "4.2 ml"
+    ],
+    "answer": 1,
+    "explanation": ".05 mg/ 1 ml = .12mg/ x ml, .05x = .12, x = 2.4 ml."
+  },
+  {
+    "question": "Nurse Alexandra teaches a client about elastic stockings. Which of the following statements, if made by the client, indicates to the nurse that the teaching was successful?",
+    "choices": [
+      "“I will wear the stockings until the physician tells me to remove them.”",
+      "“I should wear the stockings even when I am sleep.”",
+      "“Every four hours I should remove the stockings for a half hour.”",
+      "“I should put on the stockings before getting out of bed in the morning.”"
+    ],
+    "answer": 3,
+    "explanation": "Promote venous return by applying external pressure on veins."
+  }
+  ],
+  "pnle-set1-part5": [
+    
+  ],
   
   "pnle-set2": [],
   "pnle-set3": [],

@@ -13,8 +13,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
-  margin-bottom: 20px;
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
   flex-wrap: wrap;
 }
 
@@ -27,25 +27,13 @@
 .flash-toolbar-right {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: var(--space-4);
 }
 
-.icon-btn {
-  width: 32px;
-  height: 32px;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--border);
-  background: var(--surface);
-  color: var(--text-mid);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: border-color 0.15s ease, color 0.15s ease;
-  flex-shrink: 0;
-}
-
-.icon-btn:hover { border-color: var(--pink-400); color: var(--pink-300); }
+/* Page-local icon-btn override — flashcards uses 32px, not the 40px global */
+.flash-toolbar .icon-btn,
+.flash-card-icons .icon-btn,
+.flash-learned-row .icon-btn { width: 32px; height: 32px; }
 
 .icon-btn.active,
 .bookmark-btn.active {
@@ -57,27 +45,29 @@
 .icon-btn.active svg,
 .bookmark-btn.active svg { fill: currentColor; }
 
-/* Shuffle toggle switch */
+/* Shuffle toggle switch (reuses switch-style pattern from global) */
 .shuffle-toggle {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 8px;
   cursor: pointer;
   font-size: 13.5px;
   color: var(--text-mid);
   user-select: none;
+  min-height: 36px;
 }
 
-.shuffle-toggle input { display: none; }
+.shuffle-toggle input { position: absolute; opacity: 0; width: 0; height: 0; }
 
 .shuffle-track {
+  position: relative;
   width: 36px;
   height: 20px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--bg-soft);
   border: 1px solid var(--border);
-  position: relative;
-  transition: background 0.2s ease, border-color 0.2s ease;
+  transition: background var(--dur-base) var(--ease-out),
+              border-color var(--dur-base) var(--ease-out);
   flex-shrink: 0;
 }
 
@@ -89,7 +79,8 @@
   height: 14px;
   border-radius: 50%;
   background: var(--text-low);
-  transition: transform 0.2s ease, background 0.2s ease;
+  transition: transform var(--dur-base) var(--ease-out),
+              background var(--dur-base) var(--ease-out);
 }
 
 .shuffle-toggle input:checked + .shuffle-track {
@@ -102,14 +93,18 @@
   background: var(--pink-400);
 }
 
+.shuffle-toggle input:focus-visible + .shuffle-track {
+  box-shadow: 0 0 0 3px rgba(236, 111, 160, 0.25);
+}
+
 /* ============================================
    Progress row: ring + fraction + mastery
    ============================================ */
 .flash-progress-row {
   display: flex;
   align-items: center;
-  gap: 16px;
-  margin-bottom: 22px;
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
 }
 
 .progress-ring-wrap {
@@ -138,7 +133,8 @@
   stroke-linecap: round;
   stroke-dasharray: 113.1; /* 2 * PI * 18 */
   stroke-dashoffset: 113.1;
-  transition: stroke-dashoffset 0.3s ease;
+  /* Smooth progress change. */
+  transition: stroke-dashoffset 0.3s var(--ease-out);
 }
 
 .ring-pct {
@@ -179,13 +175,14 @@
   height: 400px;
   perspective: 1200px;
   cursor: pointer;
+  position: relative;
 }
 
 .flash-inner {
   position: relative;
   width: 100%;
   height: 100%;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s var(--ease-in-out);
   transform-style: preserve-3d;
 }
 
@@ -204,15 +201,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 34px 40px;
+  padding: var(--space-7) var(--space-7);
   text-align: center;
+  background: var(--surface);
+  box-shadow: var(--elev-2);
 }
 
-.flash-front { background: var(--surface); }
-
 .flash-back {
-  background: var(--surface);
-  border-color: var(--pink-500);
+  border-color: rgba(236, 111, 160, 0.3);
   transform: rotateY(180deg);
   overflow-y: auto;
 }
@@ -225,6 +221,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: var(--space-3);
 }
 
 .flash-card-icons {
@@ -239,13 +236,14 @@
   font-weight: 600;
   letter-spacing: 0.04em;
   padding: 4px 10px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   border: 1px solid transparent;
+  text-transform: capitalize;
 }
 
-.difficulty-badge.Easy   { color: var(--mint);  background: rgba(94, 234, 212, 0.12); border-color: rgba(94, 234, 212, 0.3); }
-.difficulty-badge.Medium { color: var(--amber); background: rgba(245, 185, 91, 0.12); border-color: rgba(245, 185, 91, 0.3); }
-.difficulty-badge.Hard    { color: var(--red);   background: rgba(242, 100, 90, 0.12); border-color: rgba(242, 100, 90, 0.3); }
+.difficulty-badge.Easy   { color: var(--mint);   background: rgba(94, 234, 212, 0.12);  border-color: rgba(94, 234, 212, 0.3); }
+.difficulty-badge.Medium { color: var(--amber);  background: rgba(245, 185, 91, 0.12);  border-color: rgba(245, 185, 91, 0.3); }
+.difficulty-badge.Hard   { color: var(--danger); background: var(--danger-soft);          border-color: rgba(248, 113, 113, 0.3); }
 
 .flash-side-label {
   font-family: var(--font-mono);
@@ -253,7 +251,7 @@
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--text-low);
-  margin-bottom: 18px;
+  margin-bottom: var(--space-4);
 }
 
 .flash-back .flash-side-label { color: var(--pink-400); margin-bottom: 0; }
@@ -273,15 +271,16 @@
   font-size: 17px;
   line-height: 1.6;
   color: var(--mint);
-  margin-top: 16px;
+  margin-top: var(--space-4);
 }
 
 .flash-explanation {
-  margin-top: 18px;
-  padding-top: 16px;
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
   border-top: 1px solid var(--border);
   width: 100%;
   max-width: 420px;
+  text-align: left;
 }
 
 .flash-explanation .eyebrow { display: block; margin-bottom: 6px; }
@@ -304,6 +303,10 @@
 .flash-empty {
   color: var(--text-mid);
   text-align: center;
+  padding: var(--space-9) var(--space-5);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
 }
 
 /* ============================================
@@ -312,8 +315,9 @@
 .flash-actions {
   display: flex;
   justify-content: center;
-  gap: 12px;
-  margin-top: 24px;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+  flex-wrap: wrap;
 }
 
 .flash-actions .btn {
@@ -334,7 +338,7 @@
 .flash-learned-row {
   display: flex;
   justify-content: center;
-  margin-top: 12px;
+  margin-top: var(--space-3);
 }
 
 .learned-btn.active {
@@ -348,7 +352,7 @@
    ============================================ */
 .confidence-panel {
   display: none;
-  margin-top: 20px;
+  margin-top: var(--space-5);
   text-align: center;
 }
 
@@ -357,13 +361,14 @@
 .confidence-prompt {
   font-size: 13.5px;
   color: var(--text-mid);
-  margin: 0 0 12px;
+  margin: 0 0 var(--space-3);
 }
 
 .confidence-row {
   display: flex;
   justify-content: center;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .confidence-btn {
@@ -373,16 +378,19 @@
   gap: 4px;
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-md);
   padding: 10px 16px;
   font-size: 20px;
   cursor: pointer;
-  transition: border-color 0.15s ease, transform 0.15s ease;
+  transition: border-color var(--dur-base) var(--ease-out),
+              transform var(--dur-base) var(--ease-out);
+  min-height: 64px;
+  min-width: 76px;
 }
 
 .confidence-btn span {
   font-family: var(--font-mono);
-  font-size: 10.5px;
+  font-size: 11px;
   color: var(--text-low);
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -390,12 +398,12 @@
 
 .confidence-btn:hover {
   border-color: var(--pink-400);
-  transform: translateY(-2px);
+  transform: translateY(-1px);
 }
 
 .keyboard-hint {
   text-align: center;
-  margin-top: 18px;
+  margin-top: var(--space-4);
   font-family: var(--font-mono);
   font-size: 11px;
   color: var(--text-low);
@@ -406,15 +414,15 @@
    ============================================ */
 .flash-complete {
   text-align: center;
-  padding: 10px 0 20px;
+  padding: 10px 0 var(--space-5);
 }
 
 .flash-complete .streak-banner {
   background: var(--surface);
-  border: 1px solid var(--pink-500);
+  border: 1px solid rgba(236, 111, 160, 0.3);
   border-radius: var(--radius-lg);
-  padding: 18px;
-  margin-bottom: 24px;
+  padding: var(--space-4);
+  margin-bottom: var(--space-6);
   font-family: var(--font-display);
   font-size: 17px;
 }
@@ -423,21 +431,23 @@
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 28px;
-  margin: 0 0 20px;
+  margin: 0 0 var(--space-5);
+  letter-spacing: -0.01em;
 }
 
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
-  margin: 0 0 28px;
+  gap: var(--space-3);
+  margin: 0 0 var(--space-7);
 }
 
 .stats-grid .stat {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  padding: 16px 10px;
+  padding: var(--space-4) 10px;
+  box-shadow: var(--elev-1);
 }
 
 .stats-grid .stat .num {
@@ -458,7 +468,7 @@
 .flash-complete .quiz-footer {
   display: flex;
   justify-content: center;
-  gap: 12px;
+  gap: var(--space-3);
 }
 
 /* Confetti */
@@ -479,148 +489,49 @@
   }
 }
 
+/* ============================================
+   Responsive
+   ============================================ */
 @media (max-width: 600px) {
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .flash-toolbar { flex-direction: column; align-items: flex-start; }
-
-  .flash-shell {
-    max-width: 100%;
-  }
-
-  .flash-card {
-    height: 320px;
-  }
-
-  .flash-front .flash-text {
-    font-size: 17px;
-  }
-
-  .flash-back .flash-text {
-    font-size: 14px;
-  }
-
-  .flash-progress-row {
-    gap: 12px;
-    margin-bottom: 16px;
-  }
-
-  .shuffle-toggle {
-    font-size: 12px;
-  }
-
-  .icon-btn {
-    width: 44px;
-    height: 44px;
-  }
-
-  .bookmark-btn {
-    width: 44px;
-    height: 44px;
-  }
-
-  .flash-complete h1 {
-    font-size: 22px;
-  }
-
-  .stats-grid {
-    gap: 10px;
-  }
-
-  .stats-grid .stat .num {
-    font-size: 20px;
-  }
-
-  .stats-grid .stat .label {
-    font-size: 10px;
-  }
+  .flash-shell { max-width: 100%; }
+  .flash-card { height: 320px; }
+  .flash-front .flash-text { font-size: 17px; }
+  .flash-back .flash-text { font-size: 14px; }
+  .flash-progress-row { gap: var(--space-3); margin-bottom: var(--space-4); }
+  .shuffle-toggle { font-size: 12px; }
+  .flash-toolbar .icon-btn,
+  .flash-card-icons .icon-btn,
+  .flash-learned-row .icon-btn { width: 44px; height: 44px; }
+  .flash-complete h1 { font-size: 22px; }
+  .stats-grid { gap: 10px; }
+  .stats-grid .stat .num { font-size: 20px; }
+  .stats-grid .stat .label { font-size: 10px; }
 }
 
 @media (max-width: 480px) {
-  .flash-card {
-    height: 280px;
-  }
-
-  .flash-front .flash-text {
-    font-size: 15px;
-  }
-
-  .flash-back .flash-text {
-    font-size: 13px;
-  }
-
-  .flash-toolbar {
-    gap: 8px;
-  }
-
-  .flash-toolbar-right {
-    gap: 8px;
-  }
-
-  .subject-picker select {
-    font-size: 12px;
-    padding: 8px 28px 8px 10px;
-  }
-
-  .progress-ring-wrap {
-    width: 36px;
-    height: 36px;
-  }
-
-  .progress-ring {
-    width: 36px;
-    height: 36px;
-  }
-
-  .ring-pct {
-    font-size: 9px;
-  }
-
-  .quiz-count {
-    font-size: 12px;
-  }
-
-  .mastery-count {
-    font-size: 10px;
-  }
-
-  .flash-complete h1 {
-    font-size: 20px;
-  }
-
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-  }
-
-  .stats-grid .stat {
-    padding: 12px 8px;
-  }
-
-  .stats-grid .stat .num {
-    font-size: 18px;
-  }
+  .flash-card { height: 280px; }
+  .flash-front .flash-text { font-size: 15px; }
+  .flash-back .flash-text { font-size: 13px; }
+  .flash-toolbar { gap: 8px; }
+  .flash-toolbar-right { gap: 8px; }
+  .subject-picker select { font-size: 12px; padding: 8px 28px 8px 10px; }
+  .progress-ring-wrap,
+  .progress-ring { width: 36px; height: 36px; }
+  .ring-pct { font-size: 9px; }
+  .quiz-count { font-size: 12px; }
+  .mastery-count { font-size: 10px; }
+  .flash-complete h1 { font-size: 20px; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .stats-grid .stat { padding: 12px 8px; }
+  .stats-grid .stat .num { font-size: 18px; }
 }
 
 @media (max-width: 360px) {
-  .flash-card {
-    height: 240px;
-  }
-
-  .flash-front .flash-text {
-    font-size: 14px;
-  }
-
-  .flash-back .flash-text {
-    font-size: 12px;
-  }
-
-  .icon-btn {
-    width: 40px;
-    height: 40px;
-  }
-
-  .bookmark-btn {
-    width: 40px;
-    height: 40px;
-  }
+  .flash-card { height: 240px; }
+  .flash-front .flash-text { font-size: 14px; }
+  .flash-back .flash-text { font-size: 12px; }
+  .flash-toolbar .icon-btn,
+  .flash-card-icons .icon-btn { width: 40px; height: 40px; }
 }

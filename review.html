@@ -5,43 +5,54 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" href="/favicon.png">
 <title>Practice Mistakes | NursePrep</title>
+<meta name="description" content="Revisit the questions you got wrong and lock in the rationale.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./css/review.css">
 </head>
 <body class="dash-body">
 
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 <!-- Sidebar injected by js/sidebar.js -->
 
-<main class="dash-main dash-main-center">
+<main id="main-content" class="dash-main dash-main-center">
   <div class="review-shell" id="reviewShell">
 
-    <div class="review-header">
+    <header class="review-header">
       <div class="subject-picker">
-        <span class="eyebrow">Subject</span>
-        <select id="subjectSelect">
+        <label for="subjectSelect" class="eyebrow">Subject</label>
+        <select id="subjectSelect" aria-label="Filter mistakes by subject">
           <option value="all">All Subjects</option>
         </select>
       </div>
-      <span class="review-count" id="reviewCount">0 mistakes</span>
-    </div>
+      <span class="review-count" id="reviewCount" aria-live="polite">0 mistakes</span>
+    </header>
 
-    <div class="review-progress-track">
+    <div class="review-progress-track" aria-hidden="true">
       <span id="reviewProgressFill" style="width:0%"></span>
     </div>
 
-    <div id="reviewContent">
-      <div class="review-empty">
-        <div class="review-empty-icon">&#10003;</div>
-        <h2>No mistakes yet</h2>
-        <p>Complete a quiz and any wrong answers will appear here for review.</p>
-        <a href="subjects.html" class="btn btn-primary">Take a Quiz</a>
+    <div id="reviewContent" aria-live="polite" aria-busy="true">
+      <!-- Loading skeleton shown immediately so the page never flashes empty. -->
+      <div class="review-card review-state" aria-busy="true">
+        <span class="eyebrow">Loading</span>
+        <div class="review-loading-row">
+          <div class="review-skeleton-bar"></div>
+          <div class="review-skeleton-bar short"></div>
+        </div>
+        <div class="review-loading-skeletons">
+          <div class="review-skeleton-choice"></div>
+          <div class="review-skeleton-choice"></div>
+          <div class="review-skeleton-choice"></div>
+          <div class="review-skeleton-choice"></div>
+        </div>
+        <p class="review-state-hint">Fetching the questions you got wrong…</p>
       </div>
     </div>
 
   </div>
 </main>
-
 
 
 <script type="module" src="./js/review.js"></script>
