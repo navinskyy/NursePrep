@@ -76,9 +76,9 @@
         {
           "quizId": "pnle-set3",
           "title": "PNLE Set 3",
-          "itemCount": 150,
+          "itemCount": 200,
           "difficulty": "Medium",
-          "description": "Focused 150-item PNLE practice set.",
+          "description": "Focused 200-item PNLE practice set.",
           "categoryId": "pnleSets",
           "subcategoryId": "set3",
           "order": 7,
