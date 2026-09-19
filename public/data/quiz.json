@@ -16670,7 +16670,2207 @@
   }
   ],
   "pnle-set3": [
-    
+    {
+    "question": "Which element in the circular chain of infection can be eliminated by preserving skin integrity?",
+    "choices": [
+      "Host",
+      "Reservoir",
+      "Mode of transmission",
+      "Portal of entry"
+    ],
+    "answer": 3,
+    "explanation": "In the circular chain of infection, pathogens must be able to leave their reservoir and be transmitted to a susceptible host through a portal of entry, such as broken skin."
+  },
+  {
+    "question": "Which of the following will probably result in a break in sterile technique for respiratory isolation?",
+    "choices": [
+      "Opening the patient’s window to the outside environment",
+      "Turning on the patient’s room ventilator",
+      "Opening the door of the patient’s room leading into the hospital corridor",
+      "Failing to wear gloves when administering a bed bath"
+    ],
+    "answer": 2,
+    "explanation": "Respiratory isolation, like strict isolation, requires that the door to the door patient’s room remain closed. However, the patient’s room should be well ventilated, so opening the window or turning on the ventricular is desirable. The nurse does not need to wear gloves for respiratory isolation, but good hand washing is important for all types of isolation."
+  },
+  {
+    "question": "Which of the following patients is at greater risk for contracting an infection?",
+    "choices": [
+      "A patient with leukopenia",
+      "A patient receiving broad-spectrum antibiotics",
+      "A postoperative patient who has undergone orthopedic surgery",
+      "A newly diagnosed diabetic patient"
+    ],
+    "answer": 0,
+    "explanation": "Leukopenia is a decreased number of leukocytes (white blood cells), which are important in resisting infection. None of the other situations would put the patient at risk for contracting an infection; taking broadspectrum antibiotics might actually reduce the infection risk."
+  },
+  {
+    "question": "Effective hand washing requires the use of:",
+    "choices": [
+      "Soap or detergent to promote emulsification",
+      "Hot water to destroy bacteria",
+      "A disinfectant to increase surface tension",
+      "All of the above"
+    ],
+    "answer": 0,
+    "explanation": "Soaps and detergents are used to help remove bacteria because of their ability to lower the surface tension of water and act as emulsifying agents. Hot water may lead to skin irritation or burns."
+  },
+  {
+    "question": "After routine patient contact, hand washing should last at least:",
+    "choices": [
+      "30 seconds",
+      "1 minute",
+      "2 minute",
+      "3 minutes"
+    ],
+    "answer": 0,
+    "explanation": "Depending on the degree of exposure to pathogens, hand washing may last from 10 seconds to 4 minutes. After routine patient contact, hand washing for 30 seconds effectively minimizes the risk of pathogen transmission."
+  },
+  {
+    "question": "Which of the following procedures always requires surgical asepsis?",
+    "choices": [
+      "Vaginal instillation of conjugated estrogen",
+      "Urinary catheterization",
+      "Nasogastric tube insertion",
+      "Colostomy irrigation"
+    ],
+    "answer": 1,
+    "explanation": "The urinary system is normally free of microorganisms except at the urinary meatus. Any procedure that involves entering this system must use surgically aseptic measures to maintain a bacteria-free state."
+  },
+  {
+    "question": "Sterile technique is used whenever:",
+    "choices": [
+      "Strict isolation is required",
+      "Terminal disinfection is performed",
+      "Invasive procedures are performed",
+      "Protective isolation is necessary"
+    ],
+    "answer": 2,
+    "explanation": "All invasive procedures, including surgery, catheter insertion, and administration of parenteral therapy, require sterile technique to maintain a sterile environment. All equipment must be sterile, and the nurse and the physician must wear sterile gloves and maintain surgical asepsis. In the operating room, the nurse and physician are required to wear sterile gowns, gloves, masks, hair covers, and shoe covers for all invasive procedures. Strict isolation requires the use of clean gloves, masks, gowns and equipment to prevent the transmission of highly communicable diseases by contact or by airborne routes. Terminal disinfection is the disinfection of all contaminated supplies and equipment after a patient has been discharged to prepare them for reuse by another patient. The purpose of protective (reverse) isolation is to prevent a person with seriously impaired resistance from coming into contact who potentially pathogenic organisms."
+  },
+  {
+    "question": "Which of the following constitutes a break in sterile technique while preparing a sterile field for a dressing change?",
+    "choices": [
+      "Using sterile forceps, rather than sterile gloves, to handle a sterile item",
+      "Touching the outside wrapper of sterilized material without sterile gloves",
+      "Placing a sterile object on the edge of the sterile field",
+      "Pouring out a small amount of solution (15 to 30 ml) before pouring the solution into a sterile container"
+    ],
+    "answer": 2,
+    "explanation": "The edges of a sterile field are considered contaminated. When sterile items are allowed to come in contact with the edges of the field, the sterile items also become contaminated."
+  },
+  {
+    "question": "A natural body defense that plays an active role in preventing infection is:",
+    "choices": [
+      "Yawning",
+      "Body hair",
+      "Hiccupping",
+      "Rapid eye movements"
+    ],
+    "answer": 1,
+    "explanation": "Hair on or within body areas, such as the nose, traps and holds particles that contain microorganisms. Yawning and hiccupping do not prevent microorganisms from entering or leaving the body. Rapid eye movement marks the stage of sleep during which dreaming occurs."
+  },
+  {
+    "question": "All of the following statement are true about donning sterile gloves except:",
+    "choices": [
+      "The first glove should be picked up by grasping the inside of the cuff.",
+      "The second glove should be picked up by inserting the gloved fingers under the cuff outside the glove.",
+      "The gloves should be adjusted by sliding the gloved fingers under the sterile cuff and pulling the glove over the wrist",
+      "The inside of the glove is considered sterile"
+    ],
+    "answer": 3,
+    "explanation": "The inside of the glove is always considered to be clean, but not sterile."
+  },
+  {
+    "question": "When removing a contaminated gown, the nurse should be careful that the first thing she touches is the:",
+    "choices": [
+      "Waist tie and neck tie at the back of the gown",
+      "Waist tie in front of the gown",
+      "Cuffs of the gown",
+      "Inside of the gown"
+    ],
+    "answer": 0,
+    "explanation": "The back of the gown is considered clean, the front is contaminated. So, after removing gloves and washing hands, the nurse should untie the back of the gown; slowly move backward away from the gown, holding the inside of the gown and keeping the edges off the floor; turn and fold the gown inside out; discard it in a contaminated linen container; then wash her hands again."
+  },
+  {
+    "question": "Which of the following nursing interventions is considered the most effective form or universal precautions?",
+    "choices": [
+      "Cap all used needles before removing them from their syringes",
+      "Discard all used uncapped needles and syringes in an impenetrable protective container",
+      "Wear gloves when administering IM injections",
+      "Follow enteric precautions"
+    ],
+    "answer": 1,
+    "explanation": "According to the Centers for Disease Control (CDC), blood-to-blood contact occurs most commonly when a health care worker attempts to cap a used needle. Therefore, used needles should never be recapped; instead they should be inserted in a specially designed puncture resistant, labeled container. Wearing gloves is not always necessary when administering an I.M. injection. Enteric precautions prevent the transfer of pathogens via feces."
+  },
+  {
+    "question": "All of the following measures are recommended to prevent pressure ulcers except:",
+    "choices": [
+      "Massaging the reddened are with lotion",
+      "Using a water or air mattress",
+      "Adhering to a schedule for positioning and turning",
+      "Providing meticulous skin care"
+    ],
+    "answer": 0,
+    "explanation": "Nurses and other health care professionals previously believed that massaging a reddened area with lotion would promote venous return and reduce edema to the area. However, research has shown that massage only increases the likelihood of cellular ischemia and necrosis to the area."
+  },
+  {
+    "question": "Which of the following blood tests should be performed before a blood transfusion?",
+    "choices": [
+      "Prothrombin and coagulation time",
+      "Blood typing and cross-matching",
+      "Bleeding and clotting time",
+      "Complete blood count (CBC) and electrolyte levels."
+    ],
+    "answer": 1,
+    "explanation": "Before a blood transfusion is performed, the blood of the donor and recipient must be checked for compatibility. This is done by blood typing (a test that determines a person’s blood type) and cross-matching (a procedure that determines the compatibility of the donor’s and recipient’s blood after the blood types has been matched). If the blood specimens are incompatible, hemolysis and antigen-antibody reactions will occur."
+  },
+  {
+    "question": "The primary purpose of a platelet count is to evaluate the:",
+    "choices": [
+      "Potential for clot formation",
+      "Potential for bleeding",
+      "Presence of an antigen-antibody response",
+      "Presence of cardiac enzymes"
+    ],
+    "answer": 0,
+    "explanation": "Platelets are disk-shaped cells that are essential for blood coagulation. A platelet count determines the number of thrombocytes in blood available for promoting hemostasis and assisting with blood coagulation after injury. It also is used to evaluate the patient’s potential for bleeding; however, this is not its primary purpose. The normal count ranges from 150,000 to 350,000/mm3. A count of 100,000/mm3 or less indicates a potential for bleeding; count of less than 20,000/mm3 is associated with spontaneous bleeding."
+  },
+  {
+    "question": "Which of the following white blood cell (WBC) counts clearly indicates leukocytosis?",
+    "choices": [
+      "4,500/mm³",
+      "7,000/mm³",
+      "10,000/mm³",
+      "25,000/mm³"
+    ],
+    "answer": 3,
+    "explanation": "Leukocytosis is any transient increase in the number of white blood cells (leukocytes) in the blood. Normal WBC counts range from 5,000 to 100,000/mm3. Thus, a count of 25,000/mm3 indicates leukocytosis."
+  },
+  {
+    "question": "After 5 days of diuretic therapy with 20mg of furosemide (Lasix) daily, a patient begins to exhibit fatigue, muscle cramping and muscle weakness. These symptoms probably indicate that the patient is experiencing:",
+    "choices": [
+      "Hypokalemia",
+      "Hyperkalemia",
+      "Anorexia",
+      "Dysphagia"
+    ],
+    "answer": 0,
+    "explanation": "Fatigue, muscle cramping, and muscle weaknesses are symptoms of hypokalemia (an inadequate potassium level), which is a potential side effect of diuretic therapy. The physician usually orders supplemental potassium to prevent hypokalemia in patients receiving diuretics. Anorexia is another symptom of hypokalemia. Dysphagia means difficulty swallowing."
+  },
+  {
+    "question": "Which of the following statements about chest X-ray is false?",
+    "choices": [
+      "No contradictions exist for this test",
+      "Before the procedure, the patient should remove all jewelry, metallic objects, and buttons above the waist",
+      "A signed consent is not required",
+      "Eating, drinking, and medications are allowed before this test"
+    ],
+    "answer": 0,
+    "explanation": "Pregnancy or suspected pregnancy is the only contraindication for a chest X-ray. However, if a chest X-ray is necessary, the patient can wear a lead apron to protect the pelvic region from radiation. Jewelry, metallic objects, and buttons would interfere with the X-ray and thus should not be worn above the waist. A signed consent is not required because a chest X-ray is not an invasive examination. Eating, drinking and medications are allowed because the X-ray is of the chest, not the abdominal region."
+  },
+  {
+    "question": "The most appropriate time for the nurse to obtain a sputum specimen for culture is:",
+    "choices": [
+      "Early in the morning",
+      "After the patient eats a light breakfast",
+      "After aerosol therapy",
+      "After chest physiotherapy"
+    ],
+    "answer": 0,
+    "explanation": "Obtaining a sputum specimen early in this morning ensures an adequate supply of bacteria for culturing and decreases the risk of contamination from food or medication."
+  },
+  {
+    "question": "A patient with no known allergies is to receive penicillin every 6 hours. When administering the medication, the nurse observes a fine rash on the patient’s skin. The most appropriate nursing action would be to:",
+    "choices": [
+      "Withhold the moderation and notify the physician",
+      "Administer the medication and notify the physician",
+      "Administer the medication with an antihistamine",
+      "Apply corn starch soaks to the rash"
+    ],
+    "answer": 0,
+    "explanation": "Initial sensitivity to penicillin is commonly manifested by a skin rash, even in individuals who have not been allergic to it previously. Because of the danger of anaphylactic shock, he nurse should withhold the drug and notify the physician, who may choose to substitute another drug. Administering an antihistamine is a dependent nursing intervention that requires a written physician’s order. Although applying corn starch to the rash may relieve discomfort, it is not the nurse’s top priority in such a potentially life-threatening situation."
+  },
+  {
+    "question": "All of the following nursing interventions are correct when using the Ztrack method of drug injection except:",
+    "choices": [
+      "Prepare the injection site with alcohol",
+      "Use a needle that’s a least 1” long",
+      "Aspirate for blood before injection",
+      "Rub the site vigorously after the injection to promote absorption"
+    ],
+    "answer": 3,
+    "explanation": "The Z-track method is an I.M. injection technique in which the patient’s skin is pulled in such a way that the needle track is sealed off after the injection. This procedure seals medication deep into the muscle, thereby minimizing skin staining and irritation. Rubbing the injection site is contraindicated because it may cause the medication to extravasate into the skin."
+  },
+  {
+    "question": "The correct method for determining the vastus lateralis site for I.M. injection is to:",
+    "choices": [
+      "Locate the upper aspect of the upper outer quadrant of the buttock about 5 to 8 cm below the iliac crest",
+      "Palpate the lower edge of the acromion process and the midpoint lateral aspect of the arm",
+      "Palpate a 1” circular area anterior to the umbilicus",
+      "Divide the area between the greater femoral trochanter and the lateral femoral condyle into thirds, and select the middle third on the anterior of the thigh"
+    ],
+    "answer": 3,
+    "explanation": "The vastus lateralis, a long, thick muscle that extends the full length of the thigh, is viewed by many clinicians as the site of choice for I.M. injections because it has relatively few major nerves and blood vessels. The middle third of the muscle is recommended as the injection site. The patient can be in a supine or sitting position for an injection into this site."
+  },
+  {
+    "question": "The mid-deltoid injection site is seldom used for I.M. injections because it:",
+    "choices": [
+      "Can accommodate only 1 ml or less of medication",
+      "Bruises too easily",
+      "Can be used only when the patient is lying down",
+      "Does not readily parenteral medication"
+    ],
+    "answer": 0,
+    "explanation": "The mid-deltoid injection site can accommodate only 1 ml or less of medication because of its size and location (on the deltoid muscle of the arm, close to the brachial artery and radial nerve)."
+  },
+  {
+    "question": "The appropriate needle size for insulin injection is:",
+    "choices": [
+      "18G, 1 ½” long",
+      "22G, 1” long",
+      "22G, 1 ½” long",
+      "25G, 5/8” long"
+    ],
+    "answer": 3,
+    "explanation": "A 25G, 5/8” needle is the recommended size for insulin injection because insulin is administered by the subcutaneous route. An 18G, 1 ½” needle is usually used for I.M. injections in children, typically in the vastus lateralis. A 22G, 1 ½” needle is usually used for adult I.M. injections, which are typically administered in the vastus lateralis or ventrogluteal site."
+  },
+  {
+    "question": "The appropriate needle gauge for intradermal injection is:",
+    "choices": [
+      "20G",
+      "22G",
+      "25G",
+      "26G"
+    ],
+    "answer": 3,
+    "explanation": "Because an intradermal injection does not penetrate deeply into the skin, a small-bore 25G needle is recommended. This type of injection is used primarily to administer antigens to evaluate reactions for allergy or sensitivity studies. A 20G needle is usually used for I.M. injections of oilbased medications; a 22G needle for I.M. injections; and a 25G needle, for I.M. injections; and a 25G needle, for subcutaneous insulin injections."
+  },
+  {
+    "question": "Parenteral penicillin can be administered as an:",
+    "choices": [
+      "IM injection or an IV solution",
+      "IV or an intradermal injection",
+      "Intradermal or subcutaneous injection",
+      "IM or a subcutaneous injection"
+    ],
+    "answer": 0,
+    "explanation": "Parenteral penicillin can be administered I.M. or added to a solution and given I.V. It cannot be administered subcutaneously or intradermally."
+  },
+  {
+    "question": "The physician orders gr 10 of aspirin for a patient. The equivalent dose in milligrams is:",
+    "choices": [
+      "0.6 mg",
+      "10 mg",
+      "60 mg",
+      "600 mg"
+    ],
+    "answer": 3,
+    "explanation": "gr 10 x 60mg/gr 1 = 600 mg"
+  },
+  {
+    "question": "The physician orders an IV solution of dextrose 5% in water at 100ml/hour. What would the flow rate be if the drop factor is 15 gtt = 1 ml?",
+    "choices": [
+      "5 gtt/minute",
+      "13 gtt/minute",
+      "25 gtt/minute",
+      "50 gtt/minute"
+    ],
+    "answer": 2,
+    "explanation": "100ml/60 min X 15 gtt/ 1 ml = 25 gtt/minute"
+  },
+  {
+    "question": "Which of the following is a sign or symptom of a hemolytic reaction to blood transfusion?",
+    "choices": [
+      "Hemoglobinuria",
+      "Chest pain",
+      "Urticaria",
+      "Distended neck veins"
+    ],
+    "answer": 0,
+    "explanation": "Hemoglobinuria, the abnormal presence of hemoglobin in the urine, indicates a hemolytic reaction (incompatibility of the donor’s and recipient’s blood). In this reaction, antibodies in the recipient’s plasma combine rapidly with donor RBC’s; the cells are hemolyzed in either circulatory or reticuloendothelial system. Hemolysis occurs more rapidly in ABO incompatibilities than in Rh incompatibilities. Chest pain and urticaria may be symptoms of impending anaphylaxis. Distended neck veins are an indication of hypervolemia."
+  },
+  {
+    "question": "Which of the following conditions may require fluid restriction?",
+    "choices": [
+      "Fever",
+      "Chronic Obstructive Pulmonary Disease",
+      "Renal Failure",
+      "Dehydration"
+    ],
+    "answer": 2,
+    "explanation": "In real failure, the kidney loses their ability to effectively eliminate wastes and fluids. Because of this, limiting the patient’s intake of oral and I.V. fluids may be necessary. Fever, chronic obstructive pulmonary disease, and dehydration are conditions for which fluids should be encouraged."
+  },
+  {
+    "question": "All of the following are common signs and symptoms of phlebitis except:",
+    "choices": [
+      "Pain or discomfort at the IV insertion site",
+      "Edema and warmth at the IV insertion site",
+      "A red streak exiting the IV insertion site",
+      "Frank bleeding at the insertion site"
+    ],
+    "answer": 3,
+    "explanation": "Phlebitis, the inflammation of a vein, can be caused by chemical irritants (I.V. solutions or medications), mechanical irritants (the needle or catheter used during venipuncture or cannulation), or a localized allergic reaction to the needle or catheter. Signs and symptoms of phlebitis include pain or discomfort, edema and heat at the I.V. insertion site, and a red streak going up the arm or leg from the I.V. insertion site."
+  },
+  {
+    "question": "The best way of determining whether a patient has learned to instill ear medication properly is for the nurse to:",
+    "choices": [
+      "Ask the patient if he/she has used ear drops before",
+      "Have the patient repeat the nurse’s instructions using her own words",
+      "Demonstrate the procedure to the patient and encourage to ask questions",
+      "Ask the patient to demonstrate the procedure"
+    ],
+    "answer": 3,
+    "explanation": "Return demonstration provides the most certain evidence for evaluating the effectiveness of patient teaching."
+  },
+  {
+    "question": "Which of the following types of medications can be administered via gastrostomy tube?",
+    "choices": [
+      "Any oral medications",
+      "Capsules whole contents are dissolve in water",
+      "Enteric-coated tablets that are thoroughly dissolved in water",
+      "Most tablets designed for oral use, except for extended-duration compounds"
+    ],
+    "answer": 3,
+    "explanation": "Capsules, enteric-coated tablets, and most extended duration or sustained release products should not be dissolved for use in a gastrostomy tube. They are pharmaceutically manufactured in these forms for valid reasons, and altering them destroys their purpose. The nurse should seek an alternate physician’s order when an ordered medication is inappropriate for delivery by tube."
+  },
+  {
+    "question": "A patient who develops hives after receiving an antibiotic is exhibiting drug:",
+    "choices": [
+      "Tolerance",
+      "Idiosyncrasy",
+      "Synergism",
+      "Allergy"
+    ],
+    "answer": 3,
+    "explanation": "A drug-allergy is an adverse reaction resulting from an immunologic response following a previous sensitizing exposure to the drug. The reaction can range from a rash or hives to anaphylactic shock. Tolerance to a drug means that the patient experiences a decreasing physiologic response to repeated administration of the drug in the same dosage. Idiosyncrasy is an individual’s unique hypersensitivity to a drug, food, or other substance; it appears to be genetically determined. Synergism, is a drug interaction in which the sum of the drug’s combined effects is greater than that of their separate effects."
+  },
+  {
+    "question": "A patient has returned to his room after femoral arteriography. All of the following are appropriate nursing interventions except:",
+    "choices": [
+      "Assess femoral, popliteal, and pedal pulses every 15 minutes for 2 hours",
+      "Check the pressure dressing for sanguineous drainage",
+      "Assess a vital signs every 15 minutes for 2 hours",
+      "Order a hemoglobin and hematocrit count 1 hour after the arteriography"
+    ],
+    "answer": 3,
+    "explanation": "A hemoglobin and hematocrit count would be ordered by the physician if bleeding were suspected. The other answers are appropriate nursing interventions for a patient who has undergone femoral arteriography."
+  },
+  {
+    "question": "The nurse explains to a patient that a cough:",
+    "choices": [
+      "Is a protective response to clear the respiratory tract of irritants",
+      "Is primarily a voluntary action",
+      "Is induced by the administration of an antitussive drug",
+      "Can be inhibited by “splinting” the abdomen"
+    ],
+    "answer": 0,
+    "explanation": "Coughing, a protective response that clears the respiratory tract of irritants, usually is involuntary; however it can be voluntary, as when a patient is taught to perform coughing exercises. An antitussive drug inhibits coughing. Splinting the abdomen supports the abdominal muscles when a patient coughs."
+  },
+  {
+    "question": "An infected patient has chills and begins shivering. The best nursing intervention is to:",
+    "choices": [
+      "Apply iced alcohol sponges",
+      "Provide increased cool liquids",
+      "Provide additional bedclothes",
+      "Provide increased ventilation"
+    ],
+    "answer": 2,
+    "explanation": "In an infected patient, shivering results from the body’s attempt to increase heat production and the production of neutrophils and phagocytotic action through increased skeletal muscle tension and contractions. Initial vasoconstriction may cause skin to feel cold to the touch. Applying additional bed clothes helps to equalize the body temperature and stop the chills. Attempts to cool the body result in further shivering, increased metabloism, and thus increased heat production."
+  },
+  {
+    "question": "A clinical nurse specialist is a nurse who has:",
+    "choices": [
+      "Been certified by the National League for Nursing",
+      "Received credentials from the Philippine Nurses’ Association",
+      "Graduated from an associate degree program and is a registered professional nurse",
+      "Completed a master’s degree in the prescribed clinical area and is a registered professional nurse."
+    ],
+    "answer": 3,
+    "explanation": "A clinical nurse specialist must have completed a master’s degree in a clinical specialty and be a registered professional nurse. The National League of Nursing accredits educational programs in nursing and provides a testing service to evaluate student nursing competence but it does not certify nurses. The American Nurses Association identifies requirements for certification and offers examinations for certification in many areas of nursing., such as medical surgical nursing. These certification (credentialing) demonstrates that the nurse has the knowledge and the ability to provide high quality nursing care in the area of her certification. A graduate of an associate degree program is not a clinical nurse specialist: however, she is prepared to provide bed side nursing with a high degree of knowledge and skill. She must successfully complete the licensing examination to become a registered professional nurse."
+  },
+  {
+    "question": "The purpose of increasing urine acidity through dietary means is to:",
+    "choices": [
+      "Decrease burning sensations",
+      "Change the urine’s color",
+      "Change the urine’s concentration",
+      "Inhibit the growth of microorganisms"
+    ],
+    "answer": 3,
+    "explanation": "Microorganisms usually do not grow in an acidic environment."
+  },
+  {
+    "question": "Clay colored stools indicate:",
+    "choices": [
+      "Upper GI bleeding",
+      "Impending constipation",
+      "An effect of medication",
+      "Bile obstruction"
+    ],
+    "answer": 3,
+    "explanation": "Bile colors the stool brown. Any inflammation or obstruction that impairs bile flow will affect the stool pigment, yielding light, clay-colored stool. Upper GI bleeding results in black or tarry stool. Constipation is characterized by small, hard masses. Many medications and foods will discolor stool – for example, drugs containing iron turn stool black.; beets turn stool red."
+  },
+  {
+    "question": "In which step of the nursing process would the nurse ask a patient if the medication she administered relieved his pain?",
+    "choices": [
+      "Assessment",
+      "Analysis",
+      "Planning",
+      "Evaluation"
+    ],
+    "answer": 3,
+    "explanation": "In the evaluation step of the nursing process, the nurse must decide whether the patient has achieved the expected outcome that was identified in the planning phase."
+  },
+  {
+    "question": "All of the following are good sources of vitamin A except:",
+    "choices": [
+      "White potatoes",
+      "Carrots",
+      "Apricots",
+      "Egg yolks"
+    ],
+    "answer": 0,
+    "explanation": "The main sources of vitamin A are yellow and green vegetables (such as carrots, sweet potatoes, squash, spinach, collard greens, broccoli, and cabbage) and yellow fruits (such as apricots, and cantaloupe). Animal sources include liver, kidneys, cream, butter, and egg yolks."
+  },
+  {
+    "question": "Which of the following is a primary nursing intervention necessary for all patients with a Foley Catheter in place?",
+    "choices": [
+      "Maintain the drainage tubing and collection bag level with the patient’s bladder",
+      "Irrigate the patient with 1% Neosporin solution three times a daily",
+      "Clamp the catheter for 1 hour every 4 hours to maintain the bladder’s elasticity",
+      "Maintain the drainage tubing and collection bag below bladder level to facilitate drainage by gravity"
+    ],
+    "answer": 3,
+    "explanation": "Maintaing the drainage tubing and collection bag level with the patient’s bladder could result in reflux of urine into the kidney. Irrigating the bladder with Neosporin and clamping the catheter for 1 hour every 4 hours must be prescribed by a physician."
+  },
+  {
+    "question": "The ELISA test is used to:",
+    "choices": [
+      "Screen blood donors for antibodies to human immunodeficiency virus (HIV)",
+      "Test blood to be used for transfusion for HIV antibodies",
+      "Aid in diagnosing a patient with AIDS",
+      "All of the above"
+    ],
+    "answer": 3,
+    "explanation": "The ELISA test of venous blood is used to assess blood and potential blood donors to human immunodeficiency virus (HIV). A positive ELISA test combined with various signs and symptoms helps to diagnose acquired immunodeficiency syndrome (AIDS)"
+  },
+  {
+    "question": "The two blood vessels most commonly used for TPN infusion are the:",
+    "choices": [
+      "Subclavian and jugular veins",
+      "Brachial and subclavian veins",
+      "Femoral and subclavian veins",
+      "Brachial and femoral veins"
+    ],
+    "answer": 3,
+    "explanation": "Tachypnea (an abnormally rapid rate of breathing) would indicate that the patient was still hypoxic (deficient in oxygen).The partial pressures of arterial oxygen and carbon dioxide listed are within the normal range. Eupnea refers to normal respiration."
+  },
+  {
+    "question": "Effective skin disinfection before a surgical procedure includes which of the following methods?",
+    "choices": [
+      "Shaving the site on the day before surgery",
+      "Applying a topical antiseptic to the skin on the evening before surgery",
+      "Having the patient take a tub bath on the morning of surgery",
+      "Having the patient shower with an antiseptic soap on the evening v=before and the morning of surgery"
+    ],
+    "answer": 3,
+    "explanation": "Studies have shown that showering with an antiseptic soap before surgery is the most effective method of removing microorganisms from the skin. Shaving the site of the intended surgery might cause breaks in the skin, thereby increasing the risk of infection; however, if indicated, shaving, should be done immediately before surgery, not the day before. A topical antiseptic would not remove microorganisms and would be beneficial only after proper cleaning and rinsing. Tub bathing might transfer organisms to another body site rather than rinse them away."
+  },
+  {
+    "question": "When transferring a patient from a bed to a chair, the nurse should use which muscles to avoid back injury?",
+    "choices": [
+      "Abdominal muscles",
+      "Back muscles",
+      "Leg muscles",
+      "Upper arm muscles"
+    ],
+    "answer": 2,
+    "explanation": "The leg muscles are the strongest muscles in the body and should bear the greatest stress when lifting. Muscles of the abdomen, back, and upper arms may be easily injured."
+  },
+  {
+    "question": "Thrombophlebitis typically develops in patients with which of the following conditions?",
+    "choices": [
+      "Increases partial thromboplastin time",
+      "Acute pulsus paradoxus",
+      "An impaired or traumatized blood vessel wall",
+      "Chronic Obstructive Pulmonary Disease (COPD)"
+    ],
+    "answer": 2,
+    "explanation": "The factors, known as Virchow’s triad, collectively predispose a patient to thromboplebitis; impaired venous return to the heart, blood hypercoagulability, and injury to a blood vessel wall. Increased partial thromboplastin time indicates a prolonged bleeding time during fibrin clot formation, commonly the result of anticoagulant (heparin) therapy. Arterial blood disorders (such as pulsus paradoxus) and lung diseases (such as COPD) do not necessarily impede venous return of injure vessel walls."
+  },
+  {
+    "question": "In a recumbent, immobilized patient, lung ventilation can become altered, leading to such respiratory complications as:",
+    "choices": [
+      "Respiratory acidosis, ateclectasis, and hypostatic pneumonia",
+      "Appneustic breathing, atypical pneumonia and respiratory alkalosis",
+      "Cheyne-Strokes respirations and spontaneous pneumothorax",
+      "Kussmail’s respirations and hypoventilation"
+    ],
+    "answer": 0,
+    "explanation": "Because of restricted respiratory movement, a recumbent, immobilize patient is at particular risk for respiratory acidosis from poor gas exchange; atelectasis from reduced surfactant and accumulated mucus in the bronchioles, and hypostatic pneumonia from bacterial growth caused by stasis of mucus secretions."
+  },
+  {
+    "question": "Immobility impairs bladder elimination, resulting in such disorders as",
+    "choices": [
+      "Increased urine acidity and relaxation of the perineal muscles, causing incontinence",
+      "Urine retention, bladder distention, and infection",
+      "Diuresis, natriuresis, and decreased urine specific gravity",
+      "Decreased calcium and phosphate levels in the urine"
+    ],
+    "answer": 1,
+    "explanation": "The immobilized patient commonly suffers from urine retention caused by decreased muscle tone in the perineum. This leads to bladder distention and urine stagnation, which provide an excellent medium for bacterial growth leading to infection. Immobility also results in more alkaline urine with excessive amounts of calcium, sodium and phosphate, a gradual decrease in urine production, and an increased specific gravity."
+  },
+   {
+    "question": "For the client who is using oral contraceptives, the nurse informs the client about the need to take the pill at the same time each day to accomplish which of the following?",
+    "choices": [
+      "Decrease the incidence of nausea",
+      "Maintain hormonal levels",
+      "Reduce side effects",
+      "Prevent drug interactions"
+    ],
+    "answer": 1,
+    "explanation": "Regular timely ingestion of oral contraceptives is necessary to maintain hormonal levels of the drugs to suppress the action of the hypothalamus and anterior pituitary leading to inappropriate secretion of FSH and LH. Therefore, follicles do not mature, ovulation is inhibited, and pregnancy is prevented. The estrogen content of the oral site contraceptive may cause the nausea, regardless of when the pill is taken. Side effects and drug interactions may occur with oral contraceptives regardless of the time the pill is taken."
+  },
+  {
+    "question": "When teaching a client about contraception. Which of the following would the nurse include as the most effective method for preventing sexually transmitted infections?",
+    "choices": [
+      "Spermicides",
+      "Diaphragm",
+      "Condoms",
+      "Vasectomy"
+    ],
+    "answer": 2,
+    "explanation": "Condoms, when used correctly and consistently, are the most effective contraceptive method or barrier against bacterial and viral sexually transmitted infections. Although spermicides kill sperm, they do not provide reliable protection against the spread of sexually transmitted infections, especially intracellular organisms such as HIV. Insertion and removal of the diaphragm along with the use of the spermicides may cause vaginal irritations, which could place the client at risk for infection transmission. Male sterilization eliminates spermatozoa from the ejaculate, but it does not eliminate bacterial and/or viral microorganisms that can cause sexually transmitted infections."
+  },
+  {
+    "question": "When preparing a woman who is 2 days postpartum for discharge, recommendations for which of the following contraceptive methods would be avoided?",
+    "choices": [
+      "Diaphragm",
+      "Female condom",
+      "Oral contraceptives",
+      "Rhythm method"
+    ],
+    "answer": 0,
+    "explanation": "The diaphragm must be fitted individually to ensure effectiveness. Because of the changes to the reproductive structures during pregnancy and following delivery, the diaphragm must be refitted, usually at the 6 weeks’ examination following childbirth or after a weight loss of 15 lbs or more. In addition, for maximum effectiveness, spermicidal jelly should be placed in the dome and around the rim. However, spermicidal jelly should not be inserted into the vagina until involution is completed at approximately 6 weeks. Use of a female condom protects the reproductive system from the introduction of semen or spermicides into the vagina and may be used after childbirth. Oral contraceptives may be started within the first postpartum week to ensure suppression of ovulation. For the couple who has determined the female’s fertile period, using the rhythm method, avoidance of intercourse during this period, is safe and effective."
+  },
+  {
+    "question": "For which of the following clients would the nurse expect that an intrauterine device would not be recommended?",
+    "choices": [
+      "Woman over age 35",
+      "Nulliparous woman",
+      "Promiscuous young adult",
+      "Postpartum client"
+    ],
+    "answer": 2,
+    "explanation": "An IUD may increase the risk of pelvic inflammatory disease, especially in women with more than one sexual partner, because of the increased risk of sexually transmitted infections. An UID should not be used if the woman has an active or chronic pelvic infection, postpartum infection, endometrial hyperplasia or carcinoma, or uterine abnormalities. Age is not a factor in determining the risks associated with IUD use. Most IUD users are over the age of 30. Although there is a slightly higher risk for infertility in women who have never been pregnant, the IUD is an acceptable option as long as the risk-benefit ratio is discussed. IUDs may be inserted immediately after delivery, but this is not recommended because of the increased risk and rate of expulsion at this time."
+  },
+  {
+    "question": "A client in her third trimester tells the nurse, “I’m constipated all the time!” Which of the following should the nurse recommend?",
+    "choices": [
+      "Daily enemas",
+      "Laxatives",
+      "Increased fiber intake",
+      "Decreased fluid intake"
+    ],
+    "answer": 2,
+    "explanation": "During the third trimester, the enlarging uterus places pressure on the intestines. This coupled with the effect of hormones on smooth muscle relaxation causes decreased intestinal motility (peristalsis). Increasing fiber in the diet will help fecal matter pass more quickly through the intestinal tract, thus decreasing the amount of water that is absorbed. As a result, stool is softer and easier to pass. Enemas could precipitate preterm labor and/or electrolyte loss and should be avoided. Laxatives may cause preterm labor by stimulating peristalsis and may interfere with the absorption of nutrients. Use for more than 1 week can also lead to laxative dependency. Liquid in the diet helps provide a semisolid, soft consistency to the stool. Eight to ten glasses of fluid per day are essential to maintain hydration and promote stool evacuation."
+  },
+  {
+    "question": "Which of the following would the nurse use as the basis for the teaching plan when caring for a pregnant teenager concerned about gaining too much weight during pregnancy?",
+    "choices": [
+      "10 pounds per trimester",
+      "1 pound per week for 40 weeks",
+      "½ pound per week for 40 weeks",
+      "A total gain of 25 to 30 pounds"
+    ],
+    "answer": 3,
+    "explanation": "To ensure adequate fetal growth and development during the 40 weeks of a pregnancy, a total weight gain 25 to 30 pounds is recommended: 1.5 pounds in the first 10 weeks; 9 pounds by 30 weeks; and 27.5 pounds by 40 weeks. The pregnant woman should gain less weight in the first and second trimester than in the third. During the first trimester, the client should only gain 1.5 pounds in the first 10 weeks, not 1 pound per week. A weight gain of ½ pound per week would be 20 pounds for the total pregnancy, less than the recommended amount."
+  },
+  {
+    "question": "The client tells the nurse that her last menstrual period started on January 14 and ended on January 20. Using Nagele’s rule, the nurse determines her EDD to be which of the following?",
+    "choices": [
+      "September 27",
+      "October 21",
+      "November 7",
+      "December 27"
+    ],
+    "answer": 1,
+    "explanation": "To calculate the EDD by Nagele’s rule, add 7 days to the first day of the last menstrual period and count back 3 months, changing the year appropriately. To obtain a date of September 27, 7 days have been added to the last day of the LMP (rather than the first day of the LMP), plus 4 months (instead of 3 months) were counted back. To obtain the date of November 7, 7 days have been subtracted (instead of added) from the first day of LMP plus November indicates counting back 2 months (instead of 3 months) from January. To obtain the date of December 27, 7 days were added to the last day of the LMP (rather than the first day of the LMP) and December indicates counting back only 1 month (instead of 3 months) from January."
+  },
+  {
+    "question": "When taking an obstetrical history on a pregnant client who states, “I had a son born at 38 weeks gestation, a daughter born at 30 weeks gestation and I lost a baby at about 8 weeks,” the nurse should record her obstetrical history as which of the following?",
+    "choices": [
+      "G2 T2 P0 A0 L2",
+      "G3 T1 P1 A0 L2",
+      "G3 T2 P0 A0 L2",
+      "G4 T1 P1 A1 L2"
+    ],
+    "answer": 3,
+    "explanation": "The client has been pregnant four times, including current pregnancy (G). Birth at 38 weeks’ gestation is considered full term (T), while birth form 20 weeks to 38 weeks is considered preterm (P). A spontaneous abortion occurred at 8 weeks (A). She has two living children (L)."
+  },
+  {
+    "question": "When preparing to listen to the fetal heart rate at 12 weeks’ gestation, the nurse would use which of the following?",
+    "choices": [
+      "Stethoscope placed midline at the umbilicus",
+      "Doppler placed midline at the suprapubic region",
+      "Fetoscope placed midway between the umbilicus and the xiphoid process",
+      "External electronic fetal monitor placed at the umbilicus"
+    ],
+    "answer": 1,
+    "explanation": "At 12 weeks gestation, the uterus rises out of the pelvis and is palpable above the symphysis pubis. The Doppler intensifies the sound of the fetal pulse rate so it is audible. The uterus has merely risen out of the pelvis into the abdominal cavity and is not at the level of the umbilicus. The fetal heart rate at this age is not audible with a stethoscope. The uterus at 12 weeks is just above the symphysis pubis in the abdominal cavity, not midway between the umbilicus and the xiphoid process. At 12 weeks the FHR would be difficult to auscultate with a fetoscope. Although the external electronic fetal monitor would project the FHR, the uterus has not risen to the umbilicus at 12 weeks."
+  },
+  {
+    "question": "When developing a plan of care for a client newly diagnosed with gestational diabetes, which of the following instructions would be the priority?",
+    "choices": [
+      "Dietary intake",
+      "Medication",
+      "Exercise",
+      "Glucose monitoring"
+    ],
+    "answer": 0,
+    "explanation": "Although all of the choices are important in the management of diabetes, diet therapy is the mainstay of the treatment plan and should always be the priority. Women diagnosed with gestational diabetes generally need only diet therapy without medication to control their blood sugar levels. Exercise, is important for all pregnant women and especially for diabetic women, because it burns up glucose, thus decreasing blood sugar. However, dietary intake, not exercise, is the priority. All pregnant women with diabetes should have periodic monitoring of serum glucose. However, those with gestational diabetes generally do not need daily glucose monitoring. The standard of care recommends a fasting and 2- hour postprandial blood sugar level every 2 weeks."
+  },
+  {
+    "question": "A client at 24 weeks gestation has gained 6 pounds in 4 weeks. Which of the following would be the priority when assessing the client?",
+    "choices": [
+      "Glucosuria",
+      "Depression",
+      "Hand/face edema",
+      "Dietary intake"
+    ],
+    "answer": 2,
+    "explanation": "After 20 weeks’ gestation, when there is a rapid weight gain, preeclampsia should be suspected, which may be caused by fluid retention manifested by edema, especially of the hands and face. The three classic signs of preeclampsia are hypertension, edema, and proteinuria. Although urine is checked for glucose at each clinic visit, this is not the priority. Depression may cause either anorexia or excessive food intake, leading to excessive weight gain or loss. This is not, however, the priority consideration at this time. Weight gain thought to be caused by excessive food intake would require a 24-hour diet recall. However, excessive intake would not be the primary consideration for this client at this time."
+  },
+  {
+    "question": "A client 12 weeks’ pregnant come to the emergency department with abdominal cramping and moderate vaginal bleeding. Speculum examination reveals 2 to 3 cms cervical dilation. The nurse would document these findings as which of the following?",
+    "choices": [
+      "Threatened abortion",
+      "Imminent abortion",
+      "Complete abortion",
+      "Missed abortion"
+    ],
+    "answer": 1,
+    "explanation": "Cramping and vaginal bleeding coupled with cervical dilation signifies that termination of the pregnancy is inevitable and cannot be prevented. Thus, the nurse would document an imminent abortion. In a threatened abortion, cramping and vaginal bleeding are present, but there is no cervical dilation. The symptoms may subside or progress to abortion. In a complete abortion all the products of conception are expelled. A missed abortion is early fetal intrauterine death without expulsion of the products of conception."
+  },
+  {
+    "question": "Which of the following would be the priority nursing diagnosis for a client with an ectopic pregnancy?",
+    "choices": [
+      "Risk for infection",
+      "Pain",
+      "Knowledge Deficit",
+      "Anticipatory Grieving"
+    ],
+    "answer": 1,
+    "explanation": "For the client with an ectopic pregnancy, lower abdominal pain, usually unilateral, is the primary symptom. Thus, pain is the priority. Although the potential for infection is always present, the risk is low in ectopic pregnancy because pathogenic microorganisms have not been introduced from external sources. The client may have a limited knowledge of the pathology and treatment of the condition and will most likely experience grieving, but this is not the priority at this time."
+  },
+  {
+    "question": "Before assessing the postpartum client’s uterus for firmness and position in relation to the umbilicus and midline, which of the following should the nurse do first?",
+    "choices": [
+      "Assess the vital signs",
+      "Administer analgesia",
+      "Ambulate her in the hall",
+      "Assist her to urinate"
+    ],
+    "answer": 3,
+    "explanation": "Before uterine assessment is performed, it is essential that the woman empty her bladder. A full bladder will interfere with the accuracy of the assessment by elevating the uterus and displacing to the side of the midline. Vital sign assessment is not necessary unless an abnormality in uterine assessment is identified. Uterine assessment should not cause acute pain that requires administration of analgesia. Ambulating the client is an essential component of postpartum care, but is not necessary prior to assessment of the uterus."
+  },
+  {
+    "question": "Which of the following should the nurse do when a primipara who is lactating tells the nurse that she has sore nipples?",
+    "choices": [
+      "Tell her to breast feed more frequently",
+      "Administer a narcotic before breast feeding",
+      "Encourage her to wear a nursing brassiere",
+      "Use soap and water to clean the nipples"
+    ],
+    "answer": 0,
+    "explanation": "Feeding more frequently, about every 2 hours, will decrease the infant’s frantic, vigorous sucking from hunger and will decrease breast engorgement, soften the breast, and promote ease of correct latching-on for feeding. Narcotics administered prior to breast feeding are passed through the breast milk to the infant, causing excessive sleepiness. Nipple soreness is not severe enough to warrant narcotic analgesia. All postpartum clients, especially lactating mothers, should wear a supportive brassiere with wide cotton straps. This does not, however, prevent or reduce nipple soreness. Soaps are drying to the skin of the nipples and should not be used on the breasts of lactating mothers. Dry nipple skin predisposes to cracks and fissures, which can become sore and painful."
+  },
+  {
+    "question": "The nurse assesses the vital signs of a client, 4 hours’ postpartum that are as follows: BP 90/60; temperature 100.4ºF; pulse 100 weak, thready; R 20 per minute. Which of the following should the nurse do first?",
+    "choices": [
+      "Report the temperature to the physician",
+      "Recheck the blood pressure with another cuff",
+      "Assess the uterus for firmness and position",
+      "Determine the amount of lochia"
+    ],
+    "answer": 3,
+    "explanation": "A weak, thready pulse elevated to 100 BPM may indicate impending hemorrhagic shock. An increased pulse is a compensatory mechanism of the body in response to decreased fluid volume. Thus, the nurse should check the amount of lochia present. Temperatures up to 100.48F in the first 24 hours after birth are related to the dehydrating effects of labor and are considered normal. Although rechecking the blood pressure may be a correct choice of action, it is not the first action that should be implemented in light of the other data. The data indicate a potential impending hemorrhage. Assessing the uterus for firmness and position in relation to the umbilicus and midline is important, but the nurse should check the extent of vaginal bleeding first. Then it would be appropriate to check the uterus, which may be a possible cause of the hemorrhage."
+  },
+  {
+    "question": "The nurse assesses the postpartum vaginal discharge (lochia) on four clients. Which of the following assessments would warrant notification of the physician?",
+    "choices": [
+      "A dark red discharge on a 2-day postpartum client",
+      "A pink to brownish discharge on a client who is 5 days postpartum",
+      "Almost colorless to creamy discharge on a client 2 weeks after delivery",
+      "A bright red discharge 5 days after delivery"
+    ],
+    "answer": 3,
+    "explanation": "Any bright red vaginal discharge would be considered abnormal, but especially 5 days after delivery, when the lochia is typically pink to brownish. Lochia rubra, a dark red discharge, is present for 2 to 3 days after delivery. Bright red vaginal bleeding at this time suggests late postpartum hemorrhage, which occurs after the first 24 hours following delivery and is generally caused by retained placental fragments or bleeding disorders. Lochia rubra is the normal dark red discharge occurring in the first 2 to 3 days after delivery, containing epithelial cells, erythrocyes, leukocytes and decidua. Lochia serosa is a pink to brownish serosanguineous discharge occurring from 3 to 10 days after delivery that contains decidua, erythrocytes, leukocytes, cervical mucus, and microorganisms. Lochia alba is an almost colorless to yellowish discharge occurring from 10 days to 3 weeks after delivery and containing leukocytes, decidua, epithelial cells, fat, cervical mucus, cholesterol crystals, and bacteria."
+  },
+  {
+    "question": "A postpartum client has a temperature of 101.4ºF, with a uterus that is tender when palpated, remains unusually large, and not descending as normally expected. Which of the following should the nurse assess next?",
+    "choices": [
+      "Lochia",
+      "Breasts",
+      "Incision",
+      "Urine"
+    ],
+    "answer": 0,
+    "explanation": "The data suggests an infection of the endometrial lining of the uterus. The lochia may be decreased or copious, dark brown in appearance, and foul smelling, providing further evidence of a possible infection. All the client’s data indicate a uterine problem, not a breast problem. Typically, transient fever, usually 101ºF, may be present with breast engorgement. Symptoms of mastitis include influenza-like manifestations. Localized infection of an episiotomy or C-section incision rarely causes systemic symptoms, and uterine involution would not be affected. The client data do not include dysuria, frequency, or urgency, symptoms of urinary tract infections, which would necessitate assessing the client’s urine."
+  },
+  {
+    "question": "Which of the following is the priority focus of nursing practice with the current early postpartum discharge?",
+    "choices": [
+      "Promoting comfort and restoration of health",
+      "Exploring the emotional status of the family",
+      "Facilitating safe and effective self-and newborn care",
+      "Teaching about the importance of family planning"
+    ],
+    "answer": 2,
+    "explanation": "Because of early postpartum discharge and limited time for teaching, the nurse’s priority is to facilitate the safe and effective care of the client and newborn. Although promoting comfort and restoration of health, exploring the family’s emotional status, and teaching about family planning are important in postpartum/newborn nursing care, they are not the priority focus in the limited time presented by early post-partum discharge."
+  },
+  {
+    "question": "Which of the following actions would be least effective in maintaining a neutral thermal environment for the newborn?",
+    "choices": [
+      "Placing infant under radiant warmer after bathing",
+      "Covering the scale with a warmed blanket prior to weighing",
+      "Placing crib close to nursery window for family viewing",
+      "Covering the infant’s head with a knit stockinette"
+    ],
+    "answer": 2,
+    "explanation": "Heat loss by radiation occurs when the infant’s crib is placed too near cold walls or windows. Thus placing the newborn’s crib close to the viewing window would be least effective. Body heat is lost through evaporation during bathing. Placing the infant under the radiant warmer after bathing will assist the infant to be rewarmed. Covering the scale with a warmed blanket prior to weighing prevents heat loss through conduction. A knit cap prevents heat loss from the head a large head, a large body surface area of the newborn’s body."
+  },
+  {
+    "question": "A newborn who has an asymmetrical Moro reflex response should be further assessed for which of the following?",
+    "choices": [
+      "Talipes equinovarus",
+      "Fractured clavicle",
+      "Congenital hypothyroidism",
+      "Increased intracranial pressure"
+    ],
+    "answer": 1,
+    "explanation": "A fractured clavicle would prevent the normal Moro response of symmetrical sequential extension and abduction of the arms followed by flexion and adduction. In talipes equinovarus (clubfoot) the foot is turned medially, and in plantar flexion, with the heel elevated. The feet are not involved with the Moro reflex. Hypothyroiddism has no effect on the primitive reflexes. Absence of the Moror reflex is the most significant single indicator of central nervous system status, but it is not a sign of increased intracranial pressure."
+  },
+  {
+    "question": "During the first 4 hours after a male circumcision, assessing for which of the following is the priority?",
+    "choices": [
+      "Infection",
+      "Hemorrhage",
+      "Discomfort",
+      "Dehydration"
+    ],
+    "answer": 1,
+    "explanation": "Hemorrhage is a potential risk following any surgical procedure. Although the infant has been given vitamin K to facilitate clotting, the prophylactic dose is often not sufficient to prevent bleeding. Although infection is a possibility, signs will not appear within 4 hours after the surgical procedure. The primary discomfort of circumcision occurs during the surgical procedure, not afterward. Although feedings are withheld prior to the circumcision, the chances of dehydration are minimal."
+  },
+  {
+    "question": "The mother asks the nurse. “What’s wrong with my son’s breasts? Why are they so enlarged?” Whish of the following would be the best response by the nurse?",
+    "choices": [
+      "“The breast tissue is inflamed from the trauma experienced with birth”",
+      "“A decrease in material hormones present before birth causes enlargement,”",
+      "“You should discuss this with your doctor. It could be a malignancy”",
+      "“The tissue has hypertrophied while the baby was in the uterus”"
+    ],
+    "answer": 1,
+    "explanation": "The presence of excessive estrogen and progesterone in the maternal fetal blood followed by prompt withdrawal at birth precipitates breast engorgement, which will spontaneously resolve in 4 to 5 days after birth. The trauma of the birth process does not cause inflammation of the newborn’s breast tissue. Newborns do not have breast malignancy. This reply by the nurse would cause the mother to have undue anxiety. Breast tissue does not hypertrophy in the fetus or newborns."
+  },
+  {
+    "question": "Immediately after birth the nurse notes the following on a male newborn: respirations 78; apical hearth rate 160 BPM, nostril flaring; mild intercostal retractions; and grunting at the end of expiration. Which of the following should the nurse do?",
+    "choices": [
+      "Call the assessment data to the physician’s attention",
+      "Start oxygen per nasal cannula at 2 L/min.",
+      "Suction the infant’s mouth and nares",
+      "Recognize this as normal first period of reactivity"
+    ],
+    "answer": 3,
+    "explanation": "The first 15 minutes to 1 hour after birth is the first period of reactivity involving respiratory and circulatory adaptation to extrauterine life. The data given reflect the normal changes during this time period. The infant’s assessment data reflect normal adaptation. Thus, the physician does not need to be notified and oxygen is not needed. The data do not indicate the presence of choking, gagging or coughing, which are signs of excessive secretions. Suctioning is not necessary."
+  },
+  {
+    "question": "The nurse hears a mother telling a friend on the telephone about umbilical cord care. Which of the following statements by the mother indicates effective teaching?",
+    "choices": [
+      "“Daily soap and water cleansing is best”",
+      "‘Alcohol helps it dry and kills germs”",
+      "“An antibiotic ointment applied daily prevents infection”",
+      "“He can have a tub bath each day”"
+    ],
+    "answer": 1,
+    "explanation": "Application of 70% isopropyl alcohol to the cord minimizes microorganisms (germicidal) and promotes drying. The cord should be kept dry until it falls off and the stump has healed. Antibiotic ointment should only be used to treat an infection, not as a prophylaxis. Infants should not be submerged in a tub of water until the cord falls off and the stump has completely healed."
+  },
+  {
+    "question": "A newborn weighing 3000 grams and feeding every 4 hours needs 120 calories/kg of body weight every 24 hours for proper growth and development. How many ounces of 20 cal/oz formula should this newborn receive at each feeding to meet nutritional needs?",
+    "choices": [
+      "2 ounces",
+      "3 ounces",
+      "4 ounces",
+      "6 ounces"
+    ],
+    "answer": 1,
+    "explanation": "To determine the amount of formula needed, do the following mathematical calculation. 3 kg x 120 cal/kg per day = 360 calories/day feeding q 4 hours = 6 feedings per day = 60 calories per feeding: 60 calories per feeding; 60 calories per feeding with formula 20 cal/oz = 3 ounces per feeding. Based on the calculation. 2, 4 or 6 ounces are incorrect."
+  },
+  {
+    "question": "The postterm neonate with meconium-stained amniotic fluid needs care designed to especially monitor for which of the following?",
+    "choices": [
+      "Respiratory problems",
+      "Gastrointestinal problems",
+      "Integumentary problems",
+      "Elimination problems"
+    ],
+    "answer": 0,
+    "explanation": "Intrauterine anoxia may cause relaxation of the anal sphincter and emptying of meconium into the amniotic fluid. At birth some of the meconium fluid may be aspirated, causing mechanical obstruction or chemical pneumonitis. The infant is not at increased risk for gastrointestinal problems. Even though the skin is stained with meconium, it is noninfectious (sterile) and nonirritating. The postterm meconiumstained infant is not at additional risk for bowel or urinary problems."
+  },
+  {
+    "question": "When measuring a client’s fundal height, which of the following techniques denotes the correct method of measurement used by the nurse?",
+    "choices": [
+      "From the xiphoid process to the umbilicus",
+      "From the symphysis pubis to the xiphoid process",
+      "From the symphysis pubis to the fundus",
+      "From the fundus to the umbilicus"
+    ],
+    "answer": 2,
+    "explanation": "The nurse should use a nonelastic, flexible, paper measuring tape, placing the zero point on the superior border of the symphysis pubis and stretching the tape across the abdomen at the midline to the top of the fundus. The xiphoid and umbilicus are not appropriate landmarks to use when measuring the height of the fundus (McDonald’s measurement)."
+  },
+  {
+    "question": "A client with severe preeclampsia is admitted with of BP 160/110, proteinuria, and severe pitting edema. Which of the following would be most important to include in the client’s plan of care?",
+    "choices": [
+      "Daily weights",
+      "Seizure precautions",
+      "Right lateral positioning",
+      "Stress reduction"
+    ],
+    "answer": 1,
+    "explanation": "Women hospitalized with severe preeclampsia need decreased CNS stimulation to prevent a seizure. Seizure precautions provide environmental safety should a seizure occur. Because of edema, daily weight is important but not the priority. Preclampsia causes vasospasm and therefore can reduce utero-placental perfusion. The client should be placed on her left side to maximize blood flow, reduce blood pressure, and promote diuresis. Interventions to reduce stress and anxiety are very important to facilitate coping and a sense of control, but seizure precautions are the priority."
+  },
+  {
+    "question": "A postpartum primipara asks the nurse, “When can we have sexual intercourse again?” Which of the following would be the nurse’s best response?",
+    "choices": [
+      "“Anytime you both want to.”",
+      "“As soon as choose a contraceptive method.”",
+      "“When the discharge has stopped and the incision is healed.”",
+      "“After your 6 weeks examination.”"
+    ],
+    "answer": 2,
+    "explanation": "Cessation of the lochial discharge signifies healing of the endometrium. Risk of hemorrhage and infection are minimal 3 weeks after a normal vaginal delivery. Telling the client anytime is inappropriate because this response does not provide the client with the specific information she is requesting. Choice of a contraceptive method is important, but not the specific criteria for safe resumption of sexual activity. Culturally, the 6- weeks’ examination has been used as the time frame for resuming sexual activity, but it may be resumed earlier."
+  },
+  {
+    "question": "When preparing to administer the vitamin K injection to a neonate, the nurse would select which of the following sites as appropriate for the injection?",
+    "choices": [
+      "Deltoid muscle",
+      "Anterior femoris muscle",
+      "Vastus lateralis muscle",
+      "Gluteus maximus muscle"
+    ],
+    "answer": 2,
+    "explanation": "The middle third of the vastus lateralis is the preferred injection site for vitamin K administration because it is free of blood vessels and nerves and is large enough to absorb the medication. The deltoid muscle of a newborn is not large enough for a newborn IM injection. Injections into this muscle in a small child might cause damage to the radial nerve. The anterior femoris muscle is the next safest muscle to use in a newborn but is not the safest. Because of the proximity of the sciatic nerve, the gluteus maximus muscle should not be until the child has been walking 2 years."
+  },
+  {
+    "question": "When performing a pelvic examination, the nurse observes a red swollen area on the right side of the vaginal orifice. The nurse would document this as enlargement of which of the following?",
+    "choices": [
+      "Clitoris",
+      "Parotid gland",
+      "Skene’s gland",
+      "Bartholin’s gland"
+    ],
+    "answer": 3,
+    "explanation": "Bartholin’s glands are the glands on either side of the vaginal orifice. The clitoris is female erectile tissue found in the perineal area above the urethra. The parotid glands are open into the mouth. Skene’s glands open into the posterior wall of the female urinary meatus."
+  },
+  {
+    "question": "To differentiate as a female, the hormonal stimulation of the embryo that must occur involves which of the following?",
+    "choices": [
+      "Increase in maternal estrogen secretion",
+      "Decrease in maternal androgen secretion",
+      "Secretion of androgen by the fetal gonad",
+      "Secretion of estrogen by the fetal gonad"
+    ],
+    "answer": 3,
+    "explanation": "The fetal gonad must secrete estrogen for the embryo to differentiate as a female. An increase in maternal estrogen secretion does not effect differentiation of the embryo, and maternal estrogen secretion occurs in every pregnancy. Maternal androgen secretion remains the same as before pregnancy and does not effect differentiation. Secretion of androgen by the fetal gonad would produce a male fetus."
+  },
+  {
+    "question": "A client at 8 weeks’ gestation calls complaining of slight nausea in the morning hours. Which of the following client interventions should the nurse question?",
+    "choices": [
+      "Taking 1 teaspoon of bicarbonate of soda in an 8-ounce glass of water",
+      "Eating a few low-sodium crackers before getting out of bed",
+      "Avoiding the intake of liquids in the morning hours",
+      "Eating six small meals a day instead of thee large meals"
+    ],
+    "answer": 0,
+    "explanation": "Using bicarbonate would increase the amount of sodium ingested, which can cause complications. Eating low-sodium crackers would be appropriate. Since liquids can increase nausea avoiding them in the morning hours when nausea is usually the strongest is appropriate. Eating six small meals a day would keep the stomach full, which often decrease nausea."
+  },
+  {
+    "question": "The nurse documents positive ballottement in the client’s prenatal record. The nurse understands that this indicates which of the following?",
+    "choices": [
+      "Palpable contractions on the abdomen",
+      "Passive movement of the unengaged fetus",
+      "Fetal kicking felt by the client",
+      "Enlargement and softening of the uterus"
+    ],
+    "answer": 1,
+    "explanation": "Ballottement indicates passive movement of the unengaged fetus. Ballottement is not a contraction. Fetal kicking felt by the client represents quickening. Enlargement and softening of the uterus is known as Piskacek’s sign."
+  },
+  {
+    "question": "During a pelvic exam the nurse notes a purple-blue tinge of the cervix. The nurse documents this as which of the following?",
+    "choices": [
+      "Braxton-Hicks sign",
+      "Chadwick’s sign",
+      "Goodell’s sign",
+      "McDonald’s sign"
+    ],
+    "answer": 1,
+    "explanation": "Chadwick’s sign refers to the purple-blue tinge of the cervix. Braxton Hicks contractions are painless contractions beginning around the 4th month. Goodell’s sign indicates softening of the cervix. Flexibility of the uterus against the cervix is known as McDonald’s sign."
+  },
+  {
+    "question": "During a prenatal class, the nurse explains the rationale for breathing techniques during preparation for labor based on the understanding that breathing techniques are most important in achieving which of the following?",
+    "choices": [
+      "Eliminate pain and give the expectant parents something to do",
+      "Reduce the risk of fetal distress by increasing uteroplacental perfusion",
+      "Facilitate relaxation, possibly reducing the perception of pain",
+      "Eliminate pain so that less analgesia and anesthesia are needed"
+    ],
+    "answer": 2,
+    "explanation": "Breathing techniques can raise the pain threshold and reduce the perception of pain. They also promote relaxation. Breathing techniques do not eliminate pain, but they can reduce it. Positioning, not breathing, increases uteroplacental perfusion."
+  },
+  {
+    "question": "After 4 hours of active labor, the nurse notes that the contractions of a primigravida client are not strong enough to dilate the cervix. Which of the following would the nurse anticipate doing?",
+    "choices": [
+      "Obtaining an order to begin IV oxytocin infusion",
+      "Administering a light sedative to allow the patient to rest for several hour",
+      "Preparing for a cesarean section for failure to progress",
+      "Increasing the encouragement to the patient when pushing begins"
+    ],
+    "answer": 0,
+    "explanation": "The client’s labor is hypotonic. The nurse should call the physical and obtain an order for an infusion of oxytocin, which will assist the uterus to contact more forcefully in an attempt to dilate the cervix. Administering light sedative would be done for hypertonic uterine contractions. Preparing for cesarean section is unnecessary at this time. Oxytocin would increase the uterine contractions and hopefully progress labor before a cesarean would be necessary. It is too early to anticipate client pushing with contractions."
+  },
+  {
+    "question": "A multigravida at 38 weeks’ gestation is admitted with painless, bright red bleeding and mild contractions every 7 to 10 minutes. Which of the following assessments should be avoided?",
+    "choices": [
+      "Maternal vital sign",
+      "Fetal heart rate",
+      "Contraction monitoring",
+      "Cervical dilation"
+    ],
+    "answer": 3,
+    "explanation": "The signs indicate placenta previa and vaginal exam to determine cervical dilation would not be done because it could cause hemorrhage. Assessing maternal vital signs can help determine maternal physiologic status. Fetal heart rate is important to assess fetal well-being and should be done. Monitoring the contractions will help evaluate the progress of labor."
+  },
+  {
+    "question": "Which of the following would be the nurse’s most appropriate response to a client who asks why she must have a cesarean delivery if she has a complete placenta previa?",
+    "choices": [
+      "“You will have to ask your physician when he returns.”",
+      "“You need a cesarean to prevent hemorrhage.”",
+      "“The placenta is covering most of your cervix.”",
+      "“The placenta is covering the opening of the uterus and blocking your baby.”"
+    ],
+    "answer": 3,
+    "explanation": "A complete placenta previa occurs when the placenta covers the opening of the uterus, thus blocking the passageway for the baby. This response explains what a complete previa is and the reason the baby cannot come out except by cesarean delivery. Telling the client to ask the physician is a poor response and would increase the patient’s anxiety. Although a cesarean would help to prevent hemorrhage, the statement does not explain why the hemorrhage could occur. With a complete previa, the placenta is covering all the cervix, not just most of it."
+  },
+  {
+    "question": "The nurse understands that the fetal head is in which of the following positions with a face presentation?",
+    "choices": [
+      "Completely flexed",
+      "Completely extended",
+      "Partially extended",
+      "Partially flexed"
+    ],
+    "answer": 1,
+    "explanation": "With a face presentation, the head is completely extended. With a vertex presentation, the head is completely or partially flexed. With a brow (forehead) presentation, the head would be partially extended."
+  },
+  {
+    "question": "With a fetus in the left-anterior breech presentation, the nurse would expect the fetal heart rate would be most audible in which of the following areas?",
+    "choices": [
+      "Above the maternal umbilicus and to the right of midline",
+      "In the lower-left maternal abdominal quadrant",
+      "In the lower-right maternal abdominal quadrant",
+      "Above the maternal umbilicus and to the left of midline"
+    ],
+    "answer": 3,
+    "explanation": "With this presentation, the fetal upper torso and back face the left upper maternal abdominal wall. The fetal heart rate would be most audible above the maternal umbilicus and to the left of the middle. The other positions would be incorrect."
+  },
+  {
+    "question": "The amniotic fluid of a client has a greenish tint. The nurse interprets this to be the result of which of the following?",
+    "choices": [
+      "Lanugo",
+      "Hydramnio",
+      "Meconium",
+      "Vernix"
+    ],
+    "answer": 2,
+    "explanation": "The greenish tint is due to the presence of meconium. Lanugo is the soft, downy hair on the shoulders and back of the fetus. Hydramnios represents excessive amniotic fluid. Vernix is the white, cheesy substance covering the fetus."
+  },
+  {
+    "question": "A patient is in labor and has just been told she has a breech presentation. The nurse should be particularly alert for which of the following?",
+    "choices": [
+      "Quickening",
+      "Ophthalmia neonatorum",
+      "Pica",
+      "Prolapsed umbilical cord"
+    ],
+    "answer": 3,
+    "explanation": "In a breech position, because of the space between the presenting part and the cervix, prolapse of the umbilical cord is common. Quickening is the woman’s first perception of fetal movement. Ophthalmia neonatorum usually results from maternal gonorrhea and is conjunctivitis. Pica refers to the oral intake of nonfood substances."
+  },
+  {
+    "question": "When describing dizygotic twins to a couple, on which of the following would the nurse base the explanation?",
+    "choices": [
+      "Two ova fertilized by separate sperm",
+      "Sharing of a common placenta",
+      "Each ova with the same genotype",
+      "Sharing of a common chorion"
+    ],
+    "answer": 0,
+    "explanation": "Dizygotic (fraternal) twins involve two ova fertilized by separate sperm. Monozygotic (identical) twins involve a common placenta, same genotype, and common chorion."
+  },
+  {
+    "question": "Which of the following refers to the single cell that reproduces itself after conception?",
+    "choices": [
+      "Chromosome",
+      "Blastocyst",
+      "Zygote",
+      "Trophoblast"
+    ],
+    "answer": 2,
+    "explanation": "The zygote is the single cell that reproduces itself after conception. The chromosome is the material that makes up the cell and is gained from each parent. Blastocyst and trophoblast are later terms for the embryo after zygote."
+  },
+  {
+    "question": "In the late 1950s, consumers and health care professionals began challenging the routine use of analgesics and anesthetics during childbirth. Which of the following was an outgrowth of this concept?",
+    "choices": [
+      "Labor, delivery, recovery, postpartum (LDRP)",
+      "Nurse-midwifery",
+      "Clinical nurse specialist",
+      "Prepared childbirth"
+    ],
+    "answer": 3,
+    "explanation": "Prepared childbirth was the direct result of the 1950’s challenging of the routine use of analgesic and anesthetics during childbirth. The LDRP was a much later concept and was not a direct result of the challenging of routine use of analgesics and anesthetics during childbirth. Roles for nurse midwives and clinical nurse specialists did not develop from this challenge."
+  },
+  {
+    "question": "A client has a midpelvic contracture from a previous pelvic injury due to a motor vehicle accident as a teenager. The nurse is aware that this could prevent a fetus from passing through or around which structure during childbirth?",
+    "choices": [
+      "Symphysis pubis",
+      "Sacral promontory",
+      "Ischial spines",
+      "Pubic arch"
+    ],
+    "answer": 2,
+    "explanation": "The ischial spines are located in the mid-pelvic region and could be narrowed due to the previous pelvic injury. The symphysis pubis, sacral promontory, and pubic arch are not part of the mid-pelvis."
+  },
+  {
+    "question": "When teaching a group of adolescents about variations in the length of the menstrual cycle, the nurse understands that the underlying mechanism is due to variations in which of the following phases?",
+    "choices": [
+      "Menstrual phase",
+      "Proliferative phase",
+      "Secretory phase",
+      "Ischemic phase"
+    ],
+    "answer": 1,
+    "explanation": "Variations in the length of the menstrual cycle are due to variations in the proliferative phase. The menstrual, secretory and ischemic phases do not contribute to this variation."
+  },
+  {
+    "question": "When teaching a group of adolescents about male hormone production, which of the following would the nurse include as being produced by the Leydig cells?",
+    "choices": [
+      "Follicle-stimulating hormone",
+      "Testosterone",
+      "Leuteinizing hormone",
+      "Gonadotropin releasing hormone"
+    ],
+    "answer": 1,
+    "explanation": "Testosterone is produced by the Leyding cells in the seminiferous tubules. Follicle-stimulating hormone and leuteinzing hormone are released by the anterior pituitary gland. The hypothalamus is responsible for releasing gonadotropin-releasing hormone."
+  },
+  {
+    "question": "Marco who was diagnosed with brain tumor was scheduled for craniotomy. In preventing the development of cerebral edema after surgery, the nurse should expect the use of:",
+    "choices": [
+      "Diuretics",
+      "Antihypertensive",
+      "Steroids",
+      "Anticonvulsants"
+    ],
+    "answer": 2,
+    "explanation": "Glucocorticoids (steroids) are used for their anti-inflammatory action, which decreases the development of edema."
+  },
+  {
+    "question": "Halfway through the administration of blood, the female client complains of lumbar pain. After stopping the infusion Nurse Hazel should:",
+    "choices": [
+      "Increase the flow of normal saline",
+      "Assess the pain further",
+      "Notify the blood bank",
+      "Obtain vital signs."
+    ],
+    "answer": 0,
+    "explanation": "The blood must be stopped at once, and then normal saline should be infused to keep the line patent and maintain blood volume."
+  },
+  {
+    "question": "Nurse Maureen knows that the positive diagnosis for HIV infection is made based on which of the following:",
+    "choices": [
+      "A history of high risk sexual behaviors.",
+      "Positive ELISA and western blot tests",
+      "Identification of an associated opportunistic infection",
+      "Evidence of extreme weight loss and high fever"
+    ],
+    "answer": 1,
+    "explanation": "These tests confirm the presence of HIV antibodies that occur in response to the presence of the human immunodeficiency virus (HIV)."
+  },
+  {
+    "question": "Nurse Maureen is aware that a client who has been diagnosed with chronic renal failure recognizes an adequate amount of high-biologic-value protein when the food the client selected from the menu was:",
+    "choices": [
+      "Raw carrots",
+      "Apple juice",
+      "Whole wheat bread",
+      "Cottage cheese"
+    ],
+    "answer": 3,
+    "explanation": "One cup of cottage cheese contains approximately 225 calories, 27 g of protein, 9 g of fat, 30 mg cholesterol, and 6 g of carbohydrate. Proteins of high biologic value (HBV) contain optimal levels of amino acids essential for life."
+  },
+  {
+    "question": "Kenneth who has diagnosed with uremic syndrome has the potential to develop complications. Which among the following complications should the nurse anticipates:",
+    "choices": [
+      "Flapping hand tremors",
+      "An elevated hematocrit level",
+      "Hypotension",
+      "Hypokalemia"
+    ],
+    "answer": 0,
+    "explanation": "Elevation of uremic waste products causes irritation of the nerves, resulting in flapping hand tremors."
+  },
+  {
+    "question": "A client is admitted to the hospital with benign prostatic hyperplasia, the nurse most relevant assessment would be:",
+    "choices": [
+      "Flank pain radiating in the groin",
+      "Distention of the lower abdomen",
+      "Perineal edema",
+      "Urethral discharge"
+    ],
+    "answer": 1,
+    "explanation": "This indicates that the bladder is distended with urine, therefore palpable."
+  },
+  {
+    "question": "A client has undergone with penile implant. After 24 hrs of surgery, the client’s scrotum was edematous and painful. The nurse should:",
+    "choices": [
+      "Assist the client with sitz bath",
+      "Apply war soaks in the scrotum",
+      "Elevate the scrotum using a soft support",
+      "Prepare for a possible incision and drainage."
+    ],
+    "answer": 2,
+    "explanation": "Elevation increases lymphatic drainage, reducing edema and pain."
+  },
+  {
+    "question": "Nurse hazel receives emergency laboratory results for a client with chest pain and immediately informs the physician. An increased myoglobin level suggests which of the following?",
+    "choices": [
+      "Liver disease",
+      "Myocardial damage",
+      "Hypertension",
+      "Cancer"
+    ],
+    "answer": 1,
+    "explanation": "Detection of myoglobin is a diagnostic tool to determine whether myocardial damage has occurred."
+  },
+  {
+    "question": "Nurse Maureen would expect the a client with mitral stenosis would demonstrate symptoms associated with congestion in the:",
+    "choices": [
+      "Right atrium",
+      "Superior vena cava",
+      "Aorta",
+      "Pulmonary"
+    ],
+    "answer": 3,
+    "explanation": "When mitral stenosis is present, the left atrium has difficulty emptying its contents into the left ventricle because there is no valve to prevent back ward flow into the pulmonary vein, the pulmonary circulation is under pressure."
+  },
+  {
+    "question": "A client has been diagnosed with hypertension. The nurse priority nursing diagnosis would be:",
+    "choices": [
+      "Ineffective health maintenance",
+      "Impaired skin integrity",
+      "Deficient fluid volume",
+      "Pain"
+    ],
+    "answer": 0,
+    "explanation": "Managing hypertension is the priority for the client with hypertension. Clients with hypertension frequently do not experience pain, deficient volume, or impaired skin integrity. It is the asymptomatic nature of hypertension that makes it so difficult to treat."
+  },
+  {
+    "question": "Nurse Hazel teaches the client with angina about common expected side effects of nitroglycerin including:",
+    "choices": [
+      "high blood pressure",
+      "stomach cramps",
+      "headache",
+      "shortness of breath"
+    ],
+    "answer": 2,
+    "explanation": "Because of its widespread vasodilating effects, nitroglycerin often produces side effects such as headache, hypotension and dizziness."
+  },
+  {
+    "question": "The following are lipid abnormalities. Which of the following is a risk factor for the development of atherosclerosis and PVD?",
+    "choices": [
+      "High levels of low density lipid (LDL) cholesterol",
+      "High levels of high density lipid (HDL) cholesterol",
+      "Low concentration triglycerides",
+      "Low levels of LDL cholesterol."
+    ],
+    "answer": 0,
+    "explanation": "An increased in LDL cholesterol concentration has been documented at risk factor for the development of atherosclerosis. LDL cholesterol is not broken down into the liver but is deposited into the wall of the blood vessels."
+  },
+  {
+    "question": "Which of the following represents a significant risk immediately after surgery for repair of aortic aneurysm?",
+    "choices": [
+      "Potential wound infection",
+      "Potential ineffective coping",
+      "Potential electrolyte balance",
+      "Potential alteration in renal perfusion"
+    ],
+    "answer": 3,
+    "explanation": "There is a potential alteration in renal perfusion manifested by decreased urine output. The altered renal perfusion may be related to renal artery embolism, prolonged hypotension, or prolonged aortic cross-clamping during the surgery."
+  },
+  {
+    "question": "Nurse Josie should instruct the client to eat which of the following foods to obtain the best supply of Vitamin B12?",
+    "choices": [
+      "dairy products",
+      "vegetables",
+      "Grains",
+      "Broccoli"
+    ],
+    "answer": 0,
+    "explanation": "Good source of vitamin B12 are dairy products and meats."
+  },
+  {
+    "question": "Karen has been diagnosed with aplastic anemia. The nurse monitors for changes in which of the following physiologic functions?",
+    "choices": [
+      "Bowel function",
+      "Peripheral sensation",
+      "Bleeding tendencies",
+      "Intake and out put"
+    ],
+    "answer": 2,
+    "explanation": "Aplastic anemia decreases the bone marrow production of RBC’s, white blood cells, and platelets. The client is at risk for bruising and bleeding tendencies."
+  },
+  {
+    "question": "Lydia is scheduled for elective splenectomy. Before the clients goes to surgery, the nurse in charge final assessment would be:",
+    "choices": [
+      "signed consent",
+      "vital signs",
+      "name band",
+      "empty bladder"
+    ],
+    "answer": 1,
+    "explanation": "An elective procedure is scheduled in advance so that all preparations can be completed ahead of time. The vital signs are the final check that must be completed before the client leaves the room so that continuity of care and assessment is provided for."
+  },
+  {
+    "question": "What is the peak age range in acquiring acute lymphocytic leukemia (ALL)?",
+    "choices": [
+      "4 to 12 years.",
+      "20 to 30 years",
+      "40 to 50 years",
+      "60 60 70 years"
+    ],
+    "answer": 0,
+    "explanation": "The peak incidence of Acute Lymphocytic Leukemia (ALL) is 4 years of age. It is uncommon after 15 years of age."
+  },
+  {
+    "question": "Marie with acute lymphocytic leukemia suffers from nausea and headache. These clinical manifestations may indicate all of the following except",
+    "choices": [
+      "effects of radiation",
+      "chemotherapy side effects",
+      "meningeal irritation",
+      "gastric distension"
+    ],
+    "answer": 3,
+    "explanation": "Acute Lymphocytic Leukemia (ALL) does not cause gastric distention. It does invade the central nervous system, and clients experience headaches and vomiting from meningeal irritation."
+  },
+  {
+    "question": "A client has been diagnosed with Disseminated Intravascular Coagulation (DIC). Which of the following is contraindicated with the client?",
+    "choices": [
+      "Administering Heparin",
+      "Administering Coumadin",
+      "Treating the underlying cause",
+      "Replacing depleted blood products"
+    ],
+    "answer": 1,
+    "explanation": "Disseminated Intravascular Coagulation (DIC) has not been found to respond to oral anticoagulants such as Coumadin."
+  },
+  {
+    "question": "Which of the following findings is the best indication that fluid replacement for the client with hypovolemic shock is adequate?",
+    "choices": [
+      "Urine output greater than 30ml/hr",
+      "Respiratory rate of 21 breaths/minute",
+      "Diastolic blood pressure greater than 90 mmhg",
+      "Systolic blood pressure greater than 110 mmhg"
+    ],
+    "answer": 0,
+    "explanation": "Urine output provides the most sensitive indication of the client’s response to therapy for hypovolemic shock. Urine output should be consistently greater than 30 to 35 mL/hr."
+  },
+  {
+    "question": "Which of the following signs and symptoms would Nurse Maureen include in teaching plan as an early manifestation of laryngeal cancer?",
+    "choices": [
+      "Stomatitis",
+      "Airway obstruction",
+      "Hoarseness",
+      "Dysphagia"
+    ],
+    "answer": 2,
+    "explanation": "Early warning signs of laryngeal cancer can vary depending on tumor location. Hoarseness lasting 2 weeks should be evaluated because it is one of the most common warning signs."
+  },
+  {
+    "question": "Karina a client with myasthenia gravis is to receive immunosuppressive therapy. The nurse understands that this therapy is effective because it:",
+    "choices": [
+      "Promotes the removal of antibodies that impair the transmission of impulses",
+      "Stimulates the production of acetylcholine at the neuromuscular junction.",
+      "Decreases the production of autoantibodies that attack the acetylcholine receptors.",
+      "Inhibits the breakdown of acetylcholine at the neuromuscular junction."
+    ],
+    "answer": 2,
+    "explanation": "Steroids decrease the body’s immune response thus decreasing the production of antibodies that attack the acetylcholine receptors at the neuromuscular junction"
+  },
+  {
+    "question": "A female client is receiving IV Mannitol. An assessment specific to safe administration of the said drug is:",
+    "choices": [
+      "Vital signs q4h",
+      "Weighing daily",
+      "Urine output hourly",
+      "Level of consciousness q4h"
+    ],
+    "answer": 2,
+    "explanation": "The osmotic diuretic mannitol is contraindicated in the presence of inadequate renal function or heart failure because it increases the intravascular volume that must be filtered and excreted by the kidney."
+  },
+  {
+    "question": "Patricia a 20 year old college student with diabetes mellitus requests additional information about the advantages of using a pen like insulin delivery devices. The nurse explains that the advantages of these devices over syringes includes:",
+    "choices": [
+      "Accurate dose delivery",
+      "Shorter injection time",
+      "Lower cost with reusable insulin cartridges",
+      "Use of smaller gauge needle."
+    ],
+    "answer": 0,
+    "explanation": "These devices are more accurate because they are easily to used and have improved adherence in insulin regimens by young people because the medication can be administered discreetly."
+  },
+  {
+    "question": "A male client’s left tibia is fractures in an automobile accident, and a cast is applied. To assess for damage to major blood vessels from the fracture tibia, the nurse in charge should monitor the client for:",
+    "choices": [
+      "Swelling of the left thigh",
+      "Increased skin temperature of the foot",
+      "Prolonged reperfusion of the toes after blanching",
+      "Increased blood pressure"
+    ],
+    "answer": 2,
+    "explanation": "Damage to blood vessels may decrease the circulatory perfusion of the toes, this would indicate the lack of blood supply to the extremity."
+  },
+  {
+    "question": "After a long leg cast is removed, the male client should:",
+    "choices": [
+      "Cleanse the leg by scrubbing with a brisk motion",
+      "Put leg through full range of motion twice daily",
+      "Report any discomfort or stiffness to the physician",
+      "Elevate the leg when sitting for long periods of time."
+    ],
+    "answer": 3,
+    "explanation": "Elevation will help control the edema that usually occurs."
+  },
+  {
+    "question": "While performing a physical assessment of a male client with gout of the great toe, NurseVivian should assess for additional tophi (urate deposits) on the:",
+    "choices": [
+      "Buttocks",
+      "Ears",
+      "Face",
+      "Abdomen"
+    ],
+    "answer": 1,
+    "explanation": "Uric acid has a low solubility, it tends to precipitate and form deposits at various sites where blood flow is least active, including cartilaginous tissue such as the ears."
+  },
+  {
+    "question": "Nurse Katrina would recognize that the demonstration of crutch walking with tripod gait was understood when the client places weight on the:",
+    "choices": [
+      "Palms of the hands and axillary regions",
+      "Palms of the hand",
+      "Axillary regions",
+      "Feet, which are set apart"
+    ],
+    "answer": 1,
+    "explanation": "The palms should bear the client’s weight to avoid damage to the nerves in the axilla."
+  },
+  {
+    "question": "Mang Jose with rheumatoid arthritis states, “the only time I am without pain is when I lie in bed perfectly still”. During the convalescent stage, the nurse in charge with Mang Jose should encourage:",
+    "choices": [
+      "Active joint flexion and extension",
+      "Continued immobility until pain subsides",
+      "Range of motion exercises twice daily",
+      "Flexion exercises three times daily"
+    ],
+    "answer": 0,
+    "explanation": "Active exercises, alternating extension, flexion, abduction, and adduction, mobilize exudates in the joints relieves stiffness and pain."
+  },
+  {
+    "question": "A male client has undergone spinal surgery, the nurse should:",
+    "choices": [
+      "Observe the client’s bowel movement and voiding patterns",
+      "Log-roll the client to prone position",
+      "Assess the client’s feet for sensation and circulation",
+      "Encourage client to drink plenty of fluids"
+    ],
+    "answer": 2,
+    "explanation": "Alteration in sensation and circulation indicates damage to the spinal cord, if these occurs notify physician immediately."
+  },
+  {
+    "question": "Marina with acute renal failure moves into the diuretic phase after one week of therapy. During this phase the client must be assessed for signs of developing:",
+    "choices": [
+      "Hypovolemia",
+      "renal failure",
+      "metabolic acidosis",
+      "hyperkalemia"
+    ],
+    "answer": 0,
+    "explanation": "In the diuretic phase fluid retained during the oliguric phase is excreted and may reach 3 to 5 liters daily, hypovolemia may occur and fluids should be replaced."
+  },
+  {
+    "question": "Nurse Judith obtains a specimen of clear nasal drainage from a client with a head injury. Which of the following tests differentiates mucus from cerebrospinal fluid (CSF)?",
+    "choices": [
+      "Protein",
+      "Specific gravity",
+      "Glucose",
+      "Microorganism"
+    ],
+    "answer": 2,
+    "explanation": "The constituents of CSF are similar to those of blood plasma. An examination for glucose content is done to determine whether a body fluid is a mucus or a CSF. A CSF normally contains glucose."
+  },
+  {
+    "question": "A 22 year old client suffered from his first tonic-clonic seizure. Upon awakening the client asks the nurse, “What caused me to have a seizure? Which of the following would the nurse include in the primary cause of tonic clonic seizures in adults more the 20 years?",
+    "choices": [
+      "Electrolyte imbalance",
+      "Head trauma",
+      "Epilepsy",
+      "Congenital defect"
+    ],
+    "answer": 1,
+    "explanation": "Trauma is one of the primary cause of brain damage and seizure activity in adults. Other common causes of seizure activity in adults include neoplasms, withdrawal from drugs and alcohol, and vascular disease."
+  },
+  {
+    "question": "What is the priority nursing assessment in the first 24 hours after admission of the client with thrombotic CVA?",
+    "choices": [
+      "Pupil size and papillary response",
+      "cholesterol level",
+      "Echocardiogram",
+      "Bowel sounds"
+    ],
+    "answer": 0,
+    "explanation": "It is crucial to monitor the pupil size and papillary response to indicate changes around the cranial nerves."
+  },
+  {
+    "question": "Nurse Linda is preparing a client with multiple sclerosis for discharge from the hospital to home. Which of the following instruction is most appropriate?",
+    "choices": [
+      "“Practice using the mechanical aids that you will need when future disabilities arise”.",
+      "“Follow good health habits to change the course of the disease”.",
+      "“Keep active, use stress reduction strategies, and avoid fatigue.",
+      "“You will need to accept the necessity for a quiet and inactive lifestyle”."
+    ],
+    "answer": 2,
+    "explanation": "The nurse most positive approach is to encourage the client with multiple sclerosis to stay active, use stress reduction techniques and avoid fatigue because it is important to support the immune system while remaining active."
+  },
+  {
+    "question": "The nurse is aware the early indicator of hypoxia in the unconscious client is:",
+    "choices": [
+      "Cyanosis",
+      "Increased respirations",
+      "Hypertension",
+      "Restlessness"
+    ],
+    "answer": 3,
+    "explanation": "Restlessness is an early indicator of hypoxia. The nurse should suspect hypoxia in unconscious client who suddenly becomes restless."
+  },
+  {
+    "question": "A client is experiencing spinal shock. Nurse Myrna should expect the function of the bladder to be which of the following?",
+    "choices": [
+      "Normal",
+      "Atonic",
+      "Spastic",
+      "Uncontrolled"
+    ],
+    "answer": 1,
+    "explanation": "In spinal shock, the bladder becomes completely atonic and will continue to fill unless the client is catheterized."
+  },
+  {
+    "question": "Which of the following stage the carcinogen is irreversible?",
+    "choices": [
+      "Progression stage",
+      "Initiation stage",
+      "Regression stage",
+      "Promotion stage"
+    ],
+    "answer": 0,
+    "explanation": "Progression stage is the change of tumor from the preneoplastic state or low degree of malignancy to a fast growing tumor that cannot be reversed."
+  },
+  {
+    "question": "Among the following components thorough pain assessment, which is the most significant?",
+    "choices": [
+      "Effect",
+      "Cause",
+      "Causing factors",
+      "Intensity"
+    ],
+    "answer": 3,
+    "explanation": "Intensity is the major indicative of severity of pain and it is important for the evaluation of the treatment."
+  },
+  {
+    "question": "A 65 year old female is experiencing flare up of pruritus. Which of the client’s action could aggravate the cause of flare ups?",
+    "choices": [
+      "Sleeping in cool and humidified environment",
+      "Daily baths with fragrant soap",
+      "Using clothes made from 100% cotton",
+      "Increasing fluid intake"
+    ],
+    "answer": 1,
+    "explanation": "The use of fragrant soap is very drying to skin hence causing the pruritus."
+  },
+  {
+    "question": "Atropine sulfate (Atropine) is contraindicated in all but one of the following client?",
+    "choices": [
+      "A client with high blood",
+      "A client with bowel obstruction",
+      "A client with glaucoma",
+      "A client with U.T.I"
+    ],
+    "answer": 2,
+    "explanation": "Atropine sulfate is contraindicated with glaucoma patients because it increases intraocular pressure."
+  },
+  {
+    "question": "Among the following clients, which among them is high risk for potential hazards from the surgical experience?",
+    "choices": [
+      "67-year-old client",
+      "49-year-old client",
+      "33-year-old client",
+      "15-year-old client"
+    ],
+    "answer": 0,
+    "explanation": "A 67 year old client is greater risk because the older adult client is more likely to have a less-effective immune system."
+  },
+  {
+    "question": "Nurse Jon assesses vital signs on a client undergone epidural anesthesia. Which of the following would the nurse assess next?",
+    "choices": [
+      "Headache",
+      "Bladder distension",
+      "Dizziness",
+      "Ability to move legs"
+    ],
+    "answer": 1,
+    "explanation": "The last area to return sensation is in the perineal area, and the nurse in charge should monitor the client for distended bladder."
+  },
+  {
+    "question": "Nurse Katrina should anticipate that all of the following drugs may be used in the attempt to control the symptoms of Meniere’s disease except:",
+    "choices": [
+      "Antiemetics",
+      "Diuretics",
+      "Antihistamines",
+      "Glucocorticoids"
+    ],
+    "answer": 3,
+    "explanation": "Glucocorticoids play no significant role in disease treatment."
+  },
+  {
+    "question": "Which of the following complications associated with tracheostomy tube?",
+    "choices": [
+      "Increased cardiac output",
+      "Acute respiratory distress syndrome (ARDS)",
+      "Increased blood pressure",
+      "Damage to laryngeal nerves"
+    ],
+    "answer": 3,
+    "explanation": "Tracheostomy tube has several potential complications including bleeding, infection and laryngeal nerve damage."
+  },
+  {
+    "question": "Nurse Faith should recognize that fluid shift in an client with burn injury results from increase in the:",
+    "choices": [
+      "Total volume of circulating whole blood",
+      "Total volume of intravascular plasma",
+      "Permeability of capillary walls",
+      "Permeability of kidney tubules"
+    ],
+    "answer": 2,
+    "explanation": "In burn, the capillaries and small vessels dilate, and cell damage cause the release of a histamine-like substance. The substance causes the capillary walls to become more permeable and significant quantities of fluid are lost."
+  },
+  {
+    "question": "An 83-year-old woman has several ecchymotic areas on her right arm. The bruises are probably caused by:",
+    "choices": [
+      "increased capillary fragility and permeability",
+      "increased blood supply to the skin",
+      "self inflicted injury",
+      "elder abuse"
+    ],
+    "answer": 0,
+    "explanation": "Aging process involves increased capillary fragility and permeability. Older adults have a decreased amount of subcutaneous fat and cause an increased incidence of bruise like lesions caused by collection of extravascular blood inloosely structured dermis."
+  },
+  {
+    "question": "Nurse Anna is aware that early adaptation of client with renal carcinoma is:",
+    "choices": [
+      "Nausea and vomiting",
+      "flank pain",
+      "weight gain",
+      "intermittent hematuria"
+    ],
+    "answer": 3,
+    "explanation": "Intermittent pain is the classic sign of renal carcinoma. It is primarily due to capillary erosion by the cancerous growth."
+  },
+  {
+    "question": "A male client with tuberculosis asks Nurse Brian how long the chemotherapy must be continued. Nurse Brian’s accurate reply would be:",
+    "choices": [
+      "1 to 3 weeks",
+      "6 to 12 months",
+      "3 to 5 months",
+      "3 years and more"
+    ],
+    "answer": 1,
+    "explanation": "Tubercle bacillus is a drug resistant organism and takes a long time to be eradicated. Usually a combination of three drugs is used for minimum of 6 months and at least six months beyond culture conversion."
+  },
+  {
+    "question": "A client has undergone laryngectomy. The immediate nursing priority would be:",
+    "choices": [
+      "Keep trachea free of secretions",
+      "Monitor for signs of infection",
+      "Provide emotional support",
+      "Promote means of communication"
+    ],
+    "answer": 0,
+    "explanation": "Patent airway is the most priority; therefore removal of secretions is necessary."
+  },
+   {
+    "question": "Marco approached Nurse Trish asking for advice on how to deal with his alcohol addiction. Nurse Trish should tell the client that the only effective treatment for alcoholism is:",
+    "choices": [
+      "Psychotherapy",
+      "Alcoholics anonymous (A.A.)",
+      "Total abstinence",
+      "Aversion Therapy"
+    ],
+    "answer": 2,
+    "explanation": "Total abstinence is the only effective treatment for alcoholism"
+  },
+  {
+    "question": "Nurse Hazel is caring for a male client who experience false sensory perceptions with no basis in reality. This perception is known as:",
+    "choices": [
+      "Hallucinations",
+      "Delusions",
+      "Loose associations",
+      "Neologisms"
+    ],
+    "answer": 0,
+    "explanation": "Hallucinations are visual, auditory, gustatory, tactile or olfactory perceptions that have no basis in reality."
+  },
+  {
+    "question": "Nurse Monet is caring for a female client who has suicidal tendency. When accompanying the client to the restroom, Nurse Monet should…",
+    "choices": [
+      "Give her privacy",
+      "Allow her to urinate",
+      "Open the window and allow her to get some fresh air",
+      "Observe her"
+    ],
+    "answer": 3,
+    "explanation": "The Nurse has a responsibility to observe continuously the acutely suicidal client. The Nurse should watch for clues, such as communicating suicidal thoughts, and messages; hoarding medications and talking about death."
+  },
+  {
+    "question": "Nurse Maureen is developing a plan of care for a female client with anorexia nervosa. Which action should the nurse include in the plan?",
+    "choices": [
+      "Provide privacy during meals",
+      "Set-up a strict eating plan for the client",
+      "Encourage client to exercise to reduce anxiety",
+      "Restrict visits with the family"
+    ],
+    "answer": 1,
+    "explanation": "Establishing a consistent eating plan and monitoring client’s weight are important to this disorder."
+  },
+  {
+    "question": "A client is experiencing anxiety attack. The most appropriate nursing intervention should include?",
+    "choices": [
+      "Turning on the television",
+      "Leaving the client alone",
+      "Staying with the client and speaking in short sentences",
+      "Ask the client to play with other clients"
+    ],
+    "answer": 2,
+    "explanation": "Appropriate nursing interventions for an anxiety attack include using short sentences, staying with the client, decreasing stimuli, remaining calm and medicating as needed."
+  },
+  {
+    "question": "A female client is admitted with a diagnosis of delusions of GRANDEUR. This diagnosis reflects a belief that one is:",
+    "choices": [
+      "Being Killed",
+      "Highly famous and important",
+      "Responsible for evil world",
+      "Connected to client unrelated to oneself"
+    ],
+    "answer": 1,
+    "explanation": "Delusion of grandeur is a false belief that one is highly famous and important."
+  },
+  {
+    "question": "A 20 year old client was diagnosed with dependent personality disorder. Which behavior is not likely to be evidence of ineffective individual coping?",
+    "choices": [
+      "Recurrent self-destructive behavior",
+      "Avoiding relationship",
+      "Showing interest in solitary activities",
+      "Inability to make choices and decision without advise"
+    ],
+    "answer": 3,
+    "explanation": "Individual with dependent personality disorder typically shows indecisiveness submissiveness and clinging behavior so that others will make decisions with them."
+  },
+  {
+    "question": "A male client is diagnosed with schizotypal personality disorder. Which signs would this client exhibit during social situation?",
+    "choices": [
+      "Paranoid thoughts",
+      "Emotional affect",
+      "Independence need",
+      "Aggressive behavior"
+    ],
+    "answer": 0,
+    "explanation": "Clients with schizotypal personality disorder experience excessive social anxiety that can lead to paranoid thoughts"
+  },
+  {
+    "question": "Nurse Claire is caring for a client diagnosed with bulimia. The most appropriate initial goal for a client diagnosed with bulimia is?",
+    "choices": [
+      "Encourage to avoid foods",
+      "Identify anxiety causing situations",
+      "Eat only three meals a day",
+      "Avoid shopping plenty of groceries"
+    ],
+    "answer": 1,
+    "explanation": "Bulimia disorder generally is a maladaptive coping response to stress and underlying issues. The client should identify anxiety causing situation that stimulate the bulimic behavior and then learn new ways of coping with the anxiety."
+  },
+  {
+    "question": "Nurse Tony was caring for a 41 year old female client. Which behavior by the client indicates adult cognitive development?",
+    "choices": [
+      "Generates new levels of awareness",
+      "Assumes responsibility for her actions",
+      "Has maximum ability to solve problems and learn new skills",
+      "Her perception are based on reality"
+    ],
+    "answer": 0,
+    "explanation": "An adult age 31 to 45 generates new level of awareness."
+  },
+  {
+    "question": "A neuromuscular blocking agent is administered to a client before ECT therapy. The Nurse should carefully observe the client for?",
+    "choices": [
+      "Respiratory difficulties",
+      "Nausea and vomiting",
+      "Dizziness",
+      "Seizures"
+    ],
+    "answer": 0,
+    "explanation": "Neuromuscular Blocker, such as SUCCINYLCHOLINE (Anectine) produces respiratory depression because it inhibits contractions of respiratory muscles."
+  },
+  {
+    "question": "A 75 year old client is admitted to the hospital with the diagnosis of dementia of the Alzheimer’s type and depression. The symptom that is unrelated to depression would be?",
+    "choices": [
+      "Apathetic response to the environment",
+      "“I don’t know” answer to questions",
+      "Shallow of labile effect",
+      "Neglect of personal hygiene"
+    ],
+    "answer": 2,
+    "explanation": "With depression, there is little or no emotional involvement therefore little alteration in affect."
+  },
+  {
+    "question": "Nurse Trish is working in a mental health facility; the nurse priority nursing intervention for a newly admitted client with bulimia nervosa would be to?",
+    "choices": [
+      "Teach client to measure I & O",
+      "Involve client in planning daily meal",
+      "Observe client during meals",
+      "Monitor client continuously"
+    ],
+    "answer": 3,
+    "explanation": "These clients often hide food or force vomiting; therefore they must be carefully monitored."
+  },
+  {
+    "question": "Nurse Patricia is aware that the major health complication associated with intractable anorexia nervosa would be?",
+    "choices": [
+      "Cardiac dysrhythmias resulting to cardiac arrest",
+      "Glucose intolerance resulting in protracted hypoglycemia",
+      "Endocrine imbalance causing cold amenorrhea",
+      "Decreased metabolism causing cold intolerance"
+    ],
+    "answer": 0,
+    "explanation": "These clients have severely depleted levels of sodium and potassium because of their starvation diet and energy expenditure, these electrolytes are necessary for cardiac functioning."
+  },
+  {
+    "question": "Nurse Anna can minimize agitation in a disturbed client by?",
+    "choices": [
+      "Increasing stimulation",
+      "limiting unnecessary interaction",
+      "increasing appropriate sensory perception",
+      "ensuring constant client and staff contact"
+    ],
+    "answer": 1,
+    "explanation": "Limiting unnecessary interaction will decrease stimulation and agitation."
+  },
+  {
+    "question": "A 39 year old mother with obsessive-compulsive disorder has become immobilized by her elaborate hand washing and walking rituals. Nurse Trish recognizes that the basis of O.C. disorder is often:",
+    "choices": [
+      "Problems with being too conscientious",
+      "Problems with anger and remorse",
+      "Feelings of guilt and inadequacy",
+      "Feeling of unworthiness and hopelessness"
+    ],
+    "answer": 2,
+    "explanation": "Ritualistic behavior seen in this disorder is aimed at controlling guilt and inadequacy by maintaining an absolute set pattern of behavior."
+  },
+  {
+    "question": "Mario is complaining to other clients about not being allowed by staff to keep food in his room. Which of the following interventions would be most appropriate?",
+    "choices": [
+      "Allowing a snack to be kept in his room",
+      "Reprimanding the client",
+      "Ignoring the clients behavior",
+      "Setting limits on the behavior"
+    ],
+    "answer": 3,
+    "explanation": "The nurse needs to set limits in the client’s manipulative behavior to help the client control dysfunctional behavior. A consistent approach by the staff is necessary to decrease manipulation."
+  },
+  {
+    "question": "Conney with borderline personality disorder who is to be discharge soon threatens to “do something” to herself if discharged. Which of the following actions by the nurse would be most important?",
+    "choices": [
+      "Ask a family member to stay with the client at home temporarily",
+      "Discuss the meaning of the client’s statement with her",
+      "Request an immediate extension for the client",
+      "Ignore the clients statement because it’s a sign of manipulation"
+    ],
+    "answer": 1,
+    "explanation": "Any suicidal statement must be assessed by the nurse. The nurse should discuss the client’s statement with her to determine its meaning in terms of suicide."
+  },
+  {
+    "question": "Joey a client with antisocial personality disorder belches loudly. A staff member asks Joey, “Do you know why people find you repulsive?” this statement most likely would elicit which of the following client reaction?",
+    "choices": [
+      "Depensiveness",
+      "Embarrassment",
+      "Shame",
+      "Remorsefulness"
+    ],
+    "answer": 0,
+    "explanation": "When the staff member ask the client if he wonders why others find him repulsive, the client is likely to feel defensive because the question is belittling. The natural tendency is to counterattack the threat to self image."
+  },
+  {
+    "question": "Which of the following approaches would be most appropriate to use with a client suffering from narcissistic personality disorder when discrepancies exist between what the client states and what actually exist?",
+    "choices": [
+      "Rationalization",
+      "Supportive confrontation",
+      "Limit setting",
+      "Consistency"
+    ],
+    "answer": 1,
+    "explanation": "The nurse would specifically use supportive confrontation with the client to point out discrepancies between what the client states and what actually exists to increase responsibility for self."
+  },
+  {
+    "question": "Cely is experiencing alcohol withdrawal exhibits tremors, diaphoresis and hyperactivity. Blood pressure is 190/87 mmhg and pulse is 92 bpm. Which of the medications would the nurse expect to administer?",
+    "choices": [
+      "Naloxone (Narcan)",
+      "Benzlropine (Cogentin)",
+      "Lorazepam (Ativan)",
+      "Haloperidol (Haldol)"
+    ],
+    "answer": 2,
+    "explanation": "The nurse would most likely administer benzodiazepine, such as lorazepan (ativan) to the client who is experiencing symptom: The client’s experiences symptoms of withdrawal because of the rebound phenomenon when the sedation of the CNS from alcohol begins to decrease."
+  },
+  {
+    "question": "Which of the following foods would the nurse Trish eliminate from the diet of a client in alcohol withdrawal?",
+    "choices": [
+      "Milk",
+      "Orange Juice",
+      "Soda",
+      "Regular Coffee"
+    ],
+    "answer": 3,
+    "explanation": "Regular coffee contains caffeine which acts as psychomotor stimulants and leads to feelings of anxiety and agitation. Serving coffee top the client may add to tremors or wakefulness."
+  },
+  {
+    "question": "Which of the following would Nurse Hazel expect to assess for a client who is exhibiting late signs of heroin withdrawal?",
+    "choices": [
+      "Yawning & diaphoresis",
+      "Restlessness & Irritability",
+      "Constipation & steatorrhea",
+      "Vomiting and Diarrhea"
+    ],
+    "answer": 3,
+    "explanation": "Vomiting and diarrhea are usually the late signs of heroin withdrawal, along with muscle spasm, fever, nausea, repetitive, abdominal cramps and backache."
+  },
+  {
+    "question": "To establish open and trusting relationship with a female client who has been hospitalized with severe anxiety, the nurse in charge should?",
+    "choices": [
+      "Encourage the staff to have frequent interaction with the client",
+      "Share an activity with the client",
+      "Give client feedback about behavior",
+      "Respect client’s need for personal space"
+    ],
+    "answer": 3,
+    "explanation": "Moving to a client’s personal space increases the feeling of threat, which increases anxiety."
+  },
+  {
+    "question": "Nurse Monette recognizes that the focus of environmental (MILIEU) therapy is to:",
+    "choices": [
+      "Manipulate the environment to bring about positive changes in behavior",
+      "Allow the client’s freedom to determine whether or not they will be involved in activities",
+      "Role play life events to meet individual needs",
+      "Use natural remedies rather than drugs to control behavior"
+    ],
+    "answer": 0,
+    "explanation": "Environmental (MILIEU) therapy aims at having everything in the client’s surrounding area toward helping the client."
+  },
+  {
+    "question": "Nurse Trish would expect a child with a diagnosis of reactive attachment disorder to:",
+    "choices": [
+      "Have more positive relation with the father than the mother",
+      "Cling to mother & cry on separation",
+      "Be able to develop only superficial relation with the others",
+      "Have been physically abuse"
+    ],
+    "answer": 2,
+    "explanation": "Children who have experienced attachment difficulties with primary caregiver are not able to trust others and therefore relate superficially"
+  },
+  {
+    "question": "When teaching parents about childhood depression Nurse Trina should say?",
+    "choices": [
+      "It may appear acting out behavior",
+      "Does not respond to conventional treatment",
+      "Is short in duration & resolves easily",
+      "Looks almost identical to adult depression"
+    ],
+    "answer": 0,
+    "explanation": "Children have difficulty verbally expressing their feelings, acting out behavior, such as temper tantrums, may indicate underlying depression."
+  },
+  {
+    "question": "Nurse Perry is aware that language development in autistic child resembles:",
+    "choices": [
+      "Scanning speech",
+      "Speech lag",
+      "Shuttering",
+      "Echolalia"
+    ],
+    "answer": 3,
+    "explanation": "The autistic child repeat sounds or words spoken by others."
+  },
+  {
+    "question": "A 60 year old female client who lives alone tells the nurse at the community health center “I really don’t need anyone to talk to”. The TV is my best friend. The nurse recognizes that the client is using the defense mechanism known as?",
+    "choices": [
+      "Displacement",
+      "Projection",
+      "Sublimation",
+      "Denial"
+    ],
+    "answer": 3,
+    "explanation": "The client statement is an example of the use of denial, a defense that blocks problem by unconscious refusing to admit they exist"
+  },
+  {
+    "question": "When working with a male client suffering phobia about black cats, Nurse Trish should anticipate that a problem for this client would be?",
+    "choices": [
+      "Anxiety when discussing phobia",
+      "Anger toward the feared object",
+      "Denying that the phobia exist",
+      "Distortion of reality when completing daily routines"
+    ],
+    "answer": 0,
+    "explanation": "Discussion of the feared object triggers an emotional response to the object."
+  },
+  {
+    "question": "Linda is pacing the floor and appears extremely anxious. The duty nurse approaches in an attempt to alleviate Linda’s anxiety. The most therapeutic question by the nurse would be?",
+    "choices": [
+      "Would you like to watch TV?",
+      "Would you like me to talk with you?",
+      "Are you feeling upset now?",
+      "Ignore the client"
+    ],
+    "answer": 1,
+    "explanation": "The nurse presence may provide the client with support & feeling of control."
+  },
+  {
+    "question": "Nurse Penny is aware that the symptoms that distinguish post traumatic stress disorder from other anxiety disorder would be:",
+    "choices": [
+      "Avoidance of situation & certain activities that resemble the stress",
+      "Depression and a blunted affect when discussing the traumatic situation",
+      "Lack of interest in family & others",
+      "Re-experiencing the trauma in dreams or flashback"
+    ],
+    "answer": 3,
+    "explanation": "Experiencing the actual trauma in dreams or flashback is the major symptom that distinguishes post traumatic stress disorder from other anxiety disorder."
+  },
+  {
+    "question": "Nurse Benjie is communicating with a male client with substance-induced persisting dementia; the client cannot remember facts and fills in the gaps with imaginary information. Nurse Benjie is aware that this is typical of?",
+    "choices": [
+      "Flight of ideas",
+      "Associative looseness",
+      "Confabulation",
+      "Concretism"
+    ],
+    "answer": 2,
+    "explanation": "Confabulation or the filling in of memory gaps with imaginary facts is a defense mechanism used by people experiencing memory deficits."
+  },
+  {
+    "question": "Nurse Joey is aware that the signs & symptoms that would be most specific for diagnosis anorexia are?",
+    "choices": [
+      "Excessive weight loss, amenorrhea & abdominal distension",
+      "Slow pulse, 10% weight loss & alopecia",
+      "Compulsive behavior, excessive fears & nausea",
+      "Excessive activity, memory lapses & an increased pulse"
+    ],
+    "answer": 0,
+    "explanation": "These are the major signs of anorexia nervosa. Weight loss is excessive (15% of expected weight)"
+  },
+  {
+    "question": "A characteristic that would suggest to Nurse Anne that an adolescent may have bulimia would be:",
+    "choices": [
+      "Frequent regurgitation & re-swallowing of food",
+      "Previous history of gastritis",
+      "Badly stained teeth",
+      "Positive body image"
+    ],
+    "answer": 2,
+    "explanation": "Dental enamel erosion occurs from repeated self-induced vomiting."
+  },
+  {
+    "question": "Nurse Monette is aware that extremely depressed clients seem to do best in settings where they have:",
+    "choices": [
+      "Multiple stimuli",
+      "Routine Activities",
+      "Minimal decision making",
+      "Varied Activities"
+    ],
+    "answer": 1,
+    "explanation": "Depression usually is both emotional & physical. A simple daily routine is the best, least stressful and least anxiety producing."
+  },
+  {
+    "question": "To further assess a client’s suicidal potential. Nurse Katrina should be especially alert to the client expression of:",
+    "choices": [
+      "Frustration & fear of death",
+      "Anger & resentment",
+      "Anxiety & loneliness",
+      "Helplessness & hopelessness"
+    ],
+    "answer": 3,
+    "explanation": "The expression of these feeling may indicate that this client is unable to continue the struggle of life."
+  },
+  {
+    "question": "A nursing care plan for a male client with bipolar I disorder should include:",
+    "choices": [
+      "Providing a structured environment",
+      "Designing activities that will require the client to maintain contact with reality",
+      "Engaging the client in conversing about current affairs",
+      "Touching the client provide assurance"
+    ],
+    "answer": 0,
+    "explanation": "Structure tends to decrease agitation and anxiety and to increase the client’s feeling of security."
+  },
+  {
+    "question": "When planning care for a female client using ritualistic behavior, Nurse Gina must recognize that the ritual:",
+    "choices": [
+      "Helps the client focus on the inability to deal with reality",
+      "Helps the client control the anxiety",
+      "Is under the client’s conscious control",
+      "Is used by the client primarily for secondary gains"
+    ],
+    "answer": 1,
+    "explanation": "The rituals used by a client with obsessive compulsive disorder help control the anxiety level by maintaining a set pattern of action."
+  },
+  {
+    "question": "A 32 year old male graduate student, who has become increasingly withdrawn and neglectful of his work and personal hygiene, is brought to the psychiatric hospital by his parents. After detailed assessment, a diagnosis of schizophrenia is made. It is unlikely that the client will demonstrate:",
+    "choices": [
+      "Low self esteem",
+      "Concrete thinking",
+      "Effective self boundaries",
+      "Weak ego"
+    ],
+    "answer": 2,
+    "explanation": "A person with this disorder would not have adequate self-boundaries"
+  },
+  {
+    "question": "A 23 year old client has been admitted with a diagnosis of schizophrenia says to the nurse “Yes, its march, March is little woman”. That’s literal you know”. These statement illustrate:",
+    "choices": [
+      "Neologisms",
+      "Echolalia",
+      "Flight of ideas",
+      "Loosening of association"
+    ],
+    "answer": 3,
+    "explanation": "Loose associations are thoughts that are presented without the logical connections usually necessary for the listening to interpret the message."
+  },
+  {
+    "question": "A long term goal for a paranoid male client who has unjustifiably accused his wife of having many extramarital affairs would be to help the client develop:",
+    "choices": [
+      "Insight into his behavior",
+      "Better self control",
+      "Feeling of self worth",
+      "Faith in his wife"
+    ],
+    "answer": 2,
+    "explanation": "Helping the client to develop feeling of self worth would reduce the client’s need to use pathologic defenses."
+  },
+  {
+    "question": "A male client who is experiencing disordered thinking about food being poisoned is admitted to the mental health unit. The nurse uses which communication technique to encourage the client to eat dinner?",
+    "choices": [
+      "Focusing on self-disclosure of own food preference",
+      "Using open ended question and silence",
+      "Offering opinion about the need to eat",
+      "Verbalizing reasons that the client may not choose to eat"
+    ],
+    "answer": 1,
+    "explanation": "Open ended questions and silence are strategies used to encourage clients to discuss their problem in descriptive manner."
+  },
+  {
+    "question": "Nurse Nina is assigned to care for a client diagnosed with Catatonic Stupor. When Nurse Nina enters the client’s room, the client is found lying on the bed with a body pulled into a fetal position. Nurse Nina should?",
+    "choices": [
+      "Ask the client direct questions to encourage talking",
+      "Rake the client into the dayroom to be with other clients",
+      "Sit beside the client in silence and occasionally ask open-ended question",
+      "Leave the client alone and continue with providing care to the other clients"
+    ],
+    "answer": 2,
+    "explanation": "Clients who are withdrawn may be immobile and mute, and require consistent, repeated interventions. Communication with withdrawn clients requires much patience from the nurse. The nurse facilitates communication with the client by sitting in silence, asking open-ended question and pausing to provide opportunities for the client to respond."
+  },
+  {
+    "question": "Nurse Tina is caring for a client with delirium and states that “look at the spiders on the wall”. What should the nurse respond to the client?",
+    "choices": [
+      "“You’re having hallucination, there are no spiders in this room at all”",
+      "“I can see the spiders on the wall, but they are not going to hurt you”",
+      "“Would you like me to kill the spiders”",
+      "“I know you are frightened, but I do not see spiders on the wall”"
+    ],
+    "answer": 3,
+    "explanation": "When hallucination is present, the nurse should reinforce reality with the client."
+  },
+  {
+    "question": "Nurse Jonel is providing information to a community group about violence in the family. Which statement by a group member would indicate a need to provide additional information?",
+    "choices": [
+      "“Abuse occurs more in low-income families”",
+      "“Abuser Are often jealous or self-centered”",
+      "“Abuser use fear and intimidation”",
+      "“Abuser usually have poor self-esteem”"
+    ],
+    "answer": 0,
+    "explanation": "Personal characteristics of abuser include low self-esteem, immaturity, dependence, insecurity and jealousy."
+  },
+  {
+    "question": "During electroconvulsive therapy (ECT) the client receives oxygen by mask via positive pressure ventilation. The nurse assisting with this procedure knows that positive pressure ventilation is necessary because?",
+    "choices": [
+      "Anesthesia is administered during the procedure",
+      "Decrease oxygen to the brain increases confusion and disorientation",
+      "Grand mal seizure activity depresses respirations",
+      "Muscle relaxations given to prevent injury during seizure activity depress respirations."
+    ],
+    "answer": 3,
+    "explanation": "A short acting skeletal muscle relaxant such as succinylcholine (Anectine) is administered during this procedure to prevent injuries during seizure."
+  },
+  {
+    "question": "When planning the discharge of a client with chronic anxiety, Nurse Chris evaluates achievement of the discharge maintenance goals. Which goal would be most appropriately having been included in the plan of care requiring evaluation?",
+    "choices": [
+      "The client eliminates all anxiety from daily situations",
+      "The client ignores feelings of anxiety",
+      "The client identifies anxiety producing situations",
+      "The client maintains contact with a crisis counselor"
+    ],
+    "answer": 2,
+    "explanation": "Recognizing situations that produce anxiety allows the client to prepare to cope with anxiety or avoid specific stimulus."
+  },
+  {
+    "question": "Nurse Tina is caring for a client with depression who has not responded to antidepressant medication. The nurse anticipates that what treatment procedure may be prescribed.",
+    "choices": [
+      "Neuroleptic medication",
+      "Short term seclusion",
+      "Psychosurgery",
+      "Electroconvulsive therapy"
+    ],
+    "answer": 3,
+    "explanation": "Electroconvulsive therapy is an effective treatment for depression that has not responded to medication"
+  },
+  {
+    "question": "Mario is admitted to the emergency room with drug-included anxiety related to over ingestion of prescribed antipsychotic medication. The most important piece of information the nurse in charge should obtain initially is the:",
+    "choices": [
+      "Length of time on the med.",
+      "Name of the ingested medication & the amount ingested",
+      "Reason for the suicide attempt",
+      "Name of the nearest relative & their phone number"
+    ],
+    "answer": 1,
+    "explanation": "In an emergency, lives saving facts are obtained first. The name and the amount of medication ingested are of outmost important in treating this potentially life threatening situation."
+  }
+
   ],
   "pnle-exam-1": [
     
