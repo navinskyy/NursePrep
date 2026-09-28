@@ -159,12 +159,11 @@
 .goal-bar span {
   display: block;
   height: 100%;
-  width: 0%;
+  width: 100%;
   background: linear-gradient(90deg, var(--pink-400), var(--pink-600));
   border-radius: 999px;
-  /* Width animation runs once after the goal number is set, so the layout
-     cost is bounded; switching to scaleX would require changing the JS. */
-  transition: width 0.4s ease; /* impeccable-disable-line layout-transition */
+  transform: scaleX(0);
+  transform-origin: left center;
 }
 
 .goal-milestone {
@@ -173,7 +172,6 @@
   background: rgba(236, 111, 160, 0.08);
   border: 1px solid rgba(236, 111, 160, 0.25);
   border-radius: var(--radius-md);
-  animation: milestoneIn 0.35s ease-out;
 }
 
 .goal-milestone-row {
@@ -403,10 +401,11 @@
 .subject-progress span {
   display: block;
   height: 100%;
+  width: 100%;
   background: linear-gradient(90deg, var(--pink-400), var(--pink-600));
   border-radius: var(--radius-pill);
-  /* One-shot animation when subject progress loads. */
-  transition: width var(--dur-slow) var(--ease-out); /* impeccable-disable-line layout-transition */
+  transform: scaleX(0);
+  transform-origin: left center;
 }
 
 /* ============================================

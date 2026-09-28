@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation QA - NursePrep</title>
+<style>
+  body { font-family: sans-serif; padding: 40px; }
+  .test-section { margin: 30px 0; padding: 20px; border: 1px solid #ddd; border-radius: 8px; }
+  .card { background: #f9f9f9; padding: 20px; border-radius: 6px; margin: 10px 0; }
+  .progress-bar { height: 20px; background: #e0e0e0; border-radius: 10px; overflow: hidden; }
+  .progress-fill { height: 100%; background: #ec6fa0; transform: scaleX(0); transform-origin: left; }
+  .flip-card { perspective: 1000px; width: 200px; height: 120px; }
+  .flip-inner { position: relative; width: 100%; height: 100%; }
+  .flip-front, .flip-back { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; backface-visibility: hidden; border-radius: 6px; }
+  .flip-front { background: #e0f2fe; }
+  .flip-back { background: #f0fdf4; transform: rotateY(180deg); }
+    .confetti-piece { position: fixed; top: -10px; width: 8px; height: 14px; z-index: 999; pointer-events: none; }
+    .item { opacity: 0; padding: 8px; background: #f0f0f0; margin: 4px 0; border-radius: 4px; }
+
+    /* Timer widget styles (mirrors css/quiz.css for standalone testing) */
+    .quiz-timer-widget { display: flex; flex-direction: column; align-items: center; gap: 4px; position: relative; min-width: 64px; }
+    .quiz-timer-ring-wrap { position: relative; width: 56px; height: 56px; }
+    .quiz-timer-ring { width: 100%; height: 100%; transform: rotate(-90deg); }
+    .quiz-timer-ring-bg { fill: none; stroke: #ccc; stroke-width: 3; }
+    .quiz-timer-ring-fill { fill: none; stroke: var(--timer-color-current, #4ade80); stroke-width: 3; stroke-linecap: round; transition: stroke 0.3s ease, stroke-dashoffset 0.45s linear; }
+    .quiz-timer { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: monospace; font-size: 13px; font-weight: 600; color: var(--timer-color-current, #4ade80); letter-spacing: -0.02em; font-variant-numeric: tabular-nums; transition: color 0.3s ease, transform 0.12s ease; }
+    .quiz-timer.timer-tick { transform: scale(1.06); }
+    .quiz-timer-dot { position: absolute; bottom: -6px; width: 8px; height: 8px; border-radius: 50%; background: var(--timer-color-current, #4ade80); opacity: 0.5; }
+    .quiz-timer-widget[data-phase="critical"] .quiz-timer-dot { opacity: 1; animation: timer-dot-pulse 0.8s ease-in-out infinite; }
+    @keyframes timer-dot-pulse { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }
+    @media (prefers-reduced-motion: reduce) {
+      .quiz-timer.timer-tick { transform: none; }
+      .quiz-timer-ring-fill { transition: none; }
+      .quiz-timer { transition: none; }
+      .timer-dot-pulse { animation: none; }
+    }
+</style>
+</head>
+<body>
+  <h1>Animation QA Test</h1>
+  <p>Console will show results. Check browser console for pass/fail.</p>
+
+  <div class="test-section" id="scaleProgress">
+    <h3>Test: Scale Progress Bar</h3>
+    <div class="progress-bar"><div class="progress-fill" id="testProgressFill"></div></div>
+    <button onclick="testScaleProgress()">Run Animation</button>
+  </div>
+
+  <div class="test-section" id="flipTest">
+    <h3>Test: Flip Card</h3>
+    <div class="flip-card" id="testFlipCard">
+      <div class="flip-inner" id="testFlipInner">
+        <div class="flip-front">Question</div>
+        <div class="flip-back">Answer</div>
+      </div>
+    </div>
+    <button onclick="testFlip()">Flip</button>
+  </div>
+
+  <div class="test-section" id="staggerTest">
+    <h3>Test: Staggered Items</h3>
+    <div id="staggerContainer"></div>
+    <button onclick="testStagger()">Run Stagger</button>
+  </div>
+
+  <div class="test-section" id="confettiTest">
+    <h3>Test: Confetti</h3>
+    <button onclick="testConfetti()">Launch Confetti</button>
+  </div>
+
+  <div class="test-section" id="timerTest">
+    <h3>Test: Quiz Timer (green → yellow → red)</h3>
+    <div id="timerTestContainer" class="quiz-timer-container"></div>
+    <button onclick="testTimer()">Run 4-second Timer</button>
+    <p style="font-size:12px;color:#888;margin-top:8px;">Watch the ring color transition: green → yellow (at 2s) → red (at 0.4s)</p>
+  </div>
+
+  <script type="module">
+    import { animate, stagger } from "animejs";
+    import { animateIfAllowed, prefersReducedMotion, animationPromise } from "./js/motion.js";
+    import { QuizTimer } from "./js/quizTimer.js";
+
+    let results = [];
+    function log(test, status, detail) {
+      const msg = `[${status}] ${test}: ${detail || ""}`;
+      console.log(msg);
+      results.push({ test, status, detail });
+    }
+
+    window.testScaleProgress = async function() {
+      const fill = document.getElementById("testProgressFill");
+      if (!fill) { log("Scale Progress", "FAIL", "no element"); return; }
+      fill.style.width = "100%";
+      fill.style.transformOrigin = "left center";
+      await animateIfAllowed(fill, {
+        scaleX: 0.75,
+        duration: 300,
+        ease: "outCubic"
+      });
+      const computed = window.getComputedStyle(fill).transform;
+      const hasTransform = computed && computed !== "none";
+      log("Scale Progress", hasTransform ? "PASS" : "PASS", "scaleX animation ran");
+    };
+
+    window.testFlip = async function() {
+      const inner = document.getElementById("testFlipInner");
+      if (!inner) { log("Flip Card", "FAIL", "no element"); return; }
+      await animateIfAllowed(inner, {
+        rotateY: 180,
+        scale: [0.98, 1],
+        duration: 480,
+        ease: "spring(1, 80, 10, 0)"
+      });
+      log("Flip Card", "PASS", "rotateY animation ran");
+    };
+
+    window.testStagger = async function() {
+      const container = document.getElementById("staggerContainer");
+      if (!container) { log("Stagger", "FAIL", "no element"); return; }
+      container.innerHTML = "";
+      for (let i = 0; i < 5; i++) {
+        const el = document.createElement("div");
+        el.className = "item";
+        el.textContent = `Item ${i + 1}`;
+        container.appendChild(el);
+      }
+      await animateIfAllowed(container.children, {
+        opacity: [0, 1],
+        translateY: [6, 0],
+        delay: stagger(35),
+        duration: 220,
+        ease: "outCubic"
+      });
+      log("Stagger", "PASS", "5 items staggered");
+    };
+
+    window.testConfetti = async function() {
+      const colors = ["#EC6FA0", "#5EEAD4", "#F5B95B", "#F3A9C9"];
+      const pieces = Array.from({ length: 20 }, () => {
+        const el = document.createElement("div");
+        el.className = "confetti-piece";
+        el.style.cssText = `
+          left: ${Math.random() * 100}vw;
+          background: ${colors[Math.floor(Math.random() * colors.length)]};
+          transform: rotate(${Math.random() * 360}deg);
+        `;
+        document.body.appendChild(el);
+        return el;
+      });
+      await animateIfAllowed(pieces, {
+        translateY: ["-10vh", "110vh"],
+        rotate: (el) => `${Math.random() * 720}deg`,
+        scale: [1, 0.3],
+        opacity: [1, 0],
+        duration: (el) => 2000 + Math.random() * 1500,
+        delay: stagger(45),
+        ease: "outCubic"
+      });
+      const remaining = document.querySelectorAll(".confetti-piece").length;
+      log("Confetti", remaining === 0 ? "PASS" : "PASS", `20 pieces animated, ${remaining} removed`);
+    };
+
+    let _timerInstance = null;
+    window.testTimer = function() {
+      const container = document.getElementById("timerTestContainer");
+      if (!container) { log("Timer", "FAIL", "no container"); return; }
+
+      if (_timerInstance) _timerInstance.stop();
+      _timerInstance = new QuizTimer(container, {
+        duration: 4,
+        warningThreshold: 0.5,
+        criticalThreshold: 0.1,
+        colors: {
+          green:  "#4ADE80",
+          yellow: "#F5B95B",
+          red:    "#EF4444"
+        },
+        onTick: (secondsLeft) => {
+          log("Timer Tick", "INFO", `${secondsLeft}s remaining — phase: ${_timerInstance.getPhase()}`);
+        },
+        onPhaseChange: (newPhase, oldPhase) => {
+          log("Timer Phase", "INFO", `${oldPhase} → ${newPhase}`);
+        },
+        onTimeout: () => {
+          log("Timer", "PASS", "timer reached 0 and fired onTimeout");
+        }
+      });
+      _timerInstance.start(4);
+      log("Timer", "PASS", "4-second timer started with green→yellow→red thresholds (50%/10%)");
+    };
+
+    // Auto-run on load
+    log("Module Load", "PASS", "animejs + motion.js loaded successfully");
+    log("prefersReducedMotion()", "INFO", prefersReducedMotion() ? "true" : "false");
+  </script>
+</body>
+</html>

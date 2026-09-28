@@ -2,6 +2,7 @@ import { auth, db } from "../firebase/firebase.js";
 import { doc, getDoc } from "firebase/firestore";
 import { signOut } from "firebase/auth";
 import { getTotalWrongAnswerCount } from "../services/wrongAnswerService.js";
+import { animateIfAllowed, prefersReducedMotion } from "./motion.js";
 
 /* ============================================================
    NursePrep — Sidebar (single source of truth)
@@ -306,12 +307,14 @@ function initNavGroups() {
 
 function animatePageEnter() {
   const main = document.querySelector(".dash-main");
-  if (!main) return;
+  if (!main || prefersReducedMotion()) return;
 
-  main.classList.add("page-enter");
-  main.addEventListener("animationend", () => {
-    main.classList.remove("page-enter");
-  }, { once: true });
+  void animateIfAllowed(main, {
+    opacity: [0, 1],
+    translateY: [8, 0],
+    duration: 280,
+    ease: "outCubic"
+  }).catch(() => undefined);
 }
 
 function fallbackAvatar(name) {

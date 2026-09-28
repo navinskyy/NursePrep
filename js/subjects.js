@@ -3,6 +3,7 @@ import { doc, getDoc, collection, getDocs } from "firebase/firestore";
 import { getTotalWrongAnswerCount } from "../services/wrongAnswerService.js";
 
 import { getQuestionBank, getAvailableQuestionCount } from "../utils/utils.js";
+import { animateIfAllowed, prefersReducedMotion, stagger } from "./motion.js";
 
 const container = document.getElementById("subjectsGrid");
 const sidebarStreak = document.getElementById("sidebarStreak");
@@ -183,11 +184,38 @@ function renderCategories() {
   });
 }
 
+function animateCategoryCards() {
+  if (!container || prefersReducedMotion()) return;
+
+  const cards = Array.from(container.children);
+  if (!cards.length) return;
+
+  void animateIfAllowed(cards, {
+    opacity: [0, 1],
+    translateY: [8, 0],
+    delay: stagger(45),
+    duration: 240,
+    ease: "outCubic"
+  }).catch(() => undefined);
+
+  cards.forEach((card) => {
+    const fill = card.querySelector(".progress-fill");
+    if (!fill) return;
+    const progress = Number.parseFloat(getComputedStyle(fill).getPropertyValue("--progress")) || 0;
+    void animateIfAllowed(fill, {
+      scaleX: [0, progress / 100],
+      duration: 360,
+      ease: "outCubic"
+    }).catch(() => undefined);
+  });
+}
+
 async function init() {
   questionBank = await getQuestionBank();
   await loadCatalog();
   await loadUserProgress();
   renderCategories();
+  animateCategoryCards();
 }
 
 auth.onAuthStateChanged(async (user) => {

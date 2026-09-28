@@ -13,6 +13,7 @@
     "vite": "^8.1.1"
   },
   "dependencies": {
+    "animejs": "^4.5.0",
     "firebase": "^12.15.0"
   },
   "description": "A personalized PNLE review platform with adaptive quizzes, flashcards, progress tracking, and AI-powered explanations.",

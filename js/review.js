@@ -17,6 +17,8 @@ import {
     clearAllMistakes
 } from "../services/wrongAnswerService.js";
 
+import { animateIfAllowed, prefersReducedMotion, stagger } from "./motion.js";
+
 // Inlined here (not relying on utils.js's classic-script globals inside this module)
 const SUBJECT_NAMES = {
     pnleSets: "Comprehensive PNLE SETS",
@@ -399,6 +401,28 @@ function renderMistakeCard(mistake) {
     reviewCount.textContent = `${total} mistake${total !== 1 ? "s" : ""}`;
 
     bindCardEvents();
+
+    if (!prefersReducedMotion()) {
+        const card = reviewContent.querySelector(".review-card");
+        if (card) {
+            animateIfAllowed(card, {
+                opacity: [0, 1],
+                translateY: [8, 0],
+                duration: 280,
+                ease: "outCubic"
+            });
+        }
+        const feedbackPanel = reviewContent.querySelector(".review-feedback");
+        if (feedbackPanel) {
+            animateIfAllowed(feedbackPanel, {
+                opacity: [0, 1],
+                translateY: [4, 0],
+                duration: 260,
+                delay: 80,
+                ease: "outCubic"
+            });
+        }
+    }
 }
 
 // ======================================
@@ -506,7 +530,7 @@ function goNextMistake() {
         selectedAnswer = null;
         answered = false;
         renderMistakeCard(filteredMistakes[currentIdx]);
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        window.scrollTo({ top: 0, behavior: prefersReducedMotion() ? "auto" : "smooth" });
     } else {
         showCompletion();
     }
@@ -518,7 +542,7 @@ function goPrevMistake() {
     selectedAnswer = null;
     answered = false;
     renderMistakeCard(filteredMistakes[currentIdx]);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: prefersReducedMotion() ? "auto" : "smooth" });
 }
 
 async function removeCurrentMistake() {
@@ -565,6 +589,28 @@ async function showCompletion() {
     `;
     reviewCount.textContent = "0 mistakes";
     reviewProgressFill.style.width = "100%";
+
+    if (!prefersReducedMotion()) {
+        const completionCard = reviewContent.querySelector(".review-complete-state");
+        if (completionCard) {
+            animateIfAllowed(completionCard, {
+                opacity: [0, 1],
+                translateY: [10, 0],
+                duration: 320,
+                ease: "outCubic"
+            });
+            const completionChildren = completionCard.querySelectorAll(".review-complete-icon, .eyebrow, h2, p, .review-empty-actions > *");
+            if (completionChildren.length) {
+                animateIfAllowed(completionChildren, {
+                    opacity: [0, 1],
+                    translateY: [6, 0],
+                    duration: 240,
+                    delay: stagger(40),
+                    ease: "outCubic"
+                });
+            }
+        }
+    }
 }
 
 // ======================================

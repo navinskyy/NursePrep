@@ -24,6 +24,9 @@ import {
     saveWrongAnswers
 } from "../services/wrongAnswerService.js";
 
+import { animateIfAllowed, prefersReducedMotion, stagger } from "./motion.js";
+import { QuizTimer } from "./quizTimer.js";
+
 const SUBJECT_NAMES = {
 
     pnleSets: "Comprehensive PNLE SETS",
@@ -75,14 +78,17 @@ function getCanonicalSubjectKey() {
     return currentSubject || currentQuizId || "unknown";
 }
 
-const TIMER_RING_CIRC = 2 * Math.PI * 19;
 const ORIGINAL_PAGE_TITLE = document.title;
 
-let timeLeft = 0;
-let timerInterval = null;
-let timerDeadline = null;
+let quizTimer = null;
 let urgencyPulseInterval = null;
 let urgencyPulseActive = false;
+
+function formatTime(seconds) {
+  const mins = Math.floor(seconds / 60);
+  const secs = seconds % 60;
+  return `${String(mins).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
+}
 
 // Returns the active per-question duration from saved settings.
 // Re-read each call so changes in Settings take effect on the next question.
@@ -172,10 +178,7 @@ const prevBtn       = document.getElementById("quizPrev");
 const nextBtn       = document.getElementById("quizNext");
 const shellEl       = document.getElementById("quizShell");
 const subjectTitle  = document.getElementById("subjectTitle");
-const timerEl       = document.getElementById("quizTimer");
 const timerWidgetEl = document.getElementById("quizTimerWidget");
-const timerRingEl   = document.getElementById("quizTimerRing");
-const timerLabelEl  = document.getElementById("quizTimerLabel");
 const questionCard  = shellEl.querySelector(".question-card");
 const cornerFlashes = document.querySelectorAll(".corner-flash");
 const feedbackEl    = document.getElementById("quizFeedback");
@@ -263,11 +266,9 @@ function playIncorrectAnswerSound() {
 function startUrgencyPulse() {
    if (urgencyPulseActive) return;
    urgencyPulseActive = true;
-   let pulseTick = 0;
    urgencyPulseInterval = setInterval(() => {
-     if (!timerDeadline || document.hidden) return;
-     pulseTick++;
-     if (timeLeft <= 5) {
+     if (!quizTimer || !quizTimer.isRunning() || document.hidden) return;
+     if (quizTimer.getRemainingSeconds() <= 5) {
        playHeartbeat(1);
      }
    }, 500);
@@ -282,153 +283,94 @@ function stopUrgencyPulse() {
 }
 
 // ======================================
-// TIMER (deadline-based — survives tab switches)
+// TIMER (via reusable QuizTimer module)
 // ======================================
 
-function getRemainingSeconds() {
-  if (!timerDeadline) return 0;
-  return Math.max(0, Math.ceil((timerDeadline - Date.now()) / 1000));
+function initQuizTimer() {
+  if (quizTimer) return;
+
+  quizTimer = new QuizTimer(timerWidgetEl, {
+    duration: getQuestionDuration(),
+    warningThreshold: 0.5,
+    criticalThreshold: 0.1,
+    colors: {
+      green:  "var(--mint)",
+      yellow: "var(--amber)",
+      red:    "var(--danger)"
+    },
+    onTick: (secondsLeft) => {
+      playTimerTick(secondsLeft);
+      updatePageTitle(secondsLeft);
+      if (secondsLeft <= 5 && quizTimer && quizTimer.isRunning()) {
+        startUrgencyPulse();
+      } else {
+        stopUrgencyPulse();
+      }
+    },
+    onPhaseChange: (newPhase, oldPhase) => {
+      if (newPhase === "critical" && questionCard) {
+        if (!questionCard.classList.contains("shake")) {
+          questionCard.classList.add("shake");
+          questionCard.addEventListener("animationend", () => {
+            questionCard.classList.remove("shake");
+          }, { once: true });
+        }
+      }
+    },
+    onTimeout: () => {
+      handleTimeout();
+    }
+  });
 }
 
-function getTimerPhase(seconds) {
-  if (seconds <= 5) return "critical";
-  if (seconds <= 10) return "urgent";
-  if (seconds <= 20) return "warning";
-  return "calm";
-}
-
-function updateTimerDisplay(isTick = false) {
-   const mins = Math.floor(timeLeft / 60);
-   const secs = timeLeft % 60;
-   timerEl.textContent = `${String(mins).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
-   timerWidgetEl.setAttribute("aria-label",
-     `Time remaining: ${timeLeft} second${timeLeft === 1 ? "" : "s"}`);
-   timerWidgetEl.dataset.phase = getTimerPhase(timeLeft);
-
-   const phase = getTimerPhase(timeLeft);
-   const phases = ["calm", "warning", "urgent", "critical"];
-   phases.forEach((p) => {
-     timerWidgetEl.classList.toggle(`timer-${p}`, phase === p && p !== "calm");
-   });
-
-   if (timerRingEl) {
-     const duration = getQuestionDuration();
-     const progress = duration > 0 ? timeLeft / duration : 0;
-     timerRingEl.style.strokeDashoffset = String(TIMER_RING_CIRC * (1 - progress));
-   }
-
-   if (phase === "critical") {
-     timerLabelEl.textContent = "Hurry";
-     timerLabelEl.setAttribute("data-state", "critical");
-     if (!questionCard.classList.contains("shake")) {
-       questionCard.classList.add("shake");
-       questionCard.addEventListener("animationend", () => {
-         questionCard.classList.remove("shake");
-       }, { once: true });
-     }
-   } else if (phase === "urgent") {
-     timerLabelEl.textContent = "Running out";
-     timerLabelEl.setAttribute("data-state", "urgent");
-   } else if (phase === "warning") {
-     timerLabelEl.textContent = "Time left";
-     timerLabelEl.setAttribute("data-state", "warning");
-   } else {
-     timerLabelEl.textContent = "Time left";
-     timerLabelEl.setAttribute("data-state", "calm");
-   }
-
-   if (isTick) {
-     timerWidgetEl.classList.add("timer-tick");
-     setTimeout(() => timerWidgetEl.classList.remove("timer-tick"), 150);
-   }
-
-   if (document.hidden && timerDeadline) {
-     const icon = timeLeft <= 5 ? "🚨" : timeLeft <= 10 ? "⚠️" : "⏱";
-     document.title = `${icon} ${timerEl.textContent} — ANSWER NOW | NursePrep`;
-   } else {
-     document.title = ORIGINAL_PAGE_TITLE;
-   }
-
-if (timeLeft <= 5 && timerDeadline) {
-     startUrgencyPulse();
-   } else {
-     stopUrgencyPulse();
-   }
- }
-
-function tickTimer() {
-  if (!timerDeadline) return;
-
-  const remaining = getRemainingSeconds();
-  if (remaining !== timeLeft) {
-    timeLeft = remaining;
-    updateTimerDisplay(true);
-    playTimerTick(timeLeft);
-  }
-
-  if (timeLeft <= 0) {
-    stopTimer();
-    playTimeoutAlarm();
-    handleTimeout();
+function updatePageTitle(secondsLeft) {
+  if (document.hidden && quizTimer && quizTimer.isRunning()) {
+    const icon = secondsLeft <= 5 ? "🚨" : secondsLeft <= 10 ? "⚠️" : "⏱";
+    document.title = `${icon} ${formatTime(secondsLeft)} — ANSWER NOW | NursePrep`;
+  } else {
+    document.title = ORIGINAL_PAGE_TITLE;
   }
 }
 
 function startTimer() {
-  // Defensive: always clear any existing timer state first so we never
-  // run two intervals side-by-side.
-  stopTimer();
-
   const duration = getQuestionDuration();
   console.log("[Quiz Timer] starting question:", currentQuestion + 1,
               "duration:", duration + "s",
               "timerDisabled:", duration === 0);
 
+  if (!quizTimer) {
+    initQuizTimer();
+  } else {
+    quizTimer.setDuration(duration);
+  }
+
   if (duration <= 0) {
-    // No timer mode: leave deadline null so tickTimer short-circuits.
-    timeLeft = 0;
-    timerDeadline = null;
-    if (timerEl) timerEl.textContent = "—:—";
-    if (timerLabelEl) timerLabelEl.textContent = "No timer";
-    if (timerRingEl) timerRingEl.style.strokeDashoffset = String(TIMER_RING_CIRC);
-    timerWidgetEl?.classList.remove("timer-warning", "timer-urgent", "timer-critical", "timer-tick");
+    quizTimer.start(0);
+    if (quizTimer.labelEl) {
+      quizTimer.labelEl.textContent = "No timer";
+    }
+    console.log("[Quiz Timer] no timer — disabled in settings");
     return;
   }
 
-  timeLeft = duration;
-  timerDeadline = Date.now() + duration * 1000;
-  console.log("[Quiz Timer] configured duration:", duration + "s",
-              "deadline in:", duration * 1000 + "ms");
-  updateTimerDisplay();
-  // Use 250ms tick rate — fires fast enough that the displayed seconds
-  // value is always correct within a quarter-second, and avoids drift.
-  timerInterval = setInterval(tickTimer, 250);
+  console.log("[Quiz Timer] configured duration:", duration + "s");
+  quizTimer.start(duration);
 }
 
 function stopTimer() {
-  if (timerInterval) {
-    clearInterval(timerInterval);
-    timerInterval = null;
-  }
+  if (quizTimer) quizTimer.stop();
   stopUrgencyPulse();
-  timerDeadline = null;
   document.title = ORIGINAL_PAGE_TITLE;
-  timerWidgetEl.classList.remove("timer-warning", "timer-urgent", "timer-critical", "timer-tick");
-  if (timerRingEl) {
-    timerRingEl.style.strokeDashoffset = "0";
-  }
-  if (timerLabelEl) {
-    timerLabelEl.textContent = "Time left";
-    timerLabelEl.setAttribute("data-state", "calm");
-  }
-  timerWidgetEl.setAttribute("data-state", "inactive");
-  timerWidgetEl.setAttribute("aria-label", "Timer paused");
 }
 
 document.addEventListener("visibilitychange", () => {
-   if (!timerDeadline) return;
-   tickTimer();
-   if (timeLeft <= 5) startUrgencyPulse();
- });
+   if (!quizTimer || !quizTimer.isRunning()) {
+     stopUrgencyPulse();
+     document.title = ORIGINAL_PAGE_TITLE;
+     return;
+   }
+   quizTimer.resume();
+});
 
 document.addEventListener("click", unlockAudio, { once: true });
 document.addEventListener("keydown", unlockAudio, { once: true });
@@ -438,19 +380,20 @@ function autoSubmitAnswer() {
   // Timed-out: lock question with no selection so the user can still advance.
   if (answers[currentQuestion] !== null) return;
 
-  stopTimer();
   stopUrgencyPulse();
-  timerWidgetEl.setAttribute("data-state", "timeout");
-  if (timerLabelEl) {
-    timerLabelEl.textContent = "Time's up";
-    timerLabelEl.setAttribute("data-state", "critical");
-  }
-
   answers[currentQuestion] = -1; // sentinel: no selection (timed out)
   lockChoicesForFeedback();
 
   feedbackEl.classList.remove("is-correct", "is-incorrect");
   feedbackEl.classList.add("show", "is-incorrect");
+  if (!prefersReducedMotion()) {
+    animateIfAllowed(feedbackEl, {
+      opacity: [0, 1],
+      translateY: [4, 0],
+      duration: 280,
+      ease: "outCubic"
+    });
+  }
   feedbackIconEl.textContent = "!";
   feedbackTextEl.textContent = "Time's up — Incorrect. No points awarded.";
 
@@ -461,6 +404,14 @@ function autoSubmitAnswer() {
   if (explanation) {
     explanationTextEl.textContent = explanation;
     explanationEl.classList.add("show");
+    if (!prefersReducedMotion()) {
+      animateIfAllowed(explanationEl, {
+        opacity: [0, 1],
+        translateY: [4, 0],
+        duration: 260,
+        ease: "outCubic"
+      });
+    }
   }
 
   playTimeoutAlarm();
@@ -583,6 +534,22 @@ function loadQuestion(index) {
   }
 
   startTimer();
+
+  if (!prefersReducedMotion()) {
+    animateIfAllowed(questionCard, {
+      opacity: [0.5, 1],
+      translateY: [6, 0],
+      duration: 220,
+      ease: "outCubic"
+    });
+    animateIfAllowed(choicesEl.querySelectorAll(".choice"), {
+      opacity: [0, 1],
+      translateY: [4, 0],
+      duration: 180,
+      delay: stagger(25),
+      ease: "outCubic"
+    });
+  }
 }
 
 // Restores the post-answer feedback state for an already-answered question
@@ -597,6 +564,14 @@ function revealAnswerFeedback(index) {
 
   feedbackEl.classList.remove("is-correct", "is-incorrect");
   feedbackEl.classList.add("show");
+  if (!prefersReducedMotion()) {
+    animateIfAllowed(feedbackEl, {
+      opacity: [0, 1],
+      translateY: [4, 0],
+      duration: 260,
+      ease: "outCubic"
+    });
+  }
 
   if (timedOut) {
     feedbackEl.classList.add("is-incorrect");
@@ -630,6 +605,14 @@ function revealAnswerFeedback(index) {
   if (q.explanation) {
     explanationTextEl.textContent = q.explanation;
     explanationEl.classList.add("show");
+    if (!prefersReducedMotion()) {
+      animateIfAllowed(explanationEl, {
+        opacity: [0, 1],
+        translateY: [4, 0],
+        duration: 260,
+        ease: "outCubic"
+      });
+    }
   }
 
   nextBtn.disabled = false;
@@ -856,6 +839,14 @@ function checkAnswer(answerIndex) {
   // Feedback banner with text (not color-only).
   feedbackEl.classList.remove("is-correct", "is-incorrect");
   feedbackEl.classList.add("show");
+  if (!prefersReducedMotion()) {
+    animateIfAllowed(feedbackEl, {
+      opacity: [0, 1],
+      translateY: [4, 0],
+      duration: 280,
+      ease: "outCubic"
+    });
+  }
   if (isCorrect) {
     feedbackEl.classList.add("is-correct");
     feedbackIconEl.textContent = "\u2713";
@@ -872,6 +863,14 @@ function checkAnswer(answerIndex) {
   if (q.explanation) {
     explanationTextEl.textContent = q.explanation;
     explanationEl.classList.add("show");
+    if (!prefersReducedMotion()) {
+      animateIfAllowed(explanationEl, {
+        opacity: [0, 1],
+        translateY: [4, 0],
+        duration: 260,
+        ease: "outCubic"
+      });
+    }
   }
 
   // Incorrect feedback: keep the existing subtle shake + corner flashes,
@@ -1091,6 +1090,28 @@ async function showResult() {
 
         </div>
     `;
+
+    if (!prefersReducedMotion()) {
+        const resultCard = shellEl.querySelector(".quiz-result");
+        if (resultCard) {
+            animateIfAllowed(resultCard, {
+                opacity: [0, 1],
+                translateY: [12, 0],
+                duration: 340,
+                ease: "outCubic"
+            });
+            const resultChildren = resultCard.querySelectorAll(".eyebrow, h1, .score-display, .sub, .quiz-footer > *");
+            if (resultChildren.length) {
+                animateIfAllowed(resultChildren, {
+                    opacity: [0, 1],
+                    translateY: [6, 0],
+                    duration: 240,
+                    delay: stagger(40),
+                    ease: "outCubic"
+                });
+            }
+        }
+    }
 
 }
 

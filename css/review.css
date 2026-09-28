@@ -55,12 +55,6 @@
   border-radius: var(--radius-lg);
   padding: var(--space-7);
   box-shadow: var(--elev-1);
-  animation: reviewCardIn 0.32s var(--ease-out);
-}
-
-@keyframes reviewCardIn {
-  from { opacity: 0; transform: translateY(8px); }
-  to   { opacity: 1; transform: translateY(0); }
 }
 
 .review-card-header {
@@ -315,12 +309,6 @@ button.review-choice.is-user-pick .review-choice-tag {
   background: var(--bg-soft);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  animation: reviewFeedbackIn 0.3s var(--ease-out);
-}
-
-@keyframes reviewFeedbackIn {
-  from { opacity: 0; transform: translateY(4px); }
-  to   { opacity: 1; transform: translateY(0); }
 }
 
 .review-feedback-row { display: flex; flex-direction: column; gap: 6px; }

@@ -26,11 +26,33 @@ const googleProvider = new GoogleAuthProvider();
 // Firestore Database
 const db = getFirestore(app);
 
+const isEmulatorMode =
+  typeof window !== "undefined" &&
+  window.location.hostname === "localhost";
+
+if (isEmulatorMode) {
+  const emulatorHost = "localhost";
+  const authPort = 9099;
+  const firestorePort = 8080;
+
+  try {
+    auth.useEmulator(`http://${emulatorHost}:${authPort}`);
+  } catch {
+    // already initialized
+  }
+
+  try {
+    db.useEmulator(emulatorHost, firestorePort);
+  } catch {
+    // already initialized
+  }
+}
+
 export {
   app,
   auth,
   db,
-  googleProvider
+  googleProvider,
 };
 
 export default app;

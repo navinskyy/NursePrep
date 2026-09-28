@@ -16,12 +16,13 @@
 <!-- Sidebar injected by js/sidebar.js -->
 
 <main id="main-content" class="dash-main dash-main-center">
+  <div class="sr-only" id="flashLiveRegion" aria-live="polite" aria-atomic="true"></div>
   <div class="flash-shell" id="flashShell">
 
     <!-- Toolbar: subject picker, shuffle, favorite, saved view -->
     <div class="flash-toolbar">
       <div class="subject-picker">
-        <span class="eyebrow">Subject</span>
+        <label class="eyebrow" for="subjectSelect">Subject</label>
 <select id="subjectSelect">
            <option value="pnleSets">Comprehensive PNLE SETS</option>
            <option value="fundamentals">Foundation of Nursing</option>
@@ -31,7 +32,7 @@
            <option value="psychiatric">Psychiatric Nursing</option>
            <option value="allTopics">All Topics</option>
          </select>
-        <button class="icon-btn" id="favSubjectBtn" title="Favorite this subject" aria-label="Favorite this subject">
+        <button class="icon-btn" id="favSubjectBtn" title="Favorite this subject" aria-label="Favorite this subject" aria-pressed="false">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3L14.6 9.2L21.5 9.9L16.3 14.4L17.8 21.2L12 17.6L6.2 21.2L7.7 14.4L2.5 9.9L9.4 9.2L12 3Z" stroke-linejoin="round"/></svg>
         </button>
       </div>
@@ -42,13 +43,13 @@
           <span class="shuffle-track"><span class="shuffle-thumb"></span></span>
           <span class="shuffle-label">Shuffle</span>
         </label>
-        <button class="btn btn-secondary" id="savedToggleBtn">☆ Saved (<span id="savedCount">0</span>)</button>
+        <button class="btn btn-secondary" id="savedToggleBtn" aria-pressed="false">☆ Saved (<span id="savedCount">0</span>)</button>
       </div>
     </div>
 
     <!-- Progress: ring + fraction + mastery -->
     <div class="flash-progress-row">
-      <div class="progress-ring-wrap">
+      <div class="progress-ring-wrap" id="progressRing" role="img" aria-label="Study progress: 0%">
         <svg class="progress-ring" viewBox="0 0 44 44">
           <circle class="ring-track" cx="22" cy="22" r="18"></circle>
           <circle class="ring-fill" id="ringFill" cx="22" cy="22" r="18"></circle>
@@ -62,33 +63,33 @@
     </div>
 
     <!-- Card -->
-    <div class="flash-card" id="flashCard">
+    <div class="flash-card" id="flashCard" role="group" tabindex="0" aria-roledescription="flashcard" aria-label="Flashcard 1 of 1, question side" aria-describedby="flashHint">
       <div class="flash-inner">
-        <div class="flash-front" id="flashFront">
+        <div class="flash-front" id="flashFront" role="group" aria-label="Question" aria-hidden="false">
           <div class="flash-card-top">
             <span class="difficulty-badge" id="difficultyBadgeFront"></span>
             <div class="flash-card-icons">
               <button class="icon-btn" id="audioBtnFront" title="Read aloud" aria-label="Read question aloud">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 9V15H8L13 20V4L8 9H4Z" stroke-linejoin="round"/><path d="M16.5 9C17.5 10 17.5 14 16.5 15" stroke-linecap="round"/></svg>
               </button>
-              <button class="icon-btn bookmark-btn" id="bookmarkBtnFront" title="Bookmark this card" aria-label="Bookmark this card">
+              <button class="icon-btn bookmark-btn" id="bookmarkBtnFront" title="Bookmark this card" aria-label="Bookmark this card" aria-pressed="false">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3H18V21L12 17L6 21V3Z" stroke-linejoin="round"/></svg>
               </button>
             </div>
           </div>
           <span class="flash-side-label">Question</span>
           <div class="flash-text">Loading…</div>
-          <span class="flash-hint">Tap card to flip · Space/F</span>
+          <span class="flash-hint" id="flashHint">Tap card to flip · Space/F</span>
         </div>
 
-        <div class="flash-back" id="flashBack">
+        <div class="flash-back" id="flashBack" role="group" aria-label="Answer" aria-hidden="true">
           <div class="flash-card-top">
             <span class="flash-side-label">Answer</span>
             <div class="flash-card-icons">
               <button class="icon-btn" id="audioBtnBack" title="Read aloud" aria-label="Read answer aloud">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 9V15H8L13 20V4L8 9H4Z" stroke-linejoin="round"/><path d="M16.5 9C17.5 10 17.5 14 16.5 15" stroke-linecap="round"/></svg>
               </button>
-              <button class="icon-btn bookmark-btn" id="bookmarkBtnBack" title="Bookmark this card" aria-label="Bookmark this card">
+              <button class="icon-btn bookmark-btn" id="bookmarkBtnBack" title="Bookmark this card" aria-label="Bookmark this card" aria-pressed="false">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3H18V21L12 17L6 21V3Z" stroke-linejoin="round"/></svg>
               </button>
             </div>
@@ -105,24 +106,24 @@
 
     <!-- Basic nav -->
     <div class="flash-actions">
-      <button class="btn btn-secondary" id="prevCard" disabled>Previous</button>
-      <button class="btn btn-primary" id="flipCard">Reveal Answer</button>
-      <button class="btn btn-secondary" id="nextCard">Next</button>
+      <button class="btn btn-secondary" id="prevCard" disabled aria-label="Previous flashcard">Previous</button>
+      <button class="btn btn-primary" id="flipCard" aria-controls="flashCard" aria-expanded="false" aria-pressed="false" aria-keyshortcuts="Space F">Reveal Answer</button>
+      <button class="btn btn-primary" id="nextCard" aria-label="Next flashcard">Next</button>
     </div>
 
     <!-- Learned toggle -->
     <div class="flash-learned-row">
-      <button class="btn btn-secondary learned-btn" id="learnedBtn">✓ Mark as Learned</button>
+      <button class="btn btn-secondary learned-btn" id="learnedBtn" aria-pressed="false">✓ Mark as Learned</button>
     </div>
 
     <!-- Confidence rating (shown after flip) -->
-    <div class="confidence-panel" id="confidencePanel">
+    <div class="confidence-panel" id="confidencePanel" role="group" aria-label="Confidence rating">
       <p class="confidence-prompt">How well did you know this?</p>
       <div class="confidence-row">
-        <button class="confidence-btn" data-rating="again">😖<span>Again</span></button>
-        <button class="confidence-btn" data-rating="hard">😐<span>Hard</span></button>
-        <button class="confidence-btn" data-rating="good">🙂<span>Good</span></button>
-        <button class="confidence-btn" data-rating="easy">😎<span>Easy</span></button>
+        <button class="confidence-btn" data-rating="again" aria-label="Again, I need to review this card">😖<span>Again</span></button>
+        <button class="confidence-btn" data-rating="hard" aria-label="Hard, I partially knew this">😐<span>Hard</span></button>
+        <button class="confidence-btn" data-rating="good" aria-label="Good, I knew this">🙂<span>Good</span></button>
+        <button class="confidence-btn" data-rating="easy" aria-label="Easy, I knew this well">😎<span>Easy</span></button>
       </div>
     </div>
 

@@ -52,7 +52,16 @@
   color: var(--pink-300);
 }
 
-/* ── Urgency timer widget ── */
+/* ── Reusable Quiz Timer Widget ── */
+
+/* Configurable color palette (overridable via parent CSS or JS custom properties) */
+.quiz-timer-widget {
+  --timer-color-green:  var(--mint);
+  --timer-color-yellow: var(--amber);
+  --timer-color-red:    var(--danger);
+  --timer-color-current: var(--mint);
+}
+
 .quiz-timer-widget {
   display: flex;
   flex-direction: column;
@@ -82,11 +91,9 @@
 
 .quiz-timer-ring-fill {
   fill: none;
-  stroke: var(--mint);
+  stroke: var(--timer-color-current, var(--mint));
   stroke-width: 3;
   stroke-linecap: round;
-  stroke-dasharray: 119.38;
-  stroke-dashoffset: 0;
   transition: stroke var(--dur-slow) var(--ease-out),
               stroke-dashoffset 0.45s linear;
 }
@@ -100,88 +107,113 @@
   font-family: var(--font-mono);
   font-size: 13px;
   font-weight: 600;
-  color: var(--mint);
+  color: var(--timer-color-current, var(--mint));
   letter-spacing: -0.02em;
   font-variant-numeric: tabular-nums;
-  transition: color var(--dur-slow) var(--ease-out);
+  transition: color var(--dur-slow) var(--ease-out),
+              transform var(--dur-fast) var(--ease-out);
 }
 
+/* Status dot — non-color-only phase indicator (shape + position) */
+.quiz-timer-dot {
+  position: absolute;
+  bottom: -6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--timer-color-current, var(--mint));
+  opacity: 0.5;
+  transition: background var(--dur-slow) var(--ease-out),
+              opacity var(--dur-base) var(--ease-out);
+}
+
+/* Label — text changes with phase (non-color-only indicator) */
 .quiz-timer-label {
   font-size: 10px;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text-low);
-  transition: color var(--dur-slow) var(--ease-out);
+  transition: color var(--dur-slow) var(--ease-out),
+              text-indent var(--dur-base) var(--ease-out);
 }
 
-/* Inactive / answered: dim the widget so the timer clearly reads as paused */
+.quiz-timer-label[data-state="critical"] {
+  color: var(--timer-color-red, var(--danger));
+}
+
+.quiz-timer-label[data-state="warning"] {
+  color: var(--timer-color-yellow, var(--amber));
+}
+
+.quiz-timer-label[data-state="calm"],
+.quiz-timer-label[data-state="active"] {
+  color: var(--timer-color-green, var(--mint));
+}
+
+/* Pulse animation for the dot in critical phase */
+.quiz-timer-widget[data-phase="critical"] .quiz-timer-dot {
+  opacity: 1;
+  animation: timer-dot-pulse 0.8s ease-in-out infinite;
+}
+
+@keyframes timer-dot-pulse {
+  0%, 100% { opacity: 0.3; }
+  50%      { opacity: 1; }
+}
+
+/* Sub-tick scale only — replaces the heavy tick animation */
+.quiz-timer.timer-tick {
+  transform: scale(1.06);
+}
+
+/* Inactive / paused: dim the widget so the timer clearly reads as stopped */
 .quiz-timer-widget[data-state="inactive"] .quiz-timer,
-.quiz-timer-widget[data-state="inactive"] .quiz-timer-label,
-.quiz-timer-widget[data-state="inactive"] .quiz-timer-ring-fill {
+.quiz-timer-widget[data-state="inactive"] .quiz-timer-ring-fill,
+.quiz-timer-widget[data-state="inactive"] .quiz-timer-dot {
   color: var(--text-low);
   stroke: var(--text-low);
+  background: var(--text-low);
   opacity: 0.6;
 }
 
 /* Timeout: clearly frozen at 00:00 */
 .quiz-timer-widget[data-state="timeout"] .quiz-timer,
-.quiz-timer-widget[data-state="timeout"] .quiz-timer-label,
-.quiz-timer-widget[data-state="timeout"] .quiz-timer-ring-fill {
-  color: var(--danger);
-  stroke: var(--danger);
+.quiz-timer-widget[data-state="timeout"] .quiz-timer-ring-fill,
+.quiz-timer-widget[data-state="timeout"] .quiz-timer-dot {
+  color: var(--timer-color-red, var(--danger));
+  stroke: var(--timer-color-red, var(--danger));
+  background: var(--timer-color-red, var(--danger));
 }
+
 .quiz-timer-widget[data-state="timeout"] .quiz-timer-label::before {
   content: "";
   display: inline-block;
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--danger);
+  background: var(--timer-color-red, var(--danger));
   margin-right: 4px;
   vertical-align: middle;
 }
 
-/* Phase: warning (<=20s) */
-.quiz-timer-widget.timer-warning .quiz-timer-ring-fill,
-.quiz-timer-widget.timer-warning .quiz-timer,
-.quiz-timer-widget.timer-warning .quiz-timer-label {
-  color: var(--amber);
-  stroke: var(--amber);
-}
-
-/* Phase: urgent (<=10s) */
-.quiz-timer-widget.timer-urgent .quiz-timer-ring-fill,
-.quiz-timer-widget.timer-urgent .quiz-timer,
-.quiz-timer-widget.timer-urgent .quiz-timer-label {
-  color: #FF6B4A;
-  stroke: #FF6B4A;
-}
-
-/* Phase: critical (<=5s) — subtle scale, no excessive animation */
-.quiz-timer-widget.timer-critical .quiz-timer-ring-fill,
-.quiz-timer-widget.timer-critical .quiz-timer,
-.quiz-timer-widget.timer-critical .quiz-timer-label {
-  color: #FF6B4A;
-  stroke: #FF6B4A;
-}
-
-.quiz-timer-widget.timer-critical .quiz-timer {
-  font-size: 13.5px;
-}
-
-/* Sub-tick scale only — replaces the heavy tick animation */
-.quiz-timer-widget.timer-tick .quiz-timer {
-  transform: scale(1.04);
-  transition: transform 120ms var(--ease-out);
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .quiz-timer-widget.timer-tick .quiz-timer {
+  .quiz-timer.timer-tick {
     transform: none;
   }
   .quiz-timer-ring-fill {
     transition: none;
+  }
+  .quiz-timer {
+    transition: none;
+  }
+  .quiz-timer-dot {
+    animation: none;
+    opacity: 0.5;
+  }
+  .quiz-timer-widget[data-phase="critical"] .quiz-timer-dot,
+  .quiz-timer-widget[data-state="timeout"] .quiz-timer-dot {
+    opacity: 0.7;
   }
 }
 
@@ -372,7 +404,7 @@
   font-weight: 600;
   border: 1px solid transparent;
 }
-.quiz-feedback.show { display: flex; animation: quizFeedbackIn 0.35s var(--ease-out); }
+.quiz-feedback.show { display: flex; }
 
 .quiz-feedback.is-correct {
   background: var(--success-soft);
@@ -403,11 +435,6 @@
   color: #2a0a0a;
 }
 
-@keyframes quizFeedbackIn {
-  from { opacity: 0; transform: translateY(4px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
 /* Explanation panel */
 .quiz-explanation {
   display: none;
@@ -418,7 +445,7 @@
   border: 1px solid var(--border);
   border-left: 3px solid var(--pink-400);
 }
-.quiz-explanation.show { display: block; animation: quizFeedbackIn 0.4s var(--ease-out); }
+.quiz-explanation.show { display: block; }
 .quiz-explanation-eyebrow {
   display: block;
   font-family: var(--font-body);
@@ -578,10 +605,6 @@
 /* ============================================
    Animations
    ============================================ */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(6px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
 @keyframes quiz-shake {
   0%, 100% { transform: translateX(0); }
   20% { transform: translateX(-4px); }

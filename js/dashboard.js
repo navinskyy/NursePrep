@@ -18,7 +18,8 @@ import {
 } from "firebase/firestore";
 
 import { ensureUserProfile, bumpDailyStreak, getAchievementStatus, awardXP, getMonday, checkAchievements } from "./userProfile.js";
-import { getDailyGoal as readSavedDailyGoal, getUserSettings } from "../utils/utils.js";
+import { getDailyGoal as readSavedDailyGoal } from "../utils/utils.js";
+import { animateIfAllowed, prefersReducedMotion, stagger } from "./motion.js";
 
 // ===========================
 // ELEMENTS
@@ -88,6 +89,74 @@ function getGreeting() {
 
 }
 
+function animateNumber(el, target, options = {}) {
+    if (!el) return Promise.resolve();
+
+    const current = Number.parseFloat(el.textContent) || 0;
+    const next = Number.isFinite(target) ? target : 0;
+    const suffix = options.suffix || "";
+
+    if (prefersReducedMotion() || current === next) {
+        el.textContent = `${Math.round(next)}${suffix}`;
+        return Promise.resolve();
+    }
+
+    return animateIfAllowed({ value: current }, {
+        value: next,
+        duration: options.duration || 420,
+        ease: "outCubic",
+        onUpdate: (animation) => {
+            el.textContent = `${Math.round(animation.targets[0].value)}${suffix}`;
+        }
+    });
+}
+
+function animateScaleProgress(el, percent) {
+    if (!el) return Promise.resolve();
+
+    const next = Math.max(0, Math.min(100, Number(percent) || 0));
+    const scale = next / 100;
+
+    el.style.width = "100%";
+    el.style.transformOrigin = "left center";
+
+    if (prefersReducedMotion()) {
+        el.style.transform = `scaleX(${scale})`;
+        return Promise.resolve();
+    }
+
+    return animateIfAllowed(el, {
+        scaleX: scale,
+        duration: 420,
+        ease: "outCubic"
+    });
+}
+
+function animateActivityItems() {
+    if (!activityList || prefersReducedMotion()) return Promise.resolve();
+
+    return animateIfAllowed(Array.from(activityList.children), {
+        opacity: [0, 1],
+        translateY: [6, 0],
+        delay: stagger(35),
+        duration: 180,
+        ease: "outCubic"
+    });
+}
+
+function animateWeeklyBars() {
+    if (prefersReducedMotion()) return Promise.resolve();
+
+    const bars = Array.from(document.querySelectorAll(".week-bar"));
+
+    return animateIfAllowed(bars, {
+        scaleY: [0, 1],
+        delay: stagger(30),
+        duration: 320,
+        ease: "outCubic"
+    });
+}
+
 // ===========================
 // DAILY GOAL
 // Lives in Firestore as users/{uid}.dailyGoal + .questionsToday, not a
@@ -103,8 +172,8 @@ function renderGoal(answeredToday, dailyGoal) {
 
     const percent = Math.min((answeredToday / dailyGoal) * 100, 100);
 
-    goalFill.style.width = percent + "%";
     goalText.textContent = `${answeredToday}/${dailyGoal} questions today`;
+    void animateScaleProgress(goalFill, percent).catch(() => undefined);
 
 }
 
@@ -189,28 +258,17 @@ function wireGoalEditing(userRef, initialGoal, answeredToday) {
 let goalMilestoneShown = false;
 let goalMilestoneDate = "";
 
-async function fireConfetti() {
-    try {
-        const confetti = (await import("https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js")).default;
-        if (typeof confetti === "function") {
-            confetti({
-                particleCount: 120,
-                spread: 70,
-                origin: { y: 0.6 },
-                colors: ["#EC6FA0", "#7C8CFF", "#FF9F7F", "#00C9A7", "#FACC15"]
-            });
-        }
-    } catch (err) {
-        console.warn("Confetti failed to load:", err);
-    }
-}
-
 function showGoalMilestone(userRef) {
     if (!goalMilestone) return;
     goalMilestone.style.display = "block";
     goalMilestoneShown = true;
     goalMilestoneDate = new Date().toISOString().slice(0, 10);
-    fireConfetti();
+    void animateIfAllowed(goalMilestone, {
+        opacity: [0, 1],
+        translateY: [-4, 0],
+        duration: 220,
+        ease: "outCubic"
+    }).catch(() => undefined);
     awardXP(userRef.id || "", "dailyGoalMet").catch(() => {});
 }
 
@@ -270,10 +328,9 @@ function renderStrongestWeakest(subjectStats) {
     const weakest = sorted[sorted.length - 1];
 
     strongestName.textContent = strongest.title;
-    if (strongestValue) strongestValue.textContent = strongest.value + "%";
-
     weakestName.textContent = weakest.title;
-    if (weakestValue) weakestValue.textContent = weakest.value + "%";
+    if (strongestValue) void animateNumber(strongestValue, strongest.value, { suffix: "%" });
+    if (weakestValue) void animateNumber(weakestValue, weakest.value, { suffix: "%" });
 
 }
 
@@ -361,6 +418,7 @@ async function renderRecentActivity(uid) {
             activityList.appendChild(li);
 
         });
+        animateActivityItems();
 
     } catch (err) {
 
@@ -551,6 +609,7 @@ function initTimeTracker(uid) {
     }
 
     updateWeeklyBars(data);
+    animateWeeklyBars();
 
     const savedStartTime = getTimerStartTime();
 
@@ -608,6 +667,7 @@ function initTimeTracker(uid) {
             }
 
             updateWeeklyBars(stored);
+            animateWeeklyBars();
 
             startTimerBtn.disabled = false;
             studyStartTime = null;
@@ -791,26 +851,11 @@ onAuthStateChanged(auth, async (user) => {
         // Dashboard Stats
         // =====================
 
-        if (questionsAnswered) {
+        if (questionsAnswered) void animateNumber(questionsAnswered, data.questionsAnswered || 0);
 
-            questionsAnswered.textContent =
-                data.questionsAnswered || 0;
+        if (accuracy) void animateNumber(accuracy, data.accuracy || 0, { suffix: "%" });
 
-        }
-
-        if (accuracy) {
-
-            accuracy.textContent =
-                data.accuracy || 0;
-
-        }
-
-        if (streak) {
-
-            streak.textContent =
-                data.streak || 0;
-
-        }
+        if (streak) void animateNumber(streak, data.streak || 0);
 
         if (sidebarStreak) {
 
@@ -892,9 +937,7 @@ onAuthStateChanged(auth, async (user) => {
                 pct.textContent =
                     finalProgress + "%";
 
-            if (bar)
-                bar.style.width =
-                    finalProgress + "%";
+            if (bar) void animateScaleProgress(bar, finalProgress).catch(() => undefined);
 
             subjectStats.push({ title, key, value: finalProgress });
 
