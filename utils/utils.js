@@ -44,6 +44,11 @@ export const SUBJECT_COLORS = {
 // SMALL HELPERS
 // ======================================
 
+export function plural(count, word, pluralWord = `${word}s`) {
+    const n = Number(count) || 0;
+    return `${n} ${n === 1 ? word : pluralWord}`;
+}
+
 export function pad(number) {
     return String(number).padStart(2, "0");
 }

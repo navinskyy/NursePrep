@@ -9,8 +9,6 @@
   margin: 10px 0 0;
 }
 
-.mono { font-family: var(--font-mono); }
-
 .dash-header p {
   color: var(--text-mid);
   margin: 8px 0 0;
@@ -57,14 +55,16 @@
 }
 
 .stat-card .stat-value .num {
-  font-family: var(--font-mono);
-  font-size: 30px;
+  font-family: var(--font-display);
+  font-size: 34px;
   font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.02em;
 }
 
 .stat-card .stat-value .suffix {
-  font-family: var(--font-mono);
-  font-size: 15px;
+  font-family: var(--font-body);
+  font-size: 14px;
   color: var(--text-low);
 }
 
@@ -78,12 +78,6 @@
   color: var(--text-low);
 }
 
-.stat-card .sparkline {
-  display: block;
-  margin-top: 14px;
-  width: 100%;
-  height: 34px;
-}
 
 /* ============================================
    Today row — Daily goal + Continue where you left off
@@ -252,8 +246,17 @@
 .insight-card.strongest h4 { color: var(--mint); }
 .insight-card.weakest h4 { color: var(--pink-300); }
 
+/* No data yet: read as a quiet note, not as a colored result. */
+.insight-card h4.is-empty {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-hi);
+}
+
 .insight-value {
-  font-family: var(--font-mono);
+  display: block;
+  font-family: var(--font-data);
   font-size: 13px;
   color: var(--text-low);
 }
@@ -304,7 +307,7 @@
 }
 
 .activity-time {
-  font-family: var(--font-mono);
+  font-family: var(--font-data);
   font-size: 11.5px;
   color: var(--text-low);
   white-space: nowrap;
@@ -338,7 +341,8 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: var(--space-5);
-  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
   transition: transform var(--dur-base) var(--ease-out),
               border-color var(--dur-base) var(--ease-out),
               box-shadow var(--dur-base) var(--ease-out);
@@ -366,6 +370,7 @@
   height: 42px;
   border-radius: var(--radius-md);
   background: rgba(236, 111, 160, 0.12);
+  color: var(--pink-300);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -374,7 +379,7 @@
 }
 
 .subject-pct {
-  font-family: var(--font-mono);
+  font-family: var(--font-data);
   font-size: 12.5px;
   color: var(--pink-300);
   padding-top: 4px;
@@ -534,7 +539,7 @@
 }
 
 .achievement-mini-status {
-  font-family: var(--font-mono);
+  font-family: var(--font-data);
   font-size: 10px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -610,17 +615,6 @@
   box-shadow: var(--elev-1);
 }
 
-.timer-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--pink-400), var(--mint), var(--amber));
-  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
-  opacity: 0.8;
-}
 
 .pnle-countdown {
   display: flex;
@@ -669,10 +663,16 @@
 
 .timer-subtitle {
   text-align: center;
-  font-size: 12px;
-  color: var(--text-low);
-  margin-top: 12px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-mid);
+  max-width: 36ch;
+  margin: 0 auto;
 }
+
+.timer-card { align-items: stretch; }
+.timer-card .eyebrow { text-align: left; }
+.pnle-countdown[hidden] { display: none; }
 
 /* ============================================
    Time tracker
@@ -687,17 +687,6 @@
   box-shadow: var(--elev-1);
 }
 
-.time-tracker-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--mint), var(--pink-400));
-  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
-  opacity: 0.8;
-}
 
 .time-tracker-display {
   display: flex;
@@ -716,11 +705,8 @@
 }
 
 .time-tracker-label {
-  font-size: 12px;
+  font-size: 13px;
   color: var(--text-low);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-weight: 600;
 }
 
 .time-tracker-actions {
@@ -769,7 +755,7 @@
   transform: translateX(-50%);
   font-size: 10px;
   color: var(--text-low);
-  font-family: var(--font-mono);
+  font-family: var(--font-data);
   white-space: nowrap;
 }
 
@@ -832,4 +818,25 @@
   .time-tracker-btn {
     width: 100%;
   }
+}
+/* ============================================
+   Phone layout — one column, priority order
+   ============================================ */
+@media (max-width: 600px) {
+  .dash-today-row,
+  .dash-insight-row {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+
+  .dash-stats {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3);
+  }
+
+  .dash-stats .stat-card:first-child { grid-column: 1 / -1; }
+
+  .stat-card .stat-value .num { font-size: 28px; }
+
+  .dash-subjects { gap: var(--space-3); }
 }

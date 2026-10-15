@@ -15,7 +15,6 @@ import {
 
 import { ensureUserProfile } from "./userProfile.js";
 
-console.log("✅ login.js loaded");
 
 // ====================
 // Elements
@@ -89,7 +88,6 @@ loginForm.addEventListener("submit", async (e) => {
 
     e.preventDefault();
 
-    console.log("🟢 Login button clicked");
 
     try {
 
@@ -115,7 +113,6 @@ loginForm.addEventListener("submit", async (e) => {
 
         );
 
-        console.log("✅ Login Success");
 
         hideLoading();
 
@@ -184,8 +181,6 @@ googleLogin.addEventListener("click", async () => {
         const result = await signInWithPopup(auth, googleProvider);
         const user = result.user;
 
-        console.log("Google User:", user);
-        console.log("UID:", user.uid);
 
         // Single shared function — same shape as every other signup path,
         // and never overwrites an existing profile.

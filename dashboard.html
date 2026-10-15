@@ -30,16 +30,45 @@
     <p id="welcomeMessage">Loading...</p>
   </div>
 
+  <div class="dash-today-row">
+    <div class="mini-card continue-card">
+      <span class="eyebrow">Continue where you left off</span>
+      <h4 id="continueLabel">Loading…</h4>
+      <p id="continueDetail"></p>
+      <a class="btn btn-primary continue-card-link" id="continueLink" href="subjects.html">Browse subjects</a>
+    </div>
+    <div class="mini-card goal-card">
+      <div class="mini-card-head">
+        <span class="eyebrow">Daily goal</span>
+        <button class="goal-edit-btn" id="goalEditBtn" aria-label="Edit daily goal" type="button">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20h9" stroke-linecap="round"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+      <p class="goal-text" id="goalText">Loading…</p>
+      <input class="goal-input" id="goalInput" type="number" min="1" step="1" inputmode="numeric" aria-label="Daily question goal">
+      <div class="goal-bar"><span id="goalFill"></span></div>
+      <div class="goal-milestone" id="goalMilestone" style="display:none">
+        <div class="goal-milestone-row">
+          <span class="goal-milestone-icon" data-icon="sparkle" data-icon-size="18"></span>
+          <span class="goal-milestone-text">Goal complete! Amazing work.</span>
+        </div>
+        <div class="goal-upsell" id="goalUpsell">
+          <button class="btn btn-primary goal-upsell-btn" id="goalUpsellMore">Keep going (+5)</button>
+          <button class="btn btn-secondary goal-upsell-btn" id="goalUpsellFlashcards">Review flashcards</button>
+          <button class="btn btn-secondary goal-upsell-btn" id="goalUpsellDone">Done for now</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
   <div class="dash-stats">
     <div class="stat-card pink">
-      <span class="eyebrow">Questions Answered</span>
+      <span class="eyebrow">Questions answered</span>
       <div class="stat-value">
         <span class="num" id="questionsAnswered">0</span>
       </div>
       <p class="trend" id="questionsTrend">Keep practicing!</p>
-      <svg class="sparkline" viewBox="0 0 220 34" fill="none" preserveAspectRatio="none">
-        <path d="M0 26L28 22L56 27L84 15L112 19L140 9L168 13L196 4L220 8" stroke="#EC6FA0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
     </div>
 
     <div class="stat-card mint">
@@ -53,14 +82,14 @@
 
     <div class="stat-card amber">
       <span class="eyebrow">Streak</span>
-      <div class="stat-value"><span class="num" id="streak">0</span><span class="suffix">days</span></div>
+      <div class="stat-value"><span class="num" id="streak">0</span><span class="suffix" id="streakSuffix">days</span></div>
       <p class="trend" id="bestStreak">Best streak: 0 days</p>
     </div>
   </div>
 
   <div class="dash-timer-row">
     <div class="mini-card timer-card">
-      <span class="eyebrow">PNLE Board Exam Countdown</span>
+      <span class="eyebrow">PNLE countdown</span>
       <div class="pnle-countdown" id="pnleCountdown">
         <div class="countdown-unit">
           <span class="countdown-value" id="countdownDays">00</span>
@@ -82,11 +111,11 @@
           <span class="countdown-label">Seconds</span>
         </div>
       </div>
-      <p class="timer-subtitle" id="pnleExamDate">Next PNLE: March 14, 2027</p>
+      <p class="timer-subtitle" id="pnleExamDate"></p>
     </div>
 
     <div class="mini-card time-tracker-card">
-      <span class="eyebrow">Study Time Tracker</span>
+      <span class="eyebrow">Study timer</span>
       <div class="time-tracker-display">
         <span class="time-tracker-value" id="studyTimeToday">00:00:00</span>
         <span class="time-tracker-label">Today's study time</span>
@@ -104,38 +133,6 @@
         <div class="week-bar" data-day="Sat" style="--pct:0%"><span>Sat</span></div>
         <div class="week-bar" data-day="Sun" style="--pct:0%"><span>Sun</span></div>
       </div>
-    </div>
-  </div>
-
-  <div class="dash-today-row">
-    <div class="mini-card goal-card">
-      <div class="mini-card-head">
-        <span class="eyebrow">Daily goal</span>
-        <button class="goal-edit-btn" id="goalEditBtn" aria-label="Edit daily goal" type="button">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20h9" stroke-linecap="round"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z" stroke-linejoin="round"/></svg>
-        </button>
-      </div>
-      <p class="goal-text mono" id="goalText">Loading…</p>
-      <input class="goal-input mono" id="goalInput" type="number" min="1" step="1" inputmode="numeric" aria-label="Daily question goal">
-      <div class="goal-bar"><span id="goalFill"></span></div>
-      <div class="goal-milestone" id="goalMilestone" style="display:none">
-        <div class="goal-milestone-row">
-          <span class="goal-milestone-icon">🎉</span>
-          <span class="goal-milestone-text">Goal complete! Amazing work.</span>
-        </div>
-        <div class="goal-upsell" id="goalUpsell">
-          <button class="btn btn-primary goal-upsell-btn" id="goalUpsellMore">Keep going (+5)</button>
-          <button class="btn btn-secondary goal-upsell-btn" id="goalUpsellFlashcards">Review flashcards</button>
-          <button class="btn btn-secondary goal-upsell-btn" id="goalUpsellDone">Done for now</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="mini-card continue-card">
-      <span class="eyebrow">Continue where you left off</span>
-      <h4 id="continueLabel">Loading…</h4>
-      <p id="continueDetail"></p>
-      <a class="btn btn-secondary continue-card-link" id="continueLink" href="subjects.html">Browse subjects</a>
     </div>
   </div>
 
@@ -161,82 +158,82 @@
 
   <div class="dash-subjects">
 
-    <div class="subject-card">
+    <a class="subject-card" href="quiz-list.html?category=pnleSets">
       <div class="subject-card-top">
         <div class="subject-icon">
-          <span style="font-size: 20px;">📚</span>
+          <span data-icon="books"></span>
         </div>
         <span id="pnleSetsPct" class="subject-pct">0%</span>
       </div>
       <h4>Comprehensive PNLE SETS</h4>
       <div class="subject-progress"><span id="pnleSetsBar" style="width:0%"></span></div>
-    </div>
+    </a>
 
-    <div class="subject-card">
+    <a class="subject-card" href="quiz-list.html?category=foundation">
       <div class="subject-card-top">
         <div class="subject-icon">
-          <span style="font-size: 20px;">🏥</span>
+          <span data-icon="cross"></span>
         </div>
         <span id="foundationPct" class="subject-pct">0%</span>
       </div>
       <h4>Foundation of Nursing</h4>
       <div class="subject-progress"><span id="foundationBar" style="width:0%"></span></div>
-    </div>
+    </a>
 
-    <div class="subject-card">
+    <a class="subject-card" href="quiz-list.html?category=maternalChild">
       <div class="subject-card-top">
         <div class="subject-icon">
-          <span style="font-size: 20px;">👶</span>
+          <span data-icon="baby"></span>
         </div>
         <span id="maternalChildPct" class="subject-pct">0%</span>
       </div>
       <h4>Maternal &amp; Child Nursing</h4>
       <div class="subject-progress"><span id="maternalChildBar" style="width:0%"></span></div>
-    </div>
+    </a>
 
-    <div class="subject-card">
+    <a class="subject-card" href="quiz-list.html?category=community">
       <div class="subject-card-top">
         <div class="subject-icon">
-          <span style="font-size: 20px;">🌍</span>
+          <span data-icon="globe"></span>
         </div>
         <span id="communityPct" class="subject-pct">0%</span>
       </div>
       <h4>Community Health Nursing</h4>
       <div class="subject-progress"><span id="communityBar" style="width:0%"></span></div>
-    </div>
+    </a>
 
-    <div class="subject-card">
+    <a class="subject-card" href="quiz-list.html?category=medSurg">
       <div class="subject-card-top">
         <div class="subject-icon">
-          <span style="font-size: 20px;">🩺</span>
+          <span data-icon="stethoscope"></span>
         </div>
         <span id="medSurgPct" class="subject-pct">0%</span>
       </div>
       <h4>Medical-Surgical Nursing</h4>
       <div class="subject-progress"><span id="medSurgBar" style="width:0%"></span></div>
-    </div>
+    </a>
 
-    <div class="subject-card">
+    <a class="subject-card" href="quiz-list.html?category=psychiatric">
       <div class="subject-card-top">
         <div class="subject-icon">
-          <span style="font-size: 20px;">🧠</span>
+          <span data-icon="brain"></span>
         </div>
         <span id="psychiatricPct" class="subject-pct">0%</span>
       </div>
       <h4>Psychiatric Nursing</h4>
       <div class="subject-progress"><span id="psychiatricBar" style="width:0%"></span></div>
-    </div>
+    </a>
 
-    <div class="subject-card">
+    <a class="subject-card" href="quiz-list.html?category=allTopics">
       <div class="subject-card-top">
         <div class="subject-icon">
-          <span style="font-size: 20px;">📋</span>
+          <span data-icon="clipboard"></span>
         </div>
         <span id="allTopicsPct" class="subject-pct">0%</span>
       </div>
       <h4>All Topics</h4>
       <div class="subject-progress"><span id="allTopicsBar" style="width:0%"></span></div>
-    </div>
+    </a>
 
   </div>
 

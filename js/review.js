@@ -208,7 +208,6 @@ function renderEmpty() {
     reviewContent.innerHTML = `
         <div class="review-card review-state review-empty-state">
             <div class="review-empty-icon" aria-hidden="true">&#10003;</div>
-            <span class="eyebrow">Practice Mistakes</span>
             <h2>You're all caught up</h2>
             <p>No mistakes to review right now. Questions you answer incorrectly during quizzes will appear here so you can revisit the reasoning and lock it in.</p>
             <div class="review-empty-actions">
@@ -225,7 +224,6 @@ function renderError() {
     reviewContent.innerHTML = `
         <div class="review-card review-state review-error-state">
             <div class="review-error-icon" aria-hidden="true">!</div>
-            <span class="eyebrow">Practice Mistakes</span>
             <h2>Couldn't load your mistakes</h2>
             <p>Something went wrong while loading your saved mistakes. Check your connection and try again.</p>
             <div class="review-empty-actions">
@@ -630,10 +628,10 @@ async function loadCatalog() {
 
 function populateSubjectSelect() {
     if (!catalog) return;
-    subjectSelect.innerHTML = '<option value="all">All Subjects</option>';
+    subjectSelect.innerHTML = '<option value="all">All subjects</option>';
     for (const category of catalog.categories) {
         const optgroup = document.createElement("optgroup");
-        optgroup.label = `${category.icon} ${category.name}`;
+        optgroup.label = category.name;
         for (const quiz of category.quizzes) {
             const option = document.createElement("option");
             option.value = quiz.quizId;

@@ -1,4 +1,5 @@
 import { auth, db } from "../firebase/firebase.js";
+import { plural } from "../utils/utils.js";
 
 import {
     onAuthStateChanged
@@ -762,7 +763,7 @@ async function renderAnalytics(uid) {
 
         // Sidebar streak
         if (sidebarStreak) {
-            sidebarStreak.textContent = `${data.streak || 0} days`;
+            sidebarStreak.textContent = plural(data.streak || 0, "day");
         }
 
         // Top stats
@@ -779,7 +780,7 @@ async function renderAnalytics(uid) {
 
         if (statQuestionsDesc) statQuestionsDesc.textContent = questionsAnswered > 0 ? `${questionsAnswered} questions done` : "Keep practicing!";
         if (statAccuracyDesc) statAccuracyDesc.textContent = accuracy > 0 ? `Accuracy across all quizzes` : "Keep improving!";
-        if (statStreakDesc) statStreakDesc.textContent = `Best: ${longestStreak} days`;
+        if (statStreakDesc) statStreakDesc.textContent = `Best: ${plural(longestStreak, "day")}`;
         if (statQuizzesDesc) statQuizzesDesc.textContent = `${quizzesTaken} session${quizzesTaken !== 1 ? "s" : ""} total`;
 
         // Subject progress

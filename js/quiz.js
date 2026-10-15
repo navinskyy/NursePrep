@@ -1007,7 +1007,7 @@ async function showResult() {
             });
 
             if (saveStatus) {
-                saveStatus.textContent = "Progress saved ✓";
+                saveStatus.textContent = "Progress saved";
                 saveStatus.style.color = "var(--mint)";
             }
 
@@ -1028,10 +1028,6 @@ async function showResult() {
 
     shellEl.innerHTML = `
         <div class="question-card quiz-result">
-
-            <span class="eyebrow">
-                Quiz Complete
-            </span>
 
             <h1>
                 Nice work, Future RN
@@ -1100,7 +1096,7 @@ async function showResult() {
                 duration: 340,
                 ease: "outCubic"
             });
-            const resultChildren = resultCard.querySelectorAll(".eyebrow, h1, .score-display, .sub, .quiz-footer > *");
+            const resultChildren = resultCard.querySelectorAll("h1, .score-display, .sub, .quiz-footer > *");
             if (resultChildren.length) {
                 animateIfAllowed(resultChildren, {
                     opacity: [0, 1],

@@ -42,7 +42,8 @@
   /* Type */
   --font-display: 'Fraunces', serif;
   --font-body:    'Inter', sans-serif;
-  --font-mono:    'JetBrains Mono', monospace;
+  --font-mono:    'JetBrains Mono', monospace; /* timers & countdowns only */
+  --font-data:    var(--font-body);           /* stats, counts, labels: tabular Inter */
 
   --radius-sm: 10px;
   --radius-md: 14px;
@@ -87,14 +88,21 @@
 
 * { box-sizing: border-box; }
 
-*::-webkit-scrollbar { display: none; }
-
 html {
   scroll-behavior: smooth;
   font-size: var(--fluid-base);
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
 }
+
+*::-webkit-scrollbar { width: 10px; height: 10px; }
+*::-webkit-scrollbar-track { background: transparent; }
+*::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border: 3px solid var(--bg);
+  border-radius: var(--radius-pill);
+}
+*::-webkit-scrollbar-thumb:hover { background: #2E3958; }
 
 body {
   margin: 0;
@@ -104,6 +112,7 @@ body {
   -webkit-font-smoothing: antialiased;
   line-height: 1.5;
   overflow-x: hidden;
+  caret-color: var(--pink-400);
 }
 
 ::selection {
@@ -117,7 +126,13 @@ body {
   background-size: 26px 26px;
 }
 
-a { color: inherit; }
+a { color: inherit; text-underline-offset: 0.2em; }
+
+/* Numbers that update or align in columns use tabular figures. */
+.num, .suffix, [class*="-value"], [class*="-count"], [class*="-pct"], [class*="-score"],
+[class*="-num"], .quiz-count, .lb-rank, .lb-level, .lb-score, td {
+  font-variant-numeric: tabular-nums;
+}
 
 a:focus-visible,
 button:focus-visible,
@@ -136,13 +151,14 @@ button { cursor: pointer; font-family: inherit; }
 
 input, select, textarea { font-family: inherit; }
 
+/* Card / field label. Sentence case, quiet — the value it labels carries the weight. */
 .eyebrow {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--pink-400);
-  font-weight: 600;
+  font-family: var(--font-body);
+  font-size: 13px;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--text-mid);
+  font-weight: 500;
 }
 
 /* ============================================
@@ -377,10 +393,10 @@ input, select, textarea { font-family: inherit; }
   border: none;
   background: transparent;
   cursor: pointer;
-  font-family: var(--font-mono);
-  font-size: 11px;
+  font-family: var(--font-body);
+  font-size: 11.5px;
   font-weight: 600;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--text-low);
   border-radius: var(--radius-sm);
@@ -570,7 +586,7 @@ input, select, textarea {
   margin-left: auto;
   background: var(--pink-500);
   color: #fff;
-  font-family: var(--font-mono);
+  font-family: var(--font-data);
   font-size: 10px;
   font-weight: 600;
   border-radius: 999px;
@@ -583,23 +599,33 @@ input, select, textarea {
 
 .dash-sidebar-foot {
   margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  padding: 16px;
+  padding: 12px 14px;
 }
 
-.dash-sidebar-foot .eyebrow { display: block; margin-bottom: 6px; }
+.dash-sidebar-foot .streak-flame {
+  display: inline-flex;
+  color: var(--amber);
+  flex-shrink: 0;
+}
 
 .dash-sidebar-foot p {
   margin: 0;
-  font-size: 13.5px;
-  color: var(--text-mid);
+  font-size: 13px;
+  line-height: 1.35;
+  color: var(--text-low);
 }
 
 .dash-sidebar-foot strong {
-  color: var(--pink-300);
-  font-family: var(--font-mono);
+  display: block;
+  color: var(--text-hi);
+  font-size: 14px;
+  font-weight: 600;
 }
 
 /* Wrapper for pages that also need a logout button under the streak card */
@@ -1169,7 +1195,7 @@ input, select, textarea {
   padding: 3px 9px;
   font-size: 11px;
   font-weight: 600;
-  font-family: var(--font-mono);
+  font-family: var(--font-data);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   border-radius: var(--radius-pill);
@@ -1319,7 +1345,7 @@ input, select, textarea {
 .skip-link {
   position: absolute;
   left: 8px;
-  top: -40px;
+  top: -64px;
   z-index: 10000;
   background: var(--pink-500);
   color: #fff;

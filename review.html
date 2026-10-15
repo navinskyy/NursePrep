@@ -20,13 +20,16 @@
   <div class="review-shell" id="reviewShell">
 
     <header class="review-header">
+      <div class="review-heading">
+        <h1>Review mistakes</h1>
+        <p class="review-count" id="reviewCount" aria-live="polite">0 mistakes</p>
+      </div>
       <div class="subject-picker">
         <label for="subjectSelect" class="eyebrow">Subject</label>
-        <select id="subjectSelect" aria-label="Filter mistakes by subject">
-          <option value="all">All Subjects</option>
+        <select id="subjectSelect">
+          <option value="all">All subjects</option>
         </select>
       </div>
-      <span class="review-count" id="reviewCount" aria-live="polite">0 mistakes</span>
     </header>
 
     <div class="review-progress-track" aria-hidden="true">

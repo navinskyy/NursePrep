@@ -10,7 +10,7 @@ const ACHIEVEMENTS = [
     id: "first_quiz",
     name: "First Quiz",
     description: "Complete your first quiz",
-    icon: "📝",
+    icon: "pencil",
     check: (data) => (data.quizzesTaken || 0) >= 1,
     progress: (data) => (data.quizzesTaken || 0) / 1
   },
@@ -18,7 +18,7 @@ const ACHIEVEMENTS = [
     id: "streak_7",
     name: "7 Day Streak",
     description: "Maintain a 7-day study streak",
-    icon: "🔥",
+    icon: "flame",
     check: (data) => (data.streak || 0) >= 7,
     progress: (data) => (data.streak || 0) / 7
   },
@@ -26,7 +26,7 @@ const ACHIEVEMENTS = [
     id: "questions_100",
     name: "100 Questions",
     description: "Answer 100 questions total",
-    icon: "💯",
+    icon: "check",
     check: (data) => (data.questionsAnswered || 0) >= 100,
     progress: (data) => (data.questionsAnswered || 0) / 100
   },
@@ -34,7 +34,7 @@ const ACHIEVEMENTS = [
     id: "accuracy_90",
     name: "90% Accuracy",
     description: "Reach 90% overall accuracy",
-    icon: "🎯",
+    icon: "target",
     check: (data) => (data.accuracy || 0) >= 90,
     progress: (data) => (data.accuracy || 0) / 90
   },
@@ -42,7 +42,7 @@ const ACHIEVEMENTS = [
     id: "perfect_score",
     name: "Perfect Score",
     description: "Get 100% on any quiz",
-    icon: "🏆",
+    icon: "trophy",
     check: (data) => (data.perfectScores || 0) >= 1,
     progress: (data) => (data.perfectScores || 0) / 1
   },
@@ -50,7 +50,7 @@ const ACHIEVEMENTS = [
     id: "flashcard_master",
     name: "Flashcard Master",
     description: "Master 50 flashcards",
-    icon: "🧠",
+    icon: "brain",
     check: (data) => (data.masteredCards || 0) >= 50,
     progress: (data) => (data.masteredCards || 0) / 50
   },
@@ -58,7 +58,7 @@ const ACHIEVEMENTS = [
     id: "all_subjects",
     name: "PNLE Ready",
     description: "Complete quizzes in all 8 subjects",
-    icon: "⭐",
+    icon: "star",
     check: (data) => {
       const subjects = Object.keys(data.subjectProgress || {});
       return subjects.length >= 8;
@@ -69,7 +69,7 @@ const ACHIEVEMENTS = [
     id: "streak_30",
     name: "30 Day Champion",
     description: "Maintain a 30-day study streak",
-    icon: "👑",
+    icon: "crown",
     check: (data) => (data.streak || 0) >= 30,
     progress: (data) => (data.streak || 0) / 30
   },
@@ -77,7 +77,7 @@ const ACHIEVEMENTS = [
     id: "study_5h",
     name: "Focused Mind",
     description: "Study for 5 hours total",
-    icon: "⏱️",
+    icon: "timer",
     check: (data) => (data.studyTime || 0) >= 18000,
     progress: (data) => (data.studyTime || 0) / 18000
   },
@@ -85,7 +85,7 @@ const ACHIEVEMENTS = [
     id: "study_25h",
     name: "Study Machine",
     description: "Study for 25 hours total",
-    icon: "📚",
+    icon: "books",
     check: (data) => (data.studyTime || 0) >= 90000,
     progress: (data) => (data.studyTime || 0) / 90000
   },
@@ -93,7 +93,7 @@ const ACHIEVEMENTS = [
     id: "study_50h",
     name: "Marathon Learner",
     description: "Study for 50 hours total",
-    icon: "🎓",
+    icon: "cap",
     check: (data) => (data.studyTime || 0) >= 180000,
     progress: (data) => (data.studyTime || 0) / 180000
   },
@@ -101,7 +101,7 @@ const ACHIEVEMENTS = [
     id: "questions_500",
     name: "500 Questions",
     description: "Answer 500 questions total",
-    icon: "🔢",
+    icon: "hash",
     check: (data) => (data.questionsAnswered || 0) >= 500,
     progress: (data) => (data.questionsAnswered || 0) / 500
   },
@@ -109,7 +109,7 @@ const ACHIEVEMENTS = [
     id: "quizzes_50",
     name: "Quiz Veteran",
     description: "Complete 50 quizzes",
-    icon: "🗂️",
+    icon: "layers",
     check: (data) => (data.quizzesTaken || 0) >= 50,
     progress: (data) => (data.quizzesTaken || 0) / 50
   },
@@ -117,7 +117,7 @@ const ACHIEVEMENTS = [
     id: "perfect_10",
     name: "Flawless Ten",
     description: "Get 100% on 10 quizzes",
-    icon: "💎",
+    icon: "gem",
     check: (data) => (data.perfectScores || 0) >= 10,
     progress: (data) => (data.perfectScores || 0) / 10
   }

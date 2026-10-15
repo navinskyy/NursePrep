@@ -3,6 +3,8 @@ import { doc, getDoc } from "firebase/firestore";
 import { signOut } from "firebase/auth";
 import { getTotalWrongAnswerCount } from "../services/wrongAnswerService.js";
 import { animateIfAllowed, prefersReducedMotion } from "./motion.js";
+import { icon, hydrateIcons } from "./icons.js";
+import { plural } from "../utils/utils.js";
 
 /* ============================================================
    NursePrep — Sidebar (single source of truth)
@@ -139,8 +141,8 @@ function sidebarHTML() {
       </div>
 
       <div class="dash-sidebar-foot">
-        <span class="eyebrow">Streak</span>
-        <p><strong id="sidebarStreak">0 days</strong> — keep it going 🔥</p>
+        <span class="streak-flame">${icon("flame", 18)}</span>
+        <p><strong id="sidebarStreak">0 days</strong> <span>study streak</span></p>
       </div>
     </div>
   </aside>
@@ -340,7 +342,7 @@ async function hydrateUser(user) {
     if (!snap.exists()) return;
     const data = snap.data();
     const name = data.fullname || authName;
-    if (streakEl) streakEl.textContent = `${data.streak || 0} days`;
+    if (streakEl) streakEl.textContent = plural(data.streak, "day");
     if (nameEl) nameEl.textContent = name;
     if (emailEl) emailEl.textContent = data.email || user.email || "";
     if (avatarEl) avatarEl.src = data.photoURL || user.photoURL || fallbackAvatar(name);
@@ -417,6 +419,7 @@ initNavGroups();
 initMobileMenu();
 initSidebarLogout();
 animatePageEnter();
+hydrateIcons();
 
 auth.onAuthStateChanged((user) => {
   if (!user) {

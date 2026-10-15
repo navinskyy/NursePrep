@@ -1,4 +1,6 @@
 import { auth, db } from "../firebase/firebase.js";
+import { plural } from "../utils/utils.js";
+import { icon } from "./icons.js";
 
 import {
     onAuthStateChanged
@@ -31,19 +33,19 @@ let currentTab = "alltime";
 let currentUid = "";
 
 const BADGE_RULES = [
-    { id: "top1", label: "👑 #1", icon: "👑", description: "Top ranked this week", condition: (e) => e.rank === 1 },
-    { id: "top3", label: "🥇 Top 3", icon: "🥇", description: "Top 3 this week", condition: (e) => e.rank <= 3 },
-    { id: "streak7", label: "🔥 7-Day Streak", icon: "🔥", description: "7 consecutive days", condition: (e) => e.streak >= 7 },
-    { id: "streak30", label: "👑 30-Day Streak", icon: "👑", description: "30 consecutive days", condition: (e) => e.streak >= 30 },
-    { id: "highestAccuracy", label: "🎯 Sniper", icon: "🎯", description: "90%+ average accuracy", condition: (e) => e.averageScore >= 90 },
-    { id: "level10", label: "⭐ Veteran", icon: "⭐", description: "Reached Level 10", condition: (e) => e.level >= 10 },
-    { id: "marathon", label: "🏃 Marathon", icon: "🏃", description: "1000+ XP", condition: (e) => e.xp >= 1000 }
+    { id: "top1", label: "#1", icon: "crown", description: "Top ranked this week", condition: (e) => e.rank === 1 },
+    { id: "top3", label: "Top 3", icon: "medal", description: "Top 3 this week", condition: (e) => e.rank <= 3 },
+    { id: "streak7", label: "7-Day Streak", icon: "flame", description: "7 consecutive days", condition: (e) => e.streak >= 7 },
+    { id: "streak30", label: "30-Day Streak", icon: "crown", description: "30 consecutive days", condition: (e) => e.streak >= 30 },
+    { id: "highestAccuracy", label: "Sniper", icon: "target", description: "90%+ average accuracy", condition: (e) => e.averageScore >= 90 },
+    { id: "level10", label: "Veteran", icon: "star", description: "Reached Level 10", condition: (e) => e.level >= 10 },
+    { id: "marathon", label: "Marathon", icon: "zap", description: "1000+ XP", condition: (e) => e.xp >= 1000 }
 ];
 
 function renderLeaderboardCard(entry, rank) {
     const badges = BADGE_RULES
         .filter(b => b.condition({ ...entry, rank }))
-        .map(b => `<span class="lb-badge" data-badge-tooltip="${b.description}" title="${b.description}">${b.icon}</span>`)
+        .map(b => `<span class="lb-badge" data-badge-tooltip="${b.description}" title="${b.description}">${icon(b.icon, 14)}</span>`)
         .join("");
 
     const rankClass = rank === 1 ? "rank-1" : rank === 2 ? "rank-2" : rank === 3 ? "rank-3" : "";
@@ -58,7 +60,7 @@ function renderLeaderboardCard(entry, rank) {
             </div>
             <div class="lb-level">Lv.${entry.level}</div>
             <div class="lb-xp">${(entry.xp || 0).toLocaleString()}</div>
-            <div class="lb-streak">🔥 ${entry.streak || 0}</div>
+            <div class="lb-streak">${icon("flame", 14)}<span>${entry.streak || 0}</span></div>
             <div class="lb-score">${(entry.rankingScore || 0).toLocaleString()}</div>
             <div class="lb-badges">${badges}</div>
         </div>
@@ -187,7 +189,7 @@ onAuthStateChanged(auth, async (user) => {
             const userRef = doc(db, "users", user.uid);
             const snap = await getDoc(userRef);
             if (snap.exists()) {
-                sidebarStreak.textContent = `${snap.data().streak || 0} days`;
+                sidebarStreak.textContent = plural(snap.data().streak || 0, "day");
             }
         } catch (err) {
             console.error("Failed to load streak:", err);

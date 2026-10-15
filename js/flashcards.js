@@ -451,7 +451,7 @@ function renderCard({ animate = false } = {}) {
 
   const isLearned = mastered.has(card.id);
   learnedBtn.classList.toggle("active", isLearned);
-  learnedBtn.textContent = isLearned ? "✓ Learned" : "✓ Mark as Learned";
+  learnedBtn.textContent = isLearned ? "Learned" : "Mark as learned";
   learnedBtn.setAttribute("aria-pressed", String(isLearned));
 
   flashCounter.textContent = `${pad(queuePos + 1)} / ${pad(queue.length)}`;
@@ -524,7 +524,7 @@ async function loadSubject(subjectKey) {
     subjectSelect.disabled = false;
     favSubjectBtn.disabled = false;
     savedToggleBtn.disabled = false;
-    savedToggleBtn.textContent = `☆ Saved (${bookmarks.size})`;
+    savedToggleBtn.textContent = `Saved (${bookmarks.size})`;
     savedToggleBtn.setAttribute("aria-pressed", "false");
 
     const url = new URL(window.location);
@@ -574,7 +574,7 @@ async function loadSavedView() {
     viewingSaved = true;
     cards = savedCards;
     subjectSelect.disabled = true;
-    savedToggleBtn.textContent = `★ Viewing Saved (${bookmarks.size})`;
+    savedToggleBtn.textContent = `Viewing saved (${bookmarks.size})`;
     savedToggleBtn.setAttribute("aria-pressed", "true");
 
     buildQueue();
@@ -678,8 +678,8 @@ function toggleBookmark() {
   bookmarkBtnFront.setAttribute("aria-pressed", String(!isBookmarked));
   bookmarkBtnBack.setAttribute("aria-pressed", String(!isBookmarked));
   savedToggleBtn.textContent = viewingSaved
-    ? `★ Viewing Saved (${bookmarks.size})`
-    : `☆ Saved (${bookmarks.size})`;
+    ? `Viewing saved (${bookmarks.size})`
+    : `Saved (${bookmarks.size})`;
   announce(isBookmarked ? "Card removed from saved cards" : "Card saved for review");
 }
 
@@ -820,9 +820,9 @@ async function showCompletion() {
 
   flashShell.innerHTML = `
     <div class="flash-complete" role="status" tabindex="-1" aria-labelledby="completionHeading">
-      <div class="streak-banner">🔥 +1 Day Streak — Great job, future RN! Current streak: ${streakCount} day${streakCount === 1 ? "" : "s"}.</div>
+      <div class="streak-banner">+1 day streak — Great job, future RN! Current streak: ${streakCount} day${streakCount === 1 ? "" : "s"}.</div>
       <span class="eyebrow">Deck Complete</span>
-      <h1 id="completionHeading">Nice work! 🎉</h1>
+      <h1 id="completionHeading">Nice work!</h1>
       <div class="stats-grid">
         <div class="stat"><span class="num">${total}</span><span class="label">Reviewed</span></div>
         <div class="stat"><span class="num">${correct}</span><span class="label">Correct</span></div>

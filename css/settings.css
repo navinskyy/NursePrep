@@ -116,7 +116,7 @@
 
 .settings-save-status {
   flex: 1;
-  font-family: var(--font-mono);
+  font-family: var(--font-data);
   font-size: 12px;
   color: var(--mint);
   min-height: 18px;

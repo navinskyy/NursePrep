@@ -176,22 +176,6 @@
     gap: 14px;
   }
 
-  .subject-stats {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-  }
-
-  .subject-stat-value {
-    font-size: 12px;
-  }
-
-  .subject-stat-label {
-    font-size: 10px;
-  }
-
-  .subject-stat .stars {
-    font-size: 12px;
-  }
 
   /* Flashcards */
   .flash-card {
@@ -430,22 +414,6 @@
     gap: 12px;
   }
 
-  .subject-stats {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-  }
-
-  .subject-stat-value {
-    font-size: 12px;
-  }
-
-  .subject-stat-label {
-    font-size: 10px;
-  }
-
-  .subject-stat .stars {
-    font-size: 12px;
-  }
 
   .subject-card {
     padding: 18px;
@@ -1127,22 +1095,6 @@
     grid-template-columns: 1fr;
   }
 
-  .subject-stats {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-  }
-
-  .subject-stat-value {
-    font-size: 12px;
-  }
-
-  .subject-stat-label {
-    font-size: 10px;
-  }
-
-  .subject-stat .stars {
-    font-size: 12px;
-  }
 
   .subject-card {
     padding: 16px;

@@ -3,7 +3,7 @@ import { doc, getDoc, collection, getDocs } from "firebase/firestore";
 
 import { getTotalWrongAnswerCount } from "../services/wrongAnswerService.js";
 
-import { getQuestionBank, getAvailableQuestionCount } from "../utils/utils.js";
+import { getQuestionBank, getAvailableQuestionCount, plural } from "../utils/utils.js";
 
 const categoryId = new URLSearchParams(window.location.search).get("category") || "allTopics";
 const quizGrid = document.getElementById("quizGrid");
@@ -243,7 +243,7 @@ auth.onAuthStateChanged(async (user) => {
     try {
       const snap = await getDoc(doc(db, "users", user.uid));
       if (snap.exists()) {
-        sidebarStreak.textContent = `${snap.data().streak || 0} days`;
+        sidebarStreak.textContent = plural(snap.data().streak || 0, "day");
       }
     } catch (err) {
       console.error("Failed to load streak:", err);

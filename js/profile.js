@@ -1,4 +1,6 @@
 import { auth } from "../firebase/firebase.js";
+import { plural } from "../utils/utils.js";
+import { icon } from "./icons.js";
 import {
   onAuthStateChanged,
   signOut,
@@ -159,14 +161,14 @@ function renderAchievements(data) {
 
     return `
     <div class="achievement-card ${ach.unlocked ? "unlocked" : "locked"}">
-      <div class="achievement-icon">${ach.icon}</div>
+      <div class="achievement-icon">${icon(ach.icon, 22)}</div>
       <div class="achievement-info">
         <h4>${ach.name}</h4>
         <p>${ach.description}</p>
         ${progressBar}
       </div>
       <div class="achievement-badge" aria-hidden="true">
-        ${ach.unlocked ? "&#10003;" : "&#128274;"}
+        ${ach.unlocked ? icon("check", 16) : icon("lock", 16)}
       </div>
     </div>
   `;
@@ -231,7 +233,7 @@ function renderProfile(data) {
   if (statPerfect) statPerfect.textContent = formatNum(data.perfectScores);
 
   if (sidebarStreak) {
-    sidebarStreak.textContent = `${data.streak || 0} days`;
+    sidebarStreak.textContent = plural(data.streak || 0, "day");
   }
 
   renderAchievements(data);

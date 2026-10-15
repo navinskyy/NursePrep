@@ -47,13 +47,13 @@
 }
 
 .analytics-card-value .num {
-  font-family: var(--font-mono);
+  font-family: var(--font-data);
   font-size: 30px;
   font-weight: 600;
 }
 
 .analytics-card-value .suffix {
-  font-family: var(--font-mono);
+  font-family: var(--font-data);
   font-size: 15px;
   color: var(--text-low);
 }
@@ -157,7 +157,7 @@
 }
 
 .study-summary-value {
-  font-family: var(--font-mono);
+  font-family: var(--font-data);
   font-size: 24px;
   font-weight: 600;
   color: var(--mint);
@@ -203,7 +203,7 @@
 }
 
 .analytics-insight-pct {
-  font-family: var(--font-mono);
+  font-family: var(--font-data);
   font-size: 22px;
   font-weight: 700;
   color: var(--text-hi);
@@ -237,7 +237,7 @@
 }
 
 .ring-value {
-  font-family: var(--font-mono);
+  font-family: var(--font-data);
   font-size: 36px;
   font-weight: 700;
   color: var(--pink-300);
@@ -275,7 +275,7 @@
 }
 
 .quiz-history-date {
-  font-family: var(--font-mono);
+  font-family: var(--font-data);
   font-size: 12px;
   color: var(--text-low);
   white-space: nowrap;
@@ -288,7 +288,7 @@
 }
 
 .quiz-history-score {
-  font-family: var(--font-mono);
+  font-family: var(--font-data);
   font-size: 15px;
   font-weight: 600;
   color: var(--pink-300);
@@ -296,7 +296,7 @@
 }
 
 .quiz-history-pct {
-  font-family: var(--font-mono);
+  font-family: var(--font-data);
   font-size: 13px;
   color: var(--text-low);
   white-space: nowrap;

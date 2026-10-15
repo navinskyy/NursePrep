@@ -2,7 +2,8 @@ import { auth, db } from "../firebase/firebase.js";
 import { doc, getDoc, collection, getDocs } from "firebase/firestore";
 import { getTotalWrongAnswerCount } from "../services/wrongAnswerService.js";
 
-import { getQuestionBank, getAvailableQuestionCount } from "../utils/utils.js";
+import { getQuestionBank, getAvailableQuestionCount, plural } from "../utils/utils.js";
+import { subjectIcon } from "./icons.js";
 import { animateIfAllowed, prefersReducedMotion, stagger } from "./motion.js";
 
 const container = document.getElementById("subjectsGrid");
@@ -93,18 +94,6 @@ function getCategoryStats(category) {
   };
 }
 
-function getStars(score) {
-  if (score <= 0) {
-    return '<span class="star-empty">★</span>'.repeat(5);
-  }
-  const rounded = Math.ceil(score / 20);
-  let html = "";
-  for (let i = 1; i <= 5; i++) {
-    html += i <= rounded ? '<span class="star-filled">★</span>' : '<span class="star-empty">★</span>';
-  }
-  return html;
-}
-
 function formatDate(date) {
   if (!date) return "Never";
   return date.toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" });
@@ -133,14 +122,10 @@ function renderCategories() {
       ? formatDate(stats.lastAttemptDate)
       : "No attempts yet";
 
-    const starsHtml = stats.bestScore > 0
-      ? getStars(stats.bestScore)
-      : '<span class="star-empty">★</span>'.repeat(5);
-
     card.innerHTML = `
       <div class="subject-top">
         <div class="subject-icon">
-          <span style="font-size: 20px;">${category.icon || "📋"}</span>
+          ${subjectIcon(category.id)}
         </div>
         <div class="subject-progress ${progressClass}">
           ${progressLabel}
@@ -148,36 +133,32 @@ function renderCategories() {
       </div>
 
       <h3>${category.name}</h3>
-      <p>${stats.quizCount} quizzes · ${stats.totalItems} items</p>
+      <p>${plural(stats.quizCount, "quiz", "quizzes")} · ${plural(stats.totalItems, "item")}</p>
 
-      <div class="subject-stats">
+      ${stats.totalAttempts > 0 ? `
+      <dl class="subject-stats">
         <div class="subject-stat">
-          <span class="subject-stat-value">${stats.bestScore > 0 ? stats.bestScore + "%" : "—"}</span>
-          <span class="subject-stat-label">Best Score</span>
+          <dt>Best score</dt>
+          <dd>${stats.bestScore > 0 ? stats.bestScore + "%" : "—"}</dd>
         </div>
         <div class="subject-stat">
-          <span class="subject-stat-value">${stats.totalAttempts}</span>
-          <span class="subject-stat-label">Attempts</span>
+          <dt>Attempts</dt>
+          <dd>${stats.totalAttempts}</dd>
         </div>
         <div class="subject-stat">
-          <span class="subject-stat-value">${lastAttemptText}</span>
-          <span class="subject-stat-label">Last Attempt</span>
+          <dt>Last attempt</dt>
+          <dd>${lastAttemptText}</dd>
         </div>
-        <div class="subject-stat">
-          <span class="subject-stat-value stars">${starsHtml}</span>
-          <span class="subject-stat-label">Rating</span>
-        </div>
-      </div>
+      </dl>` : ""}
 
-      <div class="progress-track">
+      <div class="progress-track" aria-hidden="true">
         <div class="progress-fill" style="--progress: ${stats.overallProgress}%"></div>
       </div>
 
-      <div class="subject-actions">
-        <a href="quiz-list.html?category=${encodeURIComponent(category.id)}" class="btn btn-primary">
-          View Quizzes
-        </a>
-      </div>
+      <a href="quiz-list.html?category=${encodeURIComponent(category.id)}" class="subject-link">
+        View quizzes<span class="sr-only"> in ${category.name}</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
     `;
 
     container.appendChild(card);
@@ -228,7 +209,7 @@ auth.onAuthStateChanged(async (user) => {
     try {
       const snap = await getDoc(doc(db, "users", user.uid));
       if (snap.exists()) {
-        sidebarStreak.textContent = `${snap.data().streak || 0} days`;
+        sidebarStreak.textContent = plural(snap.data().streak || 0, "day");
       }
     } catch (err) {
       console.error("Failed to load streak:", err);

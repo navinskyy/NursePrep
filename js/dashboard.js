@@ -18,7 +18,7 @@ import {
 } from "firebase/firestore";
 
 import { ensureUserProfile, bumpDailyStreak, getAchievementStatus, awardXP, getMonday, checkAchievements } from "./userProfile.js";
-import { getDailyGoal as readSavedDailyGoal } from "../utils/utils.js";
+import { getDailyGoal as readSavedDailyGoal, plural } from "../utils/utils.js";
 import { animateIfAllowed, prefersReducedMotion, stagger } from "./motion.js";
 
 // ===========================
@@ -316,8 +316,10 @@ function renderStrongestWeakest(subjectStats) {
 
         strongestName.textContent = "Not enough data yet";
         weakestName.textContent = "Not enough data yet";
-        if (strongestValue) strongestValue.textContent = "";
-        if (weakestValue) weakestValue.textContent = "";
+        strongestName.classList.add("is-empty");
+        weakestName.classList.add("is-empty");
+        if (strongestValue) strongestValue.textContent = "Finish a quiz to see your strongest subject.";
+        if (weakestValue) weakestValue.textContent = "We'll point out where to focus next.";
         return;
 
     }
@@ -327,6 +329,8 @@ function renderStrongestWeakest(subjectStats) {
     const strongest = sorted[0];
     const weakest = sorted[sorted.length - 1];
 
+    strongestName.classList.remove("is-empty");
+    weakestName.classList.remove("is-empty");
     strongestName.textContent = strongest.title;
     weakestName.textContent = weakest.title;
     if (strongestValue) void animateNumber(strongestValue, strongest.value, { suffix: "%" });
@@ -452,9 +456,24 @@ function timeAgo(date) {
 // PNLE COUNTDOWN TIMER
 // ===========================
 
+// Scheduled PNLE dates (UTC). Add the next PRC-announced date here; the
+// countdown always targets the first date that hasn't passed yet.
+const PNLE_DATES = [
+    Date.UTC(2026, 7, 29, 0, 0, 0),
+];
+
 function initPNLECountdown() {
-    const examDate = new Date(Date.UTC(2026, 7, 29, 0, 0, 0));
     const now = new Date();
+    const upcoming = PNLE_DATES.map((t) => new Date(t)).find((d) => d.toDateString() === now.toDateString() || d > now);
+    const countdownEl = document.getElementById("pnleCountdown");
+
+    if (!upcoming) {
+        if (countdownEl) countdownEl.hidden = true;
+        if (pnleExamDate) pnleExamDate.textContent = "The next PNLE date hasn't been announced yet. The countdown will start once PRC releases the schedule.";
+        return;
+    }
+
+    const examDate = upcoming;
     const isToday = now.toDateString() === examDate.toDateString();
 
     if (pnleExamDate) {
@@ -853,20 +872,23 @@ onAuthStateChanged(auth, async (user) => {
 
         if (questionsAnswered) void animateNumber(questionsAnswered, data.questionsAnswered || 0);
 
-        if (accuracy) void animateNumber(accuracy, data.accuracy || 0, { suffix: "%" });
+        if (accuracy) void animateNumber(accuracy, data.accuracy || 0);
 
         if (streak) void animateNumber(streak, data.streak || 0);
 
+        const streakSuffix = document.getElementById("streakSuffix");
+        if (streakSuffix) streakSuffix.textContent = (data.streak || 0) === 1 ? "day" : "days";
+
         if (sidebarStreak) {
 
-            sidebarStreak.textContent = `${data.streak || 0} days`;
+            sidebarStreak.textContent = plural(data.streak || 0, "day");
 
         }
 
         if (bestStreak) {
 
             bestStreak.textContent =
-                `Best streak: ${data.longestStreak || 0} days`;
+                `Best streak: ${plural(data.longestStreak, "day")}`;
 
         }
 
