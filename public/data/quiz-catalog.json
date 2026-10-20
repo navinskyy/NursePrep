@@ -286,48 +286,114 @@
       "order": 5,
       "quizzes": [
         {
-          "quizId": "medSurg-1",
-          "title": "Med-Surg \u2014 Module 1",
-          "itemCount": 60,
+          "quizId": "medSurg-exam-1",
+          "title": "Med-Surg \u2014 Practice Test 1",
+          "itemCount": 100,
           "difficulty": "Hard",
-          "description": "Cardiovascular, respiratory, and hematologic disorders.",
+          "description": "Situational exam: fractures, TB, ostomy and tracheostomy care, eye and ear disorders, Parkinson\u2019s, stroke, and appendicitis.",
           "categoryId": "medSurg",
-          "subcategoryId": "module1",
-          "order": 1,
-          "subjectKey": "medSurg-1"
+          "subcategoryId": "exam-1",
+          "order": 5,
+          "subjectKey": "medSurg-exam-1"
         },
         {
-          "quizId": "medSurg-2",
-          "title": "Med-Surg \u2014 Module 2",
-          "itemCount": 60,
+          "quizId": "medSurg-exam-2",
+          "title": "Med-Surg \u2014 Practice Test 2",
+          "itemCount": 100,
           "difficulty": "Hard",
-          "description": "Neurological, sensory, and integumentary disorders.",
+          "description": "Mixed systems: GI and renal care, skin and burn injuries, and neurologic disorders.",
           "categoryId": "medSurg",
-          "subcategoryId": "module2",
-          "order": 2,
-          "subjectKey": "medSurg-2"
+          "subcategoryId": "exam-2",
+          "order": 6,
+          "subjectKey": "medSurg-exam-2"
         },
         {
-          "quizId": "medSurg-3",
-          "title": "Med-Surg \u2014 Module 3",
-          "itemCount": 60,
+          "quizId": "medSurg-case-review",
+          "title": "Med-Surg \u2014 Case-Based Review",
+          "itemCount": 50,
           "difficulty": "Hard",
-          "description": "Gastrointestinal, urinary, and renal disorders.",
+          "description": "Client scenarios across neuro, cardiac, renal, GI, and hematologic care.",
           "categoryId": "medSurg",
-          "subcategoryId": "module3",
-          "order": 3,
-          "subjectKey": "medSurg-3"
+          "subcategoryId": "case-review",
+          "order": 7,
+          "subjectKey": "medSurg-case-review"
         },
         {
-          "quizId": "medSurg-4",
-          "title": "Med-Surg \u2014 Module 4",
+          "quizId": "medSurg-cardio-1",
+          "title": "Med-Surg \u2014 Cardiovascular Disorders 1",
           "itemCount": 60,
           "difficulty": "Hard",
-          "description": "Endocrine, musculoskeletal, and oncologic disorders.",
+          "description": "Coronary artery disease, heart failure, aortic aneurysm, and cardiomyopathy.",
           "categoryId": "medSurg",
-          "subcategoryId": "module4",
-          "order": 4,
-          "subjectKey": "medSurg-4"
+          "subcategoryId": "cardio-1",
+          "order": 8,
+          "subjectKey": "medSurg-cardio-1"
+        },
+        {
+          "quizId": "medSurg-cardio-2",
+          "title": "Med-Surg \u2014 Cardiovascular Disorders 2",
+          "itemCount": 50,
+          "difficulty": "Hard",
+          "description": "Case-based: heart sounds, angina, myocardial infarction, and cardiac medications.",
+          "categoryId": "medSurg",
+          "subcategoryId": "cardio-2",
+          "order": 9,
+          "subjectKey": "medSurg-cardio-2"
+        },
+        {
+          "quizId": "medSurg-hema-onco",
+          "title": "Med-Surg \u2014 Hematologic & Oncologic Disorders",
+          "itemCount": 55,
+          "difficulty": "Hard",
+          "description": "Lymphoma, leukemia, lung and skin cancer, and chemotherapy care.",
+          "categoryId": "medSurg",
+          "subcategoryId": "hema-onco",
+          "order": 10,
+          "subjectKey": "medSurg-hema-onco"
+        },
+        {
+          "quizId": "medSurg-oncology",
+          "title": "Med-Surg \u2014 Oncology Nursing",
+          "itemCount": 55,
+          "difficulty": "Hard",
+          "description": "Breast cancer, cancer detection and staging, chemotherapy, and radiation safety.",
+          "categoryId": "medSurg",
+          "subcategoryId": "oncology",
+          "order": 11,
+          "subjectKey": "medSurg-oncology"
+        },
+        {
+          "quizId": "medSurg-gi-1",
+          "title": "Med-Surg \u2014 Gastrointestinal Disorders 1",
+          "itemCount": 101,
+          "difficulty": "Hard",
+          "description": "Appendicitis, gastritis, Crohn\u2019s disease, gastric cancer, peritonitis, ostomies, and GI drugs.",
+          "categoryId": "medSurg",
+          "subcategoryId": "gi-1",
+          "order": 12,
+          "subjectKey": "medSurg-gi-1"
+        },
+        {
+          "quizId": "medSurg-gi-2",
+          "title": "Med-Surg \u2014 Gastrointestinal Disorders 2",
+          "itemCount": 40,
+          "difficulty": "Hard",
+          "description": "Pancreatitis, hepatitis, gallbladder disease, bowel obstruction, tube feeding, and colorectal cancer.",
+          "categoryId": "medSurg",
+          "subcategoryId": "gi-2",
+          "order": 13,
+          "subjectKey": "medSurg-gi-2"
+        },
+        {
+          "quizId": "medSurg-neuro-sensory",
+          "title": "Med-Surg \u2014 Neurologic & Sensory Disorders",
+          "itemCount": 29,
+          "difficulty": "Hard",
+          "description": "Myasthenia gravis, seizures, Parkinson\u2019s, stroke, head and spinal injury, glaucoma, and ear surgery.",
+          "categoryId": "medSurg",
+          "subcategoryId": "neuro-sensory",
+          "order": 14,
+          "subjectKey": "medSurg-neuro-sensory"
         }
       ]
     },
@@ -348,6 +414,83 @@
           "subcategoryId": "exam1",
           "subjectKey": "psychiatric-1",
           "order": 1
+        },
+        {
+          "quizId": "psychiatric-2",
+          "title": "Psychiatric Nursing \u2014 Exam 2",
+          "itemCount": 39,
+          "difficulty": "Medium",
+          "description": "Therapeutic communication, anxiety and mood disorders, schizophrenia, substance use, and psychotropic drugs.",
+          "categoryId": "psychiatric",
+          "subcategoryId": "2",
+          "order": 2,
+          "subjectKey": "psychiatric-2"
+        },
+        {
+          "quizId": "psychiatric-3",
+          "title": "Psychiatric Nursing \u2014 Exam 3",
+          "itemCount": 24,
+          "difficulty": "Medium",
+          "description": "Child and adolescent mental health, somatoform disorders, abuse, and core psychiatric concepts.",
+          "categoryId": "psychiatric",
+          "subcategoryId": "3",
+          "order": 3,
+          "subjectKey": "psychiatric-3"
+        },
+        {
+          "quizId": "psych-part-1",
+          "title": "Psychiatric Nursing \u2014 Part 1: Therapeutic Communication & Anxiety Disorders",
+          "itemCount": 50,
+          "difficulty": "Hard",
+          "description": "Nurse-client relationship, communication techniques, defense mechanisms, panic, PTSD, OCD, crisis, somatic and dissociative disorders.",
+          "categoryId": "psychiatric",
+          "subcategoryId": "part-1",
+          "order": 4,
+          "subjectKey": "psych-part-1"
+        },
+        {
+          "quizId": "psych-part-2",
+          "title": "Psychiatric Nursing \u2014 Part 2: Mood Disorders & Suicide",
+          "itemCount": 50,
+          "difficulty": "Hard",
+          "description": "Depression, bipolar disorder, suicide risk and precautions, ECT, antidepressants, lithium and grief.",
+          "categoryId": "psychiatric",
+          "subcategoryId": "part-2",
+          "order": 5,
+          "subjectKey": "psych-part-2"
+        },
+        {
+          "quizId": "psych-part-3",
+          "title": "Psychiatric Nursing \u2014 Part 3: Schizophrenia & Antipsychotics",
+          "itemCount": 50,
+          "difficulty": "Hard",
+          "description": "Psychotic symptoms, therapeutic responses, EPS, tardive dyskinesia, NMS, clozapine and relapse prevention.",
+          "categoryId": "psychiatric",
+          "subcategoryId": "part-3",
+          "order": 6,
+          "subjectKey": "psych-part-3"
+        },
+        {
+          "quizId": "psych-part-4",
+          "title": "Psychiatric Nursing \u2014 Part 4: Personality & Eating Disorders",
+          "itemCount": 50,
+          "difficulty": "Hard",
+          "description": "Cluster A, B and C personality disorders, splitting and limit setting, anorexia, bulimia and refeeding.",
+          "categoryId": "psychiatric",
+          "subcategoryId": "part-4",
+          "order": 7,
+          "subjectKey": "psych-part-4"
+        },
+        {
+          "quizId": "psych-part-5",
+          "title": "Psychiatric Nursing \u2014 Part 5: Substance Use, Abuse, Child Psychiatry & Dementia",
+          "itemCount": 50,
+          "difficulty": "Hard",
+          "description": "Alcohol and drug withdrawal, violence and abuse, ADHD, autism, conduct disorders, dementia, delirium and RA 11036.",
+          "categoryId": "psychiatric",
+          "subcategoryId": "part-5",
+          "order": 8,
+          "subjectKey": "psych-part-5"
         }
       ]
     },
@@ -399,6 +542,17 @@
           "subcategoryId": "exam1",
           "subjectKey": "pharma-1",
           "order": 1
+        },
+        {
+          "quizId": "pharma-musculoskeletal",
+          "title": "Pharmacology \u2014 Musculoskeletal Drugs",
+          "itemCount": 20,
+          "difficulty": "Medium",
+          "description": "Drugs for rheumatoid arthritis, gout, osteoporosis, and muscle spasm.",
+          "categoryId": "pharma",
+          "subcategoryId": "musculoskeletal",
+          "order": 2,
+          "subjectKey": "pharma-musculoskeletal"
         }
       ]
     },
