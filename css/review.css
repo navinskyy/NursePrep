@@ -153,6 +153,7 @@
   line-height: 1.55;
   color: var(--text-hi);
   margin: 0 0 var(--space-6);
+  white-space: pre-line;
   overflow-wrap: break-word;
 }
 
@@ -373,9 +374,8 @@ button.review-choice.is-user-pick .review-choice-tag {
 .review-feedback-reason {
   margin: 0;
   padding: 12px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-left: 3px solid var(--pink-400);
+  background: rgba(236, 111, 160, 0.06);
+  border: 1px solid rgba(236, 111, 160, 0.22);
   border-radius: var(--radius-md);
   font-size: 14px;
   line-height: 1.6;
