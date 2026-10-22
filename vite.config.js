@@ -13,6 +13,7 @@ export default defineConfig({
         quiz: resolve(__dirname, "quiz.html"),
         quizList: resolve(__dirname, "quiz-list.html"),
         flashcards: resolve(__dirname, "flashcards.html"),
+        myDecks: resolve(__dirname, "my-decks.html"),
         analytics: resolve(__dirname, "analytics.html"),
         review: resolve(__dirname, "review.html"),
         profile: resolve(__dirname, "profile.html"),

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="/favicon.png">
+<title>My Decks | NursePrep</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/my-decks.css">
+</head>
+<body class="dash-body">
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<!-- Sidebar injected by js/sidebar.js -->
+
+<main id="main-content" class="dash-main decks-main">
+  <div class="sr-only" id="decksLive" aria-live="polite" aria-atomic="true"></div>
+
+  <div class="offline-banner" id="offlineBanner" role="status" hidden>
+    You're offline. You can keep reading, but changes can't be saved until you reconnect.
+  </div>
+
+  <!-- ================= LIBRARY ================= -->
+  <section id="libraryView" aria-labelledby="libraryHeading">
+    <header class="decks-header">
+      <div>
+        <h1 id="libraryHeading">My decks</h1>
+        <p>Build your own flashcards and study them alongside the NursePrep decks.</p>
+      </div>
+      <div class="decks-header-actions">
+        <a class="btn btn-secondary" href="flashcards.html">NursePrep decks</a>
+        <button class="btn btn-primary" id="newDeckBtn" type="button">New deck</button>
+      </div>
+    </header>
+
+    <div class="decks-filters" id="decksFilters" hidden>
+      <label class="search-field">
+        <span class="sr-only">Search your decks</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <input class="input" id="deckSearch" type="search" placeholder="Search by title or description" autocomplete="off">
+      </label>
+      <label class="filter-field">
+        <span class="sr-only">Filter by subject</span>
+        <select class="select" id="deckFilter">
+          <option value="">All subjects</option>
+        </select>
+      </label>
+    </div>
+
+    <div id="libraryBody" aria-busy="true">
+      <div class="deck-grid" aria-hidden="true">
+        <div class="deck-card is-skeleton"></div>
+        <div class="deck-card is-skeleton"></div>
+        <div class="deck-card is-skeleton"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EDITOR ================= -->
+  <section id="editorView" aria-labelledby="editorHeading" hidden>
+    <a class="back-link" href="my-decks.html" id="backToLibrary">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+      My decks
+    </a>
+
+    <header class="editor-header">
+      <div class="editor-title-block">
+        <h1 id="editorHeading">Deck</h1>
+        <p class="editor-meta"><span id="editorCategory"></span> · <span id="editorCount">0 cards</span> · Private</p>
+      </div>
+      <div class="editor-header-actions">
+        <button class="btn btn-secondary" id="editDetailsBtn" type="button">Edit details</button>
+        <a class="btn btn-primary" id="studyDeckBtn" href="#">Study deck</a>
+      </div>
+    </header>
+
+    <!-- Add card -->
+    <section class="panel add-card-panel" aria-labelledby="addCardHeading">
+      <div class="panel-head">
+        <h2 id="addCardHeading">Add a card</h2>
+        <button class="btn btn-ghost btn-sm" id="bulkToggleBtn" type="button" aria-expanded="false" aria-controls="bulkPanel">Paste many cards</button>
+      </div>
+
+      <form id="addCardForm" novalidate>
+        <div class="card-fields">
+          <div class="field">
+            <label class="field-label" for="newFront">Front <span class="field-hint">question, term or prompt</span></label>
+            <textarea class="textarea" id="newFront" rows="3" maxlength="500" aria-describedby="newFrontError"></textarea>
+            <span class="field-error" id="newFrontError"></span>
+          </div>
+          <div class="field">
+            <label class="field-label" for="newBack">Back <span class="field-hint">answer, definition or explanation</span></label>
+            <textarea class="textarea" id="newBack" rows="3" maxlength="2000" aria-describedby="newBackError"></textarea>
+            <span class="field-error" id="newBackError"></span>
+          </div>
+        </div>
+        <div class="form-actions">
+          <span class="kbd-hint">Ctrl + Enter adds the card and starts the next one</span>
+          <button class="btn btn-primary" id="addCardBtn" type="submit">Add card</button>
+        </div>
+      </form>
+
+      <!-- Bulk import -->
+      <div class="bulk-panel" id="bulkPanel" hidden>
+        <div class="field">
+          <label class="field-label" for="bulkInput">Paste cards</label>
+          <p class="field-hint" id="bulkHelp">Write each card as a <strong>Front:</strong> line followed by a <strong>Back:</strong> line. Leave a blank line between cards. A front or back can run over several lines.</p>
+          <textarea class="textarea mono-area" id="bulkInput" rows="9" aria-describedby="bulkHelp" placeholder="Front: What is homeostasis?
+Back: Maintenance of a stable internal environment.
+
+Front: Normal adult respiratory rate?
+Back: 12 to 20 breaths per minute."></textarea>
+        </div>
+        <div class="form-actions">
+          <button class="btn btn-ghost" id="bulkCancelBtn" type="button">Cancel</button>
+          <button class="btn btn-secondary" id="bulkPreviewBtn" type="button">Preview cards</button>
+        </div>
+        <div id="bulkPreview" class="bulk-preview" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- Card list -->
+    <section class="cards-section" aria-labelledby="cardsHeading">
+      <h2 id="cardsHeading" class="section-subtitle">Cards in this deck</h2>
+      <ol class="card-list" id="cardList"></ol>
+      <p class="cards-empty" id="cardsEmpty" hidden>No cards yet. Add your first one above.</p>
+    </section>
+  </section>
+</main>
+
+<!-- Create / edit deck dialog -->
+<dialog class="np-dialog" id="deckDialog" aria-labelledby="deckDialogTitle">
+  <form id="deckForm" method="dialog" novalidate>
+    <h2 id="deckDialogTitle">New deck</h2>
+    <div class="field">
+      <label class="field-label" for="deckTitle">Title</label>
+      <input class="input" id="deckTitle" maxlength="80" required aria-describedby="deckTitleError" autocomplete="off">
+      <span class="field-error" id="deckTitleError"></span>
+    </div>
+    <div class="field">
+      <label class="field-label" for="deckDescription">Description <span class="field-hint">optional</span></label>
+      <textarea class="textarea" id="deckDescription" rows="3" maxlength="300" aria-describedby="deckDescriptionError"></textarea>
+      <span class="field-error" id="deckDescriptionError"></span>
+    </div>
+    <div class="field">
+      <label class="field-label" for="deckCategory">Subject</label>
+      <select class="select" id="deckCategory" aria-describedby="deckCategoryError"></select>
+      <span class="field-error" id="deckCategoryError"></span>
+    </div>
+    <p class="visibility-note">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+      Private. Only you can see this deck.
+    </p>
+    <p class="form-error" id="deckFormError" role="alert"></p>
+    <div class="dialog-actions">
+      <button class="btn btn-ghost" type="button" id="deckCancelBtn">Cancel</button>
+      <button class="btn btn-primary" type="submit" id="deckSaveBtn">Create deck</button>
+    </div>
+  </form>
+</dialog>
+
+<!-- Confirm dialog -->
+<dialog class="np-dialog np-dialog-sm" id="confirmDialog" aria-labelledby="confirmTitle" aria-describedby="confirmBody">
+  <h2 id="confirmTitle">Are you sure?</h2>
+  <p id="confirmBody"></p>
+  <p class="form-error" id="confirmError" role="alert"></p>
+  <div class="dialog-actions">
+    <button class="btn btn-ghost" type="button" id="confirmCancel">Cancel</button>
+    <button class="btn btn-danger-solid" type="button" id="confirmOk">Delete</button>
+  </div>
+</dialog>
+
+<div class="toast-stack" id="toastStack" aria-live="polite"></div>
+
+<script type="module" src="js/sidebar.js"></script>
+<script type="module" src="./js/my-decks.js"></script>
+</body>
+</html>

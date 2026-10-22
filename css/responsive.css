@@ -82,6 +82,12 @@
     transform: translateX(0);
   }
 
+  /* The drawer's slide is driven by Anime.js (js/sidebar.js). */
+  .dash-sidebar,
+  .sidebar-transitions .dash-sidebar {
+    transition: none;
+  }
+
   /* Sidebar content styles for mobile */
   .dash-sidebar .brand {
     font-size: 19px;

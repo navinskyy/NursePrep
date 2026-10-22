@@ -20,35 +20,36 @@ import {
 } from "./userProfile.js";
 
 import { animateIfAllowed, prefersReducedMotion, stagger } from "./motion.js";
+import { DECK_CATEGORIES, getDeck, getDeckProgress, listCards, saveDeckProgress } from "./customDecks.js";
+import { ALL_SUBJECTS_KEY, allSubjectsDeck, loadOfficialBank } from "./flashcardBank.js";
+import { subjectIcon } from "./icons.js";
 
-// Inlined here (not relying on utils.js's classic-script globals inside this module)
-const SUBJECT_NAMES = {
-  pnleSets:      "Comprehensive PNLE SETS",
-  fundamentals: "Foundation of Nursing",
-  maternal:     "Maternal & Child Nursing",
-  community:    "Community Health Nursing",
-  medSurg:      "Medical-Surgical Nursing",
-  psychiatric:  "Psychiatric Nursing",
-  allTopics:    "All Topics",
-};
+// Filled from quiz-catalog.json once the bank loads.
+let SUBJECT_NAMES = {};
 
 function pad(n) {
   return String(n).padStart(2, "0");
 }
 
-function getSubjectFromURL(defaultKey = "fundamentals") {
-  const params = new URLSearchParams(window.location.search);
-  return params.get("subject") || defaultKey;
+function getSubjectFromURL() {
+  return new URLSearchParams(window.location.search).get("subject");
 }
 
 // ======================================
 // STATE
 // ======================================
-let bank = {};             // full JSON bank, fetched once
+let bank = {};             // subject key -> cards, derived from the quiz bank
+let subjectList = [];       // [{ key, name, cards }] in catalog order, plus "All subjects"
 let cards = [];             // active deck's cards (array of card objects)
+let deckCards = [];         // the full active deck, kept for "Study again" after a missed-only round
+let missedIds = new Set();  // cards rated Again/Hard this round
 let queue = [];             // array of { idx, requeued } — study order into `cards`
 let queuePos = 0;
-let currentSubject = getSubjectFromURL("fundamentals");
+let currentSubject = getSubjectFromURL();
+// Custom deck mode (flashcards.html?deck=<id>): cards come from the user's own deck and
+// mastery / schedule are stored per deck, never in the official progress document.
+const customDeckId = new URLSearchParams(window.location.search).get("deck");
+let customDeck = null;
 let viewingSaved = false;
 let cardShownAt = 0;
 let flipInProgress = false;
@@ -125,6 +126,10 @@ function calculateNextReview(schedule, rating) {
 // ELEMENTS
 // ======================================
 const flashShell     = document.getElementById("flashShell");
+const deckOverview    = document.getElementById("deckOverview");
+const overviewBody    = document.getElementById("overviewBody");
+const completeWrap    = document.getElementById("flashCompleteWrap");
+const backToSubjects  = document.getElementById("backToSubjects");
 const flashCard       = document.getElementById("flashCard");
 const flashCardInner  = document.querySelector(".flash-inner");
 const flashFront      = document.getElementById("flashFront");
@@ -190,10 +195,29 @@ async function loadProgressFromFirestore() {
   }
 }
 
+const DECK_SCOPED_KEYS = ["mastered", "cardSchedule"];
+
 async function persistProgress(partial) {
   if (!progressRef) return;
+  let shared = partial;
+  if (customDeckId) {
+    const deckPart = {};
+    shared = {};
+    Object.entries(partial).forEach(([key, value]) => {
+      if (DECK_SCOPED_KEYS.includes(key)) deckPart[key] = value;
+      else if (key !== "subjectProgress") shared[key] = value;
+    });
+    if (Object.keys(deckPart).length) {
+      try {
+        await saveDeckProgress(uid, customDeckId, deckPart);
+      } catch (err) {
+        console.error("Failed to save deck progress:", err);
+      }
+    }
+    if (!Object.keys(shared).length) return;
+  }
   try {
-    await setDoc(progressRef, partial, { merge: true });
+    await setDoc(progressRef, shared, { merge: true });
   } catch (err) {
     console.error("Failed to save progress to Firestore:", err);
   }
@@ -218,10 +242,11 @@ function buildQueue() {
   const due = [];
   const notDue = [];
   indices.forEach(i => {
-    const card = cards[i];
-    const sched = getCardSchedule(card.id);
-    if (sched.dueAt <= now) {
-      due.push({ idx: i, overdue: now - sched.dueAt });
+    // Read without creating an entry: unseen cards are due now, and only
+    // cards the user has rated are stored in the progress document.
+    const dueAt = cardSchedule[cards[i].id]?.dueAt ?? 0;
+    if (dueAt <= now) {
+      due.push({ idx: i, overdue: now - dueAt });
     } else {
       notDue.push({ idx: i });
     }
@@ -234,6 +259,7 @@ function buildQueue() {
 
   queue = shuffled.map((idx) => ({ idx, requeued: false }));
   queuePos = 0;
+  missedIds = new Set();
   stats = { reviewed: 0, again: 0, hard: 0, good: 0, easy: 0, timings: [] };
 }
 
@@ -244,7 +270,7 @@ function updateSavedCount() {
 function updateSubjectOptions() {
   [...subjectSelect.options].forEach((opt) => {
     const isFav = favSubjects.has(opt.value);
-    const baseName = SUBJECT_NAMES[opt.value] || opt.textContent.replace(/^★ /, "");
+    const baseName = `${SUBJECT_NAMES[opt.value] || opt.value} (${(bank[opt.value] || []).length})`;
     opt.textContent = isFav ? `★ ${baseName}` : baseName;
   });
   const isFavorite = favSubjects.has(currentSubject);
@@ -416,9 +442,19 @@ function animateSubjectSwitch(enterCallback) {
   });
 }
 
-function animateCardEntrance() {
+// direction: 1 = next card slides in from the right, -1 = previous from the left,
+// 0 = gentle settle in place (e.g. after Mark as learned).
+function animateCardEntrance(direction = 0) {
   if (prefersReducedMotion()) return Promise.resolve();
 
+  if (direction) {
+    return animateIfAllowed(flashCard, {
+      opacity: [0.4, 1],
+      translateX: [direction * 28, 0],
+      duration: 220,
+      ease: "outCubic"
+    });
+  }
   return animateIfAllowed([flashCard, ".flash-actions", ".flash-learned-row"].filter(Boolean), {
     opacity: [0.72, 1],
     translateY: [6, 0],
@@ -427,10 +463,16 @@ function animateCardEntrance() {
   });
 }
 
+// Long scenario questions and multi-line answers get a smaller, left-aligned style.
+function setLengthClass(el, text, longAt) {
+  const long = text.length > longAt || text.includes("\n");
+  el.classList.toggle("is-long", long);
+}
+
 // ======================================
 // RENDER
 // ======================================
-function renderCard({ animate = false } = {}) {
+function renderCard({ animate = false, direction = 0 } = {}) {
   const item = queue[queuePos];
   if (!item) return;
 
@@ -438,7 +480,12 @@ function renderCard({ animate = false } = {}) {
 
   flashFrontText.textContent = card.front;
   flashBackText.textContent = card.back;
+  setLengthClass(flashFront, card.front, 150);
+  setLengthClass(flashBack, `${card.back}${card.explanation || ""}`, 260);
+  flashFront.scrollTop = 0;
+  flashBack.scrollTop = 0;
   explanationText.textContent = card.explanation || "";
+  explanationText.parentElement.hidden = !card.explanation;
 
   difficultyBadge.textContent = card.difficulty || "";
   difficultyBadge.className = `difficulty-badge ${card.difficulty || ""}`;
@@ -478,8 +525,8 @@ function renderCard({ animate = false } = {}) {
   cardShownAt = Date.now();
   announce(`Card ${queuePos + 1} of ${queue.length}`);
 
-  if (animate) {
-    void animateCardEntrance().catch(() => undefined);
+  if (animate || direction) {
+    void animateCardEntrance(direction).catch(() => undefined);
   }
 }
 
@@ -487,6 +534,7 @@ function showEmptyState(message) {
   flashFrontText.textContent = message;
   flashBackText.textContent = message;
   explanationText.textContent = "";
+  explanationText.parentElement.hidden = true;
   difficultyBadge.textContent = "";
   difficultyBadge.className = "difficulty-badge";
   flashCard.classList.remove("flip");
@@ -509,6 +557,143 @@ function showEmptyState(message) {
 // ======================================
 // LOADING SUBJECT / SAVED VIEW
 // ======================================
+// ----- views: subject overview vs. study -----
+function setView(view) {
+  deckOverview.hidden = view !== "overview";
+  flashShell.hidden = view !== "study";
+  completeWrap.hidden = view !== "complete";
+  if (view !== "complete") completeWrap.innerHTML = "";
+  document.title = view === "overview"
+    ? "Flashcards | NursePrep"
+    : `${viewingSaved ? "Saved cards" : SUBJECT_NAMES[currentSubject] || "Flashcards"} | Flashcards | NursePrep`;
+}
+
+function setURL(params, { push = false } = {}) {
+  const url = new URL(window.location);
+  url.search = new URLSearchParams(params).toString();
+  if (push) window.history.pushState(null, "", url);
+  else window.history.replaceState(null, "", url);
+}
+
+function subjectMasteredCount(list) {
+  let n = 0;
+  for (const c of list) if (mastered.has(c.id)) n++;
+  return n;
+}
+
+function renderOverview({ animate = true } = {}) {
+  overviewBody.setAttribute("aria-busy", "false");
+  document.getElementById("overviewSavedCount").textContent = bookmarks.size;
+
+  const grid = document.createElement("ul");
+  grid.className = "subject-deck-grid";
+  grid.setAttribute("role", "list");
+
+  subjectList.forEach((subject) => {
+    const total = subject.cards.length;
+    const done = subjectMasteredCount(subject.cards);
+    const pct = total ? Math.round((done / total) * 100) : 0;
+    const li = document.createElement("li");
+    const tile = document.createElement(total ? "a" : "div");
+    tile.className = `subject-deck${subject.key === ALL_SUBJECTS_KEY ? " is-all" : ""}${total ? "" : " is-empty"}`;
+    if (total) {
+      tile.href = `flashcards.html?subject=${encodeURIComponent(subject.key)}`;
+      tile.dataset.subject = subject.key;
+    }
+
+    const head = document.createElement("div");
+    head.className = "subject-deck-head";
+    const iconEl = document.createElement("span");
+    iconEl.className = "subject-deck-icon";
+    iconEl.innerHTML = subjectIcon(subject.key === ALL_SUBJECTS_KEY ? "pnleSets" : subject.key, 20);
+    const name = document.createElement("h2");
+    name.className = "subject-deck-name";
+    name.textContent = subject.name;
+    head.append(iconEl, name);
+    if (favSubjects.has(subject.key)) {
+      const fav = document.createElement("span");
+      fav.className = "subject-deck-fav";
+      fav.textContent = "★";
+      fav.setAttribute("aria-label", "Favorite");
+      head.append(fav);
+    }
+
+    const meta = document.createElement("p");
+    meta.className = "subject-deck-meta";
+    if (total) {
+      meta.innerHTML = `<strong></strong> cards<span aria-hidden="true"> · </span><span class="subject-deck-done"></span>`;
+      meta.querySelector("strong").textContent = total.toLocaleString();
+      meta.querySelector(".subject-deck-done").textContent = `${done.toLocaleString()} mastered`;
+    } else {
+      meta.textContent = "No cards in the question bank yet";
+    }
+
+    const bar = document.createElement("div");
+    bar.className = "subject-deck-progress";
+    bar.setAttribute("role", "progressbar");
+    bar.setAttribute("aria-label", `${subject.name}: ${pct}% mastered`);
+    bar.setAttribute("aria-valuemin", "0");
+    bar.setAttribute("aria-valuemax", "100");
+    bar.setAttribute("aria-valuenow", String(pct));
+    const fill = document.createElement("span");
+    fill.style.setProperty("--p", String(pct / 100));
+    bar.append(fill);
+
+    tile.append(head, meta, bar);
+    li.append(tile);
+    grid.append(li);
+  });
+
+  overviewBody.replaceChildren(grid);
+
+  if (animate && !prefersReducedMotion()) {
+    const tiles = grid.querySelectorAll(".subject-deck");
+    void animateIfAllowed(tiles, {
+      opacity: [0, 1],
+      translateY: [10, 0],
+      delay: stagger(30),
+      duration: 260,
+      ease: "outCubic"
+    }).catch(() => undefined);
+    void animateIfAllowed(grid.querySelectorAll(".subject-deck-progress span"), {
+      scaleX: [0, (el) => Number(el.style.getPropertyValue("--p")) || 0],
+      delay: stagger(30, { start: 120 }),
+      duration: 420,
+      ease: "outCubic"
+    }).catch(() => undefined);
+  }
+}
+
+function renderOverviewError() {
+  overviewBody.setAttribute("aria-busy", "false");
+  overviewBody.innerHTML = `
+    <div class="overview-state" role="alert">
+      <h2>Couldn't load flashcards</h2>
+      <p>The question bank didn't load. Check your connection and try again.</p>
+      <button class="btn btn-primary" type="button" id="overviewRetry">Try again</button>
+    </div>`;
+  document.getElementById("overviewRetry").addEventListener("click", () => {
+    overviewBody.setAttribute("aria-busy", "true");
+    void loadFlashcards();
+  });
+}
+
+function showOverview({ push = false } = {}) {
+  viewingSaved = false;
+  setURL({}, { push });
+  setView("overview");
+  renderOverview({ animate: true });
+  if (push) document.getElementById("overviewHeading").focus({ preventScroll: true });
+}
+
+async function openSubject(subjectKey, { push = false } = {}) {
+  setURL({ subject: subjectKey }, { push });
+  flashShell.hidden = false;
+  deckOverview.hidden = true;
+  completeWrap.hidden = true;
+  await loadSubject(subjectKey);
+}
+
 async function loadSubject(subjectKey) {
   if (subjectSwitchInProgress) return;
 
@@ -527,15 +712,15 @@ async function loadSubject(subjectKey) {
     savedToggleBtn.textContent = `Saved (${bookmarks.size})`;
     savedToggleBtn.setAttribute("aria-pressed", "false");
 
-    const url = new URL(window.location);
-    url.searchParams.set("subject", subjectKey);
-    window.history.replaceState(null, "", url);
+    setURL({ subject: subjectKey });
+    setView("study");
 
     cards = bank[subjectKey] || [];
+    deckCards = cards;
     updateSubjectOptions();
 
     if (!cards.length) {
-      showEmptyState("No flashcards found for this subject yet. Check back soon!");
+      showEmptyState("This subject has no flashcards yet. Choose another subject.");
       return;
     }
 
@@ -563,16 +748,20 @@ async function loadSavedView() {
   savedToggleBtn.disabled = true;
 
   const doLoad = () => {
-    const allCards = Object.values(bank).flat();
+    const allCards = bank[ALL_SUBJECTS_KEY] || [];
     const savedCards = allCards.filter((c) => bookmarks.has(c.id));
 
     if (!savedCards.length) {
       announce("No bookmarked cards yet. Tap the bookmark button on a card to save it for review.");
+      if (!cards.length) showEmptyState("No saved cards yet. Bookmark a card while studying to collect it here.");
       return;
     }
 
     viewingSaved = true;
+    setURL({ view: "saved" });
+    setView("study");
     cards = savedCards;
+    deckCards = cards;
     subjectSelect.disabled = true;
     savedToggleBtn.textContent = `Viewing saved (${bookmarks.size})`;
     savedToggleBtn.setAttribute("aria-pressed", "true");
@@ -599,17 +788,99 @@ async function toggleSavedView() {
 }
 
 // ======================================
+// CUSTOM DECK (user-created)
+// ======================================
+function enterCustomDeckMode(deck) {
+  document.body.classList.add("is-custom-deck");
+  const label = document.getElementById("customDeckLabel");
+  if (label) {
+    label.hidden = false;
+    document.getElementById("customDeckTitle").textContent = deck ? deck.title : "My deck";
+    document.getElementById("customDeckCategory").textContent = deck ? (DECK_CATEGORIES[deck.category] || "My deck") : "My deck";
+  }
+  if (deck) document.title = `${deck.title} | Flashcards | NursePrep`;
+}
+
+async function loadCustomDeck() {
+  setView("study");
+  enterCustomDeckMode(null);
+  try {
+    const [deck, cardDocs, progress] = await Promise.all([
+      getDeck(uid, customDeckId),
+      listCards(uid, customDeckId),
+      getDeckProgress(uid, customDeckId),
+    ]);
+    customDeck = deck;
+    enterCustomDeckMode(deck);
+    mastered = new Set(progress.mastered || []);
+    cardSchedule = progress.cardSchedule || {};
+    cards = cardDocs.map((c) => ({ id: c.id, front: c.front, back: c.back, difficulty: "", explanation: "" }));
+    deckCards = cards;
+
+    if (!cards.length) {
+      showEmptyState("This deck has no cards yet. Add cards in My Decks, then come back to study.");
+      return;
+    }
+    await animateSubjectSwitch(() => {
+      buildQueue();
+      renderCard();
+    });
+    announce(`${deck.title} loaded`);
+  } catch (err) {
+    console.error("Failed to load custom deck:", err);
+    showEmptyState(err?.code === "not-found"
+      ? "This deck doesn't exist anymore. Go back to My Decks to choose another."
+      : err?.code === "permission-denied"
+        ? "You don't have access to this deck."
+        : "Couldn't load this deck. Check your connection and refresh the page.");
+  }
+}
+
+// ======================================
 // LOAD JSON (fetched once)
 // ======================================
+function populateSubjectSelect() {
+  subjectSelect.replaceChildren(...subjectList.map((s) => {
+    const opt = document.createElement("option");
+    opt.value = s.key;
+    return opt;
+  }));
+}
+
+// Decides what to show from the URL: overview, a subject, or saved cards.
+async function route() {
+  const params = new URLSearchParams(window.location.search);
+  const subject = params.get("subject");
+  if (params.get("view") === "saved") {
+    flashShell.hidden = false;
+    deckOverview.hidden = true;
+    if (!currentSubject || !bank[currentSubject]) currentSubject = subjectList[0]?.key;
+    subjectSelect.value = currentSubject;
+    await loadSavedView();
+  } else if (subject && bank[subject]) {
+    await openSubject(subject);
+  } else {
+    showOverview();
+  }
+}
+
 async function loadFlashcards() {
   try {
-    const res = await fetch("./data/flashcards.json");
-    bank = await res.json();
+    const { subjects, skipped } = await loadOfficialBank();
+    const all = allSubjectsDeck(subjects);
+    subjectList = [...subjects, all];
+    bank = Object.fromEntries(subjectList.map((s) => [s.key, s.cards]));
+    SUBJECT_NAMES = Object.fromEntries(subjectList.map((s) => [s.key, s.name]));
+    if (skipped.length) {
+      console.info(`Flashcards: ${skipped.length} source questions were not turned into cards (ambiguous without choices, or duplicates).`);
+    }
+    populateSubjectSelect();
     updateSavedCount();
-    await loadSubject(currentSubject);
+    await route();
   } catch (err) {
     console.error("Failed to load flashcards:", err);
-    showEmptyState("Couldn't load flashcards. Please refresh the page.");
+    setView("overview");
+    renderOverviewError();
   }
 }
 
@@ -711,14 +982,14 @@ function toggleFavSubject() {
 function goPrev() {
   if (subjectSwitchInProgress || flipInProgress || queuePos === 0) return;
   queuePos--;
-  renderCard({ animate: true });
+  renderCard({ direction: -1 });
 }
 
 async function goNext() {
   if (subjectSwitchInProgress || flipInProgress || nextBtn.disabled) return;
   if (queuePos < queue.length - 1) {
     queuePos++;
-    renderCard();
+    renderCard({ direction: 1 });
   } else {
     await showCompletion();
   }
@@ -746,6 +1017,8 @@ async function handleConfidence(rating, event) {
 
     if (rating === "good" || rating === "easy") {
       mastered.add(card.id);
+    } else {
+      missedIds.add(card.id);
     }
 
     if (rating === "again") {
@@ -755,7 +1028,13 @@ async function handleConfidence(rating, event) {
       }
     }
 
-    await persistProgress({
+    // Brief confirmation on the chosen button; the save runs in the
+    // background so the next card never waits on the network.
+    const chosen = confidencePanel.querySelector(`[data-rating="${rating}"]`);
+    if (chosen) {
+      void animateIfAllowed(chosen, { scale: [1, 1.06, 1], duration: 180, ease: "outQuad" }).catch(() => undefined);
+    }
+    void persistProgress({
       mastered: [...mastered],
       cardSchedule: { ...cardSchedule }
     });
@@ -818,11 +1097,16 @@ async function showCompletion() {
 
   const streakCount = updateStreak();
 
-  flashShell.innerHTML = `
+  const missedCards = deckCards.filter((c) => missedIds.has(c.id));
+  const deckName = customDeckId
+    ? customDeck?.title || "Your deck"
+    : viewingSaved ? "Saved cards" : SUBJECT_NAMES[currentSubject] || "Deck";
+
+  completeWrap.innerHTML = `
     <div class="flash-complete" role="status" tabindex="-1" aria-labelledby="completionHeading">
       <div class="streak-banner">+1 day streak — Great job, future RN! Current streak: ${streakCount} day${streakCount === 1 ? "" : "s"}.</div>
-      <span class="eyebrow">Deck Complete</span>
       <h1 id="completionHeading">Nice work!</h1>
+      <p class="complete-deck"></p>
       <div class="stats-grid">
         <div class="stat"><span class="num">${total}</span><span class="label">Reviewed</span></div>
         <div class="stat"><span class="num">${correct}</span><span class="label">Correct</span></div>
@@ -830,36 +1114,86 @@ async function showCompletion() {
         <div class="stat"><span class="num">${avgTime}s</span><span class="label">Avg Time</span></div>
       </div>
       <div class="quiz-footer">
-        <button class="btn btn-secondary" id="studyAgainBtn">Study Again</button>
-        <a href="dashboard.html" class="btn btn-primary">Back to Dashboard</a>
+        ${missedCards.length ? `<button class="btn btn-primary" id="reviewMissedBtn" type="button">Review missed (${missedCards.length})</button>` : ""}
+        <button class="btn btn-secondary" id="studyAgainBtn" type="button">Study again</button>
+        ${customDeckId
+          ? '<a href="my-decks.html" class="btn btn-secondary">Back to My Decks</a>'
+          : '<a href="flashcards.html" class="btn btn-secondary" id="allSubjectsBtn">All subjects</a>'}
       </div>
     </div>
   `;
+  completeWrap.querySelector(".complete-deck").textContent = `${deckName} · deck complete`;
+  setView("complete");
 
-  const completion = flashShell.querySelector(".flash-complete");
+  const completion = completeWrap.querySelector(".flash-complete");
   completion?.focus({ preventScroll: true });
-  document.getElementById("studyAgainBtn")?.addEventListener("click", () => window.location.reload());
+  if (!prefersReducedMotion()) {
+    void animateIfAllowed(completeWrap.querySelectorAll(".stat"), {
+      opacity: [0, 1],
+      translateY: [8, 0],
+      delay: stagger(50, { start: 80 }),
+      duration: 240,
+      ease: "outCubic"
+    }).catch(() => undefined);
+  }
+
+  const restart = (list) => {
+    cards = list;
+    setView("study");
+    buildQueue();
+    renderCard({ animate: true });
+    flipBtn.focus({ preventScroll: true });
+  };
+  document.getElementById("studyAgainBtn")?.addEventListener("click", () => restart(deckCards));
+  document.getElementById("reviewMissedBtn")?.addEventListener("click", () => {
+    restart(missedCards);
+    announce(`Reviewing ${missedCards.length} missed cards`);
+  });
+  document.getElementById("allSubjectsBtn")?.addEventListener("click", (e) => {
+    e.preventDefault();
+    showOverview({ push: true });
+  });
 
   // ===============================
 // Save Flashcard Subject Progress
 // ===============================
 
-  const masteredCount = cards.filter(card => mastered.has(card.id)).length;
+  // Measured against the whole deck, even after a "Review missed" round.
+  const masteredCount = deckCards.filter(card => mastered.has(card.id)).length;
+
+  if (customDeckId) {
+      // Custom decks keep their own progress; they don't count toward official mastery stats.
+      try {
+          await saveDeckProgress(uid, customDeckId, {
+              mastered: deckCards.filter((c) => mastered.has(c.id)).map((c) => c.id),
+              lastStudiedAt: new Date(),
+              lastSession: { reviewed: stats.reviewed, correct, needReview, total: deckCards.length },
+          });
+      } catch (err) {
+          console.error("Failed to save deck progress:", err);
+      }
+      await launchConfetti();
+      announce(`Deck complete. Reviewed ${total} cards.`);
+      return;
+  }
 
   const progressPercent =
-      cards.length === 0
+      deckCards.length === 0
           ? 0
-          : Math.round((masteredCount / cards.length) * 100);
+          : Math.round((masteredCount / deckCards.length) * 100);
 
-  await persistProgress({
-      subjectProgress: {
-          [currentSubject]: {
-              progress: progressPercent,
-              mastered: masteredCount,
-              total: cards.length
+  // A saved-cards round mixes subjects, so it doesn't update a subject's progress.
+  if (!viewingSaved) {
+      await persistProgress({
+          subjectProgress: {
+              [currentSubject]: {
+                  progress: progressPercent,
+                  mastered: masteredCount,
+                  total: deckCards.length
+              }
           }
-      }
-  });
+      });
+  }
 
   if (uid) {
       try {
@@ -912,6 +1246,30 @@ audioBtnBack.addEventListener("click", (e) => {
   if (card) speak(card.back);
 });
 
+backToSubjects.addEventListener("click", (e) => {
+  e.preventDefault();
+  showOverview({ push: true });
+});
+
+overviewBody.addEventListener("click", (e) => {
+  const tile = e.target.closest("a.subject-deck[data-subject]");
+  if (!tile || e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+  e.preventDefault();
+  void openSubject(tile.dataset.subject, { push: true });
+});
+
+document.getElementById("overviewSavedLink").addEventListener("click", (e) => {
+  if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+  e.preventDefault();
+  window.history.pushState(null, "", "flashcards.html?view=saved");
+  void route();
+});
+
+// Browser back/forward between the overview and a subject.
+window.addEventListener("popstate", () => {
+  if (!customDeckId && subjectList.length) void route();
+});
+
 subjectSelect.addEventListener("change", (e) => {
   if (!subjectSwitchInProgress) void loadSubject(e.target.value);
 });
@@ -925,7 +1283,7 @@ shuffleToggle.addEventListener("change", (e) => {
 
 document.addEventListener("keydown", (e) => {
   const activeElement = document.activeElement;
-  if (!flashCard.isConnected || activeElement === flashCard) return;
+  if (flashShell.hidden || activeElement === flashCard) return;
   if (activeElement && ["BUTTON", "SELECT", "INPUT", "TEXTAREA", "A"].includes(activeElement.tagName)) return;
 
   if (e.key === "ArrowLeft") { e.preventDefault(); goPrev(); }
@@ -946,5 +1304,6 @@ onAuthStateChanged(auth, async (user) => {
   progressRef = doc(db, "users", uid, "progress", "flashcards");
 
   await loadProgressFromFirestore();
-  await loadFlashcards();
+  if (customDeckId) await loadCustomDeck();
+  else await loadFlashcards();
 });

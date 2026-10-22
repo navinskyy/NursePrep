@@ -142,7 +142,7 @@
   align-items: center;
   justify-content: center;
   font-family: var(--font-data);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 600;
   color: var(--pink-300);
 }
@@ -233,7 +233,7 @@
 /* Difficulty badge */
 .difficulty-badge {
   font-family: var(--font-data);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.04em;
   padding: 4px 10px;
@@ -248,7 +248,7 @@
 
 .flash-side-label {
   font-family: var(--font-data);
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--text-low);
@@ -275,6 +275,7 @@
   margin-top: var(--space-4);
 }
 
+.flash-explanation[hidden] { display: none; }
 .flash-explanation {
   margin-top: var(--space-4);
   padding-top: var(--space-4);
@@ -297,7 +298,7 @@
   position: absolute;
   bottom: 18px;
   font-family: var(--font-data);
-  font-size: 11px;
+  font-size: 12px;
   color: var(--text-low);
 }
 
@@ -416,7 +417,7 @@
   text-align: center;
   margin-top: var(--space-4);
   font-family: var(--font-data);
-  font-size: 11px;
+  font-size: 12px;
   color: var(--text-low);
 }
 
@@ -510,7 +511,7 @@
   .flash-complete h1 { font-size: 22px; }
   .stats-grid { gap: 10px; }
   .stats-grid .stat .num { font-size: 20px; }
-  .stats-grid .stat .label { font-size: 10px; }
+  .stats-grid .stat .label { font-size: 12px; }
 }
 
 @media (max-width: 480px) {
@@ -522,9 +523,9 @@
   .subject-picker select { font-size: 12px; padding: 8px 28px 8px 10px; }
   .progress-ring-wrap,
   .progress-ring { width: 36px; height: 36px; }
-  .ring-pct { font-size: 9px; }
+  .ring-pct { font-size: 11px; }
   .quiz-count { font-size: 12px; }
-  .mastery-count { font-size: 10px; }
+  .mastery-count { font-size: 12px; }
   .flash-complete h1 { font-size: 20px; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
   .stats-grid .stat { padding: 12px 8px; }
@@ -537,4 +538,308 @@
   .flash-back .flash-text { font-size: 12px; }
   .flash-toolbar .icon-btn,
   .flash-card-icons .icon-btn { width: 40px; height: 40px; }
+}
+
+/* ============================================
+   Custom deck mode (flashcards.html?deck=<id>)
+   ============================================ */
+.custom-deck-label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.custom-deck-label[hidden] { display: none; }
+
+.back-to-decks {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-hi);
+}
+
+.back-to-decks:hover { border-color: var(--pink-400); color: var(--pink-300); }
+
+.custom-deck-category {
+  display: block;
+  font-size: 12.5px;
+  color: var(--pink-300);
+  font-weight: 500;
+}
+
+.custom-deck-title {
+  margin: 2px 0 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+/* Official-only controls don't apply to a personal deck. */
+.is-custom-deck .subject-picker,
+.is-custom-deck #savedToggleBtn,
+.is-custom-deck #myDecksLink,
+.is-custom-deck .bookmark-btn { display: none; }
+
+/* ============================================
+   Subject overview (flashcards.html with no subject)
+   ============================================ */
+.flash-shell[hidden],
+.deck-overview[hidden] { display: none; }
+
+.deck-overview {
+  width: 100%;
+  max-width: 1040px;
+}
+
+.overview-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-5);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-6);
+}
+
+.overview-header h1 {
+  margin: 0 0 var(--space-2);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(30px, 4vw, 38px);
+  line-height: 1.1;
+}
+
+.overview-header h1:focus { outline: none; }
+
+.overview-sub {
+  margin: 0;
+  max-width: 56ch;
+  color: var(--text-mid);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.overview-actions {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.subject-deck-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--space-4);
+}
+
+.subject-deck {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  height: 100%;
+  min-height: 148px;
+  padding: var(--space-5);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  color: var(--text-hi);
+  text-decoration: none;
+  box-shadow: var(--elev-1);
+  transition: border-color var(--dur-base) var(--ease-out),
+              background var(--dur-base) var(--ease-out),
+              transform var(--dur-base) var(--ease-out);
+}
+
+a.subject-deck:hover {
+  border-color: rgba(236, 111, 160, 0.45);
+  background: var(--surface-hover);
+  transform: translateY(-2px);
+}
+
+a.subject-deck:active { transform: translateY(0) scale(0.99); }
+
+a.subject-deck:focus-visible {
+  outline: 2px solid var(--pink-400);
+  outline-offset: 3px;
+}
+
+.subject-deck.is-all {
+  background: linear-gradient(0deg, rgba(94, 234, 212, 0.05), rgba(94, 234, 212, 0.05)), var(--surface);
+  border-color: rgba(94, 234, 212, 0.28);
+}
+
+.subject-deck.is-empty { opacity: 0.6; }
+
+.subject-deck-head {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.subject-deck-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: var(--radius-sm);
+  background: rgba(236, 111, 160, 0.12);
+  color: var(--pink-300);
+}
+
+.is-all .subject-deck-icon {
+  background: rgba(94, 234, 212, 0.12);
+  color: var(--mint);
+}
+
+.subject-deck-name {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.subject-deck-fav {
+  margin-left: auto;
+  color: var(--amber);
+  font-size: 14px;
+}
+
+.subject-deck-meta {
+  margin: auto 0 0;
+  color: var(--text-low);
+  font-size: 13.5px;
+}
+
+.subject-deck-meta strong {
+  color: var(--text-hi);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.subject-deck-progress {
+  height: 4px;
+  border-radius: 999px;
+  background: var(--border-soft);
+  overflow: hidden;
+}
+
+.subject-deck-progress span {
+  display: block;
+  height: 100%;
+  background: var(--mint);
+  transform-origin: left center;
+  transform: scaleX(var(--p, 0));
+}
+
+.subject-deck.is-skeleton {
+  min-height: 148px;
+  background: linear-gradient(90deg, var(--surface) 0%, var(--surface-hover) 50%, var(--surface) 100%);
+  background-size: 200% 100%;
+  animation: deckShimmer 1.4s ease-in-out infinite;
+  box-shadow: none;
+}
+
+@keyframes deckShimmer {
+  from { background-position: 100% 0; }
+  to { background-position: -100% 0; }
+}
+
+.overview-state {
+  max-width: 440px;
+  margin: var(--space-8) auto;
+  text-align: center;
+}
+
+.overview-state h2 {
+  margin: 0 0 var(--space-2);
+  font-family: var(--font-display);
+  font-size: 22px;
+}
+
+.overview-state p {
+  margin: 0 0 var(--space-5);
+  color: var(--text-mid);
+  line-height: 1.55;
+}
+
+/* Back link beside the subject picker */
+.subject-picker .back-to-decks { width: 40px; height: 40px; }
+.subject-picker select { max-width: min(320px, 60vw); }
+
+/* ============================================
+   Long cards: scenario questions and list answers
+   ============================================ */
+.flash-front { overflow-y: auto; }
+
+.flash-front.is-long,
+.flash-back.is-long {
+  /* Centered while it fits; starts at the top (and scrolls) when it doesn't. */
+  justify-content: flex-start;
+  justify-content: safe center;
+  padding-top: 64px;
+  padding-bottom: 48px;
+}
+
+.flash-front.is-long .flash-text {
+  font-family: var(--font-body);
+  font-size: 16.5px;
+  font-weight: 500;
+  line-height: 1.6;
+  text-align: left;
+  width: 100%;
+  max-width: 620px;
+  margin-inline: auto;
+}
+
+.flash-front.is-long .flash-side-label { margin-bottom: var(--space-2); }
+
+.flash-text { white-space: pre-line; }
+
+.flash-back.is-long .flash-text {
+  font-size: 16px;
+  text-align: left;
+  width: 100%;
+  max-width: 620px;
+  margin-inline: auto;
+}
+
+.flash-back.is-long .flash-explanation { max-width: 620px; }
+
+.flash-explanation p { white-space: pre-line; }
+
+/* Completion: deck name under the heading */
+.complete-deck {
+  margin: calc(var(--space-3) * -1) 0 var(--space-5);
+  color: var(--text-mid);
+  font-size: 15px;
+}
+
+@media (max-width: 600px) {
+  .overview-header { align-items: flex-start; }
+  .overview-actions { width: 100%; }
+  .overview-actions .btn { flex: 1; }
+  .subject-deck-grid { grid-template-columns: 1fr; gap: var(--space-3); }
+  .subject-deck { min-height: 0; padding: var(--space-4); }
+  .flash-front.is-long .flash-text { font-size: 15px; }
+  .flash-back.is-long .flash-text { font-size: 14.5px; }
+  .flash-front.is-long,
+  .flash-back.is-long { padding: 56px 18px 40px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .subject-deck.is-skeleton { animation: none; }
+  a.subject-deck:hover { transform: none; }
 }

@@ -12,22 +12,65 @@ service cloud.firestore {
       return isSignedIn() && request.auth.uid == userId;
     }
 
-    // --- users/{uid} and everything beneath it -------------------------------
-    // Owner can read and write their own profile and all subcollections:
+    // --- users/{uid} --------------------------------------------------------
+    // Leaderboard lists the whole `users` collection
+    // (query orderBy xp / weeklyXP, limit 100). Allow any signed-in user to
+    // READ top-level user documents so the leaderboard works. Writes stay
+    // owner-only.
+    match /users/{userId} {
+      allow read: if isSignedIn();
+      allow write: if isOwner(userId);
+    }
+
+    // --- users/{uid}/<subcollection>/... -----------------------------------
+    // Owner can read and write their own subcollections:
     //   users/{uid}/activity/*
     //   users/{uid}/studySessions/*
     //   users/{uid}/progress/flashcards
     //   users/{uid}/wrongAnswers/master
-    match /users/{userId}/{document=**} {
-      allow read, write: if isOwner(userId);
+    //   users/{uid}/deckProgress/{deckId}   (custom-deck study progress)
+    // Custom decks have their own validated rules below.
+    match /users/{userId}/{subcollection}/{document=**} {
+      allow read, write: if isOwner(userId) && subcollection != 'customDecks';
     }
 
-    // Leaderboard lists the whole `users` collection
-    // (query orderBy xp / weeklyXP, limit 100). Allow any signed-in user to
-    // READ top-level user documents so the leaderboard works. Writes stay
-    // owner-only via the rule above.
-    match /users/{userId} {
-      allow read: if isSignedIn();
+    // --- users/{uid}/customDecks/{deckId} -----------------------------------
+    // Private, owner-only flashcard decks. Writes must match the expected shape.
+    function validDeck(d) {
+      return d.keys().hasOnly(['title', 'description', 'category', 'visibility',
+                               'cardCount', 'ownerUid', 'createdAt', 'updatedAt'])
+        && d.title is string && d.title.size() <= 80 && d.title.matches('(?s).*\\S.*')
+        && d.description is string && d.description.size() <= 300
+        && d.category in ['fundamentals', 'maternal', 'community', 'medSurg',
+                          'psychiatric', 'pharma', 'personal']
+        && d.visibility == 'private'
+        && d.cardCount is int && d.cardCount >= 0 && d.cardCount <= 500
+        && d.createdAt is timestamp && d.updatedAt is timestamp;
+    }
+
+    function validCard(c) {
+      return c.keys().hasOnly(['front', 'back', 'order', 'createdAt', 'updatedAt'])
+        && c.front is string && c.front.size() <= 500 && c.front.matches('(?s).*\\S.*')
+        && c.back is string && c.back.size() <= 2000 && c.back.matches('(?s).*\\S.*')
+        && c.order is number
+        && c.createdAt is timestamp && c.updatedAt is timestamp;
+    }
+
+    match /users/{userId}/customDecks/{deckId} {
+      allow read, delete: if isOwner(userId);
+      allow create: if isOwner(userId)
+        && validDeck(request.resource.data)
+        && request.resource.data.ownerUid == userId
+        && request.resource.data.cardCount == 0;
+      allow update: if isOwner(userId)
+        && validDeck(request.resource.data)
+        && request.resource.data.ownerUid == resource.data.ownerUid
+        && request.resource.data.createdAt == resource.data.createdAt;
+
+      match /cards/{cardId} {
+        allow read, delete: if isOwner(userId);
+        allow create, update: if isOwner(userId) && validCard(request.resource.data);
+      }
     }
 
     // --- userProgress/{uid}/quizzes/{quizId} ---------------------------------

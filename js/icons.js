@@ -32,6 +32,7 @@ const PATHS = {
   medal:       `<circle cx="12" cy="15" r="6"/><path d="M8.5 10.2L5 3h4l3 6M15.5 10.2L19 3h-4l-3 6"/><path d="M12 12.5v5"/>`,
   zap:         `<path d="M13 2L4 14h7l-1 8 9-12h-7z"/>`,
   alert:       `<path d="M12 3l10 18H2z"/><path d="M12 10v4M12 17.5h.01"/>`,
+  trash:       `<path d="M4 7h16M10 11v6M14 11v6"/><path d="M6 7l1 13h10l1-13M9 7V4h6v3"/>`,
   lock:        `<rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/>`,
   sparkle:     `<path d="M12 3l1.8 5.4L19 10l-5.2 1.6L12 17l-1.8-5.4L5 10l5.2-1.6z"/><path d="M19 17l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/>`,
 };

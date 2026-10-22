@@ -1,4 +1,4 @@
-import { animate, stagger } from "animejs";
+import { animate, stagger, utils } from "animejs";
 
 const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 
@@ -15,6 +15,15 @@ export function animationPromise(animation) {
 export function animateIfAllowed(targets, parameters) {
   if (prefersReducedMotion()) return Promise.resolve();
   return animationPromise(animate(targets, parameters));
+}
+
+/** Cancels running animations on targets that are about to be re-rendered or removed. */
+export function stopAnimations(targets) {
+  try {
+    utils.remove(targets);
+  } catch {
+    /* nothing running */
+  }
 }
 
 export { stagger };

@@ -312,7 +312,15 @@ input, select, textarea { font-family: inherit; }
 .dash-nav {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
+  /* Scroll inside the sidebar on short screens instead of clipping. */
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  margin: 0 -6px;
+  padding: 0 6px;
+  scrollbar-width: thin;
 }
 
 .dash-nav a {
@@ -369,69 +377,45 @@ input, select, textarea { font-family: inherit; }
   top: 50%;
   transform: translateY(-50%);
   width: 3px;
-  height: 22px;
+  height: 20px;
   background: var(--pink-400);
   border-radius: 0 3px 3px 0;
-  box-shadow: 0 0 8px var(--pink-glow);
 }
 
 /* ============================================
-   Navigation groups (collapsible sections)
+   Navigation groups (labelled sections)
    ============================================ */
 .nav-group {
   display: flex;
   flex-direction: column;
 }
 
-.nav-group-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-  width: 100%;
-  padding: 8px 12px;
-  border: none;
-  background: transparent;
-  cursor: pointer;
+.nav-group + .nav-group {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border-soft);
+}
+
+.nav-group-label {
+  margin: 0;
+  padding: 6px 12px 6px;
   font-family: var(--font-body);
-  font-size: 11.5px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--text-low);
-  border-radius: var(--radius-sm);
-  transition: color 0.2s ease;
-}
-
-.nav-group-header:hover {
-  color: var(--text-mid);
-}
-
-.nav-group-chevron {
-  flex-shrink: 0;
-  opacity: 0.7;
-  transition: transform 0.25s ease;
-}
-
-.nav-group.collapsed .nav-group-chevron {
-  transform: rotate(-90deg);
 }
 
 .nav-group-items {
-  display: grid;
-  grid-template-rows: 1fr;
-  gap: 4px;
-  overflow: hidden;
-  transition: grid-template-rows var(--dur-slow) var(--ease-in-out),
-              opacity var(--dur-base) var(--ease-out);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
-.nav-group-items > * { min-height: 0; }
-
-.nav-group.collapsed .nav-group-items {
-  grid-template-rows: 0fr;
-  opacity: 0;
-  pointer-events: none;
+.dash-nav a:focus-visible {
+  outline: 2px solid var(--pink-400);
+  outline-offset: -2px;
 }
 
 .page-enter {
@@ -598,14 +582,13 @@ input, select, textarea {
 }
 
 .dash-sidebar-foot {
-  margin-top: auto;
   display: flex;
   align-items: center;
   gap: 10px;
   background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  padding: 12px 14px;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
 }
 
 .dash-sidebar-foot .streak-flame {
@@ -622,15 +605,16 @@ input, select, textarea {
 }
 
 .dash-sidebar-foot strong {
-  display: block;
   color: var(--text-hi);
-  font-size: 14px;
   font-weight: 600;
 }
 
 /* Wrapper for pages that also need a logout button under the streak card */
 .dash-sidebar-bottom {
-  margin-top: auto;
+  flex-shrink: 0;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-soft);
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -653,17 +637,10 @@ input, select, textarea {
 .account-card {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   min-height: 44px;
-  padding: 8px;
-  border-radius: var(--radius-sm);
+  padding: 4px 4px 4px 8px;
   color: var(--text-hi);
-  text-decoration: none;
-  transition: background 0.2s ease;
-}
-
-.account-card:hover {
-  background: var(--surface-hover);
 }
 
 .account-avatar {
@@ -679,8 +656,9 @@ input, select, textarea {
 .account-meta {
   display: flex;
   flex-direction: column;
+  flex: 1;
   min-width: 0;
-  line-height: 1.25;
+  line-height: 1.3;
 }
 
 .account-name {
@@ -693,7 +671,7 @@ input, select, textarea {
 }
 
 .account-email {
-  font-size: 11.5px;
+  font-size: 12px;
   color: var(--text-low);
   white-space: nowrap;
   overflow: hidden;
@@ -701,10 +679,29 @@ input, select, textarea {
 }
 
 .sidebar-logout {
-  width: 100%;
-  gap: 8px;
-  padding: 8px 12px;
-  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-low);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.sidebar-logout:hover {
+  background: var(--surface-hover);
+  border-color: var(--border);
+  color: var(--text-hi);
+}
+
+.sidebar-logout:focus-visible {
+  outline: 2px solid var(--pink-400);
+  outline-offset: 2px;
 }
 
 .sidebar-logout svg {
@@ -831,15 +828,14 @@ input, select, textarea {
     opacity: 0.35;
   }
 
-  .dash-body.sidebar-collapsed .nav-group-header,
+  .dash-body.sidebar-collapsed .nav-group-label,
   .dash-body.sidebar-collapsed .dash-sidebar-foot {
     display: none;
   }
 
   /* Hide labels visually but keep them as accessible names in the rail. */
   .dash-body.sidebar-collapsed .nav-label,
-  .dash-body.sidebar-collapsed .account-meta,
-  .dash-body.sidebar-collapsed .sidebar-logout span {
+  .dash-body.sidebar-collapsed .account-meta {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -851,12 +847,6 @@ input, select, textarea {
     border: 0;
   }
 
-  /* Never hide nav items in the rail, even if their group was collapsed. */
-  .dash-body.sidebar-collapsed .nav-group.collapsed .nav-group-items {
-    grid-template-rows: 1fr;
-    opacity: 1;
-    pointer-events: auto;
-  }
 
   .dash-body.sidebar-collapsed .dash-nav a {
     justify-content: center;
@@ -871,13 +861,10 @@ input, select, textarea {
   }
 
   .dash-body.sidebar-collapsed .account-card {
+    flex-direction: column;
     justify-content: center;
-    padding: 8px;
-  }
-
-  .dash-body.sidebar-collapsed .sidebar-logout {
-    justify-content: center;
-    padding: 8px;
+    gap: 6px;
+    padding: 4px 0;
   }
 }
 

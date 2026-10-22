@@ -17,21 +17,46 @@
 
 <main id="main-content" class="dash-main dash-main-center">
   <div class="sr-only" id="flashLiveRegion" aria-live="polite" aria-atomic="true"></div>
-  <div class="flash-shell" id="flashShell">
+
+  <!-- Subject overview: one deck per subject, generated from the question bank -->
+  <section class="deck-overview" id="deckOverview" aria-labelledby="overviewHeading" hidden>
+    <header class="overview-header">
+      <div>
+        <h1 id="overviewHeading" tabindex="-1">Flashcards</h1>
+        <p class="overview-sub">Cards are built from the NursePrep question bank, so they cover the same material as the quizzes. Pick a subject to start.</p>
+      </div>
+      <div class="overview-actions">
+        <a class="btn btn-secondary" id="overviewSavedLink" href="flashcards.html?view=saved"><span>Saved cards (<span id="overviewSavedCount">0</span>)</span></a>
+        <a class="btn btn-secondary" href="my-decks.html">My decks</a>
+      </div>
+    </header>
+    <div id="overviewBody" aria-busy="true">
+      <div class="subject-deck-grid" aria-hidden="true">
+        <div class="subject-deck is-skeleton"></div><div class="subject-deck is-skeleton"></div><div class="subject-deck is-skeleton"></div>
+        <div class="subject-deck is-skeleton"></div><div class="subject-deck is-skeleton"></div><div class="subject-deck is-skeleton"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="flash-shell" id="flashShell" hidden>
 
     <!-- Toolbar: subject picker, shuffle, favorite, saved view -->
     <div class="flash-toolbar">
+      <div class="custom-deck-label" id="customDeckLabel" hidden>
+        <a class="back-to-decks" href="my-decks.html" aria-label="Back to My Decks">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+        </a>
+        <div>
+          <span class="custom-deck-category" id="customDeckCategory">My deck</span>
+          <h1 class="custom-deck-title" id="customDeckTitle">Loading…</h1>
+        </div>
+      </div>
       <div class="subject-picker">
-        <label class="eyebrow" for="subjectSelect">Subject</label>
-<select id="subjectSelect">
-           <option value="pnleSets">Comprehensive PNLE SETS</option>
-           <option value="fundamentals">Foundation of Nursing</option>
-           <option value="maternal">Maternal &amp; Child Nursing</option>
-           <option value="community">Community Health Nursing</option>
-           <option value="medSurg">Medical-Surgical Nursing</option>
-           <option value="psychiatric">Psychiatric Nursing</option>
-           <option value="allTopics">All Topics</option>
-         </select>
+        <a class="back-to-decks" id="backToSubjects" href="flashcards.html" aria-label="Back to all subjects" title="All subjects">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+        </a>
+        <label class="sr-only" for="subjectSelect">Subject</label>
+        <select id="subjectSelect"></select>
         <button class="icon-btn" id="favSubjectBtn" title="Favorite this subject" aria-label="Favorite this subject" aria-pressed="false">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3L14.6 9.2L21.5 9.9L16.3 14.4L17.8 21.2L12 17.6L6.2 21.2L7.7 14.4L2.5 9.9L9.4 9.2L12 3Z" stroke-linejoin="round"/></svg>
         </button>
@@ -44,6 +69,7 @@
           <span class="shuffle-label">Shuffle</span>
         </label>
         <button class="btn btn-secondary" id="savedToggleBtn" aria-pressed="false">Saved (<span id="savedCount">0</span>)</button>
+        <a class="btn btn-secondary" id="myDecksLink" href="my-decks.html">My decks</a>
       </div>
     </div>
 
@@ -130,6 +156,9 @@
     <p class="keyboard-hint">← Previous &nbsp;·&nbsp; → Next &nbsp;·&nbsp; Space = Reveal &nbsp;·&nbsp; F = Flip</p>
 
   </div>
+
+  <!-- Deck complete (filled by js/flashcards.js) -->
+  <div class="flash-shell" id="flashCompleteWrap" hidden></div>
 </main>
 
 
